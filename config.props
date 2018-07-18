@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="UserMacros">
+    <XERCES>C:\Libraries\xerces-c-3.2.0</XERCES>
+    <PROJ_GDAL>C:\Libraries\proj_gdal-1911</PROJ_GDAL>
+    <FOX16>C:\Libraries\fox-1.6.55</FOX16>
+    <OSG>C:\Libraries\OSG-3.4.0</OSG>
+    <FFMPEG>C:\Libraries\FFMPEG-3.4.1</FFMPEG>
+    <PYTHON_LIB_DIR>C:\Python27\libs</PYTHON_LIB_DIR>
+    <PYTHON_INCLUDE_DIR>C:\Python27\include</PYTHON_INCLUDE_DIR>
+	<XERCES_64>C:\Libraries\xerces-c-3.2.0_64</XERCES_64>
+    <PROJ_GDAL_64>C:\Libraries\proj_gdal-1911_64</PROJ_GDAL_64>
+	<FOX16_64>C:\Libraries\fox-1.6.55_64</FOX16_64>
+    <OSG_64>C:\Libraries\OSG-3.4.0_64</OSG_64>
+    <FFMPEG_64>C:\Libraries\FFMPEG-3.4.1_64</FFMPEG_64>
+    <PYTHON_64_LIB_DIR></PYTHON_64_LIB_DIR>
+    <PYTHON_64_INCLUDE_DIR></PYTHON_64_INCLUDE_DIR>
+  </PropertyGroup>
+</Project>
