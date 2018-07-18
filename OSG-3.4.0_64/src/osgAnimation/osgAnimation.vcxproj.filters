@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgAnimation\Action.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgAnimation\ActionAnimation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgAnimation\ActionBlendIn.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgAnimation\ActionBlendOut.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgAnimation\ActionCallback.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgAnimation\ActionStripAnimation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgAnimation\ActionVisitor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgAnimation\Animation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgAnimation\AnimationManagerBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgAnimation\BasicAnimationManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgAnimation\Bone.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgAnimation\BoneMapVisitor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgAnimation\Channel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgAnimation\LinkVisitor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgAnimation\MorphGeometry.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgAnimation\RigGeometry.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgAnimation\RigTransformHardware.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgAnimation\RigTransformSoftware.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgAnimation\Skeleton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgAnimation\StackedMatrixElement.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgAnimation\StackedQuaternionElement.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgAnimation\StackedRotateAxisElement.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgAnimation\StackedScaleElement.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgAnimation\StackedTransform.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgAnimation\StackedTranslateElement.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgAnimation\StatsVisitor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgAnimation\StatsHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgAnimation\Target.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgAnimation\TimelineAnimationManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgAnimation\Timeline.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgAnimation\UpdateBone.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgAnimation\UpdateMaterial.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgAnimation\UpdateMatrixTransform.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgAnimation\VertexInfluence.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Libraries\OSG-3.4.0_64\src\osgAnimation\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgAnimation\Action">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgAnimation\ActionAnimation">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgAnimation\ActionBlendIn">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgAnimation\ActionBlendOut">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgAnimation\ActionCallback">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgAnimation\ActionStripAnimation">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgAnimation\ActionVisitor">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgAnimation\Animation">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgAnimation\AnimationManagerBase">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgAnimation\AnimationUpdateCallback">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgAnimation\BasicAnimationManager">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgAnimation\Bone">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgAnimation\BoneMapVisitor">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgAnimation\Channel">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgAnimation\CubicBezier">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgAnimation\EaseMotion">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgAnimation\Export">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgAnimation\FrameAction">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgAnimation\Interpolator">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgAnimation\Keyframe">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgAnimation\LinkVisitor">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgAnimation\MorphGeometry">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgAnimation\RigGeometry">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgAnimation\RigTransform">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgAnimation\RigTransformHardware">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgAnimation\RigTransformSoftware">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgAnimation\Sampler">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgAnimation\Skeleton">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgAnimation\StackedMatrixElement">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgAnimation\StackedQuaternionElement">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgAnimation\StackedRotateAxisElement">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgAnimation\StackedScaleElement">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgAnimation\StackedTransformElement">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgAnimation\StackedTranslateElement">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgAnimation\StackedTransform">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgAnimation\StatsVisitor">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgAnimation\StatsHandler">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgAnimation\Target">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgAnimation\Timeline">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgAnimation\TimelineAnimationManager">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgAnimation\UpdateBone">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgAnimation\UpdateMaterial">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgAnimation\UpdateMatrixTransform">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgAnimation\UpdateUniform">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgAnimation\Vec3Packed">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgAnimation\VertexInfluence">
+      <Filter>Header Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="C:\Libraries\OSG-3.4.0_64\PlatformSpecifics\Windows\OpenSceneGraphVersionInfo.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{29A82576-0467-3E0F-914C-5CA8B15FB8C1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{2C1F2B13-BA14-36B4-B5AD-56B355D1CA2C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

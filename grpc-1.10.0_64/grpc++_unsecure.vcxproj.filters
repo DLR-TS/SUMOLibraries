@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Libraries\grpc-1.10.0_64\src\cpp\client\insecure_credentials.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\grpc-1.10.0_64\src\cpp\common\insecure_create_auth_context.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\grpc-1.10.0_64\src\cpp\server\insecure_server_credentials.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\grpc-1.10.0_64\src\cpp\client\channel_cc.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\grpc-1.10.0_64\src\cpp\client\client_context.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\grpc-1.10.0_64\src\cpp\client\create_channel.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\grpc-1.10.0_64\src\cpp\client\create_channel_internal.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\grpc-1.10.0_64\src\cpp\client\create_channel_posix.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\grpc-1.10.0_64\src\cpp\client\credentials_cc.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\grpc-1.10.0_64\src\cpp\client\generic_stub.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\grpc-1.10.0_64\src\cpp\common\alarm.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\grpc-1.10.0_64\src\cpp\common\channel_arguments.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\grpc-1.10.0_64\src\cpp\common\channel_filter.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\grpc-1.10.0_64\src\cpp\common\completion_queue_cc.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\grpc-1.10.0_64\src\cpp\common\core_codegen.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\grpc-1.10.0_64\src\cpp\common\resource_quota_cc.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\grpc-1.10.0_64\src\cpp\common\rpc_method.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\grpc-1.10.0_64\src\cpp\common\version_cc.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\grpc-1.10.0_64\src\cpp\server\async_generic_service.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\grpc-1.10.0_64\src\cpp\server\channel_argument_option.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\grpc-1.10.0_64\src\cpp\server\create_default_thread_pool.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\grpc-1.10.0_64\src\cpp\server\dynamic_thread_pool.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\grpc-1.10.0_64\src\cpp\server\health\default_health_check_service.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\grpc-1.10.0_64\src\cpp\server\health\health.pb.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\grpc-1.10.0_64\src\cpp\server\health\health_check_service.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\grpc-1.10.0_64\src\cpp\server\health\health_check_service_server_builder_option.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\grpc-1.10.0_64\src\cpp\server\server_builder.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\grpc-1.10.0_64\src\cpp\server\server_cc.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\grpc-1.10.0_64\src\cpp\server\server_context.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\grpc-1.10.0_64\src\cpp\server\server_credentials.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\grpc-1.10.0_64\src\cpp\server\server_posix.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\grpc-1.10.0_64\src\cpp\thread_manager\thread_manager.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\grpc-1.10.0_64\src\cpp\util\byte_buffer_cc.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\grpc-1.10.0_64\src\cpp\util\slice_cc.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\grpc-1.10.0_64\src\cpp\util\status.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\grpc-1.10.0_64\src\cpp\util\string_ref.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\grpc-1.10.0_64\src\cpp\util\time_cc.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\grpc-1.10.0_64\src\cpp\codegen\codegen_init.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Libraries\grpc-1.10.0_64\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{94DFC242-9497-371E-8548-742DC9ECAD3C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgFX\AnisotropicLighting.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgFX\BumpMapping.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgFX\Cartoon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgFX\Effect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgFX\MultiTextureControl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgFX\Outline.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgFX\Registry.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgFX\Scribe.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgFX\SpecularHighlights.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgFX\Technique.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgFX\Validator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgFX\Version.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Libraries\OSG-3.4.0_64\src\osgFX\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgFX\AnisotropicLighting">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgFX\BumpMapping">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgFX\Cartoon">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgFX\Effect">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgFX\Export">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgFX\MultiTextureControl">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgFX\Outline">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgFX\Registry">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgFX\Scribe">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgFX\SpecularHighlights">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgFX\Technique">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgFX\Validator">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgFX\Version">
+      <Filter>Header Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="C:\Libraries\OSG-3.4.0_64\PlatformSpecifics\Windows\OpenSceneGraphVersionInfo.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{29A82576-0467-3E0F-914C-5CA8B15FB8C1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{2C1F2B13-BA14-36B4-B5AD-56B355D1CA2C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

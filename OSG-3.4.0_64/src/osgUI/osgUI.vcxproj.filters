@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUI\Widget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUI\ColorPalette.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUI\Label.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUI\LineEdit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUI\Dialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUI\Popup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUI\PushButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUI\ComboBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUI\Callbacks.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUI\Style.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUI\AlignmentSettings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUI\FrameSettings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUI\TabWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUI\TextSettings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUI\Validator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Libraries\OSG-3.4.0_64\src\osgUI\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUI\Export">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUI\ColorPalette">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUI\Widget">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUI\Label">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUI\LineEdit">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUI\Dialog">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUI\Popup">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUI\PushButton">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUI\ComboBox">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUI\Callbacks">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUI\Style">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUI\AlignmentSettings">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUI\FrameSettings">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUI\TabWidget">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUI\TextSettings">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUI\Validator">
+      <Filter>Header Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="C:\Libraries\OSG-3.4.0_64\PlatformSpecifics\Windows\OpenSceneGraphVersionInfo.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{29A82576-0467-3E0F-914C-5CA8B15FB8C1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{2C1F2B13-BA14-36B4-B5AD-56B355D1CA2C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{713E9174-7E43-3B0B-AFF9-D10D2366254A}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>gmock_main</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">gmock_main.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">gmock_main</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">gmock_main.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">gmock_main</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">gmock_main.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">gmock_main</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">gmock_main.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">gmock_main</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Libraries\3rdPartyLibs\zlib-1.2.11_64;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\src;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\gmock;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\gmock\gtest;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\gmock\gtest\include;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\gmock\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4018;4065;4146;4244;4251;4267;4305;4307;4309;4334;4355;4506;4800;4996</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;GOOGLE_PROTOBUF_CMAKE_BUILD;HAVE_ZLIB;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;GOOGLE_PROTOBUF_CMAKE_BUILD;HAVE_ZLIB;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Libraries\3rdPartyLibs\zlib-1.2.11_64;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\src;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\gmock;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\gmock\gtest;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\gmock\gtest\include;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\gmock\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Libraries\3rdPartyLibs\zlib-1.2.11_64;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\src;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\gmock;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\gmock\gtest;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\gmock\gtest\include;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\gmock\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /ignore:4221</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Libraries\3rdPartyLibs\zlib-1.2.11_64;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\src;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\gmock;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\gmock\gtest;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\gmock\gtest\include;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\gmock\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4018;4065;4146;4244;4251;4267;4305;4307;4309;4334;4355;4506;4800;4996</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GOOGLE_PROTOBUF_CMAKE_BUILD;HAVE_ZLIB;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GOOGLE_PROTOBUF_CMAKE_BUILD;HAVE_ZLIB;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Libraries\3rdPartyLibs\zlib-1.2.11_64;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\src;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\gmock;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\gmock\gtest;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\gmock\gtest\include;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\gmock\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Libraries\3rdPartyLibs\zlib-1.2.11_64;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\src;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\gmock;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\gmock\gtest;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\gmock\gtest\include;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\gmock\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /ignore:4221</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Libraries\3rdPartyLibs\zlib-1.2.11_64;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\src;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\gmock;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\gmock\gtest;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\gmock\gtest\include;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\gmock\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4018;4065;4146;4244;4251;4267;4305;4307;4309;4334;4355;4506;4800;4996</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GOOGLE_PROTOBUF_CMAKE_BUILD;HAVE_ZLIB;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GOOGLE_PROTOBUF_CMAKE_BUILD;HAVE_ZLIB;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Libraries\3rdPartyLibs\zlib-1.2.11_64;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\src;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\gmock;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\gmock\gtest;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\gmock\gtest\include;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\gmock\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Libraries\3rdPartyLibs\zlib-1.2.11_64;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\src;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\gmock;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\gmock\gtest;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\gmock\gtest\include;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\gmock\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /ignore:4221</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Libraries\3rdPartyLibs\zlib-1.2.11_64;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\src;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\gmock;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\gmock\gtest;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\gmock\gtest\include;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\gmock\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4018;4065;4146;4244;4251;4267;4305;4307;4309;4334;4355;4506;4800;4996</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GOOGLE_PROTOBUF_CMAKE_BUILD;HAVE_ZLIB;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GOOGLE_PROTOBUF_CMAKE_BUILD;HAVE_ZLIB;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Libraries\3rdPartyLibs\zlib-1.2.11_64;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\src;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\gmock;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\gmock\gtest;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\gmock\gtest\include;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\gmock\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Libraries\3rdPartyLibs\zlib-1.2.11_64;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\src;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\gmock;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\gmock\gtest;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\gmock\gtest\include;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\gmock\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /ignore:4221</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Libraries/3rdPartyLibs/protobuf-3.5.1_64/cmake/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\CMake\bin\cmake.exe -HC:/Libraries/3rdPartyLibs/protobuf-3.5.1_64/cmake -BC:/Libraries/3rdPartyLibs/protobuf-3.5.1_64/cmake --check-stamp-file C:/Libraries/3rdPartyLibs/protobuf-3.5.1_64/cmake/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Libraries/3rdPartyLibs/protobuf-3.5.1_64/cmake/CMakeLists.txt;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\CMakeLists.txt;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\CMakeFiles\3.10.1\CMakeSystem.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInitialize.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\CMakeFiles\3.10.1\CMakeCCompiler.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\CMakeFiles\3.10.1\CMakeCXXCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\CMakeFiles\3.10.1\CMakeRCCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCXXInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\MSVC-CXX.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC-CXX.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeDependentOption.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\protobuf-options.cmake;C:\CMake\share\cmake-3.10\Modules\FindThreads.cmake;C:\CMake\share\cmake-3.10\Modules\CheckLibraryExists.cmake;C:\CMake\share\cmake-3.10\Modules\CheckSymbolExists.cmake;C:\CMake\share\cmake-3.10\Modules\CheckIncludeFile.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.10\Modules\FindZLIB.cmake;C:\CMake\share\cmake-3.10\Modules\SelectLibraryConfigurations.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\extract_includes.bat.in;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\libprotobuf-lite.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\libprotobuf.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\libprotoc.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\protoc.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\tests.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\install.cmake;C:\CMake\share\cmake-3.10\Modules\GNUInstallDirs.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\protobuf.pc.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\protobuf-lite.pc.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\protobuf-config.cmake.in;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\protobuf-config-version.cmake.in;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\protobuf-module.cmake.in;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\protobuf-options.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Libraries/3rdPartyLibs/protobuf-3.5.1_64/cmake/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\CMake\bin\cmake.exe -HC:/Libraries/3rdPartyLibs/protobuf-3.5.1_64/cmake -BC:/Libraries/3rdPartyLibs/protobuf-3.5.1_64/cmake --check-stamp-file C:/Libraries/3rdPartyLibs/protobuf-3.5.1_64/cmake/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Libraries/3rdPartyLibs/protobuf-3.5.1_64/cmake/CMakeLists.txt;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\CMakeLists.txt;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\CMakeFiles\3.10.1\CMakeSystem.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInitialize.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\CMakeFiles\3.10.1\CMakeCCompiler.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\CMakeFiles\3.10.1\CMakeCXXCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\CMakeFiles\3.10.1\CMakeRCCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCXXInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\MSVC-CXX.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC-CXX.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeDependentOption.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\protobuf-options.cmake;C:\CMake\share\cmake-3.10\Modules\FindThreads.cmake;C:\CMake\share\cmake-3.10\Modules\CheckLibraryExists.cmake;C:\CMake\share\cmake-3.10\Modules\CheckSymbolExists.cmake;C:\CMake\share\cmake-3.10\Modules\CheckIncludeFile.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.10\Modules\FindZLIB.cmake;C:\CMake\share\cmake-3.10\Modules\SelectLibraryConfigurations.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\extract_includes.bat.in;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\libprotobuf-lite.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\libprotobuf.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\libprotoc.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\protoc.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\tests.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\install.cmake;C:\CMake\share\cmake-3.10\Modules\GNUInstallDirs.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\protobuf.pc.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\protobuf-lite.pc.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\protobuf-config.cmake.in;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\protobuf-config-version.cmake.in;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\protobuf-module.cmake.in;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\protobuf-options.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Libraries/3rdPartyLibs/protobuf-3.5.1_64/cmake/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\CMake\bin\cmake.exe -HC:/Libraries/3rdPartyLibs/protobuf-3.5.1_64/cmake -BC:/Libraries/3rdPartyLibs/protobuf-3.5.1_64/cmake --check-stamp-file C:/Libraries/3rdPartyLibs/protobuf-3.5.1_64/cmake/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Libraries/3rdPartyLibs/protobuf-3.5.1_64/cmake/CMakeLists.txt;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\CMakeLists.txt;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\CMakeFiles\3.10.1\CMakeSystem.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInitialize.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\CMakeFiles\3.10.1\CMakeCCompiler.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\CMakeFiles\3.10.1\CMakeCXXCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\CMakeFiles\3.10.1\CMakeRCCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCXXInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\MSVC-CXX.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC-CXX.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeDependentOption.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\protobuf-options.cmake;C:\CMake\share\cmake-3.10\Modules\FindThreads.cmake;C:\CMake\share\cmake-3.10\Modules\CheckLibraryExists.cmake;C:\CMake\share\cmake-3.10\Modules\CheckSymbolExists.cmake;C:\CMake\share\cmake-3.10\Modules\CheckIncludeFile.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.10\Modules\FindZLIB.cmake;C:\CMake\share\cmake-3.10\Modules\SelectLibraryConfigurations.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\extract_includes.bat.in;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\libprotobuf-lite.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\libprotobuf.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\libprotoc.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\protoc.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\tests.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\install.cmake;C:\CMake\share\cmake-3.10\Modules\GNUInstallDirs.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\protobuf.pc.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\protobuf-lite.pc.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\protobuf-config.cmake.in;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\protobuf-config-version.cmake.in;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\protobuf-module.cmake.in;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\protobuf-options.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Libraries/3rdPartyLibs/protobuf-3.5.1_64/cmake/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\CMake\bin\cmake.exe -HC:/Libraries/3rdPartyLibs/protobuf-3.5.1_64/cmake -BC:/Libraries/3rdPartyLibs/protobuf-3.5.1_64/cmake --check-stamp-file C:/Libraries/3rdPartyLibs/protobuf-3.5.1_64/cmake/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Libraries/3rdPartyLibs/protobuf-3.5.1_64/cmake/CMakeLists.txt;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\CMakeLists.txt;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\CMakeFiles\3.10.1\CMakeSystem.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInitialize.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\CMakeFiles\3.10.1\CMakeCCompiler.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\CMakeFiles\3.10.1\CMakeCXXCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\CMakeFiles\3.10.1\CMakeRCCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCXXInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\MSVC-CXX.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC-CXX.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeDependentOption.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\protobuf-options.cmake;C:\CMake\share\cmake-3.10\Modules\FindThreads.cmake;C:\CMake\share\cmake-3.10\Modules\CheckLibraryExists.cmake;C:\CMake\share\cmake-3.10\Modules\CheckSymbolExists.cmake;C:\CMake\share\cmake-3.10\Modules\CheckIncludeFile.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.10\Modules\FindZLIB.cmake;C:\CMake\share\cmake-3.10\Modules\SelectLibraryConfigurations.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\extract_includes.bat.in;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\libprotobuf-lite.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\libprotobuf.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\libprotoc.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\protoc.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\tests.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\install.cmake;C:\CMake\share\cmake-3.10\Modules\GNUInstallDirs.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\protobuf.pc.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\protobuf-lite.pc.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\protobuf-config.cmake.in;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\protobuf-config-version.cmake.in;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\protobuf-module.cmake.in;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\protobuf-options.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\gmock\src\gmock_main.cc"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\ZERO_CHECK.vcxproj">
+      <Project>{BC6984B2-4939-32B3-B178-282E04B06340}</Project>
+      <Name>ZERO_CHECK</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\3rdPartyLibs\protobuf-3.5.1_64\cmake\gmock.vcxproj">
+      <Project>{B5697F9F-6E5F-3FD7-B357-66D1AD71E185}</Project>
+      <Name>gmock</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

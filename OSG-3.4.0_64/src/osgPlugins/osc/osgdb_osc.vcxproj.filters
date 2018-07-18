@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\osc\ip\IpEndpointName.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\osc\osc\OscOutboundPacketStream.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\osc\osc\OscPrintReceivedElements.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\osc\osc\OscReceivedElements.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\osc\osc\OscTypes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\osc\OscReceivingDevice.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\osc\OscSendingDevice.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\osc\ReaderWriterOscDevice.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\osc\ip\win32\NetworkingUtils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\osc\ip\win32\UdpSocket.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\osc\ip\IpEndpointName.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\osc\ip\NetworkingUtils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\osc\ip\PacketListener.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\osc\ip\TimerListener.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\osc\ip\UdpSocket.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\osc\osc\MessageMappingOscPacketListener.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\osc\osc\OscException.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\osc\osc\OscHostEndianness.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\osc\osc\OscOutboundPacketStream.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\osc\osc\OscPacketListener.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\osc\osc\OscPrintReceivedElements.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\osc\osc\OscReceivedElements.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\osc\osc\OscTypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\osc\OscReceivingDevice.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\osc\OscSendingDevice.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\osc\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="C:\Libraries\OSG-3.4.0_64\PlatformSpecifics\Windows\OpenSceneGraphVersionInfo.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{29A82576-0467-3E0F-914C-5CA8B15FB8C1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{2C1F2B13-BA14-36B4-B5AD-56B355D1CA2C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgParticle\ConnectedParticleSystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgParticle\Emitter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgParticle\ExplosionDebrisEffect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgParticle\ExplosionEffect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgParticle\FireEffect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgParticle\FluidFrictionOperator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgParticle\FluidProgram.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgParticle\ModularEmitter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgParticle\ModularProgram.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgParticle\MultiSegmentPlacer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgParticle\Particle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgParticle\ParticleEffect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgParticle\ParticleProcessor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgParticle\ParticleSystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgParticle\ParticleSystemUpdater.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgParticle\PrecipitationEffect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgParticle\Program.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgParticle\SmokeEffect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgParticle\SmokeTrailEffect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgParticle\Version.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgParticle\DomainOperator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgParticle\BounceOperator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgParticle\SinkOperator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Libraries\OSG-3.4.0_64\src\osgParticle\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgParticle\AccelOperator">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgParticle\AngularAccelOperator">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgParticle\BoxPlacer">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgParticle\CenteredPlacer">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgParticle\ConnectedParticleSystem">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgParticle\ConstantRateCounter">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgParticle\Counter">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgParticle\Emitter">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgParticle\ExplosionDebrisEffect">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgParticle\ExplosionEffect">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgParticle\Export">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgParticle\FireEffect">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgParticle\FluidFrictionOperator">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgParticle\FluidProgram">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgParticle\ForceOperator">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgParticle\Interpolator">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgParticle\LinearInterpolator">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgParticle\ModularEmitter">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgParticle\ModularProgram">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgParticle\MultiSegmentPlacer">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgParticle\Operator">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgParticle\Particle">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgParticle\ParticleEffect">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgParticle\ParticleProcessor">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgParticle\ParticleSystem">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgParticle\ParticleSystemUpdater">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgParticle\Placer">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgParticle\PointPlacer">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgParticle\PrecipitationEffect">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgParticle\Program">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgParticle\RadialShooter">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgParticle\RandomRateCounter">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgParticle\range">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgParticle\SectorPlacer">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgParticle\SegmentPlacer">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgParticle\Shooter">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgParticle\SmokeEffect">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgParticle\SmokeTrailEffect">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgParticle\VariableRateCounter">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgParticle\Version">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgParticle\CompositePlacer">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgParticle\AngularDampingOperator">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgParticle\DampingOperator">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgParticle\ExplosionOperator">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgParticle\OrbitOperator">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgParticle\DomainOperator">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgParticle\BounceOperator">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgParticle\SinkOperator">
+      <Filter>Header Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="C:\Libraries\OSG-3.4.0_64\PlatformSpecifics\Windows\OpenSceneGraphVersionInfo.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{29A82576-0467-3E0F-914C-5CA8B15FB8C1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{2C1F2B13-BA14-36B4-B5AD-56B355D1CA2C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
