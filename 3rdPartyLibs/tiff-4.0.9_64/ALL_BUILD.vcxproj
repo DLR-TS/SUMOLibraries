@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{31B18611-50C2-3D1C-9C8C-AFF7D351787D}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Libraries/3rdPartyLibs/tiff-4.0.9_64/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\CMake\bin\cmake.exe -HC:/Libraries/3rdPartyLibs/tiff-4.0.9_64 -BC:/Libraries/3rdPartyLibs/tiff-4.0.9_64 --check-stamp-file C:/Libraries/3rdPartyLibs/tiff-4.0.9_64/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Libraries/3rdPartyLibs/tiff-4.0.9_64/CMakeLists.txt;C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\CMakeLists.txt;C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\CMakeFiles\3.10.1\CMakeSystem.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInitialize.cmake;C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\CMakeFiles\3.10.1\CMakeCCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\CMakeFiles\3.10.1\CMakeRCCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.10\Modules\GNUInstallDirs.cmake;C:\CMake\share\cmake-3.10\Modules\CheckCCompilerFlag.cmake;C:\CMake\share\cmake-3.10\Modules\CheckCSourceCompiles.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\CMake\share\cmake-3.10\Modules\CheckCSourceCompiles.cmake;C:\CMake\share\cmake-3.10\Modules\CheckIncludeFile.cmake;C:\CMake\share\cmake-3.10\Modules\CheckTypeSize.cmake;C:\CMake\share\cmake-3.10\Modules\CheckIncludeFile.cmake;C:\CMake\share\cmake-3.10\Modules\CheckIncludeFileCXX.cmake;C:\CMake\share\cmake-3.10\Modules\CheckFunctionExists.cmake;C:\CMake\share\cmake-3.10\Modules\TestBigEndian.cmake;C:\CMake\share\cmake-3.10\Modules\FindZLIB.cmake;C:\CMake\share\cmake-3.10\Modules\SelectLibraryConfigurations.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.10\Modules\FindJPEG.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.10\Modules\FindLibLZMA.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeDetermineCXXCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeDetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-Determine-CXX.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeDetermineCompilerId.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCompilerIdDetection.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\MIPSpro-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\TI-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\CMake\share\cmake-3.10\Modules\CompilerId\VS-10.vcxproj.in;C:\CMake\share\cmake-3.10\Modules\CMakeFindBinUtils.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCXXCompiler.cmake.in;C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\CMakeFiles\3.10.1\CMakeCXXCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCXXInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\MSVC-CXX.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC-CXX.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeTestCXXCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeTestCompilerCommon.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeDetermineCompilerABI.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeParseImplicitLinkInfo.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCXXCompilerABI.cpp;C:\CMake\share\cmake-3.10\Modules\CMakeDetermineCompileFeatures.cmake;C:\CMake\share\cmake-3.10\Modules\Internal\FeatureTesting.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\MSVC-CXX-FeatureTests.cmake;C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\CMakeFiles\feature_tests.cxx;C:\CMake\share\cmake-3.10\Modules\CMakeCXXCompiler.cmake.in;C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\CMakeFiles\3.10.1\CMakeCXXCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\FindOpenGL.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.10\Modules\FindGLUT.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\libtiff-4.pc.in;C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Libraries/3rdPartyLibs/tiff-4.0.9_64/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\CMake\bin\cmake.exe -HC:/Libraries/3rdPartyLibs/tiff-4.0.9_64 -BC:/Libraries/3rdPartyLibs/tiff-4.0.9_64 --check-stamp-file C:/Libraries/3rdPartyLibs/tiff-4.0.9_64/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Libraries/3rdPartyLibs/tiff-4.0.9_64/CMakeLists.txt;C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\CMakeLists.txt;C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\CMakeFiles\3.10.1\CMakeSystem.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInitialize.cmake;C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\CMakeFiles\3.10.1\CMakeCCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\CMakeFiles\3.10.1\CMakeRCCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.10\Modules\GNUInstallDirs.cmake;C:\CMake\share\cmake-3.10\Modules\CheckCCompilerFlag.cmake;C:\CMake\share\cmake-3.10\Modules\CheckCSourceCompiles.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\CMake\share\cmake-3.10\Modules\CheckCSourceCompiles.cmake;C:\CMake\share\cmake-3.10\Modules\CheckIncludeFile.cmake;C:\CMake\share\cmake-3.10\Modules\CheckTypeSize.cmake;C:\CMake\share\cmake-3.10\Modules\CheckIncludeFile.cmake;C:\CMake\share\cmake-3.10\Modules\CheckIncludeFileCXX.cmake;C:\CMake\share\cmake-3.10\Modules\CheckFunctionExists.cmake;C:\CMake\share\cmake-3.10\Modules\TestBigEndian.cmake;C:\CMake\share\cmake-3.10\Modules\FindZLIB.cmake;C:\CMake\share\cmake-3.10\Modules\SelectLibraryConfigurations.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.10\Modules\FindJPEG.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.10\Modules\FindLibLZMA.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeDetermineCXXCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeDetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-Determine-CXX.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeDetermineCompilerId.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCompilerIdDetection.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\MIPSpro-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\TI-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\CMake\share\cmake-3.10\Modules\CompilerId\VS-10.vcxproj.in;C:\CMake\share\cmake-3.10\Modules\CMakeFindBinUtils.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCXXCompiler.cmake.in;C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\CMakeFiles\3.10.1\CMakeCXXCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCXXInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\MSVC-CXX.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC-CXX.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeTestCXXCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeTestCompilerCommon.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeDetermineCompilerABI.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeParseImplicitLinkInfo.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCXXCompilerABI.cpp;C:\CMake\share\cmake-3.10\Modules\CMakeDetermineCompileFeatures.cmake;C:\CMake\share\cmake-3.10\Modules\Internal\FeatureTesting.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\MSVC-CXX-FeatureTests.cmake;C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\CMakeFiles\feature_tests.cxx;C:\CMake\share\cmake-3.10\Modules\CMakeCXXCompiler.cmake.in;C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\CMakeFiles\3.10.1\CMakeCXXCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\FindOpenGL.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.10\Modules\FindGLUT.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\libtiff-4.pc.in;C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Libraries/3rdPartyLibs/tiff-4.0.9_64/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\CMake\bin\cmake.exe -HC:/Libraries/3rdPartyLibs/tiff-4.0.9_64 -BC:/Libraries/3rdPartyLibs/tiff-4.0.9_64 --check-stamp-file C:/Libraries/3rdPartyLibs/tiff-4.0.9_64/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Libraries/3rdPartyLibs/tiff-4.0.9_64/CMakeLists.txt;C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\CMakeLists.txt;C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\CMakeFiles\3.10.1\CMakeSystem.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInitialize.cmake;C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\CMakeFiles\3.10.1\CMakeCCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\CMakeFiles\3.10.1\CMakeRCCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.10\Modules\GNUInstallDirs.cmake;C:\CMake\share\cmake-3.10\Modules\CheckCCompilerFlag.cmake;C:\CMake\share\cmake-3.10\Modules\CheckCSourceCompiles.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\CMake\share\cmake-3.10\Modules\CheckCSourceCompiles.cmake;C:\CMake\share\cmake-3.10\Modules\CheckIncludeFile.cmake;C:\CMake\share\cmake-3.10\Modules\CheckTypeSize.cmake;C:\CMake\share\cmake-3.10\Modules\CheckIncludeFile.cmake;C:\CMake\share\cmake-3.10\Modules\CheckIncludeFileCXX.cmake;C:\CMake\share\cmake-3.10\Modules\CheckFunctionExists.cmake;C:\CMake\share\cmake-3.10\Modules\TestBigEndian.cmake;C:\CMake\share\cmake-3.10\Modules\FindZLIB.cmake;C:\CMake\share\cmake-3.10\Modules\SelectLibraryConfigurations.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.10\Modules\FindJPEG.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.10\Modules\FindLibLZMA.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeDetermineCXXCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeDetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-Determine-CXX.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeDetermineCompilerId.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCompilerIdDetection.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\MIPSpro-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\TI-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\CMake\share\cmake-3.10\Modules\CompilerId\VS-10.vcxproj.in;C:\CMake\share\cmake-3.10\Modules\CMakeFindBinUtils.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCXXCompiler.cmake.in;C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\CMakeFiles\3.10.1\CMakeCXXCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCXXInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\MSVC-CXX.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC-CXX.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeTestCXXCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeTestCompilerCommon.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeDetermineCompilerABI.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeParseImplicitLinkInfo.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCXXCompilerABI.cpp;C:\CMake\share\cmake-3.10\Modules\CMakeDetermineCompileFeatures.cmake;C:\CMake\share\cmake-3.10\Modules\Internal\FeatureTesting.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\MSVC-CXX-FeatureTests.cmake;C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\CMakeFiles\feature_tests.cxx;C:\CMake\share\cmake-3.10\Modules\CMakeCXXCompiler.cmake.in;C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\CMakeFiles\3.10.1\CMakeCXXCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\FindOpenGL.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.10\Modules\FindGLUT.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\libtiff-4.pc.in;C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Libraries/3rdPartyLibs/tiff-4.0.9_64/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\CMake\bin\cmake.exe -HC:/Libraries/3rdPartyLibs/tiff-4.0.9_64 -BC:/Libraries/3rdPartyLibs/tiff-4.0.9_64 --check-stamp-file C:/Libraries/3rdPartyLibs/tiff-4.0.9_64/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Libraries/3rdPartyLibs/tiff-4.0.9_64/CMakeLists.txt;C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\CMakeLists.txt;C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\CMakeFiles\3.10.1\CMakeSystem.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInitialize.cmake;C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\CMakeFiles\3.10.1\CMakeCCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\CMakeFiles\3.10.1\CMakeRCCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.10\Modules\GNUInstallDirs.cmake;C:\CMake\share\cmake-3.10\Modules\CheckCCompilerFlag.cmake;C:\CMake\share\cmake-3.10\Modules\CheckCSourceCompiles.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\CMake\share\cmake-3.10\Modules\CheckCSourceCompiles.cmake;C:\CMake\share\cmake-3.10\Modules\CheckIncludeFile.cmake;C:\CMake\share\cmake-3.10\Modules\CheckTypeSize.cmake;C:\CMake\share\cmake-3.10\Modules\CheckIncludeFile.cmake;C:\CMake\share\cmake-3.10\Modules\CheckIncludeFileCXX.cmake;C:\CMake\share\cmake-3.10\Modules\CheckFunctionExists.cmake;C:\CMake\share\cmake-3.10\Modules\TestBigEndian.cmake;C:\CMake\share\cmake-3.10\Modules\FindZLIB.cmake;C:\CMake\share\cmake-3.10\Modules\SelectLibraryConfigurations.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.10\Modules\FindJPEG.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.10\Modules\FindLibLZMA.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeDetermineCXXCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeDetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-Determine-CXX.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeDetermineCompilerId.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCompilerIdDetection.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\MIPSpro-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\TI-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\CMake\share\cmake-3.10\Modules\CompilerId\VS-10.vcxproj.in;C:\CMake\share\cmake-3.10\Modules\CMakeFindBinUtils.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCXXCompiler.cmake.in;C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\CMakeFiles\3.10.1\CMakeCXXCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCXXInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\MSVC-CXX.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC-CXX.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeTestCXXCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeTestCompilerCommon.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeDetermineCompilerABI.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeParseImplicitLinkInfo.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCXXCompilerABI.cpp;C:\CMake\share\cmake-3.10\Modules\CMakeDetermineCompileFeatures.cmake;C:\CMake\share\cmake-3.10\Modules\Internal\FeatureTesting.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\MSVC-CXX-FeatureTests.cmake;C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\CMakeFiles\feature_tests.cxx;C:\CMake\share\cmake-3.10\Modules\CMakeCXXCompiler.cmake.in;C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\CMakeFiles\3.10.1\CMakeCXXCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\FindOpenGL.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.10\Modules\FindGLUT.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\libtiff-4.pc.in;C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\ZERO_CHECK.vcxproj">
+      <Project>{9F79B2EA-CABD-3377-ADC3-CF0143AD171A}</Project>
+      <Name>ZERO_CHECK</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\contrib\addtiffo\addtiffo.vcxproj">
+      <Project>{31BF5FD7-BFA6-3E8E-9878-9DBDE2203200}</Project>
+      <Name>addtiffo</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\test\ascii_tag.vcxproj">
+      <Project>{9AE86C1C-9D02-3AFC-B5F9-6D876ABD0853}</Project>
+      <Name>ascii_tag</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\test\custom_dir.vcxproj">
+      <Project>{090752A2-4C19-3BB3-B580-202B8DE78E53}</Project>
+      <Name>custom_dir</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\tools\fax2ps.vcxproj">
+      <Project>{4E8B5F0C-0E87-3AAB-A976-E2284D900DE4}</Project>
+      <Name>fax2ps</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\tools\fax2tiff.vcxproj">
+      <Project>{CE5FD258-075F-350F-B2B1-33B75C98FB39}</Project>
+      <Name>fax2tiff</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\contrib\iptcutil\iptcutil.vcxproj">
+      <Project>{57FB6AD5-BC39-38CF-96A6-77DE2C142F01}</Project>
+      <Name>iptcutil</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\test\long_tag.vcxproj">
+      <Project>{AEB910D7-1056-36CA-9592-A9C58502A384}</Project>
+      <Name>long_tag</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\tools\pal2rgb.vcxproj">
+      <Project>{2ECAD941-F0C6-3666-8A91-84DE34AF9657}</Project>
+      <Name>pal2rgb</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\port\port.vcxproj">
+      <Project>{32AE2891-C4C3-3081-89A3-4647C698AA04}</Project>
+      <Name>port</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\tools\ppm2tiff.vcxproj">
+      <Project>{AED8C20A-183F-32CD-8F13-301DA359096E}</Project>
+      <Name>ppm2tiff</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\tools\raw2tiff.vcxproj">
+      <Project>{DFD6A185-175D-34C9-83DD-B58EEEDED954}</Project>
+      <Name>raw2tiff</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\test\raw_decode.vcxproj">
+      <Project>{ECD9B5AC-D575-3D23-9B98-E7541C6D8831}</Project>
+      <Name>raw_decode</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\test\rewrite.vcxproj">
+      <Project>{19F4C2F7-1203-3C0B-83C4-187D292CFF0A}</Project>
+      <Name>rewrite</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\tools\rgb2ycbcr.vcxproj">
+      <Project>{2D8BD02B-3987-346C-977D-D958EB4354CC}</Project>
+      <Name>rgb2ycbcr</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\test\short_tag.vcxproj">
+      <Project>{1F5D659F-3E74-32A7-94FF-B2B0286EBFDC}</Project>
+      <Name>short_tag</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\test\strip_rw.vcxproj">
+      <Project>{9687F8D0-2637-393D-96D0-88A939B91E23}</Project>
+      <Name>strip_rw</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\tools\thumbnail.vcxproj">
+      <Project>{224DDBD9-90E7-3FC0-AA1C-F769CD19C109}</Project>
+      <Name>thumbnail</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\libtiff\tiff.vcxproj">
+      <Project>{D017B8E2-C5EE-348F-A56B-D32A97099E16}</Project>
+      <Name>tiff</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\contrib\dbs\tiff-bi.vcxproj">
+      <Project>{3636DCB9-B0A3-3390-842A-D43B442BCCF1}</Project>
+      <Name>tiff-bi</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\contrib\dbs\tiff-grayscale.vcxproj">
+      <Project>{A758B3E5-3974-3BC7-B406-25F49478CA5B}</Project>
+      <Name>tiff-grayscale</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\contrib\dbs\tiff-palette.vcxproj">
+      <Project>{7A276069-9359-30FA-8020-92DA245A42B6}</Project>
+      <Name>tiff-palette</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\contrib\dbs\tiff-rgb.vcxproj">
+      <Project>{C83B4A3A-5EEE-3001-8562-7A5DEEA6C6CE}</Project>
+      <Name>tiff-rgb</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\tools\tiff2bw.vcxproj">
+      <Project>{4CA15AA8-0079-3215-9AA7-1A27F65C3C5A}</Project>
+      <Name>tiff2bw</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\tools\tiff2pdf.vcxproj">
+      <Project>{6274276D-22FD-3243-BB1B-88C589E558AD}</Project>
+      <Name>tiff2pdf</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\tools\tiff2ps.vcxproj">
+      <Project>{7070F23D-F9CE-3C02-AF8C-3E4787887852}</Project>
+      <Name>tiff2ps</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\tools\tiff2rgba.vcxproj">
+      <Project>{F8172F54-4DA5-3D19-B11C-2EDBCEC92390}</Project>
+      <Name>tiff2rgba</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\tools\tiffcmp.vcxproj">
+      <Project>{420FC5F3-A246-3902-8200-698545B7BFAA}</Project>
+      <Name>tiffcmp</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\tools\tiffcp.vcxproj">
+      <Project>{EDC7D569-FDBD-31AC-8A07-6EFEB3A75E47}</Project>
+      <Name>tiffcp</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\tools\tiffcrop.vcxproj">
+      <Project>{C9B6C377-DB46-314D-9617-D0510FF1D653}</Project>
+      <Name>tiffcrop</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\tools\tiffdither.vcxproj">
+      <Project>{D02DC564-F7E7-3A5E-B9D6-29CFE6377316}</Project>
+      <Name>tiffdither</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\tools\tiffdump.vcxproj">
+      <Project>{BCD6AF8E-2673-369B-9E7D-0838316E7611}</Project>
+      <Name>tiffdump</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\tools\tiffinfo.vcxproj">
+      <Project>{10971927-9C8C-39C8-B2B0-6CF2359C91A2}</Project>
+      <Name>tiffinfo</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\tools\tiffmedian.vcxproj">
+      <Project>{7AFDD6C4-10B1-3762-B2AE-DE40981BE89E}</Project>
+      <Name>tiffmedian</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\tools\tiffset.vcxproj">
+      <Project>{DAA3F16A-D0CC-3C44-942B-287DBE05D119}</Project>
+      <Name>tiffset</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\tools\tiffsplit.vcxproj">
+      <Project>{71076AFA-2C15-347D-A18B-8D0606265109}</Project>
+      <Name>tiffsplit</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\3rdPartyLibs\tiff-4.0.9_64\libtiff\tiffxx.vcxproj">
+      <Project>{CE2F311A-223B-31D3-98D6-BFC6CB9EA22C}</Project>
+      <Name>tiffxx</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

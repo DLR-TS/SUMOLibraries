@@ -1,0 +1,527 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{BEFB7590-4107-3527-A1E9-9D5A9618973E}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Libraries\OSG-3.4.0_64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Libraries\OSG-3.4.0_64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Libraries\OSG-3.4.0_64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Libraries\OSG-3.4.0_64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Libraries\OSG-3.4.0_64\src\osgWrappers\serializers\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Libraries/OSG-3.4.0_64/src/osgWrappers/serializers/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\CMake\bin\cmake.exe -HC:/Libraries/OSG-3.4.0_64 -BC:/Libraries/OSG-3.4.0_64 --check-stamp-file C:/Libraries/OSG-3.4.0_64/src/osgWrappers/serializers/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Libraries/OSG-3.4.0_64/src/osgWrappers/serializers/CMakeLists.txt;C:\Libraries\OSG-3.4.0_64\src\osgWrappers\serializers\CMakeLists.txt;C:\Libraries\OSG-3.4.0_64\src\osgWrappers\serializers\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Libraries\OSG-3.4.0_64\src\osgWrappers\serializers\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Libraries/OSG-3.4.0_64/src/osgWrappers/serializers/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\CMake\bin\cmake.exe -HC:/Libraries/OSG-3.4.0_64 -BC:/Libraries/OSG-3.4.0_64 --check-stamp-file C:/Libraries/OSG-3.4.0_64/src/osgWrappers/serializers/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Libraries/OSG-3.4.0_64/src/osgWrappers/serializers/CMakeLists.txt;C:\Libraries\OSG-3.4.0_64\src\osgWrappers\serializers\CMakeLists.txt;C:\Libraries\OSG-3.4.0_64\src\osgWrappers\serializers\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Libraries\OSG-3.4.0_64\src\osgWrappers\serializers\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Libraries/OSG-3.4.0_64/src/osgWrappers/serializers/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\CMake\bin\cmake.exe -HC:/Libraries/OSG-3.4.0_64 -BC:/Libraries/OSG-3.4.0_64 --check-stamp-file C:/Libraries/OSG-3.4.0_64/src/osgWrappers/serializers/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Libraries/OSG-3.4.0_64/src/osgWrappers/serializers/CMakeLists.txt;C:\Libraries\OSG-3.4.0_64\src\osgWrappers\serializers\CMakeLists.txt;C:\Libraries\OSG-3.4.0_64\src\osgWrappers\serializers\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Libraries\OSG-3.4.0_64\src\osgWrappers\serializers\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Libraries/OSG-3.4.0_64/src/osgWrappers/serializers/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\CMake\bin\cmake.exe -HC:/Libraries/OSG-3.4.0_64 -BC:/Libraries/OSG-3.4.0_64 --check-stamp-file C:/Libraries/OSG-3.4.0_64/src/osgWrappers/serializers/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Libraries/OSG-3.4.0_64/src/osgWrappers/serializers/CMakeLists.txt;C:\Libraries\OSG-3.4.0_64\src\osgWrappers\serializers\CMakeLists.txt;C:\Libraries\OSG-3.4.0_64\src\osgWrappers\serializers\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Libraries\OSG-3.4.0_64\src\osgWrappers\serializers\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\ZERO_CHECK.vcxproj">
+      <Project>{3A4466EF-27A0-3982-AAE7-8F08C1330559}</Project>
+      <Name>ZERO_CHECK</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\3dc\osgdb_3dc.vcxproj">
+      <Project>{39904EC9-896C-3065-AA54-F03B5BB05E91}</Project>
+      <Name>osgdb_3dc</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\3ds\osgdb_3ds.vcxproj">
+      <Project>{E7AAC37F-32B7-33CB-A424-30DFD9A72F48}</Project>
+      <Name>osgdb_3ds</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\ac\osgdb_ac.vcxproj">
+      <Project>{63851315-C466-399E-A01A-4D2A1FB3E110}</Project>
+      <Name>osgdb_ac</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\bmp\osgdb_bmp.vcxproj">
+      <Project>{5A136F75-5BFA-3778-A20B-B939DC643AA7}</Project>
+      <Name>osgdb_bmp</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\bsp\osgdb_bsp.vcxproj">
+      <Project>{AA426DCE-5BA2-356D-803E-BA8E132809AE}</Project>
+      <Name>osgdb_bsp</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\bvh\osgdb_bvh.vcxproj">
+      <Project>{7E28AD39-A8DA-39F5-8274-476EA8A5BA48}</Project>
+      <Name>osgdb_bvh</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\cfg\osgdb_cfg.vcxproj">
+      <Project>{C07EA9C4-5B65-3487-B33A-A4311777646B}</Project>
+      <Name>osgdb_cfg</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\curl\osgdb_curl.vcxproj">
+      <Project>{30A8009D-31F4-3247-B239-718FADD47B7E}</Project>
+      <Name>osgdb_curl</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\dds\osgdb_dds.vcxproj">
+      <Project>{6CCFD2C8-C64C-3274-8B27-B8E7F81528D4}</Project>
+      <Name>osgdb_dds</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgWrappers\deprecated-dotosg\osg\osgdb_deprecated_osg.vcxproj">
+      <Project>{50F36A0A-F557-32F9-BC76-73897BCA0524}</Project>
+      <Name>osgdb_deprecated_osg</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgWrappers\deprecated-dotosg\osgAnimation\osgdb_deprecated_osganimation.vcxproj">
+      <Project>{2002DBC9-276E-3990-960B-E792D746B331}</Project>
+      <Name>osgdb_deprecated_osganimation</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgWrappers\deprecated-dotosg\osgFX\osgdb_deprecated_osgfx.vcxproj">
+      <Project>{768F7839-4CE9-30D1-90DF-2C0C4A92A7EE}</Project>
+      <Name>osgdb_deprecated_osgfx</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgWrappers\deprecated-dotosg\osgParticle\osgdb_deprecated_osgparticle.vcxproj">
+      <Project>{2466B356-D0FD-378D-8227-DAB892A1DC91}</Project>
+      <Name>osgdb_deprecated_osgparticle</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgWrappers\deprecated-dotosg\osgShadow\osgdb_deprecated_osgshadow.vcxproj">
+      <Project>{080E3A3A-FA4F-3ADD-ADB7-89D33FE86754}</Project>
+      <Name>osgdb_deprecated_osgshadow</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgWrappers\deprecated-dotosg\osgSim\osgdb_deprecated_osgsim.vcxproj">
+      <Project>{8D63B801-E889-3541-91F1-230F2C9C6679}</Project>
+      <Name>osgdb_deprecated_osgsim</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgWrappers\deprecated-dotosg\osgTerrain\osgdb_deprecated_osgterrain.vcxproj">
+      <Project>{284FE055-E78E-3C7B-9A86-55E0E4FEA3F3}</Project>
+      <Name>osgdb_deprecated_osgterrain</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgWrappers\deprecated-dotosg\osgText\osgdb_deprecated_osgtext.vcxproj">
+      <Project>{F70B9AED-E568-3C0A-B10C-6C177335F953}</Project>
+      <Name>osgdb_deprecated_osgtext</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgWrappers\deprecated-dotosg\osgViewer\osgdb_deprecated_osgviewer.vcxproj">
+      <Project>{50D0CCC7-4847-3E47-BB7D-53AFAB3F58D6}</Project>
+      <Name>osgdb_deprecated_osgviewer</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgWrappers\deprecated-dotosg\osgVolume\osgdb_deprecated_osgvolume.vcxproj">
+      <Project>{2FF65DE8-1369-3E3D-8D43-10C436A1AA4F}</Project>
+      <Name>osgdb_deprecated_osgvolume</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgWrappers\deprecated-dotosg\osgWidget\osgdb_deprecated_osgwidget.vcxproj">
+      <Project>{296EBFEA-8FB9-31F5-B043-8256552B4042}</Project>
+      <Name>osgdb_deprecated_osgwidget</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\dot\osgdb_dot.vcxproj">
+      <Project>{484AAA98-F959-3A07-8C12-D6633E9CED33}</Project>
+      <Name>osgdb_dot</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\dw\osgdb_dw.vcxproj">
+      <Project>{D233AE19-3B7A-3C25-B711-53AA488EFE11}</Project>
+      <Name>osgdb_dw</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\dxf\osgdb_dxf.vcxproj">
+      <Project>{B79CDE8D-1F38-3755-8208-7726DB059D72}</Project>
+      <Name>osgdb_dxf</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\freetype\osgdb_freetype.vcxproj">
+      <Project>{AC3086FE-7212-303C-928F-5256DE6FF05E}</Project>
+      <Name>osgdb_freetype</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\gdal\osgdb_gdal.vcxproj">
+      <Project>{CEB37668-301F-3C73-A746-ABE2C5C9584C}</Project>
+      <Name>osgdb_gdal</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\gif\osgdb_gif.vcxproj">
+      <Project>{34E53549-9C8F-30BB-AF3D-0E2F38636BA1}</Project>
+      <Name>osgdb_gif</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\gles\osgdb_gles.vcxproj">
+      <Project>{37325721-65D0-3EBE-AD80-6ADAA51D3ADB}</Project>
+      <Name>osgdb_gles</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\glsl\osgdb_glsl.vcxproj">
+      <Project>{E5982E3B-0C20-3691-9594-37A5815E5218}</Project>
+      <Name>osgdb_glsl</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\gz\osgdb_gz.vcxproj">
+      <Project>{0FBD9F77-269B-3789-BEBC-BF96CD02EB04}</Project>
+      <Name>osgdb_gz</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\hdr\osgdb_hdr.vcxproj">
+      <Project>{F332112A-D671-3B42-B47D-B743520E56E3}</Project>
+      <Name>osgdb_hdr</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\ive\osgdb_ive.vcxproj">
+      <Project>{48292130-D253-39EF-924E-CFF7C42AC6F3}</Project>
+      <Name>osgdb_ive</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\jpeg\osgdb_jpeg.vcxproj">
+      <Project>{95C86D5A-7C25-357C-AB9C-C3542024CAFE}</Project>
+      <Name>osgdb_jpeg</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\ktx\osgdb_ktx.vcxproj">
+      <Project>{3C56594A-D587-36C5-97A0-2378BD38490B}</Project>
+      <Name>osgdb_ktx</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\logo\osgdb_logo.vcxproj">
+      <Project>{ECF40EBE-8FC8-3F93-91A1-6203BEA5D066}</Project>
+      <Name>osgdb_logo</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\lua\osgdb_lua.vcxproj">
+      <Project>{FE3FAD4D-2FDA-38A8-A975-46BBB507D43D}</Project>
+      <Name>osgdb_lua</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\lwo\osgdb_lwo.vcxproj">
+      <Project>{35A732AE-1793-3980-9F11-F50A3EC32D1A}</Project>
+      <Name>osgdb_lwo</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\lws\osgdb_lws.vcxproj">
+      <Project>{0B2F00D4-1092-356B-BA59-EA60B7E07FAA}</Project>
+      <Name>osgdb_lws</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\md2\osgdb_md2.vcxproj">
+      <Project>{C9A9C4A5-75F5-394A-90EF-3C5F3E183361}</Project>
+      <Name>osgdb_md2</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\mdl\osgdb_mdl.vcxproj">
+      <Project>{066326C6-3896-3676-B51F-5FE7211780EC}</Project>
+      <Name>osgdb_mdl</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\normals\osgdb_normals.vcxproj">
+      <Project>{DCBFBFFB-240B-373C-9E49-EBABDFD901E5}</Project>
+      <Name>osgdb_normals</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\obj\osgdb_obj.vcxproj">
+      <Project>{13C3CA27-DF79-3A71-99B1-0BA88C467AAB}</Project>
+      <Name>osgdb_obj</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\ogr\osgdb_ogr.vcxproj">
+      <Project>{DDB7C753-2281-397F-9613-BEE229DD2B77}</Project>
+      <Name>osgdb_ogr</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\OpenFlight\osgdb_openflight.vcxproj">
+      <Project>{E5C39255-6CE8-3296-AAE1-8F428235753C}</Project>
+      <Name>osgdb_openflight</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\osc\osgdb_osc.vcxproj">
+      <Project>{8A5E2F56-20CB-340D-A392-07CFA804EB00}</Project>
+      <Name>osgdb_osc</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\osg\osgdb_osg.vcxproj">
+      <Project>{C92FBFBE-6B11-3A7B-97DC-C9D2C05BA5CA}</Project>
+      <Name>osgdb_osg</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\osga\osgdb_osga.vcxproj">
+      <Project>{BA5FBD59-2959-392A-BCEE-738591EB7715}</Project>
+      <Name>osgdb_osga</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\osgjs\osgdb_osgjs.vcxproj">
+      <Project>{2FFF04EB-A153-3D49-916B-CAC00C8A91B2}</Project>
+      <Name>osgdb_osgjs</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\shadow\osgdb_osgshadow.vcxproj">
+      <Project>{C00694E1-4808-3B83-9C95-F413D96B6E8B}</Project>
+      <Name>osgdb_osgshadow</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\terrain\osgdb_osgterrain.vcxproj">
+      <Project>{4E5E5FDE-5F79-3485-8C80-86E1C6659F13}</Project>
+      <Name>osgdb_osgterrain</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\osgtgz\osgdb_osgtgz.vcxproj">
+      <Project>{89D5CD9F-3957-3191-83D3-E6CA8FCD3098}</Project>
+      <Name>osgdb_osgtgz</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\view\osgdb_osgviewer.vcxproj">
+      <Project>{E26343CD-9DA0-348D-8BFC-04FF9252D111}</Project>
+      <Name>osgdb_osgviewer</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\p3d\osgdb_p3d.vcxproj">
+      <Project>{552344FE-AD3E-37AC-80B3-A44557FC419E}</Project>
+      <Name>osgdb_p3d</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\pic\osgdb_pic.vcxproj">
+      <Project>{F0410C5E-2CD5-3973-BEBE-0AA8FB6BF03A}</Project>
+      <Name>osgdb_pic</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\ply\osgdb_ply.vcxproj">
+      <Project>{82FEE991-246C-3538-A81D-05687A74E9E5}</Project>
+      <Name>osgdb_ply</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\png\osgdb_png.vcxproj">
+      <Project>{0F2F561A-AE6B-3017-B420-47D3F0973911}</Project>
+      <Name>osgdb_png</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\pnm\osgdb_pnm.vcxproj">
+      <Project>{B1B7CBE3-3026-3C24-BC46-666627A00EEB}</Project>
+      <Name>osgdb_pnm</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\pov\osgdb_pov.vcxproj">
+      <Project>{21A5496B-26D8-3159-A0FF-3A8B3382A371}</Project>
+      <Name>osgdb_pov</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\pvr\osgdb_pvr.vcxproj">
+      <Project>{E3C69517-5A69-32B9-9609-31BFD9EE8C8B}</Project>
+      <Name>osgdb_pvr</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\revisions\osgdb_revisions.vcxproj">
+      <Project>{E81228AC-A469-3A10-9083-799A0CDFBBDC}</Project>
+      <Name>osgdb_revisions</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\rgb\osgdb_rgb.vcxproj">
+      <Project>{9C242411-E438-3FFE-8EAE-A70BFE21CC20}</Project>
+      <Name>osgdb_rgb</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\rot\osgdb_rot.vcxproj">
+      <Project>{86D47E88-2830-3349-9704-92D937EE2AEB}</Project>
+      <Name>osgdb_rot</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\scale\osgdb_scale.vcxproj">
+      <Project>{6D753374-5B5A-3437-B054-18F7CF2D9B60}</Project>
+      <Name>osgdb_scale</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgWrappers\serializers\osg\osgdb_serializers_osg.vcxproj">
+      <Project>{726F856D-6741-313C-9F08-C658B5954FD6}</Project>
+      <Name>osgdb_serializers_osg</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgWrappers\serializers\osgAnimation\osgdb_serializers_osganimation.vcxproj">
+      <Project>{66B414FD-3E63-300F-B6AF-3997B6F8F540}</Project>
+      <Name>osgdb_serializers_osganimation</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgWrappers\serializers\osgFX\osgdb_serializers_osgfx.vcxproj">
+      <Project>{3402E5E4-C99E-3E8D-BF9A-DA23BFA1C8B0}</Project>
+      <Name>osgdb_serializers_osgfx</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgWrappers\serializers\osgGA\osgdb_serializers_osgga.vcxproj">
+      <Project>{E322E7F2-A51A-3E2B-A463-56D86C07DFF8}</Project>
+      <Name>osgdb_serializers_osgga</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgWrappers\serializers\osgManipulator\osgdb_serializers_osgmanipulator.vcxproj">
+      <Project>{1FADB843-401D-3932-981F-DDB830C7E39D}</Project>
+      <Name>osgdb_serializers_osgmanipulator</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgWrappers\serializers\osgParticle\osgdb_serializers_osgparticle.vcxproj">
+      <Project>{F199C854-50B5-3F9F-93BA-7DFF664E3532}</Project>
+      <Name>osgdb_serializers_osgparticle</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgWrappers\serializers\osgShadow\osgdb_serializers_osgshadow.vcxproj">
+      <Project>{0D93E660-06E6-39FD-BE79-74D034C8F377}</Project>
+      <Name>osgdb_serializers_osgshadow</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgWrappers\serializers\osgSim\osgdb_serializers_osgsim.vcxproj">
+      <Project>{95A10C1C-A620-306C-B7DF-6266964D0DD4}</Project>
+      <Name>osgdb_serializers_osgsim</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgWrappers\serializers\osgTerrain\osgdb_serializers_osgterrain.vcxproj">
+      <Project>{C3700586-EA03-3450-A2F4-6B45D90FF4DD}</Project>
+      <Name>osgdb_serializers_osgterrain</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgWrappers\serializers\osgText\osgdb_serializers_osgtext.vcxproj">
+      <Project>{4EA7BE88-680D-314D-AC80-2339E8FF07E8}</Project>
+      <Name>osgdb_serializers_osgtext</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgWrappers\serializers\osgUI\osgdb_serializers_osgui.vcxproj">
+      <Project>{31AD21B0-A018-3C4F-BC48-1E18371998CA}</Project>
+      <Name>osgdb_serializers_osgui</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgWrappers\serializers\osgUtil\osgdb_serializers_osgutil.vcxproj">
+      <Project>{D7B554E5-C23D-30E9-A2CA-B7C442F6F339}</Project>
+      <Name>osgdb_serializers_osgutil</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgWrappers\serializers\osgViewer\osgdb_serializers_osgviewer.vcxproj">
+      <Project>{BEA3C380-399D-3F1C-ABAA-3EE2FB0BBE8C}</Project>
+      <Name>osgdb_serializers_osgviewer</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgWrappers\serializers\osgVolume\osgdb_serializers_osgvolume.vcxproj">
+      <Project>{996E950F-1D33-30E9-AA94-9DF49B8DD115}</Project>
+      <Name>osgdb_serializers_osgvolume</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\shp\osgdb_shp.vcxproj">
+      <Project>{A44A9642-F5EA-3D83-92ED-9A7DF26A8026}</Project>
+      <Name>osgdb_shp</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\stl\osgdb_stl.vcxproj">
+      <Project>{2E0FDFD0-1CCF-3C5D-8962-65F403D96001}</Project>
+      <Name>osgdb_stl</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\tf\osgdb_tf.vcxproj">
+      <Project>{436110E1-235D-305D-B883-8D916F950A0A}</Project>
+      <Name>osgdb_tf</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\tga\osgdb_tga.vcxproj">
+      <Project>{AF282406-31B6-349A-8907-9F01741464F3}</Project>
+      <Name>osgdb_tga</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\tgz\osgdb_tgz.vcxproj">
+      <Project>{0805FD32-36B5-3566-BE90-DA78B3794532}</Project>
+      <Name>osgdb_tgz</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\tiff\osgdb_tiff.vcxproj">
+      <Project>{E691EF18-163E-3AAE-BF5F-A3B4E7E7FAD2}</Project>
+      <Name>osgdb_tiff</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\trans\osgdb_trans.vcxproj">
+      <Project>{4FE13811-2ECC-3FA3-B8AD-A69184760A40}</Project>
+      <Name>osgdb_trans</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\trk\osgdb_trk.vcxproj">
+      <Project>{4880D892-666E-3DB7-9D51-41361A296E6E}</Project>
+      <Name>osgdb_trk</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\txf\osgdb_txf.vcxproj">
+      <Project>{3FAD346F-6D49-35D7-B190-43B9A147130C}</Project>
+      <Name>osgdb_txf</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\txp\osgdb_txp.vcxproj">
+      <Project>{ADB4B6FD-B1D5-30A1-8628-062109E1AC6E}</Project>
+      <Name>osgdb_txp</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\vtf\osgdb_vtf.vcxproj">
+      <Project>{51726912-F2F8-392D-88D5-78E2328C914A}</Project>
+      <Name>osgdb_vtf</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\x\osgdb_x.vcxproj">
+      <Project>{F4C66747-BDEB-3F78-A0D4-55DADE802271}</Project>
+      <Name>osgdb_x</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osgPlugins\zip\osgdb_zip.vcxproj">
+      <Project>{D55C9071-7CB4-3977-89A8-1B8AC59EB491}</Project>
+      <Name>osgdb_zip</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
