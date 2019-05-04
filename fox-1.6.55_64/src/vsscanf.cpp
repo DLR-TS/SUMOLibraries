@@ -387,24 +387,24 @@ err_out:
   }
 
 
-// API (Already implemented in windows 10 SDK)
-// int vfscanf(FILE *stream,const char *format,va_list arg_ptr){
-// arg_scanf farg={(void*)stream,(int(*)(void*))fgetc,(int(*)(int,void*))ungetc};
-// return __v_scanf(&farg,format,arg_ptr);
-// }
+// API
+int vfscanf(FILE *stream,const char *format,va_list arg_ptr){
+  arg_scanf farg={(void*)stream,(int(*)(void*))fgetc,(int(*)(int,void*))ungetc};
+  return __v_scanf(&farg,format,arg_ptr);
+  }
 
 
-// API (Already implemented in windows 10 SDK)
-// int vscanf(const char *format,va_list arg_ptr){
-// return vfscanf(stdin,format,arg_ptr);
-// }
+// API
+int vscanf(const char *format,va_list arg_ptr){
+  return vfscanf(stdin,format,arg_ptr);
+  }
 
 
-// API (Already implemented in windows 10 SDK)
-// int vsscanf(const char* str,const char* format,va_list arg_ptr){
-// str_data fdat={(unsigned char*)str};
-// arg_scanf farg={(void*)&fdat,(int(*)(void*))sgetc,(int(*)(int,void*))sputc};
-// return __v_scanf(&farg,format,arg_ptr);
-// }
+// API
+int vsscanf(const char* str,const char* format,va_list arg_ptr){
+  str_data fdat={(unsigned char*)str};
+  arg_scanf farg={(void*)&fdat,(int(*)(void*))sgetc,(int(*)(int,void*))sputc};
+  return __v_scanf(&farg,format,arg_ptr);
+  }
 
 #endif

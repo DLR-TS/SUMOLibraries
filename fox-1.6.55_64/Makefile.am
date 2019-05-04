@@ -21,10 +21,12 @@ snapshot: dist-all
 
 web: distdir
 	cd $(distdir)/doc && doxygen doxygen.cfg
-	cp -r $(distdir)/doc/* /net/linky/mnt/html
+	cp -r $(distdir)/doc/* /site/www
 
 drop: dist-all
-	cp $(distdir).tar.gz /home/site/ftp/pub
-	cp $(distdir).zip /home/site/ftp/pub
+	cp $(distdir).tar.gz /site/ftp/pub
+	cp $(distdir).zip /site/ftp/pub
+	sha1sum $(distdir).tar.gz >/site/ftp/pub/$(distdir).tar.gz.sha1sum
+	sha1sum $(distdir).zip >/site/ftp/pub/$(distdir).zip.sha1sum
 
 

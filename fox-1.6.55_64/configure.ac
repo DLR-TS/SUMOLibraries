@@ -1,7 +1,7 @@
 # Version of the code
 m4_define([fox_major], [1])
 m4_define([fox_minor], [6])
-m4_define([fox_level], [55])
+m4_define([fox_level], [57])
 m4_define([fox_version],[fox_major.fox_minor.fox_level])
 
 # Init
@@ -109,8 +109,9 @@ AC_CHECK_FUNCS(vsscanf vsnprintf strtoll strtoull)
 
 # Add copious amounts of debugging with gcc
 if test "${GXX}" = "yes" ; then
-  CXXFLAGS="${CXXFLAGS} -Wall -Wformat -Woverloaded-virtual -Wshadow"
+  CXXFLAGS="${CXXFLAGS} -Wall -Wformat -Woverloaded-virtual -Wshadow -DUNICODE"
   #LDFLAGS="-rdynamic ${LDFLAGS}"
+  LDFLAGS="-no-undefined ${LDFLAGS}"
 fi
 
 # Debugging turned on
