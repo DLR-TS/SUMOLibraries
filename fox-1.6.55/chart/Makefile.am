@@ -12,7 +12,8 @@ libCHART_1_6_la_LIBADD  = $(X_LIBS) $(X_BASE_LIBS) $(X_EXTRA_LIBS) $(top_builddi
 
 libCHART_1_6_la_LDFLAGS = \
         -version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE)    \
-	-export-dynamic
+	-export-dynamic \
+	-no-undefined
 
 chartincludedir=$(includedir)/fox-1.6/chart
 

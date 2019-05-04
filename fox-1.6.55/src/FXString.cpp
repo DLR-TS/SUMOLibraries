@@ -2356,16 +2356,16 @@ FXString& FXString::vformat(const FXchar* fmt,va_list args){
 #if (__GLIBC__ > 2) || ((__GLIBC__ == 2) && (__GLIBC_MINOR__ >= 1))
     va_list ag;
     va_copy(ag,args);
-    result=vsnprintf(str,length(),fmt,ag);
+    result=vsnprintf(str,empty()?0:length()+1,fmt,ag);
     va_end(ag);
-    if(length()<=result){
+    if(length()<result && 0<result){
       length(result);
       result=vsnprintf(str,length()+1,fmt,args);
       }
 #else
     va_list ag;
 x:  va_copy(ag,args);
-    result=vsnprintf(str,empty() ? 0 : length()+1,fmt,ag);
+    result=vsnprintf(str,empty()?0:length()+1,fmt,ag);
     va_end(ag);
     if(result<0){ length(FXMAX(64,length()*2)); goto x; }
     if(length()<result){ length(result); goto x; }
