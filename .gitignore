@@ -11,9 +11,9 @@ CMakeFiles
 *.log
 *.res
 *.pyc
-/3rdPartyLibs/protobuf-3.5.1_64/cmake/Debug/libprotocd.lib
-/proj-6.1.1/bin/Release
-/proj-6.1.1/lib/Release
+*.FileListAbsolute.txt
+
+
 /3rdPartyLibs/tiff-4.0.9/tools/Debug
 /3rdPartyLibs/tiff-4.0.9/tools/Release
 /3rdPartyLibs/zlib-1.2.11/Debug
@@ -37,8 +37,14 @@ CMakeFiles
 /3rdPartyLibs/tiff-4.0.9/contrib/iptcutil/Release
 /3rdPartyLibs/tiff-4.0.9/port/Debug
 /3rdPartyLibs/tiff-4.0.9/port/Release
+/3rdPartyLibs/protobuf-3.9.1/cmake/build/Debug
+/3rdPartyLibs/protobuf-3.9.1/cmake/build/Release
+
 /gdal-3.0.1/ogr/ogrsf_frmts/ogrsf_frmts_sup.lib
 /gdal-3.0.1/ogr/ogrsf_frmts/ogrsf_frmts.lib
+/proj-6.1.1/bin/Release
+/proj-6.1.1/lib/Release
+
 /32bits/proj-6.1.1/lib/Release
 /32bits/proj-6.1.1/bin/Release
 /32bits/3rdPartyLibs/tiff-4.0.9/tools/Debug
@@ -65,4 +71,3 @@ CMakeFiles
 /32bits/3rdPartyLibs/tiff-4.0.9/port/Release
 /32bits/gdal-3.0.1/ogr/ogrsf_frmts/ogrsf_frmts_sup.lib
 /32bits/gdal-3.0.1/ogr/ogrsf_frmts/ogrsf_frmts.lib
-
