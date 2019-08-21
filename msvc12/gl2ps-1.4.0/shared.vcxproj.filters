@@ -1,24 +1,24 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="D:\behr_mi\Projekte\sumo\SUMOLibraries\msvc12\gl2ps-1.4.0\gl2ps.c">
+    <ClCompile Include="C:\SUMOLibraries\gl2ps-1.4.0\gl2ps.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="D:\behr_mi\Projekte\sumo\SUMOLibraries\msvc12\gl2ps-1.4.0\gl2ps.h">
+    <ClInclude Include="C:\SUMOLibraries\gl2ps-1.4.0\gl2ps.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\behr_mi\Projekte\sumo\SUMOLibraries\msvc12\gl2ps-1.4.0\CMakeLists.txt" />
+    <CustomBuild Include="C:\SUMOLibraries\gl2ps-1.4.0\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{0383CB06-E777-3623-900A-62A4FFCFC948}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{71EF512D-15EE-3CA9-B18F-F980F13E2508}</UniqueIdentifier>
+      <UniqueIdentifier>{02CDF539-1D86-30ED-91C9-C9549A89DFAD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{2EC1D290-5A14-3916-9AAB-2FFD9898A39B}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{AAE8604D-6BBD-3666-BDF5-9B97BEC2C9E4}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>libprotoc</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">libprotoc.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">libprotocd</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">libprotoc.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">libprotoc</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake;C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src;C:\SUMOLibraries\3rdPartyLibs\zlib-1.2.11\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4018;4065;4146;4244;4251;4267;4305;4307;4309;4334;4355;4506;4800;4996</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;LIBPROTOC_EXPORTS;GOOGLE_PROTOBUF_CMAKE_BUILD;HAVE_ZLIB;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;LIBPROTOC_EXPORTS;GOOGLE_PROTOBUF_CMAKE_BUILD;HAVE_ZLIB;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake;C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src;C:\SUMOLibraries\3rdPartyLibs\zlib-1.2.11\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake;C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src;C:\SUMOLibraries\3rdPartyLibs\zlib-1.2.11\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /ignore:4221</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake;C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src;C:\SUMOLibraries\3rdPartyLibs\zlib-1.2.11\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4018;4065;4146;4244;4251;4267;4305;4307;4309;4334;4355;4506;4800;4996</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;LIBPROTOC_EXPORTS;GOOGLE_PROTOBUF_CMAKE_BUILD;HAVE_ZLIB;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;LIBPROTOC_EXPORTS;GOOGLE_PROTOBUF_CMAKE_BUILD;HAVE_ZLIB;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake;C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src;C:\SUMOLibraries\3rdPartyLibs\zlib-1.2.11\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake;C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src;C:\SUMOLibraries\3rdPartyLibs\zlib-1.2.11\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /ignore:4221</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/cmake/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\CMake\bin\cmake.exe -SC:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/cmake -BC:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/cmake --check-stamp-file C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/cmake/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\CMake\share\cmake-3.15\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeCXXInformation.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeDependentOption.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.15\Modules\CheckCSourceCompiles.cmake;C:\CMake\share\cmake-3.15\Modules\CheckIncludeFile.cmake;C:\CMake\share\cmake-3.15\Modules\CheckLibraryExists.cmake;C:\CMake\share\cmake-3.15\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\CMake\share\cmake-3.15\Modules\Compiler\MSVC-C.cmake;C:\CMake\share\cmake-3.15\Modules\Compiler\MSVC-CXX.cmake;C:\CMake\share\cmake-3.15\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.15\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.15\Modules\FindThreads.cmake;C:\CMake\share\cmake-3.15\Modules\FindZLIB.cmake;C:\CMake\share\cmake-3.15\Modules\GNUInstallDirs.cmake;C:\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC-CXX.cmake;C:\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.15\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.15\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.15\Modules\SelectLibraryConfigurations.cmake;C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake\CMakeFiles\3.15.4\CMakeCCompiler.cmake;C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake\CMakeFiles\3.15.4\CMakeCXXCompiler.cmake;C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake\CMakeFiles\3.15.4\CMakeRCCompiler.cmake;C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake\CMakeFiles\3.15.4\CMakeSystem.cmake;C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake\extract_includes.bat.in;C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake\install.cmake;C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake\libprotobuf-lite.cmake;C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake\libprotobuf.cmake;C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake\libprotoc.cmake;C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake\protobuf-config-version.cmake.in;C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake\protobuf-config.cmake.in;C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake\protobuf-lite.pc.cmake;C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake\protobuf-module.cmake.in;C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake\protobuf-options.cmake;C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake\protobuf.pc.cmake;C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake\protoc.cmake;C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake\version.rc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/cmake/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\CMake\bin\cmake.exe -SC:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/cmake -BC:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/cmake --check-stamp-file C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/cmake/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\CMake\share\cmake-3.15\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeCXXInformation.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeDependentOption.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.15\Modules\CheckCSourceCompiles.cmake;C:\CMake\share\cmake-3.15\Modules\CheckIncludeFile.cmake;C:\CMake\share\cmake-3.15\Modules\CheckLibraryExists.cmake;C:\CMake\share\cmake-3.15\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\CMake\share\cmake-3.15\Modules\Compiler\MSVC-C.cmake;C:\CMake\share\cmake-3.15\Modules\Compiler\MSVC-CXX.cmake;C:\CMake\share\cmake-3.15\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.15\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.15\Modules\FindThreads.cmake;C:\CMake\share\cmake-3.15\Modules\FindZLIB.cmake;C:\CMake\share\cmake-3.15\Modules\GNUInstallDirs.cmake;C:\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC-CXX.cmake;C:\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.15\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.15\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.15\Modules\SelectLibraryConfigurations.cmake;C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake\CMakeFiles\3.15.4\CMakeCCompiler.cmake;C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake\CMakeFiles\3.15.4\CMakeCXXCompiler.cmake;C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake\CMakeFiles\3.15.4\CMakeRCCompiler.cmake;C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake\CMakeFiles\3.15.4\CMakeSystem.cmake;C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake\extract_includes.bat.in;C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake\install.cmake;C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake\libprotobuf-lite.cmake;C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake\libprotobuf.cmake;C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake\libprotoc.cmake;C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake\protobuf-config-version.cmake.in;C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake\protobuf-config.cmake.in;C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake\protobuf-lite.pc.cmake;C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake\protobuf-module.cmake.in;C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake\protobuf-options.cmake;C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake\protobuf.pc.cmake;C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake\protoc.cmake;C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake\version.rc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\code_generator.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\command_line_interface.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\cpp\cpp_enum.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\cpp\cpp_enum_field.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\cpp\cpp_extension.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\cpp\cpp_field.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\cpp\cpp_file.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\cpp\cpp_generator.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\cpp\cpp_helpers.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\cpp\cpp_map_field.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\cpp\cpp_message.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\cpp\cpp_message_field.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\cpp\cpp_padding_optimizer.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\cpp\cpp_primitive_field.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\cpp\cpp_service.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\cpp\cpp_string_field.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\csharp\csharp_doc_comment.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\csharp\csharp_enum.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\csharp\csharp_enum_field.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\csharp\csharp_field_base.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\csharp\csharp_generator.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\csharp\csharp_helpers.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\csharp\csharp_map_field.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\csharp\csharp_message.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\csharp\csharp_message_field.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\csharp\csharp_primitive_field.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\csharp\csharp_reflection_class.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\csharp\csharp_repeated_enum_field.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\csharp\csharp_repeated_message_field.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\csharp\csharp_repeated_primitive_field.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\csharp\csharp_source_generator_base.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\csharp\csharp_wrapper_field.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_context.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_doc_comment.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_enum.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_enum_field.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_enum_field_lite.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_enum_lite.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_extension.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_extension_lite.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_field.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_file.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_generator.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_generator_factory.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_helpers.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_map_field.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_map_field_lite.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_message.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_message_builder.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_message_builder_lite.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_message_field.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_message_field_lite.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_message_lite.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_name_resolver.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_primitive_field.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_primitive_field_lite.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_service.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_shared_code_generator.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_string_field.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_string_field_lite.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\js\js_generator.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\js\well_known_types_embed.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\objectivec\objectivec_enum.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\objectivec\objectivec_enum_field.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\objectivec\objectivec_extension.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\objectivec\objectivec_field.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\objectivec\objectivec_file.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\objectivec\objectivec_generator.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\objectivec\objectivec_helpers.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\objectivec\objectivec_map_field.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\objectivec\objectivec_message.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\objectivec\objectivec_message_field.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\objectivec\objectivec_oneof.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\objectivec\objectivec_primitive_field.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\php\php_generator.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\plugin.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\plugin.pb.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\python\python_generator.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\ruby\ruby_generator.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\subprocess.cc" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\zip_writer.cc" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\cpp\cpp_enum.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\cpp\cpp_enum_field.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\cpp\cpp_extension.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\cpp\cpp_field.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\cpp\cpp_file.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\cpp\cpp_helpers.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\cpp\cpp_map_field.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\cpp\cpp_message.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\cpp\cpp_message_field.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\cpp\cpp_message_layout_helper.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\cpp\cpp_options.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\cpp\cpp_padding_optimizer.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\cpp\cpp_primitive_field.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\cpp\cpp_service.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\cpp\cpp_string_field.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\csharp\csharp_doc_comment.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\csharp\csharp_enum.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\csharp\csharp_enum_field.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\csharp\csharp_field_base.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\csharp\csharp_helpers.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\csharp\csharp_map_field.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\csharp\csharp_message.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\csharp\csharp_message_field.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\csharp\csharp_options.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\csharp\csharp_primitive_field.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\csharp\csharp_reflection_class.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\csharp\csharp_repeated_enum_field.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\csharp\csharp_repeated_message_field.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\csharp\csharp_repeated_primitive_field.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\csharp\csharp_source_generator_base.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\csharp\csharp_wrapper_field.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_context.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_doc_comment.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_enum.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_enum_field.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_enum_field_lite.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_enum_lite.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_extension.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_extension_lite.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_field.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_file.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_generator_factory.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_helpers.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_map_field.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_map_field_lite.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_message.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_message_builder.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_message_builder_lite.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_message_field.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_message_field_lite.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_message_lite.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_name_resolver.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_options.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_primitive_field.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_primitive_field_lite.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_service.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_shared_code_generator.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_string_field.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\java\java_string_field_lite.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\objectivec\objectivec_enum.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\objectivec\objectivec_enum_field.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\objectivec\objectivec_extension.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\objectivec\objectivec_field.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\objectivec\objectivec_file.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\objectivec\objectivec_helpers.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\objectivec\objectivec_map_field.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\objectivec\objectivec_message.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\objectivec\objectivec_message_field.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\objectivec\objectivec_nsobject_methods.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\objectivec\objectivec_oneof.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\objectivec\objectivec_primitive_field.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\scc.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\subprocess.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\zip_writer.h" />
+    <ResourceCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake\version.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake\ZERO_CHECK.vcxproj">
+      <Project>{7BFC7252-36A2-3CA6-B20F-C730CE58037E}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake\libprotobuf.vcxproj">
+      <Project>{3CC27ACD-BB20-3538-BF68-C1AFC1C38663}</Project>
+      <Name>libprotobuf</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

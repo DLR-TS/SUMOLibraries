@@ -55,26 +55,26 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Libraries\googletest-master\googlemock\gtest\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SUMOLibraries\googletest-master\googlemock\gtest\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">gtest.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">gtestd</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Libraries\googletest-master\googlemock\gtest\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SUMOLibraries\googletest-master\googlemock\gtest\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">gtest.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">gtest</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Libraries\googletest-master\googlemock\gtest\MinSizeRel\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SUMOLibraries\googletest-master\googlemock\gtest\MinSizeRel\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">gtest.dir\MinSizeRel\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">gtest</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Libraries\googletest-master\googlemock\gtest\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SUMOLibraries\googletest-master\googlemock\gtest\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">gtest.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">gtest</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Libraries\googletest-master\googletest\include;C:\Libraries\googletest-master\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\googletest-master\googletest\include;C:\SUMOLibraries\googletest-master\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) -J</AdditionalOptions>
       <AssemblerListingLocation>Debug/</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -96,10 +96,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_UNICODE;UNICODE;_WIN32;STRICT;WIN32_LEAN_AND_MEAN;GTEST_HAS_PTHREAD=0;_HAS_EXCEPTIONS=1;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Libraries\googletest-master\googletest\include;C:\Libraries\googletest-master\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\googletest-master\googletest\include;C:\SUMOLibraries\googletest-master\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Libraries\googletest-master\googletest\include;C:\Libraries\googletest-master\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\googletest-master\googletest\include;C:\SUMOLibraries\googletest-master\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -112,7 +112,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Libraries\googletest-master\googletest\include;C:\Libraries\googletest-master\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\googletest-master\googletest\include;C:\SUMOLibraries\googletest-master\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) -J</AdditionalOptions>
       <AssemblerListingLocation>Release/</AssemblerListingLocation>
       <BufferSecurityCheck>true</BufferSecurityCheck>
@@ -133,10 +133,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_UNICODE;UNICODE;_WIN32;STRICT;WIN32_LEAN_AND_MEAN;GTEST_HAS_PTHREAD=0;_HAS_EXCEPTIONS=1;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Libraries\googletest-master\googletest\include;C:\Libraries\googletest-master\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\googletest-master\googletest\include;C:\SUMOLibraries\googletest-master\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Libraries\googletest-master\googletest\include;C:\Libraries\googletest-master\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\googletest-master\googletest\include;C:\SUMOLibraries\googletest-master\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -149,7 +149,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Libraries\googletest-master\googletest\include;C:\Libraries\googletest-master\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\googletest-master\googletest\include;C:\SUMOLibraries\googletest-master\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) -J</AdditionalOptions>
       <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
       <BufferSecurityCheck>true</BufferSecurityCheck>
@@ -170,10 +170,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_UNICODE;UNICODE;_WIN32;STRICT;WIN32_LEAN_AND_MEAN;GTEST_HAS_PTHREAD=0;_HAS_EXCEPTIONS=1;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Libraries\googletest-master\googletest\include;C:\Libraries\googletest-master\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\googletest-master\googletest\include;C:\SUMOLibraries\googletest-master\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Libraries\googletest-master\googletest\include;C:\Libraries\googletest-master\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\googletest-master\googletest\include;C:\SUMOLibraries\googletest-master\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -186,7 +186,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Libraries\googletest-master\googletest\include;C:\Libraries\googletest-master\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\googletest-master\googletest\include;C:\SUMOLibraries\googletest-master\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) -J</AdditionalOptions>
       <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
       <BufferSecurityCheck>true</BufferSecurityCheck>
@@ -207,10 +207,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_UNICODE;UNICODE;_WIN32;STRICT;WIN32_LEAN_AND_MEAN;GTEST_HAS_PTHREAD=0;_HAS_EXCEPTIONS=1;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Libraries\googletest-master\googletest\include;C:\Libraries\googletest-master\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\googletest-master\googletest\include;C:\SUMOLibraries\googletest-master\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Libraries\googletest-master\googletest\include;C:\Libraries\googletest-master\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\googletest-master\googletest\include;C:\SUMOLibraries\googletest-master\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -222,10 +222,10 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Libraries\googletest-master\googletest\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Libraries/googletest-master/googletest/CMakeLists.txt</Message>
+    <CustomBuild Include="C:\SUMOLibraries\googletest-master\googletest\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/SUMOLibraries/googletest-master/googletest/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -HC:/Libraries/googletest-master -BC:/Libraries/googletest-master --check-stamp-file C:/Libraries/googletest-master/googlemock/gtest/CMakeFiles/generate.stamp
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -HC:/SUMOLibraries/googletest-master -BC:/SUMOLibraries/googletest-master --check-stamp-file C:/SUMOLibraries/googletest-master/googlemock/gtest/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -233,12 +233,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Libraries/googletest-master/googletest/CMakeLists.txt;C:\Libraries\googletest-master\googletest\CMakeLists.txt;C:\Libraries\googletest-master\googletest\cmake\internal_utils.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\FindPythonInterp.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\FindThreads.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\CheckLibraryExists.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\CheckSymbolExists.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\CheckIncludeFile.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Libraries\googletest-master\googletest\cmake\gtest.pc.in;C:\Libraries\googletest-master\googletest\cmake\gtest_main.pc.in;C:\Libraries\googletest-master\googletest\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Libraries\googletest-master\googlemock\gtest\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/SUMOLibraries/googletest-master/googletest/CMakeLists.txt;C:\SUMOLibraries\googletest-master\googletest\CMakeLists.txt;C:\SUMOLibraries\googletest-master\googletest\cmake\internal_utils.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\FindPythonInterp.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\FindThreads.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\CheckLibraryExists.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\CheckSymbolExists.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\CheckIncludeFile.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\SUMOLibraries\googletest-master\googletest\cmake\gtest.pc.in;C:\SUMOLibraries\googletest-master\googletest\cmake\gtest_main.pc.in;C:\SUMOLibraries\googletest-master\googletest\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SUMOLibraries\googletest-master\googlemock\gtest\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Libraries/googletest-master/googletest/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/SUMOLibraries/googletest-master/googletest/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -HC:/Libraries/googletest-master -BC:/Libraries/googletest-master --check-stamp-file C:/Libraries/googletest-master/googlemock/gtest/CMakeFiles/generate.stamp
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -HC:/SUMOLibraries/googletest-master -BC:/SUMOLibraries/googletest-master --check-stamp-file C:/SUMOLibraries/googletest-master/googlemock/gtest/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -246,12 +246,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Libraries/googletest-master/googletest/CMakeLists.txt;C:\Libraries\googletest-master\googletest\CMakeLists.txt;C:\Libraries\googletest-master\googletest\cmake\internal_utils.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\FindPythonInterp.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\FindThreads.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\CheckLibraryExists.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\CheckSymbolExists.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\CheckIncludeFile.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Libraries\googletest-master\googletest\cmake\gtest.pc.in;C:\Libraries\googletest-master\googletest\cmake\gtest_main.pc.in;C:\Libraries\googletest-master\googletest\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Libraries\googletest-master\googlemock\gtest\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/SUMOLibraries/googletest-master/googletest/CMakeLists.txt;C:\SUMOLibraries\googletest-master\googletest\CMakeLists.txt;C:\SUMOLibraries\googletest-master\googletest\cmake\internal_utils.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\FindPythonInterp.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\FindThreads.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\CheckLibraryExists.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\CheckSymbolExists.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\CheckIncludeFile.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\SUMOLibraries\googletest-master\googletest\cmake\gtest.pc.in;C:\SUMOLibraries\googletest-master\googletest\cmake\gtest_main.pc.in;C:\SUMOLibraries\googletest-master\googletest\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SUMOLibraries\googletest-master\googlemock\gtest\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Libraries/googletest-master/googletest/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/SUMOLibraries/googletest-master/googletest/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -HC:/Libraries/googletest-master -BC:/Libraries/googletest-master --check-stamp-file C:/Libraries/googletest-master/googlemock/gtest/CMakeFiles/generate.stamp
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -HC:/SUMOLibraries/googletest-master -BC:/SUMOLibraries/googletest-master --check-stamp-file C:/SUMOLibraries/googletest-master/googlemock/gtest/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -259,12 +259,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Libraries/googletest-master/googletest/CMakeLists.txt;C:\Libraries\googletest-master\googletest\CMakeLists.txt;C:\Libraries\googletest-master\googletest\cmake\internal_utils.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\FindPythonInterp.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\FindThreads.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\CheckLibraryExists.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\CheckSymbolExists.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\CheckIncludeFile.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Libraries\googletest-master\googletest\cmake\gtest.pc.in;C:\Libraries\googletest-master\googletest\cmake\gtest_main.pc.in;C:\Libraries\googletest-master\googletest\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Libraries\googletest-master\googlemock\gtest\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/SUMOLibraries/googletest-master/googletest/CMakeLists.txt;C:\SUMOLibraries\googletest-master\googletest\CMakeLists.txt;C:\SUMOLibraries\googletest-master\googletest\cmake\internal_utils.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\FindPythonInterp.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\FindThreads.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\CheckLibraryExists.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\CheckSymbolExists.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\CheckIncludeFile.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\SUMOLibraries\googletest-master\googletest\cmake\gtest.pc.in;C:\SUMOLibraries\googletest-master\googletest\cmake\gtest_main.pc.in;C:\SUMOLibraries\googletest-master\googletest\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SUMOLibraries\googletest-master\googlemock\gtest\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Libraries/googletest-master/googletest/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/SUMOLibraries/googletest-master/googletest/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -HC:/Libraries/googletest-master -BC:/Libraries/googletest-master --check-stamp-file C:/Libraries/googletest-master/googlemock/gtest/CMakeFiles/generate.stamp
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -HC:/SUMOLibraries/googletest-master -BC:/SUMOLibraries/googletest-master --check-stamp-file C:/SUMOLibraries/googletest-master/googlemock/gtest/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -272,16 +272,16 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Libraries/googletest-master/googletest/CMakeLists.txt;C:\Libraries\googletest-master\googletest\CMakeLists.txt;C:\Libraries\googletest-master\googletest\cmake\internal_utils.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\FindPythonInterp.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\FindThreads.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\CheckLibraryExists.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\CheckSymbolExists.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\CheckIncludeFile.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Libraries\googletest-master\googletest\cmake\gtest.pc.in;C:\Libraries\googletest-master\googletest\cmake\gtest_main.pc.in;C:\Libraries\googletest-master\googletest\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Libraries\googletest-master\googlemock\gtest\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/SUMOLibraries/googletest-master/googletest/CMakeLists.txt;C:\SUMOLibraries\googletest-master\googletest\CMakeLists.txt;C:\SUMOLibraries\googletest-master\googletest\cmake\internal_utils.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\FindPythonInterp.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\FindThreads.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\CheckLibraryExists.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\CheckSymbolExists.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\CheckIncludeFile.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\SUMOLibraries\googletest-master\googletest\cmake\gtest.pc.in;C:\SUMOLibraries\googletest-master\googletest\cmake\gtest_main.pc.in;C:\SUMOLibraries\googletest-master\googletest\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SUMOLibraries\googletest-master\googlemock\gtest\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Libraries\googletest-master\googletest\src\gtest-all.cc"  />
+    <ClCompile Include="C:\SUMOLibraries\googletest-master\googletest\src\gtest-all.cc"  />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Libraries\googletest-master\ZERO_CHECK.vcxproj">
+    <ProjectReference Include="C:\SUMOLibraries\googletest-master\ZERO_CHECK.vcxproj">
       <Project>{41A34FB7-4852-33D8-8B4E-D7CA50DE47C2}</Project>
       <Name>ZERO_CHECK</Name>
     </ProjectReference>

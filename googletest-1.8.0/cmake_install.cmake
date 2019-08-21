@@ -1,4 +1,4 @@
-# Install script for directory: C:/Libraries/googletest-master
+# Install script for directory: C:/SUMOLibraries/googletest-master
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Libraries/googletest-master/googlemock/cmake_install.cmake")
+  include("C:/SUMOLibraries/googletest-master/googlemock/cmake_install.cmake")
 
 endif()
 
@@ -46,5 +46,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Libraries/googletest-master/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/SUMOLibraries/googletest-master/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

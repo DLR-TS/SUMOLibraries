@@ -1,8 +1,8 @@
-# Install script for directory: C:/Libraries/3rdPartyLibs/tiff-4.0.9/html/images
+# Install script for directory: C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/html/images
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/tiff")
+  set(CMAKE_INSTALL_PREFIX "C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,30 +34,30 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "C:/Program Files (x86)/tiff/share/doc/tiff/html/images/back.gif;C:/Program Files (x86)/tiff/share/doc/tiff/html/images/bali.jpg;C:/Program Files (x86)/tiff/share/doc/tiff/html/images/cat.gif;C:/Program Files (x86)/tiff/share/doc/tiff/html/images/cover.jpg;C:/Program Files (x86)/tiff/share/doc/tiff/html/images/cramps.gif;C:/Program Files (x86)/tiff/share/doc/tiff/html/images/dave.gif;C:/Program Files (x86)/tiff/share/doc/tiff/html/images/info.gif;C:/Program Files (x86)/tiff/share/doc/tiff/html/images/jello.jpg;C:/Program Files (x86)/tiff/share/doc/tiff/html/images/jim.gif;C:/Program Files (x86)/tiff/share/doc/tiff/html/images/note.gif;C:/Program Files (x86)/tiff/share/doc/tiff/html/images/oxford.gif;C:/Program Files (x86)/tiff/share/doc/tiff/html/images/quad.jpg;C:/Program Files (x86)/tiff/share/doc/tiff/html/images/ring.gif;C:/Program Files (x86)/tiff/share/doc/tiff/html/images/smallliz.jpg;C:/Program Files (x86)/tiff/share/doc/tiff/html/images/strike.gif;C:/Program Files (x86)/tiff/share/doc/tiff/html/images/warning.gif")
+   "C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/share/doc/tiff/html/images/back.gif;C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/share/doc/tiff/html/images/bali.jpg;C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/share/doc/tiff/html/images/cat.gif;C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/share/doc/tiff/html/images/cover.jpg;C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/share/doc/tiff/html/images/cramps.gif;C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/share/doc/tiff/html/images/dave.gif;C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/share/doc/tiff/html/images/info.gif;C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/share/doc/tiff/html/images/jello.jpg;C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/share/doc/tiff/html/images/jim.gif;C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/share/doc/tiff/html/images/note.gif;C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/share/doc/tiff/html/images/oxford.gif;C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/share/doc/tiff/html/images/quad.jpg;C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/share/doc/tiff/html/images/ring.gif;C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/share/doc/tiff/html/images/smallliz.jpg;C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/share/doc/tiff/html/images/strike.gif;C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/share/doc/tiff/html/images/warning.gif")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "C:/Program Files (x86)/tiff/share/doc/tiff/html/images" TYPE FILE FILES
-    "C:/Libraries/3rdPartyLibs/tiff-4.0.9/html/images/back.gif"
-    "C:/Libraries/3rdPartyLibs/tiff-4.0.9/html/images/bali.jpg"
-    "C:/Libraries/3rdPartyLibs/tiff-4.0.9/html/images/cat.gif"
-    "C:/Libraries/3rdPartyLibs/tiff-4.0.9/html/images/cover.jpg"
-    "C:/Libraries/3rdPartyLibs/tiff-4.0.9/html/images/cramps.gif"
-    "C:/Libraries/3rdPartyLibs/tiff-4.0.9/html/images/dave.gif"
-    "C:/Libraries/3rdPartyLibs/tiff-4.0.9/html/images/info.gif"
-    "C:/Libraries/3rdPartyLibs/tiff-4.0.9/html/images/jello.jpg"
-    "C:/Libraries/3rdPartyLibs/tiff-4.0.9/html/images/jim.gif"
-    "C:/Libraries/3rdPartyLibs/tiff-4.0.9/html/images/note.gif"
-    "C:/Libraries/3rdPartyLibs/tiff-4.0.9/html/images/oxford.gif"
-    "C:/Libraries/3rdPartyLibs/tiff-4.0.9/html/images/quad.jpg"
-    "C:/Libraries/3rdPartyLibs/tiff-4.0.9/html/images/ring.gif"
-    "C:/Libraries/3rdPartyLibs/tiff-4.0.9/html/images/smallliz.jpg"
-    "C:/Libraries/3rdPartyLibs/tiff-4.0.9/html/images/strike.gif"
-    "C:/Libraries/3rdPartyLibs/tiff-4.0.9/html/images/warning.gif"
+file(INSTALL DESTINATION "C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/share/doc/tiff/html/images" TYPE FILE FILES
+    "C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/html/images/back.gif"
+    "C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/html/images/bali.jpg"
+    "C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/html/images/cat.gif"
+    "C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/html/images/cover.jpg"
+    "C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/html/images/cramps.gif"
+    "C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/html/images/dave.gif"
+    "C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/html/images/info.gif"
+    "C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/html/images/jello.jpg"
+    "C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/html/images/jim.gif"
+    "C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/html/images/note.gif"
+    "C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/html/images/oxford.gif"
+    "C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/html/images/quad.jpg"
+    "C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/html/images/ring.gif"
+    "C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/html/images/smallliz.jpg"
+    "C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/html/images/strike.gif"
+    "C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/html/images/warning.gif"
     )
 endif()
 

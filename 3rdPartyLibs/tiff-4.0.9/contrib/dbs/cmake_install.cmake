@@ -1,8 +1,8 @@
-# Install script for directory: C:/Libraries/3rdPartyLibs/tiff-4.0.9/contrib/dbs
+# Install script for directory: C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/contrib/dbs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/tiff")
+  set(CMAKE_INSTALL_PREFIX "C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Libraries/3rdPartyLibs/tiff-4.0.9/contrib/dbs/xtiff/cmake_install.cmake")
+  include("C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/contrib/dbs/xtiff/cmake_install.cmake")
 
 endif()
 

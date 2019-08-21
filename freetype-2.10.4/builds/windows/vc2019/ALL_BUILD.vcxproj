@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F3DAE91C-4B08-387C-81B0-AAF49F526A87}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Librerias\SUMOLibraries\freetype-2.10.4\CMakeLists.txt">
+      <StdOutEncoding>UTF-8</StdOutEncoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Librerias/SUMOLibraries/freetype-2.10.4/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\CMake\bin\cmake.exe -SC:/Librerias/SUMOLibraries/freetype-2.10.4 -BC:/Librerias/SUMOLibraries/freetype-2.10.4/builds/windows/vc2019 --check-stamp-file C:/Librerias/SUMOLibraries/freetype-2.10.4/builds/windows/vc2019/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\CMake\share\cmake-3.18\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\CMake\share\cmake-3.18\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.18\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.18\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.18\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.18\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.18\Modules\CMakePackageConfigHelpers.cmake;C:\CMake\share\cmake-3.18\Modules\CMakePushCheckState.cmake;C:\CMake\share\cmake-3.18\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.18\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.18\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.18\Modules\CPack.cmake;C:\CMake\share\cmake-3.18\Modules\CPackComponent.cmake;C:\CMake\share\cmake-3.18\Modules\CheckIncludeFile.cmake;C:\CMake\share\cmake-3.18\Modules\CheckSymbolExists.cmake;C:\CMake\share\cmake-3.18\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\CMake\share\cmake-3.18\Modules\Compiler\MSVC-C.cmake;C:\CMake\share\cmake-3.18\Modules\FindBZip2.cmake;C:\CMake\share\cmake-3.18\Modules\FindPNG.cmake;C:\CMake\share\cmake-3.18\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.18\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.18\Modules\FindPkgConfig.cmake;C:\CMake\share\cmake-3.18\Modules\FindZLIB.cmake;C:\CMake\share\cmake-3.18\Modules\GNUInstallDirs.cmake;C:\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.18\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.18\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.18\Modules\SelectLibraryConfigurations.cmake;C:\CMake\share\cmake-3.18\Modules\WriteBasicConfigVersionFile.cmake;C:\CMake\share\cmake-3.18\Templates\CPackConfig.cmake.in;C:\Librerias\SUMOLibraries\freetype-2.10.4\builds\cmake\FindBrotliDec.cmake;C:\Librerias\SUMOLibraries\freetype-2.10.4\builds\cmake\FindHarfBuzz.cmake;C:\Librerias\SUMOLibraries\freetype-2.10.4\builds\windows\vc2019\CMakeFiles\3.18.3\CMakeCCompiler.cmake;C:\Librerias\SUMOLibraries\freetype-2.10.4\builds\windows\vc2019\CMakeFiles\3.18.3\CMakeRCCompiler.cmake;C:\Librerias\SUMOLibraries\freetype-2.10.4\builds\windows\vc2019\CMakeFiles\3.18.3\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Librerias\SUMOLibraries\freetype-2.10.4\builds\windows\vc2019\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Librerias/SUMOLibraries/freetype-2.10.4/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\CMake\bin\cmake.exe -SC:/Librerias/SUMOLibraries/freetype-2.10.4 -BC:/Librerias/SUMOLibraries/freetype-2.10.4/builds/windows/vc2019 --check-stamp-file C:/Librerias/SUMOLibraries/freetype-2.10.4/builds/windows/vc2019/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\CMake\share\cmake-3.18\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\CMake\share\cmake-3.18\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.18\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.18\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.18\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.18\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.18\Modules\CMakePackageConfigHelpers.cmake;C:\CMake\share\cmake-3.18\Modules\CMakePushCheckState.cmake;C:\CMake\share\cmake-3.18\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.18\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.18\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.18\Modules\CPack.cmake;C:\CMake\share\cmake-3.18\Modules\CPackComponent.cmake;C:\CMake\share\cmake-3.18\Modules\CheckIncludeFile.cmake;C:\CMake\share\cmake-3.18\Modules\CheckSymbolExists.cmake;C:\CMake\share\cmake-3.18\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\CMake\share\cmake-3.18\Modules\Compiler\MSVC-C.cmake;C:\CMake\share\cmake-3.18\Modules\FindBZip2.cmake;C:\CMake\share\cmake-3.18\Modules\FindPNG.cmake;C:\CMake\share\cmake-3.18\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.18\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.18\Modules\FindPkgConfig.cmake;C:\CMake\share\cmake-3.18\Modules\FindZLIB.cmake;C:\CMake\share\cmake-3.18\Modules\GNUInstallDirs.cmake;C:\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.18\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.18\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.18\Modules\SelectLibraryConfigurations.cmake;C:\CMake\share\cmake-3.18\Modules\WriteBasicConfigVersionFile.cmake;C:\CMake\share\cmake-3.18\Templates\CPackConfig.cmake.in;C:\Librerias\SUMOLibraries\freetype-2.10.4\builds\cmake\FindBrotliDec.cmake;C:\Librerias\SUMOLibraries\freetype-2.10.4\builds\cmake\FindHarfBuzz.cmake;C:\Librerias\SUMOLibraries\freetype-2.10.4\builds\windows\vc2019\CMakeFiles\3.18.3\CMakeCCompiler.cmake;C:\Librerias\SUMOLibraries\freetype-2.10.4\builds\windows\vc2019\CMakeFiles\3.18.3\CMakeRCCompiler.cmake;C:\Librerias\SUMOLibraries\freetype-2.10.4\builds\windows\vc2019\CMakeFiles\3.18.3\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Librerias\SUMOLibraries\freetype-2.10.4\builds\windows\vc2019\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\freetype-2.10.4\builds\windows\vc2019\ZERO_CHECK.vcxproj">
+      <Project>{A37C08A3-3D94-3CA0-809C-792E414F514F}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\freetype-2.10.4\builds\windows\vc2019\freetype.vcxproj">
+      <Project>{DD5FC779-A598-37BC-8FBA-BE361D9DB71D}</Project>
+      <Name>freetype</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

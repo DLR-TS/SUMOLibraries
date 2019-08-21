@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgVolume\FixedFunctionTechnique.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgVolume\Layer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgVolume\Locator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgVolume\MultipassTechnique.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgVolume\Property.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgVolume\RayTracedTechnique.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgVolume\Version.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgVolume\Volume.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgVolume\VolumeScene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgVolume\VolumeSettings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgVolume\VolumeTechnique.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgVolume\VolumeTile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgVolume\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgVolume\Export">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgVolume\FixedFunctionTechnique">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgVolume\Layer">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgVolume\Locator">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgVolume\MultipassTechnique">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgVolume\Property">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgVolume\RayTracedTechnique">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgVolume\Version">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgVolume\Volume">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgVolume\VolumeScene">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgVolume\VolumeSettings">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgVolume\VolumeTechnique">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgVolume\VolumeTile">
+      <Filter>Header Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\PlatformSpecifics\Windows\OpenSceneGraphVersionInfo.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{798227C8-F63D-377D-B402-249FA1A7EF5E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{75F9FA5D-64E2-39A3-800D-3A429F06C13A}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

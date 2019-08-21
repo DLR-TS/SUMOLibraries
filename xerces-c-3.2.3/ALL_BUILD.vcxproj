@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9349D734-B449-36D4-B897-CAB6FF65849D}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\CMakeLists.txt">
+      <StdOutEncoding>UTF-8</StdOutEncoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Librerias/SUMOLibraries/xerces-c-3.2.3/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\CMake\bin\cmake.exe -SC:/Librerias/SUMOLibraries/xerces-c-3.2.3 -BC:/Librerias/SUMOLibraries/xerces-c-3.2.3 --check-stamp-file C:/Librerias/SUMOLibraries/xerces-c-3.2.3/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\CMake\share\cmake-3.19\Modules\CMakeCCompiler.cmake.in;C:\CMake\share\cmake-3.19\Modules\CMakeCCompilerABI.c;C:\CMake\share\cmake-3.19\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.19\Modules\CMakeCXXCompiler.cmake.in;C:\CMake\share\cmake-3.19\Modules\CMakeCXXCompilerABI.cpp;C:\CMake\share\cmake-3.19\Modules\CMakeCXXInformation.cmake;C:\CMake\share\cmake-3.19\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\CMake\share\cmake-3.19\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.19\Modules\CMakeCompilerIdDetection.cmake;C:\CMake\share\cmake-3.19\Modules\CMakeDetermineCCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\CMakeDetermineCXXCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\CMakeDetermineCompileFeatures.cmake;C:\CMake\share\cmake-3.19\Modules\CMakeDetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\CMakeDetermineCompilerABI.cmake;C:\CMake\share\cmake-3.19\Modules\CMakeDetermineCompilerId.cmake;C:\CMake\share\cmake-3.19\Modules\CMakeDetermineRCCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\CMakeDetermineSystem.cmake;C:\CMake\share\cmake-3.19\Modules\CMakeFindBinUtils.cmake;C:\CMake\share\cmake-3.19\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.19\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.19\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.19\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\CMake\share\cmake-3.19\Modules\CMakeParseImplicitLinkInfo.cmake;C:\CMake\share\cmake-3.19\Modules\CMakeRCCompiler.cmake.in;C:\CMake\share\cmake-3.19\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.19\Modules\CMakeSystem.cmake.in;C:\CMake\share\cmake-3.19\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.19\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.19\Modules\CMakeTestCCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\CMakeTestCXXCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\CMakeTestCompilerCommon.cmake;C:\CMake\share\cmake-3.19\Modules\CMakeTestRCCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\CheckCSourceCompiles.cmake;C:\CMake\share\cmake-3.19\Modules\CheckCXXCompilerFlag.cmake;C:\CMake\share\cmake-3.19\Modules\CheckCXXSourceCompiles.cmake;C:\CMake\share\cmake-3.19\Modules\CheckFunctionExists.cmake;C:\CMake\share\cmake-3.19\Modules\CheckIncludeFile.cmake;C:\CMake\share\cmake-3.19\Modules\CheckIncludeFileCXX.cmake;C:\CMake\share\cmake-3.19\Modules\CheckLibraryExists.cmake;C:\CMake\share\cmake-3.19\Modules\CheckTypeSize.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\MSVC-C.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\MSVC-CXX.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\TI-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\CompilerId\VS-10.vcxproj.in;C:\CMake\share\cmake-3.19\Modules\FindCURL.cmake;C:\CMake\share\cmake-3.19\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.19\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.19\Modules\FindPkgConfig.cmake;C:\CMake\share\cmake-3.19\Modules\FindThreads.cmake;C:\CMake\share\cmake-3.19\Modules\GNUInstallDirs.cmake;C:\CMake\share\cmake-3.19\Modules\Internal\CheckCompilerFlag.cmake;C:\CMake\share\cmake-3.19\Modules\Internal\CheckSourceCompiles.cmake;C:\CMake\share\cmake-3.19\Modules\Internal\FeatureTesting.cmake;C:\CMake\share\cmake-3.19\Modules\Platform\Windows-Determine-CXX.cmake;C:\CMake\share\cmake-3.19\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.19\Modules\Platform\Windows-MSVC-CXX.cmake;C:\CMake\share\cmake-3.19\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.19\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.19\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.19\Modules\SelectLibraryConfigurations.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\CMakeFiles\3.19.3\CMakeCCompiler.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\CMakeFiles\3.19.3\CMakeCXXCompiler.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\CMakeFiles\3.19.3\CMakeRCCompiler.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\CMakeFiles\3.19.3\CMakeSystem.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\FindICU.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesBool.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesConst.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesDLL.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesFileMgrSelection.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesFunctions.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesICU.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesIconvConst.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesIncludes.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesInline.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesIntTypes.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesLFS.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesLString.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesMFC.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesMsgLoaderSelection.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesMutexMgrSelection.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesNamespaces.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesNetAccessorSelection.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesOperatorDelete.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesPathDelimiters.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesPathMax.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesSSE2.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesStdLibs.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesStdNamespace.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesTranscoderSelection.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesVolatile.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesWChar.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesWarnings.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesXMLCh.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\config.h.cmake.in;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\doc\style\dtd\entities.ent.in;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\XercesVersion.hpp.cmake.in;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\Xerces_autoconf_config.hpp.cmake.in;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\xerces-c.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Librerias\SUMOLibraries\xerces-c-3.2.3\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Librerias/SUMOLibraries/xerces-c-3.2.3/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\CMake\bin\cmake.exe -SC:/Librerias/SUMOLibraries/xerces-c-3.2.3 -BC:/Librerias/SUMOLibraries/xerces-c-3.2.3 --check-stamp-file C:/Librerias/SUMOLibraries/xerces-c-3.2.3/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\CMake\share\cmake-3.19\Modules\CMakeCCompiler.cmake.in;C:\CMake\share\cmake-3.19\Modules\CMakeCCompilerABI.c;C:\CMake\share\cmake-3.19\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.19\Modules\CMakeCXXCompiler.cmake.in;C:\CMake\share\cmake-3.19\Modules\CMakeCXXCompilerABI.cpp;C:\CMake\share\cmake-3.19\Modules\CMakeCXXInformation.cmake;C:\CMake\share\cmake-3.19\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\CMake\share\cmake-3.19\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.19\Modules\CMakeCompilerIdDetection.cmake;C:\CMake\share\cmake-3.19\Modules\CMakeDetermineCCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\CMakeDetermineCXXCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\CMakeDetermineCompileFeatures.cmake;C:\CMake\share\cmake-3.19\Modules\CMakeDetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\CMakeDetermineCompilerABI.cmake;C:\CMake\share\cmake-3.19\Modules\CMakeDetermineCompilerId.cmake;C:\CMake\share\cmake-3.19\Modules\CMakeDetermineRCCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\CMakeDetermineSystem.cmake;C:\CMake\share\cmake-3.19\Modules\CMakeFindBinUtils.cmake;C:\CMake\share\cmake-3.19\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.19\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.19\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.19\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\CMake\share\cmake-3.19\Modules\CMakeParseImplicitLinkInfo.cmake;C:\CMake\share\cmake-3.19\Modules\CMakeRCCompiler.cmake.in;C:\CMake\share\cmake-3.19\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.19\Modules\CMakeSystem.cmake.in;C:\CMake\share\cmake-3.19\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.19\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.19\Modules\CMakeTestCCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\CMakeTestCXXCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\CMakeTestCompilerCommon.cmake;C:\CMake\share\cmake-3.19\Modules\CMakeTestRCCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\CheckCSourceCompiles.cmake;C:\CMake\share\cmake-3.19\Modules\CheckCXXCompilerFlag.cmake;C:\CMake\share\cmake-3.19\Modules\CheckCXXSourceCompiles.cmake;C:\CMake\share\cmake-3.19\Modules\CheckFunctionExists.cmake;C:\CMake\share\cmake-3.19\Modules\CheckIncludeFile.cmake;C:\CMake\share\cmake-3.19\Modules\CheckIncludeFileCXX.cmake;C:\CMake\share\cmake-3.19\Modules\CheckLibraryExists.cmake;C:\CMake\share\cmake-3.19\Modules\CheckTypeSize.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\MSVC-C.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\MSVC-CXX.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\TI-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.19\Modules\CompilerId\VS-10.vcxproj.in;C:\CMake\share\cmake-3.19\Modules\FindCURL.cmake;C:\CMake\share\cmake-3.19\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.19\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.19\Modules\FindPkgConfig.cmake;C:\CMake\share\cmake-3.19\Modules\FindThreads.cmake;C:\CMake\share\cmake-3.19\Modules\GNUInstallDirs.cmake;C:\CMake\share\cmake-3.19\Modules\Internal\CheckCompilerFlag.cmake;C:\CMake\share\cmake-3.19\Modules\Internal\CheckSourceCompiles.cmake;C:\CMake\share\cmake-3.19\Modules\Internal\FeatureTesting.cmake;C:\CMake\share\cmake-3.19\Modules\Platform\Windows-Determine-CXX.cmake;C:\CMake\share\cmake-3.19\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.19\Modules\Platform\Windows-MSVC-CXX.cmake;C:\CMake\share\cmake-3.19\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.19\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.19\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.19\Modules\SelectLibraryConfigurations.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\CMakeFiles\3.19.3\CMakeCCompiler.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\CMakeFiles\3.19.3\CMakeCXXCompiler.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\CMakeFiles\3.19.3\CMakeRCCompiler.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\CMakeFiles\3.19.3\CMakeSystem.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\FindICU.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesBool.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesConst.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesDLL.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesFileMgrSelection.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesFunctions.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesICU.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesIconvConst.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesIncludes.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesInline.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesIntTypes.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesLFS.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesLString.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesMFC.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesMsgLoaderSelection.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesMutexMgrSelection.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesNamespaces.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesNetAccessorSelection.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesOperatorDelete.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesPathDelimiters.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesPathMax.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesSSE2.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesStdLibs.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesStdNamespace.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesTranscoderSelection.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesVolatile.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesWChar.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesWarnings.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\cmake\XercesXMLCh.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\config.h.cmake.in;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\doc\style\dtd\entities.ent.in;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\XercesVersion.hpp.cmake.in;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\Xerces_autoconf_config.hpp.cmake.in;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\xerces-c.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Librerias\SUMOLibraries\xerces-c-3.2.3\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\ZERO_CHECK.vcxproj">
+      <Project>{2D4D61BF-070D-3324-AE79-5E22C9332258}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\tests\Char16Test.vcxproj">
+      <Project>{EE398386-EB19-3DA1-A4D1-60EC18FD59FE}</Project>
+      <Name>Char16Test</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\samples\CreateDOMDocument.vcxproj">
+      <Project>{02FAC3D3-5DE1-32F8-9EBC-9953C8DDBA2F}</Project>
+      <Name>CreateDOMDocument</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\samples\DOMCount.vcxproj">
+      <Project>{7C82AA05-BD51-3DDA-9155-FED88E133F93}</Project>
+      <Name>DOMCount</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\tests\DOMMemTest.vcxproj">
+      <Project>{664508EA-C132-3FB5-BF6A-1BA831CD8152}</Project>
+      <Name>DOMMemTest</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\samples\DOMPrint.vcxproj">
+      <Project>{4AE70DED-8F73-3C8D-ADD5-80E833295379}</Project>
+      <Name>DOMPrint</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\tests\DOMTest.vcxproj">
+      <Project>{F98AE783-F581-3B93-AEB0-1B9635D08F78}</Project>
+      <Name>DOMTest</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\tests\DOMTraversalTest.vcxproj">
+      <Project>{60B43C86-9BCA-353A-AAB0-7E464261D5DA}</Project>
+      <Name>DOMTraversalTest</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\tests\DOMTypeInfoTest.vcxproj">
+      <Project>{CD54B001-2D5D-3430-8D66-9BDC09381F2F}</Project>
+      <Name>DOMTypeInfoTest</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\tests\EncodingTest.vcxproj">
+      <Project>{A252C7A4-8820-35AD-9427-1D2CD9F5F288}</Project>
+      <Name>EncodingTest</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\samples\EnumVal.vcxproj">
+      <Project>{8E574127-37C9-35C9-8271-24F52A996B1D}</Project>
+      <Name>EnumVal</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\tests\InitTermTest.vcxproj">
+      <Project>{DA546168-8562-3E19-8A16-A072A8E2D44B}</Project>
+      <Name>InitTermTest</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\tests\MemHandlerTest.vcxproj">
+      <Project>{5524F47A-ED19-3C43-B2CA-2EC912CBF897}</Project>
+      <Name>MemHandlerTest</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\samples\MemParse.vcxproj">
+      <Project>{9C8D1586-8076-30F5-A45D-B182B6CF367F}</Project>
+      <Name>MemParse</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\tests\NetAccessorTest.vcxproj">
+      <Project>{E52B456F-FB43-31C1-9D06-F3FC838A49E6}</Project>
+      <Name>NetAccessorTest</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\tests\Normalizer.vcxproj">
+      <Project>{12EE4E21-0C80-3382-9A87-6C245BFD3325}</Project>
+      <Name>Normalizer</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\samples\PParse.vcxproj">
+      <Project>{E60A6D00-913D-3D51-8B86-1BD0794AC917}</Project>
+      <Name>PParse</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\samples\PSVIWriter.vcxproj">
+      <Project>{9A1FD9C1-5EF6-32E2-A6D9-E711FDEBAA3B}</Project>
+      <Name>PSVIWriter</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\tests\RangeTest.vcxproj">
+      <Project>{8A11139E-7E7F-3E5B-9AC7-55FD5201922B}</Project>
+      <Name>RangeTest</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\samples\Redirect.vcxproj">
+      <Project>{93FA305C-C58E-353A-AE79-6AEAEC043BCA}</Project>
+      <Name>Redirect</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\samples\SAX2Count.vcxproj">
+      <Project>{D5FE7E81-2629-3BD9-9808-BD5483259BAD}</Project>
+      <Name>SAX2Count</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\samples\SAX2Print.vcxproj">
+      <Project>{E9829829-B26D-3096-BCB4-7880FEBA7903}</Project>
+      <Name>SAX2Print</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\samples\SAXCount.vcxproj">
+      <Project>{C3CF27CF-2A68-3969-BDB6-7ACCB969293C}</Project>
+      <Name>SAXCount</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\samples\SAXPrint.vcxproj">
+      <Project>{008EBD74-E938-3F1A-8E8E-042917EDD2DE}</Project>
+      <Name>SAXPrint</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\samples\SCMPrint.vcxproj">
+      <Project>{8E3A35D1-0F47-3CBE-8E44-C2B0C4FBE6E6}</Project>
+      <Name>SCMPrint</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\samples\SEnumVal.vcxproj">
+      <Project>{7D4B9D9B-DF7F-34BF-A028-5878AABD4947}</Project>
+      <Name>SEnumVal</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\samples\StdInParse.vcxproj">
+      <Project>{F2DA8217-3039-3951-A339-804F3BFD13DC}</Project>
+      <Name>StdInParse</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\tests\ThreadTest.vcxproj">
+      <Project>{F680E57C-2256-3506-A980-6C4AA5C48669}</Project>
+      <Name>ThreadTest</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\samples\XInclude.vcxproj">
+      <Project>{8FAC3166-FAD4-3C9C-8572-E3D614192D58}</Project>
+      <Name>XInclude</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\tests\XSTSHarness.vcxproj">
+      <Project>{BFACA5A2-9C8F-3AAA-9AA9-588CEC11A286}</Project>
+      <Name>XSTSHarness</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\tests\XSValueTest.vcxproj">
+      <Project>{D58EB109-4663-3848-A142-27C333BE1510}</Project>
+      <Name>XSValueTest</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\tests\XSerializerTest.vcxproj">
+      <Project>{CFB8023E-57A9-3519-93DD-88F45E0AEDD5}</Project>
+      <Name>XSerializerTest</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xerces-c.vcxproj">
+      <Project>{3455EDC8-398E-3EAA-A0A8-4EBC3FE25612}</Project>
+      <Name>xerces-c</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

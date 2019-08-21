@@ -1,50 +1,51 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
-    <ProjectConfiguration Include="Debug|Win32">
+    <ProjectConfiguration Include="Debug|x64">
       <Configuration>Debug</Configuration>
-      <Platform>Win32</Platform>
+      <Platform>x64</Platform>
     </ProjectConfiguration>
-    <ProjectConfiguration Include="Release|Win32">
+    <ProjectConfiguration Include="Release|x64">
       <Configuration>Release</Configuration>
-      <Platform>Win32</Platform>
+      <Platform>x64</Platform>
     </ProjectConfiguration>
-    <ProjectConfiguration Include="MinSizeRel|Win32">
+    <ProjectConfiguration Include="MinSizeRel|x64">
       <Configuration>MinSizeRel</Configuration>
-      <Platform>Win32</Platform>
+      <Platform>x64</Platform>
     </ProjectConfiguration>
-    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
       <Configuration>RelWithDebInfo</Configuration>
-      <Platform>Win32</Platform>
+      <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{76E590B6-3E6C-39CA-9072-1DE8BAAC79F1}</ProjectGuid>
+    <ProjectGuid>{B81489AF-5998-3D1D-9263-D70E9272DF94}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
-    <Platform>Win32</Platform>
+    <Platform>x64</Platform>
     <ProjectName>shared</ProjectName>
     <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -55,34 +56,34 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\behr_mi\Projekte\sumo\SUMOLibraries\msvc12\gl2ps-1.4.0\Debug\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">shared.dir\Debug\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">gl2ps</TargetName>
-    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.dll</TargetExt>
-    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
-    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\behr_mi\Projekte\sumo\SUMOLibraries\msvc12\gl2ps-1.4.0\Release\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">shared.dir\Release\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">gl2ps</TargetName>
-    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.dll</TargetExt>
-    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
-    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\behr_mi\Projekte\sumo\SUMOLibraries\msvc12\gl2ps-1.4.0\MinSizeRel\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">shared.dir\MinSizeRel\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">gl2ps</TargetName>
-    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.dll</TargetExt>
-    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
-    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\behr_mi\Projekte\sumo\SUMOLibraries\msvc12\gl2ps-1.4.0\RelWithDebInfo\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">shared.dir\RelWithDebInfo\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">gl2ps</TargetName>
-    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.dll</TargetExt>
-    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
-    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SUMOLibraries\gl2ps-1.4.0_64\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">shared.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">gl2ps</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SUMOLibraries\gl2ps-1.4.0_64\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">shared.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">gl2ps</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SUMOLibraries\gl2ps-1.4.0_64\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">shared.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">gl2ps</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SUMOLibraries\gl2ps-1.4.0_64\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">shared.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">gl2ps</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
   </PropertyGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\behr_mi\Projekte\sumo\SUMOLibraries\3rdPartyLibs\zlib-1.2.11;D:\behr_mi\Projekte\sumo\SUMOLibraries\3rdPartyLibs\libpng-1.6.34;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\3rdPartyLibs\zlib-1.2.11;C:\SUMOLibraries\3rdPartyLibs\libpng-1.6.34;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Debug/</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <CompileAs>CompileAsC</CompileAs>
@@ -94,15 +95,15 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;GL2PSDLL;GL2PSDLL_EXPORTS;HAVE_ZLIB;HAVE_PNG;CMAKE_INTDIR="Debug";shared_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;GL2PSDLL;GL2PSDLL_EXPORTS;HAVE_NO_VSNPRINTF;HAVE_ZLIB;HAVE_PNG;CMAKE_INTDIR="Debug";shared_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;GL2PSDLL;GL2PSDLL_EXPORTS;HAVE_ZLIB;HAVE_PNG;CMAKE_INTDIR=\"Debug\";shared_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\behr_mi\Projekte\sumo\SUMOLibraries\3rdPartyLibs\zlib-1.2.11;D:\behr_mi\Projekte\sumo\SUMOLibraries\3rdPartyLibs\libpng-1.6.34;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;GL2PSDLL;GL2PSDLL_EXPORTS;HAVE_NO_VSNPRINTF;HAVE_ZLIB;HAVE_PNG;CMAKE_INTDIR=\"Debug\";shared_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\3rdPartyLibs\zlib-1.2.11;C:\SUMOLibraries\3rdPartyLibs\libpng-1.6.34;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\behr_mi\Projekte\sumo\SUMOLibraries\3rdPartyLibs\zlib-1.2.11;D:\behr_mi\Projekte\sumo\SUMOLibraries\3rdPartyLibs\libpng-1.6.34;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\3rdPartyLibs\zlib-1.2.11;C:\SUMOLibraries\3rdPartyLibs\libpng-1.6.34;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -110,22 +111,22 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>opengl32.lib;glu32.lib;D:\behr_mi\Projekte\sumo\SUMOLibraries\3rdPartyLibs\zlib-1.2.11\Release\zlib.lib;D:\behr_mi\Projekte\sumo\SUMOLibraries\3rdPartyLibs\libpng-1.6.34\Release\libpng16.lib;D:\behr_mi\Projekte\sumo\SUMOLibraries\3rdPartyLibs\zlib-1.2.11\Release\zlib.lib;D:\behr_mi\Projekte\sumo\SUMOLibraries\3rdPartyLibs\libpng-1.6.34\Release\libpng16.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>D:/behr_mi/Projekte/sumo/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/Release;D:/behr_mi/Projekte/sumo/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/Release/$(Configuration);D:/behr_mi/Projekte/sumo/SUMOLibraries/3rdPartyLibs/libpng-1.6.34/Release;D:/behr_mi/Projekte/sumo/SUMOLibraries/3rdPartyLibs/libpng-1.6.34/Release/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;C:\SUMOLibraries\3rdPartyLibs\libpng-1.6.34\projects\vstudio\x64\Debug\zlib.lib;C:\SUMOLibraries\3rdPartyLibs\libpng-1.6.34\projects\vstudio\x64\Debug\libpng16.lib;C:\SUMOLibraries\3rdPartyLibs\libpng-1.6.34\projects\vstudio\x64\Debug\zlib.lib;C:\SUMOLibraries\3rdPartyLibs\libpng-1.6.34\projects\vstudio\x64\Debug\libpng16.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/SUMOLibraries/3rdPartyLibs/libpng-1.6.34/projects/vstudio/x64/Debug;C:/SUMOLibraries/3rdPartyLibs/libpng-1.6.34/projects/vstudio/x64/Debug/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>D:/behr_mi/Projekte/sumo/SUMOLibraries/msvc12/gl2ps-1.4.0/Debug/gl2ps.lib</ImportLibrary>
-      <ProgramDataBaseFile>D:/behr_mi/Projekte/sumo/SUMOLibraries/msvc12/gl2ps-1.4.0/Debug/gl2ps.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/SUMOLibraries/gl2ps-1.4.0_64/Debug/gl2ps.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/SUMOLibraries/gl2ps-1.4.0_64/Debug/gl2ps.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
     </ProjectReference>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\behr_mi\Projekte\sumo\SUMOLibraries\3rdPartyLibs\zlib-1.2.11;D:\behr_mi\Projekte\sumo\SUMOLibraries\3rdPartyLibs\libpng-1.6.34;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\3rdPartyLibs\zlib-1.2.11;C:\SUMOLibraries\3rdPartyLibs\libpng-1.6.34;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Release/</AssemblerListingLocation>
       <CompileAs>CompileAsC</CompileAs>
       <ExceptionHandling>
@@ -135,17 +136,16 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GL2PSDLL;GL2PSDLL_EXPORTS;HAVE_ZLIB;HAVE_PNG;CMAKE_INTDIR="Release";shared_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GL2PSDLL;GL2PSDLL_EXPORTS;HAVE_NO_VSNPRINTF;HAVE_ZLIB;HAVE_PNG;CMAKE_INTDIR="Release";shared_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
-      <DebugInformationFormat>
-      </DebugInformationFormat>
+      <DebugInformationFormat></DebugInformationFormat>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GL2PSDLL;GL2PSDLL_EXPORTS;HAVE_ZLIB;HAVE_PNG;CMAKE_INTDIR=\"Release\";shared_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\behr_mi\Projekte\sumo\SUMOLibraries\3rdPartyLibs\zlib-1.2.11;D:\behr_mi\Projekte\sumo\SUMOLibraries\3rdPartyLibs\libpng-1.6.34;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GL2PSDLL;GL2PSDLL_EXPORTS;HAVE_NO_VSNPRINTF;HAVE_ZLIB;HAVE_PNG;CMAKE_INTDIR=\"Release\";shared_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\3rdPartyLibs\zlib-1.2.11;C:\SUMOLibraries\3rdPartyLibs\libpng-1.6.34;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\behr_mi\Projekte\sumo\SUMOLibraries\3rdPartyLibs\zlib-1.2.11;D:\behr_mi\Projekte\sumo\SUMOLibraries\3rdPartyLibs\libpng-1.6.34;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\3rdPartyLibs\zlib-1.2.11;C:\SUMOLibraries\3rdPartyLibs\libpng-1.6.34;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -153,22 +153,22 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>opengl32.lib;glu32.lib;D:\behr_mi\Projekte\sumo\SUMOLibraries\3rdPartyLibs\zlib-1.2.11\Release\zlib.lib;D:\behr_mi\Projekte\sumo\SUMOLibraries\3rdPartyLibs\libpng-1.6.34\Release\libpng16.lib;D:\behr_mi\Projekte\sumo\SUMOLibraries\3rdPartyLibs\zlib-1.2.11\Release\zlib.lib;D:\behr_mi\Projekte\sumo\SUMOLibraries\3rdPartyLibs\libpng-1.6.34\Release\libpng16.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>D:/behr_mi/Projekte/sumo/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/Release;D:/behr_mi/Projekte/sumo/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/Release/$(Configuration);D:/behr_mi/Projekte/sumo/SUMOLibraries/3rdPartyLibs/libpng-1.6.34/Release;D:/behr_mi/Projekte/sumo/SUMOLibraries/3rdPartyLibs/libpng-1.6.34/Release/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;C:\SUMOLibraries\3rdPartyLibs\libpng-1.6.34\projects\vstudio\x64\Release\zlib.lib;C:\SUMOLibraries\3rdPartyLibs\libpng-1.6.34\projects\vstudio\x64\Release\libpng16.lib;C:\SUMOLibraries\3rdPartyLibs\libpng-1.6.34\projects\vstudio\x64\Release\zlib.lib;C:\SUMOLibraries\3rdPartyLibs\libpng-1.6.34\projects\vstudio\x64\Release\libpng16.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/SUMOLibraries/3rdPartyLibs/libpng-1.6.34/projects/vstudio/x64/Release;C:/SUMOLibraries/3rdPartyLibs/libpng-1.6.34/projects/vstudio/x64/Release/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>D:/behr_mi/Projekte/sumo/SUMOLibraries/msvc12/gl2ps-1.4.0/Release/gl2ps.lib</ImportLibrary>
-      <ProgramDataBaseFile>D:/behr_mi/Projekte/sumo/SUMOLibraries/msvc12/gl2ps-1.4.0/Release/gl2ps.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/SUMOLibraries/gl2ps-1.4.0_64/Release/gl2ps.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/SUMOLibraries/gl2ps-1.4.0_64/Release/gl2ps.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
     </ProjectReference>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\behr_mi\Projekte\sumo\SUMOLibraries\3rdPartyLibs\zlib-1.2.11;D:\behr_mi\Projekte\sumo\SUMOLibraries\3rdPartyLibs\libpng-1.6.34;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\3rdPartyLibs\zlib-1.2.11;C:\SUMOLibraries\3rdPartyLibs\libpng-1.6.34;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
       <CompileAs>CompileAsC</CompileAs>
       <ExceptionHandling>
@@ -178,17 +178,16 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GL2PSDLL;GL2PSDLL_EXPORTS;HAVE_ZLIB;HAVE_PNG;CMAKE_INTDIR="MinSizeRel";shared_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GL2PSDLL;GL2PSDLL_EXPORTS;HAVE_NO_VSNPRINTF;HAVE_ZLIB;HAVE_PNG;CMAKE_INTDIR="MinSizeRel";shared_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
-      <DebugInformationFormat>
-      </DebugInformationFormat>
+      <DebugInformationFormat></DebugInformationFormat>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GL2PSDLL;GL2PSDLL_EXPORTS;HAVE_ZLIB;HAVE_PNG;CMAKE_INTDIR=\"MinSizeRel\";shared_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\behr_mi\Projekte\sumo\SUMOLibraries\3rdPartyLibs\zlib-1.2.11;D:\behr_mi\Projekte\sumo\SUMOLibraries\3rdPartyLibs\libpng-1.6.34;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GL2PSDLL;GL2PSDLL_EXPORTS;HAVE_NO_VSNPRINTF;HAVE_ZLIB;HAVE_PNG;CMAKE_INTDIR=\"MinSizeRel\";shared_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\3rdPartyLibs\zlib-1.2.11;C:\SUMOLibraries\3rdPartyLibs\libpng-1.6.34;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\behr_mi\Projekte\sumo\SUMOLibraries\3rdPartyLibs\zlib-1.2.11;D:\behr_mi\Projekte\sumo\SUMOLibraries\3rdPartyLibs\libpng-1.6.34;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\3rdPartyLibs\zlib-1.2.11;C:\SUMOLibraries\3rdPartyLibs\libpng-1.6.34;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -196,22 +195,22 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>opengl32.lib;glu32.lib;D:\behr_mi\Projekte\sumo\SUMOLibraries\3rdPartyLibs\zlib-1.2.11\Release\zlib.lib;D:\behr_mi\Projekte\sumo\SUMOLibraries\3rdPartyLibs\libpng-1.6.34\Release\libpng16.lib;D:\behr_mi\Projekte\sumo\SUMOLibraries\3rdPartyLibs\zlib-1.2.11\Release\zlib.lib;D:\behr_mi\Projekte\sumo\SUMOLibraries\3rdPartyLibs\libpng-1.6.34\Release\libpng16.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>D:/behr_mi/Projekte/sumo/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/Release;D:/behr_mi/Projekte/sumo/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/Release/$(Configuration);D:/behr_mi/Projekte/sumo/SUMOLibraries/3rdPartyLibs/libpng-1.6.34/Release;D:/behr_mi/Projekte/sumo/SUMOLibraries/3rdPartyLibs/libpng-1.6.34/Release/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;C:\SUMOLibraries\3rdPartyLibs\libpng-1.6.34\projects\vstudio\x64\Release\zlib.lib;C:\SUMOLibraries\3rdPartyLibs\libpng-1.6.34\projects\vstudio\x64\Release\libpng16.lib;C:\SUMOLibraries\3rdPartyLibs\libpng-1.6.34\projects\vstudio\x64\Release\zlib.lib;C:\SUMOLibraries\3rdPartyLibs\libpng-1.6.34\projects\vstudio\x64\Release\libpng16.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/SUMOLibraries/3rdPartyLibs/libpng-1.6.34/projects/vstudio/x64/Release;C:/SUMOLibraries/3rdPartyLibs/libpng-1.6.34/projects/vstudio/x64/Release/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>D:/behr_mi/Projekte/sumo/SUMOLibraries/msvc12/gl2ps-1.4.0/MinSizeRel/gl2ps.lib</ImportLibrary>
-      <ProgramDataBaseFile>D:/behr_mi/Projekte/sumo/SUMOLibraries/msvc12/gl2ps-1.4.0/MinSizeRel/gl2ps.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/SUMOLibraries/gl2ps-1.4.0_64/MinSizeRel/gl2ps.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/SUMOLibraries/gl2ps-1.4.0_64/MinSizeRel/gl2ps.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
     </ProjectReference>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\behr_mi\Projekte\sumo\SUMOLibraries\3rdPartyLibs\zlib-1.2.11;D:\behr_mi\Projekte\sumo\SUMOLibraries\3rdPartyLibs\libpng-1.6.34;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\3rdPartyLibs\zlib-1.2.11;C:\SUMOLibraries\3rdPartyLibs\libpng-1.6.34;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
       <CompileAs>CompileAsC</CompileAs>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -222,15 +221,15 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GL2PSDLL;GL2PSDLL_EXPORTS;HAVE_ZLIB;HAVE_PNG;CMAKE_INTDIR="RelWithDebInfo";shared_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GL2PSDLL;GL2PSDLL_EXPORTS;HAVE_NO_VSNPRINTF;HAVE_ZLIB;HAVE_PNG;CMAKE_INTDIR="RelWithDebInfo";shared_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GL2PSDLL;GL2PSDLL_EXPORTS;HAVE_ZLIB;HAVE_PNG;CMAKE_INTDIR=\"RelWithDebInfo\";shared_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\behr_mi\Projekte\sumo\SUMOLibraries\3rdPartyLibs\zlib-1.2.11;D:\behr_mi\Projekte\sumo\SUMOLibraries\3rdPartyLibs\libpng-1.6.34;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GL2PSDLL;GL2PSDLL_EXPORTS;HAVE_NO_VSNPRINTF;HAVE_ZLIB;HAVE_PNG;CMAKE_INTDIR=\"RelWithDebInfo\";shared_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\3rdPartyLibs\zlib-1.2.11;C:\SUMOLibraries\3rdPartyLibs\libpng-1.6.34;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\behr_mi\Projekte\sumo\SUMOLibraries\3rdPartyLibs\zlib-1.2.11;D:\behr_mi\Projekte\sumo\SUMOLibraries\3rdPartyLibs\libpng-1.6.34;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\3rdPartyLibs\zlib-1.2.11;C:\SUMOLibraries\3rdPartyLibs\libpng-1.6.34;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -238,13 +237,13 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>opengl32.lib;glu32.lib;D:\behr_mi\Projekte\sumo\SUMOLibraries\3rdPartyLibs\zlib-1.2.11\Release\zlib.lib;D:\behr_mi\Projekte\sumo\SUMOLibraries\3rdPartyLibs\libpng-1.6.34\Release\libpng16.lib;D:\behr_mi\Projekte\sumo\SUMOLibraries\3rdPartyLibs\zlib-1.2.11\Release\zlib.lib;D:\behr_mi\Projekte\sumo\SUMOLibraries\3rdPartyLibs\libpng-1.6.34\Release\libpng16.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>D:/behr_mi/Projekte/sumo/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/Release;D:/behr_mi/Projekte/sumo/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/Release/$(Configuration);D:/behr_mi/Projekte/sumo/SUMOLibraries/3rdPartyLibs/libpng-1.6.34/Release;D:/behr_mi/Projekte/sumo/SUMOLibraries/3rdPartyLibs/libpng-1.6.34/Release/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;C:\SUMOLibraries\3rdPartyLibs\libpng-1.6.34\projects\vstudio\x64\Release\zlib.lib;C:\SUMOLibraries\3rdPartyLibs\libpng-1.6.34\projects\vstudio\x64\Release\libpng16.lib;C:\SUMOLibraries\3rdPartyLibs\libpng-1.6.34\projects\vstudio\x64\Release\zlib.lib;C:\SUMOLibraries\3rdPartyLibs\libpng-1.6.34\projects\vstudio\x64\Release\libpng16.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/SUMOLibraries/3rdPartyLibs/libpng-1.6.34/projects/vstudio/x64/Release;C:/SUMOLibraries/3rdPartyLibs/libpng-1.6.34/projects/vstudio/x64/Release/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>D:/behr_mi/Projekte/sumo/SUMOLibraries/msvc12/gl2ps-1.4.0/RelWithDebInfo/gl2ps.lib</ImportLibrary>
-      <ProgramDataBaseFile>D:/behr_mi/Projekte/sumo/SUMOLibraries/msvc12/gl2ps-1.4.0/RelWithDebInfo/gl2ps.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/SUMOLibraries/gl2ps-1.4.0_64/RelWithDebInfo/gl2ps.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/SUMOLibraries/gl2ps-1.4.0_64/RelWithDebInfo/gl2ps.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -252,10 +251,10 @@
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\behr_mi\Projekte\sumo\SUMOLibraries\msvc12\gl2ps-1.4.0\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule D:/behr_mi/Projekte/sumo/SUMOLibraries/msvc12/gl2ps-1.4.0/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HD:/behr_mi/Projekte/sumo/SUMOLibraries/msvc12/gl2ps-1.4.0 -BD:/behr_mi/Projekte/sumo/SUMOLibraries/msvc12/gl2ps-1.4.0 --check-stamp-file D:/behr_mi/Projekte/sumo/SUMOLibraries/msvc12/gl2ps-1.4.0/CMakeFiles/generate.stamp
+    <CustomBuild Include="C:\SUMOLibraries\gl2ps-1.4.0\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/SUMOLibraries/gl2ps-1.4.0/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\CMake\bin\cmake.exe -HC:/SUMOLibraries/gl2ps-1.4.0 -BC:/SUMOLibraries/gl2ps-1.4.0_64 --check-stamp-file C:/SUMOLibraries/gl2ps-1.4.0_64/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -263,12 +262,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/behr_mi/Projekte/sumo/SUMOLibraries/msvc12/gl2ps-1.4.0/CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CheckFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\FindGLUT.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\FindLATEX.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\FindPNG.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\FindZLIB.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\SelectLibraryConfigurations.cmake;C:\Program Files\CMake\share\cmake-3.12\Templates\CPackConfig.cmake.in;D:\behr_mi\Projekte\sumo\SUMOLibraries\msvc12\gl2ps-1.4.0\CMakeFiles\3.12.1\CMakeCCompiler.cmake;D:\behr_mi\Projekte\sumo\SUMOLibraries\msvc12\gl2ps-1.4.0\CMakeFiles\3.12.1\CMakeRCCompiler.cmake;D:\behr_mi\Projekte\sumo\SUMOLibraries\msvc12\gl2ps-1.4.0\CMakeFiles\3.12.1\CMakeSystem.cmake;D:\behr_mi\Projekte\sumo\SUMOLibraries\msvc12\gl2ps-1.4.0\CMakeLists.txt;D:\behr_mi\Projekte\sumo\SUMOLibraries\msvc12\gl2ps-1.4.0\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\behr_mi\Projekte\sumo\SUMOLibraries\msvc12\gl2ps-1.4.0\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule D:/behr_mi/Projekte/sumo/SUMOLibraries/msvc12/gl2ps-1.4.0/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HD:/behr_mi/Projekte/sumo/SUMOLibraries/msvc12/gl2ps-1.4.0 -BD:/behr_mi/Projekte/sumo/SUMOLibraries/msvc12/gl2ps-1.4.0 --check-stamp-file D:/behr_mi/Projekte/sumo/SUMOLibraries/msvc12/gl2ps-1.4.0/CMakeFiles/generate.stamp
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/SUMOLibraries/gl2ps-1.4.0/CMakeLists.txt;C:\SUMOLibraries\gl2ps-1.4.0\CMakeLists.txt;C:\SUMOLibraries\gl2ps-1.4.0_64\CMakeFiles\3.10.1\CMakeSystem.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInitialize.cmake;C:\SUMOLibraries\gl2ps-1.4.0_64\CMakeFiles\3.10.1\CMakeCCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;C:\SUMOLibraries\gl2ps-1.4.0_64\CMakeFiles\3.10.1\CMakeRCCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.10\Modules\CheckFunctionExists.cmake;C:\CMake\share\cmake-3.10\Modules\FindOpenGL.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.10\Modules\FindGLUT.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.10\Modules\FindZLIB.cmake;C:\CMake\share\cmake-3.10\Modules\SelectLibraryConfigurations.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.10\Modules\FindPNG.cmake;C:\CMake\share\cmake-3.10\Modules\FindZLIB.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.10\Modules\SelectLibraryConfigurations.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.10\Modules\FindLATEX.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.10\Modules\CPack.cmake;C:\CMake\share\cmake-3.10\Modules\CPackComponent.cmake;C:\CMake\share\cmake-3.10\Templates\CPackConfig.cmake.in;C:\CMake\share\cmake-3.10\Templates\CPackConfig.cmake.in;C:\SUMOLibraries\gl2ps-1.4.0\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SUMOLibraries\gl2ps-1.4.0_64\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/SUMOLibraries/gl2ps-1.4.0/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\CMake\bin\cmake.exe -HC:/SUMOLibraries/gl2ps-1.4.0 -BC:/SUMOLibraries/gl2ps-1.4.0_64 --check-stamp-file C:/SUMOLibraries/gl2ps-1.4.0_64/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -276,12 +275,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/behr_mi/Projekte/sumo/SUMOLibraries/msvc12/gl2ps-1.4.0/CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CheckFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\FindGLUT.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\FindLATEX.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\FindPNG.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\FindZLIB.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\SelectLibraryConfigurations.cmake;C:\Program Files\CMake\share\cmake-3.12\Templates\CPackConfig.cmake.in;D:\behr_mi\Projekte\sumo\SUMOLibraries\msvc12\gl2ps-1.4.0\CMakeFiles\3.12.1\CMakeCCompiler.cmake;D:\behr_mi\Projekte\sumo\SUMOLibraries\msvc12\gl2ps-1.4.0\CMakeFiles\3.12.1\CMakeRCCompiler.cmake;D:\behr_mi\Projekte\sumo\SUMOLibraries\msvc12\gl2ps-1.4.0\CMakeFiles\3.12.1\CMakeSystem.cmake;D:\behr_mi\Projekte\sumo\SUMOLibraries\msvc12\gl2ps-1.4.0\CMakeLists.txt;D:\behr_mi\Projekte\sumo\SUMOLibraries\msvc12\gl2ps-1.4.0\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\behr_mi\Projekte\sumo\SUMOLibraries\msvc12\gl2ps-1.4.0\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule D:/behr_mi/Projekte/sumo/SUMOLibraries/msvc12/gl2ps-1.4.0/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HD:/behr_mi/Projekte/sumo/SUMOLibraries/msvc12/gl2ps-1.4.0 -BD:/behr_mi/Projekte/sumo/SUMOLibraries/msvc12/gl2ps-1.4.0 --check-stamp-file D:/behr_mi/Projekte/sumo/SUMOLibraries/msvc12/gl2ps-1.4.0/CMakeFiles/generate.stamp
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/SUMOLibraries/gl2ps-1.4.0/CMakeLists.txt;C:\SUMOLibraries\gl2ps-1.4.0\CMakeLists.txt;C:\SUMOLibraries\gl2ps-1.4.0_64\CMakeFiles\3.10.1\CMakeSystem.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInitialize.cmake;C:\SUMOLibraries\gl2ps-1.4.0_64\CMakeFiles\3.10.1\CMakeCCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;C:\SUMOLibraries\gl2ps-1.4.0_64\CMakeFiles\3.10.1\CMakeRCCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.10\Modules\CheckFunctionExists.cmake;C:\CMake\share\cmake-3.10\Modules\FindOpenGL.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.10\Modules\FindGLUT.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.10\Modules\FindZLIB.cmake;C:\CMake\share\cmake-3.10\Modules\SelectLibraryConfigurations.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.10\Modules\FindPNG.cmake;C:\CMake\share\cmake-3.10\Modules\FindZLIB.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.10\Modules\SelectLibraryConfigurations.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.10\Modules\FindLATEX.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.10\Modules\CPack.cmake;C:\CMake\share\cmake-3.10\Modules\CPackComponent.cmake;C:\CMake\share\cmake-3.10\Templates\CPackConfig.cmake.in;C:\CMake\share\cmake-3.10\Templates\CPackConfig.cmake.in;C:\SUMOLibraries\gl2ps-1.4.0\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SUMOLibraries\gl2ps-1.4.0_64\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/SUMOLibraries/gl2ps-1.4.0/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\CMake\bin\cmake.exe -HC:/SUMOLibraries/gl2ps-1.4.0 -BC:/SUMOLibraries/gl2ps-1.4.0_64 --check-stamp-file C:/SUMOLibraries/gl2ps-1.4.0_64/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -289,12 +288,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/behr_mi/Projekte/sumo/SUMOLibraries/msvc12/gl2ps-1.4.0/CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CheckFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\FindGLUT.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\FindLATEX.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\FindPNG.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\FindZLIB.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\SelectLibraryConfigurations.cmake;C:\Program Files\CMake\share\cmake-3.12\Templates\CPackConfig.cmake.in;D:\behr_mi\Projekte\sumo\SUMOLibraries\msvc12\gl2ps-1.4.0\CMakeFiles\3.12.1\CMakeCCompiler.cmake;D:\behr_mi\Projekte\sumo\SUMOLibraries\msvc12\gl2ps-1.4.0\CMakeFiles\3.12.1\CMakeRCCompiler.cmake;D:\behr_mi\Projekte\sumo\SUMOLibraries\msvc12\gl2ps-1.4.0\CMakeFiles\3.12.1\CMakeSystem.cmake;D:\behr_mi\Projekte\sumo\SUMOLibraries\msvc12\gl2ps-1.4.0\CMakeLists.txt;D:\behr_mi\Projekte\sumo\SUMOLibraries\msvc12\gl2ps-1.4.0\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\behr_mi\Projekte\sumo\SUMOLibraries\msvc12\gl2ps-1.4.0\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule D:/behr_mi/Projekte/sumo/SUMOLibraries/msvc12/gl2ps-1.4.0/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HD:/behr_mi/Projekte/sumo/SUMOLibraries/msvc12/gl2ps-1.4.0 -BD:/behr_mi/Projekte/sumo/SUMOLibraries/msvc12/gl2ps-1.4.0 --check-stamp-file D:/behr_mi/Projekte/sumo/SUMOLibraries/msvc12/gl2ps-1.4.0/CMakeFiles/generate.stamp
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/SUMOLibraries/gl2ps-1.4.0/CMakeLists.txt;C:\SUMOLibraries\gl2ps-1.4.0\CMakeLists.txt;C:\SUMOLibraries\gl2ps-1.4.0_64\CMakeFiles\3.10.1\CMakeSystem.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInitialize.cmake;C:\SUMOLibraries\gl2ps-1.4.0_64\CMakeFiles\3.10.1\CMakeCCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;C:\SUMOLibraries\gl2ps-1.4.0_64\CMakeFiles\3.10.1\CMakeRCCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.10\Modules\CheckFunctionExists.cmake;C:\CMake\share\cmake-3.10\Modules\FindOpenGL.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.10\Modules\FindGLUT.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.10\Modules\FindZLIB.cmake;C:\CMake\share\cmake-3.10\Modules\SelectLibraryConfigurations.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.10\Modules\FindPNG.cmake;C:\CMake\share\cmake-3.10\Modules\FindZLIB.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.10\Modules\SelectLibraryConfigurations.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.10\Modules\FindLATEX.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.10\Modules\CPack.cmake;C:\CMake\share\cmake-3.10\Modules\CPackComponent.cmake;C:\CMake\share\cmake-3.10\Templates\CPackConfig.cmake.in;C:\CMake\share\cmake-3.10\Templates\CPackConfig.cmake.in;C:\SUMOLibraries\gl2ps-1.4.0\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SUMOLibraries\gl2ps-1.4.0_64\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/SUMOLibraries/gl2ps-1.4.0/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\CMake\bin\cmake.exe -HC:/SUMOLibraries/gl2ps-1.4.0 -BC:/SUMOLibraries/gl2ps-1.4.0_64 --check-stamp-file C:/SUMOLibraries/gl2ps-1.4.0_64/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -302,18 +301,18 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/behr_mi/Projekte/sumo/SUMOLibraries/msvc12/gl2ps-1.4.0/CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CheckFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\FindGLUT.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\FindLATEX.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\FindPNG.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\FindZLIB.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\SelectLibraryConfigurations.cmake;C:\Program Files\CMake\share\cmake-3.12\Templates\CPackConfig.cmake.in;D:\behr_mi\Projekte\sumo\SUMOLibraries\msvc12\gl2ps-1.4.0\CMakeFiles\3.12.1\CMakeCCompiler.cmake;D:\behr_mi\Projekte\sumo\SUMOLibraries\msvc12\gl2ps-1.4.0\CMakeFiles\3.12.1\CMakeRCCompiler.cmake;D:\behr_mi\Projekte\sumo\SUMOLibraries\msvc12\gl2ps-1.4.0\CMakeFiles\3.12.1\CMakeSystem.cmake;D:\behr_mi\Projekte\sumo\SUMOLibraries\msvc12\gl2ps-1.4.0\CMakeLists.txt;D:\behr_mi\Projekte\sumo\SUMOLibraries\msvc12\gl2ps-1.4.0\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\behr_mi\Projekte\sumo\SUMOLibraries\msvc12\gl2ps-1.4.0\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/SUMOLibraries/gl2ps-1.4.0/CMakeLists.txt;C:\SUMOLibraries\gl2ps-1.4.0\CMakeLists.txt;C:\SUMOLibraries\gl2ps-1.4.0_64\CMakeFiles\3.10.1\CMakeSystem.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInitialize.cmake;C:\SUMOLibraries\gl2ps-1.4.0_64\CMakeFiles\3.10.1\CMakeCCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;C:\SUMOLibraries\gl2ps-1.4.0_64\CMakeFiles\3.10.1\CMakeRCCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.10\Modules\CheckFunctionExists.cmake;C:\CMake\share\cmake-3.10\Modules\FindOpenGL.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.10\Modules\FindGLUT.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.10\Modules\FindZLIB.cmake;C:\CMake\share\cmake-3.10\Modules\SelectLibraryConfigurations.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.10\Modules\FindPNG.cmake;C:\CMake\share\cmake-3.10\Modules\FindZLIB.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.10\Modules\SelectLibraryConfigurations.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.10\Modules\FindLATEX.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.10\Modules\CPack.cmake;C:\CMake\share\cmake-3.10\Modules\CPackComponent.cmake;C:\CMake\share\cmake-3.10\Templates\CPackConfig.cmake.in;C:\CMake\share\cmake-3.10\Templates\CPackConfig.cmake.in;C:\SUMOLibraries\gl2ps-1.4.0\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SUMOLibraries\gl2ps-1.4.0_64\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="D:\behr_mi\Projekte\sumo\SUMOLibraries\msvc12\gl2ps-1.4.0\gl2ps.c" />
-    <ClInclude Include="D:\behr_mi\Projekte\sumo\SUMOLibraries\msvc12\gl2ps-1.4.0\gl2ps.h" />
+    <ClCompile Include="C:\SUMOLibraries\gl2ps-1.4.0\gl2ps.c"  />
+    <ClInclude Include="C:\SUMOLibraries\gl2ps-1.4.0\gl2ps.h" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="D:\behr_mi\Projekte\sumo\SUMOLibraries\msvc12\gl2ps-1.4.0\ZERO_CHECK.vcxproj">
-      <Project>{FDA3A310-01C7-3231-8BD8-E6EF1EAE1AE3}</Project>
+    <ProjectReference Include="C:\SUMOLibraries\gl2ps-1.4.0_64\ZERO_CHECK.vcxproj">
+      <Project>{05225A3A-82E2-329E-8F9B-F6931F45496B}</Project>
       <Name>ZERO_CHECK</Name>
     </ProjectReference>
   </ItemGroup>

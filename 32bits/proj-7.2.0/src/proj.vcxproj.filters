@@ -1,0 +1,668 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\4D_api.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\aasincos.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\adjlon.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\auth.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\ctx.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\datum_set.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\datums.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\deriv.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\dmstor.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\ell_set.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\ellps.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\errno.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\factors.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\fileapi.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\fwd.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\gauss.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\generic_inverse.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\geodesic.c">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\init.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\initcache.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\internal.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\inv.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\list.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\log.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\malloc.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\mlfn.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\msfn.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\mutex.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\param.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\phi2.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\pipeline.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\pr_list.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\proj_mdist.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\qsfn.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\release.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\rtodms.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\strerrno.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\strtod.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\transform.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\tsfn.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\units.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\utils.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\wkt1_generated_parser.c">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\wkt1_parser.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\wkt2_generated_parser.c">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\wkt2_parser.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\wkt_parser.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\zpoly1.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\proj_json_streaming_writer.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\tracing.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\grids.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\filemanager.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\networkfilemanager.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\sqlite3_utils.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\conversions\axisswap.cpp">
+      <Filter>Source Files\Conversions</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\conversions\cart.cpp">
+      <Filter>Source Files\Conversions</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\conversions\geoc.cpp">
+      <Filter>Source Files\Conversions</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\conversions\geocent.cpp">
+      <Filter>Source Files\Conversions</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\conversions\noop.cpp">
+      <Filter>Source Files\Conversions</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\conversions\set.cpp">
+      <Filter>Source Files\Conversions</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\conversions\unitconvert.cpp">
+      <Filter>Source Files\Conversions</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\aeqd.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\adams.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\gnom.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\laea.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\mod_ster.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\nsper.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\nzmg.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\ortho.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\stere.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\sterea.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\aea.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\bipc.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\bonne.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\eqdc.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\isea.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\ccon.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\imw_p.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\krovak.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\lcc.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\poly.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\rpoly.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\sconics.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\rouss.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\cass.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\cc.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\cea.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\eqc.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\gall.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\labrd.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\lsat.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\misrsom.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\merc.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\mill.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\ocea.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\omerc.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\somerc.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\tcc.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\tcea.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\times.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\tmerc.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\tobmerc.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\airy.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\aitoff.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\august.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\bacon.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\bertin1953.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\chamb.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\hammer.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\lagrng.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\larr.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\lask.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\latlong.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\nicol.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\ob_tran.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\oea.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\tpeqd.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\vandg.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\vandg2.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\vandg4.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\wag7.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\lcca.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\geos.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\boggs.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\collg.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\comill.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\crast.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\denoy.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\eck1.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\eck2.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\eck3.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\eck4.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\eck5.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\fahey.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\fouc_s.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\gins8.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\gstmerc.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\gn_sinu.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\goode.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\igh.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\igh_o.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\hatano.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\loxim.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\mbt_fps.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\mbtfpp.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\mbtfpq.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\moll.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\nell.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\nell_h.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\patterson.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\putp2.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\putp3.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\putp4p.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\putp5.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\putp6.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\qsc.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\robin.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\sch.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\sts.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\urm5.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\urmfps.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\wag2.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\wag3.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\wink1.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\wink2.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\healpix.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\natearth.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\natearth2.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\calcofi.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\eqearth.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\projections\col_urban.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\transformations\affine.cpp">
+      <Filter>Source Files\Transformations</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\transformations\deformation.cpp">
+      <Filter>Source Files\Transformations</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\transformations\helmert.cpp">
+      <Filter>Source Files\Transformations</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\transformations\hgridshift.cpp">
+      <Filter>Source Files\Transformations</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\transformations\horner.cpp">
+      <Filter>Source Files\Transformations</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\transformations\molodensky.cpp">
+      <Filter>Source Files\Transformations</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\transformations\vgridshift.cpp">
+      <Filter>Source Files\Transformations</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\transformations\xyzgridshift.cpp">
+      <Filter>Source Files\Transformations</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\transformations\defmodel.cpp">
+      <Filter>Source Files\Transformations</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\transformations\tinshift.cpp">
+      <Filter>Source Files\Transformations</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\iso19111\static.cpp">
+      <Filter>Source Files\ISO19111</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\iso19111\util.cpp">
+      <Filter>Source Files\ISO19111</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\iso19111\metadata.cpp">
+      <Filter>Source Files\ISO19111</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\iso19111\common.cpp">
+      <Filter>Source Files\ISO19111</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\iso19111\crs.cpp">
+      <Filter>Source Files\ISO19111</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\iso19111\datum.cpp">
+      <Filter>Source Files\ISO19111</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\iso19111\coordinatesystem.cpp">
+      <Filter>Source Files\ISO19111</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\iso19111\coordinateoperation.cpp">
+      <Filter>Source Files\ISO19111</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\iso19111\io.cpp">
+      <Filter>Source Files\ISO19111</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\iso19111\internal.cpp">
+      <Filter>Source Files\ISO19111</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\iso19111\factory.cpp">
+      <Filter>Source Files\ISO19111</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\iso19111\c_api.cpp">
+      <Filter>Source Files\ISO19111</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\pj_list.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\proj_internal.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\wkt1_generated_parser.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\wkt1_parser.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\wkt2_generated_parser.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\wkt2_parser.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\wkt_parser.hpp">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\proj_json_streaming_writer.hpp">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\grids.hpp">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\filemanager.hpp">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\sqlite3_utils.hpp">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\proj_config.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\proj_api.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\proj.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\proj_experimental.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\proj_constants.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\geodesic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\CMakeLists.txt">
+      <Filter>CMake Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Files">
+      <UniqueIdentifier>{C7CCB47C-3E9A-38F5-8D07-BE63677BD631}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{F64D167A-399C-31F2-A018-0731F31A945A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4B4AACAE-E214-33F3-9184-CD9FF124D7A5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Conversions">
+      <UniqueIdentifier>{F41269D2-DAE9-308B-B783-340D4F127062}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Core">
+      <UniqueIdentifier>{B6146710-0360-3BF9-AB10-66EBC4A58693}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ISO19111">
+      <UniqueIdentifier>{6623EB6D-FF3A-3588-8A65-006525667356}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Projections">
+      <UniqueIdentifier>{B11C53E0-B2E4-35AB-AD9B-EDBBE432F48C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Transformations">
+      <UniqueIdentifier>{4C4658BB-99CE-3447-963B-4F9083ADE02A}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

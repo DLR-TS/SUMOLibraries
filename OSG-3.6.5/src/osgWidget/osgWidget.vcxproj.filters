@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWidget\Box.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWidget\Browser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWidget\PdfReader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWidget\VncClient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWidget\Canvas.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWidget\Frame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWidget\Input.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWidget\Label.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWidget\Lua.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWidget\Python.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWidget\StyleManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWidget\Table.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWidget\Util.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWidget\Version.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWidget\ViewerEventHandlers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWidget\Widget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWidget\Window.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWidget\WindowManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWidget\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgWidget\Export">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgWidget\Box">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgWidget\Browser">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgWidget\PdfReader">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgWidget\VncClient">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgWidget\Canvas">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgWidget\EventInterface">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgWidget\Frame">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgWidget\Input">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgWidget\Label">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgWidget\Lua">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgWidget\Python">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgWidget\ScriptEngine">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgWidget\StyleInterface">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgWidget\StyleManager">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgWidget\Table">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgWidget\Types">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgWidget\UIObjectParent">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgWidget\Util">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgWidget\Version">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgWidget\ViewerEventHandlers">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgWidget\Widget">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgWidget\Window">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgWidget\WindowManager">
+      <Filter>Header Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\PlatformSpecifics\Windows\OpenSceneGraphVersionInfo.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{798227C8-F63D-377D-B402-249FA1A7EF5E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{75F9FA5D-64E2-39A3-800D-3A429F06C13A}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
