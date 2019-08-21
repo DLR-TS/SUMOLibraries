@@ -1,0 +1,953 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4EDAD6F7-CD96-3D72-939D-ECD9E1A66E6A}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>googletest</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Libraries\32bits\proj-6.1.1\googletest-download\CMakeFiles\e014ea6fceee50d4b676083b21cab3cb\googletest-mkdir.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Creating directories for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\CMake\bin\cmake.exe -E make_directory C:/Libraries/32bits/proj-6.1.1/googletest-src
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E make_directory C:/Libraries/32bits/proj-6.1.1/googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E make_directory C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E make_directory C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/tmp
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E make_directory C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E make_directory C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E make_directory C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E touch C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-mkdir
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeFiles/e014ea6fceee50d4b676083b21cab3cb/googletest-mkdir.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-mkdir</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Creating directories for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\CMake\bin\cmake.exe -E make_directory C:/Libraries/32bits/proj-6.1.1/googletest-src
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E make_directory C:/Libraries/32bits/proj-6.1.1/googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E make_directory C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E make_directory C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/tmp
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E make_directory C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E make_directory C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E make_directory C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E touch C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-mkdir
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeFiles/e014ea6fceee50d4b676083b21cab3cb/googletest-mkdir.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-mkdir</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Creating directories for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\CMake\bin\cmake.exe -E make_directory C:/Libraries/32bits/proj-6.1.1/googletest-src
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E make_directory C:/Libraries/32bits/proj-6.1.1/googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E make_directory C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E make_directory C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/tmp
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E make_directory C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E make_directory C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E make_directory C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E touch C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-mkdir
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeFiles/e014ea6fceee50d4b676083b21cab3cb/googletest-mkdir.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-mkdir</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Creating directories for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\CMake\bin\cmake.exe -E make_directory C:/Libraries/32bits/proj-6.1.1/googletest-src
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E make_directory C:/Libraries/32bits/proj-6.1.1/googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E make_directory C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E make_directory C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/tmp
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E make_directory C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E make_directory C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E make_directory C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E touch C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-mkdir
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeFiles/e014ea6fceee50d4b676083b21cab3cb/googletest-mkdir.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-mkdir</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Libraries\32bits\proj-6.1.1\googletest-download\CMakeFiles\e014ea6fceee50d4b676083b21cab3cb\googletest-download.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Performing download step (download, verify and extract) for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd C:\Libraries\32bits\proj-6.1.1
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -P C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp/download-googletest.cmake
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -P C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp/verify-googletest.cmake
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -P C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp/extract-googletest.cmake
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E touch C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-download
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeFiles/e014ea6fceee50d4b676083b21cab3cb/googletest-download.rule;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\googletest-urlinfo.txt;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-mkdir;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-download</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Performing download step (download, verify and extract) for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+cd C:\Libraries\32bits\proj-6.1.1
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -P C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp/download-googletest.cmake
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -P C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp/verify-googletest.cmake
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -P C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp/extract-googletest.cmake
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E touch C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-download
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeFiles/e014ea6fceee50d4b676083b21cab3cb/googletest-download.rule;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\googletest-urlinfo.txt;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-mkdir;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-download</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Performing download step (download, verify and extract) for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+cd C:\Libraries\32bits\proj-6.1.1
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -P C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp/download-googletest.cmake
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -P C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp/verify-googletest.cmake
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -P C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp/extract-googletest.cmake
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E touch C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-download
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeFiles/e014ea6fceee50d4b676083b21cab3cb/googletest-download.rule;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\googletest-urlinfo.txt;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-mkdir;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-download</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Performing download step (download, verify and extract) for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+cd C:\Libraries\32bits\proj-6.1.1
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -P C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp/download-googletest.cmake
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -P C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp/verify-googletest.cmake
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -P C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp/extract-googletest.cmake
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E touch C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-download
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeFiles/e014ea6fceee50d4b676083b21cab3cb/googletest-download.rule;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\googletest-urlinfo.txt;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-mkdir;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-download</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Libraries\32bits\proj-6.1.1\googletest-download\CMakeFiles\e014ea6fceee50d4b676083b21cab3cb\googletest-update.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No update step for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\CMake\bin\cmake.exe -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E touch C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-update
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeFiles/e014ea6fceee50d4b676083b21cab3cb/googletest-update.rule;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-update</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">No update step for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\CMake\bin\cmake.exe -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E touch C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-update
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeFiles/e014ea6fceee50d4b676083b21cab3cb/googletest-update.rule;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-update</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">No update step for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\CMake\bin\cmake.exe -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E touch C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-update
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeFiles/e014ea6fceee50d4b676083b21cab3cb/googletest-update.rule;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-update</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">No update step for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\CMake\bin\cmake.exe -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E touch C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-update
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeFiles/e014ea6fceee50d4b676083b21cab3cb/googletest-update.rule;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-update</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Libraries\32bits\proj-6.1.1\googletest-download\CMakeFiles\e014ea6fceee50d4b676083b21cab3cb\googletest-patch.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No patch step for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\CMake\bin\cmake.exe -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E touch C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-patch
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeFiles/e014ea6fceee50d4b676083b21cab3cb/googletest-patch.rule;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-patch</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">No patch step for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\CMake\bin\cmake.exe -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E touch C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-patch
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeFiles/e014ea6fceee50d4b676083b21cab3cb/googletest-patch.rule;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-patch</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">No patch step for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\CMake\bin\cmake.exe -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E touch C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-patch
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeFiles/e014ea6fceee50d4b676083b21cab3cb/googletest-patch.rule;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-patch</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">No patch step for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\CMake\bin\cmake.exe -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E touch C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-patch
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeFiles/e014ea6fceee50d4b676083b21cab3cb/googletest-patch.rule;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-patch</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Libraries\32bits\proj-6.1.1\googletest-download\CMakeFiles\e014ea6fceee50d4b676083b21cab3cb\googletest-configure.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No configure step for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd C:\Libraries\32bits\proj-6.1.1\googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E touch C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-configure
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeFiles/e014ea6fceee50d4b676083b21cab3cb/googletest-configure.rule;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\tmp\googletest-cfgcmd.txt;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-update;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-patch;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-configure</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">No configure step for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+cd C:\Libraries\32bits\proj-6.1.1\googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E touch C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-configure
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeFiles/e014ea6fceee50d4b676083b21cab3cb/googletest-configure.rule;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\tmp\googletest-cfgcmd.txt;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-update;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-patch;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-configure</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">No configure step for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+cd C:\Libraries\32bits\proj-6.1.1\googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E touch C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-configure
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeFiles/e014ea6fceee50d4b676083b21cab3cb/googletest-configure.rule;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\tmp\googletest-cfgcmd.txt;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-update;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-patch;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-configure</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">No configure step for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+cd C:\Libraries\32bits\proj-6.1.1\googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E touch C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-configure
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeFiles/e014ea6fceee50d4b676083b21cab3cb/googletest-configure.rule;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\tmp\googletest-cfgcmd.txt;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-update;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-patch;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-configure</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Libraries\32bits\proj-6.1.1\googletest-download\CMakeFiles\e014ea6fceee50d4b676083b21cab3cb\googletest-build.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No build step for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd C:\Libraries\32bits\proj-6.1.1\googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E touch C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeFiles/e014ea6fceee50d4b676083b21cab3cb/googletest-build.rule;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-configure;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-build</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">No build step for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+cd C:\Libraries\32bits\proj-6.1.1\googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E touch C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeFiles/e014ea6fceee50d4b676083b21cab3cb/googletest-build.rule;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-configure;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-build</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">No build step for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+cd C:\Libraries\32bits\proj-6.1.1\googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E touch C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeFiles/e014ea6fceee50d4b676083b21cab3cb/googletest-build.rule;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-configure;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-build</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">No build step for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+cd C:\Libraries\32bits\proj-6.1.1\googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E touch C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeFiles/e014ea6fceee50d4b676083b21cab3cb/googletest-build.rule;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-configure;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-build</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Libraries\32bits\proj-6.1.1\googletest-download\CMakeFiles\e014ea6fceee50d4b676083b21cab3cb\googletest-install.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No install step for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd C:\Libraries\32bits\proj-6.1.1\googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E touch C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-install
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeFiles/e014ea6fceee50d4b676083b21cab3cb/googletest-install.rule;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-build;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-install</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">No install step for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+cd C:\Libraries\32bits\proj-6.1.1\googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E touch C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-install
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeFiles/e014ea6fceee50d4b676083b21cab3cb/googletest-install.rule;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-build;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-install</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">No install step for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+cd C:\Libraries\32bits\proj-6.1.1\googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E touch C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-install
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeFiles/e014ea6fceee50d4b676083b21cab3cb/googletest-install.rule;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-build;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-install</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">No install step for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+cd C:\Libraries\32bits\proj-6.1.1\googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E touch C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-install
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeFiles/e014ea6fceee50d4b676083b21cab3cb/googletest-install.rule;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-build;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-install</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Libraries\32bits\proj-6.1.1\googletest-download\CMakeFiles\e014ea6fceee50d4b676083b21cab3cb\googletest-test.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No test step for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd C:\Libraries\32bits\proj-6.1.1\googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E touch C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-test
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeFiles/e014ea6fceee50d4b676083b21cab3cb/googletest-test.rule;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-install;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-test</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">No test step for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+cd C:\Libraries\32bits\proj-6.1.1\googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E touch C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-test
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeFiles/e014ea6fceee50d4b676083b21cab3cb/googletest-test.rule;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-install;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-test</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">No test step for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+cd C:\Libraries\32bits\proj-6.1.1\googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E touch C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-test
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeFiles/e014ea6fceee50d4b676083b21cab3cb/googletest-test.rule;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-install;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-test</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">No test step for 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+cd C:\Libraries\32bits\proj-6.1.1\googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E touch C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-test
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeFiles/e014ea6fceee50d4b676083b21cab3cb/googletest-test.rule;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-install;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-test</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Libraries\32bits\proj-6.1.1\googletest-download\CMakeFiles\8db8a55c07adf7bca55318b4009c2efc\googletest-complete.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Completed 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\CMake\bin\cmake.exe -E make_directory C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeFiles/$(Configuration)
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E touch C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeFiles/$(Configuration)/googletest-complete
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E touch C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-done
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeFiles/8db8a55c07adf7bca55318b4009c2efc/googletest-complete.rule;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-install;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-mkdir;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-download;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-update;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-patch;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-configure;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-build;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-install;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-test;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Libraries\32bits\proj-6.1.1\googletest-download\CMakeFiles\$(Configuration)\googletest-complete</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Completed 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\CMake\bin\cmake.exe -E make_directory C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeFiles/$(Configuration)
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E touch C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeFiles/$(Configuration)/googletest-complete
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E touch C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-done
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeFiles/8db8a55c07adf7bca55318b4009c2efc/googletest-complete.rule;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-install;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-mkdir;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-download;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-update;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-patch;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-configure;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-build;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-install;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-test;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Libraries\32bits\proj-6.1.1\googletest-download\CMakeFiles\$(Configuration)\googletest-complete</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Completed 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\CMake\bin\cmake.exe -E make_directory C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeFiles/$(Configuration)
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E touch C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeFiles/$(Configuration)/googletest-complete
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E touch C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-done
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeFiles/8db8a55c07adf7bca55318b4009c2efc/googletest-complete.rule;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-install;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-mkdir;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-download;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-update;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-patch;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-configure;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-build;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-install;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-test;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Libraries\32bits\proj-6.1.1\googletest-download\CMakeFiles\$(Configuration)\googletest-complete</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Completed 'googletest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\CMake\bin\cmake.exe -E make_directory C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeFiles/$(Configuration)
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E touch C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeFiles/$(Configuration)/googletest-complete
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E touch C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/googletest-stamp/$(Configuration)/googletest-done
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeFiles/8db8a55c07adf7bca55318b4009c2efc/googletest-complete.rule;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-install;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-mkdir;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-download;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-update;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-patch;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-configure;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-build;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-install;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\src\googletest-stamp\$(Configuration)\googletest-test;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Libraries\32bits\proj-6.1.1\googletest-download\CMakeFiles\$(Configuration)\googletest-complete</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Libraries\32bits\proj-6.1.1\googletest-download\CMakeFiles\0a49cf9aec385a32d2f5db72142441b5\googletest.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeFiles/0a49cf9aec385a32d2f5db72142441b5/googletest.rule;C:\Libraries\32bits\proj-6.1.1\googletest-download\CMakeFiles\$(Configuration)\googletest-complete;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Libraries\32bits\proj-6.1.1\googletest-download\CMakeFiles\googletest</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeFiles/0a49cf9aec385a32d2f5db72142441b5/googletest.rule;C:\Libraries\32bits\proj-6.1.1\googletest-download\CMakeFiles\$(Configuration)\googletest-complete;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Libraries\32bits\proj-6.1.1\googletest-download\CMakeFiles\googletest</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeFiles/0a49cf9aec385a32d2f5db72142441b5/googletest.rule;C:\Libraries\32bits\proj-6.1.1\googletest-download\CMakeFiles\$(Configuration)\googletest-complete;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Libraries\32bits\proj-6.1.1\googletest-download\CMakeFiles\googletest</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeFiles/0a49cf9aec385a32d2f5db72142441b5/googletest.rule;C:\Libraries\32bits\proj-6.1.1\googletest-download\CMakeFiles\$(Configuration)\googletest-complete;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Libraries\32bits\proj-6.1.1\googletest-download\CMakeFiles\googletest</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Libraries\32bits\proj-6.1.1\googletest-download\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\CMake\bin\cmake.exe -SC:/Libraries/32bits/proj-6.1.1/googletest-download -BC:/Libraries/32bits/proj-6.1.1/googletest-download --check-stamp-file C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeLists.txt;C:\CMake\share\cmake-3.14\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.14\Modules\ExternalProject-download.cmake.in;C:\CMake\share\cmake-3.14\Modules\ExternalProject.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.14\Modules\RepositoryInfo.txt.in;C:\Libraries\32bits\proj-6.1.1\googletest-download\CMakeFiles\3.14.1\CMakeSystem.cmake;C:\Libraries\32bits\proj-6.1.1\googletest-download\CMakeLists.txt;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\tmp\googletest-cfgcmd.txt.in;C:\Libraries\32bits\proj-6.1.1\googletest-download\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Libraries\32bits\proj-6.1.1\googletest-download\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\CMake\bin\cmake.exe -SC:/Libraries/32bits/proj-6.1.1/googletest-download -BC:/Libraries/32bits/proj-6.1.1/googletest-download --check-stamp-file C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeLists.txt;C:\CMake\share\cmake-3.14\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.14\Modules\ExternalProject-download.cmake.in;C:\CMake\share\cmake-3.14\Modules\ExternalProject.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.14\Modules\RepositoryInfo.txt.in;C:\Libraries\32bits\proj-6.1.1\googletest-download\CMakeFiles\3.14.1\CMakeSystem.cmake;C:\Libraries\32bits\proj-6.1.1\googletest-download\CMakeLists.txt;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\tmp\googletest-cfgcmd.txt.in;C:\Libraries\32bits\proj-6.1.1\googletest-download\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Libraries\32bits\proj-6.1.1\googletest-download\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\CMake\bin\cmake.exe -SC:/Libraries/32bits/proj-6.1.1/googletest-download -BC:/Libraries/32bits/proj-6.1.1/googletest-download --check-stamp-file C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeLists.txt;C:\CMake\share\cmake-3.14\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.14\Modules\ExternalProject-download.cmake.in;C:\CMake\share\cmake-3.14\Modules\ExternalProject.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.14\Modules\RepositoryInfo.txt.in;C:\Libraries\32bits\proj-6.1.1\googletest-download\CMakeFiles\3.14.1\CMakeSystem.cmake;C:\Libraries\32bits\proj-6.1.1\googletest-download\CMakeLists.txt;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\tmp\googletest-cfgcmd.txt.in;C:\Libraries\32bits\proj-6.1.1\googletest-download\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Libraries\32bits\proj-6.1.1\googletest-download\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\CMake\bin\cmake.exe -SC:/Libraries/32bits/proj-6.1.1/googletest-download -BC:/Libraries/32bits/proj-6.1.1/googletest-download --check-stamp-file C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Libraries/32bits/proj-6.1.1/googletest-download/CMakeLists.txt;C:\CMake\share\cmake-3.14\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.14\Modules\ExternalProject-download.cmake.in;C:\CMake\share\cmake-3.14\Modules\ExternalProject.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.14\Modules\RepositoryInfo.txt.in;C:\Libraries\32bits\proj-6.1.1\googletest-download\CMakeFiles\3.14.1\CMakeSystem.cmake;C:\Libraries\32bits\proj-6.1.1\googletest-download\CMakeLists.txt;C:\Libraries\32bits\proj-6.1.1\googletest-download\googletest-prefix\tmp\googletest-cfgcmd.txt.in;C:\Libraries\32bits\proj-6.1.1\googletest-download\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Libraries\32bits\proj-6.1.1\googletest-download\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Libraries\32bits\proj-6.1.1\googletest-download\CMakeFiles\googletest" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Libraries\32bits\proj-6.1.1\googletest-download\ZERO_CHECK.vcxproj">
+      <Project>{A176B5CF-5A1D-32BF-B81F-55327D2C34A9}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

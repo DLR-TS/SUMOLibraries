@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Libraries\32bits\proj-6.1.1\src\apps\projinfo.cpp">
+      <Filter>Source Files\Bin</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Libraries\32bits\proj-6.1.1\src\CMakeLists.txt">
+      <Filter>CMake Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Files">
+      <UniqueIdentifier>{6562A808-98C0-3271-85F6-DA1A07F061A0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{DE8E0C7D-0C81-3AF7-84DF-7ADDE2BAAAD3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Bin">
+      <UniqueIdentifier>{AB1679CE-EEED-3B8A-8052-EE48731BE869}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

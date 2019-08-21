@@ -1,0 +1,54 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 16
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ALL_BUILD", "ALL_BUILD.vcxproj", "{AE45A5F7-8A3F-3CD0-92EB-81FCA1E94A53}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D4799670-B1B2-3219-A209-A3252A7E5CCA} = {D4799670-B1B2-3219-A209-A3252A7E5CCA}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "INSTALL", "INSTALL.vcxproj", "{026644E3-5625-36B0-B5D0-20B94D4B1244}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AE45A5F7-8A3F-3CD0-92EB-81FCA1E94A53} = {AE45A5F7-8A3F-3CD0-92EB-81FCA1E94A53}
+		{D4799670-B1B2-3219-A209-A3252A7E5CCA} = {D4799670-B1B2-3219-A209-A3252A7E5CCA}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RUN_TESTS", "RUN_TESTS.vcxproj", "{29A04BB3-901B-3CF0-AE50-05625AAA0231}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D4799670-B1B2-3219-A209-A3252A7E5CCA} = {D4799670-B1B2-3219-A209-A3252A7E5CCA}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ZERO_CHECK", "..\..\\ZERO_CHECK.vcxproj", "{D4799670-B1B2-3219-A209-A3252A7E5CCA}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gmock", "gmock.vcxproj", "{C6B92632-83CD-3A5E-880B-AE67E8431874}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D4799670-B1B2-3219-A209-A3252A7E5CCA} = {D4799670-B1B2-3219-A209-A3252A7E5CCA}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gmock_main", "gmock_main.vcxproj", "{123B4231-2CBA-399B-A4AC-8A601F5E6CE9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D4799670-B1B2-3219-A209-A3252A7E5CCA} = {D4799670-B1B2-3219-A209-A3252A7E5CCA}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AE45A5F7-8A3F-3CD0-92EB-81FCA1E94A53}.Release|Win32.ActiveCfg = Release|Win32
+		{AE45A5F7-8A3F-3CD0-92EB-81FCA1E94A53}.Release|Win32.Build.0 = Release|Win32
+		{026644E3-5625-36B0-B5D0-20B94D4B1244}.Release|Win32.ActiveCfg = Release|Win32
+		{29A04BB3-901B-3CF0-AE50-05625AAA0231}.Release|Win32.ActiveCfg = Release|Win32
+		{D4799670-B1B2-3219-A209-A3252A7E5CCA}.Release|Win32.ActiveCfg = Release|Win32
+		{D4799670-B1B2-3219-A209-A3252A7E5CCA}.Release|Win32.Build.0 = Release|Win32
+		{C6B92632-83CD-3A5E-880B-AE67E8431874}.Release|Win32.ActiveCfg = Release|Win32
+		{C6B92632-83CD-3A5E-880B-AE67E8431874}.Release|Win32.Build.0 = Release|Win32
+		{123B4231-2CBA-399B-A4AC-8A601F5E6CE9}.Release|Win32.ActiveCfg = Release|Win32
+		{123B4231-2CBA-399B-A4AC-8A601F5E6CE9}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BDCF915B-22C2-394D-97DB-600B78790D21}
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
