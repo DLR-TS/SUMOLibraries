@@ -1,0 +1,11 @@
+prefix=C:\Libraries\3rdPartyLibs\tiff-4.0.9
+exec_prefix=C:\Libraries\3rdPartyLibs\tiff-4.0.9
+libdir=C:\Libraries\3rdPartyLibs\tiff-4.0.9/lib
+includedir=C:\Libraries\3rdPartyLibs\tiff-4.0.9/include
+
+Name: libtiff
+Description:  Tag Image File Format (TIFF) library.
+Version: 4.0.9
+Libs: -LC:\Libraries\3rdPartyLibs\tiff-4.0.9/lib -ltiff
+Libs.private: 
+Cflags: -IC:\Libraries\3rdPartyLibs\tiff-4.0.9/include
