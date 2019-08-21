@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgSim\BlinkSequence.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgSim\ColorRange.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgSim\DOFTransform.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgSim\ElevationSlice.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgSim\HeightAboveTerrain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgSim\Impostor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgSim\ImpostorSprite.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgSim\InsertImpostorsVisitor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgSim\LightPoint.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgSim\LightPointDrawable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgSim\LightPointNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgSim\LightPointSpriteDrawable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgSim\LineOfSight.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgSim\MultiSwitch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgSim\OverlayNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgSim\ScalarBar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgSim\ScalarsToColors.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgSim\Sector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgSim\ShapeAttribute.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgSim\SphereSegment.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgSim\Version.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgSim\VisibilityGroup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Libraries\OSG-3.4.0_64\src\osgSim\LightPointDrawable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Libraries\OSG-3.4.0_64\src\osgSim\LightPointSpriteDrawable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Libraries\OSG-3.4.0_64\src\osgSim\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgSim\BlinkSequence">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgSim\ColorRange">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgSim\DOFTransform">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgSim\ElevationSlice">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgSim\HeightAboveTerrain">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgSim\Export">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgSim\GeographicLocation">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgSim\Impostor">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgSim\ImpostorSprite">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgSim\InsertImpostorsVisitor">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgSim\LightPoint">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgSim\LightPointNode">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgSim\LightPointSystem">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgSim\LineOfSight">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgSim\MultiSwitch">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgSim\OverlayNode">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgSim\ObjectRecordData">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgSim\ScalarBar">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgSim\ScalarsToColors">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgSim\Sector">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgSim\ShapeAttribute">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgSim\SphereSegment">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgSim\Version">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgSim\VisibilityGroup">
+      <Filter>Header Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="C:\Libraries\OSG-3.4.0_64\PlatformSpecifics\Windows\OpenSceneGraphVersionInfo.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{29A82576-0467-3E0F-914C-5CA8B15FB8C1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{2C1F2B13-BA14-36B4-B5AD-56B355D1CA2C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

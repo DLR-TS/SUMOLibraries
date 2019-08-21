@@ -1,0 +1,426 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A1F9A07F-118C-3E5F-B1A5-46B3C2CFA602}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>osgUtil</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Libraries\OSG-3.4.0_64\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">osgUtil.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">osg130-osgUtild</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Libraries\OSG-3.4.0_64\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">osgUtil.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">osg130-osgUtil</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Libraries\OSG-3.4.0_64\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">osgUtil.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">osg130-osgUtils</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Libraries\OSG-3.4.0_64\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">osgUtil.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">osg130-osgUtilrd</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Libraries\OSG-3.4.0_64\include;C:\Libraries\OSG-3.4.0_64\src\osgUtil\tristripper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4706;4127;4100</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;OSGUTIL_LIBRARY;CMAKE_INTDIR="Debug";osgUtil_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;OSGUTIL_LIBRARY;CMAKE_INTDIR=\"Debug\";osgUtil_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Libraries\OSG-3.4.0_64\include;C:\Libraries\OSG-3.4.0_64\src\osgUtil\tristripper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Libraries\OSG-3.4.0_64\include;C:\Libraries\OSG-3.4.0_64\src\osgUtil\tristripper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\lib\osgd.lib;..\..\lib\OpenThreadsd.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Libraries/OSG-3.4.0_64/lib/osgUtild.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Libraries/OSG-3.4.0_64/bin/osg130-osgUtild.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Libraries\OSG-3.4.0_64\include;C:\Libraries\OSG-3.4.0_64\src\osgUtil\tristripper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4706;4127;4100</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;OSGUTIL_LIBRARY;CMAKE_INTDIR="Release";osgUtil_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;OSGUTIL_LIBRARY;CMAKE_INTDIR=\"Release\";osgUtil_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Libraries\OSG-3.4.0_64\include;C:\Libraries\OSG-3.4.0_64\src\osgUtil\tristripper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Libraries\OSG-3.4.0_64\include;C:\Libraries\OSG-3.4.0_64\src\osgUtil\tristripper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\lib\osg.lib;..\..\lib\OpenThreads.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Libraries/OSG-3.4.0_64/lib/osgUtil.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Libraries/OSG-3.4.0_64/bin/osg130-osgUtil.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Libraries\OSG-3.4.0_64\include;C:\Libraries\OSG-3.4.0_64\src\osgUtil\tristripper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4706;4127;4100</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;OSGUTIL_LIBRARY;CMAKE_INTDIR="MinSizeRel";osgUtil_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;OSGUTIL_LIBRARY;CMAKE_INTDIR=\"MinSizeRel\";osgUtil_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Libraries\OSG-3.4.0_64\include;C:\Libraries\OSG-3.4.0_64\src\osgUtil\tristripper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Libraries\OSG-3.4.0_64\include;C:\Libraries\OSG-3.4.0_64\src\osgUtil\tristripper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\lib\osgs.lib;..\..\lib\OpenThreadss.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Libraries/OSG-3.4.0_64/lib/osgUtils.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Libraries/OSG-3.4.0_64/bin/osg130-osgUtils.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Libraries\OSG-3.4.0_64\include;C:\Libraries\OSG-3.4.0_64\src\osgUtil\tristripper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4706;4127;4100</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;OSGUTIL_LIBRARY;CMAKE_INTDIR="RelWithDebInfo";osgUtil_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;OSGUTIL_LIBRARY;CMAKE_INTDIR=\"RelWithDebInfo\";osgUtil_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Libraries\OSG-3.4.0_64\include;C:\Libraries\OSG-3.4.0_64\src\osgUtil\tristripper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Libraries\OSG-3.4.0_64\include;C:\Libraries\OSG-3.4.0_64\src\osgUtil\tristripper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\lib\osgrd.lib;..\..\lib\OpenThreadsrd.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Libraries/OSG-3.4.0_64/lib/osgUtilrd.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Libraries/OSG-3.4.0_64/bin/osg130-osgUtilrd.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Libraries\OSG-3.4.0_64\src\osgUtil\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Libraries/OSG-3.4.0_64/src/osgUtil/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\CMake\bin\cmake.exe -HC:/Libraries/OSG-3.4.0_64 -BC:/Libraries/OSG-3.4.0_64 --check-stamp-file C:/Libraries/OSG-3.4.0_64/src/osgUtil/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Libraries/OSG-3.4.0_64/src/osgUtil/CMakeLists.txt;C:\Libraries\OSG-3.4.0_64\src\osgUtil\CMakeLists.txt;C:\Libraries\OSG-3.4.0_64\CMakeModules\ModuleInstall.cmake;C:\Libraries\OSG-3.4.0_64\src\osgUtil\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Libraries\OSG-3.4.0_64\src\osgUtil\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Libraries/OSG-3.4.0_64/src/osgUtil/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\CMake\bin\cmake.exe -HC:/Libraries/OSG-3.4.0_64 -BC:/Libraries/OSG-3.4.0_64 --check-stamp-file C:/Libraries/OSG-3.4.0_64/src/osgUtil/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Libraries/OSG-3.4.0_64/src/osgUtil/CMakeLists.txt;C:\Libraries\OSG-3.4.0_64\src\osgUtil\CMakeLists.txt;C:\Libraries\OSG-3.4.0_64\CMakeModules\ModuleInstall.cmake;C:\Libraries\OSG-3.4.0_64\src\osgUtil\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Libraries\OSG-3.4.0_64\src\osgUtil\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Libraries/OSG-3.4.0_64/src/osgUtil/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\CMake\bin\cmake.exe -HC:/Libraries/OSG-3.4.0_64 -BC:/Libraries/OSG-3.4.0_64 --check-stamp-file C:/Libraries/OSG-3.4.0_64/src/osgUtil/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Libraries/OSG-3.4.0_64/src/osgUtil/CMakeLists.txt;C:\Libraries\OSG-3.4.0_64\src\osgUtil\CMakeLists.txt;C:\Libraries\OSG-3.4.0_64\CMakeModules\ModuleInstall.cmake;C:\Libraries\OSG-3.4.0_64\src\osgUtil\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Libraries\OSG-3.4.0_64\src\osgUtil\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Libraries/OSG-3.4.0_64/src/osgUtil/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\CMake\bin\cmake.exe -HC:/Libraries/OSG-3.4.0_64 -BC:/Libraries/OSG-3.4.0_64 --check-stamp-file C:/Libraries/OSG-3.4.0_64/src/osgUtil/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Libraries/OSG-3.4.0_64/src/osgUtil/CMakeLists.txt;C:\Libraries\OSG-3.4.0_64\src\osgUtil\CMakeLists.txt;C:\Libraries\OSG-3.4.0_64\CMakeModules\ModuleInstall.cmake;C:\Libraries\OSG-3.4.0_64\src\osgUtil\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Libraries\OSG-3.4.0_64\src\osgUtil\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUtil\ConvertVec" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUtil\CubeMapGenerator" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUtil\CullVisitor" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUtil\DelaunayTriangulator" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUtil\DisplayRequirementsVisitor" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUtil\DrawElementTypeSimplifier" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUtil\EdgeCollector" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUtil\Export" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUtil\GLObjectsVisitor" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUtil\HalfWayMapGenerator" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUtil\HighlightMapGenerator" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUtil\IntersectionVisitor" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUtil\IntersectVisitor" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUtil\IncrementalCompileOperation" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUtil\LineSegmentIntersector" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUtil\MeshOptimizers" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUtil\OperationArrayFunctor" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUtil\Optimizer" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUtil\PerlinNoise" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUtil\PlaneIntersector" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUtil\PolytopeIntersector" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUtil\PositionalStateContainer" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUtil\PrintVisitor" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUtil\RayIntersector" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUtil\ReflectionMapGenerator" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUtil\RenderBin" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUtil\RenderLeaf" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUtil\RenderStage" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUtil\ReversePrimitiveFunctor" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUtil\SceneView" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUtil\SceneGraphBuilder" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUtil\ShaderGen" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUtil\Simplifier" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUtil\SmoothingVisitor" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUtil\StateGraph" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUtil\Statistics" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUtil\TangentSpaceGenerator" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUtil\Tessellator" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUtil\TransformAttributeFunctor" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUtil\TransformCallback" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUtil\TriStripVisitor" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUtil\UpdateVisitor" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osgUtil\Version" />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUtil\CubeMapGenerator.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUtil\CullVisitor.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUtil\DelaunayTriangulator.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUtil\DisplayRequirementsVisitor.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUtil\DrawElementTypeSimplifier.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUtil\EdgeCollector.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUtil\GLObjectsVisitor.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUtil\HalfWayMapGenerator.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUtil\HighlightMapGenerator.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUtil\IntersectionVisitor.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUtil\IntersectVisitor.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUtil\IncrementalCompileOperation.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUtil\LineSegmentIntersector.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUtil\MeshOptimizers.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUtil\Optimizer.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUtil\PerlinNoise.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUtil\PlaneIntersector.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUtil\PolytopeIntersector.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUtil\PositionalStateContainer.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUtil\PrintVisitor.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUtil\RayIntersector.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUtil\RenderBin.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUtil\RenderLeaf.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUtil\RenderStage.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUtil\ReversePrimitiveFunctor.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUtil\SceneView.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUtil\ShaderGen.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUtil\Simplifier.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUtil\SmoothingVisitor.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUtil\SceneGraphBuilder.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUtil\StateGraph.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUtil\Statistics.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUtil\TangentSpaceGenerator.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUtil\Tessellator.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUtil\TransformAttributeFunctor.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUtil\TransformCallback.cpp"  />
+    <ClInclude Include="C:\Libraries\OSG-3.4.0_64\src\osgUtil\tristripper\include\detail\graph_array.h" />
+    <ClInclude Include="C:\Libraries\OSG-3.4.0_64\src\osgUtil\tristripper\include\detail\types.h" />
+    <ClInclude Include="C:\Libraries\OSG-3.4.0_64\src\osgUtil\tristripper\include\detail\cache_simulator.h" />
+    <ClInclude Include="C:\Libraries\OSG-3.4.0_64\src\osgUtil\tristripper\include\detail\policy.h" />
+    <ClInclude Include="C:\Libraries\OSG-3.4.0_64\src\osgUtil\tristripper\include\detail\heap_array.h" />
+    <ClInclude Include="C:\Libraries\OSG-3.4.0_64\src\osgUtil\tristripper\include\detail\connectivity_graph.h" />
+    <ClInclude Include="C:\Libraries\OSG-3.4.0_64\src\osgUtil\tristripper\include\tri_stripper.h" />
+    <ClInclude Include="C:\Libraries\OSG-3.4.0_64\src\osgUtil\tristripper\include\public_types.h" />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUtil\tristripper\src\tri_stripper.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUtil\tristripper\src\policy.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUtil\tristripper\src\connectivity_graph.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUtil\TriStripVisitor.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUtil\UpdateVisitor.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osgUtil\Version.cpp"  />
+    <ResourceCompile Include="C:\Libraries\OSG-3.4.0_64\PlatformSpecifics\Windows\OpenSceneGraphVersionInfo.rc"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\ZERO_CHECK.vcxproj">
+      <Project>{3A4466EF-27A0-3982-AAE7-8F08C1330559}</Project>
+      <Name>ZERO_CHECK</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\OpenThreads\win32\OpenThreads.vcxproj">
+      <Project>{CAEFEA02-CE16-38C5-B5B8-C97FDB553CC0}</Project>
+      <Name>OpenThreads</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\osg\osg.vcxproj">
+      <Project>{04265DAB-F446-3B0D-9EC9-6CCEABCB18F1}</Project>
+      <Name>osg</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

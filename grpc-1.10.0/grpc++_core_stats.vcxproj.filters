@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Libraries\grpc-1.10.0_64\gens\src\proto\grpc\core\stats.pb.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\grpc-1.10.0_64\gens\src\proto\grpc\core\stats.grpc.pb.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\grpc-1.10.0_64\src\cpp\util\core_stats.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Libraries\grpc-1.10.0_64\gens\src\proto\grpc\core\stats.pb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Libraries\grpc-1.10.0_64\gens\src\proto\grpc\core\stats.grpc.pb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Libraries\grpc-1.10.0_64\CMakeLists.txt" />
+    <CustomBuild Include="C:\Libraries\grpc-1.10.0_64\CMakeFiles\783f94b6c71c1a5056e542caf7cfa55c\stats.grpc.pb.cc.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{94DFC242-9497-371E-8548-742DC9ECAD3C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{94C0B931-83FC-3815-B2ED-D16F3AC5687C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{D8E06529-5314-3CB3-B8FF-05789D87457D}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

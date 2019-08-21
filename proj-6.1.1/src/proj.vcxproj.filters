@@ -1,0 +1,659 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\4D_api.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\aasincos.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\adjlon.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\apply_gridshift.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\apply_vgridshift.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\auth.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\ctx.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\datum_set.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\datums.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\deriv.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\dmstor.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\ell_set.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\ellps.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\errno.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\factors.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\fileapi.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\fwd.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\gauss.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\gc_reader.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\geocent.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\geodesic.c">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\gridcatalog.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\gridinfo.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\gridlist.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\init.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\initcache.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\internal.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\inv.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\jniproj.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\list.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\log.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\malloc.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\math.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\mlfn.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\msfn.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\mutex.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\nad_cvt.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\nad_init.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\nad_intr.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\open_lib.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\param.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\phi2.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\pipeline.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\pr_list.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\proj_mdist.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\qsfn.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\release.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\rtodms.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\strerrno.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\strtod.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\transform.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\tsfn.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\units.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\utils.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\wkt1_generated_parser.c">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\wkt1_parser.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\wkt2_generated_parser.c">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\wkt2_parser.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\wkt_parser.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\zpoly1.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\conversions\axisswap.cpp">
+      <Filter>Source Files\Conversions</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\conversions\cart.cpp">
+      <Filter>Source Files\Conversions</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\conversions\geoc.cpp">
+      <Filter>Source Files\Conversions</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\conversions\geocent.cpp">
+      <Filter>Source Files\Conversions</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\conversions\noop.cpp">
+      <Filter>Source Files\Conversions</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\conversions\unitconvert.cpp">
+      <Filter>Source Files\Conversions</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\aeqd.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\gnom.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\laea.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\mod_ster.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\nsper.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\nzmg.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\ortho.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\stere.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\sterea.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\aea.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\bipc.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\bonne.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\eqdc.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\isea.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\ccon.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\imw_p.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\krovak.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\lcc.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\poly.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\rpoly.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\sconics.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\rouss.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\cass.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\cc.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\cea.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\eqc.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\gall.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\labrd.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\lsat.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\misrsom.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\merc.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\mill.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\ocea.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\omerc.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\somerc.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\tcc.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\tcea.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\times.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\tmerc.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\tobmerc.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\airy.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\aitoff.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\august.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\bacon.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\bertin1953.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\chamb.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\hammer.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\lagrng.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\larr.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\lask.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\latlong.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\nicol.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\ob_tran.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\oea.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\tpeqd.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\vandg.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\vandg2.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\vandg4.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\wag7.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\lcca.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\geos.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\boggs.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\collg.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\comill.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\crast.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\denoy.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\eck1.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\eck2.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\eck3.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\eck4.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\eck5.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\fahey.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\fouc_s.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\gins8.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\gstmerc.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\gn_sinu.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\goode.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\igh.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\hatano.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\loxim.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\mbt_fps.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\mbtfpp.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\mbtfpq.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\moll.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\nell.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\nell_h.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\patterson.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\putp2.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\putp3.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\putp4p.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\putp5.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\putp6.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\qsc.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\robin.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\sch.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\sts.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\urm5.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\urmfps.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\wag2.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\wag3.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\wink1.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\wink2.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\healpix.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\natearth.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\natearth2.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\calcofi.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\projections\eqearth.cpp">
+      <Filter>Source Files\Projections</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\transformations\affine.cpp">
+      <Filter>Source Files\Transformations</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\transformations\deformation.cpp">
+      <Filter>Source Files\Transformations</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\transformations\helmert.cpp">
+      <Filter>Source Files\Transformations</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\transformations\hgridshift.cpp">
+      <Filter>Source Files\Transformations</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\transformations\horner.cpp">
+      <Filter>Source Files\Transformations</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\transformations\molodensky.cpp">
+      <Filter>Source Files\Transformations</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\transformations\vgridshift.cpp">
+      <Filter>Source Files\Transformations</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\iso19111\static.cpp">
+      <Filter>Source Files\ISO19111</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\iso19111\util.cpp">
+      <Filter>Source Files\ISO19111</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\iso19111\metadata.cpp">
+      <Filter>Source Files\ISO19111</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\iso19111\common.cpp">
+      <Filter>Source Files\ISO19111</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\iso19111\crs.cpp">
+      <Filter>Source Files\ISO19111</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\iso19111\datum.cpp">
+      <Filter>Source Files\ISO19111</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\iso19111\coordinatesystem.cpp">
+      <Filter>Source Files\ISO19111</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\iso19111\coordinateoperation.cpp">
+      <Filter>Source Files\ISO19111</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\iso19111\io.cpp">
+      <Filter>Source Files\ISO19111</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\iso19111\internal.cpp">
+      <Filter>Source Files\ISO19111</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\iso19111\factory.cpp">
+      <Filter>Source Files\ISO19111</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\proj-6.1.1\src\iso19111\c_api.cpp">
+      <Filter>Source Files\ISO19111</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Libraries\proj-6.1.1\src\geocent.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Libraries\proj-6.1.1\src\pj_list.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Libraries\proj-6.1.1\src\proj_internal.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Libraries\proj-6.1.1\src\proj_math.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Libraries\proj-6.1.1\src\wkt1_generated_parser.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Libraries\proj-6.1.1\src\wkt1_parser.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Libraries\proj-6.1.1\src\wkt2_generated_parser.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Libraries\proj-6.1.1\src\wkt2_parser.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Libraries\proj-6.1.1\src\wkt_parser.hpp">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Libraries\proj-6.1.1\src\proj_config.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Libraries\proj-6.1.1\src\proj_api.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Libraries\proj-6.1.1\src\proj.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Libraries\proj-6.1.1\src\proj_experimental.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Libraries\proj-6.1.1\src\proj_constants.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Libraries\proj-6.1.1\src\geodesic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Libraries\proj-6.1.1\src\CMakeLists.txt">
+      <Filter>CMake Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Files">
+      <UniqueIdentifier>{6FF00077-6D85-3A00-8596-118FC5937132}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{23A9A671-D7D8-3EFD-9AAF-A3F74E70CD41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{FEFDDA78-DF1C-3990-B96B-42AC5C06C0C3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Conversions">
+      <UniqueIdentifier>{C46812A6-2A01-396F-884C-CBBD183174EA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Core">
+      <UniqueIdentifier>{D1F7EB39-EBB0-3AC9-A823-24DD7795B37A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ISO19111">
+      <UniqueIdentifier>{A2E12464-479E-314C-B6B7-A6303AB235B7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Projections">
+      <UniqueIdentifier>{9BBC6EB1-EF06-3D6E-B547-5F05F8C9BAC4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Transformations">
+      <UniqueIdentifier>{87CA01B8-604B-328E-BA13-12E227F247FE}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

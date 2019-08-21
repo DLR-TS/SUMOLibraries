@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{ADD2C9EF-D348-33AA-9865-CA9A9CFA2986}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>generate_all_sql_in</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Libraries\proj-6.1.1\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Libraries\proj-6.1.1\CMakeFiles\be1089abd4f5869fdad7051a6e99c071\all.sql.in.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating all.sql.in</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+cd C:\Libraries\proj-6.1.1\data
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -DALL_SQL_IN=C:/Libraries/proj-6.1.1/data/all.sql.in -P C:/Libraries/proj-6.1.1/data/generate_all_sql_in.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Libraries/proj-6.1.1/CMakeFiles/be1089abd4f5869fdad7051a6e99c071/all.sql.in.rule;C:\Libraries\proj-6.1.1\data\sql\begin.sql;C:\Libraries\proj-6.1.1\data\sql\proj_db_table_defs.sql;C:\Libraries\proj-6.1.1\data\sql\conversion_triggers.sql;C:\Libraries\proj-6.1.1\data\sql\metadata.sql;C:\Libraries\proj-6.1.1\data\sql\unit_of_measure.sql;C:\Libraries\proj-6.1.1\data\sql\area.sql;C:\Libraries\proj-6.1.1\data\sql\coordinate_system.sql;C:\Libraries\proj-6.1.1\data\sql\axis.sql;C:\Libraries\proj-6.1.1\data\sql\ellipsoid.sql;C:\Libraries\proj-6.1.1\data\sql\prime_meridian.sql;C:\Libraries\proj-6.1.1\data\sql\geodetic_datum.sql;C:\Libraries\proj-6.1.1\data\sql\vertical_datum.sql;C:\Libraries\proj-6.1.1\data\sql\conversion.sql;C:\Libraries\proj-6.1.1\data\sql\geodetic_crs.sql;C:\Libraries\proj-6.1.1\data\sql\projected_crs.sql;C:\Libraries\proj-6.1.1\data\sql\vertical_crs.sql;C:\Libraries\proj-6.1.1\data\sql\compound_crs.sql;C:\Libraries\proj-6.1.1\data\sql\helmert_transformation.sql;C:\Libraries\proj-6.1.1\data\sql\grid_transformation.sql;C:\Libraries\proj-6.1.1\data\sql\grid_transformation_custom.sql;C:\Libraries\proj-6.1.1\data\sql\other_transformation.sql;C:\Libraries\proj-6.1.1\data\sql\concatenated_operation.sql;C:\Libraries\proj-6.1.1\data\sql\alias_name.sql;C:\Libraries\proj-6.1.1\data\sql\supersession.sql;C:\Libraries\proj-6.1.1\data\sql\deprecation.sql;C:\Libraries\proj-6.1.1\data\sql\esri.sql;C:\Libraries\proj-6.1.1\data\sql\ignf.sql;C:\Libraries\proj-6.1.1\data\sql\grid_alternatives.sql;C:\Libraries\proj-6.1.1\data\sql\grid_alternatives_generated.sql;C:\Libraries\proj-6.1.1\data\sql\customizations.sql;C:\Libraries\proj-6.1.1\data\sql\commit.sql;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Libraries\proj-6.1.1\data\all.sql.in</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Libraries\proj-6.1.1\CMakeFiles\2a97323d9b528d88a1cb4d0b8f630547\generate_all_sql_in.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Libraries/proj-6.1.1/CMakeFiles/2a97323d9b528d88a1cb4d0b8f630547/generate_all_sql_in.rule;C:\Libraries\proj-6.1.1\data\all.sql.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Libraries\proj-6.1.1\data\CMakeFiles\generate_all_sql_in</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Libraries\proj-6.1.1\data\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Libraries/proj-6.1.1/data/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\CMake\bin\cmake.exe -SC:/Libraries/proj-6.1.1 -BC:/Libraries/proj-6.1.1 --check-stamp-file C:/Libraries/proj-6.1.1/data/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Libraries/proj-6.1.1/data/CMakeLists.txt;C:\Libraries\proj-6.1.1\data\CMakeLists.txt;C:\Libraries\proj-6.1.1\data\sql_filelist.cmake;C:\Libraries\proj-6.1.1\data\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Libraries\proj-6.1.1\data\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Libraries\proj-6.1.1\data\CMakeFiles\generate_all_sql_in" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Libraries\proj-6.1.1\ZERO_CHECK.vcxproj">
+      <Project>{24B74DED-FD47-3AFE-80B9-9A655B83EA64}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

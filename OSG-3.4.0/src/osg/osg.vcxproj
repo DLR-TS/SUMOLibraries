@@ -1,0 +1,707 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{04265DAB-F446-3B0D-9EC9-6CCEABCB18F1}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>osg</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Libraries\OSG-3.4.0_64\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">osg.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">osg130-osgd</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Libraries\OSG-3.4.0_64\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">osg.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">osg130-osg</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Libraries\OSG-3.4.0_64\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">osg.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">osg130-osgs</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Libraries\OSG-3.4.0_64\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">osg.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">osg130-osgrd</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Libraries\OSG-3.4.0_64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4706;4127;4100</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;OSG_LIBRARY;CMAKE_INTDIR="Debug";osg_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;OSG_LIBRARY;CMAKE_INTDIR=\"Debug\";osg_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Libraries\OSG-3.4.0_64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Libraries\OSG-3.4.0_64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\lib\OpenThreadsd.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Libraries/OSG-3.4.0_64/lib/osgd.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Libraries/OSG-3.4.0_64/bin/osg130-osgd.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Libraries\OSG-3.4.0_64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4706;4127;4100</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;OSG_LIBRARY;CMAKE_INTDIR="Release";osg_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;OSG_LIBRARY;CMAKE_INTDIR=\"Release\";osg_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Libraries\OSG-3.4.0_64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Libraries\OSG-3.4.0_64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\lib\OpenThreads.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Libraries/OSG-3.4.0_64/lib/osg.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Libraries/OSG-3.4.0_64/bin/osg130-osg.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Libraries\OSG-3.4.0_64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4706;4127;4100</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;OSG_LIBRARY;CMAKE_INTDIR="MinSizeRel";osg_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;OSG_LIBRARY;CMAKE_INTDIR=\"MinSizeRel\";osg_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Libraries\OSG-3.4.0_64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Libraries\OSG-3.4.0_64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\lib\OpenThreadss.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Libraries/OSG-3.4.0_64/lib/osgs.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Libraries/OSG-3.4.0_64/bin/osg130-osgs.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Libraries\OSG-3.4.0_64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4706;4127;4100</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;OSG_LIBRARY;CMAKE_INTDIR="RelWithDebInfo";osg_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;OSG_LIBRARY;CMAKE_INTDIR=\"RelWithDebInfo\";osg_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Libraries\OSG-3.4.0_64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Libraries\OSG-3.4.0_64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\lib\OpenThreadsrd.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Libraries/OSG-3.4.0_64/lib/osgrd.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Libraries/OSG-3.4.0_64/bin/osg130-osgrd.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Libraries\OSG-3.4.0_64\src\osg\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Libraries/OSG-3.4.0_64/src/osg/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\CMake\bin\cmake.exe -HC:/Libraries/OSG-3.4.0_64 -BC:/Libraries/OSG-3.4.0_64 --check-stamp-file C:/Libraries/OSG-3.4.0_64/src/osg/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Libraries/OSG-3.4.0_64/src/osg/CMakeLists.txt;C:\Libraries\OSG-3.4.0_64\src\osg\CMakeLists.txt;C:\Libraries\OSG-3.4.0_64\CMakeModules\ModuleInstall.cmake;C:\Libraries\OSG-3.4.0_64\src\osg\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Libraries\OSG-3.4.0_64\src\osg\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Libraries/OSG-3.4.0_64/src/osg/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\CMake\bin\cmake.exe -HC:/Libraries/OSG-3.4.0_64 -BC:/Libraries/OSG-3.4.0_64 --check-stamp-file C:/Libraries/OSG-3.4.0_64/src/osg/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Libraries/OSG-3.4.0_64/src/osg/CMakeLists.txt;C:\Libraries\OSG-3.4.0_64\src\osg\CMakeLists.txt;C:\Libraries\OSG-3.4.0_64\CMakeModules\ModuleInstall.cmake;C:\Libraries\OSG-3.4.0_64\src\osg\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Libraries\OSG-3.4.0_64\src\osg\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Libraries/OSG-3.4.0_64/src/osg/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\CMake\bin\cmake.exe -HC:/Libraries/OSG-3.4.0_64 -BC:/Libraries/OSG-3.4.0_64 --check-stamp-file C:/Libraries/OSG-3.4.0_64/src/osg/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Libraries/OSG-3.4.0_64/src/osg/CMakeLists.txt;C:\Libraries\OSG-3.4.0_64\src\osg\CMakeLists.txt;C:\Libraries\OSG-3.4.0_64\CMakeModules\ModuleInstall.cmake;C:\Libraries\OSG-3.4.0_64\src\osg\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Libraries\OSG-3.4.0_64\src\osg\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Libraries/OSG-3.4.0_64/src/osg/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\CMake\bin\cmake.exe -HC:/Libraries/OSG-3.4.0_64 -BC:/Libraries/OSG-3.4.0_64 --check-stamp-file C:/Libraries/OSG-3.4.0_64/src/osg/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Libraries/OSG-3.4.0_64/src/osg/CMakeLists.txt;C:\Libraries\OSG-3.4.0_64\src\osg\CMakeLists.txt;C:\Libraries\OSG-3.4.0_64\CMakeModules\ModuleInstall.cmake;C:\Libraries\OSG-3.4.0_64\src\osg\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Libraries\OSG-3.4.0_64\src\osg\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\AlphaFunc" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\AnimationPath" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\ApplicationUsage" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\ArgumentParser" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Array" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\ArrayDispatchers" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\AudioStream" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\AutoTransform" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Billboard" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\BlendColor" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\BlendEquation" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\BlendEquationi" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\BlendFunc" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\BlendFunci" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\BoundingBox" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\BoundingSphere" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\BoundsChecking" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\buffered_value" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\BufferIndexBinding" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\BufferObject" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\BufferTemplate" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Callback" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Camera" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\CameraView" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Capability" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\ClampColor" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\ClearNode" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\ClipControl" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\ClipNode" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\ClipPlane" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\ClusterCullingCallback" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\CollectOccludersVisitor" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\ColorMask" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\ColorMaski" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\ColorMatrix" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\ComputeBoundsVisitor" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\ConvexPlanarOccluder" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\ConvexPlanarPolygon" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\CoordinateSystemNode" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\CopyOp" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\CullFace" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\CullingSet" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\CullSettings" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\CullStack" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\DeleteHandler" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Depth" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\DisplaySettings" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Drawable" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\DrawPixels" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Endian" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Export" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\fast_back_stack" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Fog" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\FragmentProgram" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\FrameBufferObject" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\FrameStamp" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\FrontFace" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Geode" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Geometry" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\GL2Extensions" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\GLDefines" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\GLExtensions" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\GLBeginEndAdapter" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\GLObjects" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\GLU" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\GraphicsCostEstimator" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\GraphicsContext" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\GraphicsThread" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Group" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Hint" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Image" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\ImageSequence" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\ImageStream" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\ImageUtils" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\io_utils" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\KdTree" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Light" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\LightModel" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\LightSource" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\LineSegment" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\LineStipple" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\LineWidth" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\LOD" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\LogicOp" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Material" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Math" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Matrix" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Matrixd" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Matrixf" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\MatrixTransform" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\MixinVector" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Multisample" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Node" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\NodeCallback" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\NodeTrackerCallback" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\NodeVisitor" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Notify" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Object" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\observer_ptr" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Observer" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\ObserverNodePath" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\OccluderNode" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\OcclusionQueryNode" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\OperationThread" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\PatchParameter" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\PagedLOD" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Plane" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Point" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\PointSprite" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\PolygonMode" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\PolygonOffset" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\PolygonStipple" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Polytope" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\PositionAttitudeTransform" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\PrimitiveSet" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\PrimitiveRestartIndex" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Program" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Projection" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\ProxyNode" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Quat" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Referenced" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\ref_ptr" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\RenderInfo" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\SampleMaski" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Scissor" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\ScriptEngine" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Sequence" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\ShadeModel" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Shader" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\ShaderAttribute" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\ShaderComposer" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\ShadowVolumeOccluder" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Shape" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\ShapeDrawable" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\State" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\StateAttribute" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\StateAttributeCallback" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\StateSet" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Stats" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Stencil" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\StencilTwoSided" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Switch" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\TemplatePrimitiveFunctor" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\TexEnv" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\TexEnvCombine" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\TexEnvFilter" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\TexGen" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\TexGenNode" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\TexMat" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Texture" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Texture1D" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Texture2D" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Texture2DMultisample" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Texture2DArray" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Texture3D" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\TextureBuffer" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\TextureCubeMap" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\TextureRectangle" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Timer" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\TransferFunction" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Transform" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\TriangleFunctor" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\TriangleIndexFunctor" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Types" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Uniform" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\UserDataContainer" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\ValueObject" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Vec2" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Vec2b" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Vec2d" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Vec2f" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Vec2i" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Vec2s" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Vec2ub" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Vec2ui" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Vec2us" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Vec3" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Vec3b" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Vec3d" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Vec3f" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Vec3i" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Vec3s" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Vec3ub" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Vec3ui" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Vec3us" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Vec4" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Vec4b" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Vec4d" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Vec4f" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Vec4i" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Vec4s" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Vec4ub" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Vec4ui" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Vec4us" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\VertexAttribDivisor" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\VertexProgram" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\View" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Viewport" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Version" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\Config" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\include\osg\GL" />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\AlphaFunc.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\AnimationPath.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\ApplicationUsage.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\ArgumentParser.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\Array.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\ArrayDispatchers.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\AudioStream.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\AutoTransform.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\Billboard.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\BlendColor.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\BlendEquation.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\BlendEquationi.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\BlendFunc.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\BlendFunci.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\BufferIndexBinding.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\BufferObject.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\Callback.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\Capability.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\Camera.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\CameraView.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\ClampColor.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\ClearNode.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\ClipControl.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\ClipNode.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\ClipPlane.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\ClusterCullingCallback.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\CollectOccludersVisitor.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\ColorMask.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\ColorMaski.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\ColorMatrix.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\ComputeBoundsVisitor.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\ConvexPlanarOccluder.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\ConvexPlanarPolygon.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\CoordinateSystemNode.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\CopyOp.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\CullFace.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\CullingSet.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\CullSettings.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\CullStack.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\DeleteHandler.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\Depth.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\DisplaySettings.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\Drawable.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\DrawPixels.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\dxtctool.cpp"  />
+    <ClInclude Include="C:\Libraries\OSG-3.4.0_64\src\osg\dxtctool.h" />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\Fog.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\FragmentProgram.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\FrameBufferObject.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\FrameStamp.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\FrontFace.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\Geode.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\Geometry.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\GLExtensions.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\GLBeginEndAdapter.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\GLObjects.cpp"  />
+    <ClInclude Include="C:\Libraries\OSG-3.4.0_64\src\osg\GLStaticLibrary.h" />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\GLStaticLibrary.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\GraphicsCostEstimator.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\GraphicsContext.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\GraphicsThread.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\Group.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\Hint.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\Image.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\ImageSequence.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\ImageStream.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\ImageUtils.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\KdTree.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\Light.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\LightModel.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\LightSource.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\LineSegment.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\LineStipple.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\LineWidth.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\LOD.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\LogicOp.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\Material.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\Math.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\Matrixd.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\MatrixDecomposition.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\Matrixf.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\MatrixTransform.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\Multisample.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\Node.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\NodeTrackerCallback.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\NodeVisitor.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\Notify.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\Object.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\Observer.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\ObserverNodePath.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\OccluderNode.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\OcclusionQueryNode.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\OperationThread.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\PatchParameter.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\PagedLOD.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\Point.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\PointSprite.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\PolygonMode.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\PolygonOffset.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\PolygonStipple.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\PositionAttitudeTransform.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\PrimitiveSet.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\PrimitiveRestartIndex.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\Program.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\Projection.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\ProxyNode.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\Quat.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\Referenced.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\SampleMaski.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\Scissor.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\ScriptEngine.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\Sequence.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\ShadeModel.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\Shader.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\ShaderAttribute.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\ShaderComposer.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\ShadowVolumeOccluder.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\Shape.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\ShapeDrawable.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\StateAttribute.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\State.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\StateSet.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\Stats.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\Stencil.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\StencilTwoSided.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\Switch.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\TexEnvCombine.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\TexEnv.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\TexEnvFilter.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\TexGen.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\TexGenNode.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\TexMat.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\Texture1D.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\Texture2DArray.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\Texture2D.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\Texture2DMultisample.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\Texture3D.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\Texture.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\TextureBuffer.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\TextureCubeMap.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\TextureRectangle.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\Timer.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\TransferFunction.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\Transform.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\Uniform.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\UserDataContainer.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\Version.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\VertexAttribDivisor.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\VertexProgram.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\View.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\Viewport.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\glu\libutil\error.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\glu\libutil\mipmap.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\glu\libtess\normal.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\glu\libtess\memalloc.cpp"  />
+    <ClInclude Include="C:\Libraries\OSG-3.4.0_64\src\osg\glu\libtess\dict-list.h" />
+    <None Include="C:\Libraries\OSG-3.4.0_64\src\osg\glu\libtess\alg-outline" />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\glu\libtess\priorityq.cpp"  />
+    <ClInclude Include="C:\Libraries\OSG-3.4.0_64\src\osg\glu\libtess\normal.h" />
+    <ClInclude Include="C:\Libraries\OSG-3.4.0_64\src\osg\glu\libtess\dict.h" />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\glu\libtess\render.cpp"  />
+    <ClInclude Include="C:\Libraries\OSG-3.4.0_64\src\osg\glu\libtess\tessmono.h" />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\glu\libtess\mesh.cpp"  />
+    <ClInclude Include="C:\Libraries\OSG-3.4.0_64\src\osg\glu\libtess\render.h" />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\glu\libtess\tessmono.cpp"  />
+    <ClInclude Include="C:\Libraries\OSG-3.4.0_64\src\osg\glu\libtess\priorityq.h" />
+    <ClInclude Include="C:\Libraries\OSG-3.4.0_64\src\osg\glu\libtess\sweep.h" />
+    <ClInclude Include="C:\Libraries\OSG-3.4.0_64\src\osg\glu\libtess\priorityq-sort.h" />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\glu\libtess\sweep.cpp"  />
+    <ClInclude Include="C:\Libraries\OSG-3.4.0_64\src\osg\glu\libtess\tess.h" />
+    <ClInclude Include="C:\Libraries\OSG-3.4.0_64\src\osg\glu\libtess\geom.h" />
+    <ClInclude Include="C:\Libraries\OSG-3.4.0_64\src\osg\glu\libtess\memalloc.h" />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\glu\libtess\dict.cpp"  />
+    <ClInclude Include="C:\Libraries\OSG-3.4.0_64\src\osg\glu\libtess\priorityq-heap.h" />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\glu\libtess\geom.cpp"  />
+    <ClCompile Include="C:\Libraries\OSG-3.4.0_64\src\osg\glu\libtess\tess.cpp"  />
+    <ClInclude Include="C:\Libraries\OSG-3.4.0_64\src\osg\glu\libtess\mesh.h" />
+    <ResourceCompile Include="C:\Libraries\OSG-3.4.0_64\PlatformSpecifics\Windows\OpenSceneGraphVersionInfo.rc"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\ZERO_CHECK.vcxproj">
+      <Project>{3A4466EF-27A0-3982-AAE7-8F08C1330559}</Project>
+      <Name>ZERO_CHECK</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\OSG-3.4.0_64\src\OpenThreads\win32\OpenThreads.vcxproj">
+      <Project>{CAEFEA02-CE16-38C5-B5B8-C97FDB553CC0}</Project>
+      <Name>OpenThreads</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

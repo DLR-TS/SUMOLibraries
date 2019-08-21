@@ -1,0 +1,14 @@
+# pkg-config source file
+
+prefix=C:/Program Files/OpenSceneGraph
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: openscenegraph-osgManipulator
+Description: Manipulator library for Openscenegraph
+Version: 3.4.0
+Requires: openscenegraph-osgUtil openscenegraph-osgGA openscenegraph-osg openthreads
+Conflicts:
+Libs: -L${libdir} -losgManipulator
+Cflags: -I${includedir}
