@@ -1,0 +1,11 @@
+prefix=C:/Libraries/32bits/xerces-c-3.2.2
+exec_prefix=C:/Libraries/32bits/xerces-c-3.2.2
+libdir=C:/Libraries/32bits/xerces-c-3.2.2/lib
+includedir=C:/Libraries/32bits/xerces-c-3.2.2/include
+
+Name: Xerces-C++
+Description: Validating XML parser library for C++
+Version: 3.2.2
+Libs: -LC:/Libraries/32bits/xerces-c-3.2.2/lib -lxerces-c
+Libs.private: 
+Cflags: -IC:/Libraries/32bits/xerces-c-3.2.2/include

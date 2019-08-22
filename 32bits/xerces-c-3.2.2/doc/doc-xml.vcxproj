@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7097E4C6-C43D-3F64-BCF7-10592529CC4D}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>doc-xml</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Libraries/32bits/xerces-c-3.2.2/doc/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+C:\CMake\bin\cmake.exe -SC:/Libraries/32bits/xerces-c-3.2.2 -BC:/Libraries/32bits/xerces-c-3.2.2 --check-stamp-file C:/Libraries/32bits/xerces-c-3.2.2/doc/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Libraries/32bits/xerces-c-3.2.2/doc/CMakeLists.txt;C:\CMake\share\cmake-3.14\Modules\CMakeFindJavaCommon.cmake;C:\CMake\share\cmake-3.14\Modules\FindJava.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageMessage.cmake;C:\Libraries\32bits\xerces-c-3.2.2\doc\CMakeLists.txt;C:\Libraries\32bits\xerces-c-3.2.2\doc\style\dtd\entities.ent.in;C:\Libraries\32bits\xerces-c-3.2.2\doc\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Libraries\32bits\xerces-c-3.2.2\doc\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Libraries/32bits/xerces-c-3.2.2/doc/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+C:\CMake\bin\cmake.exe -SC:/Libraries/32bits/xerces-c-3.2.2 -BC:/Libraries/32bits/xerces-c-3.2.2 --check-stamp-file C:/Libraries/32bits/xerces-c-3.2.2/doc/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Libraries/32bits/xerces-c-3.2.2/doc/CMakeLists.txt;C:\CMake\share\cmake-3.14\Modules\CMakeFindJavaCommon.cmake;C:\CMake\share\cmake-3.14\Modules\FindJava.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageMessage.cmake;C:\Libraries\32bits\xerces-c-3.2.2\doc\CMakeLists.txt;C:\Libraries\32bits\xerces-c-3.2.2\doc\style\dtd\entities.ent.in;C:\Libraries\32bits\xerces-c-3.2.2\doc\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Libraries\32bits\xerces-c-3.2.2\doc\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <XML Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\apidocs.xml" />
+    <XML Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\applications.xml" />
+    <XML Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\bug-report.xml" />
+    <XML Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\build.xml" />
+    <XML Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\charter.xml" />
+    <XML Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\createdoc.xml" />
+    <XML Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\domcount.xml" />
+    <XML Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\domprint.xml" />
+    <XML Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\download.xml" />
+    <XML Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\enumval.xml" />
+    <XML Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\faq-build.xml" />
+    <XML Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\faq-contributing.xml" />
+    <XML Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\faq-distrib.xml" />
+    <XML Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\faq-other.xml" />
+    <XML Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\faq-parse.xml" />
+    <XML Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\feedback.xml" />
+    <XML Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\install.xml" />
+    <XML Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\mailing-lists.xml" />
+    <XML Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\memparse.xml" />
+    <XML Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\migration.xml" />
+    <XML Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\migration_archive.xml" />
+    <XML Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\pparse.xml" />
+    <XML Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\program-dom.xml" />
+    <XML Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\program-others.xml" />
+    <XML Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\program-sax.xml" />
+    <XML Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\program-sax2.xml" />
+    <XML Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\program.xml" />
+    <XML Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\psviwriter.xml" />
+    <XML Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\readme.xml" />
+    <XML Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\redirect.xml" />
+    <XML Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\releases.xml" />
+    <XML Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\releases_archive.xml" />
+    <XML Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\releases_plan.xml" />
+    <XML Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\samples.xml" />
+    <XML Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\sax2count.xml" />
+    <XML Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\sax2print.xml" />
+    <XML Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\saxcount.xml" />
+    <XML Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\saxprint.xml" />
+    <XML Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\schema.xml" />
+    <XML Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\scmprint.xml" />
+    <XML Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\secadv.xml" />
+    <XML Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\senumval.xml" />
+    <XML Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\source-repository.xml" />
+    <XML Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\stdinparse.xml" />
+    <XML Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\xerces-c_book.xml" />
+    <XML Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\xinclude.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Libraries\32bits\xerces-c-3.2.2\ZERO_CHECK.vcxproj">
+      <Project>{AE4154B2-2560-3034-BC8C-78AC47DE23E5}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

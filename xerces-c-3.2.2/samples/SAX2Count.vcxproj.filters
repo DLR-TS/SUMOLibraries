@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Libraries\xerces-c-3.2.2\samples\src\SAX2Count\SAX2Count.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Libraries\xerces-c-3.2.2\samples\src\SAX2Count\SAX2CountHandlers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Libraries\xerces-c-3.2.2\samples\src\SAX2Count\SAX2Count.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Libraries\xerces-c-3.2.2\samples\src\SAX2Count\SAX2CountHandlers.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Libraries\xerces-c-3.2.2\samples\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{90C0546C-0BE8-3624-96CC-E0177A0B5493}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{F734D8D9-38D9-3CCE-80FF-692BDBAA966B}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

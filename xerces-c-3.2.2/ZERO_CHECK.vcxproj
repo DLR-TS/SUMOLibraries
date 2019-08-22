@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{CB06D0C5-6B99-3277-AC49-80F244849E8A}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>ZERO_CHECK</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Libraries\xerces-c-3.2.2\CMakeFiles\daad361ee21fe8728778f0a763026804\generate.stamp.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Checking Build System</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\CMake\bin\cmake.exe -SC:/Libraries/xerces-c-3.2.2 -BC:/Libraries/xerces-c-3.2.2 --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Libraries/xerces-c-3.2.2/xerces-c.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Libraries/xerces-c-3.2.2/CMakeFiles/daad361ee21fe8728778f0a763026804/generate.stamp.rule;C:\CMake\share\cmake-3.14\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\CMake\share\cmake-3.14\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeCXXInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeFindJavaCommon.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakePackageConfigHelpers.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.14\Modules\CheckCXXCompilerFlag.cmake;C:\CMake\share\cmake-3.14\Modules\CheckCXXSourceCompiles.cmake;C:\CMake\share\cmake-3.14\Modules\CheckFunctionExists.cmake;C:\CMake\share\cmake-3.14\Modules\CheckIncludeFile.cmake;C:\CMake\share\cmake-3.14\Modules\CheckIncludeFileCXX.cmake;C:\CMake\share\cmake-3.14\Modules\CheckLibraryExists.cmake;C:\CMake\share\cmake-3.14\Modules\CheckSymbolExists.cmake;C:\CMake\share\cmake-3.14\Modules\CheckTypeSize.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\MSVC-C.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\MSVC-CXX.cmake;C:\CMake\share\cmake-3.14\Modules\FindJava.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.14\Modules\FindThreads.cmake;C:\CMake\share\cmake-3.14\Modules\GNUInstallDirs.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-CXX.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.14\Modules\SelectLibraryConfigurations.cmake;C:\CMake\share\cmake-3.14\Modules\WriteBasicConfigVersionFile.cmake;C:\Libraries\xerces-c-3.2.2\CMakeFiles\3.14.1\CMakeCCompiler.cmake;C:\Libraries\xerces-c-3.2.2\CMakeFiles\3.14.1\CMakeCXXCompiler.cmake;C:\Libraries\xerces-c-3.2.2\CMakeFiles\3.14.1\CMakeRCCompiler.cmake;C:\Libraries\xerces-c-3.2.2\CMakeFiles\3.14.1\CMakeSystem.cmake;C:\Libraries\xerces-c-3.2.2\CMakeLists.txt;C:\Libraries\xerces-c-3.2.2\cmake\FindICU.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesBool.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesConst.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesDLL.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesFileMgrSelection.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesFunctions.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesICU.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesIconvConst.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesIncludes.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesInline.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesIntTypes.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesLFS.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesLString.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesMFC.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesMsgLoaderSelection.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesMutexMgrSelection.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesNamespaces.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesNetAccessorSelection.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesOperatorDelete.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesPathDelimiters.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesPathMax.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesSSE2.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesStdLibs.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesStdNamespace.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesTest.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesTranscoderSelection.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesVolatile.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesWChar.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesWarnings.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesXMLCh.cmake;C:\Libraries\xerces-c-3.2.2\config.h.cmake.in;C:\Libraries\xerces-c-3.2.2\doc\CMakeLists.txt;C:\Libraries\xerces-c-3.2.2\doc\style\dtd\entities.ent.in;C:\Libraries\xerces-c-3.2.2\samples\CMakeLists.txt;C:\Libraries\xerces-c-3.2.2\src\CMakeLists.txt;C:\Libraries\xerces-c-3.2.2\src\XercesCConfig.cmake.in;C:\Libraries\xerces-c-3.2.2\src\xercesc\util\XercesVersion.hpp.cmake.in;C:\Libraries\xerces-c-3.2.2\src\xercesc\util\Xerces_autoconf_config.hpp.cmake.in;C:\Libraries\xerces-c-3.2.2\src\xercesc\util\version.rc.cmake.in;C:\Libraries\xerces-c-3.2.2\tests\CMakeLists.txt;C:\Libraries\xerces-c-3.2.2\xerces-c.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Libraries\xerces-c-3.2.2\CMakeFiles\generate.stamp;C:\Libraries\xerces-c-3.2.2\doc\CMakeFiles\generate.stamp;C:\Libraries\xerces-c-3.2.2\src\CMakeFiles\generate.stamp;C:\Libraries\xerces-c-3.2.2\tests\CMakeFiles\generate.stamp;C:\Libraries\xerces-c-3.2.2\samples\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Checking Build System</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\CMake\bin\cmake.exe -SC:/Libraries/xerces-c-3.2.2 -BC:/Libraries/xerces-c-3.2.2 --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Libraries/xerces-c-3.2.2/xerces-c.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Libraries/xerces-c-3.2.2/CMakeFiles/daad361ee21fe8728778f0a763026804/generate.stamp.rule;C:\CMake\share\cmake-3.14\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\CMake\share\cmake-3.14\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeCXXInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeFindJavaCommon.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakePackageConfigHelpers.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.14\Modules\CheckCXXCompilerFlag.cmake;C:\CMake\share\cmake-3.14\Modules\CheckCXXSourceCompiles.cmake;C:\CMake\share\cmake-3.14\Modules\CheckFunctionExists.cmake;C:\CMake\share\cmake-3.14\Modules\CheckIncludeFile.cmake;C:\CMake\share\cmake-3.14\Modules\CheckIncludeFileCXX.cmake;C:\CMake\share\cmake-3.14\Modules\CheckLibraryExists.cmake;C:\CMake\share\cmake-3.14\Modules\CheckSymbolExists.cmake;C:\CMake\share\cmake-3.14\Modules\CheckTypeSize.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\MSVC-C.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\MSVC-CXX.cmake;C:\CMake\share\cmake-3.14\Modules\FindJava.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.14\Modules\FindThreads.cmake;C:\CMake\share\cmake-3.14\Modules\GNUInstallDirs.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-CXX.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.14\Modules\SelectLibraryConfigurations.cmake;C:\CMake\share\cmake-3.14\Modules\WriteBasicConfigVersionFile.cmake;C:\Libraries\xerces-c-3.2.2\CMakeFiles\3.14.1\CMakeCCompiler.cmake;C:\Libraries\xerces-c-3.2.2\CMakeFiles\3.14.1\CMakeCXXCompiler.cmake;C:\Libraries\xerces-c-3.2.2\CMakeFiles\3.14.1\CMakeRCCompiler.cmake;C:\Libraries\xerces-c-3.2.2\CMakeFiles\3.14.1\CMakeSystem.cmake;C:\Libraries\xerces-c-3.2.2\CMakeLists.txt;C:\Libraries\xerces-c-3.2.2\cmake\FindICU.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesBool.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesConst.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesDLL.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesFileMgrSelection.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesFunctions.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesICU.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesIconvConst.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesIncludes.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesInline.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesIntTypes.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesLFS.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesLString.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesMFC.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesMsgLoaderSelection.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesMutexMgrSelection.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesNamespaces.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesNetAccessorSelection.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesOperatorDelete.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesPathDelimiters.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesPathMax.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesSSE2.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesStdLibs.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesStdNamespace.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesTest.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesTranscoderSelection.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesVolatile.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesWChar.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesWarnings.cmake;C:\Libraries\xerces-c-3.2.2\cmake\XercesXMLCh.cmake;C:\Libraries\xerces-c-3.2.2\config.h.cmake.in;C:\Libraries\xerces-c-3.2.2\doc\CMakeLists.txt;C:\Libraries\xerces-c-3.2.2\doc\style\dtd\entities.ent.in;C:\Libraries\xerces-c-3.2.2\samples\CMakeLists.txt;C:\Libraries\xerces-c-3.2.2\src\CMakeLists.txt;C:\Libraries\xerces-c-3.2.2\src\XercesCConfig.cmake.in;C:\Libraries\xerces-c-3.2.2\src\xercesc\util\XercesVersion.hpp.cmake.in;C:\Libraries\xerces-c-3.2.2\src\xercesc\util\Xerces_autoconf_config.hpp.cmake.in;C:\Libraries\xerces-c-3.2.2\src\xercesc\util\version.rc.cmake.in;C:\Libraries\xerces-c-3.2.2\tests\CMakeLists.txt;C:\Libraries\xerces-c-3.2.2\xerces-c.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Libraries\xerces-c-3.2.2\CMakeFiles\generate.stamp;C:\Libraries\xerces-c-3.2.2\doc\CMakeFiles\generate.stamp;C:\Libraries\xerces-c-3.2.2\src\CMakeFiles\generate.stamp;C:\Libraries\xerces-c-3.2.2\tests\CMakeFiles\generate.stamp;C:\Libraries\xerces-c-3.2.2\samples\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

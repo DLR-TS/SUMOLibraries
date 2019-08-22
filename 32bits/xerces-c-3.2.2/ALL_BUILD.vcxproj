@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{318FADDC-18E4-353E-9E35-A763BAC969BB}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Libraries\32bits\xerces-c-3.2.2\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Libraries/32bits/xerces-c-3.2.2/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+C:\CMake\bin\cmake.exe -SC:/Libraries/32bits/xerces-c-3.2.2 -BC:/Libraries/32bits/xerces-c-3.2.2 --check-stamp-file C:/Libraries/32bits/xerces-c-3.2.2/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Libraries/32bits/xerces-c-3.2.2/CMakeLists.txt;C:\CMake\share\cmake-3.14\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeCXXInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.14\Modules\CheckCXXCompilerFlag.cmake;C:\CMake\share\cmake-3.14\Modules\CheckCXXSourceCompiles.cmake;C:\CMake\share\cmake-3.14\Modules\CheckFunctionExists.cmake;C:\CMake\share\cmake-3.14\Modules\CheckIncludeFile.cmake;C:\CMake\share\cmake-3.14\Modules\CheckIncludeFileCXX.cmake;C:\CMake\share\cmake-3.14\Modules\CheckLibraryExists.cmake;C:\CMake\share\cmake-3.14\Modules\CheckSymbolExists.cmake;C:\CMake\share\cmake-3.14\Modules\CheckTypeSize.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\MSVC-C.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\MSVC-CXX.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.14\Modules\FindThreads.cmake;C:\CMake\share\cmake-3.14\Modules\GNUInstallDirs.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-CXX.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.14\Modules\SelectLibraryConfigurations.cmake;C:\Libraries\32bits\xerces-c-3.2.2\CMakeFiles\3.14.1\CMakeCCompiler.cmake;C:\Libraries\32bits\xerces-c-3.2.2\CMakeFiles\3.14.1\CMakeCXXCompiler.cmake;C:\Libraries\32bits\xerces-c-3.2.2\CMakeFiles\3.14.1\CMakeRCCompiler.cmake;C:\Libraries\32bits\xerces-c-3.2.2\CMakeFiles\3.14.1\CMakeSystem.cmake;C:\Libraries\32bits\xerces-c-3.2.2\CMakeLists.txt;C:\Libraries\32bits\xerces-c-3.2.2\cmake\FindICU.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesBool.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesConst.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesDLL.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesFileMgrSelection.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesFunctions.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesICU.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesIconvConst.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesIncludes.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesInline.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesIntTypes.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesLFS.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesLString.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesMFC.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesMsgLoaderSelection.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesMutexMgrSelection.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesNamespaces.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesNetAccessorSelection.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesOperatorDelete.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesPathDelimiters.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesPathMax.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesSSE2.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesStdLibs.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesStdNamespace.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesTranscoderSelection.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesVolatile.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesWChar.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesWarnings.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesXMLCh.cmake;C:\Libraries\32bits\xerces-c-3.2.2\config.h.cmake.in;C:\Libraries\32bits\xerces-c-3.2.2\doc\style\dtd\entities.ent.in;C:\Libraries\32bits\xerces-c-3.2.2\src\xercesc\util\XercesVersion.hpp.cmake.in;C:\Libraries\32bits\xerces-c-3.2.2\src\xercesc\util\Xerces_autoconf_config.hpp.cmake.in;C:\Libraries\32bits\xerces-c-3.2.2\xerces-c.pc.in;C:\Libraries\32bits\xerces-c-3.2.2\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Libraries\32bits\xerces-c-3.2.2\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Libraries/32bits/xerces-c-3.2.2/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+C:\CMake\bin\cmake.exe -SC:/Libraries/32bits/xerces-c-3.2.2 -BC:/Libraries/32bits/xerces-c-3.2.2 --check-stamp-file C:/Libraries/32bits/xerces-c-3.2.2/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Libraries/32bits/xerces-c-3.2.2/CMakeLists.txt;C:\CMake\share\cmake-3.14\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeCXXInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.14\Modules\CheckCXXCompilerFlag.cmake;C:\CMake\share\cmake-3.14\Modules\CheckCXXSourceCompiles.cmake;C:\CMake\share\cmake-3.14\Modules\CheckFunctionExists.cmake;C:\CMake\share\cmake-3.14\Modules\CheckIncludeFile.cmake;C:\CMake\share\cmake-3.14\Modules\CheckIncludeFileCXX.cmake;C:\CMake\share\cmake-3.14\Modules\CheckLibraryExists.cmake;C:\CMake\share\cmake-3.14\Modules\CheckSymbolExists.cmake;C:\CMake\share\cmake-3.14\Modules\CheckTypeSize.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\MSVC-C.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\MSVC-CXX.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.14\Modules\FindThreads.cmake;C:\CMake\share\cmake-3.14\Modules\GNUInstallDirs.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-CXX.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.14\Modules\SelectLibraryConfigurations.cmake;C:\Libraries\32bits\xerces-c-3.2.2\CMakeFiles\3.14.1\CMakeCCompiler.cmake;C:\Libraries\32bits\xerces-c-3.2.2\CMakeFiles\3.14.1\CMakeCXXCompiler.cmake;C:\Libraries\32bits\xerces-c-3.2.2\CMakeFiles\3.14.1\CMakeRCCompiler.cmake;C:\Libraries\32bits\xerces-c-3.2.2\CMakeFiles\3.14.1\CMakeSystem.cmake;C:\Libraries\32bits\xerces-c-3.2.2\CMakeLists.txt;C:\Libraries\32bits\xerces-c-3.2.2\cmake\FindICU.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesBool.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesConst.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesDLL.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesFileMgrSelection.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesFunctions.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesICU.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesIconvConst.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesIncludes.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesInline.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesIntTypes.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesLFS.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesLString.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesMFC.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesMsgLoaderSelection.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesMutexMgrSelection.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesNamespaces.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesNetAccessorSelection.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesOperatorDelete.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesPathDelimiters.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesPathMax.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesSSE2.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesStdLibs.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesStdNamespace.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesTranscoderSelection.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesVolatile.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesWChar.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesWarnings.cmake;C:\Libraries\32bits\xerces-c-3.2.2\cmake\XercesXMLCh.cmake;C:\Libraries\32bits\xerces-c-3.2.2\config.h.cmake.in;C:\Libraries\32bits\xerces-c-3.2.2\doc\style\dtd\entities.ent.in;C:\Libraries\32bits\xerces-c-3.2.2\src\xercesc\util\XercesVersion.hpp.cmake.in;C:\Libraries\32bits\xerces-c-3.2.2\src\xercesc\util\Xerces_autoconf_config.hpp.cmake.in;C:\Libraries\32bits\xerces-c-3.2.2\xerces-c.pc.in;C:\Libraries\32bits\xerces-c-3.2.2\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Libraries\32bits\xerces-c-3.2.2\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Libraries\32bits\xerces-c-3.2.2\ZERO_CHECK.vcxproj">
+      <Project>{AE4154B2-2560-3034-BC8C-78AC47DE23E5}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\32bits\xerces-c-3.2.2\tests\Char16Test.vcxproj">
+      <Project>{1842597F-2B61-33A7-AD13-D7CBF498DFA9}</Project>
+      <Name>Char16Test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\32bits\xerces-c-3.2.2\samples\CreateDOMDocument.vcxproj">
+      <Project>{14176DF4-24ED-3C03-A7BA-CC45ABA8FA3D}</Project>
+      <Name>CreateDOMDocument</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\32bits\xerces-c-3.2.2\samples\DOMCount.vcxproj">
+      <Project>{9622DEA4-D919-3704-99A7-1477D833877C}</Project>
+      <Name>DOMCount</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\32bits\xerces-c-3.2.2\tests\DOMMemTest.vcxproj">
+      <Project>{232D37EE-1E49-30A9-BACD-4B2032082F7B}</Project>
+      <Name>DOMMemTest</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\32bits\xerces-c-3.2.2\samples\DOMPrint.vcxproj">
+      <Project>{4A71F260-FB8D-3CED-BB3B-A7E3B9D09A5B}</Project>
+      <Name>DOMPrint</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\32bits\xerces-c-3.2.2\tests\DOMTest.vcxproj">
+      <Project>{544464DF-7FFB-3789-A9A5-8F41D87272DA}</Project>
+      <Name>DOMTest</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\32bits\xerces-c-3.2.2\tests\DOMTraversalTest.vcxproj">
+      <Project>{F484E4D9-BB5D-3AD3-809E-AAA8A09CC03D}</Project>
+      <Name>DOMTraversalTest</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\32bits\xerces-c-3.2.2\tests\DOMTypeInfoTest.vcxproj">
+      <Project>{A749A8BB-A780-3E00-9F25-832618608056}</Project>
+      <Name>DOMTypeInfoTest</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\32bits\xerces-c-3.2.2\tests\EncodingTest.vcxproj">
+      <Project>{B8BC5D56-5826-3C8E-B807-1107287258B9}</Project>
+      <Name>EncodingTest</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\32bits\xerces-c-3.2.2\samples\EnumVal.vcxproj">
+      <Project>{C42CE3C2-96D5-334E-A1E4-B1ADE1AB726A}</Project>
+      <Name>EnumVal</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\32bits\xerces-c-3.2.2\tests\InitTermTest.vcxproj">
+      <Project>{2998A4A8-0AF6-30B5-9A39-F44F2491F5BF}</Project>
+      <Name>InitTermTest</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\32bits\xerces-c-3.2.2\tests\MemHandlerTest.vcxproj">
+      <Project>{D7650297-11A7-383C-87EE-83F1D75E8A3B}</Project>
+      <Name>MemHandlerTest</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\32bits\xerces-c-3.2.2\samples\MemParse.vcxproj">
+      <Project>{4CBB7CFC-EB56-30EC-B462-5E54D4C07017}</Project>
+      <Name>MemParse</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\32bits\xerces-c-3.2.2\tests\NetAccessorTest.vcxproj">
+      <Project>{1F9D6D50-D4A7-3033-AA85-D9E3A7475482}</Project>
+      <Name>NetAccessorTest</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\32bits\xerces-c-3.2.2\tests\Normalizer.vcxproj">
+      <Project>{47E82887-FDE2-3FA0-A1E2-669403F2BD6B}</Project>
+      <Name>Normalizer</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\32bits\xerces-c-3.2.2\samples\PParse.vcxproj">
+      <Project>{D6671EF1-8425-3BAF-8D65-65DC247BDC75}</Project>
+      <Name>PParse</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\32bits\xerces-c-3.2.2\samples\PSVIWriter.vcxproj">
+      <Project>{A9840ECD-A93E-3414-9841-3554DB33327D}</Project>
+      <Name>PSVIWriter</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\32bits\xerces-c-3.2.2\tests\RangeTest.vcxproj">
+      <Project>{7880F502-C862-3C76-9728-675090D40662}</Project>
+      <Name>RangeTest</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\32bits\xerces-c-3.2.2\samples\Redirect.vcxproj">
+      <Project>{51491F7B-4ADC-3322-AEB2-46CB7C336D20}</Project>
+      <Name>Redirect</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\32bits\xerces-c-3.2.2\samples\SAX2Count.vcxproj">
+      <Project>{5DD10FF9-C01A-3640-9547-EA295DFF7D1D}</Project>
+      <Name>SAX2Count</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\32bits\xerces-c-3.2.2\samples\SAX2Print.vcxproj">
+      <Project>{C4B27DE3-0744-3CC4-ABC2-6EFCF4E69FE0}</Project>
+      <Name>SAX2Print</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\32bits\xerces-c-3.2.2\samples\SAXCount.vcxproj">
+      <Project>{A49BA9FC-F6EC-3E68-9B58-AB6B9D0DA06D}</Project>
+      <Name>SAXCount</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\32bits\xerces-c-3.2.2\samples\SAXPrint.vcxproj">
+      <Project>{807F943A-93B7-37F2-8442-6244487B8888}</Project>
+      <Name>SAXPrint</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\32bits\xerces-c-3.2.2\samples\SCMPrint.vcxproj">
+      <Project>{8873D87C-6B4E-33C0-88DC-1643CB49DCA9}</Project>
+      <Name>SCMPrint</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\32bits\xerces-c-3.2.2\samples\SEnumVal.vcxproj">
+      <Project>{1163C25B-6612-3751-AC4F-772C2034705F}</Project>
+      <Name>SEnumVal</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\32bits\xerces-c-3.2.2\samples\StdInParse.vcxproj">
+      <Project>{15F3BDF5-08FE-3064-8253-B2CCB4050D04}</Project>
+      <Name>StdInParse</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\32bits\xerces-c-3.2.2\tests\ThreadTest.vcxproj">
+      <Project>{A7B742D4-9146-3CD7-A031-BEC25CB3F572}</Project>
+      <Name>ThreadTest</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\32bits\xerces-c-3.2.2\samples\XInclude.vcxproj">
+      <Project>{BFF3B7F5-A43F-33AB-8C6F-813B0A496C44}</Project>
+      <Name>XInclude</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\32bits\xerces-c-3.2.2\tests\XSTSHarness.vcxproj">
+      <Project>{3B8AA303-A3F5-3FB1-AFF0-4A9F968F63AE}</Project>
+      <Name>XSTSHarness</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\32bits\xerces-c-3.2.2\tests\XSValueTest.vcxproj">
+      <Project>{66EB660D-BE9B-33DF-8AE5-EE6E23B9491F}</Project>
+      <Name>XSValueTest</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\32bits\xerces-c-3.2.2\tests\XSerializerTest.vcxproj">
+      <Project>{3C581F6C-D7EF-3075-9BAB-73A307DF4630}</Project>
+      <Name>XSerializerTest</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Libraries\32bits\xerces-c-3.2.2\src\xerces-c.vcxproj">
+      <Project>{CE965B6E-5252-3F1F-A5C9-95096244F652}</Project>
+      <Name>xerces-c</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

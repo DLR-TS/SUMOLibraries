@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Libraries\32bits\xerces-c-3.2.2\src\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Libraries\32bits\xerces-c-3.2.2\src\stricmp.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="C:\Libraries\32bits\xerces-c-3.2.2\src\stricmp.h">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\32bits\xerces-c-3.2.2\src\strnicmp.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="C:\Libraries\32bits\xerces-c-3.2.2\src\strnicmp.h">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\32bits\xerces-c-3.2.2\src\towlower.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="C:\Libraries\32bits\xerces-c-3.2.2\src\towlower.h">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Libraries\32bits\xerces-c-3.2.2\src\towupper.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="C:\Libraries\32bits\xerces-c-3.2.2\src\towupper.h">
+      <Filter>Header Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{FE6FC193-A58B-3CC1-B795-97EDAFAAB6E5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{A0BE05C9-31BE-367B-BE3E-F9749DE7807C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
