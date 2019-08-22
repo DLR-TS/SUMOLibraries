@@ -1,8 +1,8 @@
-# Install script for directory: C:/Libraries/3rdPartyLibs/tiff-4.0.9/port
+# Install script for directory: C:/Libraries/32bits/3rdPartyLibs/tiff-4.0.9/port
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/tiff")
+  set(CMAKE_INSTALL_PREFIX "C:/Libraries/32bits/3rdPartyLibs/tiff-4.0.9")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

@@ -9,8 +9,8 @@
 # and license in png.h
 
 # Variables substituted from CMakeLists.txt
-set(SRCDIR "C:/Libraries/3rdPartyLibs/libpng-1.6.34")
-set(BINDIR "C:/Libraries/3rdPartyLibs/libpng-1.6.34")
+set(SRCDIR "C:/Libraries/32bits/3rdPartyLibs/libpng-1.6.34")
+set(BINDIR "C:/Libraries/32bits/3rdPartyLibs/libpng-1.6.34")
 
 set(AWK "AWK-NOTFOUND")
 set(DFA_XTRA "")
