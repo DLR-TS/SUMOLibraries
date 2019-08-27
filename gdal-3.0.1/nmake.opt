@@ -36,10 +36,12 @@
 # 1910 = 15.0(2017)
 # 1900 = 14.0(2015)
 #
-!IFNDEF MSVC_VER
-#assume msvc VS2015.
-MSVC_VER=1900
-!ENDIF
+
+MSVC_VER=1910
+DEBUG=0
+WITH_PDB=1
+WIN64=1
+
 
 ###############################################################################
 # Optional use of Visual Leak Detector (VLD) by Dan Moulding, available at
@@ -88,10 +90,10 @@ SWIG = C:\Libraries\swigwin-3.0.12\swig.exe
 
 # SWIG Java settings
 !IFNDEF JAVA_HOME
-JAVA_HOME = C:/Program Files/Java/jdk1.8.0_172
+JAVA_HOME = C:\Program Files\Java\jdk1.8.0_172
 !ENDIF
 !IFNDEF ANT_HOME
-ANT_HOME=c:\programmi\apache-ant-1.7.0
+ANT_HOME=C:\Apache-ant-1.10.6
 !ENDIF
 JAVADOC=$(JAVA_HOME)\bin\javadoc
 JAVAC=$(JAVA_HOME)\bin\javac
@@ -185,10 +187,6 @@ LDEBUG= /debug
 LDEBUG= /debug /opt:ref /opt:icf
 !ENDIF
 
-# Uncomment the following if you are building for 64-bit windows
-# (x64). You'll need to have PATH, INCLUDE and LIB set up for 64-bit
-# compiles.
-#WIN64=YES
 # Capture WIN64=1 if specified in NMAKE command line
 !IFDEF WIN64
 WIN64=YES
@@ -407,9 +405,9 @@ TIFF_OPTS=	-DBIGTIFF_SUPPORT
 #EXPAT_LIB = $(EXPAT_DIR)/bin/libexpat.lib
 
 # Uncomment for Xerces based GML and ILI support.
-XERCES_DIR =	C:\Libraries\xerces-c-3.2.0
+XERCES_DIR =	C:\Libraries\xerces-c-3.2.2
 XERCES_INCLUDE = -I$(XERCES_DIR)/include -I$(XERCES_DIR)/include/xercesc
-XERCES_LIB = C:\Libraries\xerces-c-3.2.0\lib/xerces-c_3.lib
+XERCES_LIB = C:\Libraries\xerces-c-3.2.2\lib/xerces-c_3.lib
 
 # Uncomment the following for Interlis support.  Note that a Xercex 3.x
 # is also required (see above).  Also, Interlis support only works with
