@@ -34,7 +34,7 @@ BUILD_GIE:BOOL=ON
 BUILD_GMOCK:BOOL=ON
 
 //Build libproj library shared.
-BUILD_LIBPROJ_SHARED:BOOL=OFF
+BUILD_LIBPROJ_SHARED:BOOL=ON
 
 //Build proj (cartographic projection tool)
 BUILD_PROJ:BOOL=ON
