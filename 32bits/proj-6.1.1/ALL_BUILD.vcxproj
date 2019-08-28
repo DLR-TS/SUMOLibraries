@@ -130,12 +130,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Libraries\32bits\proj-6.1.1\test\unit\pj_phi2_test.vcxproj">
-      <Project>{FA076407-1FF0-3DC4-BC5C-A51D65F58893}</Project>
-      <Name>pj_phi2_test</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </ProjectReference>
     <ProjectReference Include="C:\Libraries\32bits\proj-6.1.1\src\proj.vcxproj">
       <Project>{F974C077-1318-331F-9A0B-67F6491F9024}</Project>
       <Name>proj</Name>
