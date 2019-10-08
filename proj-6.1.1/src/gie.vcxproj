@@ -11,7 +11,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{8982D524-C28A-3EF3-9E13-EDE00E6CC78F}</ProjectGuid>
-    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
     <Platform>x64</Platform>
     <ProjectName>gie</ProjectName>
@@ -41,7 +41,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Libraries\proj-6.1.1\src;C:\Libraries\proj-6.1.1\include;C:\Libraries\3rdPartyLibs\sqlite-3.2.9;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Libraries\proj-6.1.1\src;C:\Libraries\proj-6.1.1\include;C:\Libraries\3rdPartyLibs\sqlite-3.3.0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Release/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <DisableSpecificWarnings>4706;4996</DisableSpecificWarnings>
@@ -60,10 +60,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;PROJ_MSVC_DLL_IMPORT=1;_CRT_SECURE_NO_WARNINGS;HAVE_C99_MATH=1;MUTEX_win32;PROJ_LIB=\"C:\Libraries\proj-6.1.1/share/proj\";CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Libraries\proj-6.1.1\src;C:\Libraries\proj-6.1.1\include;C:\Libraries\3rdPartyLibs\sqlite-3.2.9;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Libraries\proj-6.1.1\src;C:\Libraries\proj-6.1.1\include;C:\Libraries\3rdPartyLibs\sqlite-3.3.0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Libraries\proj-6.1.1\src;C:\Libraries\proj-6.1.1\include;C:\Libraries\3rdPartyLibs\sqlite-3.2.9;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Libraries\proj-6.1.1\src;C:\Libraries\proj-6.1.1\include;C:\Libraries\3rdPartyLibs\sqlite-3.3.0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -71,7 +71,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>..\lib\Release\proj_6_1.lib;C:\Libraries\3rdPartyLibs\sqlite-3.2.9\sqlite3.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>..\lib\Release\proj_6_1.lib;C:\Libraries\3rdPartyLibs\sqlite-3.3.0\sqlite3.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>C:/Libraries/proj-6.1.1/lib;C:/Libraries/proj-6.1.1/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64 setargv.obj</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>

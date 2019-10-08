@@ -11,7 +11,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{794B637E-5BB6-3AC7-BA2D-622CB1A7DE88}</ProjectGuid>
-    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
     <Platform>x64</Platform>
     <ProjectName>INSTALL</ProjectName>
@@ -36,7 +36,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Libraries\proj-6.1.1\src;C:\Libraries\proj-6.1.1\include;C:\Libraries\3rdPartyLibs\sqlite-3.2.9;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Libraries\proj-6.1.1\src;C:\Libraries\proj-6.1.1\include;C:\Libraries\3rdPartyLibs\sqlite-3.3.0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
