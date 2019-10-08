@@ -10,4 +10,4 @@ RELEASE:
 
 cl -DSQLITE_API=__declspec(dllexport) -DSQLITE_ENABLE_COLUMN_METADATA -DSQLITE_ENABLE_RTREE -DSQLITE_ENABLE_UNLOCK_NOTIFY -Dsqlite3_EXPORTS /DWIN32 /D_WINDOWS /W3 /utf-8 /MP  /MD /O2 /Oi /Gy /DNDEBUG /Z7 /showIncludes /Fosqlite3.obj /FS -c sqlite3.c
 
-link sqlite3.obj  /out:sqlite3.dll /implib:sqlite3.lib /pdb:sqlite3.pdb /dll /version:0.0 /machine:x64 /DEBUG /INCREMENTAL:NO /OPT:REF /OPT:ICF  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+link sqlite3.obj  /out:sqlite3.dll /implib:sqlite3.lib /pdb:sqlite3.pdb /dll /version:0.0 /machine:x86 /DEBUG /INCREMENTAL:NO /OPT:REF /OPT:ICF  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
