@@ -1,0 +1,14 @@
+prefix=C:/vcpkg/packages/hdf5_x64-windows
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: hdf5
+Description: HDF5 (Hierarchical Data Format 5) Software Library
+Version: 1.10.5
+
+Cflags: -I${includedir}
+Libs: -L${libdir}  -lhdf5
+Requires: 
+Libs.private:  -loptimized -lC:/vcpkg/installed/x64-windows/lib/zlib.lib -ldebug -lC:/vcpkg/installed/x64-windows/debug/lib/zlibd.lib -lszip-static  -lhdf5
+Requires.private: 
