@@ -24,9 +24,9 @@ elseif (NOT (APPLE OR (NOT DEFINED CMAKE_SIZEOF_VOID_P) OR
   # since a multi-architecture library is built for that platform).
   set (REASON "sizeof(*void) =  4")
   set (PACKAGE_VERSION_UNSUITABLE TRUE)
-elseif (MSVC AND NOT MSVC_VERSION STREQUAL "1922")
+elseif (MSVC AND NOT MSVC_VERSION STREQUAL "1923")
   # Reject if there's a mismatch in MSVC compiler versions
-  set (REASON "_MSC_VER = 1922")
+  set (REASON "_MSC_VER = 1923")
   set (PACKAGE_VERSION_UNSUITABLE TRUE)
 elseif (NOT CMAKE_CROSSCOMPILING_STR STREQUAL "OFF")
   # Reject if there's a mismatch in ${CMAKE_CROSSCOMPILING}

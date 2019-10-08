@@ -11,7 +11,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{95CC120A-9E57-3575-B6F4-3ED9019EA5F4}</ProjectGuid>
-    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
     <Platform>Win32</Platform>
     <ProjectName>generate_proj_db</ProjectName>
@@ -50,7 +50,7 @@
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
 C:\CMake\bin\cmake.exe -E remove -f C:/Libraries/32bits/proj-6.1.1/data/proj.db
 if %errorlevel% neq 0 goto :cmEnd
-C:\Libraries\32bits\3rdPartyLibs\sqlite-3.2.9\sqlite3.exe -init C:/Libraries/32bits/proj-6.1.1/data/all.sql.in C:/Libraries/32bits/proj-6.1.1/data/proj.db .quit
+C:\Libraries\32bits\3rdPartyLibs\sqlite-3.3.0\sqlite3.exe -init C:/Libraries/32bits/proj-6.1.1/data/all.sql.in C:/Libraries/32bits/proj-6.1.1/data/proj.db .quit
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone

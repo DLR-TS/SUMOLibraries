@@ -286,7 +286,7 @@ DOCDIR:PATH=share/doc/proj
 ENABLE_LTO:BOOL=OFF
 
 //Path to a program.
-EXE_SQLITE3:FILEPATH=C:/Libraries/32bits/3rdPartyLibs/sqlite-3.2.9/sqlite3.exe
+EXE_SQLITE3:FILEPATH=C:/Libraries/32bits/3rdPartyLibs/sqlite-3.3.0/sqlite3.exe
 
 //The directory to install includes into.
 INCLUDEDIR:PATH=include
@@ -350,13 +350,13 @@ PROJ_LIB_SUBDIR:STRING=lib
 PROJ_TESTS:BOOL=ON
 
 //Path to a program.
-PYTHON_EXECUTABLE:FILEPATH=C:/Python27/python.exe
+PYTHON_EXECUTABLE:FILEPATH=C:/Python37/python.exe
 
 //Path to a file.
-SQLITE3_INCLUDE_DIR:PATH=C:/Libraries/32bits/3rdPartyLibs/sqlite-3.2.9
+SQLITE3_INCLUDE_DIR:PATH=C:/Libraries/32bits/3rdPartyLibs/sqlite-3.3.0
 
 //Path to a library.
-SQLITE3_LIBRARY:FILEPATH=C:/Libraries/32bits/3rdPartyLibs/sqlite-3.2.9/sqlite3.lib
+SQLITE3_LIBRARY:FILEPATH=C:/Libraries/32bits/3rdPartyLibs/sqlite-3.3.0/sqlite3.lib
 
 //Compile against external GTest
 USE_EXTERNAL_GTEST:BOOL=OFF
@@ -405,7 +405,7 @@ gtest_hide_internal_symbols:BOOL=OFF
 gtest_main_LIB_DEPENDS:STATIC=general;gtest;
 
 //Dependencies for the target
-proj_LIB_DEPENDS:STATIC=general;C:/Libraries/32bits/3rdPartyLibs/sqlite-3.2.9/sqlite3.lib;
+proj_LIB_DEPENDS:STATIC=general;C:/Libraries/32bits/3rdPartyLibs/sqlite-3.3.0/sqlite3.lib;
 
 
 ########################
@@ -571,7 +571,7 @@ CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding PythonInterp
-FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[C:/Python27/python.exe][v2.7.16()]
+FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[C:/Python37/python.exe][v3.7.4()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //Have includes dlfcn.h
