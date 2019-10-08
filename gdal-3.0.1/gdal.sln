@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.852
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gdal", "gdal.vcxproj", "{BC2B012B-3ECA-462E-B860-BE3A0FD74A57}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC2B012B-3ECA-462E-B860-BE3A0FD74A57}.Debug|x64.ActiveCfg = Debug|x64
+		{BC2B012B-3ECA-462E-B860-BE3A0FD74A57}.Debug|x64.Build.0 = Debug|x64
+		{BC2B012B-3ECA-462E-B860-BE3A0FD74A57}.Release|x64.ActiveCfg = Release|x64
+		{BC2B012B-3ECA-462E-B860-BE3A0FD74A57}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DD2A53E2-2549-4D93-8C72-2C8F3EB363DC}
+	EndGlobalSection
+EndGlobal

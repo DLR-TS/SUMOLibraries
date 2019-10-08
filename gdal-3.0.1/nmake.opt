@@ -36,12 +36,10 @@
 # 1910 = 15.0(2017)
 # 1900 = 14.0(2015)
 #
-
-MSVC_VER=1910
-DEBUG=0
-WITH_PDB=1
-WIN64=1
-
+!IFNDEF MSVC_VER
+#assume msvc VS2015.
+MSVC_VER=1900
+!ENDIF
 
 ###############################################################################
 # Optional use of Visual Leak Detector (VLD) by Dan Moulding, available at
@@ -80,7 +78,7 @@ HTMLDIR = "$(GDAL_HOME)\html"
 # Set this to the installed directory containing python.  If you don't
 # have python just let it point to a directory that does not exist (as now).
 !IFNDEF PYDIR 
-PYDIR   =	"C:\Python27"
+PYDIR   =	"C:\Python37"
 !ENDIF
 
 # Set the location of your SWIG installation
@@ -187,6 +185,10 @@ LDEBUG= /debug
 LDEBUG= /debug /opt:ref /opt:icf
 !ENDIF
 
+# Uncomment the following if you are building for 64-bit windows
+# (x64). You'll need to have PATH, INCLUDE and LIB set up for 64-bit
+# compiles.
+#WIN64=YES
 # Capture WIN64=1 if specified in NMAKE command line
 !IFDEF WIN64
 WIN64=YES
