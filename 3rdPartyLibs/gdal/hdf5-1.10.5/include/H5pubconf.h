@@ -120,7 +120,7 @@
 /* #undef H5_HAVE_DIRECT */
 
 /* Define to 1 if you have the <dirent.h> header file. */
-/* #undef H5_HAVE_DIRENT_H */
+#define H5_HAVE_DIRENT_H 1
 
 /* Define to 1 if you have the <dlfcn.h> header file. */
 /* #undef H5_HAVE_DLFCN_H */
@@ -331,7 +331,7 @@
 #define H5_HAVE_STDINT_H 1
 
 /* Define to 1 if you have the <stdint.h> header file for Cplusplus. */
-/* #undef H5_HAVE_STDINT_H_CXX */
+#define H5_HAVE_STDINT_H_CXX 1
 
 /* Define to 1 if you have the <stdlib.h> header file. */
 #define H5_HAVE_STDLIB_H 1

@@ -4,12 +4,12 @@
 General Information:
 -------------------
                    HDF5 Version: 1.10.5
-                  Configured on: 2019-09-13
-                  Configured by: Ninja
+                  Configured on: 2019-10-09
+                  Configured by: Visual Studio 16 2019
                     Host system: Windows-10.0.18362
               Uname information: Windows
                        Byte sex: little-endian
-             Installation point: C:/vcpkg/packages/hdf5_x64-windows
+             Installation point: C:/Program
 
 Compiling Options:
 ------------------
@@ -33,11 +33,11 @@ Linking Options:
 Languages:
 ----------
                               C: yes
-                     C Compiler: C:/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.22.27905/bin/Hostx64/x64/cl.exe 19.22.27905.0
+                     C Compiler: C:/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.23.28105/bin/Hostx64/x64/cl.exe 19.23.28105.4
                        CPPFLAGS: 
                     H5_CPPFLAGS: 
                     AM_CPPFLAGS: 
-                         CFLAGS:   /DWIN32 /D_WINDOWS /W3 /utf-8 /MP 
+                         CFLAGS:  /DWIN32 /D_WINDOWS  /W3
                       H5_CFLAGS: 
                       AM_CFLAGS: 
                Shared C Library: YES
@@ -51,9 +51,9 @@ Languages:
          Shared Fortran Library: YES
          Static Fortran Library: YES
 
-                            C++: OFF
-                   C++ Compiler:  
-                      C++ Flags:  /DWIN32 /D_WINDOWS /W3 /utf-8 /GR /EHsc /MP 
+                            C++: ON
+                   C++ Compiler: C:/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.23.28105/bin/Hostx64/x64/cl.exe 19.23.28105.4
+                      C++ Flags: /DWIN32 /D_WINDOWS /W3 /GR /EHsc
                    H5 C++ Flags: 
                    AM C++ Flags: 
              Shared C++ Library: YES
