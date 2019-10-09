@@ -84,8 +84,8 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <LinkDLL>true</LinkDLL>
       <SubSystem>Windows</SubSystem>
-      <OutputFile>libbz2.dll</OutputFile>
-      <ImportLibrary>.\Release\libbz2.lib</ImportLibrary>
+      <OutputFile>.\bin\libbz2.dll</OutputFile>
+      <ImportLibrary>.\lib\libbz2.lib</ImportLibrary>
       <AdditionalDependencies>odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ModuleDefinitionFile>.\libbz2.def</ModuleDefinitionFile>
     </Link>
@@ -127,8 +127,8 @@
       <LinkDLL>true</LinkDLL>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
-      <OutputFile>libbz2.dll</OutputFile>
-      <ImportLibrary>.\Debug\libbz2.lib</ImportLibrary>
+      <OutputFile>.\bin\libbz2D.dll</OutputFile>
+      <ImportLibrary>.\lib\libbz2d.lib</ImportLibrary>
       <AdditionalDependencies>odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ModuleDefinitionFile>.\libbz2.def</ModuleDefinitionFile>
     </Link>
