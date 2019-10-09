@@ -18,21 +18,21 @@
     <SccProjectName />
     <SccLocalPath />
     <ProjectGuid>{FF70DAF4-ED83-4178-B3C5-81EE21E05507}</ProjectGuid>
-    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
@@ -70,7 +70,7 @@
       <WarningLevel>Level3</WarningLevel>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <AdditionalIncludeDirectories>..\..\..\include;C:\Libraries\3rdPartyLibs\bzip2-1.0.6;C:\Libraries\3rdPartyLibs\zlib-1.2.11;C:\Libraries\3rdPartyLibs\jpeg-9c;C:\Libraries\3rdPartyLibs\libpng-1.6.34;C:\Libraries\3rdPartyLibs\tiff-4.0.9\libtiff;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\include;C:\Libraries\32bits\3rdPartyLibs\bzip2-1.0.6;C:\Libraries\32bits\3rdPartyLibs\zlib-1.2.11;C:\Libraries\32bits\3rdPartyLibs\jpeg-9c;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34;C:\Libraries\32bits\3rdPartyLibs\tiff-4.0.9\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;HAVE_ZLIB_H;HAVE_BZ2LIB_H;HAVE_TIFF_H;HAVE_PNG_H;HAVE_JPEG_H;WIN32;_DEBUG;_WINDOWS;UNICODE;_USRDLL;FOXDLL;FOXDLL_EXPORTS;HAVE_GL_H;HAVE_GLU_H;HAVE_VSSCANF;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
       <PrecompiledHeaderOutputFile>.\Debug\foxdll.pch</PrecompiledHeaderOutputFile>
@@ -98,9 +98,9 @@
       <LinkDLL>true</LinkDLL>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
-      <OutputFile>..\..\..\lib\FOXDLLD-1.6.dll</OutputFile>
+      <OutputFile>..\..\..\bin\FOXDLLD-1.6.dll</OutputFile>
       <ImportLibrary>.\..\..\..\lib\FOXDLLD-1.6.lib</ImportLibrary>
-      <AdditionalDependencies>C:\Libraries\3rdPartyLibs\bzip2-1.0.6\Debug\libbz2.lib;C:\Libraries\3rdPartyLibs\zlib-1.2.11\Debug\zlibd.lib;C:\Libraries\3rdPartyLibs\libpng-1.6.34\Debug\libpng16d.lib;C:\Libraries\3rdPartyLibs\tiff-4.0.9\libtiff\Debug\tiffd.lib;C:\Libraries\3rdPartyLibs\jpeg-9c\Release\jpeg.lib;opengl32.lib;glu32.lib;comctl32.lib;wsock32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>C:\Libraries\32bits\3rdPartyLibs\bzip2-1.0.6\lib\libbz2d.lib;C:\Libraries\32bits\3rdPartyLibs\zlib-1.2.11\lib\zlibd.lib;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\lib\libpng16d.lib;C:\Libraries\32bits\3rdPartyLibs\tiff-4.0.9\lib\tiffd.lib;C:\Libraries\32bits\3rdPartyLibs\jpeg-9c\lib\jpeg.lib;opengl32.lib;glu32.lib;comctl32.lib;wsock32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ProgramDatabaseFile>..\..\..\lib\FOXDLLD-1.6.pdb</ProgramDatabaseFile>
     </Link>
   </ItemDefinitionGroup>
@@ -116,7 +116,7 @@
       <IntrinsicFunctions>false</IntrinsicFunctions>
       <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
       <StringPooling>true</StringPooling>
-      <AdditionalIncludeDirectories>..\..\..\include;C:\Libraries\3rdPartyLibs\bzip2-1.0.6;C:\Libraries\3rdPartyLibs\zlib-1.2.11;C:\Libraries\3rdPartyLibs\jpeg-9c;C:\Libraries\3rdPartyLibs\libpng-1.6.34;C:\Libraries\3rdPartyLibs\tiff-4.0.9\libtiff;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\include;C:\Libraries\32bits\3rdPartyLibs\bzip2-1.0.6;C:\Libraries\32bits\3rdPartyLibs\zlib-1.2.11;C:\Libraries\32bits\3rdPartyLibs\jpeg-9c;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34;C:\Libraries\32bits\3rdPartyLibs\tiff-4.0.9\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;HAVE_ZLIB_H;HAVE_BZ2LIB_H;HAVE_TIFF_H;HAVE_PNG_H;HAVE_JPEG_H;WIN32;NDEBUG;_WINDOWS;UNICODE;_USRDLL;FOXDLL;FOXDLL_EXPORTS;HAVE_GL_H;HAVE_GLU_H;HAVE_VSSCANF;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
       <PrecompiledHeaderOutputFile>.\Release\foxdll.pch</PrecompiledHeaderOutputFile>
@@ -142,9 +142,9 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <LinkDLL>true</LinkDLL>
       <SubSystem>Console</SubSystem>
-      <OutputFile>..\..\..\lib\FOXDLL-1.6.dll</OutputFile>
+      <OutputFile>..\..\..\bin\FOXDLL-1.6.dll</OutputFile>
       <ImportLibrary>.\..\..\..\lib\FOXDLL-1.6.lib</ImportLibrary>
-      <AdditionalDependencies>C:\Libraries\3rdPartyLibs\bzip2-1.0.6\Release\libbz2.lib;C:\Libraries\3rdPartyLibs\zlib-1.2.11\Release\zlib.lib;C:\Libraries\3rdPartyLibs\libpng-1.6.34\Release\libpng16.lib;C:\Libraries\3rdPartyLibs\tiff-4.0.9\libtiff\Release\tiff.lib;C:\Libraries\3rdPartyLibs\jpeg-9c\Release\jpeg.lib;opengl32.lib;glu32.lib;comctl32.lib;wsock32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>C:\Libraries\32bits\3rdPartyLibs\bzip2-1.0.6\lib\libbz2.lib;C:\Libraries\32bits\3rdPartyLibs\zlib-1.2.11\lib\zlib.lib;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\lib\libpng16.lib;C:\Libraries\32bits\3rdPartyLibs\tiff-4.0.9\lib\tiff.lib;C:\Libraries\32bits\3rdPartyLibs\jpeg-9c\lib\jpeg.lib;opengl32.lib;glu32.lib;comctl32.lib;wsock32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ProgramDatabaseFile>..\..\..\lib\FOXDLL-1.6.pdb</ProgramDatabaseFile>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
