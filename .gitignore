@@ -6,6 +6,7 @@ Release
 *.tlog
 *.pdb
 *.ilk
+*.idb
 *.db
 *.suo
 *.db-shm
@@ -17,4 +18,5 @@ Release
 
 /gdal-3.0.1/ogr/ogrsf_frmts/ogrsf_frmts_sup.lib
 /gdal-3.0.1/ogr/ogrsf_frmts/ogrsf_frmts.lib
+/gdal-3.0.1_extended/ogr/ogrsf_frmts/ogrsf_frmts_sup.lib
 /gdal-3.0.1_extended/ogr/ogrsf_frmts/ogrsf_frmts.lib
