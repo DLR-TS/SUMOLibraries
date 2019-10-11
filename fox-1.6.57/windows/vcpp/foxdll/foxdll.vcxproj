@@ -156,7 +156,7 @@
       <WarningLevel>Level3</WarningLevel>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <AdditionalIncludeDirectories>..\..\..\include;C:\Libraries\3rdPartyLibs\bzip2-1.0.6;C:\Libraries\3rdPartyLibs\zlib-1.2.11;C:\Libraries\3rdPartyLibs\jpeg-9c;C:\Libraries\3rdPartyLibs\libpng-1.6.34;C:\Libraries\3rdPartyLibs\tiff-4.0.9\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\include;C:\SUMOLibraries\3rdPartyLibs\bzip2-1.0.6;C:\SUMOLibraries\3rdPartyLibs\zlib-1.2.11;C:\SUMOLibraries\3rdPartyLibs\jpeg-9c;C:\SUMOLibraries\3rdPartyLibs\libpng-1.6.34;C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;HAVE_ZLIB_H;HAVE_BZ2LIB_H;HAVE_TIFF_H;HAVE_PNG_H;HAVE_JPEG_H;WIN32;_DEBUG;_WINDOWS;UNICODE;_USRDLL;FOXDLL;FOXDLL_EXPORTS;HAVE_GL_H;HAVE_GLU_H;HAVE_VSSCANF;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
       <PrecompiledHeaderOutputFile>.\Debug\foxdll.pch</PrecompiledHeaderOutputFile>
@@ -185,7 +185,7 @@
       <SubSystem>Console</SubSystem>
       <OutputFile>..\..\..\lib\FOXDLLD-1.6.dll</OutputFile>
       <ImportLibrary>.\..\..\..\lib\FOXDLLD-1.6.lib</ImportLibrary>
-      <AdditionalDependencies>C:\Libraries\3rdPartyLibs\bzip2-1.0.6\lib\libbz2.lib;C:\Libraries\3rdPartyLibs\zlib-1.2.11\lib\zlibd.lib;C:\Libraries\3rdPartyLibs\libpng-1.6.34\lib\libpng16d.lib;C:\Libraries\3rdPartyLibs\tiff-4.0.9\lib\tiffd.lib;C:\Libraries\3rdPartyLibs\jpeg-9c\lib\jpeg.lib;opengl32.lib;glu32.lib;comctl32.lib;wsock32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>C:\SUMOLibraries\3rdPartyLibs\bzip2-1.0.6\lib\libbz2.lib;C:\SUMOLibraries\3rdPartyLibs\zlib-1.2.11\lib\zlibd.lib;C:\SUMOLibraries\3rdPartyLibs\libpng-1.6.34\lib\libpng16d.lib;C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\lib\tiffd.lib;C:\SUMOLibraries\3rdPartyLibs\jpeg-9c\lib\jpeg.lib;opengl32.lib;glu32.lib;comctl32.lib;wsock32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ProgramDatabaseFile>..\..\..\lib\FOXDLLD-1.6.pdb</ProgramDatabaseFile>
       <GenerateMapFile>false</GenerateMapFile>
       <AssemblyDebug>true</AssemblyDebug>
@@ -246,7 +246,7 @@
       <IntrinsicFunctions>false</IntrinsicFunctions>
       <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
       <StringPooling>true</StringPooling>
-      <AdditionalIncludeDirectories>..\..\..\include;C:\Libraries\3rdPartyLibs\bzip2-1.0.6;C:\Libraries\3rdPartyLibs\zlib-1.2.11;C:\Libraries\3rdPartyLibs\jpeg-9c;C:\Libraries\3rdPartyLibs\libpng-1.6.34;C:\Libraries\3rdPartyLibs\tiff-4.0.9\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\include;C:\SUMOLibraries\3rdPartyLibs\bzip2-1.0.6;C:\SUMOLibraries\3rdPartyLibs\zlib-1.2.11;C:\SUMOLibraries\3rdPartyLibs\jpeg-9c;C:\SUMOLibraries\3rdPartyLibs\libpng-1.6.34;C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;HAVE_ZLIB_H;HAVE_BZ2LIB_H;HAVE_TIFF_H;HAVE_PNG_H;HAVE_JPEG_H;WIN32;NDEBUG;_WINDOWS;UNICODE;_USRDLL;FOXDLL;FOXDLL_EXPORTS;HAVE_GL_H;HAVE_GLU_H;HAVE_VSSCANF;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
       <PrecompiledHeaderOutputFile>.\Release\foxdll.pch</PrecompiledHeaderOutputFile>
@@ -273,7 +273,7 @@
       <SubSystem>Console</SubSystem>
       <OutputFile>..\..\..\lib\FOXDLL-1.6.dll</OutputFile>
       <ImportLibrary>.\..\..\..\lib\FOXDLL-1.6.lib</ImportLibrary>
-      <AdditionalDependencies>C:\Libraries\3rdPartyLibs\bzip2-1.0.6\lib\libbz2.lib;C:\Libraries\3rdPartyLibs\zlib-1.2.11\lib\zlib.lib;C:\Libraries\3rdPartyLibs\libpng-1.6.34\lib\libpng16.lib;C:\Libraries\3rdPartyLibs\tiff-4.0.9\lib\tiff.lib;C:\Libraries\3rdPartyLibs\jpeg-9c\lib\jpeg.lib;opengl32.lib;glu32.lib;comctl32.lib;wsock32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>C:\SUMOLibraries\3rdPartyLibs\bzip2-1.0.6\lib\libbz2.lib;C:\SUMOLibraries\3rdPartyLibs\zlib-1.2.11\lib\zlib.lib;C:\SUMOLibraries\3rdPartyLibs\libpng-1.6.34\lib\libpng16.lib;C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\lib\tiff.lib;C:\SUMOLibraries\3rdPartyLibs\jpeg-9c\lib\jpeg.lib;opengl32.lib;glu32.lib;comctl32.lib;wsock32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ProgramDatabaseFile>..\..\..\lib\FOXDLL-1.6.pdb</ProgramDatabaseFile>
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
       <GenerateMapFile>false</GenerateMapFile>
@@ -881,10 +881,10 @@
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\..\..\src\version.rc">
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\Libraries\fox-1.6.55\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">\Libraries\fox-1.6.55\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\Libraries\fox-1.6.55\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">\Libraries\fox-1.6.55\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\SUMOLibraries\fox-1.6.55\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">\SUMOLibraries\fox-1.6.55\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\SUMOLibraries\fox-1.6.55\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">\SUMOLibraries\fox-1.6.55\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

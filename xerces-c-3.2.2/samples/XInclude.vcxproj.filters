@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Libraries\xerces-c-3.2.2\samples\src\XInclude\XInclude.cpp">
+    <ClCompile Include="C:\SUMOLibraries\xerces-c-3.2.2\samples\src\XInclude\XInclude.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Libraries\xerces-c-3.2.2\samples\src\XInclude\XInclude.hpp">
+    <ClInclude Include="C:\SUMOLibraries\xerces-c-3.2.2\samples\src\XInclude\XInclude.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Libraries\xerces-c-3.2.2\samples\CMakeLists.txt" />
+    <CustomBuild Include="C:\SUMOLibraries\xerces-c-3.2.2\samples\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">

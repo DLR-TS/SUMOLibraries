@@ -1,32 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Libraries\32bits\xerces-c-3.2.2\samples\src\DOMPrint\DOMPrint.cpp">
+    <ClCompile Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\samples\src\DOMPrint\DOMPrint.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\32bits\xerces-c-3.2.2\samples\src\DOMPrint\DOMPrintErrorHandler.cpp">
+    <ClCompile Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\samples\src\DOMPrint\DOMPrintErrorHandler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\32bits\xerces-c-3.2.2\samples\src\DOMPrint\DOMPrintFilter.cpp">
+    <ClCompile Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\samples\src\DOMPrint\DOMPrintFilter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\32bits\xerces-c-3.2.2\samples\src\DOMPrint\DOMTreeErrorReporter.cpp">
+    <ClCompile Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\samples\src\DOMPrint\DOMTreeErrorReporter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Libraries\32bits\xerces-c-3.2.2\samples\src\DOMPrint\DOMPrintErrorHandler.hpp">
+    <ClInclude Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\samples\src\DOMPrint\DOMPrintErrorHandler.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\32bits\xerces-c-3.2.2\samples\src\DOMPrint\DOMPrintFilter.hpp">
+    <ClInclude Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\samples\src\DOMPrint\DOMPrintFilter.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\32bits\xerces-c-3.2.2\samples\src\DOMPrint\DOMTreeErrorReporter.hpp">
+    <ClInclude Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\samples\src\DOMPrint\DOMTreeErrorReporter.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Libraries\32bits\xerces-c-3.2.2\samples\CMakeLists.txt" />
+    <CustomBuild Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\samples\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">

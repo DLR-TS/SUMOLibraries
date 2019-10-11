@@ -1,23 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\tiff-4.0.9\port\dummy.c">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\port\dummy.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\tiff-4.0.9\port\getopt.c">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\port\getopt.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\tiff-4.0.9\port\strcasecmp.c">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\port\strcasecmp.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\tiff-4.0.9\port\libport.h">
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\port\libport.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Libraries\3rdPartyLibs\tiff-4.0.9\port\CMakeLists.txt" />
+    <CustomBuild Include="C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\port\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">

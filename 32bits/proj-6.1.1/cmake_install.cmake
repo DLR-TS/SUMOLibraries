@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:\Libraries\32bits\proj-6.1.1")
+  set(CMAKE_INSTALL_PREFIX "C:\SUMOLibraries\32bits\proj-6.1.1")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

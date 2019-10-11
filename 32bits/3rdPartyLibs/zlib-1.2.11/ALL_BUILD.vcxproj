@@ -46,7 +46,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Libraries\32bits\3rdPartyLibs\zlib-1.2.11;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\32bits\3rdPartyLibs\zlib-1.2.11;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -56,7 +56,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Libraries\32bits\3rdPartyLibs\zlib-1.2.11;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\32bits\3rdPartyLibs\zlib-1.2.11;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -65,7 +65,7 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Libraries\32bits\3rdPartyLibs\zlib-1.2.11\CMakeLists.txt">
+    <CustomBuild Include="C:\SUMOLibraries\32bits\3rdPartyLibs\zlib-1.2.11\CMakeLists.txt">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Libraries/32bits/3rdPartyLibs/zlib-1.2.11/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
 C:\CMake\bin\cmake.exe -SC:/Libraries/32bits/3rdPartyLibs/zlib-1.2.11 -BC:/Libraries/32bits/3rdPartyLibs/zlib-1.2.11 --check-stamp-file C:/Libraries/32bits/3rdPartyLibs/zlib-1.2.11/CMakeFiles/generate.stamp
@@ -76,8 +76,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Libraries/32bits/3rdPartyLibs/zlib-1.2.11/CMakeLists.txt;C:\CMake\share\cmake-3.14\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.14\Modules\CheckCSourceCompiles.cmake;C:\CMake\share\cmake-3.14\Modules\CheckFunctionExists.cmake;C:\CMake\share\cmake-3.14\Modules\CheckIncludeFile.cmake;C:\CMake\share\cmake-3.14\Modules\CheckIncludeFileCXX.cmake;C:\CMake\share\cmake-3.14\Modules\CheckTypeSize.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\MSVC-C.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\WindowsPaths.cmake;C:\Libraries\32bits\3rdPartyLibs\zlib-1.2.11\CMakeFiles\3.14.1\CMakeCCompiler.cmake;C:\Libraries\32bits\3rdPartyLibs\zlib-1.2.11\CMakeFiles\3.14.1\CMakeRCCompiler.cmake;C:\Libraries\32bits\3rdPartyLibs\zlib-1.2.11\CMakeFiles\3.14.1\CMakeSystem.cmake;C:\Libraries\32bits\3rdPartyLibs\zlib-1.2.11\CMakeLists.txt;C:\Libraries\32bits\3rdPartyLibs\zlib-1.2.11\zconf.h.cmakein;C:\Libraries\32bits\3rdPartyLibs\zlib-1.2.11\zlib.pc.cmakein;C:\Libraries\32bits\3rdPartyLibs\zlib-1.2.11\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Libraries\32bits\3rdPartyLibs\zlib-1.2.11\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Libraries/32bits/3rdPartyLibs/zlib-1.2.11/CMakeLists.txt;C:\CMake\share\cmake-3.14\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.14\Modules\CheckCSourceCompiles.cmake;C:\CMake\share\cmake-3.14\Modules\CheckFunctionExists.cmake;C:\CMake\share\cmake-3.14\Modules\CheckIncludeFile.cmake;C:\CMake\share\cmake-3.14\Modules\CheckIncludeFileCXX.cmake;C:\CMake\share\cmake-3.14\Modules\CheckTypeSize.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\MSVC-C.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\WindowsPaths.cmake;C:\SUMOLibraries\32bits\3rdPartyLibs\zlib-1.2.11\CMakeFiles\3.14.1\CMakeCCompiler.cmake;C:\SUMOLibraries\32bits\3rdPartyLibs\zlib-1.2.11\CMakeFiles\3.14.1\CMakeRCCompiler.cmake;C:\SUMOLibraries\32bits\3rdPartyLibs\zlib-1.2.11\CMakeFiles\3.14.1\CMakeSystem.cmake;C:\SUMOLibraries\32bits\3rdPartyLibs\zlib-1.2.11\CMakeLists.txt;C:\SUMOLibraries\32bits\3rdPartyLibs\zlib-1.2.11\zconf.h.cmakein;C:\SUMOLibraries\32bits\3rdPartyLibs\zlib-1.2.11\zlib.pc.cmakein;C:\SUMOLibraries\32bits\3rdPartyLibs\zlib-1.2.11\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\SUMOLibraries\32bits\3rdPartyLibs\zlib-1.2.11\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Libraries/32bits/3rdPartyLibs/zlib-1.2.11/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
@@ -89,39 +89,39 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Libraries/32bits/3rdPartyLibs/zlib-1.2.11/CMakeLists.txt;C:\CMake\share\cmake-3.14\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.14\Modules\CheckCSourceCompiles.cmake;C:\CMake\share\cmake-3.14\Modules\CheckFunctionExists.cmake;C:\CMake\share\cmake-3.14\Modules\CheckIncludeFile.cmake;C:\CMake\share\cmake-3.14\Modules\CheckIncludeFileCXX.cmake;C:\CMake\share\cmake-3.14\Modules\CheckTypeSize.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\MSVC-C.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\WindowsPaths.cmake;C:\Libraries\32bits\3rdPartyLibs\zlib-1.2.11\CMakeFiles\3.14.1\CMakeCCompiler.cmake;C:\Libraries\32bits\3rdPartyLibs\zlib-1.2.11\CMakeFiles\3.14.1\CMakeRCCompiler.cmake;C:\Libraries\32bits\3rdPartyLibs\zlib-1.2.11\CMakeFiles\3.14.1\CMakeSystem.cmake;C:\Libraries\32bits\3rdPartyLibs\zlib-1.2.11\CMakeLists.txt;C:\Libraries\32bits\3rdPartyLibs\zlib-1.2.11\zconf.h.cmakein;C:\Libraries\32bits\3rdPartyLibs\zlib-1.2.11\zlib.pc.cmakein;C:\Libraries\32bits\3rdPartyLibs\zlib-1.2.11\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Libraries\32bits\3rdPartyLibs\zlib-1.2.11\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Libraries/32bits/3rdPartyLibs/zlib-1.2.11/CMakeLists.txt;C:\CMake\share\cmake-3.14\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.14\Modules\CheckCSourceCompiles.cmake;C:\CMake\share\cmake-3.14\Modules\CheckFunctionExists.cmake;C:\CMake\share\cmake-3.14\Modules\CheckIncludeFile.cmake;C:\CMake\share\cmake-3.14\Modules\CheckIncludeFileCXX.cmake;C:\CMake\share\cmake-3.14\Modules\CheckTypeSize.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\MSVC-C.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\WindowsPaths.cmake;C:\SUMOLibraries\32bits\3rdPartyLibs\zlib-1.2.11\CMakeFiles\3.14.1\CMakeCCompiler.cmake;C:\SUMOLibraries\32bits\3rdPartyLibs\zlib-1.2.11\CMakeFiles\3.14.1\CMakeRCCompiler.cmake;C:\SUMOLibraries\32bits\3rdPartyLibs\zlib-1.2.11\CMakeFiles\3.14.1\CMakeSystem.cmake;C:\SUMOLibraries\32bits\3rdPartyLibs\zlib-1.2.11\CMakeLists.txt;C:\SUMOLibraries\32bits\3rdPartyLibs\zlib-1.2.11\zconf.h.cmakein;C:\SUMOLibraries\32bits\3rdPartyLibs\zlib-1.2.11\zlib.pc.cmakein;C:\SUMOLibraries\32bits\3rdPartyLibs\zlib-1.2.11\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\SUMOLibraries\32bits\3rdPartyLibs\zlib-1.2.11\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Libraries\32bits\3rdPartyLibs\zlib-1.2.11\ZERO_CHECK.vcxproj">
+    <ProjectReference Include="C:\SUMOLibraries\32bits\3rdPartyLibs\zlib-1.2.11\ZERO_CHECK.vcxproj">
       <Project>{76324708-CACF-3DE8-BE84-5D68780111D5}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Libraries\32bits\3rdPartyLibs\zlib-1.2.11\example.vcxproj">
+    <ProjectReference Include="C:\SUMOLibraries\32bits\3rdPartyLibs\zlib-1.2.11\example.vcxproj">
       <Project>{494BF053-AB3D-39FA-B582-BF0F4366180F}</Project>
       <Name>example</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Libraries\32bits\3rdPartyLibs\zlib-1.2.11\minigzip.vcxproj">
+    <ProjectReference Include="C:\SUMOLibraries\32bits\3rdPartyLibs\zlib-1.2.11\minigzip.vcxproj">
       <Project>{427F5383-6F6E-3893-ADAA-24A87E29D071}</Project>
       <Name>minigzip</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Libraries\32bits\3rdPartyLibs\zlib-1.2.11\zlib.vcxproj">
+    <ProjectReference Include="C:\SUMOLibraries\32bits\3rdPartyLibs\zlib-1.2.11\zlib.vcxproj">
       <Project>{CB168F29-17D2-3A48-94E4-78C131157907}</Project>
       <Name>zlib</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Libraries\32bits\3rdPartyLibs\zlib-1.2.11\zlibstatic.vcxproj">
+    <ProjectReference Include="C:\SUMOLibraries\32bits\3rdPartyLibs\zlib-1.2.11\zlibstatic.vcxproj">
       <Project>{26306024-20C9-3FB4-8825-D306CC6A8CF9}</Project>
       <Name>zlibstatic</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>

@@ -220,13 +220,13 @@ PDFLATEX_COMPILER:FILEPATH=C:/MiKTeX 2.9/miktex/bin/x64/pdflatex.exe
 PDFTOPS_CONVERTER:FILEPATH=C:/MiKTeX 2.9/miktex/bin/x64/pdftops.exe
 
 //Path to a library.
-PNG_LIBRARY_DEBUG:FILEPATH=C:\Libraries\3rdPartyLibs\libpng-1.6.34\projects\vstudio\x64\Debug\libpng16.lib
+PNG_LIBRARY_DEBUG:FILEPATH=C:\SUMOLibraries\3rdPartyLibs\libpng-1.6.34\projects\vstudio\x64\Debug\libpng16.lib
 
 //Path to a library.
-PNG_LIBRARY_RELEASE:FILEPATH=C:\Libraries\3rdPartyLibs\libpng-1.6.34\projects\vstudio\x64\Release\libpng16.lib
+PNG_LIBRARY_RELEASE:FILEPATH=C:\SUMOLibraries\3rdPartyLibs\libpng-1.6.34\projects\vstudio\x64\Release\libpng16.lib
 
 //Path to a file.
-PNG_PNG_INCLUDE_DIR:PATH=C:\Libraries\3rdPartyLibs\libpng-1.6.34
+PNG_PNG_INCLUDE_DIR:PATH=C:\SUMOLibraries\3rdPartyLibs\libpng-1.6.34
 
 //Path to a program.
 PS2PDF_CONVERTER:FILEPATH=C:/MiKTeX 2.9/miktex/bin/x64/ps2pdf14.exe
@@ -241,13 +241,13 @@ XELATEX_COMPILER:FILEPATH=C:/MiKTeX 2.9/miktex/bin/x64/xelatex.exe
 XINDY_COMPILER:FILEPATH=C:/MiKTeX 2.9/miktex/bin/x64/xindy.exe
 
 //Path to a file.
-ZLIB_INCLUDE_DIR:PATH=C:\Libraries\3rdPartyLibs\zlib-1.2.11
+ZLIB_INCLUDE_DIR:PATH=C:\SUMOLibraries\3rdPartyLibs\zlib-1.2.11
 
 //Path to a library.
-ZLIB_LIBRARY_DEBUG:FILEPATH=C:\Libraries\3rdPartyLibs\libpng-1.6.34\projects\vstudio\x64\Debug\zlib.lib
+ZLIB_LIBRARY_DEBUG:FILEPATH=C:\SUMOLibraries\3rdPartyLibs\libpng-1.6.34\projects\vstudio\x64\Debug\zlib.lib
 
 //Path to a library.
-ZLIB_LIBRARY_RELEASE:FILEPATH=C:\Libraries\3rdPartyLibs\libpng-1.6.34\projects\vstudio\x64\Release\zlib.lib
+ZLIB_LIBRARY_RELEASE:FILEPATH=C:\SUMOLibraries\3rdPartyLibs\libpng-1.6.34\projects\vstudio\x64\Release\zlib.lib
 
 //Value Computed by CMake
 gl2ps_BINARY_DIR:STATIC=C:/Libraries/gl2ps-1.4.0_64
@@ -259,7 +259,7 @@ gl2ps_SOURCE_DIR:STATIC=C:/Libraries/gl2ps-1.4.0
 lib_LIB_DEPENDS:STATIC=
 
 //Dependencies for the target
-shared_LIB_DEPENDS:STATIC=general;opengl32;general;glu32;optimized;C:\Libraries\3rdPartyLibs\libpng-1.6.34\projects\vstudio\x64\Release\zlib.lib;debug;C:\Libraries\3rdPartyLibs\libpng-1.6.34\projects\vstudio\x64\Debug\zlib.lib;optimized;C:\Libraries\3rdPartyLibs\libpng-1.6.34\projects\vstudio\x64\Release\libpng16.lib;debug;C:\Libraries\3rdPartyLibs\libpng-1.6.34\projects\vstudio\x64\Debug\libpng16.lib;optimized;C:\Libraries\3rdPartyLibs\libpng-1.6.34\projects\vstudio\x64\Release\zlib.lib;debug;C:\Libraries\3rdPartyLibs\libpng-1.6.34\projects\vstudio\x64\Debug\zlib.lib;
+shared_LIB_DEPENDS:STATIC=general;opengl32;general;glu32;optimized;C:\SUMOLibraries\3rdPartyLibs\libpng-1.6.34\projects\vstudio\x64\Release\zlib.lib;debug;C:\SUMOLibraries\3rdPartyLibs\libpng-1.6.34\projects\vstudio\x64\Debug\zlib.lib;optimized;C:\SUMOLibraries\3rdPartyLibs\libpng-1.6.34\projects\vstudio\x64\Release\libpng16.lib;debug;C:\SUMOLibraries\3rdPartyLibs\libpng-1.6.34\projects\vstudio\x64\Debug\libpng16.lib;optimized;C:\SUMOLibraries\3rdPartyLibs\libpng-1.6.34\projects\vstudio\x64\Release\zlib.lib;debug;C:\SUMOLibraries\3rdPartyLibs\libpng-1.6.34\projects\vstudio\x64\Debug\zlib.lib;
 
 
 ########################
@@ -385,9 +385,9 @@ FIND_PACKAGE_MESSAGE_DETAILS_LATEX:INTERNAL=[C:/MiKTeX 2.9/miktex/bin/x64/latex.
 //Details about finding OpenGL
 FIND_PACKAGE_MESSAGE_DETAILS_OpenGL:INTERNAL=[opengl32][c ][v()]
 //Details about finding PNG
-FIND_PACKAGE_MESSAGE_DETAILS_PNG:INTERNAL=[optimized;C:\Libraries\3rdPartyLibs\libpng-1.6.34\projects\vstudio\x64\Release\libpng16.lib;debug;C:\Libraries\3rdPartyLibs\libpng-1.6.34\projects\vstudio\x64\Debug\libpng16.lib][C:\Libraries\3rdPartyLibs\libpng-1.6.34][v1.6.34()]
+FIND_PACKAGE_MESSAGE_DETAILS_PNG:INTERNAL=[optimized;C:\SUMOLibraries\3rdPartyLibs\libpng-1.6.34\projects\vstudio\x64\Release\libpng16.lib;debug;C:\SUMOLibraries\3rdPartyLibs\libpng-1.6.34\projects\vstudio\x64\Debug\libpng16.lib][C:\SUMOLibraries\3rdPartyLibs\libpng-1.6.34][v1.6.34()]
 //Details about finding ZLIB
-FIND_PACKAGE_MESSAGE_DETAILS_ZLIB:INTERNAL=[optimized;C:\Libraries\3rdPartyLibs\libpng-1.6.34\projects\vstudio\x64\Release\zlib.lib;debug;C:\Libraries\3rdPartyLibs\libpng-1.6.34\projects\vstudio\x64\Debug\zlib.lib][C:\Libraries\3rdPartyLibs\zlib-1.2.11][v1.2.11()]
+FIND_PACKAGE_MESSAGE_DETAILS_ZLIB:INTERNAL=[optimized;C:\SUMOLibraries\3rdPartyLibs\libpng-1.6.34\projects\vstudio\x64\Release\zlib.lib;debug;C:\SUMOLibraries\3rdPartyLibs\libpng-1.6.34\projects\vstudio\x64\Debug\zlib.lib][C:\SUMOLibraries\3rdPartyLibs\zlib-1.2.11][v1.2.11()]
 //ADVANCED property for variable: GHOSTSCRIPT_BINARY_PATH
 GHOSTSCRIPT_BINARY_PATH-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: GHOSTSCRIPT_LIBRARY_PATH

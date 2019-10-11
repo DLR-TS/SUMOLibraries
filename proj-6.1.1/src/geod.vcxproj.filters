@@ -1,26 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Libraries\proj-6.1.1\src\apps\geod.cpp">
+    <ClCompile Include="C:\SUMOLibraries\proj-6.1.1\src\apps\geod.cpp">
       <Filter>Source Files\Bin</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\proj-6.1.1\src\apps\geod_set.cpp">
+    <ClCompile Include="C:\SUMOLibraries\proj-6.1.1\src\apps\geod_set.cpp">
       <Filter>Source Files\Bin</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\proj-6.1.1\src\apps\geod_interface.cpp">
+    <ClCompile Include="C:\SUMOLibraries\proj-6.1.1\src\apps\geod_interface.cpp">
       <Filter>Source Files\Bin</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\proj-6.1.1\src\apps\emess.cpp">
+    <ClCompile Include="C:\SUMOLibraries\proj-6.1.1\src\apps\emess.cpp">
       <Filter>Source Files\Bin</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Libraries\proj-6.1.1\src\apps\geod_interface.h">
+    <ClInclude Include="C:\SUMOLibraries\proj-6.1.1\src\apps\geod_interface.h">
       <Filter>Source Files\Bin</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Libraries\proj-6.1.1\src\CMakeLists.txt">
+    <CustomBuild Include="C:\SUMOLibraries\proj-6.1.1\src\CMakeLists.txt">
       <Filter>CMake Files</Filter>
     </CustomBuild>
   </ItemGroup>

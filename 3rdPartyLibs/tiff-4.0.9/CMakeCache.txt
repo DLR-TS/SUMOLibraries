@@ -110,7 +110,7 @@ CMAKE_INSTALL_MANDIR:PATH=
 CMAKE_INSTALL_OLDINCLUDEDIR:PATH=/usr/include
 
 //Install path prefix, prepended onto install directories.
-CMAKE_INSTALL_PREFIX:PATH=C:\Libraries\3rdPartyLibs\tiff-4.0.9
+CMAKE_INSTALL_PREFIX:PATH=C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9
 
 //Run-time variable data (LOCALSTATEDIR/run)
 CMAKE_INSTALL_RUNSTATEDIR:PATH=
@@ -733,7 +733,7 @@ ZLIB_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: ZLIB_LIBRARY_RELEASE
 ZLIB_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //CMAKE_INSTALL_PREFIX during last run
-_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=C:\Libraries\3rdPartyLibs\tiff-4.0.9
+_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9
 //Result of TEST_BIG_ENDIAN
 bigendian:INTERNAL=0
 //CHECK_TYPE_SIZE: INT16 unknown

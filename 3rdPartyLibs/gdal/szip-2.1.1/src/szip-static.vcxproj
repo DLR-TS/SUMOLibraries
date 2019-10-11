@@ -33,14 +33,14 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Libraries\3rdPartyLibs\gdal\szip-2.1.1\bin\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SUMOLibraries\3rdPartyLibs\gdal\szip-2.1.1\bin\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">szip-static.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">libszip</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Libraries\3rdPartyLibs\gdal\szip-2.1.1;C:\Libraries\3rdPartyLibs\gdal\szip-2.1.1\src;C:\Libraries\3rdPartyLibs\gdal\szip-2.1.1\bin;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\3rdPartyLibs\gdal\szip-2.1.1;C:\SUMOLibraries\3rdPartyLibs\gdal\szip-2.1.1\src;C:\SUMOLibraries\3rdPartyLibs\gdal\szip-2.1.1\bin;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Release/</AssemblerListingLocation>
       <CompileAs>CompileAsC</CompileAs>
       <ExceptionHandling>
@@ -55,14 +55,14 @@
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
-      <ProgramDataBaseFileName>C:\Libraries\3rdPartyLibs\gdal\szip-2.1.1\bin\Release\libszip.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>C:\SUMOLibraries\3rdPartyLibs\gdal\szip-2.1.1\bin\Release\libszip.pdb</ProgramDataBaseFileName>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_BIND_TO_CURRENT_VCLIBS_VERSION=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Libraries\3rdPartyLibs\gdal\szip-2.1.1;C:\Libraries\3rdPartyLibs\gdal\szip-2.1.1\src;C:\Libraries\3rdPartyLibs\gdal\szip-2.1.1\bin;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\3rdPartyLibs\gdal\szip-2.1.1;C:\SUMOLibraries\3rdPartyLibs\gdal\szip-2.1.1\src;C:\SUMOLibraries\3rdPartyLibs\gdal\szip-2.1.1\bin;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Libraries\3rdPartyLibs\gdal\szip-2.1.1;C:\Libraries\3rdPartyLibs\gdal\szip-2.1.1\src;C:\Libraries\3rdPartyLibs\gdal\szip-2.1.1\bin;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\3rdPartyLibs\gdal\szip-2.1.1;C:\SUMOLibraries\3rdPartyLibs\gdal\szip-2.1.1\src;C:\SUMOLibraries\3rdPartyLibs\gdal\szip-2.1.1\bin;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -74,7 +74,7 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Libraries\3rdPartyLibs\gdal\szip-2.1.1\src\CMakeLists.txt">
+    <CustomBuild Include="C:\SUMOLibraries\3rdPartyLibs\gdal\szip-2.1.1\src\CMakeLists.txt">
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Libraries/3rdPartyLibs/gdal/szip-2.1.1/src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
 C:\CMake\bin\cmake.exe -SC:/Libraries/3rdPartyLibs/gdal/szip-2.1.1 -BC:/Libraries/3rdPartyLibs/gdal/szip-2.1.1 --check-stamp-file C:/Libraries/3rdPartyLibs/gdal/szip-2.1.1/src/CMakeFiles/generate.stamp
@@ -85,21 +85,21 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Libraries/3rdPartyLibs/gdal/szip-2.1.1/src/CMakeLists.txt;C:\Libraries\3rdPartyLibs\gdal\szip-2.1.1\src\CMakeLists.txt;C:\Libraries\3rdPartyLibs\gdal\szip-2.1.1\src\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Libraries\3rdPartyLibs\gdal\szip-2.1.1\src\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Libraries/3rdPartyLibs/gdal/szip-2.1.1/src/CMakeLists.txt;C:\SUMOLibraries\3rdPartyLibs\gdal\szip-2.1.1\src\CMakeLists.txt;C:\SUMOLibraries\3rdPartyLibs\gdal\szip-2.1.1\src\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SUMOLibraries\3rdPartyLibs\gdal\szip-2.1.1\src\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\gdal\szip-2.1.1\src\rice.c" />
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\gdal\szip-2.1.1\src\sz_api.c" />
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\gdal\szip-2.1.1\src\encoding.c" />
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\gdal\szip-2.1.1\src\ricehdf.h" />
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\gdal\szip-2.1.1\src\szip_adpt.h" />
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\gdal\szip-2.1.1\src\szlib.h" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\gdal\szip-2.1.1\src\rice.c" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\gdal\szip-2.1.1\src\sz_api.c" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\gdal\szip-2.1.1\src\encoding.c" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\gdal\szip-2.1.1\src\ricehdf.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\gdal\szip-2.1.1\src\szip_adpt.h" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\gdal\szip-2.1.1\src\szlib.h" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Libraries\3rdPartyLibs\gdal\szip-2.1.1\ZERO_CHECK.vcxproj">
+    <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\gdal\szip-2.1.1\ZERO_CHECK.vcxproj">
       <Project>{987F1EDC-B7AD-32F1-92F8-445CA41CE6F9}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>

@@ -59,25 +59,25 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pngunknown.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pngunknown</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pngunknown.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pngunknown</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\MinSizeRel\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\MinSizeRel\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">pngunknown.dir\MinSizeRel\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">pngunknown</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">pngunknown.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">pngunknown</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.exe</TargetExt>
@@ -86,7 +86,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Libraries\32bits\3rdPartyLibs\zlib-1.2.11;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\32bits\3rdPartyLibs\zlib-1.2.11;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Release/</AssemblerListingLocation>
       <CompileAs>CompileAsC</CompileAs>
       <ExceptionHandling>
@@ -104,10 +104,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Libraries\32bits\3rdPartyLibs\zlib-1.2.11;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\32bits\3rdPartyLibs\zlib-1.2.11;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Libraries\32bits\3rdPartyLibs\zlib-1.2.11;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\32bits\3rdPartyLibs\zlib-1.2.11;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -115,7 +115,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>Release\libpng16.lib;C:\Libraries\32bits\3rdPartyLibs\zlib-1.2.11\lib\zlib.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>Release\libpng16.lib;C:\SUMOLibraries\32bits\3rdPartyLibs\zlib-1.2.11\lib\zlib.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -130,7 +130,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Libraries\32bits\3rdPartyLibs\zlib-1.2.11;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\32bits\3rdPartyLibs\zlib-1.2.11;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Debug/</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <CompileAs>CompileAsC</CompileAs>
@@ -148,10 +148,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Libraries\32bits\3rdPartyLibs\zlib-1.2.11;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\32bits\3rdPartyLibs\zlib-1.2.11;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Libraries\32bits\3rdPartyLibs\zlib-1.2.11;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\32bits\3rdPartyLibs\zlib-1.2.11;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -159,7 +159,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>Debug\libpng16d.lib;C:\Libraries\32bits\3rdPartyLibs\zlib-1.2.11\lib\zlibd.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>Debug\libpng16d.lib;C:\SUMOLibraries\32bits\3rdPartyLibs\zlib-1.2.11\lib\zlibd.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -174,7 +174,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Libraries\32bits\3rdPartyLibs\zlib-1.2.11;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\32bits\3rdPartyLibs\zlib-1.2.11;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
       <CompileAs>CompileAsC</CompileAs>
       <ExceptionHandling>
@@ -192,10 +192,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Libraries\32bits\3rdPartyLibs\zlib-1.2.11;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\32bits\3rdPartyLibs\zlib-1.2.11;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Libraries\32bits\3rdPartyLibs\zlib-1.2.11;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\32bits\3rdPartyLibs\zlib-1.2.11;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -203,7 +203,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>MinSizeRel\libpng16.lib;C:\Libraries\32bits\3rdPartyLibs\zlib-1.2.11\lib\zlib.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>MinSizeRel\libpng16.lib;C:\SUMOLibraries\32bits\3rdPartyLibs\zlib-1.2.11\lib\zlib.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -218,7 +218,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Libraries\32bits\3rdPartyLibs\zlib-1.2.11;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\32bits\3rdPartyLibs\zlib-1.2.11;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
       <CompileAs>CompileAsC</CompileAs>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -235,10 +235,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Libraries\32bits\3rdPartyLibs\zlib-1.2.11;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\32bits\3rdPartyLibs\zlib-1.2.11;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Libraries\32bits\3rdPartyLibs\zlib-1.2.11;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\32bits\3rdPartyLibs\zlib-1.2.11;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -246,7 +246,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>RelWithDebInfo\libpng16.lib;C:\Libraries\32bits\3rdPartyLibs\zlib-1.2.11\lib\zlib.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>RelWithDebInfo\libpng16.lib;C:\SUMOLibraries\32bits\3rdPartyLibs\zlib-1.2.11\lib\zlib.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -260,7 +260,7 @@
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeLists.txt">
+    <CustomBuild Include="C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeLists.txt">
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Libraries/32bits/3rdPartyLibs/libpng-1.6.34/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
 C:\CMake\bin\cmake.exe -SC:/Libraries/32bits/3rdPartyLibs/libpng-1.6.34 -BC:/Libraries/32bits/3rdPartyLibs/libpng-1.6.34 --check-stamp-file C:/Libraries/32bits/3rdPartyLibs/libpng-1.6.34/CMakeFiles/generate.stamp
@@ -271,8 +271,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Libraries/32bits/3rdPartyLibs/libpng-1.6.34/CMakeLists.txt;C:\CMake\share\cmake-3.14\Modules\CMakeASMInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeParseArguments.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.14\Modules\CheckCSourceCompiles.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\MSVC-ASM.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\MSVC-C.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.14\Modules\FindZLIB.cmake;C:\CMake\share\cmake-3.14\Modules\GNUInstallDirs.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.14\Modules\SelectLibraryConfigurations.cmake;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeFiles\3.14.1\CMakeASMCompiler.cmake;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeFiles\3.14.1\CMakeCCompiler.cmake;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeFiles\3.14.1\CMakeRCCompiler.cmake;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeFiles\3.14.1\CMakeSystem.cmake;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeLists.txt;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\scripts\genchk.cmake.in;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\scripts\genout.cmake.in;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\scripts\gensrc.cmake.in;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\scripts\pnglibconf.h.prebuilt;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\scripts\test.cmake.in;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Libraries/32bits/3rdPartyLibs/libpng-1.6.34/CMakeLists.txt;C:\CMake\share\cmake-3.14\Modules\CMakeASMInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeParseArguments.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.14\Modules\CheckCSourceCompiles.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\MSVC-ASM.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\MSVC-C.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.14\Modules\FindZLIB.cmake;C:\CMake\share\cmake-3.14\Modules\GNUInstallDirs.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.14\Modules\SelectLibraryConfigurations.cmake;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeFiles\3.14.1\CMakeASMCompiler.cmake;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeFiles\3.14.1\CMakeCCompiler.cmake;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeFiles\3.14.1\CMakeRCCompiler.cmake;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeFiles\3.14.1\CMakeSystem.cmake;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeLists.txt;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\scripts\genchk.cmake.in;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\scripts\genout.cmake.in;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\scripts\gensrc.cmake.in;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\scripts\pnglibconf.h.prebuilt;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\scripts\test.cmake.in;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Libraries/32bits/3rdPartyLibs/libpng-1.6.34/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
@@ -284,8 +284,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Libraries/32bits/3rdPartyLibs/libpng-1.6.34/CMakeLists.txt;C:\CMake\share\cmake-3.14\Modules\CMakeASMInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeParseArguments.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.14\Modules\CheckCSourceCompiles.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\MSVC-ASM.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\MSVC-C.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.14\Modules\FindZLIB.cmake;C:\CMake\share\cmake-3.14\Modules\GNUInstallDirs.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.14\Modules\SelectLibraryConfigurations.cmake;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeFiles\3.14.1\CMakeASMCompiler.cmake;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeFiles\3.14.1\CMakeCCompiler.cmake;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeFiles\3.14.1\CMakeRCCompiler.cmake;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeFiles\3.14.1\CMakeSystem.cmake;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeLists.txt;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\scripts\genchk.cmake.in;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\scripts\genout.cmake.in;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\scripts\gensrc.cmake.in;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\scripts\pnglibconf.h.prebuilt;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\scripts\test.cmake.in;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Libraries/32bits/3rdPartyLibs/libpng-1.6.34/CMakeLists.txt;C:\CMake\share\cmake-3.14\Modules\CMakeASMInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeParseArguments.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.14\Modules\CheckCSourceCompiles.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\MSVC-ASM.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\MSVC-C.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.14\Modules\FindZLIB.cmake;C:\CMake\share\cmake-3.14\Modules\GNUInstallDirs.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.14\Modules\SelectLibraryConfigurations.cmake;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeFiles\3.14.1\CMakeASMCompiler.cmake;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeFiles\3.14.1\CMakeCCompiler.cmake;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeFiles\3.14.1\CMakeRCCompiler.cmake;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeFiles\3.14.1\CMakeSystem.cmake;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeLists.txt;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\scripts\genchk.cmake.in;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\scripts\genout.cmake.in;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\scripts\gensrc.cmake.in;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\scripts\pnglibconf.h.prebuilt;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\scripts\test.cmake.in;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Libraries/32bits/3rdPartyLibs/libpng-1.6.34/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
@@ -297,8 +297,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Libraries/32bits/3rdPartyLibs/libpng-1.6.34/CMakeLists.txt;C:\CMake\share\cmake-3.14\Modules\CMakeASMInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeParseArguments.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.14\Modules\CheckCSourceCompiles.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\MSVC-ASM.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\MSVC-C.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.14\Modules\FindZLIB.cmake;C:\CMake\share\cmake-3.14\Modules\GNUInstallDirs.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.14\Modules\SelectLibraryConfigurations.cmake;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeFiles\3.14.1\CMakeASMCompiler.cmake;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeFiles\3.14.1\CMakeCCompiler.cmake;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeFiles\3.14.1\CMakeRCCompiler.cmake;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeFiles\3.14.1\CMakeSystem.cmake;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeLists.txt;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\scripts\genchk.cmake.in;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\scripts\genout.cmake.in;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\scripts\gensrc.cmake.in;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\scripts\pnglibconf.h.prebuilt;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\scripts\test.cmake.in;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Libraries/32bits/3rdPartyLibs/libpng-1.6.34/CMakeLists.txt;C:\CMake\share\cmake-3.14\Modules\CMakeASMInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeParseArguments.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.14\Modules\CheckCSourceCompiles.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\MSVC-ASM.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\MSVC-C.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.14\Modules\FindZLIB.cmake;C:\CMake\share\cmake-3.14\Modules\GNUInstallDirs.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.14\Modules\SelectLibraryConfigurations.cmake;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeFiles\3.14.1\CMakeASMCompiler.cmake;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeFiles\3.14.1\CMakeCCompiler.cmake;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeFiles\3.14.1\CMakeRCCompiler.cmake;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeFiles\3.14.1\CMakeSystem.cmake;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeLists.txt;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\scripts\genchk.cmake.in;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\scripts\genout.cmake.in;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\scripts\gensrc.cmake.in;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\scripts\pnglibconf.h.prebuilt;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\scripts\test.cmake.in;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Libraries/32bits/3rdPartyLibs/libpng-1.6.34/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
@@ -310,22 +310,22 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Libraries/32bits/3rdPartyLibs/libpng-1.6.34/CMakeLists.txt;C:\CMake\share\cmake-3.14\Modules\CMakeASMInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeParseArguments.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.14\Modules\CheckCSourceCompiles.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\MSVC-ASM.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\MSVC-C.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.14\Modules\FindZLIB.cmake;C:\CMake\share\cmake-3.14\Modules\GNUInstallDirs.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.14\Modules\SelectLibraryConfigurations.cmake;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeFiles\3.14.1\CMakeASMCompiler.cmake;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeFiles\3.14.1\CMakeCCompiler.cmake;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeFiles\3.14.1\CMakeRCCompiler.cmake;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeFiles\3.14.1\CMakeSystem.cmake;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeLists.txt;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\scripts\genchk.cmake.in;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\scripts\genout.cmake.in;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\scripts\gensrc.cmake.in;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\scripts\pnglibconf.h.prebuilt;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\scripts\test.cmake.in;C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Libraries/32bits/3rdPartyLibs/libpng-1.6.34/CMakeLists.txt;C:\CMake\share\cmake-3.14\Modules\CMakeASMInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeParseArguments.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.14\Modules\CheckCSourceCompiles.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\MSVC-ASM.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\MSVC-C.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.14\Modules\FindZLIB.cmake;C:\CMake\share\cmake-3.14\Modules\GNUInstallDirs.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.14\Modules\SelectLibraryConfigurations.cmake;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeFiles\3.14.1\CMakeASMCompiler.cmake;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeFiles\3.14.1\CMakeCCompiler.cmake;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeFiles\3.14.1\CMakeRCCompiler.cmake;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeFiles\3.14.1\CMakeSystem.cmake;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeLists.txt;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\scripts\genchk.cmake.in;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\scripts\genout.cmake.in;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\scripts\gensrc.cmake.in;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\scripts\pnglibconf.h.prebuilt;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\scripts\test.cmake.in;C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\contrib\libtests\pngunknown.c" />
+    <ClCompile Include="C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\contrib\libtests\pngunknown.c" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\ZERO_CHECK.vcxproj">
+    <ProjectReference Include="C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\ZERO_CHECK.vcxproj">
       <Project>{28489932-B736-389F-8CE2-8F2602900BE3}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Libraries\32bits\3rdPartyLibs\libpng-1.6.34\png.vcxproj">
+    <ProjectReference Include="C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\png.vcxproj">
       <Project>{3CFDEDCE-CE5B-3F9D-ACC8-6CBBBEF2ADA3}</Project>
       <Name>png</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>

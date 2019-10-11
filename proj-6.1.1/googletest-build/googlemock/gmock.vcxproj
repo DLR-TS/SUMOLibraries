@@ -32,14 +32,14 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Libraries\proj-6.1.1\lib\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SUMOLibraries\proj-6.1.1\lib\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">gmock.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">gmock</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Libraries\proj-6.1.1\src;C:\Libraries\proj-6.1.1\googletest-src\googlemock\include;C:\Libraries\proj-6.1.1\googletest-src\googlemock;C:\Libraries\proj-6.1.1\googletest-src\googletest\include;C:\Libraries\proj-6.1.1\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\proj-6.1.1\src;C:\SUMOLibraries\proj-6.1.1\googletest-src\googlemock\include;C:\SUMOLibraries\proj-6.1.1\googletest-src\googlemock;C:\SUMOLibraries\proj-6.1.1\googletest-src\googletest\include;C:\SUMOLibraries\proj-6.1.1\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) -J</AdditionalOptions>
       <AssemblerListingLocation>Release/</AssemblerListingLocation>
       <BufferSecurityCheck>true</BufferSecurityCheck>
@@ -61,10 +61,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_UNICODE;UNICODE;_WIN32;STRICT;WIN32_LEAN_AND_MEAN;GTEST_HAS_PTHREAD=0;_HAS_EXCEPTIONS=1;_CRT_SECURE_NO_WARNINGS;HAVE_C99_MATH=1;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Libraries\proj-6.1.1\src;C:\Libraries\proj-6.1.1\googletest-src\googlemock\include;C:\Libraries\proj-6.1.1\googletest-src\googlemock;C:\Libraries\proj-6.1.1\googletest-src\googletest\include;C:\Libraries\proj-6.1.1\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\proj-6.1.1\src;C:\SUMOLibraries\proj-6.1.1\googletest-src\googlemock\include;C:\SUMOLibraries\proj-6.1.1\googletest-src\googlemock;C:\SUMOLibraries\proj-6.1.1\googletest-src\googletest\include;C:\SUMOLibraries\proj-6.1.1\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Libraries\proj-6.1.1\src;C:\Libraries\proj-6.1.1\googletest-src\googlemock\include;C:\Libraries\proj-6.1.1\googletest-src\googlemock;C:\Libraries\proj-6.1.1\googletest-src\googletest\include;C:\Libraries\proj-6.1.1\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\proj-6.1.1\src;C:\SUMOLibraries\proj-6.1.1\googletest-src\googlemock\include;C:\SUMOLibraries\proj-6.1.1\googletest-src\googlemock;C:\SUMOLibraries\proj-6.1.1\googletest-src\googletest\include;C:\SUMOLibraries\proj-6.1.1\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -76,7 +76,7 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Libraries\proj-6.1.1\googletest-src\googlemock\CMakeLists.txt">
+    <CustomBuild Include="C:\SUMOLibraries\proj-6.1.1\googletest-src\googlemock\CMakeLists.txt">
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Libraries/proj-6.1.1/googletest-src/googlemock/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
 C:\CMake\bin\cmake.exe -SC:/Libraries/proj-6.1.1 -BC:/Libraries/proj-6.1.1 --check-stamp-file C:/Libraries/proj-6.1.1/googletest-build/googlemock/CMakeFiles/generate.stamp
@@ -87,17 +87,17 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Libraries/proj-6.1.1/googletest-src/googlemock/CMakeLists.txt;C:\CMake\share\cmake-3.14\Modules\CheckIncludeFile.cmake;C:\CMake\share\cmake-3.14\Modules\CheckLibraryExists.cmake;C:\CMake\share\cmake-3.14\Modules\CheckSymbolExists.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.14\Modules\FindThreads.cmake;C:\Libraries\proj-6.1.1\googletest-src\googlemock\CMakeLists.txt;C:\Libraries\proj-6.1.1\googletest-src\googlemock\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Libraries\proj-6.1.1\googletest-build\googlemock\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Libraries/proj-6.1.1/googletest-src/googlemock/CMakeLists.txt;C:\CMake\share\cmake-3.14\Modules\CheckIncludeFile.cmake;C:\CMake\share\cmake-3.14\Modules\CheckLibraryExists.cmake;C:\CMake\share\cmake-3.14\Modules\CheckSymbolExists.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.14\Modules\FindThreads.cmake;C:\SUMOLibraries\proj-6.1.1\googletest-src\googlemock\CMakeLists.txt;C:\SUMOLibraries\proj-6.1.1\googletest-src\googlemock\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SUMOLibraries\proj-6.1.1\googletest-build\googlemock\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Libraries\proj-6.1.1\googletest-src\googletest\src\gtest-all.cc" />
-    <ClCompile Include="C:\Libraries\proj-6.1.1\googletest-src\googlemock\src\gmock-all.cc" />
+    <ClCompile Include="C:\SUMOLibraries\proj-6.1.1\googletest-src\googletest\src\gtest-all.cc" />
+    <ClCompile Include="C:\SUMOLibraries\proj-6.1.1\googletest-src\googlemock\src\gmock-all.cc" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Libraries\proj-6.1.1\ZERO_CHECK.vcxproj">
+    <ProjectReference Include="C:\SUMOLibraries\proj-6.1.1\ZERO_CHECK.vcxproj">
       <Project>{24B74DED-FD47-3AFE-80B9-9A655B83EA64}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>

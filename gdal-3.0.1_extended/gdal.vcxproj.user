@@ -3,10 +3,10 @@
     <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">  
       <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>                       
       <LocalDebuggerDebuggerType>Auto</LocalDebuggerDebuggerType>                 
-      <LocalDebuggerCommand>C:\Libraries\gdal-3.0.1_extended\apps\gdal_translate.exe</LocalDebuggerCommand>   
+      <LocalDebuggerCommand>C:\SUMOLibraries\gdal-3.0.1_extended\apps\gdal_translate.exe</LocalDebuggerCommand>   
       <LocalDebuggerCommandArguments>--formats</LocalDebuggerCommandArguments>    
       <LocalDebuggerEnvironment>CPL_DEBUG=ON                                        
-      GDAL_DATA=C:\Libraries\gdal-3.0.1_extended\data                                                      
+      GDAL_DATA=C:\SUMOLibraries\gdal-3.0.1_extended\data                                                      
       </LocalDebuggerEnvironment>                                                   
     </PropertyGroup>                                     
 </Project>                                               

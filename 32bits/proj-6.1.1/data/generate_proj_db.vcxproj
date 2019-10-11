@@ -36,7 +36,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Libraries\32bits\proj-6.1.1\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\32bits\proj-6.1.1\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -45,12 +45,12 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Libraries\32bits\proj-6.1.1\CMakeFiles\321726b6a98aa2b102e8ee5a531e7342\proj.db.rule">
+    <CustomBuild Include="C:\SUMOLibraries\32bits\proj-6.1.1\CMakeFiles\321726b6a98aa2b102e8ee5a531e7342\proj.db.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating proj.db</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
 C:\CMake\bin\cmake.exe -E remove -f C:/Libraries/32bits/proj-6.1.1/data/proj.db
 if %errorlevel% neq 0 goto :cmEnd
-C:\Libraries\32bits\3rdPartyLibs\sqlite-3.3.0\sqlite3.exe -init C:/Libraries/32bits/proj-6.1.1/data/all.sql.in C:/Libraries/32bits/proj-6.1.1/data/proj.db .quit
+C:\SUMOLibraries\32bits\3rdPartyLibs\sqlite-3.3.0\sqlite3.exe -init C:/Libraries/32bits/proj-6.1.1/data/all.sql.in C:/Libraries/32bits/proj-6.1.1/data/proj.db .quit
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -58,13 +58,13 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Libraries/32bits/proj-6.1.1/CMakeFiles/321726b6a98aa2b102e8ee5a531e7342/proj.db.rule;C:\Libraries\32bits\proj-6.1.1\data\all.sql.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Libraries\32bits\proj-6.1.1\data\proj.db</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Libraries/32bits/proj-6.1.1/CMakeFiles/321726b6a98aa2b102e8ee5a531e7342/proj.db.rule;C:\SUMOLibraries\32bits\proj-6.1.1\data\all.sql.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\SUMOLibraries\32bits\proj-6.1.1\data\proj.db</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Libraries\32bits\proj-6.1.1\CMakeFiles\5b7ad0a75e6331ad7c374c01fa8db9ce\generate_proj_db.rule">
+    <CustomBuild Include="C:\SUMOLibraries\32bits\proj-6.1.1\CMakeFiles\5b7ad0a75e6331ad7c374c01fa8db9ce\generate_proj_db.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"></Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
 :cmEnd
@@ -73,13 +73,13 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Libraries/32bits/proj-6.1.1/CMakeFiles/5b7ad0a75e6331ad7c374c01fa8db9ce/generate_proj_db.rule;C:\Libraries\32bits\proj-6.1.1\data\proj.db;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Libraries\32bits\proj-6.1.1\data\CMakeFiles\generate_proj_db</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Libraries/32bits/proj-6.1.1/CMakeFiles/5b7ad0a75e6331ad7c374c01fa8db9ce/generate_proj_db.rule;C:\SUMOLibraries\32bits\proj-6.1.1\data\proj.db;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\SUMOLibraries\32bits\proj-6.1.1\data\CMakeFiles\generate_proj_db</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Libraries\32bits\proj-6.1.1\data\CMakeLists.txt">
+    <CustomBuild Include="C:\SUMOLibraries\32bits\proj-6.1.1\data\CMakeLists.txt">
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Libraries/32bits/proj-6.1.1/data/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
 C:\CMake\bin\cmake.exe -SC:/Libraries/32bits/proj-6.1.1 -BC:/Libraries/32bits/proj-6.1.1 --check-stamp-file C:/Libraries/32bits/proj-6.1.1/data/CMakeFiles/generate.stamp
@@ -90,22 +90,22 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Libraries/32bits/proj-6.1.1/data/CMakeLists.txt;C:\Libraries\32bits\proj-6.1.1\data\CMakeLists.txt;C:\Libraries\32bits\proj-6.1.1\data\sql_filelist.cmake;C:\Libraries\32bits\proj-6.1.1\data\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Libraries\32bits\proj-6.1.1\data\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Libraries/32bits/proj-6.1.1/data/CMakeLists.txt;C:\SUMOLibraries\32bits\proj-6.1.1\data\CMakeLists.txt;C:\SUMOLibraries\32bits\proj-6.1.1\data\sql_filelist.cmake;C:\SUMOLibraries\32bits\proj-6.1.1\data\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\SUMOLibraries\32bits\proj-6.1.1\data\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <None Include="C:\Libraries\32bits\proj-6.1.1\data\CMakeFiles\generate_proj_db" />
+    <None Include="C:\SUMOLibraries\32bits\proj-6.1.1\data\CMakeFiles\generate_proj_db" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Libraries\32bits\proj-6.1.1\ZERO_CHECK.vcxproj">
+    <ProjectReference Include="C:\SUMOLibraries\32bits\proj-6.1.1\ZERO_CHECK.vcxproj">
       <Project>{D4799670-B1B2-3219-A209-A3252A7E5CCA}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Libraries\32bits\proj-6.1.1\data\generate_all_sql_in.vcxproj">
+    <ProjectReference Include="C:\SUMOLibraries\32bits\proj-6.1.1\data\generate_all_sql_in.vcxproj">
       <Project>{6E7CFCB7-3715-31DB-81DD-E80C9E43E941}</Project>
       <Name>generate_all_sql_in</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>

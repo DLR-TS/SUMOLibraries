@@ -32,7 +32,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Libraries\32bits\proj-6.1.1\bin\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\SUMOLibraries\32bits\proj-6.1.1\bin\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cct.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cct</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.exe</TargetExt>
@@ -41,7 +41,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Libraries\32bits\proj-6.1.1\src;C:\Libraries\32bits\proj-6.1.1\include;C:\Libraries\32bits\3rdPartyLibs\sqlite-3.3.0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\32bits\proj-6.1.1\src;C:\SUMOLibraries\32bits\proj-6.1.1\include;C:\SUMOLibraries\32bits\3rdPartyLibs\sqlite-3.3.0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Release/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <DisableSpecificWarnings>4706;4996</DisableSpecificWarnings>
@@ -53,17 +53,17 @@
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level4</WarningLevel>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;PROJ_MSVC_DLL_IMPORT=1;_CRT_SECURE_NO_WARNINGS;HAVE_C99_MATH=1;MUTEX_win32;PROJ_LIB="C:\Libraries\32bits\proj-6.1.1/share/proj";CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;PROJ_MSVC_DLL_IMPORT=1;_CRT_SECURE_NO_WARNINGS;HAVE_C99_MATH=1;MUTEX_win32;PROJ_LIB="C:\SUMOLibraries\32bits\proj-6.1.1/share/proj";CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;PROJ_MSVC_DLL_IMPORT=1;_CRT_SECURE_NO_WARNINGS;HAVE_C99_MATH=1;MUTEX_win32;PROJ_LIB=\"C:\Libraries\32bits\proj-6.1.1/share/proj\";CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Libraries\32bits\proj-6.1.1\src;C:\Libraries\32bits\proj-6.1.1\include;C:\Libraries\32bits\3rdPartyLibs\sqlite-3.3.0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;PROJ_MSVC_DLL_IMPORT=1;_CRT_SECURE_NO_WARNINGS;HAVE_C99_MATH=1;MUTEX_win32;PROJ_LIB=\"C:\SUMOLibraries\32bits\proj-6.1.1/share/proj\";CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\32bits\proj-6.1.1\src;C:\SUMOLibraries\32bits\proj-6.1.1\include;C:\SUMOLibraries\32bits\3rdPartyLibs\sqlite-3.3.0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Libraries\32bits\proj-6.1.1\src;C:\Libraries\32bits\proj-6.1.1\include;C:\Libraries\32bits\3rdPartyLibs\sqlite-3.3.0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\32bits\proj-6.1.1\src;C:\SUMOLibraries\32bits\proj-6.1.1\include;C:\SUMOLibraries\32bits\3rdPartyLibs\sqlite-3.3.0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -71,7 +71,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>..\lib\Release\proj_6_1.lib;C:\Libraries\32bits\3rdPartyLibs\sqlite-3.3.0\sqlite3.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>..\lib\Release\proj_6_1.lib;C:\SUMOLibraries\32bits\3rdPartyLibs\sqlite-3.3.0\sqlite3.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>C:/Libraries/32bits/proj-6.1.1/lib;C:/Libraries/32bits/proj-6.1.1/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:X86 setargv.obj</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -85,7 +85,7 @@
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Libraries\32bits\proj-6.1.1\src\CMakeLists.txt">
+    <CustomBuild Include="C:\SUMOLibraries\32bits\proj-6.1.1\src\CMakeLists.txt">
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Libraries/32bits/proj-6.1.1/src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
 C:\CMake\bin\cmake.exe -SC:/Libraries/32bits/proj-6.1.1 -BC:/Libraries/32bits/proj-6.1.1 --check-stamp-file C:/Libraries/32bits/proj-6.1.1/src/CMakeFiles/generate.stamp
@@ -96,25 +96,25 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Libraries/32bits/proj-6.1.1/src/CMakeLists.txt;C:\CMake\share\cmake-3.14\Modules\CMakeFindJavaCommon.cmake;C:\CMake\share\cmake-3.14\Modules\CheckIncludeFile.cmake;C:\CMake\share\cmake-3.14\Modules\CheckLibraryExists.cmake;C:\CMake\share\cmake-3.14\Modules\CheckSymbolExists.cmake;C:\CMake\share\cmake-3.14\Modules\FindJNI.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.14\Modules\FindThreads.cmake;C:\Libraries\32bits\proj-6.1.1\src\CMakeLists.txt;C:\Libraries\32bits\proj-6.1.1\src\bin_cct.cmake;C:\Libraries\32bits\proj-6.1.1\src\bin_cs2cs.cmake;C:\Libraries\32bits\proj-6.1.1\src\bin_geod.cmake;C:\Libraries\32bits\proj-6.1.1\src\bin_geodtest.cmake;C:\Libraries\32bits\proj-6.1.1\src\bin_gie.cmake;C:\Libraries\32bits\proj-6.1.1\src\bin_proj.cmake;C:\Libraries\32bits\proj-6.1.1\src\bin_projinfo.cmake;C:\Libraries\32bits\proj-6.1.1\src\lib_proj.cmake;C:\Libraries\32bits\proj-6.1.1\src\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Libraries\32bits\proj-6.1.1\src\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Libraries/32bits/proj-6.1.1/src/CMakeLists.txt;C:\CMake\share\cmake-3.14\Modules\CMakeFindJavaCommon.cmake;C:\CMake\share\cmake-3.14\Modules\CheckIncludeFile.cmake;C:\CMake\share\cmake-3.14\Modules\CheckLibraryExists.cmake;C:\CMake\share\cmake-3.14\Modules\CheckSymbolExists.cmake;C:\CMake\share\cmake-3.14\Modules\FindJNI.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.14\Modules\FindThreads.cmake;C:\SUMOLibraries\32bits\proj-6.1.1\src\CMakeLists.txt;C:\SUMOLibraries\32bits\proj-6.1.1\src\bin_cct.cmake;C:\SUMOLibraries\32bits\proj-6.1.1\src\bin_cs2cs.cmake;C:\SUMOLibraries\32bits\proj-6.1.1\src\bin_geod.cmake;C:\SUMOLibraries\32bits\proj-6.1.1\src\bin_geodtest.cmake;C:\SUMOLibraries\32bits\proj-6.1.1\src\bin_gie.cmake;C:\SUMOLibraries\32bits\proj-6.1.1\src\bin_proj.cmake;C:\SUMOLibraries\32bits\proj-6.1.1\src\bin_projinfo.cmake;C:\SUMOLibraries\32bits\proj-6.1.1\src\lib_proj.cmake;C:\SUMOLibraries\32bits\proj-6.1.1\src\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\SUMOLibraries\32bits\proj-6.1.1\src\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Libraries\32bits\proj-6.1.1\src\apps\cct.cpp" />
-    <ClCompile Include="C:\Libraries\32bits\proj-6.1.1\src\apps\proj_strtod.cpp" />
-    <ClInclude Include="C:\Libraries\32bits\proj-6.1.1\src\apps\proj_strtod.h" />
-    <ClInclude Include="C:\Libraries\32bits\proj-6.1.1\src\apps\optargpm.h" />
+    <ClCompile Include="C:\SUMOLibraries\32bits\proj-6.1.1\src\apps\cct.cpp" />
+    <ClCompile Include="C:\SUMOLibraries\32bits\proj-6.1.1\src\apps\proj_strtod.cpp" />
+    <ClInclude Include="C:\SUMOLibraries\32bits\proj-6.1.1\src\apps\proj_strtod.h" />
+    <ClInclude Include="C:\SUMOLibraries\32bits\proj-6.1.1\src\apps\optargpm.h" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Libraries\32bits\proj-6.1.1\ZERO_CHECK.vcxproj">
+    <ProjectReference Include="C:\SUMOLibraries\32bits\proj-6.1.1\ZERO_CHECK.vcxproj">
       <Project>{D4799670-B1B2-3219-A209-A3252A7E5CCA}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Libraries\32bits\proj-6.1.1\src\proj.vcxproj">
+    <ProjectReference Include="C:\SUMOLibraries\32bits\proj-6.1.1\src\proj.vcxproj">
       <Project>{F974C077-1318-331F-9A0B-67F6491F9024}</Project>
       <Name>proj</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>

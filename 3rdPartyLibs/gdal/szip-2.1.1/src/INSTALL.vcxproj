@@ -37,7 +37,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Libraries\3rdPartyLibs\gdal\szip-2.1.1;C:\Libraries\3rdPartyLibs\gdal\szip-2.1.1\src;C:\Libraries\3rdPartyLibs\gdal\szip-2.1.1\bin;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\3rdPartyLibs\gdal\szip-2.1.1;C:\SUMOLibraries\3rdPartyLibs\gdal\szip-2.1.1\src;C:\SUMOLibraries\3rdPartyLibs\gdal\szip-2.1.1\bin;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -58,7 +58,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Libraries\3rdPartyLibs\gdal\szip-2.1.1\CMakeFiles\5c26736e79b885662f3cc664153aaa47\INSTALL_force.rule">
+    <CustomBuild Include="C:\SUMOLibraries\3rdPartyLibs\gdal\szip-2.1.1\CMakeFiles\5c26736e79b885662f3cc664153aaa47\INSTALL_force.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> </Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
 cd .
@@ -70,18 +70,18 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Libraries/3rdPartyLibs/gdal/szip-2.1.1/CMakeFiles/5c26736e79b885662f3cc664153aaa47/INSTALL_force.rule;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Libraries\3rdPartyLibs\gdal\szip-2.1.1\src\CMakeFiles\INSTALL_force</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SUMOLibraries\3rdPartyLibs\gdal\szip-2.1.1\src\CMakeFiles\INSTALL_force</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Libraries\3rdPartyLibs\gdal\szip-2.1.1\ZERO_CHECK.vcxproj">
+    <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\gdal\szip-2.1.1\ZERO_CHECK.vcxproj">
       <Project>{987F1EDC-B7AD-32F1-92F8-445CA41CE6F9}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Libraries\3rdPartyLibs\gdal\szip-2.1.1\src\ALL_BUILD.vcxproj">
+    <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\gdal\szip-2.1.1\src\ALL_BUILD.vcxproj">
       <Project>{AEC5284B-8081-3492-B261-363F140A04F8}</Project>
       <Name>ALL_BUILD</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>

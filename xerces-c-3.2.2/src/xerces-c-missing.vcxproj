@@ -46,7 +46,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Libraries\xerces-c-3.2.2;C:\Libraries\xerces-c-3.2.2\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\xerces-c-3.2.2;C:\SUMOLibraries\xerces-c-3.2.2\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -56,7 +56,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Libraries\xerces-c-3.2.2;C:\Libraries\xerces-c-3.2.2\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\xerces-c-3.2.2;C:\SUMOLibraries\xerces-c-3.2.2\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -65,7 +65,7 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Libraries\xerces-c-3.2.2\src\CMakeLists.txt">
+    <CustomBuild Include="C:\SUMOLibraries\xerces-c-3.2.2\src\CMakeLists.txt">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Libraries/xerces-c-3.2.2/src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
 C:\CMake\bin\cmake.exe -SC:/Libraries/xerces-c-3.2.2 -BC:/Libraries/xerces-c-3.2.2 --check-stamp-file C:/Libraries/xerces-c-3.2.2/src/CMakeFiles/generate.stamp
@@ -76,8 +76,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\CMake\share\cmake-3.15\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\CMake\share\cmake-3.15\Modules\CMakePackageConfigHelpers.cmake;C:\CMake\share\cmake-3.15\Modules\WriteBasicConfigVersionFile.cmake;C:\Libraries\xerces-c-3.2.2\src\XercesCConfig.cmake.in;C:\Libraries\xerces-c-3.2.2\src\xercesc\util\version.rc.cmake.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Libraries\xerces-c-3.2.2\src\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\CMake\share\cmake-3.15\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\CMake\share\cmake-3.15\Modules\CMakePackageConfigHelpers.cmake;C:\CMake\share\cmake-3.15\Modules\WriteBasicConfigVersionFile.cmake;C:\SUMOLibraries\xerces-c-3.2.2\src\XercesCConfig.cmake.in;C:\SUMOLibraries\xerces-c-3.2.2\src\xercesc\util\version.rc.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SUMOLibraries\xerces-c-3.2.2\src\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Libraries/xerces-c-3.2.2/src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
@@ -89,23 +89,23 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\CMake\share\cmake-3.15\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\CMake\share\cmake-3.15\Modules\CMakePackageConfigHelpers.cmake;C:\CMake\share\cmake-3.15\Modules\WriteBasicConfigVersionFile.cmake;C:\Libraries\xerces-c-3.2.2\src\XercesCConfig.cmake.in;C:\Libraries\xerces-c-3.2.2\src\xercesc\util\version.rc.cmake.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Libraries\xerces-c-3.2.2\src\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\CMake\share\cmake-3.15\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\CMake\share\cmake-3.15\Modules\CMakePackageConfigHelpers.cmake;C:\CMake\share\cmake-3.15\Modules\WriteBasicConfigVersionFile.cmake;C:\SUMOLibraries\xerces-c-3.2.2\src\XercesCConfig.cmake.in;C:\SUMOLibraries\xerces-c-3.2.2\src\xercesc\util\version.rc.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SUMOLibraries\xerces-c-3.2.2\src\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <None Include="C:\Libraries\xerces-c-3.2.2\src\stricmp.c" />
-    <None Include="C:\Libraries\xerces-c-3.2.2\src\stricmp.h" />
-    <None Include="C:\Libraries\xerces-c-3.2.2\src\strnicmp.c" />
-    <None Include="C:\Libraries\xerces-c-3.2.2\src\strnicmp.h" />
-    <None Include="C:\Libraries\xerces-c-3.2.2\src\towlower.c" />
-    <None Include="C:\Libraries\xerces-c-3.2.2\src\towlower.h" />
-    <None Include="C:\Libraries\xerces-c-3.2.2\src\towupper.c" />
-    <None Include="C:\Libraries\xerces-c-3.2.2\src\towupper.h" />
+    <None Include="C:\SUMOLibraries\xerces-c-3.2.2\src\stricmp.c" />
+    <None Include="C:\SUMOLibraries\xerces-c-3.2.2\src\stricmp.h" />
+    <None Include="C:\SUMOLibraries\xerces-c-3.2.2\src\strnicmp.c" />
+    <None Include="C:\SUMOLibraries\xerces-c-3.2.2\src\strnicmp.h" />
+    <None Include="C:\SUMOLibraries\xerces-c-3.2.2\src\towlower.c" />
+    <None Include="C:\SUMOLibraries\xerces-c-3.2.2\src\towlower.h" />
+    <None Include="C:\SUMOLibraries\xerces-c-3.2.2\src\towupper.c" />
+    <None Include="C:\SUMOLibraries\xerces-c-3.2.2\src\towupper.h" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Libraries\xerces-c-3.2.2\ZERO_CHECK.vcxproj">
+    <ProjectReference Include="C:\SUMOLibraries\xerces-c-3.2.2\ZERO_CHECK.vcxproj">
       <Project>{CB06D0C5-6B99-3277-AC49-80F244849E8A}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>

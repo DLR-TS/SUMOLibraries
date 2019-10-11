@@ -1,407 +1,407 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\any_lite.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\any_lite.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\arena.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\arena.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\extension_set.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\extension_set.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\generated_enum_util.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\generated_enum_util.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\generated_message_table_driven_lite.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\generated_message_table_driven_lite.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\generated_message_util.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\generated_message_util.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\implicit_weak_message.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\implicit_weak_message.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\io\coded_stream.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\io\coded_stream.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\io\io_win32.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\io\io_win32.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\io\strtod.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\io\strtod.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\io\zero_copy_stream.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\io\zero_copy_stream.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\io\zero_copy_stream_impl.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\io\zero_copy_stream_impl.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\io\zero_copy_stream_impl_lite.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\io\zero_copy_stream_impl_lite.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\message_lite.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\message_lite.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\parse_context.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\parse_context.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\repeated_field.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\repeated_field.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\stubs\bytestream.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\stubs\bytestream.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\stubs\common.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\stubs\common.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\stubs\int128.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\stubs\int128.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\stubs\status.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\stubs\status.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\stubs\statusor.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\stubs\statusor.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\stubs\stringpiece.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\stubs\stringpiece.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\stubs\stringprintf.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\stubs\stringprintf.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\stubs\structurally_valid.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\stubs\structurally_valid.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\stubs\strutil.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\stubs\strutil.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\stubs\time.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\stubs\time.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\wire_format_lite.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\wire_format_lite.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\any.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\any.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\any.pb.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\any.pb.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\api.pb.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\api.pb.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\importer.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\importer.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\parser.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\parser.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\descriptor.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\descriptor.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\descriptor.pb.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\descriptor.pb.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\descriptor_database.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\descriptor_database.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\duration.pb.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\duration.pb.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\dynamic_message.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\dynamic_message.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\empty.pb.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\empty.pb.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\extension_set_heavy.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\extension_set_heavy.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\field_mask.pb.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\field_mask.pb.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\generated_message_reflection.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\generated_message_reflection.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\generated_message_table_driven.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\generated_message_table_driven.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\io\gzip_stream.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\io\gzip_stream.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\io\printer.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\io\printer.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\io\tokenizer.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\io\tokenizer.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\map_field.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\map_field.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\message.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\message.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\reflection_ops.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\reflection_ops.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\service.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\service.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\source_context.pb.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\source_context.pb.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\struct.pb.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\struct.pb.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\stubs\mathlimits.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\stubs\mathlimits.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\stubs\substitute.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\stubs\substitute.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\text_format.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\text_format.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\timestamp.pb.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\timestamp.pb.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\type.pb.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\type.pb.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\unknown_field_set.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\unknown_field_set.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\delimited_message_util.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\delimited_message_util.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\field_comparator.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\field_comparator.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\field_mask_util.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\field_mask_util.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\datapiece.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\datapiece.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\default_value_objectwriter.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\default_value_objectwriter.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\error_listener.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\error_listener.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\field_mask_utility.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\field_mask_utility.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\json_escaping.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\json_escaping.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\json_objectwriter.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\json_objectwriter.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\json_stream_parser.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\json_stream_parser.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\object_writer.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\object_writer.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\proto_writer.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\proto_writer.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\protostream_objectsource.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\protostream_objectsource.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\protostream_objectwriter.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\protostream_objectwriter.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\type_info.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\type_info.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\type_info_test_helper.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\type_info_test_helper.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\utility.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\utility.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\json_util.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\json_util.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\message_differencer.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\message_differencer.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\time_util.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\time_util.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\type_resolver_util.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\type_resolver_util.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\wire_format.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\wire_format.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\wrappers.pb.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\wrappers.pb.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\any.h">
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\any.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\any.pb.h">
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\any.pb.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\api.pb.h">
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\api.pb.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\importer.h">
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\importer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\parser.h">
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\compiler\parser.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\descriptor.h">
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\descriptor.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\descriptor.pb.h">
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\descriptor.pb.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\descriptor_database.h">
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\descriptor_database.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\duration.pb.h">
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\duration.pb.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\dynamic_message.h">
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\dynamic_message.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\empty.pb.h">
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\empty.pb.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\field_mask.pb.h">
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\field_mask.pb.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\generated_message_reflection.h">
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\generated_message_reflection.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\io\gzip_stream.h">
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\io\gzip_stream.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\io\printer.h">
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\io\printer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\io\tokenizer.h">
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\io\tokenizer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\map_field.h">
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\map_field.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\message.h">
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\message.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\reflection_ops.h">
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\reflection_ops.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\service.h">
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\service.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\source_context.pb.h">
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\source_context.pb.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\struct.pb.h">
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\struct.pb.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\stubs\mathlimits.h">
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\stubs\mathlimits.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\stubs\substitute.h">
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\stubs\substitute.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\text_format.h">
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\text_format.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\timestamp.pb.h">
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\timestamp.pb.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\type.pb.h">
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\type.pb.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\unknown_field_set.h">
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\unknown_field_set.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\delimited_message_util.h">
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\delimited_message_util.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\field_comparator.h">
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\field_comparator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\field_mask_util.h">
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\field_mask_util.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\datapiece.h">
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\datapiece.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\default_value_objectwriter.h">
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\default_value_objectwriter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\error_listener.h">
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\error_listener.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\field_mask_utility.h">
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\field_mask_utility.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\json_escaping.h">
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\json_escaping.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\json_objectwriter.h">
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\json_objectwriter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\json_stream_parser.h">
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\json_stream_parser.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\object_writer.h">
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\object_writer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\proto_writer.h">
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\proto_writer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\protostream_objectsource.h">
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\protostream_objectsource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\protostream_objectwriter.h">
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\protostream_objectwriter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\type_info.h">
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\type_info.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\type_info_test_helper.h">
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\type_info_test_helper.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\utility.h">
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\internal\utility.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\json_util.h">
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\json_util.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\message_differencer.h">
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\message_differencer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\time_util.h">
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\time_util.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\type_resolver_util.h">
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\util\type_resolver_util.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\wire_format.h">
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\wire_format.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\wrappers.pb.h">
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\wrappers.pb.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\CMakeLists.txt" />
+    <CustomBuild Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\build\version.rc">
+    <ResourceCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake\build\version.rc">
       <Filter>Source Files</Filter>
     </ResourceCompile>
   </ItemGroup>

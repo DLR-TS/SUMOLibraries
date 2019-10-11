@@ -36,7 +36,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Libraries\32bits\proj-6.1.1\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\32bits\proj-6.1.1\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -45,7 +45,7 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Libraries\32bits\proj-6.1.1\CMakeLists.txt">
+    <CustomBuild Include="C:\SUMOLibraries\32bits\proj-6.1.1\CMakeLists.txt">
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Libraries/32bits/proj-6.1.1/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
 C:\CMake\bin\cmake.exe -SC:/Libraries/32bits/proj-6.1.1 -BC:/Libraries/32bits/proj-6.1.1 --check-stamp-file C:/Libraries/32bits/proj-6.1.1/CMakeFiles/generate.stamp
@@ -56,111 +56,111 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Libraries/32bits/proj-6.1.1/CMakeLists.txt;C:\CMake\share\cmake-3.14\Modules\CMakeCCompiler.cmake.in;C:\CMake\share\cmake-3.14\Modules\CMakeCCompilerABI.c;C:\CMake\share\cmake-3.14\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeCXXCompiler.cmake.in;C:\CMake\share\cmake-3.14\Modules\CMakeCXXCompilerABI.cpp;C:\CMake\share\cmake-3.14\Modules\CMakeCXXInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeCompilerIdDetection.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeDetermineCCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeDetermineCXXCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeDetermineCompileFeatures.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeDetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeDetermineCompilerABI.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeDetermineCompilerId.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeDetermineRCCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeDetermineSystem.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeFindBinUtils.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeParseArguments.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeParseImplicitLinkInfo.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeRCCompiler.cmake.in;C:\CMake\share\cmake-3.14\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystem.cmake.in;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeTestCCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeTestCXXCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeTestCompilerCommon.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeTestRCCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\CheckCSourceCompiles.cmake;C:\CMake\share\cmake-3.14\Modules\CheckFunctionExists.cmake;C:\CMake\share\cmake-3.14\Modules\CheckIncludeFile.cmake;C:\CMake\share\cmake-3.14\Modules\CheckIncludeFiles.cmake;C:\CMake\share\cmake-3.14\Modules\CheckLibraryExists.cmake;C:\CMake\share\cmake-3.14\Modules\CheckSymbolExists.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\MIPSpro-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\MSVC-C-FeatureTests.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\MSVC-C.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\MSVC-CXX-FeatureTests.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\MSVC-CXX.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\TI-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\CompilerId\VS-10.vcxproj.in;C:\CMake\share\cmake-3.14\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.14\Modules\FindThreads.cmake;C:\CMake\share\cmake-3.14\Modules\Internal\FeatureTesting.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-Determine-CXX.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-CXX.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\WindowsPaths.cmake;C:\Libraries\32bits\proj-6.1.1\CMakeFiles\3.14.1\CMakeCCompiler.cmake;C:\Libraries\32bits\proj-6.1.1\CMakeFiles\3.14.1\CMakeCXXCompiler.cmake;C:\Libraries\32bits\proj-6.1.1\CMakeFiles\3.14.1\CMakeRCCompiler.cmake;C:\Libraries\32bits\proj-6.1.1\CMakeFiles\3.14.1\CMakeSystem.cmake;C:\Libraries\32bits\proj-6.1.1\CMakeFiles\feature_tests.c;C:\Libraries\32bits\proj-6.1.1\CMakeFiles\feature_tests.cxx;C:\Libraries\32bits\proj-6.1.1\CMakeLists.txt;C:\Libraries\32bits\proj-6.1.1\cmake\FindSqlite3.cmake;C:\Libraries\32bits\proj-6.1.1\cmake\ProjConfig.cmake;C:\Libraries\32bits\proj-6.1.1\cmake\ProjInstallPath.cmake;C:\Libraries\32bits\proj-6.1.1\cmake\ProjMac.cmake;C:\Libraries\32bits\proj-6.1.1\cmake\ProjSystemInfo.cmake;C:\Libraries\32bits\proj-6.1.1\cmake\ProjTest.cmake;C:\Libraries\32bits\proj-6.1.1\cmake\ProjUtilities.cmake;C:\Libraries\32bits\proj-6.1.1\cmake\ProjVersion.cmake;C:\Libraries\32bits\proj-6.1.1\cmake\policies.cmake;C:\Libraries\32bits\proj-6.1.1\cmake\proj_config.cmake.in;C:\Libraries\32bits\proj-6.1.1\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Libraries\32bits\proj-6.1.1\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Libraries/32bits/proj-6.1.1/CMakeLists.txt;C:\CMake\share\cmake-3.14\Modules\CMakeCCompiler.cmake.in;C:\CMake\share\cmake-3.14\Modules\CMakeCCompilerABI.c;C:\CMake\share\cmake-3.14\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeCXXCompiler.cmake.in;C:\CMake\share\cmake-3.14\Modules\CMakeCXXCompilerABI.cpp;C:\CMake\share\cmake-3.14\Modules\CMakeCXXInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeCompilerIdDetection.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeDetermineCCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeDetermineCXXCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeDetermineCompileFeatures.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeDetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeDetermineCompilerABI.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeDetermineCompilerId.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeDetermineRCCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeDetermineSystem.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeFindBinUtils.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeParseArguments.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeParseImplicitLinkInfo.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeRCCompiler.cmake.in;C:\CMake\share\cmake-3.14\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystem.cmake.in;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeTestCCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeTestCXXCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeTestCompilerCommon.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeTestRCCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\CheckCSourceCompiles.cmake;C:\CMake\share\cmake-3.14\Modules\CheckFunctionExists.cmake;C:\CMake\share\cmake-3.14\Modules\CheckIncludeFile.cmake;C:\CMake\share\cmake-3.14\Modules\CheckIncludeFiles.cmake;C:\CMake\share\cmake-3.14\Modules\CheckLibraryExists.cmake;C:\CMake\share\cmake-3.14\Modules\CheckSymbolExists.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\MIPSpro-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\MSVC-C-FeatureTests.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\MSVC-C.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\MSVC-CXX-FeatureTests.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\MSVC-CXX.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\TI-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.14\Modules\CompilerId\VS-10.vcxproj.in;C:\CMake\share\cmake-3.14\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.14\Modules\FindThreads.cmake;C:\CMake\share\cmake-3.14\Modules\Internal\FeatureTesting.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-Determine-CXX.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-CXX.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\WindowsPaths.cmake;C:\SUMOLibraries\32bits\proj-6.1.1\CMakeFiles\3.14.1\CMakeCCompiler.cmake;C:\SUMOLibraries\32bits\proj-6.1.1\CMakeFiles\3.14.1\CMakeCXXCompiler.cmake;C:\SUMOLibraries\32bits\proj-6.1.1\CMakeFiles\3.14.1\CMakeRCCompiler.cmake;C:\SUMOLibraries\32bits\proj-6.1.1\CMakeFiles\3.14.1\CMakeSystem.cmake;C:\SUMOLibraries\32bits\proj-6.1.1\CMakeFiles\feature_tests.c;C:\SUMOLibraries\32bits\proj-6.1.1\CMakeFiles\feature_tests.cxx;C:\SUMOLibraries\32bits\proj-6.1.1\CMakeLists.txt;C:\SUMOLibraries\32bits\proj-6.1.1\cmake\FindSqlite3.cmake;C:\SUMOLibraries\32bits\proj-6.1.1\cmake\ProjConfig.cmake;C:\SUMOLibraries\32bits\proj-6.1.1\cmake\ProjInstallPath.cmake;C:\SUMOLibraries\32bits\proj-6.1.1\cmake\ProjMac.cmake;C:\SUMOLibraries\32bits\proj-6.1.1\cmake\ProjSystemInfo.cmake;C:\SUMOLibraries\32bits\proj-6.1.1\cmake\ProjTest.cmake;C:\SUMOLibraries\32bits\proj-6.1.1\cmake\ProjUtilities.cmake;C:\SUMOLibraries\32bits\proj-6.1.1\cmake\ProjVersion.cmake;C:\SUMOLibraries\32bits\proj-6.1.1\cmake\policies.cmake;C:\SUMOLibraries\32bits\proj-6.1.1\cmake\proj_config.cmake.in;C:\SUMOLibraries\32bits\proj-6.1.1\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\SUMOLibraries\32bits\proj-6.1.1\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Libraries\32bits\proj-6.1.1\ZERO_CHECK.vcxproj">
+    <ProjectReference Include="C:\SUMOLibraries\32bits\proj-6.1.1\ZERO_CHECK.vcxproj">
       <Project>{D4799670-B1B2-3219-A209-A3252A7E5CCA}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Libraries\32bits\proj-6.1.1\src\binproj.vcxproj">
+    <ProjectReference Include="C:\SUMOLibraries\32bits\proj-6.1.1\src\binproj.vcxproj">
       <Project>{8546C18D-71AD-3591-B12C-E02B6DD200DF}</Project>
       <Name>binproj</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Libraries\32bits\proj-6.1.1\src\binprojinfo.vcxproj">
+    <ProjectReference Include="C:\SUMOLibraries\32bits\proj-6.1.1\src\binprojinfo.vcxproj">
       <Project>{4DDFF9B6-1BCE-323B-9183-E1C0FCDA35AD}</Project>
       <Name>binprojinfo</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Libraries\32bits\proj-6.1.1\src\cct.vcxproj">
+    <ProjectReference Include="C:\SUMOLibraries\32bits\proj-6.1.1\src\cct.vcxproj">
       <Project>{E998C28C-A018-3193-A6E3-6F9789B14AC4}</Project>
       <Name>cct</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Libraries\32bits\proj-6.1.1\src\cs2cs.vcxproj">
+    <ProjectReference Include="C:\SUMOLibraries\32bits\proj-6.1.1\src\cs2cs.vcxproj">
       <Project>{EC18C514-408B-36B3-80B5-DDD33A89F62E}</Project>
       <Name>cs2cs</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Libraries\32bits\proj-6.1.1\data\generate_all_sql_in.vcxproj">
+    <ProjectReference Include="C:\SUMOLibraries\32bits\proj-6.1.1\data\generate_all_sql_in.vcxproj">
       <Project>{6E7CFCB7-3715-31DB-81DD-E80C9E43E941}</Project>
       <Name>generate_all_sql_in</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Libraries\32bits\proj-6.1.1\data\generate_proj_db.vcxproj">
+    <ProjectReference Include="C:\SUMOLibraries\32bits\proj-6.1.1\data\generate_proj_db.vcxproj">
       <Project>{95CC120A-9E57-3575-B6F4-3ED9019EA5F4}</Project>
       <Name>generate_proj_db</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Libraries\32bits\proj-6.1.1\src\geod.vcxproj">
+    <ProjectReference Include="C:\SUMOLibraries\32bits\proj-6.1.1\src\geod.vcxproj">
       <Project>{50362518-7E4E-37D1-971E-5DC8AA23B64E}</Project>
       <Name>geod</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Libraries\32bits\proj-6.1.1\src\geodtest.vcxproj">
+    <ProjectReference Include="C:\SUMOLibraries\32bits\proj-6.1.1\src\geodtest.vcxproj">
       <Project>{B8B39487-0E17-377F-8A35-E27AAD7F0513}</Project>
       <Name>geodtest</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Libraries\32bits\proj-6.1.1\src\gie.vcxproj">
+    <ProjectReference Include="C:\SUMOLibraries\32bits\proj-6.1.1\src\gie.vcxproj">
       <Project>{6C7A3137-386D-37C7-BB45-A9D77DCEBF62}</Project>
       <Name>gie</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Libraries\32bits\proj-6.1.1\test\unit\gie_self_tests.vcxproj">
+    <ProjectReference Include="C:\SUMOLibraries\32bits\proj-6.1.1\test\unit\gie_self_tests.vcxproj">
       <Project>{08ED72FD-5F62-3903-8F08-ADA5590700EE}</Project>
       <Name>gie_self_tests</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Libraries\32bits\proj-6.1.1\src\proj.vcxproj">
+    <ProjectReference Include="C:\SUMOLibraries\32bits\proj-6.1.1\src\proj.vcxproj">
       <Project>{F974C077-1318-331F-9A0B-67F6491F9024}</Project>
       <Name>proj</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Libraries\32bits\proj-6.1.1\test\unit\proj_angular_io_test.vcxproj">
+    <ProjectReference Include="C:\SUMOLibraries\32bits\proj-6.1.1\test\unit\proj_angular_io_test.vcxproj">
       <Project>{F1D7387C-2BC6-32D0-A8A6-3B888219888C}</Project>
       <Name>proj_angular_io_test</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Libraries\32bits\proj-6.1.1\test\unit\proj_context_test.vcxproj">
+    <ProjectReference Include="C:\SUMOLibraries\32bits\proj-6.1.1\test\unit\proj_context_test.vcxproj">
       <Project>{4BD237F2-63C1-3E79-8F92-C01B754A43E2}</Project>
       <Name>proj_context_test</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Libraries\32bits\proj-6.1.1\test\unit\proj_errno_string_test.vcxproj">
+    <ProjectReference Include="C:\SUMOLibraries\32bits\proj-6.1.1\test\unit\proj_errno_string_test.vcxproj">
       <Project>{5A7C6B4F-6212-3BE0-9CD4-94256B06C126}</Project>
       <Name>proj_errno_string_test</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Libraries\32bits\proj-6.1.1\test\unit\proj_pj_transform_test.vcxproj">
+    <ProjectReference Include="C:\SUMOLibraries\32bits\proj-6.1.1\test\unit\proj_pj_transform_test.vcxproj">
       <Project>{53C4F750-A81E-345D-A448-02300953B51C}</Project>
       <Name>proj_pj_transform_test</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Libraries\32bits\proj-6.1.1\test\unit\proj_test_cpp_api.vcxproj">
+    <ProjectReference Include="C:\SUMOLibraries\32bits\proj-6.1.1\test\unit\proj_test_cpp_api.vcxproj">
       <Project>{477F84B0-4E87-34DD-A7ED-C12929494AEB}</Project>
       <Name>proj_test_cpp_api</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>

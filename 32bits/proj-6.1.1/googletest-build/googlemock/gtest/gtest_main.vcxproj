@@ -32,14 +32,14 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Libraries\32bits\proj-6.1.1\lib\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\SUMOLibraries\32bits\proj-6.1.1\lib\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">gtest_main.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">gtest_main</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.lib</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Libraries\32bits\proj-6.1.1\src;C:\Libraries\32bits\proj-6.1.1\googletest-src\googletest\include;C:\Libraries\32bits\proj-6.1.1\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\32bits\proj-6.1.1\src;C:\SUMOLibraries\32bits\proj-6.1.1\googletest-src\googletest\include;C:\SUMOLibraries\32bits\proj-6.1.1\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) -J</AdditionalOptions>
       <AssemblerListingLocation>Release/</AssemblerListingLocation>
       <BufferSecurityCheck>true</BufferSecurityCheck>
@@ -61,10 +61,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_UNICODE;UNICODE;_WIN32;STRICT;WIN32_LEAN_AND_MEAN;GTEST_HAS_PTHREAD=0;_HAS_EXCEPTIONS=1;_CRT_SECURE_NO_WARNINGS;HAVE_C99_MATH=1;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Libraries\32bits\proj-6.1.1\src;C:\Libraries\32bits\proj-6.1.1\googletest-src\googletest\include;C:\Libraries\32bits\proj-6.1.1\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\32bits\proj-6.1.1\src;C:\SUMOLibraries\32bits\proj-6.1.1\googletest-src\googletest\include;C:\SUMOLibraries\32bits\proj-6.1.1\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Libraries\32bits\proj-6.1.1\src;C:\Libraries\32bits\proj-6.1.1\googletest-src\googletest\include;C:\Libraries\32bits\proj-6.1.1\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\32bits\proj-6.1.1\src;C:\SUMOLibraries\32bits\proj-6.1.1\googletest-src\googletest\include;C:\SUMOLibraries\32bits\proj-6.1.1\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -76,7 +76,7 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Libraries\32bits\proj-6.1.1\googletest-src\googletest\CMakeLists.txt">
+    <CustomBuild Include="C:\SUMOLibraries\32bits\proj-6.1.1\googletest-src\googletest\CMakeLists.txt">
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Libraries/32bits/proj-6.1.1/googletest-src/googletest/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
 C:\CMake\bin\cmake.exe -SC:/Libraries/32bits/proj-6.1.1 -BC:/Libraries/32bits/proj-6.1.1 --check-stamp-file C:/Libraries/32bits/proj-6.1.1/googletest-build/googlemock/gtest/CMakeFiles/generate.stamp
@@ -87,22 +87,22 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Libraries/32bits/proj-6.1.1/googletest-src/googletest/CMakeLists.txt;C:\CMake\share\cmake-3.14\Modules\CheckIncludeFile.cmake;C:\CMake\share\cmake-3.14\Modules\CheckLibraryExists.cmake;C:\CMake\share\cmake-3.14\Modules\CheckSymbolExists.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.14\Modules\FindPythonInterp.cmake;C:\CMake\share\cmake-3.14\Modules\FindThreads.cmake;C:\Libraries\32bits\proj-6.1.1\googletest-src\googletest\CMakeLists.txt;C:\Libraries\32bits\proj-6.1.1\googletest-src\googletest\cmake\internal_utils.cmake;C:\Libraries\32bits\proj-6.1.1\googletest-src\googletest\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Libraries\32bits\proj-6.1.1\googletest-build\googlemock\gtest\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Libraries/32bits/proj-6.1.1/googletest-src/googletest/CMakeLists.txt;C:\CMake\share\cmake-3.14\Modules\CheckIncludeFile.cmake;C:\CMake\share\cmake-3.14\Modules\CheckLibraryExists.cmake;C:\CMake\share\cmake-3.14\Modules\CheckSymbolExists.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.14\Modules\FindPythonInterp.cmake;C:\CMake\share\cmake-3.14\Modules\FindThreads.cmake;C:\SUMOLibraries\32bits\proj-6.1.1\googletest-src\googletest\CMakeLists.txt;C:\SUMOLibraries\32bits\proj-6.1.1\googletest-src\googletest\cmake\internal_utils.cmake;C:\SUMOLibraries\32bits\proj-6.1.1\googletest-src\googletest\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\SUMOLibraries\32bits\proj-6.1.1\googletest-build\googlemock\gtest\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Libraries\32bits\proj-6.1.1\googletest-src\googletest\src\gtest_main.cc" />
+    <ClCompile Include="C:\SUMOLibraries\32bits\proj-6.1.1\googletest-src\googletest\src\gtest_main.cc" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Libraries\32bits\proj-6.1.1\ZERO_CHECK.vcxproj">
+    <ProjectReference Include="C:\SUMOLibraries\32bits\proj-6.1.1\ZERO_CHECK.vcxproj">
       <Project>{D4799670-B1B2-3219-A209-A3252A7E5CCA}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Libraries\32bits\proj-6.1.1\googletest-build\googlemock\gtest\gtest.vcxproj">
+    <ProjectReference Include="C:\SUMOLibraries\32bits\proj-6.1.1\googletest-build\googlemock\gtest\gtest.vcxproj">
       <Project>{227CC192-7F42-3D64-ABA7-20CE8C0F8AA7}</Project>
       <Name>gtest</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
