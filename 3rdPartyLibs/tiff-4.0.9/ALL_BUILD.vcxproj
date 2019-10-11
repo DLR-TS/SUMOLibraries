@@ -14,8 +14,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{0C7C31A8-1EA2-347A-A87B-0F6E841F169B}</ProjectGuid>
-    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <ProjectGuid>{6F0A20A4-45C9-3656-96E3-334781833472}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
     <Platform>x64</Platform>
     <ProjectName>ALL_BUILD</ProjectName>
@@ -76,7 +76,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/CMakeLists.txt;C:\CMake\share\cmake-3.14\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeCXXInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.14\Modules\CheckCCompilerFlag.cmake;C:\CMake\share\cmake-3.14\Modules\CheckCSourceCompiles.cmake;C:\CMake\share\cmake-3.14\Modules\CheckFunctionExists.cmake;C:\CMake\share\cmake-3.14\Modules\CheckIncludeFile.cmake;C:\CMake\share\cmake-3.14\Modules\CheckIncludeFileCXX.cmake;C:\CMake\share\cmake-3.14\Modules\CheckTypeSize.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\MSVC-C.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\MSVC-CXX.cmake;C:\CMake\share\cmake-3.14\Modules\FindGLUT.cmake;C:\CMake\share\cmake-3.14\Modules\FindJPEG.cmake;C:\CMake\share\cmake-3.14\Modules\FindLibLZMA.cmake;C:\CMake\share\cmake-3.14\Modules\FindOpenGL.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.14\Modules\FindZLIB.cmake;C:\CMake\share\cmake-3.14\Modules\GNUInstallDirs.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-CXX.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.14\Modules\SelectLibraryConfigurations.cmake;C:\CMake\share\cmake-3.14\Modules\TestBigEndian.cmake;C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\CMakeFiles\3.14.1\CMakeCCompiler.cmake;C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\CMakeFiles\3.14.1\CMakeCXXCompiler.cmake;C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\CMakeFiles\3.14.1\CMakeRCCompiler.cmake;C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\CMakeFiles\3.14.1\CMakeSystem.cmake;C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\CMakeLists.txt;C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\libtiff-4.pc.in;C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\CMake\share\cmake-3.15\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeCXXInformation.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.15\Modules\CheckCCompilerFlag.cmake;C:\CMake\share\cmake-3.15\Modules\CheckCSourceCompiles.cmake;C:\CMake\share\cmake-3.15\Modules\CheckFunctionExists.cmake;C:\CMake\share\cmake-3.15\Modules\CheckIncludeFile.cmake;C:\CMake\share\cmake-3.15\Modules\CheckIncludeFileCXX.cmake;C:\CMake\share\cmake-3.15\Modules\CheckTypeSize.cmake;C:\CMake\share\cmake-3.15\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\CMake\share\cmake-3.15\Modules\Compiler\MSVC-C.cmake;C:\CMake\share\cmake-3.15\Modules\Compiler\MSVC-CXX.cmake;C:\CMake\share\cmake-3.15\Modules\FindGLUT.cmake;C:\CMake\share\cmake-3.15\Modules\FindJPEG.cmake;C:\CMake\share\cmake-3.15\Modules\FindLibLZMA.cmake;C:\CMake\share\cmake-3.15\Modules\FindOpenGL.cmake;C:\CMake\share\cmake-3.15\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.15\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.15\Modules\FindZLIB.cmake;C:\CMake\share\cmake-3.15\Modules\GNUInstallDirs.cmake;C:\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC-CXX.cmake;C:\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.15\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.15\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.15\Modules\SelectLibraryConfigurations.cmake;C:\CMake\share\cmake-3.15\Modules\TestBigEndian.cmake;C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\CMakeFiles\3.15.4\CMakeCCompiler.cmake;C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\CMakeFiles\3.15.4\CMakeCXXCompiler.cmake;C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\CMakeFiles\3.15.4\CMakeRCCompiler.cmake;C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\CMakeFiles\3.15.4\CMakeSystem.cmake;C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\libtiff-4.pc.in;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/CMakeLists.txt</Message>
@@ -89,7 +89,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/CMakeLists.txt;C:\CMake\share\cmake-3.14\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeCXXInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.14\Modules\CheckCCompilerFlag.cmake;C:\CMake\share\cmake-3.14\Modules\CheckCSourceCompiles.cmake;C:\CMake\share\cmake-3.14\Modules\CheckFunctionExists.cmake;C:\CMake\share\cmake-3.14\Modules\CheckIncludeFile.cmake;C:\CMake\share\cmake-3.14\Modules\CheckIncludeFileCXX.cmake;C:\CMake\share\cmake-3.14\Modules\CheckTypeSize.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\MSVC-C.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\MSVC-CXX.cmake;C:\CMake\share\cmake-3.14\Modules\FindGLUT.cmake;C:\CMake\share\cmake-3.14\Modules\FindJPEG.cmake;C:\CMake\share\cmake-3.14\Modules\FindLibLZMA.cmake;C:\CMake\share\cmake-3.14\Modules\FindOpenGL.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.14\Modules\FindZLIB.cmake;C:\CMake\share\cmake-3.14\Modules\GNUInstallDirs.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-CXX.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.14\Modules\SelectLibraryConfigurations.cmake;C:\CMake\share\cmake-3.14\Modules\TestBigEndian.cmake;C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\CMakeFiles\3.14.1\CMakeCCompiler.cmake;C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\CMakeFiles\3.14.1\CMakeCXXCompiler.cmake;C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\CMakeFiles\3.14.1\CMakeRCCompiler.cmake;C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\CMakeFiles\3.14.1\CMakeSystem.cmake;C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\CMakeLists.txt;C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\libtiff-4.pc.in;C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\CMake\share\cmake-3.15\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeCXXInformation.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.15\Modules\CheckCCompilerFlag.cmake;C:\CMake\share\cmake-3.15\Modules\CheckCSourceCompiles.cmake;C:\CMake\share\cmake-3.15\Modules\CheckFunctionExists.cmake;C:\CMake\share\cmake-3.15\Modules\CheckIncludeFile.cmake;C:\CMake\share\cmake-3.15\Modules\CheckIncludeFileCXX.cmake;C:\CMake\share\cmake-3.15\Modules\CheckTypeSize.cmake;C:\CMake\share\cmake-3.15\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\CMake\share\cmake-3.15\Modules\Compiler\MSVC-C.cmake;C:\CMake\share\cmake-3.15\Modules\Compiler\MSVC-CXX.cmake;C:\CMake\share\cmake-3.15\Modules\FindGLUT.cmake;C:\CMake\share\cmake-3.15\Modules\FindJPEG.cmake;C:\CMake\share\cmake-3.15\Modules\FindLibLZMA.cmake;C:\CMake\share\cmake-3.15\Modules\FindOpenGL.cmake;C:\CMake\share\cmake-3.15\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.15\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.15\Modules\FindZLIB.cmake;C:\CMake\share\cmake-3.15\Modules\GNUInstallDirs.cmake;C:\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC-CXX.cmake;C:\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.15\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.15\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.15\Modules\SelectLibraryConfigurations.cmake;C:\CMake\share\cmake-3.15\Modules\TestBigEndian.cmake;C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\CMakeFiles\3.15.4\CMakeCCompiler.cmake;C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\CMakeFiles\3.15.4\CMakeCXXCompiler.cmake;C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\CMakeFiles\3.15.4\CMakeRCCompiler.cmake;C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\CMakeFiles\3.15.4\CMakeSystem.cmake;C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\libtiff-4.pc.in;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
     </CustomBuild>
@@ -98,223 +98,223 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\ZERO_CHECK.vcxproj">
-      <Project>{2256C9DE-20A0-3928-B105-BE8E4D3F0032}</Project>
+      <Project>{44CF5BA5-F515-3F09-AED4-370AF2F72998}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
     <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\contrib\addtiffo\addtiffo.vcxproj">
-      <Project>{823972DF-18CC-35FE-92C3-B33F8AAC4585}</Project>
+      <Project>{6D918517-61C5-3335-B1BE-C7454DFF9E20}</Project>
       <Name>addtiffo</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
     <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\test\ascii_tag.vcxproj">
-      <Project>{3261BE11-F18A-37B1-A94A-393403C84493}</Project>
+      <Project>{CA252C43-0A4C-31C4-87DA-8D62A12FADF0}</Project>
       <Name>ascii_tag</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
     <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\test\custom_dir.vcxproj">
-      <Project>{8307B241-7E55-3411-AD7E-A3B04593025F}</Project>
+      <Project>{67A5ECC4-D93C-3E2A-A905-42A2962C6A80}</Project>
       <Name>custom_dir</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
     <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\tools\fax2ps.vcxproj">
-      <Project>{B93EC94F-E094-3DAF-80CE-F6D87B346F63}</Project>
+      <Project>{28131288-2B6F-3955-B726-22869B782D36}</Project>
       <Name>fax2ps</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
     <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\tools\fax2tiff.vcxproj">
-      <Project>{692F4463-3437-3138-A21F-516DF42B1A4F}</Project>
+      <Project>{4C29510D-68C3-33FA-AF50-FE36DE542AF6}</Project>
       <Name>fax2tiff</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
     <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\contrib\iptcutil\iptcutil.vcxproj">
-      <Project>{870D4A97-9E73-3A38-B9ED-070201FDE271}</Project>
+      <Project>{46CCAE7B-8A09-3C08-9341-E738391D8EDE}</Project>
       <Name>iptcutil</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
     <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\test\long_tag.vcxproj">
-      <Project>{590AA789-D9B2-301A-A568-BF2003FFCB9B}</Project>
+      <Project>{C998ABBD-BCA6-3760-A584-82ECDFE34F43}</Project>
       <Name>long_tag</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
     <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\tools\pal2rgb.vcxproj">
-      <Project>{B1030F41-1EA2-3F67-906B-77F66CA68831}</Project>
+      <Project>{F4ED067F-9791-3023-91D3-1BF22755E354}</Project>
       <Name>pal2rgb</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
     <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\port\port.vcxproj">
-      <Project>{1C758415-AE68-312F-96D7-866CC35D5802}</Project>
+      <Project>{E301FD02-DB9F-31C5-9473-D1917FCB8743}</Project>
       <Name>port</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
     <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\tools\ppm2tiff.vcxproj">
-      <Project>{2E4BA286-80AA-3193-B4AE-FD9E289118A6}</Project>
+      <Project>{AAD7D176-8CF8-3CEA-BE15-9EAFCB89626D}</Project>
       <Name>ppm2tiff</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
     <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\tools\raw2tiff.vcxproj">
-      <Project>{581BFB61-D734-3BBB-86B0-22C8300DB5EE}</Project>
+      <Project>{D4C3D4A5-ACAE-359C-A88B-48C043DEF5AF}</Project>
       <Name>raw2tiff</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
     <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\test\raw_decode.vcxproj">
-      <Project>{DC3389A7-69F1-3C38-AD66-940C74C78A39}</Project>
+      <Project>{AAE43178-4C4C-363A-8F7E-70D235BF073F}</Project>
       <Name>raw_decode</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
     <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\test\rewrite.vcxproj">
-      <Project>{2452533A-9454-3E54-B4A6-AE7C5241D2BE}</Project>
+      <Project>{B5FBCB15-FDA7-3789-8F85-F61D7100D490}</Project>
       <Name>rewrite</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
     <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\tools\rgb2ycbcr.vcxproj">
-      <Project>{9CFDE35F-6B3E-3DBB-815C-1DA23EFBF307}</Project>
+      <Project>{BF234B7B-BDDB-31DB-9608-371FD3734B17}</Project>
       <Name>rgb2ycbcr</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
     <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\test\short_tag.vcxproj">
-      <Project>{BA0A81E5-14BE-30A0-B492-30FEEDF40A23}</Project>
+      <Project>{598EAB74-8B10-3981-966B-8D7EB11B2D95}</Project>
       <Name>short_tag</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
     <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\test\strip_rw.vcxproj">
-      <Project>{DE1574F4-623D-36CB-B91C-40951C912D7D}</Project>
+      <Project>{0CB286D2-96A5-3C41-B320-10BA7898867E}</Project>
       <Name>strip_rw</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
     <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\tools\thumbnail.vcxproj">
-      <Project>{CE2336C7-D4F8-3AF3-9C8A-AD2368FDE549}</Project>
+      <Project>{1F0DF45F-577B-3415-B34C-3CA66D81A5AE}</Project>
       <Name>thumbnail</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
     <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\libtiff\tiff.vcxproj">
-      <Project>{F548F1CD-6347-3220-ABBC-5A31DF7CEFD7}</Project>
+      <Project>{0F48724A-D832-371F-BC13-294635E90A67}</Project>
       <Name>tiff</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
     <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\contrib\dbs\tiff-bi.vcxproj">
-      <Project>{458B7C59-5276-3856-A6BF-2A373FB31B94}</Project>
+      <Project>{83836AAB-9CEA-325E-A4E5-0203D6A0D616}</Project>
       <Name>tiff-bi</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
     <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\contrib\dbs\tiff-grayscale.vcxproj">
-      <Project>{BEA20037-E38B-3EE3-8068-9242FE8C5567}</Project>
+      <Project>{80438F95-AA51-3342-8768-E33F39185FA3}</Project>
       <Name>tiff-grayscale</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
     <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\contrib\dbs\tiff-palette.vcxproj">
-      <Project>{886DA7AA-1639-3B17-B1ED-C259B0EE4DC8}</Project>
+      <Project>{4ECF8ECD-3DB8-393D-B30B-339258430438}</Project>
       <Name>tiff-palette</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
     <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\contrib\dbs\tiff-rgb.vcxproj">
-      <Project>{A9A239AF-FC71-34BD-B0C1-5AB2FA8AACB3}</Project>
+      <Project>{7091C9F1-DB1B-352E-ACA3-B84B30D9EB39}</Project>
       <Name>tiff-rgb</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
     <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\tools\tiff2bw.vcxproj">
-      <Project>{CE159DBE-6AB4-37DC-932C-EEC94815C7EA}</Project>
+      <Project>{9DC35514-6CF1-33E8-8959-B92AF7E61B62}</Project>
       <Name>tiff2bw</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
     <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\tools\tiff2pdf.vcxproj">
-      <Project>{85C6DFD1-AEFD-32D1-86E1-FC0D01991043}</Project>
+      <Project>{5C8A9EE5-D652-3DD2-AED2-6C96C2747099}</Project>
       <Name>tiff2pdf</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
     <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\tools\tiff2ps.vcxproj">
-      <Project>{86AFD0B5-CD68-3131-9A20-A2DE044E13FF}</Project>
+      <Project>{906253F7-B7B5-34E9-8119-DB0A56371360}</Project>
       <Name>tiff2ps</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
     <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\tools\tiff2rgba.vcxproj">
-      <Project>{7F92E4DD-95A3-3C40-B5BE-F7FCDEBDFA9A}</Project>
+      <Project>{D9738258-E849-38EE-A7AF-C05D99D90882}</Project>
       <Name>tiff2rgba</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
     <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\tools\tiffcmp.vcxproj">
-      <Project>{01D882C9-0CE0-36BD-8B30-A3058B24A14C}</Project>
+      <Project>{338346BA-A498-34C9-93F3-055F97C335AE}</Project>
       <Name>tiffcmp</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
     <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\tools\tiffcp.vcxproj">
-      <Project>{FFF357CF-6BCE-3B0E-BA69-133A17CFB881}</Project>
+      <Project>{6A72F968-D5AD-36F7-BDD3-968FE153E5ED}</Project>
       <Name>tiffcp</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
     <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\tools\tiffcrop.vcxproj">
-      <Project>{6967DE81-8688-3914-89C0-FA70AC744584}</Project>
+      <Project>{13D3C40D-34EA-3430-B9FD-6E43B7C15F1B}</Project>
       <Name>tiffcrop</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
     <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\tools\tiffdither.vcxproj">
-      <Project>{922EC809-C48B-3A63-8683-150FF012772D}</Project>
+      <Project>{F14B0EFB-28DD-3942-B157-37BAA2C5AFC4}</Project>
       <Name>tiffdither</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
     <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\tools\tiffdump.vcxproj">
-      <Project>{529E7946-095A-372B-A070-40B2210C535C}</Project>
+      <Project>{4DC3B49A-F50E-3800-85EF-DD4097A86A7C}</Project>
       <Name>tiffdump</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
     <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\tools\tiffinfo.vcxproj">
-      <Project>{06832779-60C0-386F-97BE-C393C1495BF9}</Project>
+      <Project>{8AAE7874-70CA-3505-A76B-B07CD77C7864}</Project>
       <Name>tiffinfo</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
     <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\tools\tiffmedian.vcxproj">
-      <Project>{3ACA00D9-B2F9-3669-A743-3D559FA7BD20}</Project>
+      <Project>{63DC7EFD-A4A8-3413-A086-BE7B4485621A}</Project>
       <Name>tiffmedian</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
     <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\tools\tiffset.vcxproj">
-      <Project>{CF61BFB6-D0D3-37A4-AEA4-B6089FB417D5}</Project>
+      <Project>{7B6EC2D0-64BE-3A9F-B960-5BF9C5D31307}</Project>
       <Name>tiffset</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
     <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\tools\tiffsplit.vcxproj">
-      <Project>{BF715347-7CA4-3B6F-A39E-C4F69A7ECB3F}</Project>
+      <Project>{017A2E7C-3304-3617-B70C-C5CB1C8366A3}</Project>
       <Name>tiffsplit</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
     <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\libtiff\tiffxx.vcxproj">
-      <Project>{E79647B2-D354-34BD-93DD-957DAE2E85F6}</Project>
+      <Project>{E95D5F71-9AA8-3B7C-8B3E-A58415D6E4C9}</Project>
       <Name>tiffxx</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>

@@ -13,7 +13,7 @@ set(SRCDIR "C:/SUMOLibraries/3rdPartyLibs/libpng-1.6.34")
 set(BINDIR "C:/SUMOLibraries/3rdPartyLibs/libpng-1.6.34")
 
 set(AWK "AWK-NOTFOUND")
-set(CMAKE_C_COMPILER "C:/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.22.27905/bin/Hostx64/x64/cl.exe")
+set(CMAKE_C_COMPILER "C:/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.23.28105/bin/Hostx64/x64/cl.exe")
 set(CMAKE_C_FLAGS /DWIN32 /D_WINDOWS /W3)
 set(INCDIR "C:/SUMOLibraries/3rdPartyLibs/libpng-1.6.34")
 set(PNG_PREFIX "")

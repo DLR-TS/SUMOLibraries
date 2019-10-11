@@ -34,6 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
+  include("C:/SUMOLibraries/proj-6.1.1/googletest-build/googlemock/cmake_install.cmake")
 
 endif()
 

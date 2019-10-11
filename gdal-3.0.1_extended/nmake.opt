@@ -54,25 +54,25 @@ MSVC_VER = 1900
 # But the paths *should* be absolute (relative paths mess up in submakefiles).
 
 !IFNDEF GDAL_HOME
-GDAL_HOME = C:/libraries/gdal-3.0.1_extended
+GDAL_HOME = C:/SUMOLibraries/gdal-3.0.1_extended
 !ENDIF
 !IFNDEF BINDIR
-BINDIR = "C:/libraries/gdal-3.0.1_extended/bin"
+BINDIR = "C:/SUMOLibraries/gdal-3.0.1_extended/bin"
 !ENDIF
 !IFNDEF PLUGINDIR
-PLUGINDIR = "C:/libraries/gdal-3.0.1_extended/gdalplugins"
+PLUGINDIR = "C:/SUMOLibraries/gdal-3.0.1_extended/gdalplugins"
 !ENDIF
 !IFNDEF LIBDIR
-LIBDIR = "C:/libraries/gdal-3.0.1_extended/lib"
+LIBDIR = "C:/SUMOLibraries/gdal-3.0.1_extended/lib"
 !ENDIF
 !IFNDEF INCDIR
-INCDIR = "C:/libraries/gdal-3.0.1_extended/include"
+INCDIR = "C:/SUMOLibraries/gdal-3.0.1_extended/include"
 !ENDIF
 !IFNDEF DATADIR
-DATADIR = "C:/libraries/gdal-3.0.1_extended/data"
+DATADIR = "C:/SUMOLibraries/gdal-3.0.1_extended/data"
 !ENDIF
 !IFNDEF HTMLDIR
-HTMLDIR = "C:/libraries/gdal-3.0.1_extended/html"
+HTMLDIR = "C:/SUMOLibraries/gdal-3.0.1_extended/html"
 !ENDIF
 
 # Set this to the installed directory containing python.  If you don't
@@ -83,7 +83,7 @@ PYDIR = "C:\Python37"
 
 # Set the location of your SWIG installation
 !IFNDEF SWIG
-SWIG = C:/libraries/swigwin-3.0.12/swig.exe
+SWIG = C:/SUMOLibraries/swigwin-3.0.12/swig.exe
 !ENDIF
 
 # SWIG Java settings
@@ -91,7 +91,7 @@ SWIG = C:/libraries/swigwin-3.0.12/swig.exe
 JAVA_HOME = C:/Program Files/Java/jdk1.8.0_172
 !ENDIF
 !IFNDEF ANT_HOME
-ANT_HOME = C:/libraries/3rdPartyLibs/gdal/apache-ant-1.10.6
+ANT_HOME = C:/SUMOLibraries/3rdPartyLibs/gdal/apache-ant-1.10.6
 !ENDIF
 JAVADOC = $(JAVA_HOME)\bin\javadoc
 JAVAC = $(JAVA_HOME)\bin\javac
@@ -235,8 +235,8 @@ INCLUDE_GNM_FRMTS = YES
 #SETARGV = "D:\Software\VStudio\VC98/lib/setargv.obj"
 
 # PROJ stuff (required dependency: PROJ >= 6)
-PROJ_INCLUDE = -IC:/libraries/proj-6.1.1/include
-PROJ_LIBRARY = C:/libraries/proj-6.1.1/lib/proj_6_1.lib
+PROJ_INCLUDE = -IC:/SUMOLibraries/proj-6.1.1/include
+PROJ_LIBRARY = C:/SUMOLibraries/proj-6.1.1/lib/proj_6_1.lib
 
 # Uncomment to build with libiconv library to support extended character
 # recoding capabilities. GDAL's internal stub implementation supports
@@ -245,7 +245,7 @@ PROJ_LIBRARY = C:/libraries/proj-6.1.1/lib/proj_6_1.lib
 # const or leave it empty. Take a look on your iconv() declaration in iconv.h.
 # If the second parameter declared as const char** then you need to define
 # ICONV_CONST = const otherwise leave it empty.
-LIBICONV_DIR = "C:/libraries/3rdPartyLibs/gdal/libiconv-1.15"
+LIBICONV_DIR = "C:/SUMOLibraries/3rdPartyLibs/gdal/libiconv-1.15"
 LIBICONV_INCLUDE = -I$(LIBICONV_DIR)/include
 LIBICONV_LIBRARY = $(LIBICONV_DIR)/lib/libiconv.lib
 LIBICONV_CFLAGS = -DICONV_CONST = const
@@ -286,17 +286,17 @@ JPEG12_SUPPORTED = 1
 
 #if using an external jpeg library uncomment the following lines
 JPEG_EXTERNAL_LIB = 1
-JPEGDIR = C:/libraries/3rdPartyLibs/jpeg-9c
-JPEG_LIB = C:/libraries/3rdPartyLibs/jpeg-9c/lib/jpeg.lib
+JPEGDIR = C:/SUMOLibraries/3rdPartyLibs/jpeg-9c
+JPEG_LIB = C:/SUMOLibraries/3rdPartyLibs/jpeg-9c/lib/jpeg.lib
 
 #if using an external png library uncomment the following lines
 PNG_EXTERNAL_LIB = 1
-PNGDIR = C:/libraries/3rdPartyLibs/libpng-1.6.34
-PNG_LIB = C:/libraries/3rdPartyLibs/libpng-1.6.34/lib/libpng16.lib
+PNGDIR = C:/SUMOLibraries/3rdPartyLibs/libpng-1.6.34
+PNG_LIB = C:/SUMOLibraries/3rdPartyLibs/libpng-1.6.34/lib/libpng16.lib
 
 # if using an external libtiff library
-TIFF_INC = -IC:/libraries/3rdPartyLibs/tiff-4.0.9/include
-TIFF_LIB = C:/libraries/3rdPartyLibs/tiff-4.0.9/lib/tiff.lib
+TIFF_INC = -IC:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/include
+TIFF_LIB = C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/lib/tiff.lib
 # uncomment following line, if you have libtiff version >= 4.0 to enable BigTIFF support
 TIFF_OPTS = -DBIGTIFF_SUPPORT
 
@@ -401,14 +401,14 @@ TIFF_OPTS = -DBIGTIFF_SUPPORT
 #		$(OGDIDIR)/lib/$(TARGET)\zlib_ogdi$(OGDIVER).lib
 
 # Uncomment for Expat support (required for KML, GPX and GeoRSS read support).
-EXPAT_DIR = "C:/libraries/3rdPartyLibs/gdal/expat-2.2.7"
+EXPAT_DIR = "C:/SUMOLibraries/3rdPartyLibs/gdal/expat-2.2.7"
 EXPAT_INCLUDE = -I$(EXPAT_DIR)/include
 EXPAT_LIB = $(EXPAT_DIR)/lib/expat.lib
 
 # Uncomment for Xerces based GML and ILI support.
-XERCES_DIR = C:/libraries/xerces-c-3.2.2
+XERCES_DIR = C:/SUMOLibraries/xerces-c-3.2.2
 XERCES_INCLUDE = -I$(XERCES_DIR)/include -I$(XERCES_DIR)/include/xercesc
-XERCES_LIB = C:/libraries/xerces-c-3.2.2/lib/xerces-c_3.lib
+XERCES_LIB = C:/SUMOLibraries/xerces-c-3.2.2/lib/xerces-c_3.lib
 
 # Uncomment the following for Interlis support.  Note that a Xercex 3.x
 # is also required (see above).  Also, Interlis support only works with
@@ -451,7 +451,7 @@ KAKADU_7_5_OR_LATER = YES
 
 # Uncomment the following and update to enable NCSA HDF Release 5 support.
 HDF5_PLUGIN = YES
-HDF5_DIR = C:/libraries/3rdPartyLibs/gdal/hdf5-1.10.5
+HDF5_DIR = C:/SUMOLibraries/3rdPartyLibs/gdal/hdf5-1.10.5
 HDF5_LIB = $(HDF5_DIR)/lib/libhdf5.lib $(HDF5_DIR)/lib/szip.lib $(HDF5_DIR)/lib/zlib.lib
 
 # Uncomment the following and update to enable KEA support.
@@ -504,8 +504,8 @@ INGRES_LIB = "$(INGRES_HOME)/lib/iilibapi.lib" \
 
 
 # SQLite Libraries
-SQLITE_INC = -IC:/libraries/3rdPartyLibs/sqlite-3.3.0
-SQLITE_LIB = C:/libraries/3rdPartyLibs/sqlite-3.3.0/sqlite3.lib
+SQLITE_INC = -IC:/SUMOLibraries/3rdPartyLibs/sqlite-3.3.0
+SQLITE_LIB = C:/SUMOLibraries/3rdPartyLibs/sqlite-3.3.0/sqlite3.lib
 # For spatialite support, try this instead (assuming you grab the libspatialite-amalgamation-2.3.1 and installed it in osgeo4w):
 # The -DSPATIALITE_AMALGAMATION, which cause "spatialite/sqlite3.h" to be included instead of "sqlite3.h" might not be necessary
 # depending on the layout of the include directories. In case of compilation errors, remove it.
@@ -543,8 +543,8 @@ GRIB_SETTING = yes
 # Uncomment the following to enable NetCDF format.
 NETCDF_PLUGIN = YES
 NETCDF_SETTING = yes
-NETCDF_LIB = C:/libraries\3rdPartyLibs\gdal\netcdf-c-4.7.0/lib/netcdf.lib
-NETCDF_INC_DIR = C:/libraries\3rdPartyLibs\gdal\netcdf-c-4.7.0/include
+NETCDF_LIB = C:/SUMOLibraries\3rdPartyLibs\gdal\netcdf-c-4.7.0/lib/netcdf.lib
+NETCDF_INC_DIR = C:/SUMOLibraries\3rdPartyLibs\gdal\netcdf-c-4.7.0/include
 
 # Uncomment the following to add NC4 and HDF4 support
 #NETCDF_HAS_NC4 = yes
@@ -594,7 +594,7 @@ OCI_INCLUDE = -I$(ORACLE_HOME)\oci/include
 
 # Uncomment to use libcurl (DLL by default)
 # The cURL library is used for WCS, WMS, GeoJSON, SRS call importFromUrl(), WFS, GFT, CouchDB, /vsicurl/ etc.
-CURL_DIR = C:/libraries/3rdPartyLibs/gdal/curl-7.65.2
+CURL_DIR = C:/SUMOLibraries/3rdPartyLibs/gdal/curl-7.65.2
 CURL_INC = -I$(CURL_DIR)/include
 # Uncomment following line to use libcurl as dynamic library
 #CURL_LIB = $(CURL_DIR)/libcurl_imp.lib wsock32.lib wldap32.lib winmm.lib
@@ -609,7 +609,7 @@ CURL_CFLAGS = -DCURL_STATICLIB
 #DODS_FLAGS = -DLIBDAP_39
 
 # Uncomment for GEOS support (GEOS >= 3.1.0 required)
-GEOS_DIR = C:/libraries/3rdPartyLibs/gdal/geos-3.6.3
+GEOS_DIR = C:/SUMOLibraries/3rdPartyLibs/gdal/geos-3.6.3
 GEOS_CFLAGS = -I$(GEOS_DIR)/include -DHAVE_GEOS
 GEOS_LIB = $(GEOS_DIR)/lib/geos_c.lib
 
@@ -623,13 +623,13 @@ GEOS_LIB = $(GEOS_DIR)/lib/geos_c.lib
 OPENJPEG_ENABLED = YES
 # Note that, contrary to GDAL releases <= 2.2.X, this must point to the
 # directory where openjpeg.h and opj_config.h are set 
-OPENJPEG_CFLAGS = -IC:/libraries\3rdPartyLibs\gdal\openjpeg-2.3.1/include
-OPENJPEG_LIB = C:/libraries\3rdPartyLibs\gdal\openjpeg-2.3.1/lib/openjp2.lib
+OPENJPEG_CFLAGS = -IC:/SUMOLibraries\3rdPartyLibs\gdal\openjpeg-2.3.1/include
+OPENJPEG_LIB = C:/SUMOLibraries\3rdPartyLibs\gdal\openjpeg-2.3.1/lib/openjp2.lib
 
 #if using an external zlib uncomment the following lines
 ZLIB_EXTERNAL_LIB = 1
-ZLIB_INC = -IC:/libraries/3rdPartyLibs/zlib-1.2.11
-ZLIB_LIB = C:/libraries/3rdPartyLibs/zlib-1.2.11/lib/zlib.lib
+ZLIB_INC = -IC:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11
+ZLIB_LIB = C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/lib/zlib.lib
 
 # Uncomment for PDF support, and update version numbers (poppler 0.23 or later required)
 #POPPLER_ENABLED = YES
@@ -675,8 +675,8 @@ ZLIB_LIB = C:/libraries/3rdPartyLibs/zlib-1.2.11/lib/zlib.lib
 #PDF_PLUGIN = NO
 
 # Uncomment for LZMA TIFF support
-LZMA_CFLAGS = -IC:/libraries\3rdPartyLibs\gdal/liblzma-5.2.4/include
-LZMA_LIBS = C:/libraries\3rdPartyLibs\gdal/liblzma-5.2.4/lib/lzma.lib
+LZMA_CFLAGS = -IC:/SUMOLibraries\3rdPartyLibs\gdal/liblzma-5.2.4/include
+LZMA_LIBS = C:/SUMOLibraries\3rdPartyLibs\gdal/liblzma-5.2.4/lib/lzma.lib
 
 # Uncomment for ZSTD TIFF support
 #ZSTD_CFLAGS = -IC:/install-zstd/include
@@ -689,12 +689,12 @@ LZMA_LIBS = C:/libraries\3rdPartyLibs\gdal/liblzma-5.2.4/lib/lzma.lib
 
 # Uncomment for WEBP support
 WEBP_ENABLED = YES
-WEBP_CFLAGS = -IC:/libraries\3rdPartyLibs\gdal/libwebp-1.0.2/include
-WEBP_LIBS = C:/libraries\3rdPartyLibs\gdal/libwebp-1.0.2/lib/webp.lib
+WEBP_CFLAGS = -IC:/SUMOLibraries\3rdPartyLibs\gdal/libwebp-1.0.2/include
+WEBP_LIBS = C:/SUMOLibraries\3rdPartyLibs\gdal/libwebp-1.0.2/lib/webp.lib
 
 # Uncomment for libxml2 support (for cpl_xml_validate.cpp routines, used optionally by the GML driver)
-LIBXML2_INC = -IC:/libraries/3rdPartyLibs/gdal/libxml2-2.9.9/include
-LIBXML2_LIB = C:/libraries/3rdPartyLibs/gdal/libxml2-2.9.9/lib/libxml2.lib
+LIBXML2_INC = -IC:/SUMOLibraries/3rdPartyLibs/gdal/libxml2-2.9.9/include
+LIBXML2_LIB = C:/SUMOLibraries/3rdPartyLibs/gdal/libxml2-2.9.9/lib/libxml2.lib
 
 # Uncomment for freexl support
 #
@@ -761,8 +761,8 @@ QHULL_SETTING = INTERNAL
 # CRYPTOPP_LIB = c:/install-cryptopp-x64/lib/cryptlib.lib
 
 # OpenSSL stuff (needed if using curl in multithreaded way, with OpenSSL backend)
-OPENSSL_INC = -IC:/libraries\3rdPartyLibs\gdal\openssl-1.0.2/include
-OPENSSL_LIB = C:/libraries\3rdPartyLibs\gdal\openssl-1.0.2/lib/ssleay32.lib C:/libraries\3rdPartyLibs\gdal\openssl-1.0.2/lib/libeay32.lib crypt32.lib
+OPENSSL_INC = -IC:/SUMOLibraries\3rdPartyLibs\gdal\openssl-1.0.2/include
+OPENSSL_LIB = C:/SUMOLibraries\3rdPartyLibs\gdal\openssl-1.0.2/lib/ssleay32.lib C:/SUMOLibraries\3rdPartyLibs\gdal\openssl-1.0.2/lib/libeay32.lib crypt32.lib
 
 # Comment out to disable MRF support.
 MRF_SETTING = yes
