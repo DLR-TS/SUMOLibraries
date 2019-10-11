@@ -32,7 +32,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Libraries\32bits\proj-6.1.1\bin\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\SUMOLibraries\32bits\proj-6.1.1\bin\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">gie_self_tests.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">gie_self_tests</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.exe</TargetExt>
@@ -41,7 +41,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Libraries\32bits\proj-6.1.1\src;C:\Libraries\32bits\proj-6.1.1\include;C:\Libraries\32bits\3rdPartyLibs\sqlite-3.3.0;C:\Libraries\32bits\proj-6.1.1\googletest-src\googletest\include;C:\Libraries\32bits\proj-6.1.1\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\32bits\proj-6.1.1\src;C:\SUMOLibraries\32bits\proj-6.1.1\include;C:\SUMOLibraries\32bits\3rdPartyLibs\sqlite-3.3.0;C:\SUMOLibraries\32bits\proj-6.1.1\googletest-src\googletest\include;C:\SUMOLibraries\32bits\proj-6.1.1\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Release/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <DisableSpecificWarnings>4706;4996</DisableSpecificWarnings>
@@ -60,10 +60,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;HAVE_C99_MATH=1;PROJ_MSVC_DLL_IMPORT=1;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Libraries\32bits\proj-6.1.1\src;C:\Libraries\32bits\proj-6.1.1\include;C:\Libraries\32bits\3rdPartyLibs\sqlite-3.3.0;C:\Libraries\32bits\proj-6.1.1\googletest-src\googletest\include;C:\Libraries\32bits\proj-6.1.1\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\32bits\proj-6.1.1\src;C:\SUMOLibraries\32bits\proj-6.1.1\include;C:\SUMOLibraries\32bits\3rdPartyLibs\sqlite-3.3.0;C:\SUMOLibraries\32bits\proj-6.1.1\googletest-src\googletest\include;C:\SUMOLibraries\32bits\proj-6.1.1\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Libraries\32bits\proj-6.1.1\src;C:\Libraries\32bits\proj-6.1.1\include;C:\Libraries\32bits\3rdPartyLibs\sqlite-3.3.0;C:\Libraries\32bits\proj-6.1.1\googletest-src\googletest\include;C:\Libraries\32bits\proj-6.1.1\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\32bits\proj-6.1.1\src;C:\SUMOLibraries\32bits\proj-6.1.1\include;C:\SUMOLibraries\32bits\3rdPartyLibs\sqlite-3.3.0;C:\SUMOLibraries\32bits\proj-6.1.1\googletest-src\googletest\include;C:\SUMOLibraries\32bits\proj-6.1.1\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -71,7 +71,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>..\..\lib\Release\gtest.lib;..\..\lib\Release\proj_6_1.lib;C:\Libraries\32bits\3rdPartyLibs\sqlite-3.3.0\sqlite3.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>..\..\lib\Release\gtest.lib;..\..\lib\Release\proj_6_1.lib;C:\SUMOLibraries\32bits\3rdPartyLibs\sqlite-3.3.0\sqlite3.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>C:/SUMOLibraries/32bits/proj-6.1.1/lib;C:/SUMOLibraries/32bits/proj-6.1.1/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -85,7 +85,7 @@
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Libraries\32bits\proj-6.1.1\test\unit\CMakeLists.txt">
+    <CustomBuild Include="C:\SUMOLibraries\32bits\proj-6.1.1\test\unit\CMakeLists.txt">
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/SUMOLibraries/32bits/proj-6.1.1/test/unit/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
 C:\CMake\bin\cmake.exe -SC:/SUMOLibraries/32bits/proj-6.1.1 -BC:/SUMOLibraries/32bits/proj-6.1.1 --check-stamp-file C:/SUMOLibraries/32bits/proj-6.1.1/test/unit/CMakeFiles/generate.stamp
@@ -96,29 +96,29 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/SUMOLibraries/32bits/proj-6.1.1/test/unit/CMakeLists.txt;C:\Libraries\32bits\proj-6.1.1\test\googletest\CMakeLists.txt.in;C:\Libraries\32bits\proj-6.1.1\test\unit\CMakeLists.txt;C:\Libraries\32bits\proj-6.1.1\test\unit\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Libraries\32bits\proj-6.1.1\test\unit\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/SUMOLibraries/32bits/proj-6.1.1/test/unit/CMakeLists.txt;C:\SUMOLibraries\32bits\proj-6.1.1\test\googletest\CMakeLists.txt.in;C:\SUMOLibraries\32bits\proj-6.1.1\test\unit\CMakeLists.txt;C:\SUMOLibraries\32bits\proj-6.1.1\test\unit\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\SUMOLibraries\32bits\proj-6.1.1\test\unit\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Libraries\32bits\proj-6.1.1\test\unit\main.cpp" />
-    <ClCompile Include="C:\Libraries\32bits\proj-6.1.1\test\unit\gie_self_tests.cpp" />
+    <ClCompile Include="C:\SUMOLibraries\32bits\proj-6.1.1\test\unit\main.cpp" />
+    <ClCompile Include="C:\SUMOLibraries\32bits\proj-6.1.1\test\unit\gie_self_tests.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Libraries\32bits\proj-6.1.1\ZERO_CHECK.vcxproj">
+    <ProjectReference Include="C:\SUMOLibraries\32bits\proj-6.1.1\ZERO_CHECK.vcxproj">
       <Project>{D4799670-B1B2-3219-A209-A3252A7E5CCA}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Libraries\32bits\proj-6.1.1\googletest-build\googlemock\gtest\gtest.vcxproj">
+    <ProjectReference Include="C:\SUMOLibraries\32bits\proj-6.1.1\googletest-build\googlemock\gtest\gtest.vcxproj">
       <Project>{227CC192-7F42-3D64-ABA7-20CE8C0F8AA7}</Project>
       <Name>gtest</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Libraries\32bits\proj-6.1.1\src\proj.vcxproj">
+    <ProjectReference Include="C:\SUMOLibraries\32bits\proj-6.1.1\src\proj.vcxproj">
       <Project>{F974C077-1318-331F-9A0B-67F6491F9024}</Project>
       <Name>proj</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>

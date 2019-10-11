@@ -1,51 +1,51 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\lite_unittest.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\lite_unittest.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\arena_test_util.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\arena_test_util.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\map_lite_test_util.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\map_lite_test_util.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\test_util_lite.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\test_util_lite.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\map_lite_unittest.pb.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\map_lite_unittest.pb.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\unittest_import_lite.pb.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\unittest_import_lite.pb.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\unittest_import_public_lite.pb.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\unittest_import_public_lite.pb.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\unittest_lite.pb.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\unittest_lite.pb.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\unittest_no_arena_lite.pb.cc">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\unittest_no_arena_lite.pb.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\build\CMakeFiles\2200427e065a3a3cab5e8c60ddd3576e\map_lite_unittest.pb.cc.rule">
+    <CustomBuild Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake\build\CMakeFiles\2200427e065a3a3cab5e8c60ddd3576e\map_lite_unittest.pb.cc.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\build\CMakeFiles\2200427e065a3a3cab5e8c60ddd3576e\unittest_import_lite.pb.cc.rule">
+    <CustomBuild Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake\build\CMakeFiles\2200427e065a3a3cab5e8c60ddd3576e\unittest_import_lite.pb.cc.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\build\CMakeFiles\2200427e065a3a3cab5e8c60ddd3576e\unittest_import_public_lite.pb.cc.rule">
+    <CustomBuild Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake\build\CMakeFiles\2200427e065a3a3cab5e8c60ddd3576e\unittest_import_public_lite.pb.cc.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\build\CMakeFiles\2200427e065a3a3cab5e8c60ddd3576e\unittest_lite.pb.cc.rule">
+    <CustomBuild Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake\build\CMakeFiles\2200427e065a3a3cab5e8c60ddd3576e\unittest_lite.pb.cc.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\build\CMakeFiles\2200427e065a3a3cab5e8c60ddd3576e\unittest_no_arena_lite.pb.cc.rule">
+    <CustomBuild Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake\build\CMakeFiles\2200427e065a3a3cab5e8c60ddd3576e\unittest_no_arena_lite.pb.cc.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\CMakeLists.txt" />
+    <CustomBuild Include="C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\cmake\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">

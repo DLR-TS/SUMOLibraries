@@ -1,29 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Libraries\xerces-c-3.2.2\tests\src\XSTSHarness\XSTSHarness.cpp">
+    <ClCompile Include="C:\SUMOLibraries\xerces-c-3.2.2\tests\src\XSTSHarness\XSTSHarness.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\xerces-c-3.2.2\tests\src\XSTSHarness\XSTSHarnessHandlers.cpp">
+    <ClCompile Include="C:\SUMOLibraries\xerces-c-3.2.2\tests\src\XSTSHarness\XSTSHarnessHandlers.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\xerces-c-3.2.2\tests\src\XSTSHarness\XMLHarnessHandlers.cpp">
+    <ClCompile Include="C:\SUMOLibraries\xerces-c-3.2.2\tests\src\XSTSHarness\XMLHarnessHandlers.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Libraries\xerces-c-3.2.2\tests\src\XSTSHarness\XSTSHarness.hpp">
+    <ClInclude Include="C:\SUMOLibraries\xerces-c-3.2.2\tests\src\XSTSHarness\XSTSHarness.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\xerces-c-3.2.2\tests\src\XSTSHarness\XSTSHarnessHandlers.hpp">
+    <ClInclude Include="C:\SUMOLibraries\xerces-c-3.2.2\tests\src\XSTSHarness\XSTSHarnessHandlers.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\xerces-c-3.2.2\tests\src\XSTSHarness\XMLHarnessHandlers.hpp">
+    <ClInclude Include="C:\SUMOLibraries\xerces-c-3.2.2\tests\src\XSTSHarness\XMLHarnessHandlers.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Libraries\xerces-c-3.2.2\tests\CMakeLists.txt" />
+    <CustomBuild Include="C:\SUMOLibraries\xerces-c-3.2.2\tests\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">

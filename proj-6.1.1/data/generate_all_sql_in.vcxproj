@@ -36,7 +36,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Libraries\proj-6.1.1\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\proj-6.1.1\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -45,10 +45,10 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Libraries\proj-6.1.1\CMakeFiles\be1089abd4f5869fdad7051a6e99c071\all.sql.in.rule">
+    <CustomBuild Include="C:\SUMOLibraries\proj-6.1.1\CMakeFiles\be1089abd4f5869fdad7051a6e99c071\all.sql.in.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating all.sql.in</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-cd C:\Libraries\proj-6.1.1\data
+cd C:\SUMOLibraries\proj-6.1.1\data
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
@@ -60,13 +60,13 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/SUMOLibraries/proj-6.1.1/CMakeFiles/be1089abd4f5869fdad7051a6e99c071/all.sql.in.rule;C:\Libraries\proj-6.1.1\data\sql\begin.sql;C:\Libraries\proj-6.1.1\data\sql\proj_db_table_defs.sql;C:\Libraries\proj-6.1.1\data\sql\conversion_triggers.sql;C:\Libraries\proj-6.1.1\data\sql\metadata.sql;C:\Libraries\proj-6.1.1\data\sql\unit_of_measure.sql;C:\Libraries\proj-6.1.1\data\sql\area.sql;C:\Libraries\proj-6.1.1\data\sql\coordinate_system.sql;C:\Libraries\proj-6.1.1\data\sql\axis.sql;C:\Libraries\proj-6.1.1\data\sql\ellipsoid.sql;C:\Libraries\proj-6.1.1\data\sql\prime_meridian.sql;C:\Libraries\proj-6.1.1\data\sql\geodetic_datum.sql;C:\Libraries\proj-6.1.1\data\sql\vertical_datum.sql;C:\Libraries\proj-6.1.1\data\sql\conversion.sql;C:\Libraries\proj-6.1.1\data\sql\geodetic_crs.sql;C:\Libraries\proj-6.1.1\data\sql\projected_crs.sql;C:\Libraries\proj-6.1.1\data\sql\vertical_crs.sql;C:\Libraries\proj-6.1.1\data\sql\compound_crs.sql;C:\Libraries\proj-6.1.1\data\sql\helmert_transformation.sql;C:\Libraries\proj-6.1.1\data\sql\grid_transformation.sql;C:\Libraries\proj-6.1.1\data\sql\grid_transformation_custom.sql;C:\Libraries\proj-6.1.1\data\sql\other_transformation.sql;C:\Libraries\proj-6.1.1\data\sql\concatenated_operation.sql;C:\Libraries\proj-6.1.1\data\sql\alias_name.sql;C:\Libraries\proj-6.1.1\data\sql\supersession.sql;C:\Libraries\proj-6.1.1\data\sql\deprecation.sql;C:\Libraries\proj-6.1.1\data\sql\esri.sql;C:\Libraries\proj-6.1.1\data\sql\ignf.sql;C:\Libraries\proj-6.1.1\data\sql\grid_alternatives.sql;C:\Libraries\proj-6.1.1\data\sql\grid_alternatives_generated.sql;C:\Libraries\proj-6.1.1\data\sql\customizations.sql;C:\Libraries\proj-6.1.1\data\sql\commit.sql;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Libraries\proj-6.1.1\data\all.sql.in</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/SUMOLibraries/proj-6.1.1/CMakeFiles/be1089abd4f5869fdad7051a6e99c071/all.sql.in.rule;C:\SUMOLibraries\proj-6.1.1\data\sql\begin.sql;C:\SUMOLibraries\proj-6.1.1\data\sql\proj_db_table_defs.sql;C:\SUMOLibraries\proj-6.1.1\data\sql\conversion_triggers.sql;C:\SUMOLibraries\proj-6.1.1\data\sql\metadata.sql;C:\SUMOLibraries\proj-6.1.1\data\sql\unit_of_measure.sql;C:\SUMOLibraries\proj-6.1.1\data\sql\area.sql;C:\SUMOLibraries\proj-6.1.1\data\sql\coordinate_system.sql;C:\SUMOLibraries\proj-6.1.1\data\sql\axis.sql;C:\SUMOLibraries\proj-6.1.1\data\sql\ellipsoid.sql;C:\SUMOLibraries\proj-6.1.1\data\sql\prime_meridian.sql;C:\SUMOLibraries\proj-6.1.1\data\sql\geodetic_datum.sql;C:\SUMOLibraries\proj-6.1.1\data\sql\vertical_datum.sql;C:\SUMOLibraries\proj-6.1.1\data\sql\conversion.sql;C:\SUMOLibraries\proj-6.1.1\data\sql\geodetic_crs.sql;C:\SUMOLibraries\proj-6.1.1\data\sql\projected_crs.sql;C:\SUMOLibraries\proj-6.1.1\data\sql\vertical_crs.sql;C:\SUMOLibraries\proj-6.1.1\data\sql\compound_crs.sql;C:\SUMOLibraries\proj-6.1.1\data\sql\helmert_transformation.sql;C:\SUMOLibraries\proj-6.1.1\data\sql\grid_transformation.sql;C:\SUMOLibraries\proj-6.1.1\data\sql\grid_transformation_custom.sql;C:\SUMOLibraries\proj-6.1.1\data\sql\other_transformation.sql;C:\SUMOLibraries\proj-6.1.1\data\sql\concatenated_operation.sql;C:\SUMOLibraries\proj-6.1.1\data\sql\alias_name.sql;C:\SUMOLibraries\proj-6.1.1\data\sql\supersession.sql;C:\SUMOLibraries\proj-6.1.1\data\sql\deprecation.sql;C:\SUMOLibraries\proj-6.1.1\data\sql\esri.sql;C:\SUMOLibraries\proj-6.1.1\data\sql\ignf.sql;C:\SUMOLibraries\proj-6.1.1\data\sql\grid_alternatives.sql;C:\SUMOLibraries\proj-6.1.1\data\sql\grid_alternatives_generated.sql;C:\SUMOLibraries\proj-6.1.1\data\sql\customizations.sql;C:\SUMOLibraries\proj-6.1.1\data\sql\commit.sql;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SUMOLibraries\proj-6.1.1\data\all.sql.in</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Libraries\proj-6.1.1\CMakeFiles\2a97323d9b528d88a1cb4d0b8f630547\generate_all_sql_in.rule">
+    <CustomBuild Include="C:\SUMOLibraries\proj-6.1.1\CMakeFiles\2a97323d9b528d88a1cb4d0b8f630547\generate_all_sql_in.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'"></Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
 :cmEnd
@@ -75,13 +75,13 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/SUMOLibraries/proj-6.1.1/CMakeFiles/2a97323d9b528d88a1cb4d0b8f630547/generate_all_sql_in.rule;C:\Libraries\proj-6.1.1\data\all.sql.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Libraries\proj-6.1.1\data\CMakeFiles\generate_all_sql_in</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/SUMOLibraries/proj-6.1.1/CMakeFiles/2a97323d9b528d88a1cb4d0b8f630547/generate_all_sql_in.rule;C:\SUMOLibraries\proj-6.1.1\data\all.sql.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SUMOLibraries\proj-6.1.1\data\CMakeFiles\generate_all_sql_in</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Libraries\proj-6.1.1\data\CMakeLists.txt">
+    <CustomBuild Include="C:\SUMOLibraries\proj-6.1.1\data\CMakeLists.txt">
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/SUMOLibraries/proj-6.1.1/data/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
 C:\CMake\bin\cmake.exe -SC:/SUMOLibraries/proj-6.1.1 -BC:/SUMOLibraries/proj-6.1.1 --check-stamp-file C:/SUMOLibraries/proj-6.1.1/data/CMakeFiles/generate.stamp
@@ -92,16 +92,16 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/SUMOLibraries/proj-6.1.1/data/CMakeLists.txt;C:\Libraries\proj-6.1.1\data\CMakeLists.txt;C:\Libraries\proj-6.1.1\data\sql_filelist.cmake;C:\Libraries\proj-6.1.1\data\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Libraries\proj-6.1.1\data\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/SUMOLibraries/proj-6.1.1/data/CMakeLists.txt;C:\SUMOLibraries\proj-6.1.1\data\CMakeLists.txt;C:\SUMOLibraries\proj-6.1.1\data\sql_filelist.cmake;C:\SUMOLibraries\proj-6.1.1\data\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SUMOLibraries\proj-6.1.1\data\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <None Include="C:\Libraries\proj-6.1.1\data\CMakeFiles\generate_all_sql_in" />
+    <None Include="C:\SUMOLibraries\proj-6.1.1\data\CMakeFiles\generate_all_sql_in" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Libraries\proj-6.1.1\ZERO_CHECK.vcxproj">
+    <ProjectReference Include="C:\SUMOLibraries\proj-6.1.1\ZERO_CHECK.vcxproj">
       <Project>{24B74DED-FD47-3AFE-80B9-9A655B83EA64}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>

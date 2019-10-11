@@ -65,10 +65,10 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Libraries\32bits\xerces-c-3.2.2\CMakeFiles\56e02ecfec8e4d5e934267a8d5a55d12\createdocs.rule">
+    <CustomBuild Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\CMakeFiles\56e02ecfec8e4d5e934267a8d5a55d12\createdocs.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"></Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
-cd C:\Libraries\32bits\xerces-c-3.2.2\doc
+cd C:\SUMOLibraries\32bits\xerces-c-3.2.2\doc
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
@@ -83,12 +83,12 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Libraries\32bits\xerces-c-3.2.2\doc\CMakeFiles\createdocs</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\SUMOLibraries\32bits\xerces-c-3.2.2\doc\CMakeFiles\createdocs</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</VerifyInputsAndOutputsExist>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"></Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
-cd C:\Libraries\32bits\xerces-c-3.2.2\doc
+cd C:\SUMOLibraries\32bits\xerces-c-3.2.2\doc
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
@@ -103,13 +103,13 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Libraries\32bits\xerces-c-3.2.2\doc\CMakeFiles\createdocs</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\SUMOLibraries\32bits\xerces-c-3.2.2\doc\CMakeFiles\createdocs</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</VerifyInputsAndOutputsExist>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\CMakeLists.txt">
+    <CustomBuild Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\doc\CMakeLists.txt">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/SUMOLibraries/32bits/xerces-c-3.2.2/doc/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
 C:\CMake\bin\cmake.exe -SC:/SUMOLibraries/32bits/xerces-c-3.2.2 -BC:/SUMOLibraries/32bits/xerces-c-3.2.2 --check-stamp-file C:/SUMOLibraries/32bits/xerces-c-3.2.2/doc/CMakeFiles/generate.stamp
@@ -120,8 +120,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\CMake\share\cmake-3.15\Modules\CMakeFindJavaCommon.cmake;C:\CMake\share\cmake-3.15\Modules\FindJava.cmake;C:\CMake\share\cmake-3.15\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.15\Modules\FindPackageMessage.cmake;C:\Libraries\32bits\xerces-c-3.2.2\doc\style\dtd\entities.ent.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Libraries\32bits\xerces-c-3.2.2\doc\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\CMake\share\cmake-3.15\Modules\CMakeFindJavaCommon.cmake;C:\CMake\share\cmake-3.15\Modules\FindJava.cmake;C:\CMake\share\cmake-3.15\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.15\Modules\FindPackageMessage.cmake;C:\SUMOLibraries\32bits\xerces-c-3.2.2\doc\style\dtd\entities.ent.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\SUMOLibraries\32bits\xerces-c-3.2.2\doc\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/SUMOLibraries/32bits/xerces-c-3.2.2/doc/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
@@ -133,16 +133,16 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\CMake\share\cmake-3.15\Modules\CMakeFindJavaCommon.cmake;C:\CMake\share\cmake-3.15\Modules\FindJava.cmake;C:\CMake\share\cmake-3.15\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.15\Modules\FindPackageMessage.cmake;C:\Libraries\32bits\xerces-c-3.2.2\doc\style\dtd\entities.ent.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Libraries\32bits\xerces-c-3.2.2\doc\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\CMake\share\cmake-3.15\Modules\CMakeFindJavaCommon.cmake;C:\CMake\share\cmake-3.15\Modules\FindJava.cmake;C:\CMake\share\cmake-3.15\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.15\Modules\FindPackageMessage.cmake;C:\SUMOLibraries\32bits\xerces-c-3.2.2\doc\style\dtd\entities.ent.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\SUMOLibraries\32bits\xerces-c-3.2.2\doc\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <None Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\CMakeFiles\createdocs" />
+    <None Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\doc\CMakeFiles\createdocs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Libraries\32bits\xerces-c-3.2.2\ZERO_CHECK.vcxproj">
+    <ProjectReference Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\ZERO_CHECK.vcxproj">
       <Project>{AE4154B2-2560-3034-BC8C-78AC47DE23E5}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>

@@ -65,7 +65,7 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\CMakeLists.txt">
+    <CustomBuild Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\doc\CMakeLists.txt">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/SUMOLibraries/32bits/xerces-c-3.2.2/doc/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
 C:\CMake\bin\cmake.exe -SC:/SUMOLibraries/32bits/xerces-c-3.2.2 -BC:/SUMOLibraries/32bits/xerces-c-3.2.2 --check-stamp-file C:/SUMOLibraries/32bits/xerces-c-3.2.2/doc/CMakeFiles/generate.stamp
@@ -76,8 +76,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\CMake\share\cmake-3.15\Modules\CMakeFindJavaCommon.cmake;C:\CMake\share\cmake-3.15\Modules\FindJava.cmake;C:\CMake\share\cmake-3.15\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.15\Modules\FindPackageMessage.cmake;C:\Libraries\32bits\xerces-c-3.2.2\doc\style\dtd\entities.ent.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Libraries\32bits\xerces-c-3.2.2\doc\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\CMake\share\cmake-3.15\Modules\CMakeFindJavaCommon.cmake;C:\CMake\share\cmake-3.15\Modules\FindJava.cmake;C:\CMake\share\cmake-3.15\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.15\Modules\FindPackageMessage.cmake;C:\SUMOLibraries\32bits\xerces-c-3.2.2\doc\style\dtd\entities.ent.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\SUMOLibraries\32bits\xerces-c-3.2.2\doc\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/SUMOLibraries/32bits/xerces-c-3.2.2/doc/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
@@ -89,53 +89,53 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\CMake\share\cmake-3.15\Modules\CMakeFindJavaCommon.cmake;C:\CMake\share\cmake-3.15\Modules\FindJava.cmake;C:\CMake\share\cmake-3.15\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.15\Modules\FindPackageMessage.cmake;C:\Libraries\32bits\xerces-c-3.2.2\doc\style\dtd\entities.ent.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Libraries\32bits\xerces-c-3.2.2\doc\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\CMake\share\cmake-3.15\Modules\CMakeFindJavaCommon.cmake;C:\CMake\share\cmake-3.15\Modules\FindJava.cmake;C:\CMake\share\cmake-3.15\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.15\Modules\FindPackageMessage.cmake;C:\SUMOLibraries\32bits\xerces-c-3.2.2\doc\style\dtd\entities.ent.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\SUMOLibraries\32bits\xerces-c-3.2.2\doc\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <None Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\style\dtd\blocks.ent" />
-    <None Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\style\dtd\characters.ent" />
-    <None Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\style\dtd\entities.ent" />
-    <None Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\style\dtd\links.ent" />
-    <None Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\style\dtd\markup.ent" />
-    <None Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\style\graphics\button-a.gif" />
-    <None Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\style\graphics\button-b.gif" />
-    <None Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\style\graphics\section.gif" />
-    <XML Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\style\loader.xml" />
-    <None Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\style\resources\bottom.gif" />
-    <None Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\style\resources\button-asf-hi.gif" />
-    <None Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\style\resources\button-asf-lo.gif" />
-    <None Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\style\resources\button-w3c-hi.gif" />
-    <None Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\style\resources\button-w3c-lo.gif" />
-    <None Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\style\resources\button-xml-hi.gif" />
-    <None Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\style\resources\button-xml-lo.gif" />
-    <None Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\style\resources\close.gif" />
-    <None Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\style\resources\dot.gif" />
-    <None Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\style\resources\join.gif" />
-    <None Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\style\resources\line.gif" />
-    <None Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\style\resources\logo.gif" />
-    <None Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\style\resources\note.gif" />
-    <None Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\style\resources\right.gif" />
-    <None Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\style\resources\separator-space.gif" />
-    <None Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\style\resources\separator.gif" />
-    <None Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\style\resources\void.gif" />
-    <None Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\style\stylesheets\any2header.xsl" />
-    <None Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\style\stylesheets\any2project.xsl" />
-    <None Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\style\stylesheets\book2group.xsl" />
-    <None Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\style\stylesheets\book2project.xsl" />
-    <None Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\style\stylesheets\changes2document.xsl" />
-    <None Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\style\stylesheets\context2footer.xsl" />
-    <None Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\style\stylesheets\context2label.xsl" />
-    <None Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\style\stylesheets\context2section.xsl" />
-    <None Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\style\stylesheets\directory2project.xsl" />
-    <None Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\style\stylesheets\document2html.xsl" />
-    <None Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\style\stylesheets\faqs2document.xsl" />
-    <None Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\style\stylesheets\group2document.xsl" />
+    <None Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\doc\style\dtd\blocks.ent" />
+    <None Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\doc\style\dtd\characters.ent" />
+    <None Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\doc\style\dtd\entities.ent" />
+    <None Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\doc\style\dtd\links.ent" />
+    <None Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\doc\style\dtd\markup.ent" />
+    <None Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\doc\style\graphics\button-a.gif" />
+    <None Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\doc\style\graphics\button-b.gif" />
+    <None Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\doc\style\graphics\section.gif" />
+    <XML Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\doc\style\loader.xml" />
+    <None Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\doc\style\resources\bottom.gif" />
+    <None Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\doc\style\resources\button-asf-hi.gif" />
+    <None Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\doc\style\resources\button-asf-lo.gif" />
+    <None Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\doc\style\resources\button-w3c-hi.gif" />
+    <None Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\doc\style\resources\button-w3c-lo.gif" />
+    <None Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\doc\style\resources\button-xml-hi.gif" />
+    <None Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\doc\style\resources\button-xml-lo.gif" />
+    <None Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\doc\style\resources\close.gif" />
+    <None Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\doc\style\resources\dot.gif" />
+    <None Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\doc\style\resources\join.gif" />
+    <None Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\doc\style\resources\line.gif" />
+    <None Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\doc\style\resources\logo.gif" />
+    <None Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\doc\style\resources\note.gif" />
+    <None Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\doc\style\resources\right.gif" />
+    <None Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\doc\style\resources\separator-space.gif" />
+    <None Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\doc\style\resources\separator.gif" />
+    <None Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\doc\style\resources\void.gif" />
+    <None Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\doc\style\stylesheets\any2header.xsl" />
+    <None Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\doc\style\stylesheets\any2project.xsl" />
+    <None Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\doc\style\stylesheets\book2group.xsl" />
+    <None Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\doc\style\stylesheets\book2project.xsl" />
+    <None Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\doc\style\stylesheets\changes2document.xsl" />
+    <None Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\doc\style\stylesheets\context2footer.xsl" />
+    <None Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\doc\style\stylesheets\context2label.xsl" />
+    <None Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\doc\style\stylesheets\context2section.xsl" />
+    <None Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\doc\style\stylesheets\directory2project.xsl" />
+    <None Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\doc\style\stylesheets\document2html.xsl" />
+    <None Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\doc\style\stylesheets\faqs2document.xsl" />
+    <None Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\doc\style\stylesheets\group2document.xsl" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Libraries\32bits\xerces-c-3.2.2\ZERO_CHECK.vcxproj">
+    <ProjectReference Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\ZERO_CHECK.vcxproj">
       <Project>{AE4154B2-2560-3034-BC8C-78AC47DE23E5}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>

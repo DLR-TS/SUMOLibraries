@@ -87,7 +87,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>C:\Libraries\32bits\3rdPartyLibs\jpeg-9c\lib</OutDir>
+    <OutDir>C:\SUMOLibraries\32bits\3rdPartyLibs\jpeg-9c\lib</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -99,7 +99,7 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
       <OmitFramePointers>true</OmitFramePointers>
       <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
-      <ProgramDataBaseFileName>C:\Libraries\32bits\3rdPartyLibs\jpeg-9c\lib\$(ProjectName).pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>C:\SUMOLibraries\32bits\3rdPartyLibs\jpeg-9c\lib\$(ProjectName).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>

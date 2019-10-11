@@ -41,13 +41,13 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Libraries\3rdPartyLibs\tiff-4.0.9\test\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\test\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">strip_rw.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">strip_rw</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Libraries\3rdPartyLibs\tiff-4.0.9\test\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\test\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">strip_rw.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">strip_rw</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
@@ -56,7 +56,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Libraries\3rdPartyLibs\tiff-4.0.9\libtiff;C:\Libraries\3rdPartyLibs\tiff-4.0.9\test;C:\Libraries\3rdPartyLibs\zlib-1.2.11;C:\Libraries\3rdPartyLibs\jpeg-9c;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\libtiff;C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\test;C:\SUMOLibraries\3rdPartyLibs\zlib-1.2.11;C:\SUMOLibraries\3rdPartyLibs\jpeg-9c;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Debug/</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <CompileAs>CompileAsC</CompileAs>
@@ -74,10 +74,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Libraries\3rdPartyLibs\tiff-4.0.9\libtiff;C:\Libraries\3rdPartyLibs\tiff-4.0.9\test;C:\Libraries\3rdPartyLibs\zlib-1.2.11;C:\Libraries\3rdPartyLibs\jpeg-9c;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\libtiff;C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\test;C:\SUMOLibraries\3rdPartyLibs\zlib-1.2.11;C:\SUMOLibraries\3rdPartyLibs\jpeg-9c;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Libraries\3rdPartyLibs\tiff-4.0.9\libtiff;C:\Libraries\3rdPartyLibs\tiff-4.0.9\test;C:\Libraries\3rdPartyLibs\zlib-1.2.11;C:\Libraries\3rdPartyLibs\jpeg-9c;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\libtiff;C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\test;C:\SUMOLibraries\3rdPartyLibs\zlib-1.2.11;C:\SUMOLibraries\3rdPartyLibs\jpeg-9c;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -85,7 +85,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>..\libtiff\Debug\tiffd.lib;..\port\Debug\portd.lib;C:\Libraries\3rdPartyLibs\zlib-1.2.11\lib\zlibd.lib;C:\Libraries\3rdPartyLibs\jpeg-9c\lib\jpeg.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>..\libtiff\Debug\tiffd.lib;..\port\Debug\portd.lib;C:\SUMOLibraries\3rdPartyLibs\zlib-1.2.11\lib\zlibd.lib;C:\SUMOLibraries\3rdPartyLibs\jpeg-9c\lib\jpeg.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -100,7 +100,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Libraries\3rdPartyLibs\tiff-4.0.9\libtiff;C:\Libraries\3rdPartyLibs\tiff-4.0.9\test;C:\Libraries\3rdPartyLibs\zlib-1.2.11;C:\Libraries\3rdPartyLibs\jpeg-9c;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\libtiff;C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\test;C:\SUMOLibraries\3rdPartyLibs\zlib-1.2.11;C:\SUMOLibraries\3rdPartyLibs\jpeg-9c;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Release/</AssemblerListingLocation>
       <CompileAs>CompileAsC</CompileAs>
       <ExceptionHandling>
@@ -118,10 +118,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Libraries\3rdPartyLibs\tiff-4.0.9\libtiff;C:\Libraries\3rdPartyLibs\tiff-4.0.9\test;C:\Libraries\3rdPartyLibs\zlib-1.2.11;C:\Libraries\3rdPartyLibs\jpeg-9c;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\libtiff;C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\test;C:\SUMOLibraries\3rdPartyLibs\zlib-1.2.11;C:\SUMOLibraries\3rdPartyLibs\jpeg-9c;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Libraries\3rdPartyLibs\tiff-4.0.9\libtiff;C:\Libraries\3rdPartyLibs\tiff-4.0.9\test;C:\Libraries\3rdPartyLibs\zlib-1.2.11;C:\Libraries\3rdPartyLibs\jpeg-9c;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\libtiff;C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\test;C:\SUMOLibraries\3rdPartyLibs\zlib-1.2.11;C:\SUMOLibraries\3rdPartyLibs\jpeg-9c;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -129,7 +129,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>..\libtiff\Release\tiff.lib;..\port\Release\port.lib;C:\Libraries\3rdPartyLibs\zlib-1.2.11\lib\zlib.lib;C:\Libraries\3rdPartyLibs\jpeg-9c\lib\jpeg.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>..\libtiff\Release\tiff.lib;..\port\Release\port.lib;C:\SUMOLibraries\3rdPartyLibs\zlib-1.2.11\lib\zlib.lib;C:\SUMOLibraries\3rdPartyLibs\jpeg-9c\lib\jpeg.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -143,7 +143,7 @@
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Libraries\3rdPartyLibs\tiff-4.0.9\test\CMakeLists.txt">
+    <CustomBuild Include="C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\test\CMakeLists.txt">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/test/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
 C:\CMake\bin\cmake.exe -SC:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9 -BC:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9 --check-stamp-file C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/test/CMakeFiles/generate.stamp
@@ -154,8 +154,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/test/CMakeLists.txt;C:\Libraries\3rdPartyLibs\tiff-4.0.9\test\CMakeLists.txt;C:\Libraries\3rdPartyLibs\tiff-4.0.9\test\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Libraries\3rdPartyLibs\tiff-4.0.9\test\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/test/CMakeLists.txt;C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\test\CMakeLists.txt;C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\test\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\test\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/test/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
@@ -167,31 +167,31 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/test/CMakeLists.txt;C:\Libraries\3rdPartyLibs\tiff-4.0.9\test\CMakeLists.txt;C:\Libraries\3rdPartyLibs\tiff-4.0.9\test\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Libraries\3rdPartyLibs\tiff-4.0.9\test\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/test/CMakeLists.txt;C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\test\CMakeLists.txt;C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\test\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\test\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\tiff-4.0.9\test\strip_rw.c" />
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\tiff-4.0.9\test\strip.c" />
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\tiff-4.0.9\test\test_arrays.c" />
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\tiff-4.0.9\test\test_arrays.h" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\test\strip_rw.c" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\test\strip.c" />
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\test\test_arrays.c" />
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\test\test_arrays.h" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Libraries\3rdPartyLibs\tiff-4.0.9\ZERO_CHECK.vcxproj">
+    <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\ZERO_CHECK.vcxproj">
       <Project>{2256C9DE-20A0-3928-B105-BE8E4D3F0032}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Libraries\3rdPartyLibs\tiff-4.0.9\port\port.vcxproj">
+    <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\port\port.vcxproj">
       <Project>{1C758415-AE68-312F-96D7-866CC35D5802}</Project>
       <Name>port</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Libraries\3rdPartyLibs\tiff-4.0.9\libtiff\tiff.vcxproj">
+    <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\libtiff\tiff.vcxproj">
       <Project>{F548F1CD-6347-3220-ABBC-5A31DF7CEFD7}</Project>
       <Name>tiff</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>

@@ -1,29 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\gdal\szip-2.1.1\src\rice.c">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\gdal\szip-2.1.1\src\rice.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\gdal\szip-2.1.1\src\sz_api.c">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\gdal\szip-2.1.1\src\sz_api.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Libraries\3rdPartyLibs\gdal\szip-2.1.1\src\encoding.c">
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\gdal\szip-2.1.1\src\encoding.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\gdal\szip-2.1.1\src\ricehdf.h">
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\gdal\szip-2.1.1\src\ricehdf.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\gdal\szip-2.1.1\src\szip_adpt.h">
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\gdal\szip-2.1.1\src\szip_adpt.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Libraries\3rdPartyLibs\gdal\szip-2.1.1\src\szlib.h">
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\gdal\szip-2.1.1\src\szlib.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Libraries\3rdPartyLibs\gdal\szip-2.1.1\src\CMakeLists.txt" />
+    <CustomBuild Include="C:\SUMOLibraries\3rdPartyLibs\gdal\szip-2.1.1\src\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
