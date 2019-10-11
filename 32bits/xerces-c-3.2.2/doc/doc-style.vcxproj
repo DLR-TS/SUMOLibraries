@@ -66,9 +66,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <CustomBuild Include="C:\Libraries\32bits\xerces-c-3.2.2\doc\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Libraries/32bits/xerces-c-3.2.2/doc/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/SUMOLibraries/32bits/xerces-c-3.2.2/doc/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
-C:\CMake\bin\cmake.exe -SC:/Libraries/32bits/xerces-c-3.2.2 -BC:/Libraries/32bits/xerces-c-3.2.2 --check-stamp-file C:/Libraries/32bits/xerces-c-3.2.2/doc/CMakeFiles/generate.stamp
+C:\CMake\bin\cmake.exe -SC:/SUMOLibraries/32bits/xerces-c-3.2.2 -BC:/SUMOLibraries/32bits/xerces-c-3.2.2 --check-stamp-file C:/SUMOLibraries/32bits/xerces-c-3.2.2/doc/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -79,9 +79,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\CMake\share\cmake-3.15\Modules\CMakeFindJavaCommon.cmake;C:\CMake\share\cmake-3.15\Modules\FindJava.cmake;C:\CMake\share\cmake-3.15\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.15\Modules\FindPackageMessage.cmake;C:\Libraries\32bits\xerces-c-3.2.2\doc\style\dtd\entities.ent.in;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Libraries\32bits\xerces-c-3.2.2\doc\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Libraries/32bits/xerces-c-3.2.2/doc/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/SUMOLibraries/32bits/xerces-c-3.2.2/doc/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
-C:\CMake\bin\cmake.exe -SC:/Libraries/32bits/xerces-c-3.2.2 -BC:/Libraries/32bits/xerces-c-3.2.2 --check-stamp-file C:/Libraries/32bits/xerces-c-3.2.2/doc/CMakeFiles/generate.stamp
+C:\CMake\bin\cmake.exe -SC:/SUMOLibraries/32bits/xerces-c-3.2.2 -BC:/SUMOLibraries/32bits/xerces-c-3.2.2 --check-stamp-file C:/SUMOLibraries/32bits/xerces-c-3.2.2/doc/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone

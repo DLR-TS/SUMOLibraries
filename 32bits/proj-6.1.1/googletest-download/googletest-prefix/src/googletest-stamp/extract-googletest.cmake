@@ -1,7 +1,7 @@
 # Make file names absolute:
 #
-get_filename_component(filename "C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/release-1.8.1.zip" ABSOLUTE)
-get_filename_component(directory "C:/Libraries/32bits/proj-6.1.1/googletest-src" ABSOLUTE)
+get_filename_component(filename "C:/SUMOLibraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/release-1.8.1.zip" ABSOLUTE)
+get_filename_component(directory "C:/SUMOLibraries/32bits/proj-6.1.1/googletest-src" ABSOLUTE)
 
 message(STATUS "extracting...
      src='${filename}'

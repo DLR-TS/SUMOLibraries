@@ -90,8 +90,8 @@
       <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Libraries/32bits/3rdPartyLibs/tiff-4.0.9/tools/Debug/tiffcrop.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Libraries/32bits/3rdPartyLibs/tiff-4.0.9/tools/Debug/tiffcrop.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/SUMOLibraries/32bits/3rdPartyLibs/tiff-4.0.9/tools/Debug/tiffcrop.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/SUMOLibraries/32bits/3rdPartyLibs/tiff-4.0.9/tools/Debug/tiffcrop.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -134,8 +134,8 @@
       <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Libraries/32bits/3rdPartyLibs/tiff-4.0.9/tools/Release/tiffcrop.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Libraries/32bits/3rdPartyLibs/tiff-4.0.9/tools/Release/tiffcrop.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/SUMOLibraries/32bits/3rdPartyLibs/tiff-4.0.9/tools/Release/tiffcrop.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/SUMOLibraries/32bits/3rdPartyLibs/tiff-4.0.9/tools/Release/tiffcrop.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -144,9 +144,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <CustomBuild Include="C:\Libraries\32bits\3rdPartyLibs\tiff-4.0.9\tools\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Libraries/32bits/3rdPartyLibs/tiff-4.0.9/tools/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/SUMOLibraries/32bits/3rdPartyLibs/tiff-4.0.9/tools/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
-C:\CMake\bin\cmake.exe -SC:/Libraries/32bits/3rdPartyLibs/tiff-4.0.9 -BC:/Libraries/32bits/3rdPartyLibs/tiff-4.0.9 --check-stamp-file C:/Libraries/32bits/3rdPartyLibs/tiff-4.0.9/tools/CMakeFiles/generate.stamp
+C:\CMake\bin\cmake.exe -SC:/SUMOLibraries/32bits/3rdPartyLibs/tiff-4.0.9 -BC:/SUMOLibraries/32bits/3rdPartyLibs/tiff-4.0.9 --check-stamp-file C:/SUMOLibraries/32bits/3rdPartyLibs/tiff-4.0.9/tools/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -154,12 +154,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Libraries/32bits/3rdPartyLibs/tiff-4.0.9/tools/CMakeLists.txt;C:\Libraries\32bits\3rdPartyLibs\tiff-4.0.9\tools\CMakeLists.txt;C:\Libraries\32bits\3rdPartyLibs\tiff-4.0.9\tools\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/SUMOLibraries/32bits/3rdPartyLibs/tiff-4.0.9/tools/CMakeLists.txt;C:\Libraries\32bits\3rdPartyLibs\tiff-4.0.9\tools\CMakeLists.txt;C:\Libraries\32bits\3rdPartyLibs\tiff-4.0.9\tools\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Libraries\32bits\3rdPartyLibs\tiff-4.0.9\tools\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Libraries/32bits/3rdPartyLibs/tiff-4.0.9/tools/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/SUMOLibraries/32bits/3rdPartyLibs/tiff-4.0.9/tools/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
-C:\CMake\bin\cmake.exe -SC:/Libraries/32bits/3rdPartyLibs/tiff-4.0.9 -BC:/Libraries/32bits/3rdPartyLibs/tiff-4.0.9 --check-stamp-file C:/Libraries/32bits/3rdPartyLibs/tiff-4.0.9/tools/CMakeFiles/generate.stamp
+C:\CMake\bin\cmake.exe -SC:/SUMOLibraries/32bits/3rdPartyLibs/tiff-4.0.9 -BC:/SUMOLibraries/32bits/3rdPartyLibs/tiff-4.0.9 --check-stamp-file C:/SUMOLibraries/32bits/3rdPartyLibs/tiff-4.0.9/tools/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -167,7 +167,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Libraries/32bits/3rdPartyLibs/tiff-4.0.9/tools/CMakeLists.txt;C:\Libraries\32bits\3rdPartyLibs\tiff-4.0.9\tools\CMakeLists.txt;C:\Libraries\32bits\3rdPartyLibs\tiff-4.0.9\tools\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/SUMOLibraries/32bits/3rdPartyLibs/tiff-4.0.9/tools/CMakeLists.txt;C:\Libraries\32bits\3rdPartyLibs\tiff-4.0.9\tools\CMakeLists.txt;C:\Libraries\32bits\3rdPartyLibs\tiff-4.0.9\tools\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Libraries\32bits\3rdPartyLibs\tiff-4.0.9\tools\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
     </CustomBuild>

@@ -1,4 +1,4 @@
-# Install script for directory: C:/Libraries/3rdPartyLibs/tiff-4.0.9/port
+# Install script for directory: C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/port
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

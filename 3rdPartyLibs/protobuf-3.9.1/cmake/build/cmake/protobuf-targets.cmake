@@ -45,14 +45,14 @@ unset(_expectedTargets)
 add_library(protobuf::libprotobuf-lite STATIC IMPORTED)
 
 set_target_properties(protobuf::libprotobuf-lite PROPERTIES
-  INTERFACE_INCLUDE_DIRECTORIES "C:/Libraries/3rdPartyLibs/protobuf-3.9.1/src"
+  INTERFACE_INCLUDE_DIRECTORIES "C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/src"
 )
 
 # Create imported target protobuf::libprotobuf
 add_library(protobuf::libprotobuf STATIC IMPORTED)
 
 set_target_properties(protobuf::libprotobuf PROPERTIES
-  INTERFACE_INCLUDE_DIRECTORIES "C:/Libraries/3rdPartyLibs/protobuf-3.9.1/src"
+  INTERFACE_INCLUDE_DIRECTORIES "C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/src"
   INTERFACE_LINK_LIBRARIES "ZLIB::ZLIB"
 )
 
@@ -60,7 +60,7 @@ set_target_properties(protobuf::libprotobuf PROPERTIES
 add_library(protobuf::libprotoc STATIC IMPORTED)
 
 set_target_properties(protobuf::libprotoc PROPERTIES
-  INTERFACE_INCLUDE_DIRECTORIES "C:/Libraries/3rdPartyLibs/protobuf-3.9.1/src"
+  INTERFACE_INCLUDE_DIRECTORIES "C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/src"
   INTERFACE_LINK_LIBRARIES "protobuf::libprotobuf"
 )
 
@@ -71,54 +71,54 @@ add_executable(protobuf::protoc IMPORTED)
 set_property(TARGET protobuf::libprotobuf-lite APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(protobuf::libprotobuf-lite PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_DEBUG "CXX;RC"
-  IMPORTED_LOCATION_DEBUG "C:/Libraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/Debug/libprotobuf-lited.lib"
+  IMPORTED_LOCATION_DEBUG "C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/Debug/libprotobuf-lited.lib"
   )
 
 # Import target "protobuf::libprotobuf" for configuration "Debug"
 set_property(TARGET protobuf::libprotobuf APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(protobuf::libprotobuf PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_DEBUG "CXX;RC"
-  IMPORTED_LOCATION_DEBUG "C:/Libraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/Debug/libprotobufd.lib"
+  IMPORTED_LOCATION_DEBUG "C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/Debug/libprotobufd.lib"
   )
 
 # Import target "protobuf::libprotoc" for configuration "Debug"
 set_property(TARGET protobuf::libprotoc APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(protobuf::libprotoc PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_DEBUG "CXX;RC"
-  IMPORTED_LOCATION_DEBUG "C:/Libraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/Debug/libprotocd.lib"
+  IMPORTED_LOCATION_DEBUG "C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/Debug/libprotocd.lib"
   )
 
 # Import target "protobuf::protoc" for configuration "Debug"
 set_property(TARGET protobuf::protoc APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(protobuf::protoc PROPERTIES
-  IMPORTED_LOCATION_DEBUG "C:/Libraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/Debug/protoc.exe"
+  IMPORTED_LOCATION_DEBUG "C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/Debug/protoc.exe"
   )
 
 # Import target "protobuf::libprotobuf-lite" for configuration "Release"
 set_property(TARGET protobuf::libprotobuf-lite APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(protobuf::libprotobuf-lite PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX;RC"
-  IMPORTED_LOCATION_RELEASE "C:/Libraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/Release/libprotobuf-lite.lib"
+  IMPORTED_LOCATION_RELEASE "C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/Release/libprotobuf-lite.lib"
   )
 
 # Import target "protobuf::libprotobuf" for configuration "Release"
 set_property(TARGET protobuf::libprotobuf APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(protobuf::libprotobuf PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX;RC"
-  IMPORTED_LOCATION_RELEASE "C:/Libraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/Release/libprotobuf.lib"
+  IMPORTED_LOCATION_RELEASE "C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/Release/libprotobuf.lib"
   )
 
 # Import target "protobuf::libprotoc" for configuration "Release"
 set_property(TARGET protobuf::libprotoc APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(protobuf::libprotoc PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX;RC"
-  IMPORTED_LOCATION_RELEASE "C:/Libraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/Release/libprotoc.lib"
+  IMPORTED_LOCATION_RELEASE "C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/Release/libprotoc.lib"
   )
 
 # Import target "protobuf::protoc" for configuration "Release"
 set_property(TARGET protobuf::protoc APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(protobuf::protoc PROPERTIES
-  IMPORTED_LOCATION_RELEASE "C:/Libraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/Release/protoc.exe"
+  IMPORTED_LOCATION_RELEASE "C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/Release/protoc.exe"
   )
 
 # This file does not depend on other imported targets which have

@@ -54,7 +54,7 @@ MSVC_VER = 1900
 # But the paths *should* be absolute (relative paths mess up in submakefiles).
 
 !IFNDEF GDAL_HOME
-GDAL_HOME = C:/Libraries/gdal-3.0.1
+GDAL_HOME = C:/SUMOLibraries/gdal-3.0.1
 !ENDIF
 !IFNDEF BINDIR
 BINDIR = "$(GDAL_HOME)/bin"
@@ -83,7 +83,7 @@ PYDIR = "C:\Python37"
 
 # Set the location of your SWIG installation
 !IFNDEF SWIG
-SWIG = C:/Libraries/swigwin-3.0.12/swig.exe
+SWIG = C:/SUMOLibraries/swigwin-3.0.12/swig.exe
 !ENDIF
 
 # SWIG Java settings
@@ -235,8 +235,8 @@ INCLUDE_GNM_FRMTS = YES
 #SETARGV = "D:/Software/VStudio/VC98/lib/setargv.obj"
 
 # PROJ stuff (required dependency: PROJ >= 6)
-PROJ_INCLUDE = -IC:/Libraries/proj-6.1.1/include
-PROJ_LIBRARY = C:/Libraries/proj-6.1.1/lib/proj_6_1.lib
+PROJ_INCLUDE = -IC:/SUMOLibraries/proj-6.1.1/include
+PROJ_LIBRARY = C:/SUMOLibraries/proj-6.1.1/lib/proj_6_1.lib
 
 # Uncomment to build with libiconv library to support extended character
 # recoding capabilities. GDAL's internal stub implementation supports
@@ -286,17 +286,17 @@ JPEG12_SUPPORTED = 1
 
 #if using an external jpeg library uncomment the following lines
 JPEG_EXTERNAL_LIB = 1
-JPEGDIR = C:/Libraries/3rdPartyLibs/jpeg-9c
-JPEG_LIB = C:/Libraries/3rdPartyLibs/jpeg-9c/lib/jpeg.lib
+JPEGDIR = C:/SUMOLibraries/3rdPartyLibs/jpeg-9c
+JPEG_LIB = C:/SUMOLibraries/3rdPartyLibs/jpeg-9c/lib/jpeg.lib
 
 #if using an external png library uncomment the following lines
 PNG_EXTERNAL_LIB = 1
-PNGDIR = C:/Libraries/3rdPartyLibs/libpng-1.6.34
-PNG_LIB = C:/Libraries/3rdPartyLibs/libpng-1.6.34/lib/libpng16.lib
+PNGDIR = C:/SUMOLibraries/3rdPartyLibs/libpng-1.6.34
+PNG_LIB = C:/SUMOLibraries/3rdPartyLibs/libpng-1.6.34/lib/libpng16.lib
 
 # if using an external libtiff library
-TIFF_INC = -IC:/Libraries/3rdPartyLibs/tiff-4.0.9/include
-TIFF_LIB = C:/Libraries/3rdPartyLibs/tiff-4.0.9/lib/tiff.lib
+TIFF_INC = -IC:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/include
+TIFF_LIB = C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/lib/tiff.lib
 # uncomment following line, if you have libtiff version >= 4.0 to enable BigTIFF support
 TIFF_OPTS = -DBIGTIFF_SUPPORT
 
@@ -404,9 +404,9 @@ TIFF_OPTS = -DBIGTIFF_SUPPORT
 #EXPAT_LIB = $(EXPAT_DIR)/bin/libexpat.lib
 
 # Uncomment for Xerces based GML and ILI support.
-XERCES_DIR = C:/Libraries/xerces-c-3.2.2
+XERCES_DIR = C:/SUMOLibraries/xerces-c-3.2.2
 XERCES_INCLUDE = -I$(XERCES_DIR)/include -I$(XERCES_DIR)/include/xercesc
-XERCES_LIB = C:/Libraries/xerces-c-3.2.2/lib/xerces-c_3.lib
+XERCES_LIB = C:/SUMOLibraries/xerces-c-3.2.2/lib/xerces-c_3.lib
 
 # Uncomment the following for Interlis support.  Note that a Xercex 3.x
 # is also required (see above).  Also, Interlis support only works with
@@ -502,8 +502,8 @@ INGRES_LIB = "$(INGRES_HOME)/lib/iilibapi.lib" \
 
 
 # SQLite Libraries
-SQLITE_INC = -IC:/Libraries/3rdPartyLibs/sqlite-3.3.0
-SQLITE_LIB = C:/Libraries/3rdPartyLibs/sqlite-3.3.0/sqlite3.lib
+SQLITE_INC = -IC:/SUMOLibraries/3rdPartyLibs/sqlite-3.3.0
+SQLITE_LIB = C:/SUMOLibraries/3rdPartyLibs/sqlite-3.3.0/sqlite3.lib
 # For spatialite support, try this instead (assuming you grab the libspatialite-amalgamation-2.3.1 and installed it in osgeo4w):
 # The -DSPATIALITE_AMALGAMATION, which cause "spatialite/sqlite3.h" to be included instead of "sqlite3.h" might not be necessary
 # depending on the layout of the include directories. In case of compilation errors, remove it.
@@ -626,8 +626,8 @@ OCI_INCLUDE = -I$(ORACLE_HOME)\oci/include
 
 #if using an external zlib uncomment the following lines
 ZLIB_EXTERNAL_LIB = 1
-ZLIB_INC = -IC:/Libraries/3rdPartyLibs/zlib-1.2.11
-ZLIB_LIB = C:/Libraries/3rdPartyLibs/zlib-1.2.11/lib/zlib.lib
+ZLIB_INC = -IC:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11
+ZLIB_LIB = C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/lib/zlib.lib
 
 # Uncomment for PDF support, and update version numbers (poppler 0.23 or later required)
 #POPPLER_ENABLED = YES

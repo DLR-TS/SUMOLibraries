@@ -1,8 +1,8 @@
-# Install script for directory: C:/Libraries/3rdPartyLibs/gdal/szip-2.1.1
+# Install script for directory: C:/SUMOLibraries/3rdPartyLibs/gdal/szip-2.1.1
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Libraries/3rdPartyLibs/gdal/szip-2.1.1")
+  set(CMAKE_INSTALL_PREFIX "C:/SUMOLibraries/3rdPartyLibs/gdal/szip-2.1.1")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,14 +33,14 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xheadersx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE FILE FILES "C:/Libraries/3rdPartyLibs/gdal/szip-2.1.1/SZconfig.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE FILE FILES "C:/SUMOLibraries/3rdPartyLibs/gdal/szip-2.1.1/SZconfig.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xconfiginstallx" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/cmake/szip-targets.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/cmake/szip-targets.cmake"
-         "C:/Libraries/3rdPartyLibs/gdal/szip-2.1.1/CMakeFiles/Export/cmake/szip-targets.cmake")
+         "C:/SUMOLibraries/3rdPartyLibs/gdal/szip-2.1.1/CMakeFiles/Export/cmake/szip-targets.cmake")
     if(EXPORT_FILE_CHANGED)
       file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/cmake/szip-targets-*.cmake")
       if(OLD_CONFIG_FILES)
@@ -49,26 +49,26 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xconfiginstallx" OR NOT CMAKE_INSTAL
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/cmake" TYPE FILE FILES "C:/Libraries/3rdPartyLibs/gdal/szip-2.1.1/CMakeFiles/Export/cmake/szip-targets.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/cmake" TYPE FILE FILES "C:/SUMOLibraries/3rdPartyLibs/gdal/szip-2.1.1/CMakeFiles/Export/cmake/szip-targets.cmake")
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/cmake" TYPE FILE FILES "C:/Libraries/3rdPartyLibs/gdal/szip-2.1.1/CMakeFiles/Export/cmake/szip-targets-release.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/cmake" TYPE FILE FILES "C:/SUMOLibraries/3rdPartyLibs/gdal/szip-2.1.1/CMakeFiles/Export/cmake/szip-targets-release.cmake")
   endif()
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xconfiginstallx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/cmake" TYPE FILE FILES "C:/Libraries/3rdPartyLibs/gdal/szip-2.1.1/CMakeFiles/szip-config.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/cmake" TYPE FILE FILES "C:/SUMOLibraries/3rdPartyLibs/gdal/szip-2.1.1/CMakeFiles/szip-config.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xconfiginstallx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/cmake" TYPE FILE FILES "C:/Libraries/3rdPartyLibs/gdal/szip-2.1.1/CMakeFiles/szip-config-version.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/cmake" TYPE FILE FILES "C:/SUMOLibraries/3rdPartyLibs/gdal/szip-2.1.1/CMakeFiles/szip-config-version.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xdocumentsx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/." TYPE FILE FILES
-    "C:/Libraries/3rdPartyLibs/gdal/szip-2.1.1/COPYING"
-    "C:/Libraries/3rdPartyLibs/gdal/szip-2.1.1/README"
-    "C:/Libraries/3rdPartyLibs/gdal/szip-2.1.1/INSTALL"
-    "C:/Libraries/3rdPartyLibs/gdal/szip-2.1.1/RELEASE.txt"
+    "C:/SUMOLibraries/3rdPartyLibs/gdal/szip-2.1.1/COPYING"
+    "C:/SUMOLibraries/3rdPartyLibs/gdal/szip-2.1.1/README"
+    "C:/SUMOLibraries/3rdPartyLibs/gdal/szip-2.1.1/INSTALL"
+    "C:/SUMOLibraries/3rdPartyLibs/gdal/szip-2.1.1/RELEASE.txt"
     )
 endif()
 
@@ -86,7 +86,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Libraries/3rdPartyLibs/gdal/szip-2.1.1/src/cmake_install.cmake")
+  include("C:/SUMOLibraries/3rdPartyLibs/gdal/szip-2.1.1/src/cmake_install.cmake")
 
 endif()
 
@@ -98,5 +98,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Libraries/3rdPartyLibs/gdal/szip-2.1.1/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/SUMOLibraries/3rdPartyLibs/gdal/szip-2.1.1/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -63,7 +63,7 @@ CMAKE_EXE_LINKER_FLAGS_RELEASE:STRING=/INCREMENTAL:NO
 CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=/debug /INCREMENTAL
 
 //Install path prefix, prepended onto install directories.
-CMAKE_INSTALL_PREFIX:PATH=C:/Libraries/32bits/3rdPartyLibs/zlib-1.2.11
+CMAKE_INSTALL_PREFIX:PATH=C:/SUMOLibraries/32bits/3rdPartyLibs/zlib-1.2.11
 
 //Path to a program.
 CMAKE_LINKER:FILEPATH=C:/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.22.27905/bin/Hostx64/x86/link.exe
@@ -175,28 +175,28 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=OFF
 EXECUTABLE_OUTPUT_PATH:PATH=
 
 //Installation directory for executables
-INSTALL_BIN_DIR:PATH=C:/Libraries/32bits/3rdPartyLibs/zlib-1.2.11/bin
+INSTALL_BIN_DIR:PATH=C:/SUMOLibraries/32bits/3rdPartyLibs/zlib-1.2.11/bin
 
 //Installation directory for headers
-INSTALL_INC_DIR:PATH=C:/Libraries/32bits/3rdPartyLibs/zlib-1.2.11/include
+INSTALL_INC_DIR:PATH=C:/SUMOLibraries/32bits/3rdPartyLibs/zlib-1.2.11/include
 
 //Installation directory for libraries
-INSTALL_LIB_DIR:PATH=C:/Libraries/32bits/3rdPartyLibs/zlib-1.2.11/lib
+INSTALL_LIB_DIR:PATH=C:/SUMOLibraries/32bits/3rdPartyLibs/zlib-1.2.11/lib
 
 //Installation directory for manual pages
-INSTALL_MAN_DIR:PATH=C:/Libraries/32bits/3rdPartyLibs/zlib-1.2.11/share/man
+INSTALL_MAN_DIR:PATH=C:/SUMOLibraries/32bits/3rdPartyLibs/zlib-1.2.11/share/man
 
 //Installation directory for pkgconfig (.pc) files
-INSTALL_PKGCONFIG_DIR:PATH=C:/Libraries/32bits/3rdPartyLibs/zlib-1.2.11/share/pkgconfig
+INSTALL_PKGCONFIG_DIR:PATH=C:/SUMOLibraries/32bits/3rdPartyLibs/zlib-1.2.11/share/pkgconfig
 
 //Single output directory for building all libraries.
 LIBRARY_OUTPUT_PATH:PATH=
 
 //Value Computed by CMake
-zlib_BINARY_DIR:STATIC=C:/Libraries/32bits/3rdPartyLibs/zlib-1.2.11
+zlib_BINARY_DIR:STATIC=C:/SUMOLibraries/32bits/3rdPartyLibs/zlib-1.2.11
 
 //Value Computed by CMake
-zlib_SOURCE_DIR:STATIC=C:/Libraries/32bits/3rdPartyLibs/zlib-1.2.11
+zlib_SOURCE_DIR:STATIC=C:/SUMOLibraries/32bits/3rdPartyLibs/zlib-1.2.11
 
 
 ########################
@@ -253,7 +253,7 @@ CMAKE_GENERATOR_PLATFORM:INTERNAL=Win32
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
 //Source directory with the top level CMakeLists.txt file for this
 // project
-CMAKE_HOME_DIRECTORY:INTERNAL=C:/Libraries/32bits/3rdPartyLibs/zlib-1.2.11
+CMAKE_HOME_DIRECTORY:INTERNAL=C:/SUMOLibraries/32bits/3rdPartyLibs/zlib-1.2.11
 //ADVANCED property for variable: CMAKE_LINKER
 CMAKE_LINKER-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MODULE_LINKER_FLAGS

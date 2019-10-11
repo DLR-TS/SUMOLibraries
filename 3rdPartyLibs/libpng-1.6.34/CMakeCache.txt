@@ -105,7 +105,7 @@ CMAKE_INSTALL_MANDIR:PATH=
 CMAKE_INSTALL_OLDINCLUDEDIR:PATH=/usr/include
 
 //Install path prefix, prepended onto install directories.
-CMAKE_INSTALL_PREFIX:PATH=C:/Libraries/3rdPartyLibs/libpng-1.6.34
+CMAKE_INSTALL_PREFIX:PATH=C:/SUMOLibraries/3rdPartyLibs/libpng-1.6.34
 
 //Run-time variable data (LOCALSTATEDIR/run)
 CMAKE_INSTALL_RUNSTATEDIR:PATH=
@@ -256,28 +256,28 @@ PNG_STATIC:BOOL=ON
 PNG_TESTS:BOOL=ON
 
 //Path to a file.
-ZLIB_INCLUDE_DIR:PATH=C:/Libraries/3rdPartyLibs/zlib-1.2.11
+ZLIB_INCLUDE_DIR:PATH=C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11
 
 //Path to a library.
-ZLIB_LIBRARY_DEBUG:FILEPATH=C:/Libraries/3rdPartyLibs/zlib-1.2.11/lib/zlibd.lib
+ZLIB_LIBRARY_DEBUG:FILEPATH=C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/lib/zlibd.lib
 
 //Path to a library.
-ZLIB_LIBRARY_RELEASE:FILEPATH=C:/Libraries/3rdPartyLibs/zlib-1.2.11/lib/zlib.lib
+ZLIB_LIBRARY_RELEASE:FILEPATH=C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/lib/zlib.lib
 
 //Enable linker version script
 ld-version-script:BOOL=ON
 
 //Value Computed by CMake
-libpng_BINARY_DIR:STATIC=C:/Libraries/3rdPartyLibs/libpng-1.6.34
+libpng_BINARY_DIR:STATIC=C:/SUMOLibraries/3rdPartyLibs/libpng-1.6.34
 
 //Value Computed by CMake
-libpng_SOURCE_DIR:STATIC=C:/Libraries/3rdPartyLibs/libpng-1.6.34
+libpng_SOURCE_DIR:STATIC=C:/SUMOLibraries/3rdPartyLibs/libpng-1.6.34
 
 //Dependencies for the target
-png_LIB_DEPENDS:STATIC=optimized;C:/Libraries/3rdPartyLibs/zlib-1.2.11/lib/zlib.lib;debug;C:/Libraries/3rdPartyLibs/zlib-1.2.11/lib/zlibd.lib;
+png_LIB_DEPENDS:STATIC=optimized;C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/lib/zlib.lib;debug;C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/lib/zlibd.lib;
 
 //Dependencies for the target
-png_static_LIB_DEPENDS:STATIC=optimized;C:/Libraries/3rdPartyLibs/zlib-1.2.11/lib/zlib.lib;debug;C:/Libraries/3rdPartyLibs/zlib-1.2.11/lib/zlibd.lib;
+png_static_LIB_DEPENDS:STATIC=optimized;C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/lib/zlib.lib;debug;C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/lib/zlibd.lib;
 
 
 ########################
@@ -347,7 +347,7 @@ CMAKE_GENERATOR_PLATFORM:INTERNAL=x64
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
 //Source directory with the top level CMakeLists.txt file for this
 // project
-CMAKE_HOME_DIRECTORY:INTERNAL=C:/Libraries/3rdPartyLibs/libpng-1.6.34
+CMAKE_HOME_DIRECTORY:INTERNAL=C:/SUMOLibraries/3rdPartyLibs/libpng-1.6.34
 //ADVANCED property for variable: CMAKE_INSTALL_BINDIR
 CMAKE_INSTALL_BINDIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_INSTALL_DATADIR
@@ -440,7 +440,7 @@ CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding ZLIB
-FIND_PACKAGE_MESSAGE_DETAILS_ZLIB:INTERNAL=[optimized;C:/Libraries/3rdPartyLibs/zlib-1.2.11/lib/zlib.lib;debug;C:/Libraries/3rdPartyLibs/zlib-1.2.11/lib/zlibd.lib][C:/Libraries/3rdPartyLibs/zlib-1.2.11][v1.2.11()]
+FIND_PACKAGE_MESSAGE_DETAILS_ZLIB:INTERNAL=[optimized;C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/lib/zlib.lib;debug;C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/lib/zlibd.lib][C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11][v1.2.11()]
 //Test HAVE_LD_VERSION_SCRIPT
 HAVE_LD_VERSION_SCRIPT:INTERNAL=
 //Test HAVE_SOLARIS_LD_VERSION_SCRIPT
@@ -452,5 +452,5 @@ ZLIB_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: ZLIB_LIBRARY_RELEASE
 ZLIB_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //CMAKE_INSTALL_PREFIX during last run
-_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=C:/Libraries/3rdPartyLibs/libpng-1.6.34
+_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=C:/SUMOLibraries/3rdPartyLibs/libpng-1.6.34
 

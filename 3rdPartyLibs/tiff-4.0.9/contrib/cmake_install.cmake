@@ -1,4 +1,4 @@
-# Install script for directory: C:/Libraries/3rdPartyLibs/tiff-4.0.9/contrib
+# Install script for directory: C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/contrib
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,15 +34,15 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Libraries/3rdPartyLibs/tiff-4.0.9/contrib/addtiffo/cmake_install.cmake")
-  include("C:/Libraries/3rdPartyLibs/tiff-4.0.9/contrib/dbs/cmake_install.cmake")
-  include("C:/Libraries/3rdPartyLibs/tiff-4.0.9/contrib/iptcutil/cmake_install.cmake")
-  include("C:/Libraries/3rdPartyLibs/tiff-4.0.9/contrib/mfs/cmake_install.cmake")
-  include("C:/Libraries/3rdPartyLibs/tiff-4.0.9/contrib/pds/cmake_install.cmake")
-  include("C:/Libraries/3rdPartyLibs/tiff-4.0.9/contrib/ras/cmake_install.cmake")
-  include("C:/Libraries/3rdPartyLibs/tiff-4.0.9/contrib/stream/cmake_install.cmake")
-  include("C:/Libraries/3rdPartyLibs/tiff-4.0.9/contrib/tags/cmake_install.cmake")
-  include("C:/Libraries/3rdPartyLibs/tiff-4.0.9/contrib/win_dib/cmake_install.cmake")
+  include("C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/contrib/addtiffo/cmake_install.cmake")
+  include("C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/contrib/dbs/cmake_install.cmake")
+  include("C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/contrib/iptcutil/cmake_install.cmake")
+  include("C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/contrib/mfs/cmake_install.cmake")
+  include("C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/contrib/pds/cmake_install.cmake")
+  include("C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/contrib/ras/cmake_install.cmake")
+  include("C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/contrib/stream/cmake_install.cmake")
+  include("C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/contrib/tags/cmake_install.cmake")
+  include("C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/contrib/win_dib/cmake_install.cmake")
 
 endif()
 

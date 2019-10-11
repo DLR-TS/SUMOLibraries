@@ -72,12 +72,12 @@
     </Midl>
     <Link>
       <AdditionalDependencies>..\..\lib\Release\gtest.lib;..\..\lib\Release\proj_6_1.lib;C:\Libraries\3rdPartyLibs\sqlite-3.2.9\sqlite3.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:/Libraries/proj-6.1.1/lib;C:/Libraries/proj-6.1.1/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:/SUMOLibraries/proj-6.1.1/lib;C:/SUMOLibraries/proj-6.1.1/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Libraries/proj-6.1.1/lib/Release/pj_phi2_test.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Libraries/proj-6.1.1/bin/Release/pj_phi2_test.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/SUMOLibraries/proj-6.1.1/lib/Release/pj_phi2_test.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/SUMOLibraries/proj-6.1.1/bin/Release/pj_phi2_test.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -86,9 +86,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <CustomBuild Include="C:\Libraries\proj-6.1.1\test\unit\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Libraries/proj-6.1.1/test/unit/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/SUMOLibraries/proj-6.1.1/test/unit/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-C:\CMake\bin\cmake.exe -SC:/Libraries/proj-6.1.1 -BC:/Libraries/proj-6.1.1 --check-stamp-file C:/Libraries/proj-6.1.1/test/unit/CMakeFiles/generate.stamp
+C:\CMake\bin\cmake.exe -SC:/SUMOLibraries/proj-6.1.1 -BC:/SUMOLibraries/proj-6.1.1 --check-stamp-file C:/SUMOLibraries/proj-6.1.1/test/unit/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -96,7 +96,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Libraries/proj-6.1.1/test/unit/CMakeLists.txt;C:\Libraries\proj-6.1.1\test\googletest\CMakeLists.txt.in;C:\Libraries\proj-6.1.1\test\unit\CMakeLists.txt;C:\Libraries\proj-6.1.1\test\unit\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/SUMOLibraries/proj-6.1.1/test/unit/CMakeLists.txt;C:\Libraries\proj-6.1.1\test\googletest\CMakeLists.txt.in;C:\Libraries\proj-6.1.1\test\unit\CMakeLists.txt;C:\Libraries\proj-6.1.1\test\unit\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Libraries\proj-6.1.1\test\unit\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
     </CustomBuild>

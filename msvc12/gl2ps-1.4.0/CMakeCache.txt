@@ -250,10 +250,10 @@ ZLIB_LIBRARY_DEBUG:FILEPATH=C:\Libraries\3rdPartyLibs\libpng-1.6.34\projects\vst
 ZLIB_LIBRARY_RELEASE:FILEPATH=C:\Libraries\3rdPartyLibs\libpng-1.6.34\projects\vstudio\x64\Release\zlib.lib
 
 //Value Computed by CMake
-gl2ps_BINARY_DIR:STATIC=C:/Libraries/gl2ps-1.4.0_64
+gl2ps_BINARY_DIR:STATIC=C:/SUMOLibraries/gl2ps-1.4.0_64
 
 //Value Computed by CMake
-gl2ps_SOURCE_DIR:STATIC=C:/Libraries/gl2ps-1.4.0
+gl2ps_SOURCE_DIR:STATIC=C:/SUMOLibraries/gl2ps-1.4.0
 
 //Dependencies for target
 lib_LIB_DEPENDS:STATIC=
@@ -318,7 +318,7 @@ CMAKE_GENERATOR_PLATFORM:INTERNAL=
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
 //Source directory with the top level CMakeLists.txt file for this
 // project
-CMAKE_HOME_DIRECTORY:INTERNAL=C:/Libraries/gl2ps-1.4.0
+CMAKE_HOME_DIRECTORY:INTERNAL=C:/SUMOLibraries/gl2ps-1.4.0
 //ADVANCED property for variable: CMAKE_LINKER
 CMAKE_LINKER-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MODULE_LINKER_FLAGS

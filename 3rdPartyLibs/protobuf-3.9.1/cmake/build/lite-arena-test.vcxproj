@@ -72,11 +72,11 @@
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;GOOGLE_PROTOBUF_TEST_PLUGIN_PATH="C:/Libraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/Debug/test_plugin.exe";GOOGLE_PROTOBUF_CMAKE_BUILD;HAVE_ZLIB;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;GOOGLE_PROTOBUF_TEST_PLUGIN_PATH="C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/Debug/test_plugin.exe";GOOGLE_PROTOBUF_CMAKE_BUILD;HAVE_ZLIB;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;GOOGLE_PROTOBUF_TEST_PLUGIN_PATH=\"C:/Libraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/Debug/test_plugin.exe\";GOOGLE_PROTOBUF_CMAKE_BUILD;HAVE_ZLIB;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;GOOGLE_PROTOBUF_TEST_PLUGIN_PATH=\"C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/Debug/test_plugin.exe\";GOOGLE_PROTOBUF_CMAKE_BUILD;HAVE_ZLIB;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>C:\Libraries\3rdPartyLibs\zlib-1.2.11;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\build;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\third_party\googletest\googlemock;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\third_party\googletest\googletest;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\third_party\googletest\googletest\include;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\third_party\googletest\googlemock\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
@@ -93,8 +93,8 @@
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Libraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/Debug/lite-arena-test.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Libraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/Debug/lite-arena-test.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/Debug/lite-arena-test.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/Debug/lite-arena-test.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -117,13 +117,13 @@
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GOOGLE_PROTOBUF_TEST_PLUGIN_PATH="C:/Libraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/Release/test_plugin.exe";GOOGLE_PROTOBUF_CMAKE_BUILD;HAVE_ZLIB;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GOOGLE_PROTOBUF_TEST_PLUGIN_PATH="C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/Release/test_plugin.exe";GOOGLE_PROTOBUF_CMAKE_BUILD;HAVE_ZLIB;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GOOGLE_PROTOBUF_TEST_PLUGIN_PATH=\"C:/Libraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/Release/test_plugin.exe\";GOOGLE_PROTOBUF_CMAKE_BUILD;HAVE_ZLIB;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GOOGLE_PROTOBUF_TEST_PLUGIN_PATH=\"C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/Release/test_plugin.exe\";GOOGLE_PROTOBUF_CMAKE_BUILD;HAVE_ZLIB;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>C:\Libraries\3rdPartyLibs\zlib-1.2.11;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\build;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\third_party\googletest\googlemock;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\third_party\googletest\googletest;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\third_party\googletest\googletest\include;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\third_party\googletest\googlemock\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
@@ -140,8 +140,8 @@
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Libraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/Release/lite-arena-test.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Libraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/Release/lite-arena-test.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/Release/lite-arena-test.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/Release/lite-arena-test.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -150,9 +150,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <CustomBuild Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\build\CMakeFiles\2200427e065a3a3cab5e8c60ddd3576e\map_lite_unittest.pb.cc.rule">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating C:/Libraries/3rdPartyLibs/protobuf-3.9.1/src/google/protobuf/map_lite_unittest.pb.cc</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/src/google/protobuf/map_lite_unittest.pb.cc</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-Debug\protoc.exe C:/Libraries/3rdPartyLibs/protobuf-3.9.1/src/google/protobuf/map_lite_unittest.proto --proto_path=C:/Libraries/3rdPartyLibs/protobuf-3.9.1/src --cpp_out=C:/Libraries/3rdPartyLibs/protobuf-3.9.1/src
+Debug\protoc.exe C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/src/google/protobuf/map_lite_unittest.proto --proto_path=C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/src --cpp_out=C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/src
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -160,12 +160,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Libraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/CMakeFiles/2200427e065a3a3cab5e8c60ddd3576e/map_lite_unittest.pb.cc.rule;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\build\Debug\protoc.exe;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\map_lite_unittest.proto;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/CMakeFiles/2200427e065a3a3cab5e8c60ddd3576e/map_lite_unittest.pb.cc.rule;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\build\Debug\protoc.exe;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\map_lite_unittest.proto;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\map_lite_unittest.pb.cc</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating C:/Libraries/3rdPartyLibs/protobuf-3.9.1/src/google/protobuf/map_lite_unittest.pb.cc</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/src/google/protobuf/map_lite_unittest.pb.cc</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-Release\protoc.exe C:/Libraries/3rdPartyLibs/protobuf-3.9.1/src/google/protobuf/map_lite_unittest.proto --proto_path=C:/Libraries/3rdPartyLibs/protobuf-3.9.1/src --cpp_out=C:/Libraries/3rdPartyLibs/protobuf-3.9.1/src
+Release\protoc.exe C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/src/google/protobuf/map_lite_unittest.proto --proto_path=C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/src --cpp_out=C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/src
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -173,16 +173,16 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Libraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/CMakeFiles/2200427e065a3a3cab5e8c60ddd3576e/map_lite_unittest.pb.cc.rule;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\build\Release\protoc.exe;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\map_lite_unittest.proto;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/CMakeFiles/2200427e065a3a3cab5e8c60ddd3576e/map_lite_unittest.pb.cc.rule;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\build\Release\protoc.exe;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\map_lite_unittest.proto;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\map_lite_unittest.pb.cc</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\build\CMakeFiles\2200427e065a3a3cab5e8c60ddd3576e\unittest_import_lite.pb.cc.rule">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating C:/Libraries/3rdPartyLibs/protobuf-3.9.1/src/google/protobuf/unittest_import_lite.pb.cc</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/src/google/protobuf/unittest_import_lite.pb.cc</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-Debug\protoc.exe C:/Libraries/3rdPartyLibs/protobuf-3.9.1/src/google/protobuf/unittest_import_lite.proto --proto_path=C:/Libraries/3rdPartyLibs/protobuf-3.9.1/src --cpp_out=C:/Libraries/3rdPartyLibs/protobuf-3.9.1/src
+Debug\protoc.exe C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/src/google/protobuf/unittest_import_lite.proto --proto_path=C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/src --cpp_out=C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/src
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -190,12 +190,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Libraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/CMakeFiles/2200427e065a3a3cab5e8c60ddd3576e/unittest_import_lite.pb.cc.rule;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\build\Debug\protoc.exe;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\unittest_import_lite.proto;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/CMakeFiles/2200427e065a3a3cab5e8c60ddd3576e/unittest_import_lite.pb.cc.rule;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\build\Debug\protoc.exe;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\unittest_import_lite.proto;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\unittest_import_lite.pb.cc</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating C:/Libraries/3rdPartyLibs/protobuf-3.9.1/src/google/protobuf/unittest_import_lite.pb.cc</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/src/google/protobuf/unittest_import_lite.pb.cc</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-Release\protoc.exe C:/Libraries/3rdPartyLibs/protobuf-3.9.1/src/google/protobuf/unittest_import_lite.proto --proto_path=C:/Libraries/3rdPartyLibs/protobuf-3.9.1/src --cpp_out=C:/Libraries/3rdPartyLibs/protobuf-3.9.1/src
+Release\protoc.exe C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/src/google/protobuf/unittest_import_lite.proto --proto_path=C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/src --cpp_out=C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/src
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -203,16 +203,16 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Libraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/CMakeFiles/2200427e065a3a3cab5e8c60ddd3576e/unittest_import_lite.pb.cc.rule;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\build\Release\protoc.exe;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\unittest_import_lite.proto;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/CMakeFiles/2200427e065a3a3cab5e8c60ddd3576e/unittest_import_lite.pb.cc.rule;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\build\Release\protoc.exe;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\unittest_import_lite.proto;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\unittest_import_lite.pb.cc</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\build\CMakeFiles\2200427e065a3a3cab5e8c60ddd3576e\unittest_import_public_lite.pb.cc.rule">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating C:/Libraries/3rdPartyLibs/protobuf-3.9.1/src/google/protobuf/unittest_import_public_lite.pb.cc</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/src/google/protobuf/unittest_import_public_lite.pb.cc</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-Debug\protoc.exe C:/Libraries/3rdPartyLibs/protobuf-3.9.1/src/google/protobuf/unittest_import_public_lite.proto --proto_path=C:/Libraries/3rdPartyLibs/protobuf-3.9.1/src --cpp_out=C:/Libraries/3rdPartyLibs/protobuf-3.9.1/src
+Debug\protoc.exe C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/src/google/protobuf/unittest_import_public_lite.proto --proto_path=C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/src --cpp_out=C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/src
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -220,12 +220,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Libraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/CMakeFiles/2200427e065a3a3cab5e8c60ddd3576e/unittest_import_public_lite.pb.cc.rule;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\build\Debug\protoc.exe;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\unittest_import_public_lite.proto;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/CMakeFiles/2200427e065a3a3cab5e8c60ddd3576e/unittest_import_public_lite.pb.cc.rule;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\build\Debug\protoc.exe;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\unittest_import_public_lite.proto;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\unittest_import_public_lite.pb.cc</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating C:/Libraries/3rdPartyLibs/protobuf-3.9.1/src/google/protobuf/unittest_import_public_lite.pb.cc</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/src/google/protobuf/unittest_import_public_lite.pb.cc</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-Release\protoc.exe C:/Libraries/3rdPartyLibs/protobuf-3.9.1/src/google/protobuf/unittest_import_public_lite.proto --proto_path=C:/Libraries/3rdPartyLibs/protobuf-3.9.1/src --cpp_out=C:/Libraries/3rdPartyLibs/protobuf-3.9.1/src
+Release\protoc.exe C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/src/google/protobuf/unittest_import_public_lite.proto --proto_path=C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/src --cpp_out=C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/src
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -233,16 +233,16 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Libraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/CMakeFiles/2200427e065a3a3cab5e8c60ddd3576e/unittest_import_public_lite.pb.cc.rule;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\build\Release\protoc.exe;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\unittest_import_public_lite.proto;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/CMakeFiles/2200427e065a3a3cab5e8c60ddd3576e/unittest_import_public_lite.pb.cc.rule;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\build\Release\protoc.exe;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\unittest_import_public_lite.proto;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\unittest_import_public_lite.pb.cc</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\build\CMakeFiles\2200427e065a3a3cab5e8c60ddd3576e\unittest_lite.pb.cc.rule">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating C:/Libraries/3rdPartyLibs/protobuf-3.9.1/src/google/protobuf/unittest_lite.pb.cc</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/src/google/protobuf/unittest_lite.pb.cc</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-Debug\protoc.exe C:/Libraries/3rdPartyLibs/protobuf-3.9.1/src/google/protobuf/unittest_lite.proto --proto_path=C:/Libraries/3rdPartyLibs/protobuf-3.9.1/src --cpp_out=C:/Libraries/3rdPartyLibs/protobuf-3.9.1/src
+Debug\protoc.exe C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/src/google/protobuf/unittest_lite.proto --proto_path=C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/src --cpp_out=C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/src
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -250,12 +250,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Libraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/CMakeFiles/2200427e065a3a3cab5e8c60ddd3576e/unittest_lite.pb.cc.rule;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\build\Debug\protoc.exe;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\unittest_lite.proto;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/CMakeFiles/2200427e065a3a3cab5e8c60ddd3576e/unittest_lite.pb.cc.rule;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\build\Debug\protoc.exe;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\unittest_lite.proto;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\unittest_lite.pb.cc</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating C:/Libraries/3rdPartyLibs/protobuf-3.9.1/src/google/protobuf/unittest_lite.pb.cc</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/src/google/protobuf/unittest_lite.pb.cc</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-Release\protoc.exe C:/Libraries/3rdPartyLibs/protobuf-3.9.1/src/google/protobuf/unittest_lite.proto --proto_path=C:/Libraries/3rdPartyLibs/protobuf-3.9.1/src --cpp_out=C:/Libraries/3rdPartyLibs/protobuf-3.9.1/src
+Release\protoc.exe C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/src/google/protobuf/unittest_lite.proto --proto_path=C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/src --cpp_out=C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/src
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -263,16 +263,16 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Libraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/CMakeFiles/2200427e065a3a3cab5e8c60ddd3576e/unittest_lite.pb.cc.rule;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\build\Release\protoc.exe;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\unittest_lite.proto;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/CMakeFiles/2200427e065a3a3cab5e8c60ddd3576e/unittest_lite.pb.cc.rule;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\build\Release\protoc.exe;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\unittest_lite.proto;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\unittest_lite.pb.cc</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\build\CMakeFiles\2200427e065a3a3cab5e8c60ddd3576e\unittest_no_arena_lite.pb.cc.rule">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating C:/Libraries/3rdPartyLibs/protobuf-3.9.1/src/google/protobuf/unittest_no_arena_lite.pb.cc</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/src/google/protobuf/unittest_no_arena_lite.pb.cc</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-Debug\protoc.exe C:/Libraries/3rdPartyLibs/protobuf-3.9.1/src/google/protobuf/unittest_no_arena_lite.proto --proto_path=C:/Libraries/3rdPartyLibs/protobuf-3.9.1/src --cpp_out=C:/Libraries/3rdPartyLibs/protobuf-3.9.1/src
+Debug\protoc.exe C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/src/google/protobuf/unittest_no_arena_lite.proto --proto_path=C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/src --cpp_out=C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/src
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -280,12 +280,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Libraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/CMakeFiles/2200427e065a3a3cab5e8c60ddd3576e/unittest_no_arena_lite.pb.cc.rule;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\build\Debug\protoc.exe;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\unittest_no_arena_lite.proto;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/CMakeFiles/2200427e065a3a3cab5e8c60ddd3576e/unittest_no_arena_lite.pb.cc.rule;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\build\Debug\protoc.exe;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\unittest_no_arena_lite.proto;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\unittest_no_arena_lite.pb.cc</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating C:/Libraries/3rdPartyLibs/protobuf-3.9.1/src/google/protobuf/unittest_no_arena_lite.pb.cc</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/src/google/protobuf/unittest_no_arena_lite.pb.cc</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-Release\protoc.exe C:/Libraries/3rdPartyLibs/protobuf-3.9.1/src/google/protobuf/unittest_no_arena_lite.proto --proto_path=C:/Libraries/3rdPartyLibs/protobuf-3.9.1/src --cpp_out=C:/Libraries/3rdPartyLibs/protobuf-3.9.1/src
+Release\protoc.exe C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/src/google/protobuf/unittest_no_arena_lite.proto --proto_path=C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/src --cpp_out=C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/src
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -293,16 +293,16 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Libraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/CMakeFiles/2200427e065a3a3cab5e8c60ddd3576e/unittest_no_arena_lite.pb.cc.rule;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\build\Release\protoc.exe;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\unittest_no_arena_lite.proto;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/CMakeFiles/2200427e065a3a3cab5e8c60ddd3576e/unittest_no_arena_lite.pb.cc.rule;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\build\Release\protoc.exe;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\unittest_no_arena_lite.proto;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Libraries\3rdPartyLibs\protobuf-3.9.1\src\google\protobuf\unittest_no_arena_lite.pb.cc</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Libraries/3rdPartyLibs/protobuf-3.9.1/cmake/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/cmake/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-C:\CMake\bin\cmake.exe -SC:/Libraries/3rdPartyLibs/protobuf-3.9.1/cmake -BC:/Libraries/3rdPartyLibs/protobuf-3.9.1/cmake/build --check-stamp-file C:/Libraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/CMakeFiles/generate.stamp
+C:\CMake\bin\cmake.exe -SC:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/cmake -BC:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/cmake/build --check-stamp-file C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -310,12 +310,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Libraries/3rdPartyLibs/protobuf-3.9.1/cmake/CMakeLists.txt;C:\CMake\share\cmake-3.14\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeCXXInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeDependentOption.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.14\Modules\CheckIncludeFile.cmake;C:\CMake\share\cmake-3.14\Modules\CheckLibraryExists.cmake;C:\CMake\share\cmake-3.14\Modules\CheckSymbolExists.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\MSVC-C.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\MSVC-CXX.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.14\Modules\FindThreads.cmake;C:\CMake\share\cmake-3.14\Modules\FindZLIB.cmake;C:\CMake\share\cmake-3.14\Modules\GNUInstallDirs.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-CXX.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.14\Modules\SelectLibraryConfigurations.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\CMakeLists.txt;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\build\CMakeFiles\3.14.1\CMakeCCompiler.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\build\CMakeFiles\3.14.1\CMakeCXXCompiler.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\build\CMakeFiles\3.14.1\CMakeRCCompiler.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\build\CMakeFiles\3.14.1\CMakeSystem.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\extract_includes.bat.in;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\install.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\libprotobuf-lite.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\libprotobuf.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\libprotoc.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\protobuf-config-version.cmake.in;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\protobuf-config.cmake.in;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\protobuf-lite.pc.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\protobuf-module.cmake.in;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\protobuf-options.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\protobuf.pc.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\protoc.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\tests.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\version.rc.in;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/cmake/CMakeLists.txt;C:\CMake\share\cmake-3.14\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeCXXInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeDependentOption.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.14\Modules\CheckIncludeFile.cmake;C:\CMake\share\cmake-3.14\Modules\CheckLibraryExists.cmake;C:\CMake\share\cmake-3.14\Modules\CheckSymbolExists.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\MSVC-C.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\MSVC-CXX.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.14\Modules\FindThreads.cmake;C:\CMake\share\cmake-3.14\Modules\FindZLIB.cmake;C:\CMake\share\cmake-3.14\Modules\GNUInstallDirs.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-CXX.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.14\Modules\SelectLibraryConfigurations.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\CMakeLists.txt;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\build\CMakeFiles\3.14.1\CMakeCCompiler.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\build\CMakeFiles\3.14.1\CMakeCXXCompiler.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\build\CMakeFiles\3.14.1\CMakeRCCompiler.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\build\CMakeFiles\3.14.1\CMakeSystem.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\extract_includes.bat.in;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\install.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\libprotobuf-lite.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\libprotobuf.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\libprotoc.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\protobuf-config-version.cmake.in;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\protobuf-config.cmake.in;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\protobuf-lite.pc.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\protobuf-module.cmake.in;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\protobuf-options.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\protobuf.pc.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\protoc.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\tests.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\version.rc.in;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Libraries/3rdPartyLibs/protobuf-3.9.1/cmake/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/cmake/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-C:\CMake\bin\cmake.exe -SC:/Libraries/3rdPartyLibs/protobuf-3.9.1/cmake -BC:/Libraries/3rdPartyLibs/protobuf-3.9.1/cmake/build --check-stamp-file C:/Libraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/CMakeFiles/generate.stamp
+C:\CMake\bin\cmake.exe -SC:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/cmake -BC:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/cmake/build --check-stamp-file C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/cmake/build/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -323,7 +323,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Libraries/3rdPartyLibs/protobuf-3.9.1/cmake/CMakeLists.txt;C:\CMake\share\cmake-3.14\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeCXXInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeDependentOption.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.14\Modules\CheckIncludeFile.cmake;C:\CMake\share\cmake-3.14\Modules\CheckLibraryExists.cmake;C:\CMake\share\cmake-3.14\Modules\CheckSymbolExists.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\MSVC-C.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\MSVC-CXX.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.14\Modules\FindThreads.cmake;C:\CMake\share\cmake-3.14\Modules\FindZLIB.cmake;C:\CMake\share\cmake-3.14\Modules\GNUInstallDirs.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-CXX.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.14\Modules\SelectLibraryConfigurations.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\CMakeLists.txt;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\build\CMakeFiles\3.14.1\CMakeCCompiler.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\build\CMakeFiles\3.14.1\CMakeCXXCompiler.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\build\CMakeFiles\3.14.1\CMakeRCCompiler.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\build\CMakeFiles\3.14.1\CMakeSystem.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\extract_includes.bat.in;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\install.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\libprotobuf-lite.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\libprotobuf.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\libprotoc.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\protobuf-config-version.cmake.in;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\protobuf-config.cmake.in;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\protobuf-lite.pc.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\protobuf-module.cmake.in;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\protobuf-options.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\protobuf.pc.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\protoc.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\tests.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\version.rc.in;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/SUMOLibraries/3rdPartyLibs/protobuf-3.9.1/cmake/CMakeLists.txt;C:\CMake\share\cmake-3.14\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeCXXInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeDependentOption.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.14\Modules\CheckIncludeFile.cmake;C:\CMake\share\cmake-3.14\Modules\CheckLibraryExists.cmake;C:\CMake\share\cmake-3.14\Modules\CheckSymbolExists.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\MSVC-C.cmake;C:\CMake\share\cmake-3.14\Modules\Compiler\MSVC-CXX.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.14\Modules\FindThreads.cmake;C:\CMake\share\cmake-3.14\Modules\FindZLIB.cmake;C:\CMake\share\cmake-3.14\Modules\GNUInstallDirs.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-CXX.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.14\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.14\Modules\SelectLibraryConfigurations.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\CMakeLists.txt;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\build\CMakeFiles\3.14.1\CMakeCCompiler.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\build\CMakeFiles\3.14.1\CMakeCXXCompiler.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\build\CMakeFiles\3.14.1\CMakeRCCompiler.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\build\CMakeFiles\3.14.1\CMakeSystem.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\extract_includes.bat.in;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\install.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\libprotobuf-lite.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\libprotobuf.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\libprotoc.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\protobuf-config-version.cmake.in;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\protobuf-config.cmake.in;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\protobuf-lite.pc.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\protobuf-module.cmake.in;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\protobuf-options.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\protobuf.pc.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\protoc.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\tests.cmake;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\version.rc.in;C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Libraries\3rdPartyLibs\protobuf-3.9.1\cmake\build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
     </CustomBuild>

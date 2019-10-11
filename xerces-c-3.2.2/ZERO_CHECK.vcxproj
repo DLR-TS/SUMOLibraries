@@ -68,7 +68,7 @@
     <CustomBuild Include="C:\Libraries\xerces-c-3.2.2\CMakeFiles\daad361ee21fe8728778f0a763026804\generate.stamp.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Checking Build System</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-C:\CMake\bin\cmake.exe -SC:/Libraries/xerces-c-3.2.2 -BC:/Libraries/xerces-c-3.2.2 --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Libraries/xerces-c-3.2.2/xerces-c.sln
+C:\CMake\bin\cmake.exe -SC:/SUMOLibraries/xerces-c-3.2.2 -BC:/SUMOLibraries/xerces-c-3.2.2 --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/SUMOLibraries/xerces-c-3.2.2/xerces-c.sln
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -81,7 +81,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Checking Build System</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-C:\CMake\bin\cmake.exe -SC:/Libraries/xerces-c-3.2.2 -BC:/Libraries/xerces-c-3.2.2 --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Libraries/xerces-c-3.2.2/xerces-c.sln
+C:\CMake\bin\cmake.exe -SC:/SUMOLibraries/xerces-c-3.2.2 -BC:/SUMOLibraries/xerces-c-3.2.2 --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/SUMOLibraries/xerces-c-3.2.2/xerces-c.sln
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone

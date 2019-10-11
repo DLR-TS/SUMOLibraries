@@ -46,9 +46,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <CustomBuild Include="C:\Libraries\proj-6.1.1\googletest-src\googletest\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Libraries/proj-6.1.1/googletest-src/googletest/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/SUMOLibraries/proj-6.1.1/googletest-src/googletest/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-C:\CMake\bin\cmake.exe -SC:/Libraries/proj-6.1.1 -BC:/Libraries/proj-6.1.1 --check-stamp-file C:/Libraries/proj-6.1.1/googletest-build/googlemock/gtest/CMakeFiles/generate.stamp
+C:\CMake\bin\cmake.exe -SC:/SUMOLibraries/proj-6.1.1 -BC:/SUMOLibraries/proj-6.1.1 --check-stamp-file C:/SUMOLibraries/proj-6.1.1/googletest-build/googlemock/gtest/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -56,7 +56,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Libraries/proj-6.1.1/googletest-src/googletest/CMakeLists.txt;C:\CMake\share\cmake-3.14\Modules\CheckIncludeFile.cmake;C:\CMake\share\cmake-3.14\Modules\CheckLibraryExists.cmake;C:\CMake\share\cmake-3.14\Modules\CheckSymbolExists.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.14\Modules\FindPythonInterp.cmake;C:\CMake\share\cmake-3.14\Modules\FindThreads.cmake;C:\Libraries\proj-6.1.1\googletest-src\googletest\CMakeLists.txt;C:\Libraries\proj-6.1.1\googletest-src\googletest\cmake\internal_utils.cmake;C:\Libraries\proj-6.1.1\googletest-src\googletest\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/SUMOLibraries/proj-6.1.1/googletest-src/googletest/CMakeLists.txt;C:\CMake\share\cmake-3.14\Modules\CheckIncludeFile.cmake;C:\CMake\share\cmake-3.14\Modules\CheckLibraryExists.cmake;C:\CMake\share\cmake-3.14\Modules\CheckSymbolExists.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.14\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.14\Modules\FindPythonInterp.cmake;C:\CMake\share\cmake-3.14\Modules\FindThreads.cmake;C:\Libraries\proj-6.1.1\googletest-src\googletest\CMakeLists.txt;C:\Libraries\proj-6.1.1\googletest-src\googletest\cmake\internal_utils.cmake;C:\Libraries\proj-6.1.1\googletest-src\googletest\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Libraries\proj-6.1.1\googletest-build\googlemock\gtest\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
     </CustomBuild>

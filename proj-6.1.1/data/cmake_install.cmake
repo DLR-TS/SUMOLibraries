@@ -1,4 +1,4 @@
-# Install script for directory: C:/Libraries/proj-6.1.1/data
+# Install script for directory: C:/SUMOLibraries/proj-6.1.1/data
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,18 +34,18 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/proj" TYPE FILE FILES
-    "C:/Libraries/proj-6.1.1/data/null"
-    "C:/Libraries/proj-6.1.1/data/world"
-    "C:/Libraries/proj-6.1.1/data/other.extra"
-    "C:/Libraries/proj-6.1.1/data/nad27"
-    "C:/Libraries/proj-6.1.1/data/GL27"
-    "C:/Libraries/proj-6.1.1/data/nad83"
-    "C:/Libraries/proj-6.1.1/data/nad.lst"
-    "C:/Libraries/proj-6.1.1/data/CH"
-    "C:/Libraries/proj-6.1.1/data/ITRF2000"
-    "C:/Libraries/proj-6.1.1/data/ITRF2008"
-    "C:/Libraries/proj-6.1.1/data/ITRF2014"
-    "C:/Libraries/proj-6.1.1/data/proj.db"
+    "C:/SUMOLibraries/proj-6.1.1/data/null"
+    "C:/SUMOLibraries/proj-6.1.1/data/world"
+    "C:/SUMOLibraries/proj-6.1.1/data/other.extra"
+    "C:/SUMOLibraries/proj-6.1.1/data/nad27"
+    "C:/SUMOLibraries/proj-6.1.1/data/GL27"
+    "C:/SUMOLibraries/proj-6.1.1/data/nad83"
+    "C:/SUMOLibraries/proj-6.1.1/data/nad.lst"
+    "C:/SUMOLibraries/proj-6.1.1/data/CH"
+    "C:/SUMOLibraries/proj-6.1.1/data/ITRF2000"
+    "C:/SUMOLibraries/proj-6.1.1/data/ITRF2008"
+    "C:/SUMOLibraries/proj-6.1.1/data/ITRF2014"
+    "C:/SUMOLibraries/proj-6.1.1/data/proj.db"
     )
 endif()
 

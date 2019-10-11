@@ -1,4 +1,4 @@
-# Install script for directory: C:/Libraries/proj-6.1.1/include
+# Install script for directory: C:/SUMOLibraries/proj-6.1.1/include
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Libraries/proj-6.1.1/include/proj/cmake_install.cmake")
+  include("C:/SUMOLibraries/proj-6.1.1/include/proj/cmake_install.cmake")
 
 endif()
 

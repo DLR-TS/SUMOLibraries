@@ -55,14 +55,14 @@ set_target_properties(szip-shared PROPERTIES
 set_property(TARGET szip-static APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(szip-static PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "C"
-  IMPORTED_LOCATION_RELEASE "C:/Libraries/3rdPartyLibs/gdal/szip-2.1.1/bin/Release/libszip.lib"
+  IMPORTED_LOCATION_RELEASE "C:/SUMOLibraries/3rdPartyLibs/gdal/szip-2.1.1/bin/Release/libszip.lib"
   )
 
 # Import target "szip-shared" for configuration "Release"
 set_property(TARGET szip-shared APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(szip-shared PROPERTIES
-  IMPORTED_IMPLIB_RELEASE "C:/Libraries/3rdPartyLibs/gdal/szip-2.1.1/bin/Release/szip.lib"
-  IMPORTED_LOCATION_RELEASE "C:/Libraries/3rdPartyLibs/gdal/szip-2.1.1/bin/Release/szip.dll"
+  IMPORTED_IMPLIB_RELEASE "C:/SUMOLibraries/3rdPartyLibs/gdal/szip-2.1.1/bin/Release/szip.lib"
+  IMPORTED_LOCATION_RELEASE "C:/SUMOLibraries/3rdPartyLibs/gdal/szip-2.1.1/bin/Release/szip.dll"
   )
 
 # This file does not depend on other imported targets which have

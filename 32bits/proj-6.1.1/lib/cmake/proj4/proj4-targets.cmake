@@ -55,7 +55,7 @@ add_library(proj SHARED IMPORTED)
 
 set_target_properties(proj PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "C:/Libraries/32bits/3rdPartyLibs/sqlite-3.3.0/sqlite3.lib"
+  INTERFACE_LINK_LIBRARIES "C:/SUMOLibraries/32bits/3rdPartyLibs/sqlite-3.3.0/sqlite3.lib"
 )
 
 if(CMAKE_VERSION VERSION_LESS 2.8.12)

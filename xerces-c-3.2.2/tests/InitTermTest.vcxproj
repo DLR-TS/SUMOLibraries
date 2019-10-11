@@ -91,8 +91,8 @@
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Libraries/xerces-c-3.2.2/tests/Debug/InitTermTest.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Libraries/xerces-c-3.2.2/tests/Debug/InitTermTest.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/SUMOLibraries/xerces-c-3.2.2/tests/Debug/InitTermTest.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/SUMOLibraries/xerces-c-3.2.2/tests/Debug/InitTermTest.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -136,8 +136,8 @@
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Libraries/xerces-c-3.2.2/tests/Release/InitTermTest.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Libraries/xerces-c-3.2.2/tests/Release/InitTermTest.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/SUMOLibraries/xerces-c-3.2.2/tests/Release/InitTermTest.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/SUMOLibraries/xerces-c-3.2.2/tests/Release/InitTermTest.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -146,9 +146,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <CustomBuild Include="C:\Libraries\xerces-c-3.2.2\tests\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Libraries/xerces-c-3.2.2/tests/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/SUMOLibraries/xerces-c-3.2.2/tests/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-C:\CMake\bin\cmake.exe -SC:/Libraries/xerces-c-3.2.2 -BC:/Libraries/xerces-c-3.2.2 --check-stamp-file C:/Libraries/xerces-c-3.2.2/tests/CMakeFiles/generate.stamp
+C:\CMake\bin\cmake.exe -SC:/SUMOLibraries/xerces-c-3.2.2 -BC:/SUMOLibraries/xerces-c-3.2.2 --check-stamp-file C:/SUMOLibraries/xerces-c-3.2.2/tests/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -159,9 +159,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Libraries\xerces-c-3.2.2\cmake\XercesTest.cmake;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Libraries\xerces-c-3.2.2\tests\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Libraries/xerces-c-3.2.2/tests/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/SUMOLibraries/xerces-c-3.2.2/tests/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-C:\CMake\bin\cmake.exe -SC:/Libraries/xerces-c-3.2.2 -BC:/Libraries/xerces-c-3.2.2 --check-stamp-file C:/Libraries/xerces-c-3.2.2/tests/CMakeFiles/generate.stamp
+C:\CMake\bin\cmake.exe -SC:/SUMOLibraries/xerces-c-3.2.2 -BC:/SUMOLibraries/xerces-c-3.2.2 --check-stamp-file C:/SUMOLibraries/xerces-c-3.2.2/tests/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone

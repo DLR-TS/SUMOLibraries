@@ -1,4 +1,4 @@
-# Install script for directory: C:/Libraries/proj-6.1.1/include/proj
+# Install script for directory: C:/SUMOLibraries/proj-6.1.1/include/proj
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,15 +34,15 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/proj" TYPE FILE FILES
-    "C:/Libraries/proj-6.1.1/include/proj/util.hpp"
-    "C:/Libraries/proj-6.1.1/include/proj/metadata.hpp"
-    "C:/Libraries/proj-6.1.1/include/proj/common.hpp"
-    "C:/Libraries/proj-6.1.1/include/proj/crs.hpp"
-    "C:/Libraries/proj-6.1.1/include/proj/datum.hpp"
-    "C:/Libraries/proj-6.1.1/include/proj/coordinatesystem.hpp"
-    "C:/Libraries/proj-6.1.1/include/proj/coordinateoperation.hpp"
-    "C:/Libraries/proj-6.1.1/include/proj/io.hpp"
-    "C:/Libraries/proj-6.1.1/include/proj/nn.hpp"
+    "C:/SUMOLibraries/proj-6.1.1/include/proj/util.hpp"
+    "C:/SUMOLibraries/proj-6.1.1/include/proj/metadata.hpp"
+    "C:/SUMOLibraries/proj-6.1.1/include/proj/common.hpp"
+    "C:/SUMOLibraries/proj-6.1.1/include/proj/crs.hpp"
+    "C:/SUMOLibraries/proj-6.1.1/include/proj/datum.hpp"
+    "C:/SUMOLibraries/proj-6.1.1/include/proj/coordinatesystem.hpp"
+    "C:/SUMOLibraries/proj-6.1.1/include/proj/coordinateoperation.hpp"
+    "C:/SUMOLibraries/proj-6.1.1/include/proj/io.hpp"
+    "C:/SUMOLibraries/proj-6.1.1/include/proj/nn.hpp"
     )
 endif()
 

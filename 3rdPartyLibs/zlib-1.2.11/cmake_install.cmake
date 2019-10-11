@@ -1,8 +1,8 @@
-# Install script for directory: C:/Libraries/3rdPartyLibs/zlib-1.2.11
+# Install script for directory: C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Libraries/3rdPartyLibs/zlib-1.2.11")
+  set(CMAKE_INSTALL_PREFIX "C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -35,112 +35,112 @@ endif()
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
     list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-     "C:/Libraries/3rdPartyLibs/zlib-1.2.11/lib/zlibd.lib")
+     "C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/lib/zlibd.lib")
     if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
         message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
     if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
         message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
-file(INSTALL DESTINATION "C:/Libraries/3rdPartyLibs/zlib-1.2.11/lib" TYPE STATIC_LIBRARY OPTIONAL FILES "C:/Libraries/3rdPartyLibs/zlib-1.2.11/Debug/zlibd.lib")
+file(INSTALL DESTINATION "C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/lib" TYPE STATIC_LIBRARY OPTIONAL FILES "C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/Debug/zlibd.lib")
   elseif("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
     list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-     "C:/Libraries/3rdPartyLibs/zlib-1.2.11/lib/zlib.lib")
+     "C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/lib/zlib.lib")
     if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
         message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
     if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
         message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
-file(INSTALL DESTINATION "C:/Libraries/3rdPartyLibs/zlib-1.2.11/lib" TYPE STATIC_LIBRARY OPTIONAL FILES "C:/Libraries/3rdPartyLibs/zlib-1.2.11/Release/zlib.lib")
+file(INSTALL DESTINATION "C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/lib" TYPE STATIC_LIBRARY OPTIONAL FILES "C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/Release/zlib.lib")
   endif()
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
     list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-     "C:/Libraries/3rdPartyLibs/zlib-1.2.11/bin/zlibd.dll")
+     "C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/bin/zlibd.dll")
     if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
         message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
     if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
         message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
-file(INSTALL DESTINATION "C:/Libraries/3rdPartyLibs/zlib-1.2.11/bin" TYPE SHARED_LIBRARY FILES "C:/Libraries/3rdPartyLibs/zlib-1.2.11/Debug/zlibd.dll")
+file(INSTALL DESTINATION "C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/bin" TYPE SHARED_LIBRARY FILES "C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/Debug/zlibd.dll")
   elseif("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
     list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-     "C:/Libraries/3rdPartyLibs/zlib-1.2.11/bin/zlib.dll")
+     "C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/bin/zlib.dll")
     if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
         message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
     if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
         message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
-file(INSTALL DESTINATION "C:/Libraries/3rdPartyLibs/zlib-1.2.11/bin" TYPE SHARED_LIBRARY FILES "C:/Libraries/3rdPartyLibs/zlib-1.2.11/Release/zlib.dll")
+file(INSTALL DESTINATION "C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/bin" TYPE SHARED_LIBRARY FILES "C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/Release/zlib.dll")
   endif()
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
     list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-     "C:/Libraries/3rdPartyLibs/zlib-1.2.11/lib/zlibstaticd.lib")
+     "C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/lib/zlibstaticd.lib")
     if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
         message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
     if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
         message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
-file(INSTALL DESTINATION "C:/Libraries/3rdPartyLibs/zlib-1.2.11/lib" TYPE STATIC_LIBRARY FILES "C:/Libraries/3rdPartyLibs/zlib-1.2.11/Debug/zlibstaticd.lib")
+file(INSTALL DESTINATION "C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/lib" TYPE STATIC_LIBRARY FILES "C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/Debug/zlibstaticd.lib")
   elseif("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
     list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-     "C:/Libraries/3rdPartyLibs/zlib-1.2.11/lib/zlibstatic.lib")
+     "C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/lib/zlibstatic.lib")
     if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
         message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
     if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
         message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
-file(INSTALL DESTINATION "C:/Libraries/3rdPartyLibs/zlib-1.2.11/lib" TYPE STATIC_LIBRARY FILES "C:/Libraries/3rdPartyLibs/zlib-1.2.11/Release/zlibstatic.lib")
+file(INSTALL DESTINATION "C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/lib" TYPE STATIC_LIBRARY FILES "C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/Release/zlibstatic.lib")
   endif()
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "C:/Libraries/3rdPartyLibs/zlib-1.2.11/include/zconf.h;C:/Libraries/3rdPartyLibs/zlib-1.2.11/include/zlib.h")
+   "C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/include/zconf.h;C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/include/zlib.h")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "C:/Libraries/3rdPartyLibs/zlib-1.2.11/include" TYPE FILE FILES
-    "C:/Libraries/3rdPartyLibs/zlib-1.2.11/zconf.h"
-    "C:/Libraries/3rdPartyLibs/zlib-1.2.11/zlib.h"
+file(INSTALL DESTINATION "C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/include" TYPE FILE FILES
+    "C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/zconf.h"
+    "C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/zlib.h"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "C:/Libraries/3rdPartyLibs/zlib-1.2.11/share/man/man3/zlib.3")
+   "C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/share/man/man3/zlib.3")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "C:/Libraries/3rdPartyLibs/zlib-1.2.11/share/man/man3" TYPE FILE FILES "C:/Libraries/3rdPartyLibs/zlib-1.2.11/zlib.3")
+file(INSTALL DESTINATION "C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/share/man/man3" TYPE FILE FILES "C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/zlib.3")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "C:/Libraries/3rdPartyLibs/zlib-1.2.11/share/pkgconfig/zlib.pc")
+   "C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/share/pkgconfig/zlib.pc")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "C:/Libraries/3rdPartyLibs/zlib-1.2.11/share/pkgconfig" TYPE FILE FILES "C:/Libraries/3rdPartyLibs/zlib-1.2.11/zlib.pc")
+file(INSTALL DESTINATION "C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/share/pkgconfig" TYPE FILE FILES "C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/zlib.pc")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -151,5 +151,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Libraries/3rdPartyLibs/zlib-1.2.11/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

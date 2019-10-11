@@ -1,4 +1,4 @@
-# Install script for directory: C:/Libraries/32bits/proj-6.1.1/man
+# Install script for directory: C:/SUMOLibraries/32bits/proj-6.1.1/man
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,19 +34,19 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/man/man1" TYPE FILE FILES
-    "C:/Libraries/32bits/proj-6.1.1/man/man1/proj.1"
-    "C:/Libraries/32bits/proj-6.1.1/man/man1/cs2cs.1"
-    "C:/Libraries/32bits/proj-6.1.1/man/man1/geod.1"
-    "C:/Libraries/32bits/proj-6.1.1/man/man1/cct.1"
-    "C:/Libraries/32bits/proj-6.1.1/man/man1/gie.1"
-    "C:/Libraries/32bits/proj-6.1.1/man/man1/projinfo.1"
+    "C:/SUMOLibraries/32bits/proj-6.1.1/man/man1/proj.1"
+    "C:/SUMOLibraries/32bits/proj-6.1.1/man/man1/cs2cs.1"
+    "C:/SUMOLibraries/32bits/proj-6.1.1/man/man1/geod.1"
+    "C:/SUMOLibraries/32bits/proj-6.1.1/man/man1/cct.1"
+    "C:/SUMOLibraries/32bits/proj-6.1.1/man/man1/gie.1"
+    "C:/SUMOLibraries/32bits/proj-6.1.1/man/man1/projinfo.1"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/man/man3" TYPE FILE FILES
-    "C:/Libraries/32bits/proj-6.1.1/man/man3/pj_init.3"
-    "C:/Libraries/32bits/proj-6.1.1/man/man3/geodesic.3"
+    "C:/SUMOLibraries/32bits/proj-6.1.1/man/man3/pj_init.3"
+    "C:/SUMOLibraries/32bits/proj-6.1.1/man/man3/geodesic.3"
     )
 endif()
 

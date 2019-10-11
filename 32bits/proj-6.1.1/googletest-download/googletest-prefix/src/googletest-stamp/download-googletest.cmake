@@ -22,14 +22,14 @@ function(check_file_hash has_hash hash_is_good)
   set("${has_hash}" TRUE PARENT_SCOPE)
 
   message(STATUS "verifying file...
-       file='C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/release-1.8.1.zip'")
+       file='C:/SUMOLibraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/release-1.8.1.zip'")
 
-  file("SHA1" "C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/release-1.8.1.zip" actual_value)
+  file("SHA1" "C:/SUMOLibraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/release-1.8.1.zip" actual_value)
 
   if(NOT "${actual_value}" STREQUAL "7b41ea3682937069e3ce32cb06619fead505795e")
     set("${hash_is_good}" FALSE PARENT_SCOPE)
     message(STATUS "SHA1 hash of
-    C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/release-1.8.1.zip
+    C:/SUMOLibraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/release-1.8.1.zip
   does not match expected value
     expected: '7b41ea3682937069e3ce32cb06619fead505795e'
       actual: '${actual_value}'")
@@ -71,7 +71,7 @@ function(sleep_before_download attempt)
   execute_process(COMMAND "${CMAKE_COMMAND}" -E sleep "${sleep_seconds}")
 endfunction()
 
-if("C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/release-1.8.1.zip" STREQUAL "")
+if("C:/SUMOLibraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/release-1.8.1.zip" STREQUAL "")
   message(FATAL_ERROR "LOCAL can't be empty")
 endif()
 
@@ -79,32 +79,32 @@ if("https://github.com/google/googletest/archive/release-1.8.1.zip" STREQUAL "")
   message(FATAL_ERROR "REMOTE can't be empty")
 endif()
 
-if(EXISTS "C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/release-1.8.1.zip")
+if(EXISTS "C:/SUMOLibraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/release-1.8.1.zip")
   check_file_hash(has_hash hash_is_good)
   if(has_hash)
     if(hash_is_good)
       message(STATUS "File already exists and hash match (skip download):
-  file='C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/release-1.8.1.zip'
+  file='C:/SUMOLibraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/release-1.8.1.zip'
   SHA1='7b41ea3682937069e3ce32cb06619fead505795e'"
       )
       return()
     else()
       message(STATUS "File already exists but hash mismatch. Removing...")
-      file(REMOVE "C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/release-1.8.1.zip")
+      file(REMOVE "C:/SUMOLibraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/release-1.8.1.zip")
     endif()
   else()
     message(STATUS "File already exists but no hash specified (use URL_HASH):
-  file='C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/release-1.8.1.zip'
+  file='C:/SUMOLibraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/release-1.8.1.zip'
 Old file will be removed and new file downloaded from URL."
     )
-    file(REMOVE "C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/release-1.8.1.zip")
+    file(REMOVE "C:/SUMOLibraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/release-1.8.1.zip")
   endif()
 endif()
 
 set(retry_number 5)
 
 message(STATUS "Downloading...
-   dst='C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/release-1.8.1.zip'
+   dst='C:/SUMOLibraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/release-1.8.1.zip'
    timeout='none'"
 )
 
@@ -121,7 +121,7 @@ foreach(i RANGE ${retry_number})
 
     file(
         DOWNLOAD
-        "${url}" "C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/release-1.8.1.zip"
+        "${url}" "C:/SUMOLibraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/release-1.8.1.zip"
         
         # no TIMEOUT
         STATUS status
@@ -137,7 +137,7 @@ foreach(i RANGE ${retry_number})
       check_file_hash(has_hash hash_is_good)
       if(has_hash AND NOT hash_is_good)
         message(STATUS "Hash mismatch, removing...")
-        file(REMOVE "C:/Libraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/release-1.8.1.zip")
+        file(REMOVE "C:/SUMOLibraries/32bits/proj-6.1.1/googletest-download/googletest-prefix/src/release-1.8.1.zip")
       else()
         message(STATUS "Downloading... done")
         return()

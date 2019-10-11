@@ -72,9 +72,9 @@ cd C:\Libraries\xerces-c-3.2.2\doc
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-C:\CMake\bin\cmake.exe -E copy_directory C:/Libraries/xerces-c-3.2.2/doc/style C:/Libraries/xerces-c-3.2.2/doc/style
+C:\CMake\bin\cmake.exe -E copy_directory C:/SUMOLibraries/xerces-c-3.2.2/doc/style C:/SUMOLibraries/xerces-c-3.2.2/doc/style
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Java\jdk1.8.0_172\bin\java.exe" -Djava.awt.headless=true -classpath C:/Libraries/xerces-c-3.2.2/tools/jars/stylebook-1.0-b2.jar;C:/Libraries/xerces-c-3.2.2/tools/jars/xalan.jar;C:/Libraries/xerces-c-3.2.2/tools/jars/xerces.jar org.apache.stylebook.StyleBook targetDirectory=C:/Libraries/xerces-c-3.2.2/doc/html C:/Libraries/xerces-c-3.2.2/doc/xerces-c_book.xml C:/Libraries/xerces-c-3.2.2/doc/style
+"C:\Program Files\Java\jdk1.8.0_172\bin\java.exe" -Djava.awt.headless=true -classpath C:/SUMOLibraries/xerces-c-3.2.2/tools/jars/stylebook-1.0-b2.jar;C:/SUMOLibraries/xerces-c-3.2.2/tools/jars/xalan.jar;C:/SUMOLibraries/xerces-c-3.2.2/tools/jars/xerces.jar org.apache.stylebook.StyleBook targetDirectory=C:/SUMOLibraries/xerces-c-3.2.2/doc/html C:/SUMOLibraries/xerces-c-3.2.2/doc/xerces-c_book.xml C:/SUMOLibraries/xerces-c-3.2.2/doc/style
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -92,9 +92,9 @@ cd C:\Libraries\xerces-c-3.2.2\doc
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-C:\CMake\bin\cmake.exe -E copy_directory C:/Libraries/xerces-c-3.2.2/doc/style C:/Libraries/xerces-c-3.2.2/doc/style
+C:\CMake\bin\cmake.exe -E copy_directory C:/SUMOLibraries/xerces-c-3.2.2/doc/style C:/SUMOLibraries/xerces-c-3.2.2/doc/style
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Java\jdk1.8.0_172\bin\java.exe" -Djava.awt.headless=true -classpath C:/Libraries/xerces-c-3.2.2/tools/jars/stylebook-1.0-b2.jar;C:/Libraries/xerces-c-3.2.2/tools/jars/xalan.jar;C:/Libraries/xerces-c-3.2.2/tools/jars/xerces.jar org.apache.stylebook.StyleBook targetDirectory=C:/Libraries/xerces-c-3.2.2/doc/html C:/Libraries/xerces-c-3.2.2/doc/xerces-c_book.xml C:/Libraries/xerces-c-3.2.2/doc/style
+"C:\Program Files\Java\jdk1.8.0_172\bin\java.exe" -Djava.awt.headless=true -classpath C:/SUMOLibraries/xerces-c-3.2.2/tools/jars/stylebook-1.0-b2.jar;C:/SUMOLibraries/xerces-c-3.2.2/tools/jars/xalan.jar;C:/SUMOLibraries/xerces-c-3.2.2/tools/jars/xerces.jar org.apache.stylebook.StyleBook targetDirectory=C:/SUMOLibraries/xerces-c-3.2.2/doc/html C:/SUMOLibraries/xerces-c-3.2.2/doc/xerces-c_book.xml C:/SUMOLibraries/xerces-c-3.2.2/doc/style
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -110,9 +110,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="C:\Libraries\xerces-c-3.2.2\doc\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Libraries/xerces-c-3.2.2/doc/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/SUMOLibraries/xerces-c-3.2.2/doc/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-C:\CMake\bin\cmake.exe -SC:/Libraries/xerces-c-3.2.2 -BC:/Libraries/xerces-c-3.2.2 --check-stamp-file C:/Libraries/xerces-c-3.2.2/doc/CMakeFiles/generate.stamp
+C:\CMake\bin\cmake.exe -SC:/SUMOLibraries/xerces-c-3.2.2 -BC:/SUMOLibraries/xerces-c-3.2.2 --check-stamp-file C:/SUMOLibraries/xerces-c-3.2.2/doc/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -123,9 +123,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\CMake\share\cmake-3.15\Modules\CMakeFindJavaCommon.cmake;C:\CMake\share\cmake-3.15\Modules\FindJava.cmake;C:\CMake\share\cmake-3.15\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.15\Modules\FindPackageMessage.cmake;C:\Libraries\xerces-c-3.2.2\doc\style\dtd\entities.ent.in;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Libraries\xerces-c-3.2.2\doc\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Libraries/xerces-c-3.2.2/doc/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/SUMOLibraries/xerces-c-3.2.2/doc/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-C:\CMake\bin\cmake.exe -SC:/Libraries/xerces-c-3.2.2 -BC:/Libraries/xerces-c-3.2.2 --check-stamp-file C:/Libraries/xerces-c-3.2.2/doc/CMakeFiles/generate.stamp
+C:\CMake\bin\cmake.exe -SC:/SUMOLibraries/xerces-c-3.2.2 -BC:/SUMOLibraries/xerces-c-3.2.2 --check-stamp-file C:/SUMOLibraries/xerces-c-3.2.2/doc/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone

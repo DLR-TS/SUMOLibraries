@@ -1,8 +1,8 @@
-# Install script for directory: C:/Libraries/xerces-c-3.2.2
+# Install script for directory: C:/SUMOLibraries/xerces-c-3.2.2
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Libraries/xerces-c-3.2.2")
+  set(CMAKE_INSTALL_PREFIX "C:/SUMOLibraries/xerces-c-3.2.2")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,15 +33,15 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xdevelopmentx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "C:/Libraries/xerces-c-3.2.2/xerces-c.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "C:/SUMOLibraries/xerces-c-3.2.2/xerces-c.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Libraries/xerces-c-3.2.2/doc/cmake_install.cmake")
-  include("C:/Libraries/xerces-c-3.2.2/src/cmake_install.cmake")
-  include("C:/Libraries/xerces-c-3.2.2/tests/cmake_install.cmake")
-  include("C:/Libraries/xerces-c-3.2.2/samples/cmake_install.cmake")
+  include("C:/SUMOLibraries/xerces-c-3.2.2/doc/cmake_install.cmake")
+  include("C:/SUMOLibraries/xerces-c-3.2.2/src/cmake_install.cmake")
+  include("C:/SUMOLibraries/xerces-c-3.2.2/tests/cmake_install.cmake")
+  include("C:/SUMOLibraries/xerces-c-3.2.2/samples/cmake_install.cmake")
 
 endif()
 
@@ -53,5 +53,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Libraries/xerces-c-3.2.2/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/SUMOLibraries/xerces-c-3.2.2/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

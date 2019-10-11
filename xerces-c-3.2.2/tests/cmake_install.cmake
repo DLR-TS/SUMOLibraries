@@ -1,8 +1,8 @@
-# Install script for directory: C:/Libraries/xerces-c-3.2.2/tests
+# Install script for directory: C:/SUMOLibraries/xerces-c-3.2.2/tests
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Libraries/xerces-c-3.2.2")
+  set(CMAKE_INSTALL_PREFIX "C:/SUMOLibraries/xerces-c-3.2.2")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

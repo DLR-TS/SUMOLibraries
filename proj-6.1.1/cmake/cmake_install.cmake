@@ -1,4 +1,4 @@
-# Install script for directory: C:/Libraries/proj-6.1.1/cmake
+# Install script for directory: C:/SUMOLibraries/proj-6.1.1/cmake
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -33,18 +33,18 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/proj4" TYPE FILE RENAME "proj4-config.cmake" FILES "C:/Libraries/proj-6.1.1/cmake/project-config.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/proj4" TYPE FILE RENAME "proj4-config.cmake" FILES "C:/SUMOLibraries/proj-6.1.1/cmake/project-config.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/proj4" TYPE FILE RENAME "proj4-config-version.cmake" FILES "C:/Libraries/proj-6.1.1/cmake/project-config-version.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/proj4" TYPE FILE RENAME "proj4-config-version.cmake" FILES "C:/SUMOLibraries/proj-6.1.1/cmake/project-config-version.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/proj4/proj4-targets.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/proj4/proj4-targets.cmake"
-         "C:/Libraries/proj-6.1.1/cmake/CMakeFiles/Export/lib/cmake/proj4/proj4-targets.cmake")
+         "C:/SUMOLibraries/proj-6.1.1/cmake/CMakeFiles/Export/lib/cmake/proj4/proj4-targets.cmake")
     if(EXPORT_FILE_CHANGED)
       file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/proj4/proj4-targets-*.cmake")
       if(OLD_CONFIG_FILES)
@@ -53,9 +53,9 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/proj4" TYPE FILE FILES "C:/Libraries/proj-6.1.1/cmake/CMakeFiles/Export/lib/cmake/proj4/proj4-targets.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/proj4" TYPE FILE FILES "C:/SUMOLibraries/proj-6.1.1/cmake/CMakeFiles/Export/lib/cmake/proj4/proj4-targets.cmake")
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/proj4" TYPE FILE FILES "C:/Libraries/proj-6.1.1/cmake/CMakeFiles/Export/lib/cmake/proj4/proj4-targets-release.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/proj4" TYPE FILE FILES "C:/SUMOLibraries/proj-6.1.1/cmake/CMakeFiles/Export/lib/cmake/proj4/proj4-targets-release.cmake")
   endif()
 endif()
 
@@ -63,7 +63,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/proj4/proj4-namespace-targets.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/proj4/proj4-namespace-targets.cmake"
-         "C:/Libraries/proj-6.1.1/cmake/CMakeFiles/Export/lib/cmake/proj4/proj4-namespace-targets.cmake")
+         "C:/SUMOLibraries/proj-6.1.1/cmake/CMakeFiles/Export/lib/cmake/proj4/proj4-namespace-targets.cmake")
     if(EXPORT_FILE_CHANGED)
       file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/proj4/proj4-namespace-targets-*.cmake")
       if(OLD_CONFIG_FILES)
@@ -72,9 +72,9 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/proj4" TYPE FILE FILES "C:/Libraries/proj-6.1.1/cmake/CMakeFiles/Export/lib/cmake/proj4/proj4-namespace-targets.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/proj4" TYPE FILE FILES "C:/SUMOLibraries/proj-6.1.1/cmake/CMakeFiles/Export/lib/cmake/proj4/proj4-namespace-targets.cmake")
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/proj4" TYPE FILE FILES "C:/Libraries/proj-6.1.1/cmake/CMakeFiles/Export/lib/cmake/proj4/proj4-namespace-targets-release.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/proj4" TYPE FILE FILES "C:/SUMOLibraries/proj-6.1.1/cmake/CMakeFiles/Export/lib/cmake/proj4/proj4-namespace-targets-release.cmake")
   endif()
 endif()
 

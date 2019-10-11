@@ -1,8 +1,8 @@
-# Install script for directory: C:/Libraries/32bits/xerces-c-3.2.2/doc
+# Install script for directory: C:/SUMOLibraries/32bits/xerces-c-3.2.2/doc
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Libraries/32bits/xerces-c-3.2.2")
+  set(CMAKE_INSTALL_PREFIX "C:/SUMOLibraries/32bits/xerces-c-3.2.2")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,10 +33,10 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xdevelopmentx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/doc/xerces-c" TYPE DIRECTORY FILES "C:/Libraries/32bits/xerces-c-3.2.2/doc/html")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/doc/xerces-c" TYPE DIRECTORY FILES "C:/SUMOLibraries/32bits/xerces-c-3.2.2/doc/html")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xdevelopmentx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/doc/xerces-c" TYPE DIRECTORY FILES "C:/Libraries/32bits/xerces-c-3.2.2/doc/html")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/doc/xerces-c" TYPE DIRECTORY FILES "C:/SUMOLibraries/32bits/xerces-c-3.2.2/doc/html")
 endif()
 

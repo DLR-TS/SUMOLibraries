@@ -1,8 +1,8 @@
-# Install script for directory: C:/Libraries/3rdPartyLibs/gdal/szip-2.1.1/src
+# Install script for directory: C:/SUMOLibraries/3rdPartyLibs/gdal/szip-2.1.1/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Libraries/3rdPartyLibs/gdal/szip-2.1.1")
+  set(CMAKE_INSTALL_PREFIX "C:/SUMOLibraries/3rdPartyLibs/gdal/szip-2.1.1")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -40,35 +40,35 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xlibrariesx" OR NOT CMAKE_INSTALL_COMPONENT)
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "C:/Libraries/3rdPartyLibs/gdal/szip-2.1.1/bin/Release/libszip.lib")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "C:/SUMOLibraries/3rdPartyLibs/gdal/szip-2.1.1/bin/Release/libszip.lib")
   endif()
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xheadersx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE FILE FILES
-    "C:/Libraries/3rdPartyLibs/gdal/szip-2.1.1/src/ricehdf.h"
-    "C:/Libraries/3rdPartyLibs/gdal/szip-2.1.1/src/szip_adpt.h"
-    "C:/Libraries/3rdPartyLibs/gdal/szip-2.1.1/src/szlib.h"
+    "C:/SUMOLibraries/3rdPartyLibs/gdal/szip-2.1.1/src/ricehdf.h"
+    "C:/SUMOLibraries/3rdPartyLibs/gdal/szip-2.1.1/src/szip_adpt.h"
+    "C:/SUMOLibraries/3rdPartyLibs/gdal/szip-2.1.1/src/szlib.h"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xlibrariesx" OR NOT CMAKE_INSTALL_COMPONENT)
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY OPTIONAL FILES "C:/Libraries/3rdPartyLibs/gdal/szip-2.1.1/bin/Release/szip.lib")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY OPTIONAL FILES "C:/SUMOLibraries/3rdPartyLibs/gdal/szip-2.1.1/bin/Release/szip.lib")
   endif()
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xlibrariesx" OR NOT CMAKE_INSTALL_COMPONENT)
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE SHARED_LIBRARY FILES "C:/Libraries/3rdPartyLibs/gdal/szip-2.1.1/bin/Release/szip.dll")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE SHARED_LIBRARY FILES "C:/SUMOLibraries/3rdPartyLibs/gdal/szip-2.1.1/bin/Release/szip.dll")
   endif()
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xheadersx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE FILE FILES
-    "C:/Libraries/3rdPartyLibs/gdal/szip-2.1.1/src/ricehdf.h"
-    "C:/Libraries/3rdPartyLibs/gdal/szip-2.1.1/src/szip_adpt.h"
-    "C:/Libraries/3rdPartyLibs/gdal/szip-2.1.1/src/szlib.h"
+    "C:/SUMOLibraries/3rdPartyLibs/gdal/szip-2.1.1/src/ricehdf.h"
+    "C:/SUMOLibraries/3rdPartyLibs/gdal/szip-2.1.1/src/szip_adpt.h"
+    "C:/SUMOLibraries/3rdPartyLibs/gdal/szip-2.1.1/src/szlib.h"
     )
 endif()
 

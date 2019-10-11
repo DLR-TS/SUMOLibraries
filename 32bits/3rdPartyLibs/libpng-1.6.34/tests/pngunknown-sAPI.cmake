@@ -8,7 +8,7 @@
 # and license in png.h
 
 set(TEST_OPTIONS "--strict;bKGD=save;cHRM=save;gAMA=save;all=discard;iCCP=save;sBIT=save;sRGB=save")
-set(TEST_FILES "C:/Libraries/32bits/3rdPartyLibs/libpng-1.6.34/pngtest.png")
+set(TEST_FILES "C:/SUMOLibraries/32bits/3rdPartyLibs/libpng-1.6.34/pngtest.png")
 
 foreach(file ${TEST_FILES})
   file(TO_NATIVE_PATH "${file}" native_file)

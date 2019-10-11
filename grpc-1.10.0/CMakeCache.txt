@@ -30,10 +30,10 @@ BENCHMARK_ENABLE_TESTING:BOOL=ON
 BENCHMARK_USE_LIBCXX:BOOL=OFF
 
 //Value Computed by CMake
-BoringSSL_BINARY_DIR:STATIC=C:/Libraries/grpc-1.10.0_64/third_party/boringssl
+BoringSSL_BINARY_DIR:STATIC=C:/SUMOLibraries/grpc-1.10.0_64/third_party/boringssl
 
 //Value Computed by CMake
-BoringSSL_SOURCE_DIR:STATIC=C:/Libraries/grpc-1.10.0_64/third_party/boringssl
+BoringSSL_SOURCE_DIR:STATIC=C:/SUMOLibraries/grpc-1.10.0_64/third_party/boringssl
 
 //Create installation targets (chain builders may want to disable
 // this)
@@ -261,43 +261,43 @@ LIBRT:FILEPATH=LIBRT-NOTFOUND
 PERL_EXECUTABLE:FILEPATH=C:/Perl64/bin/perl.exe
 
 //The directory containing a CMake configuration file for Protobuf.
-Protobuf_DIR:PATH=C:/Libraries/3rdPartyLibs/protobuf-3.5.1_64
+Protobuf_DIR:PATH=C:/SUMOLibraries/3rdPartyLibs/protobuf-3.5.1_64
 
 //Path to a file.
-Protobuf_INCLUDE_DIR:PATH=C:/Libraries/3rdPartyLibs/protobuf-3.5.1_64/src
+Protobuf_INCLUDE_DIR:PATH=C:/SUMOLibraries/3rdPartyLibs/protobuf-3.5.1_64/src
 
 //Path to a library.
-Protobuf_LIBRARY_DEBUG:FILEPATH=C:/Libraries/3rdPartyLibs/protobuf-3.5.1_64/cmake/Debug/libprotobufd.lib
+Protobuf_LIBRARY_DEBUG:FILEPATH=C:/SUMOLibraries/3rdPartyLibs/protobuf-3.5.1_64/cmake/Debug/libprotobufd.lib
 
 //Path to a library.
-Protobuf_LIBRARY_RELEASE:FILEPATH=C:/Libraries/3rdPartyLibs/protobuf-3.5.1_64/cmake/Release/libprotobuf.lib
+Protobuf_LIBRARY_RELEASE:FILEPATH=C:/SUMOLibraries/3rdPartyLibs/protobuf-3.5.1_64/cmake/Release/libprotobuf.lib
 
 //Path to a library.
-Protobuf_LITE_LIBRARY_DEBUG:FILEPATH=C:/Libraries/3rdPartyLibs/protobuf-3.5.1_64/cmake/Debug/libprotobuf-lited.lib
+Protobuf_LITE_LIBRARY_DEBUG:FILEPATH=C:/SUMOLibraries/3rdPartyLibs/protobuf-3.5.1_64/cmake/Debug/libprotobuf-lited.lib
 
 //Path to a library.
-Protobuf_LITE_LIBRARY_RELEASE:FILEPATH=C:/Libraries/3rdPartyLibs/protobuf-3.5.1_64/cmake/Release/libprotobuf-lite.lib
+Protobuf_LITE_LIBRARY_RELEASE:FILEPATH=C:/SUMOLibraries/3rdPartyLibs/protobuf-3.5.1_64/cmake/Release/libprotobuf-lite.lib
 
 //The Google Protocol Buffers Compiler
-Protobuf_PROTOC_EXECUTABLE:FILEPATH=C:/Libraries/3rdPartyLibs/protobuf-3.5.1_64/cmake/Release/protoc.exe
+Protobuf_PROTOC_EXECUTABLE:FILEPATH=C:/SUMOLibraries/3rdPartyLibs/protobuf-3.5.1_64/cmake/Release/protoc.exe
 
 //Path to a library.
-Protobuf_PROTOC_LIBRARY_DEBUG:FILEPATH=C:/Libraries/3rdPartyLibs/protobuf-3.5.1_64/cmake/Debug/libprotocd.lib
+Protobuf_PROTOC_LIBRARY_DEBUG:FILEPATH=C:/SUMOLibraries/3rdPartyLibs/protobuf-3.5.1_64/cmake/Debug/libprotocd.lib
 
 //Path to a library.
-Protobuf_PROTOC_LIBRARY_RELEASE:FILEPATH=C:/Libraries/3rdPartyLibs/protobuf-3.5.1_64/cmake/Release/libprotoc.lib
+Protobuf_PROTOC_LIBRARY_RELEASE:FILEPATH=C:/SUMOLibraries/3rdPartyLibs/protobuf-3.5.1_64/cmake/Release/libprotoc.lib
 
 //Path to a file.
-Protobuf_SRC_ROOT_FOLDER:PATH=C:/Libraries/3rdPartyLibs/protobuf-3.5.1_64/src
+Protobuf_SRC_ROOT_FOLDER:PATH=C:/SUMOLibraries/3rdPartyLibs/protobuf-3.5.1_64/src
 
 //Path to a file.
-ZLIB_INCLUDE_DIR:PATH=C:/Libraries/3rdPartyLibs/zlib-1.2.11_64
+ZLIB_INCLUDE_DIR:PATH=C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11_64
 
 //Path to a library.
-ZLIB_LIBRARY_DEBUG:FILEPATH=C:/Libraries/3rdPartyLibs/zlib-1.2.11_64/Debug/zlibd.lib
+ZLIB_LIBRARY_DEBUG:FILEPATH=C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11_64/Debug/zlibd.lib
 
 //Path to a library.
-ZLIB_LIBRARY_RELEASE:FILEPATH=C:/Libraries/3rdPartyLibs/zlib-1.2.11_64/Release/zlib.lib
+ZLIB_LIBRARY_RELEASE:FILEPATH=C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11_64/Release/zlib.lib
 
 //Dependencies for the target
 bad_client_test_LIB_DEPENDS:STATIC=general;grpc_test_util_unsecure;general;grpc_unsecure;general;gpr_test_util;general;gpr;
@@ -306,22 +306,22 @@ bad_client_test_LIB_DEPENDS:STATIC=general;grpc_test_util_unsecure;general;grpc_
 bad_ssl_test_server_LIB_DEPENDS:STATIC=general;grpc_test_util;general;grpc;general;gpr_test_util;general;gpr;
 
 //Value Computed by CMake
-benchmark_BINARY_DIR:STATIC=C:/Libraries/grpc-1.10.0_64/third_party/benchmark
+benchmark_BINARY_DIR:STATIC=C:/SUMOLibraries/grpc-1.10.0_64/third_party/benchmark
 
 //Dependencies for the target
 benchmark_LIB_DEPENDS:STATIC=general;Shlwapi;
 
 //Value Computed by CMake
-benchmark_SOURCE_DIR:STATIC=C:/Libraries/grpc-1.10.0_64/third_party/benchmark
+benchmark_SOURCE_DIR:STATIC=C:/SUMOLibraries/grpc-1.10.0_64/third_party/benchmark
 
 //Value Computed by CMake
-c-ares_BINARY_DIR:STATIC=C:/Libraries/grpc-1.10.0_64/third_party/cares/cares
+c-ares_BINARY_DIR:STATIC=C:/SUMOLibraries/grpc-1.10.0_64/third_party/cares/cares
 
 //Dependencies for the target
 c-ares_LIB_DEPENDS:STATIC=general;ws2_32;
 
 //Value Computed by CMake
-c-ares_SOURCE_DIR:STATIC=C:/Libraries/grpc-1.10.0_64/third_party/cares/cares
+c-ares_SOURCE_DIR:STATIC=C:/SUMOLibraries/grpc-1.10.0_64/third_party/cares/cares
 
 //Dependencies for target
 crypto_LIB_DEPENDS:STATIC=
@@ -382,10 +382,10 @@ gRPC_USE_PROTO_LITE:BOOL=OFF
 gRPC_ZLIB_PROVIDER:STRING=package
 
 //Value Computed by CMake
-gflags_BINARY_DIR:STATIC=C:/Libraries/grpc-1.10.0_64/third_party/gflags
+gflags_BINARY_DIR:STATIC=C:/SUMOLibraries/grpc-1.10.0_64/third_party/gflags
 
 //Value Computed by CMake
-gflags_SOURCE_DIR:STATIC=C:/Libraries/grpc-1.10.0_64/third_party/gflags
+gflags_SOURCE_DIR:STATIC=C:/SUMOLibraries/grpc-1.10.0_64/third_party/gflags
 
 //Dependencies for the target
 gflags_nothreads_static_LIB_DEPENDS:STATIC=general;shlwapi.lib;
@@ -430,13 +430,13 @@ grpc++_test_util_unsecure_LIB_DEPENDS:STATIC=general;protobuf::libprotobuf;gener
 grpc++_unsecure_LIB_DEPENDS:STATIC=general;wsock32;general;ws2_32;general;protobuf::libprotobuf;general;gpr;general;grpc_unsecure;
 
 //Value Computed by CMake
-grpc_BINARY_DIR:STATIC=C:/Libraries/grpc-1.10.0_64
+grpc_BINARY_DIR:STATIC=C:/SUMOLibraries/grpc-1.10.0_64
 
 //Dependencies for the target
 grpc_LIB_DEPENDS:STATIC=general;wsock32;general;ws2_32;general;ssl;general;ZLIB::ZLIB;general;c-ares;general;gpr;
 
 //Value Computed by CMake
-grpc_SOURCE_DIR:STATIC=C:/Libraries/grpc-1.10.0_64
+grpc_SOURCE_DIR:STATIC=C:/SUMOLibraries/grpc-1.10.0_64
 
 //Dependencies for the target
 grpc_benchmark_LIB_DEPENDS:STATIC=general;protobuf::libprotobuf;general;benchmark;general;grpc++_unsecure;general;grpc_test_util_unsecure;general;grpc_unsecure;general;gflags_static;
@@ -496,7 +496,7 @@ libprotoc_LIB_DEPENDS:STATIC=general;libprotobuf;
 output_test_helper_LIB_DEPENDS:STATIC=
 
 //Value Computed by CMake
-protobuf_BINARY_DIR:STATIC=C:/Libraries/grpc-1.10.0_64/third_party/protobuf
+protobuf_BINARY_DIR:STATIC=C:/SUMOLibraries/grpc-1.10.0_64/third_party/protobuf
 
 //Build examples
 protobuf_BUILD_EXAMPLES:BOOL=OFF
@@ -520,7 +520,7 @@ protobuf_MODULE_COMPATIBLE:BOOL=OFF
 protobuf_MSVC_STATIC_RUNTIME:BOOL=ON
 
 //Value Computed by CMake
-protobuf_SOURCE_DIR:STATIC=C:/Libraries/grpc-1.10.0_64/third_party/protobuf/cmake
+protobuf_SOURCE_DIR:STATIC=C:/SUMOLibraries/grpc-1.10.0_64/third_party/protobuf/cmake
 
 //Enable for verbose output
 protobuf_VERBOSE:BOOL=OFF
@@ -615,7 +615,7 @@ CMAKE_GENERATOR_TOOLSET:INTERNAL=
 CMAKE_HAVE_PTHREAD_H:INTERNAL=
 //Source directory with the top level CMakeLists.txt file for this
 // project
-CMAKE_HOME_DIRECTORY:INTERNAL=C:/Libraries/grpc-1.10.0_64
+CMAKE_HOME_DIRECTORY:INTERNAL=C:/SUMOLibraries/grpc-1.10.0_64
 //ADVANCED property for variable: CMAKE_INSTALL_BINDIR
 CMAKE_INSTALL_BINDIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_INSTALL_CMAKEDIR
@@ -722,11 +722,11 @@ FIND_PACKAGE_MESSAGE_DETAILS_Git:INTERNAL=[C:/Program Files/Git/cmd/git.exe][v2.
 //Details about finding Perl
 FIND_PACKAGE_MESSAGE_DETAILS_Perl:INTERNAL=[C:/Perl64/bin/perl.exe][v5.24.3()]
 //Details about finding Protobuf
-FIND_PACKAGE_MESSAGE_DETAILS_Protobuf:INTERNAL=[optimized;C:/Libraries/3rdPartyLibs/protobuf-3.5.1_64/cmake/Release/libprotobuf.lib;debug;C:/Libraries/3rdPartyLibs/protobuf-3.5.1_64/cmake/Debug/libprotobufd.lib][C:/Libraries/3rdPartyLibs/protobuf-3.5.1_64/src][v3.5.1()]
+FIND_PACKAGE_MESSAGE_DETAILS_Protobuf:INTERNAL=[optimized;C:/SUMOLibraries/3rdPartyLibs/protobuf-3.5.1_64/cmake/Release/libprotobuf.lib;debug;C:/SUMOLibraries/3rdPartyLibs/protobuf-3.5.1_64/cmake/Debug/libprotobufd.lib][C:/SUMOLibraries/3rdPartyLibs/protobuf-3.5.1_64/src][v3.5.1()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //Details about finding ZLIB
-FIND_PACKAGE_MESSAGE_DETAILS_ZLIB:INTERNAL=[optimized;C:/Libraries/3rdPartyLibs/zlib-1.2.11_64/Release/zlib.lib;debug;C:/Libraries/3rdPartyLibs/zlib-1.2.11_64/Debug/zlibd.lib][C:/Libraries/3rdPartyLibs/zlib-1.2.11_64][v1.2.11()]
+FIND_PACKAGE_MESSAGE_DETAILS_ZLIB:INTERNAL=[optimized;C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11_64/Release/zlib.lib;debug;C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11_64/Debug/zlibd.lib][C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11_64][v1.2.11()]
 //ADVANCED property for variable: GIT_EXECUTABLE
 GIT_EXECUTABLE-ADVANCED:INTERNAL=1
 //Have symbol AF_INET6

@@ -53,14 +53,14 @@ endif()
 add_library(png SHARED IMPORTED)
 
 set_target_properties(png PROPERTIES
-  INTERFACE_LINK_LIBRARIES "\$<\$<NOT:\$<CONFIG:DEBUG>>:C:/Libraries/3rdPartyLibs/zlib-1.2.11/lib/zlib.lib>;\$<\$<CONFIG:DEBUG>:C:/Libraries/3rdPartyLibs/zlib-1.2.11/lib/zlibd.lib>"
+  INTERFACE_LINK_LIBRARIES "\$<\$<NOT:\$<CONFIG:DEBUG>>:C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/lib/zlib.lib>;\$<\$<CONFIG:DEBUG>:C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/lib/zlibd.lib>"
 )
 
 # Create imported target png_static
 add_library(png_static STATIC IMPORTED)
 
 set_target_properties(png_static PROPERTIES
-  INTERFACE_LINK_LIBRARIES "\$<\$<NOT:\$<CONFIG:DEBUG>>:C:/Libraries/3rdPartyLibs/zlib-1.2.11/lib/zlib.lib>;\$<\$<CONFIG:DEBUG>:C:/Libraries/3rdPartyLibs/zlib-1.2.11/lib/zlibd.lib>"
+  INTERFACE_LINK_LIBRARIES "\$<\$<NOT:\$<CONFIG:DEBUG>>:C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/lib/zlib.lib>;\$<\$<CONFIG:DEBUG>:C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/lib/zlibd.lib>"
 )
 
 if(CMAKE_VERSION VERSION_LESS 2.8.12)

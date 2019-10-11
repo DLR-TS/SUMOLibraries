@@ -9,18 +9,18 @@
 # and license in png.h
 
 # Variables substituted from CMakeLists.txt
-set(SRCDIR "C:/Libraries/3rdPartyLibs/libpng-1.6.34")
-set(BINDIR "C:/Libraries/3rdPartyLibs/libpng-1.6.34")
+set(SRCDIR "C:/SUMOLibraries/3rdPartyLibs/libpng-1.6.34")
+set(BINDIR "C:/SUMOLibraries/3rdPartyLibs/libpng-1.6.34")
 
 set(AWK "AWK-NOTFOUND")
 set(CMAKE_C_COMPILER "C:/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.22.27905/bin/Hostx64/x64/cl.exe")
 set(CMAKE_C_FLAGS /DWIN32 /D_WINDOWS /W3)
-set(INCDIR "C:/Libraries/3rdPartyLibs/libpng-1.6.34")
+set(INCDIR "C:/SUMOLibraries/3rdPartyLibs/libpng-1.6.34")
 set(PNG_PREFIX "")
 set(PNGLIB_MAJOR "1")
 set(PNGLIB_MINOR "6")
 set(PNGLIB_VERSION "1.6.34")
-set(ZLIBINCDIR "C:/Libraries/3rdPartyLibs/zlib-1.2.11")
+set(ZLIBINCDIR "C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11")
 
 set(PLATFORM_C_FLAGS)
 if(APPLE)

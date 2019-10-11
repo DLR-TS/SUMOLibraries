@@ -1,4 +1,4 @@
-# Install script for directory: C:/Libraries/32bits/proj-6.1.1/test/unit
+# Install script for directory: C:/SUMOLibraries/32bits/proj-6.1.1/test/unit
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
