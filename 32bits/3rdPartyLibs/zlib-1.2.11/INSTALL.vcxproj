@@ -14,8 +14,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{2E00D1FF-7CDE-3165-86F8-308F2E07F6A5}</ProjectGuid>
-    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <ProjectGuid>{4C71E0C1-6C44-3BD0-B0E1-8C3379571FAE}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
     <Platform>Win32</Platform>
     <ProjectName>INSTALL</ProjectName>
@@ -89,7 +89,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\SUMOLibraries\32bits\3rdPartyLibs\zlib-1.2.11\CMakeFiles\24e7040f099cc48723c5f577e231eacf\INSTALL_force.rule">
+    <CustomBuild Include="C:\SUMOLibraries\32bits\3rdPartyLibs\zlib-1.2.11\CMakeFiles\e9e9d02256ad9869c38c195db5f5b1ec\INSTALL_force.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> </Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
 cd .
@@ -100,7 +100,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/SUMOLibraries/32bits/3rdPartyLibs/zlib-1.2.11/CMakeFiles/24e7040f099cc48723c5f577e231eacf/INSTALL_force.rule;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\SUMOLibraries\32bits\3rdPartyLibs\zlib-1.2.11\CMakeFiles\INSTALL_force</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> </Message>
@@ -113,20 +113,20 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/SUMOLibraries/32bits/3rdPartyLibs/zlib-1.2.11/CMakeFiles/24e7040f099cc48723c5f577e231eacf/INSTALL_force.rule;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\SUMOLibraries\32bits\3rdPartyLibs\zlib-1.2.11\CMakeFiles\INSTALL_force</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:\SUMOLibraries\32bits\3rdPartyLibs\zlib-1.2.11\ZERO_CHECK.vcxproj">
-      <Project>{76324708-CACF-3DE8-BE84-5D68780111D5}</Project>
+      <Project>{23CD1117-55D1-3AC5-BB84-BEDF389DAC55}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
     <ProjectReference Include="C:\SUMOLibraries\32bits\3rdPartyLibs\zlib-1.2.11\ALL_BUILD.vcxproj">
-      <Project>{DAB79BA3-3659-309C-862B-9934B965F3AF}</Project>
+      <Project>{6AE55B19-CF33-3725-B994-D433641F9675}</Project>
       <Name>ALL_BUILD</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>

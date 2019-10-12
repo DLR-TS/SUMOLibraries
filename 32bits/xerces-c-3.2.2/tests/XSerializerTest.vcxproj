@@ -14,7 +14,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{3C581F6C-D7EF-3075-9BAB-73A307DF4630}</ProjectGuid>
+    <ProjectGuid>{43F2AAC4-CFBA-3EE3-9D8F-42994D5ABD4A}</ProjectGuid>
     <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
     <Platform>Win32</Platform>
@@ -182,13 +182,13 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\ZERO_CHECK.vcxproj">
-      <Project>{AE4154B2-2560-3034-BC8C-78AC47DE23E5}</Project>
+      <Project>{0BA9B6C7-F660-3123-929B-BE90E6D136F9}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
     <ProjectReference Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\src\xerces-c.vcxproj">
-      <Project>{CE965B6E-5252-3F1F-A5C9-95096244F652}</Project>
+      <Project>{4E14547B-3930-310B-B33F-2AA40986155F}</Project>
       <Name>xerces-c</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>

@@ -14,8 +14,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{0BD6F360-0162-3738-B2DE-9712A31D8E19}</ProjectGuid>
-    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <ProjectGuid>{39BB3152-FCE4-30B8-BA8F-7432485D08ED}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
     <Platform>Win32</Platform>
     <ProjectName>INSTALL</ProjectName>
@@ -89,7 +89,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\SUMOLibraries\32bits\3rdPartyLibs\tiff-4.0.9\CMakeFiles\632f5b213dbe0c3d2497157d44eb5ec2\INSTALL_force.rule">
+    <CustomBuild Include="C:\SUMOLibraries\32bits\3rdPartyLibs\tiff-4.0.9\CMakeFiles\2c2bdf4a923d9f7fc001f4043f6d6715\INSTALL_force.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> </Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
 cd .
@@ -100,7 +100,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/SUMOLibraries/32bits/3rdPartyLibs/tiff-4.0.9/CMakeFiles/632f5b213dbe0c3d2497157d44eb5ec2/INSTALL_force.rule;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\SUMOLibraries\32bits\3rdPartyLibs\tiff-4.0.9\html\CMakeFiles\INSTALL_force</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> </Message>
@@ -113,20 +113,20 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/SUMOLibraries/32bits/3rdPartyLibs/tiff-4.0.9/CMakeFiles/632f5b213dbe0c3d2497157d44eb5ec2/INSTALL_force.rule;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\SUMOLibraries\32bits\3rdPartyLibs\tiff-4.0.9\html\CMakeFiles\INSTALL_force</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:\SUMOLibraries\32bits\3rdPartyLibs\tiff-4.0.9\ZERO_CHECK.vcxproj">
-      <Project>{BF4A7F3C-4CC4-31BD-90BC-F8A431296443}</Project>
+      <Project>{AD042F11-E8E6-3BA3-ADAF-1D153BCB75D6}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
     <ProjectReference Include="C:\SUMOLibraries\32bits\3rdPartyLibs\tiff-4.0.9\ALL_BUILD.vcxproj">
-      <Project>{875DC086-5E97-3772-A757-F12A707756CC}</Project>
+      <Project>{F6BB08CC-E1A7-30E1-89F1-1B04A3A293F1}</Project>
       <Name>ALL_BUILD</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>

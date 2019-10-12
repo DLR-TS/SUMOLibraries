@@ -14,8 +14,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{E15E0C51-7BF6-34A1-9FCB-BAC7A9D1E18E}</ProjectGuid>
-    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <ProjectGuid>{D4094918-E317-3605-93DC-2C6AD6E471B5}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
     <Platform>Win32</Platform>
     <ProjectName>tiff-grayscale</ProjectName>
@@ -57,7 +57,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <AdditionalIncludeDirectories>C:\SUMOLibraries\32bits\3rdPartyLibs\tiff-4.0.9\libtiff;C:\SUMOLibraries\32bits\3rdPartyLibs\tiff-4.0.9\contrib\dbs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <CompileAs>CompileAsC</CompileAs>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -101,7 +101,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <AdditionalIncludeDirectories>C:\SUMOLibraries\32bits\3rdPartyLibs\tiff-4.0.9\libtiff;C:\SUMOLibraries\32bits\3rdPartyLibs\tiff-4.0.9\contrib\dbs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <CompileAs>CompileAsC</CompileAs>
       <ExceptionHandling>
       </ExceptionHandling>
@@ -154,7 +154,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/SUMOLibraries/32bits/3rdPartyLibs/tiff-4.0.9/contrib/dbs/CMakeLists.txt;C:\SUMOLibraries\32bits\3rdPartyLibs\tiff-4.0.9\contrib\dbs\CMakeLists.txt;C:\SUMOLibraries\32bits\3rdPartyLibs\tiff-4.0.9\contrib\dbs\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\SUMOLibraries\32bits\3rdPartyLibs\tiff-4.0.9\contrib\dbs\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/SUMOLibraries/32bits/3rdPartyLibs/tiff-4.0.9/contrib/dbs/CMakeLists.txt</Message>
@@ -167,7 +167,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/SUMOLibraries/32bits/3rdPartyLibs/tiff-4.0.9/contrib/dbs/CMakeLists.txt;C:\SUMOLibraries\32bits\3rdPartyLibs\tiff-4.0.9\contrib\dbs\CMakeLists.txt;C:\SUMOLibraries\32bits\3rdPartyLibs\tiff-4.0.9\contrib\dbs\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\SUMOLibraries\32bits\3rdPartyLibs\tiff-4.0.9\contrib\dbs\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
     </CustomBuild>
@@ -177,19 +177,19 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:\SUMOLibraries\32bits\3rdPartyLibs\tiff-4.0.9\ZERO_CHECK.vcxproj">
-      <Project>{BF4A7F3C-4CC4-31BD-90BC-F8A431296443}</Project>
+      <Project>{AD042F11-E8E6-3BA3-ADAF-1D153BCB75D6}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
     <ProjectReference Include="C:\SUMOLibraries\32bits\3rdPartyLibs\tiff-4.0.9\port\port.vcxproj">
-      <Project>{AF1A0BBA-9F05-3A37-92DB-C6DCA7D03421}</Project>
+      <Project>{7BF862FB-4D6F-3BBC-ADB0-F54497BFEFD7}</Project>
       <Name>port</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
     <ProjectReference Include="C:\SUMOLibraries\32bits\3rdPartyLibs\tiff-4.0.9\libtiff\tiff.vcxproj">
-      <Project>{BA79BC52-AB09-3CFD-A6DC-1826B5C3FC1E}</Project>
+      <Project>{F3C8C847-FB04-3DD9-9662-62DD085BB3D9}</Project>
       <Name>tiff</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>

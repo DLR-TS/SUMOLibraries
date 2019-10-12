@@ -14,7 +14,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{F9251702-7639-3393-9652-94B48E53A037}</ProjectGuid>
+    <ProjectGuid>{2F9E49C5-73AF-394D-AF44-97B86ED220A4}</ProjectGuid>
     <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
     <Platform>Win32</Platform>
@@ -65,7 +65,7 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\CMakeFiles\56e02ecfec8e4d5e934267a8d5a55d12\createdocs.rule">
+    <CustomBuild Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\CMakeFiles\1475ad93bfb1d93299a8a8b963c6c7c6\createdocs.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"></Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
 cd C:\SUMOLibraries\32bits\xerces-c-3.2.2\doc
@@ -143,7 +143,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:\SUMOLibraries\32bits\xerces-c-3.2.2\ZERO_CHECK.vcxproj">
-      <Project>{AE4154B2-2560-3034-BC8C-78AC47DE23E5}</Project>
+      <Project>{0BA9B6C7-F660-3123-929B-BE90E6D136F9}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
