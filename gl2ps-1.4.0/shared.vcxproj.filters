@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="C:\SUMOLibraries\gl2ps-1.4.0\gl2ps.c">
       <Filter>Source Files</Filter>
@@ -14,11 +14,11 @@
     <CustomBuild Include="C:\SUMOLibraries\gl2ps-1.4.0\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{02CDF539-1D86-30ED-91C9-C9549A89DFAD}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{2EC1D290-5A14-3916-9AAB-2FFD9898A39B}</UniqueIdentifier>
+      <UniqueIdentifier>{8D5B45CD-B81B-3ECA-ADFF-388A3419A3CC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{8E589B4F-3A9C-3CBE-B72C-FB6732663ADC}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
