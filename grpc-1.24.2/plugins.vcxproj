@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5E8EF968-0F5F-3561-9E83-EBE2666CB65A}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>plugins</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\SUMOLibraries\grpc-1.24.2\CMakeFiles\32328ec02e8f48bf9b94483d8887ccc8\plugins.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SUMOLibraries\grpc-1.24.2\Release\grpc_cpp_plugin.exe;C:\SUMOLibraries\grpc-1.24.2\Release\grpc_csharp_plugin.exe;C:\SUMOLibraries\grpc-1.24.2\Release\grpc_node_plugin.exe;C:\SUMOLibraries\grpc-1.24.2\Release\grpc_objective_c_plugin.exe;C:\SUMOLibraries\grpc-1.24.2\Release\grpc_php_plugin.exe;C:\SUMOLibraries\grpc-1.24.2\Release\grpc_python_plugin.exe;C:\SUMOLibraries\grpc-1.24.2\Release\grpc_ruby_plugin.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SUMOLibraries\grpc-1.24.2\CMakeFiles\plugins</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</VerifyInputsAndOutputsExist>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\SUMOLibraries\grpc-1.24.2\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/SUMOLibraries/grpc-1.24.2/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\CMake\bin\cmake.exe -SC:/SUMOLibraries/grpc-1.24.2 -BC:/SUMOLibraries/grpc-1.24.2 --check-stamp-file C:/SUMOLibraries/grpc-1.24.2/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\CMake\share\cmake-3.15\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeCXXInformation.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.15\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\CMake\share\cmake-3.15\Modules\Compiler\MSVC-C.cmake;C:\CMake\share\cmake-3.15\Modules\Compiler\MSVC-CXX.cmake;C:\CMake\share\cmake-3.15\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.15\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.15\Modules\FindZLIB.cmake;C:\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC-CXX.cmake;C:\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.15\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.15\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.15\Modules\SelectLibraryConfigurations.cmake;C:\SUMOLibraries\grpc-1.24.2\CMakeFiles\3.15.4\CMakeCCompiler.cmake;C:\SUMOLibraries\grpc-1.24.2\CMakeFiles\3.15.4\CMakeCXXCompiler.cmake;C:\SUMOLibraries\grpc-1.24.2\CMakeFiles\3.15.4\CMakeRCCompiler.cmake;C:\SUMOLibraries\grpc-1.24.2\CMakeFiles\3.15.4\CMakeSystem.cmake;C:\SUMOLibraries\grpc-1.24.2\cmake\address_sorting.cmake;C:\SUMOLibraries\grpc-1.24.2\cmake\benchmark.cmake;C:\SUMOLibraries\grpc-1.24.2\cmake\cares.cmake;C:\SUMOLibraries\grpc-1.24.2\cmake\gRPCConfig.cmake.in;C:\SUMOLibraries\grpc-1.24.2\cmake\gRPCConfigVersion.cmake.in;C:\SUMOLibraries\grpc-1.24.2\cmake\gflags.cmake;C:\SUMOLibraries\grpc-1.24.2\cmake\msvc_static_runtime.cmake;C:\SUMOLibraries\grpc-1.24.2\cmake\pkg-config-template.pc.in;C:\SUMOLibraries\grpc-1.24.2\cmake\protobuf.cmake;C:\SUMOLibraries\grpc-1.24.2\cmake\ssl.cmake;C:\SUMOLibraries\grpc-1.24.2\cmake\upb.cmake;C:\SUMOLibraries\grpc-1.24.2\cmake\zlib.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SUMOLibraries\grpc-1.24.2\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\SUMOLibraries\grpc-1.24.2\CMakeFiles\plugins" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\ZERO_CHECK.vcxproj">
+      <Project>{B2F6149E-6279-34D1-8991-D0E530322040}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\grpc_cpp_plugin.vcxproj">
+      <Project>{4C47F192-2B3B-3570-877F-FB47F3EB5CEA}</Project>
+      <Name>grpc_cpp_plugin</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\grpc_csharp_plugin.vcxproj">
+      <Project>{F94165FF-C81E-3048-824A-5BE7069809B8}</Project>
+      <Name>grpc_csharp_plugin</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\grpc_node_plugin.vcxproj">
+      <Project>{94853D04-07A6-328D-A59C-D6418DAC8DB2}</Project>
+      <Name>grpc_node_plugin</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\grpc_objective_c_plugin.vcxproj">
+      <Project>{087DF3DD-186D-3F99-ACF6-F2E33D96BCFB}</Project>
+      <Name>grpc_objective_c_plugin</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\grpc_php_plugin.vcxproj">
+      <Project>{C3C17CD5-D955-35E5-97B1-A77C0F3863F8}</Project>
+      <Name>grpc_php_plugin</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\grpc_python_plugin.vcxproj">
+      <Project>{EC3082ED-20BC-3F47-BA9F-4A684F77695F}</Project>
+      <Name>grpc_python_plugin</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\grpc_ruby_plugin.vcxproj">
+      <Project>{8F1E8519-B0A6-3E70-A705-990B3BFFE09D}</Project>
+      <Name>grpc_ruby_plugin</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

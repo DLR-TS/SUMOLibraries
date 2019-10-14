@@ -1,0 +1,821 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3388CFF0-97A4-37C0-BDF2-648469F09210}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\SUMOLibraries\grpc-1.24.2\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/SUMOLibraries/grpc-1.24.2/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\CMake\bin\cmake.exe -SC:/SUMOLibraries/grpc-1.24.2 -BC:/SUMOLibraries/grpc-1.24.2 --check-stamp-file C:/SUMOLibraries/grpc-1.24.2/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\CMake\share\cmake-3.15\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeCXXInformation.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.15\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\CMake\share\cmake-3.15\Modules\Compiler\MSVC-C.cmake;C:\CMake\share\cmake-3.15\Modules\Compiler\MSVC-CXX.cmake;C:\CMake\share\cmake-3.15\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.15\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.15\Modules\FindZLIB.cmake;C:\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC-CXX.cmake;C:\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.15\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.15\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.15\Modules\SelectLibraryConfigurations.cmake;C:\SUMOLibraries\grpc-1.24.2\CMakeFiles\3.15.4\CMakeCCompiler.cmake;C:\SUMOLibraries\grpc-1.24.2\CMakeFiles\3.15.4\CMakeCXXCompiler.cmake;C:\SUMOLibraries\grpc-1.24.2\CMakeFiles\3.15.4\CMakeRCCompiler.cmake;C:\SUMOLibraries\grpc-1.24.2\CMakeFiles\3.15.4\CMakeSystem.cmake;C:\SUMOLibraries\grpc-1.24.2\cmake\address_sorting.cmake;C:\SUMOLibraries\grpc-1.24.2\cmake\benchmark.cmake;C:\SUMOLibraries\grpc-1.24.2\cmake\cares.cmake;C:\SUMOLibraries\grpc-1.24.2\cmake\gRPCConfig.cmake.in;C:\SUMOLibraries\grpc-1.24.2\cmake\gRPCConfigVersion.cmake.in;C:\SUMOLibraries\grpc-1.24.2\cmake\gflags.cmake;C:\SUMOLibraries\grpc-1.24.2\cmake\msvc_static_runtime.cmake;C:\SUMOLibraries\grpc-1.24.2\cmake\pkg-config-template.pc.in;C:\SUMOLibraries\grpc-1.24.2\cmake\protobuf.cmake;C:\SUMOLibraries\grpc-1.24.2\cmake\ssl.cmake;C:\SUMOLibraries\grpc-1.24.2\cmake\upb.cmake;C:\SUMOLibraries\grpc-1.24.2\cmake\zlib.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SUMOLibraries\grpc-1.24.2\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\ZERO_CHECK.vcxproj">
+      <Project>{B2F6149E-6279-34D1-8991-D0E530322040}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\cares\cares\acountry.vcxproj">
+      <Project>{CA2D08DD-2ED0-3280-B437-F404A3A6975A}</Project>
+      <Name>acountry</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\address_sorting.vcxproj">
+      <Project>{3E3B4CEC-7FCF-30A6-8B49-D7FD96132143}</Project>
+      <Name>address_sorting</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\cares\cares\adig.vcxproj">
+      <Project>{0586CED9-297E-37D9-948D-A6F9F93FDA40}</Project>
+      <Name>adig</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\cares\cares\ahost.vcxproj">
+      <Project>{1CAC703F-702F-36F8-9158-4AAC5BF5BCB8}</Project>
+      <Name>ahost</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\asn1\asn1.vcxproj">
+      <Project>{CC6C71D6-9F26-3F85-9638-54108BB9A769}</Project>
+      <Name>asn1</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\base64\base64.vcxproj">
+      <Project>{B3776DC7-A298-3E33-BD5A-2FF8FE49E751}</Project>
+      <Name>base64</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\benchmark\test\basic_test.vcxproj">
+      <Project>{4DCEE7C4-2852-3F6E-9C9E-E626CB45442E}</Project>
+      <Name>basic_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\benchmark\src\benchmark.vcxproj">
+      <Project>{CB6DCD7A-7A69-3BBF-814C-1418CC64DD81}</Project>
+      <Name>benchmark</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\benchmark\src\benchmark_main.vcxproj">
+      <Project>{933FAF5C-D078-3C77-BE95-98C6697CD0F9}</Project>
+      <Name>benchmark_main</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\benchmark\test\benchmark_test.vcxproj">
+      <Project>{E14C0640-C0B7-3B80-9318-F984B05B0F9F}</Project>
+      <Name>benchmark_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\bio\bio.vcxproj">
+      <Project>{E846793F-EFB5-311D-9094-9DCE55139348}</Project>
+      <Name>bio</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\decrepit\bio\bio_decrepit.vcxproj">
+      <Project>{D0F52EAD-EDA2-333D-9482-6C3441B02C66}</Project>
+      <Name>bio_decrepit</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\decrepit\blowfish\blowfish.vcxproj">
+      <Project>{06FDEA1D-1714-3B2E-BF1A-E1B0F2A15B04}</Project>
+      <Name>blowfish</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\bn_extra\bn_extra.vcxproj">
+      <Project>{840EEA82-DEB2-366A-AEE0-E1FBA253E9E3}</Project>
+      <Name>bn_extra</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\boringssl_gtest.vcxproj">
+      <Project>{CEFB776D-A0DD-325A-8F5A-D2853CAB5E82}</Project>
+      <Name>boringssl_gtest</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\test\boringssl_gtest_main.vcxproj">
+      <Project>{7DFE8C8E-ABB0-3661-8041-411CFCCF20A8}</Project>
+      <Name>boringssl_gtest_main</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\tool\bssl.vcxproj">
+      <Project>{37CEFE7F-13BD-336D-9E26-0258A27D17F2}</Project>
+      <Name>bssl</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\ssl\test\bssl_shim.vcxproj">
+      <Project>{37F63704-7899-3DB2-9895-E5E721660A3D}</Project>
+      <Name>bssl_shim</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\buf\buf.vcxproj">
+      <Project>{7F2DB51B-649F-3760-9429-2FEEF895443E}</Project>
+      <Name>buf</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\bytestring\bytestring.vcxproj">
+      <Project>{C1A294EB-303C-31E0-B6D6-B88DD325FED9}</Project>
+      <Name>bytestring</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\cares\cares\c-ares.vcxproj">
+      <Project>{A33310C6-136B-3C30-B36B-3D5DCD0645A9}</Project>
+      <Name>c-ares</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\decrepit\cast\cast.vcxproj">
+      <Project>{E46C0E7B-2CE6-36F8-8C6C-158B28426890}</Project>
+      <Name>cast</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\decrepit\cfb\cfb.vcxproj">
+      <Project>{37DDE063-04E0-3892-ACA5-FD8D50949916}</Project>
+      <Name>cfb</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\chacha\chacha.vcxproj">
+      <Project>{38A1552D-D1D4-3B79-B9BA-9CD6DF5766EC}</Project>
+      <Name>chacha</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\check_epollexclusive.vcxproj">
+      <Project>{7435AA48-9B19-350C-B7E6-E274AC50C0BA}</Project>
+      <Name>check_epollexclusive</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\cipher_extra\cipher_extra.vcxproj">
+      <Project>{90C7A819-9A50-3C6E-B20C-D0F6E2ECD3BF}</Project>
+      <Name>cipher_extra</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\cmac\cmac.vcxproj">
+      <Project>{70A4A2C0-6621-38E6-AF41-5B942112631E}</Project>
+      <Name>cmac</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\benchmark\test\complexity_test.vcxproj">
+      <Project>{5D9DA88E-12AA-36F6-9929-7AB16C4E90E6}</Project>
+      <Name>complexity_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\conf\conf.vcxproj">
+      <Project>{6F4F9207-CBA0-3834-84EE-6771A2ECD6BB}</Project>
+      <Name>conf</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\crypto.vcxproj">
+      <Project>{1F48ED85-B031-366F-8500-93545475E711}</Project>
+      <Name>crypto</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\crypto_base.vcxproj">
+      <Project>{74EFAEDC-FF28-3F1F-A5C6-99B3470946B6}</Project>
+      <Name>crypto_base</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\crypto_test.vcxproj">
+      <Project>{2960287B-283E-3650-9CA9-E19C8781C2DB}</Project>
+      <Name>crypto_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto_test_data.vcxproj">
+      <Project>{722B6BEA-99FC-3CC6-8880-3BCC3F610ABE}</Project>
+      <Name>crypto_test_data</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\curve25519\curve25519.vcxproj">
+      <Project>{8B7BF748-B595-30AD-92FA-2E6848DA5B5A}</Project>
+      <Name>curve25519</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\decrepit\decrepit.vcxproj">
+      <Project>{C4D54E1C-A66F-3821-8535-A871759F80BE}</Project>
+      <Name>decrepit</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\decrepit\decrepit_test.vcxproj">
+      <Project>{EE91FED6-5DA0-37AF-A474-1B9C75A17414}</Project>
+      <Name>decrepit_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\decrepit\des\des_decrepit.vcxproj">
+      <Project>{A47E3E0F-97B2-332F-AEFF-C15E8D6FE5C8}</Project>
+      <Name>des_decrepit</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\dh\dh.vcxproj">
+      <Project>{93165987-A471-3ADD-8C17-E16541C37D91}</Project>
+      <Name>dh</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\decrepit\dh\dh_decrepit.vcxproj">
+      <Project>{DEFB323D-CC9F-30E4-AC0B-98091365831D}</Project>
+      <Name>dh_decrepit</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\benchmark\test\diagnostics_test.vcxproj">
+      <Project>{504E9A47-9BA0-3589-BFA9-F80208328873}</Project>
+      <Name>diagnostics_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\digest_extra\digest_extra.vcxproj">
+      <Project>{5EED07F1-5B92-3AEE-AD51-939290C5D685}</Project>
+      <Name>digest_extra</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\benchmark\test\display_aggregates_only_test.vcxproj">
+      <Project>{2E917749-9F28-3946-A8C2-700C21636686}</Project>
+      <Name>display_aggregates_only_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\benchmark\test\donotoptimize_test.vcxproj">
+      <Project>{66CB19AE-387C-3CDE-847F-602B09E84FFF}</Project>
+      <Name>donotoptimize_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\dsa\dsa.vcxproj">
+      <Project>{84CB6F64-586A-3B97-A9EF-14510B8845D9}</Project>
+      <Name>dsa</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\decrepit\dsa\dsa_decrepit.vcxproj">
+      <Project>{D52DB1A2-F927-3022-B260-BDB0B804A4E2}</Project>
+      <Name>dsa_decrepit</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\ec_extra\ec_extra.vcxproj">
+      <Project>{989F8880-6526-3549-B8FD-D8226F930FA8}</Project>
+      <Name>ec_extra</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\ecdh\ecdh.vcxproj">
+      <Project>{0AC10A69-EDBB-3DDB-B27C-A09E9A91CD1A}</Project>
+      <Name>ecdh</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\ecdsa_extra\ecdsa_extra.vcxproj">
+      <Project>{3FBA8507-D9A0-3364-9130-BB68769F2059}</Project>
+      <Name>ecdsa_extra</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\engine\engine.vcxproj">
+      <Project>{30E0909D-E706-3C58-B385-7CE6AF63943F}</Project>
+      <Name>engine</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\err\err.vcxproj">
+      <Project>{FBE01776-14EE-3BB8-BBEA-586354B79A4B}</Project>
+      <Name>err</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\evp\evp.vcxproj">
+      <Project>{15F6CA99-FB3F-3E2A-8E62-782647414739}</Project>
+      <Name>evp</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\decrepit\evp\evp_decrepit.vcxproj">
+      <Project>{7C54A3E8-2B76-3F07-A472-47B3DF800311}</Project>
+      <Name>evp_decrepit</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\third_party\fiat\fiat.vcxproj">
+      <Project>{E6467473-B51D-37F3-A02F-A310170E5703}</Project>
+      <Name>fiat</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\benchmark\test\filter_test.vcxproj">
+      <Project>{12B607CC-6436-3C2D-9FFB-A68D392E9AAE}</Project>
+      <Name>filter_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\fipsmodule\fipsmodule.vcxproj">
+      <Project>{5C8AD509-0F93-3EDA-8A1E-998E574E87FD}</Project>
+      <Name>fipsmodule</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\benchmark\test\fixture_test.vcxproj">
+      <Project>{0F90FFBD-DE00-3BE3-98CA-4DA63AB184F1}</Project>
+      <Name>fixture_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\gen_hpack_tables.vcxproj">
+      <Project>{ECB94A2E-3284-3C5F-9AE5-AE4E7535BB5D}</Project>
+      <Name>gen_hpack_tables</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\gen_legal_metadata_characters.vcxproj">
+      <Project>{A3C96304-CBBC-398F-91BB-8025CA299ACA}</Project>
+      <Name>gen_legal_metadata_characters</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\gen_percent_encoding_tables.vcxproj">
+      <Project>{4F9A94AA-2E37-3211-A678-24F53721191D}</Project>
+      <Name>gen_percent_encoding_tables</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\gflags\gflags_nothreads_static.vcxproj">
+      <Project>{8C643C5E-8145-351D-9BDC-AF7EC7C298DE}</Project>
+      <Name>gflags_nothreads_static</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\gpr.vcxproj">
+      <Project>{7ACF5491-ED07-34D9-9728-87EDD0C17303}</Project>
+      <Name>gpr</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\grpc.vcxproj">
+      <Project>{6AC63CB2-245E-3A47-A813-DED8AC5EB7FD}</Project>
+      <Name>grpc</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\grpc++.vcxproj">
+      <Project>{CFE3AB0B-EF7D-376D-AC00-C54CADA60A29}</Project>
+      <Name>grpc++</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\grpc++_error_details.vcxproj">
+      <Project>{91B98407-E005-38B1-BF0E-48DBD57F9EEC}</Project>
+      <Name>grpc++_error_details</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\grpc++_reflection.vcxproj">
+      <Project>{68B950A5-9E47-3DF2-9094-3841F4EA14F8}</Project>
+      <Name>grpc++_reflection</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\grpc++_unsecure.vcxproj">
+      <Project>{91215D7D-C250-38E5-8CD8-CDD4A34AF9CD}</Project>
+      <Name>grpc++_unsecure</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\grpc_cpp_plugin.vcxproj">
+      <Project>{4C47F192-2B3B-3570-877F-FB47F3EB5CEA}</Project>
+      <Name>grpc_cpp_plugin</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\grpc_create_jwt.vcxproj">
+      <Project>{275971E1-245A-3AC0-860E-C4F74DFC86A6}</Project>
+      <Name>grpc_create_jwt</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\grpc_cronet.vcxproj">
+      <Project>{EA10B796-14FD-3784-B3AE-CE271EAB3A4D}</Project>
+      <Name>grpc_cronet</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\grpc_csharp_ext.vcxproj">
+      <Project>{12317F28-B1A1-3F37-B06F-2D3A0BEEFC42}</Project>
+      <Name>grpc_csharp_ext</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\grpc_csharp_plugin.vcxproj">
+      <Project>{F94165FF-C81E-3048-824A-5BE7069809B8}</Project>
+      <Name>grpc_csharp_plugin</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\grpc_node_plugin.vcxproj">
+      <Project>{94853D04-07A6-328D-A59C-D6418DAC8DB2}</Project>
+      <Name>grpc_node_plugin</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\grpc_objective_c_plugin.vcxproj">
+      <Project>{087DF3DD-186D-3F99-ACF6-F2E33D96BCFB}</Project>
+      <Name>grpc_objective_c_plugin</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\grpc_php_plugin.vcxproj">
+      <Project>{C3C17CD5-D955-35E5-97B1-A77C0F3863F8}</Project>
+      <Name>grpc_php_plugin</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\grpc_plugin_support.vcxproj">
+      <Project>{A6C0A129-8097-3C90-B67D-A3F8E6F8641E}</Project>
+      <Name>grpc_plugin_support</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\grpc_print_google_default_creds_token.vcxproj">
+      <Project>{70DB5938-5692-337C-BC99-4699F8078F31}</Project>
+      <Name>grpc_print_google_default_creds_token</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\grpc_python_plugin.vcxproj">
+      <Project>{EC3082ED-20BC-3F47-BA9F-4A684F77695F}</Project>
+      <Name>grpc_python_plugin</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\grpc_ruby_plugin.vcxproj">
+      <Project>{8F1E8519-B0A6-3E70-A705-990B3BFFE09D}</Project>
+      <Name>grpc_ruby_plugin</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\grpc_unsecure.vcxproj">
+      <Project>{114B97DC-4178-3121-9B8C-3C18FF7332FB}</Project>
+      <Name>grpc_unsecure</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\grpc_verify_jwt.vcxproj">
+      <Project>{5267A149-E8A0-36D0-9BB6-2419EE361884}</Project>
+      <Name>grpc_verify_jwt</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\grpcpp_channelz.vcxproj">
+      <Project>{44C08AC7-AD0E-3792-B91D-6F63CD8D8036}</Project>
+      <Name>grpcpp_channelz</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\hkdf\hkdf.vcxproj">
+      <Project>{FEE770C7-7777-35E3-90DF-A5941898FEFA}</Project>
+      <Name>hkdf</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\benchmark\test\internal_threading_test.vcxproj">
+      <Project>{14FD68B2-2BB4-3CA2-A677-32927C482614}</Project>
+      <Name>internal_threading_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\lhash\lhash.vcxproj">
+      <Project>{DBE2A33E-C918-3583-A9CD-65A884D7640B}</Project>
+      <Name>lhash</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\protobuf\libprotobuf.vcxproj">
+      <Project>{64256A5E-B361-3B7F-89E5-DC6D7847AAFF}</Project>
+      <Name>libprotobuf</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\protobuf\libprotobuf-lite.vcxproj">
+      <Project>{600A5FBE-4BBB-3F97-93DD-11B36A062B5C}</Project>
+      <Name>libprotobuf-lite</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\protobuf\libprotoc.vcxproj">
+      <Project>{8384DE19-A867-32FE-9651-F182DB6B41B2}</Project>
+      <Name>libprotoc</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\benchmark\test\link_main_test.vcxproj">
+      <Project>{B6E748CD-30A1-3893-92D4-C2644AA0A3B8}</Project>
+      <Name>link_main_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\benchmark\test\map_test.vcxproj">
+      <Project>{69DAE1AA-628A-38BC-A5F5-6A2C5BFE56E1}</Project>
+      <Name>map_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\benchmark\test\memory_manager_test.vcxproj">
+      <Project>{C83A2F0E-D0E1-362B-AD5C-E018489BEAF4}</Project>
+      <Name>memory_manager_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\benchmark\test\multiple_ranges_test.vcxproj">
+      <Project>{CC9F0705-D3E4-3B96-98BC-167D63E4B75F}</Project>
+      <Name>multiple_ranges_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\obj\obj.vcxproj">
+      <Project>{B997E8EB-6184-333D-80AD-69BA4B2DDACF}</Project>
+      <Name>obj</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\decrepit\obj\obj_decrepit.vcxproj">
+      <Project>{8ABC6BDC-F30F-3AC4-96DE-A9E68EE718F4}</Project>
+      <Name>obj_decrepit</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\benchmark\test\options_test.vcxproj">
+      <Project>{16E239CB-FF97-3B5A-B73C-875B7FD3E786}</Project>
+      <Name>options_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\benchmark\test\output_test_helper.vcxproj">
+      <Project>{F562214D-2E43-3D4C-8BDF-2988BB073562}</Project>
+      <Name>output_test_helper</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\pem\pem.vcxproj">
+      <Project>{66CB0EF3-0F63-36C8-90C5-DCEFDBCE5ADF}</Project>
+      <Name>pem</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\pkcs7\pkcs7.vcxproj">
+      <Project>{415A30F5-AE78-34CB-91C6-F2537098F3C5}</Project>
+      <Name>pkcs7</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\pkcs8\pkcs8_lib.vcxproj">
+      <Project>{6C48537A-2C4A-3162-837B-FAA5C44D1E1C}</Project>
+      <Name>pkcs8_lib</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\poly1305\poly1305.vcxproj">
+      <Project>{CF69E697-86A2-33FB-9A90-F415B3E0AE1B}</Project>
+      <Name>poly1305</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\pool\pool.vcxproj">
+      <Project>{27BE632C-6EFA-32D0-9633-7B90679635F7}</Project>
+      <Name>pool</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\protobuf\protoc.vcxproj">
+      <Project>{E6458BD5-3D99-3CD8-AB87-B8BAEC63729C}</Project>
+      <Name>protoc</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\rand_extra\rand_extra.vcxproj">
+      <Project>{D56C031A-CB30-3683-B4FB-F43842C2405A}</Project>
+      <Name>rand_extra</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\rc4\rc4.vcxproj">
+      <Project>{24ADA32A-57AC-3D7B-9F5B-A453171EF4E7}</Project>
+      <Name>rc4</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\decrepit\rc4\rc4_decrepit.vcxproj">
+      <Project>{F10E9A66-7BF3-3C53-9464-FAE5CEA91F89}</Project>
+      <Name>rc4_decrepit</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\benchmark\test\register_benchmark_test.vcxproj">
+      <Project>{EA9D7B6E-4E68-3237-9268-3285C947C691}</Project>
+      <Name>register_benchmark_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\benchmark\test\report_aggregates_only_test.vcxproj">
+      <Project>{18BFFBAF-ECFD-365B-9CA0-72EB0AA30A11}</Project>
+      <Name>report_aggregates_only_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\benchmark\test\reporter_output_test.vcxproj">
+      <Project>{C0B8053D-9C90-3DD0-8828-B51FA8594A68}</Project>
+      <Name>reporter_output_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\decrepit\ripemd\ripemd_decrepit.vcxproj">
+      <Project>{A9583439-AD8C-3627-9558-9D694872621C}</Project>
+      <Name>ripemd_decrepit</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\decrepit\rsa\rsa_decrepit.vcxproj">
+      <Project>{71BFE20F-C09E-3419-BA5D-14F07C678C61}</Project>
+      <Name>rsa_decrepit</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\rsa_extra\rsa_extra.vcxproj">
+      <Project>{B9FE08F6-B958-3BBD-8AFA-6755D9A72F4E}</Project>
+      <Name>rsa_extra</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\benchmark\test\skip_with_error_test.vcxproj">
+      <Project>{C57CF852-1153-30F6-AC46-149B9016B621}</Project>
+      <Name>skip_with_error_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\ssl\ssl.vcxproj">
+      <Project>{0EC4BC90-83A5-3631-A681-45C50B297853}</Project>
+      <Name>ssl</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\decrepit\ssl\ssl_decrepit.vcxproj">
+      <Project>{609CBC13-7CAD-3B36-8F99-39D5B68790D4}</Project>
+      <Name>ssl_decrepit</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\ssl\ssl_test.vcxproj">
+      <Project>{FAD53454-46A7-32B7-946F-85B935C1EAC2}</Project>
+      <Name>ssl_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\stack\stack.vcxproj">
+      <Project>{0B0445ED-2078-3145-B5A1-94B5ACB7CED9}</Project>
+      <Name>stack</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\benchmark\test\templated_fixture_test.vcxproj">
+      <Project>{549DB4EE-A2BF-3541-9189-ED14195EC76D}</Project>
+      <Name>templated_fixture_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\test\test_support.vcxproj">
+      <Project>{0AF026E6-0C7F-35F5-821D-DBCF3D7A9D20}</Project>
+      <Name>test_support</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\benchmark\test\user_counters_tabular_test.vcxproj">
+      <Project>{A6A71D6C-7068-392B-89C7-7FC6599D3FD0}</Project>
+      <Name>user_counters_tabular_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\benchmark\test\user_counters_test.vcxproj">
+      <Project>{6282176A-2089-3F69-B887-88056DC0E898}</Project>
+      <Name>user_counters_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\benchmark\test\user_counters_thousands_test.vcxproj">
+      <Project>{ECFD115F-23B9-3B49-A6C0-5AE4DEFE059D}</Project>
+      <Name>user_counters_thousands_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\x509\x509.vcxproj">
+      <Project>{22CB08FD-C174-3D24-927F-C86FBF013E2B}</Project>
+      <Name>x509</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\decrepit\x509\x509_decrepit.vcxproj">
+      <Project>{C8EF2689-8A74-3F61-B256-A64F087621F5}</Project>
+      <Name>x509_decrepit</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\x509v3\x509v3.vcxproj">
+      <Project>{8E51198A-2B61-37A6-9409-6AB69904A90C}</Project>
+      <Name>x509v3</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\decrepit\xts\xts.vcxproj">
+      <Project>{FA5E0731-F8E2-343D-9627-974EFDE6E86D}</Project>
+      <Name>xts</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
