@@ -1,27 +1,51 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup>
-    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
-  </PropertyGroup>
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
     <ProjectConfiguration Include="Release|x64">
       <Configuration>Release</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{2653E006-4D27-3669-9846-99C47318F6DA}</ProjectGuid>
-    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <ProjectGuid>{995701F8-58A1-3FFF-8AEC-524E862D80E2}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
     <Platform>x64</Platform>
     <ProjectName>grpc_create_jwt</ProjectName>
     <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -32,38 +56,55 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SUMOLibraries\grpc-1.10.0\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SUMOLibraries\grpc-1.10.0_64\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">grpc_create_jwt.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">grpc_create_jwt</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SUMOLibraries\grpc-1.10.0_64\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">grpc_create_jwt.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">grpc_create_jwt</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SUMOLibraries\grpc-1.10.0_64\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">grpc_create_jwt.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">grpc_create_jwt</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SUMOLibraries\grpc-1.10.0_64\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">grpc_create_jwt.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">grpc_create_jwt</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
   </PropertyGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\SUMOLibraries\grpc-1.10.0;C:\SUMOLibraries\grpc-1.10.0\include;C:\SUMOLibraries\grpc-1.10.0\third_party\boringssl\include;C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\include;C:\SUMOLibraries\grpc-1.10.0\third_party\benchmark\include;C:\SUMOLibraries\grpc-1.10.0\third_party\cares\cares;C:\SUMOLibraries\grpc-1.10.0\third_party\gflags\include;C:\SUMOLibraries\3rdPartyLibs\zlib-1.2.11\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\grpc-1.10.0_64;C:\SUMOLibraries\grpc-1.10.0_64\include;C:\SUMOLibraries\grpc-1.10.0_64\third_party\boringssl\include;C:\SUMOLibraries\3rdPartyLibs\protobuf-3.5.1_64\src;C:\SUMOLibraries\3rdPartyLibs\zlib-1.2.11_64;C:\SUMOLibraries\grpc-1.10.0_64\third_party\benchmark\include;C:\SUMOLibraries\grpc-1.10.0_64\third_party\cares\cares;C:\SUMOLibraries\grpc-1.10.0_64\third_party\gflags\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <DisableSpecificWarnings>4065;4506;4267;4987;4774;4819;4996;4619</DisableSpecificWarnings>
       <ExceptionHandling>Sync</ExceptionHandling>
-      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
-      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_WIN32_WINNT=0x600;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;CARES_STATICLIB;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_WIN32_WINNT=0x600;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;CARES_STATICLIB;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
-      <DebugInformationFormat>
-      </DebugInformationFormat>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_WIN32_WINNT=0x600;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;CARES_STATICLIB;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\SUMOLibraries\grpc-1.10.0;C:\SUMOLibraries\grpc-1.10.0\include;C:\SUMOLibraries\grpc-1.10.0\third_party\boringssl\include;C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\include;C:\SUMOLibraries\grpc-1.10.0\third_party\benchmark\include;C:\SUMOLibraries\grpc-1.10.0\third_party\cares\cares;C:\SUMOLibraries\grpc-1.10.0\third_party\gflags\include;C:\SUMOLibraries\3rdPartyLibs\zlib-1.2.11\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_WIN32_WINNT=0x600;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;CARES_STATICLIB;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\grpc-1.10.0_64;C:\SUMOLibraries\grpc-1.10.0_64\include;C:\SUMOLibraries\grpc-1.10.0_64\third_party\boringssl\include;C:\SUMOLibraries\3rdPartyLibs\protobuf-3.5.1_64\src;C:\SUMOLibraries\3rdPartyLibs\zlib-1.2.11_64;C:\SUMOLibraries\grpc-1.10.0_64\third_party\benchmark\include;C:\SUMOLibraries\grpc-1.10.0_64\third_party\cares\cares;C:\SUMOLibraries\grpc-1.10.0_64\third_party\gflags\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\SUMOLibraries\grpc-1.10.0;C:\SUMOLibraries\grpc-1.10.0\include;C:\SUMOLibraries\grpc-1.10.0\third_party\boringssl\include;C:\SUMOLibraries\3rdPartyLibs\protobuf-3.9.1\include;C:\SUMOLibraries\grpc-1.10.0\third_party\benchmark\include;C:\SUMOLibraries\grpc-1.10.0\third_party\cares\cares;C:\SUMOLibraries\grpc-1.10.0\third_party\gflags\include;C:\SUMOLibraries\3rdPartyLibs\zlib-1.2.11\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\grpc-1.10.0_64;C:\SUMOLibraries\grpc-1.10.0_64\include;C:\SUMOLibraries\grpc-1.10.0_64\third_party\boringssl\include;C:\SUMOLibraries\3rdPartyLibs\protobuf-3.5.1_64\src;C:\SUMOLibraries\3rdPartyLibs\zlib-1.2.11_64;C:\SUMOLibraries\grpc-1.10.0_64\third_party\benchmark\include;C:\SUMOLibraries\grpc-1.10.0_64\third_party\cares\cares;C:\SUMOLibraries\grpc-1.10.0_64\third_party\gflags\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -71,13 +112,142 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>third_party\boringssl\ssl\Release\ssl.lib;Release\grpc.lib;Release\gpr.lib;third_party\boringssl\ssl\Release\ssl.lib;third_party\boringssl\crypto\Release\crypto.lib;wsock32.lib;C:\SUMOLibraries\3rdPartyLibs\zlib-1.2.11\lib\zlib.lib;third_party\cares\cares\lib\Release\cares.lib;ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>third_party\boringssl\ssl\Debug\ssl.lib;Debug\grpc.lib;Debug\gpr.lib;third_party\boringssl\ssl\Debug\ssl.lib;third_party\boringssl\crypto\Debug\crypto.lib;wsock32.lib;C:\SUMOLibraries\3rdPartyLibs\zlib-1.2.11_64\Debug\zlibd.lib;third_party\cares\cares\lib\Debug\cares.lib;ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/SUMOLibraries/grpc-1.10.0_64/Debug/grpc_create_jwt.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/SUMOLibraries/grpc-1.10.0_64/Debug/grpc_create_jwt.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\grpc-1.10.0_64;C:\SUMOLibraries\grpc-1.10.0_64\include;C:\SUMOLibraries\grpc-1.10.0_64\third_party\boringssl\include;C:\SUMOLibraries\3rdPartyLibs\protobuf-3.5.1_64\src;C:\SUMOLibraries\3rdPartyLibs\zlib-1.2.11_64;C:\SUMOLibraries\grpc-1.10.0_64\third_party\benchmark\include;C:\SUMOLibraries\grpc-1.10.0_64\third_party\cares\cares;C:\SUMOLibraries\grpc-1.10.0_64\third_party\gflags\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4065;4506;4267;4987;4774;4819;4996;4619</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_WIN32_WINNT=0x600;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;CARES_STATICLIB;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_WIN32_WINNT=0x600;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;CARES_STATICLIB;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\grpc-1.10.0_64;C:\SUMOLibraries\grpc-1.10.0_64\include;C:\SUMOLibraries\grpc-1.10.0_64\third_party\boringssl\include;C:\SUMOLibraries\3rdPartyLibs\protobuf-3.5.1_64\src;C:\SUMOLibraries\3rdPartyLibs\zlib-1.2.11_64;C:\SUMOLibraries\grpc-1.10.0_64\third_party\benchmark\include;C:\SUMOLibraries\grpc-1.10.0_64\third_party\cares\cares;C:\SUMOLibraries\grpc-1.10.0_64\third_party\gflags\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\grpc-1.10.0_64;C:\SUMOLibraries\grpc-1.10.0_64\include;C:\SUMOLibraries\grpc-1.10.0_64\third_party\boringssl\include;C:\SUMOLibraries\3rdPartyLibs\protobuf-3.5.1_64\src;C:\SUMOLibraries\3rdPartyLibs\zlib-1.2.11_64;C:\SUMOLibraries\grpc-1.10.0_64\third_party\benchmark\include;C:\SUMOLibraries\grpc-1.10.0_64\third_party\cares\cares;C:\SUMOLibraries\grpc-1.10.0_64\third_party\gflags\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>third_party\boringssl\ssl\Release\ssl.lib;Release\grpc.lib;Release\gpr.lib;third_party\boringssl\ssl\Release\ssl.lib;third_party\boringssl\crypto\Release\crypto.lib;wsock32.lib;C:\SUMOLibraries\3rdPartyLibs\zlib-1.2.11_64\Release\zlib.lib;third_party\cares\cares\lib\Release\cares.lib;ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/SUMOLibraries/grpc-1.10.0/Release/grpc_create_jwt.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/SUMOLibraries/grpc-1.10.0/Release/grpc_create_jwt.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/SUMOLibraries/grpc-1.10.0_64/Release/grpc_create_jwt.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/SUMOLibraries/grpc-1.10.0_64/Release/grpc_create_jwt.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\grpc-1.10.0_64;C:\SUMOLibraries\grpc-1.10.0_64\include;C:\SUMOLibraries\grpc-1.10.0_64\third_party\boringssl\include;C:\SUMOLibraries\3rdPartyLibs\protobuf-3.5.1_64\src;C:\SUMOLibraries\3rdPartyLibs\zlib-1.2.11_64;C:\SUMOLibraries\grpc-1.10.0_64\third_party\benchmark\include;C:\SUMOLibraries\grpc-1.10.0_64\third_party\cares\cares;C:\SUMOLibraries\grpc-1.10.0_64\third_party\gflags\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4065;4506;4267;4987;4774;4819;4996;4619</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_WIN32_WINNT=0x600;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;CARES_STATICLIB;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_WIN32_WINNT=0x600;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;CARES_STATICLIB;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\grpc-1.10.0_64;C:\SUMOLibraries\grpc-1.10.0_64\include;C:\SUMOLibraries\grpc-1.10.0_64\third_party\boringssl\include;C:\SUMOLibraries\3rdPartyLibs\protobuf-3.5.1_64\src;C:\SUMOLibraries\3rdPartyLibs\zlib-1.2.11_64;C:\SUMOLibraries\grpc-1.10.0_64\third_party\benchmark\include;C:\SUMOLibraries\grpc-1.10.0_64\third_party\cares\cares;C:\SUMOLibraries\grpc-1.10.0_64\third_party\gflags\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\grpc-1.10.0_64;C:\SUMOLibraries\grpc-1.10.0_64\include;C:\SUMOLibraries\grpc-1.10.0_64\third_party\boringssl\include;C:\SUMOLibraries\3rdPartyLibs\protobuf-3.5.1_64\src;C:\SUMOLibraries\3rdPartyLibs\zlib-1.2.11_64;C:\SUMOLibraries\grpc-1.10.0_64\third_party\benchmark\include;C:\SUMOLibraries\grpc-1.10.0_64\third_party\cares\cares;C:\SUMOLibraries\grpc-1.10.0_64\third_party\gflags\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>third_party\boringssl\ssl\MinSizeRel\ssl.lib;MinSizeRel\grpc.lib;MinSizeRel\gpr.lib;third_party\boringssl\ssl\MinSizeRel\ssl.lib;third_party\boringssl\crypto\MinSizeRel\crypto.lib;wsock32.lib;C:\SUMOLibraries\3rdPartyLibs\zlib-1.2.11_64\Release\zlib.lib;third_party\cares\cares\lib\MinSizeRel\cares.lib;ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/SUMOLibraries/grpc-1.10.0_64/MinSizeRel/grpc_create_jwt.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/SUMOLibraries/grpc-1.10.0_64/MinSizeRel/grpc_create_jwt.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\grpc-1.10.0_64;C:\SUMOLibraries\grpc-1.10.0_64\include;C:\SUMOLibraries\grpc-1.10.0_64\third_party\boringssl\include;C:\SUMOLibraries\3rdPartyLibs\protobuf-3.5.1_64\src;C:\SUMOLibraries\3rdPartyLibs\zlib-1.2.11_64;C:\SUMOLibraries\grpc-1.10.0_64\third_party\benchmark\include;C:\SUMOLibraries\grpc-1.10.0_64\third_party\cares\cares;C:\SUMOLibraries\grpc-1.10.0_64\third_party\gflags\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4065;4506;4267;4987;4774;4819;4996;4619</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_WIN32_WINNT=0x600;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;CARES_STATICLIB;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_WIN32_WINNT=0x600;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;CARES_STATICLIB;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\grpc-1.10.0_64;C:\SUMOLibraries\grpc-1.10.0_64\include;C:\SUMOLibraries\grpc-1.10.0_64\third_party\boringssl\include;C:\SUMOLibraries\3rdPartyLibs\protobuf-3.5.1_64\src;C:\SUMOLibraries\3rdPartyLibs\zlib-1.2.11_64;C:\SUMOLibraries\grpc-1.10.0_64\third_party\benchmark\include;C:\SUMOLibraries\grpc-1.10.0_64\third_party\cares\cares;C:\SUMOLibraries\grpc-1.10.0_64\third_party\gflags\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\grpc-1.10.0_64;C:\SUMOLibraries\grpc-1.10.0_64\include;C:\SUMOLibraries\grpc-1.10.0_64\third_party\boringssl\include;C:\SUMOLibraries\3rdPartyLibs\protobuf-3.5.1_64\src;C:\SUMOLibraries\3rdPartyLibs\zlib-1.2.11_64;C:\SUMOLibraries\grpc-1.10.0_64\third_party\benchmark\include;C:\SUMOLibraries\grpc-1.10.0_64\third_party\cares\cares;C:\SUMOLibraries\grpc-1.10.0_64\third_party\gflags\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>third_party\boringssl\ssl\RelWithDebInfo\ssl.lib;RelWithDebInfo\grpc.lib;RelWithDebInfo\gpr.lib;third_party\boringssl\ssl\RelWithDebInfo\ssl.lib;third_party\boringssl\crypto\RelWithDebInfo\crypto.lib;wsock32.lib;C:\SUMOLibraries\3rdPartyLibs\zlib-1.2.11_64\Release\zlib.lib;third_party\cares\cares\lib\RelWithDebInfo\cares.lib;ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/SUMOLibraries/grpc-1.10.0_64/RelWithDebInfo/grpc_create_jwt.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/SUMOLibraries/grpc-1.10.0_64/RelWithDebInfo/grpc_create_jwt.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -85,10 +255,10 @@
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\SUMOLibraries\grpc-1.10.0\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/SUMOLibraries/grpc-1.10.0/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-C:\CMake\bin\cmake.exe -SC:/SUMOLibraries/grpc-1.10.0 -BC:/SUMOLibraries/grpc-1.10.0 --check-stamp-file C:/SUMOLibraries/grpc-1.10.0/CMakeFiles/generate.stamp
+    <CustomBuild Include="C:\SUMOLibraries\grpc-1.10.0_64\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/SUMOLibraries/grpc-1.10.0_64/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\CMake\bin\cmake.exe -HC:/SUMOLibraries/grpc-1.10.0_64 -BC:/SUMOLibraries/grpc-1.10.0_64 --check-stamp-file C:/SUMOLibraries/grpc-1.10.0_64/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -96,51 +266,78 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\CMake\share\cmake-3.15\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeCXXInformation.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.15\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\CMake\share\cmake-3.15\Modules\Compiler\MSVC-C.cmake;C:\CMake\share\cmake-3.15\Modules\Compiler\MSVC-CXX.cmake;C:\CMake\share\cmake-3.15\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.15\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.15\Modules\FindProtobuf.cmake;C:\CMake\share\cmake-3.15\Modules\FindZLIB.cmake;C:\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC-CXX.cmake;C:\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.15\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.15\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.15\Modules\SelectLibraryConfigurations.cmake;C:\SUMOLibraries\grpc-1.10.0\CMakeFiles\3.15.4\CMakeCCompiler.cmake;C:\SUMOLibraries\grpc-1.10.0\CMakeFiles\3.15.4\CMakeCXXCompiler.cmake;C:\SUMOLibraries\grpc-1.10.0\CMakeFiles\3.15.4\CMakeRCCompiler.cmake;C:\SUMOLibraries\grpc-1.10.0\CMakeFiles\3.15.4\CMakeSystem.cmake;C:\SUMOLibraries\grpc-1.10.0\cmake\benchmark.cmake;C:\SUMOLibraries\grpc-1.10.0\cmake\cares.cmake;C:\SUMOLibraries\grpc-1.10.0\cmake\gRPCConfig.cmake.in;C:\SUMOLibraries\grpc-1.10.0\cmake\gRPCConfigVersion.cmake.in;C:\SUMOLibraries\grpc-1.10.0\cmake\gflags.cmake;C:\SUMOLibraries\grpc-1.10.0\cmake\msvc_static_runtime.cmake;C:\SUMOLibraries\grpc-1.10.0\cmake\protobuf.cmake;C:\SUMOLibraries\grpc-1.10.0\cmake\ssl.cmake;C:\SUMOLibraries\grpc-1.10.0\cmake\zlib.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SUMOLibraries\grpc-1.10.0\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/SUMOLibraries/grpc-1.10.0_64/CMakeLists.txt;C:\SUMOLibraries\grpc-1.10.0_64\CMakeLists.txt;C:\SUMOLibraries\grpc-1.10.0_64\CMakeFiles\3.10.1\CMakeSystem.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInitialize.cmake;C:\SUMOLibraries\grpc-1.10.0_64\CMakeFiles\3.10.1\CMakeCCompiler.cmake;C:\SUMOLibraries\grpc-1.10.0_64\CMakeFiles\3.10.1\CMakeCXXCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;C:\SUMOLibraries\grpc-1.10.0_64\CMakeFiles\3.10.1\CMakeRCCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCXXInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\MSVC-CXX.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC-CXX.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;C:\SUMOLibraries\grpc-1.10.0_64\cmake\msvc_static_runtime.cmake;C:\SUMOLibraries\grpc-1.10.0_64\cmake\zlib.cmake;C:\CMake\share\cmake-3.10\Modules\FindZLIB.cmake;C:\CMake\share\cmake-3.10\Modules\SelectLibraryConfigurations.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\SUMOLibraries\grpc-1.10.0_64\cmake\cares.cmake;C:\SUMOLibraries\grpc-1.10.0_64\cmake\protobuf.cmake;C:\CMake\share\cmake-3.10\Modules\FindProtobuf.cmake;C:\CMake\share\cmake-3.10\Modules\SelectLibraryConfigurations.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\SUMOLibraries\grpc-1.10.0_64\cmake\ssl.cmake;C:\SUMOLibraries\grpc-1.10.0_64\cmake\gflags.cmake;C:\SUMOLibraries\grpc-1.10.0_64\cmake\benchmark.cmake;C:\SUMOLibraries\grpc-1.10.0_64\cmake\gRPCConfig.cmake.in;C:\SUMOLibraries\grpc-1.10.0_64\cmake\gRPCConfigVersion.cmake.in;C:\SUMOLibraries\grpc-1.10.0_64\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SUMOLibraries\grpc-1.10.0_64\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/SUMOLibraries/grpc-1.10.0_64/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\CMake\bin\cmake.exe -HC:/SUMOLibraries/grpc-1.10.0_64 -BC:/SUMOLibraries/grpc-1.10.0_64 --check-stamp-file C:/SUMOLibraries/grpc-1.10.0_64/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/SUMOLibraries/grpc-1.10.0_64/CMakeLists.txt;C:\SUMOLibraries\grpc-1.10.0_64\CMakeLists.txt;C:\SUMOLibraries\grpc-1.10.0_64\CMakeFiles\3.10.1\CMakeSystem.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInitialize.cmake;C:\SUMOLibraries\grpc-1.10.0_64\CMakeFiles\3.10.1\CMakeCCompiler.cmake;C:\SUMOLibraries\grpc-1.10.0_64\CMakeFiles\3.10.1\CMakeCXXCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;C:\SUMOLibraries\grpc-1.10.0_64\CMakeFiles\3.10.1\CMakeRCCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCXXInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\MSVC-CXX.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC-CXX.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;C:\SUMOLibraries\grpc-1.10.0_64\cmake\msvc_static_runtime.cmake;C:\SUMOLibraries\grpc-1.10.0_64\cmake\zlib.cmake;C:\CMake\share\cmake-3.10\Modules\FindZLIB.cmake;C:\CMake\share\cmake-3.10\Modules\SelectLibraryConfigurations.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\SUMOLibraries\grpc-1.10.0_64\cmake\cares.cmake;C:\SUMOLibraries\grpc-1.10.0_64\cmake\protobuf.cmake;C:\CMake\share\cmake-3.10\Modules\FindProtobuf.cmake;C:\CMake\share\cmake-3.10\Modules\SelectLibraryConfigurations.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\SUMOLibraries\grpc-1.10.0_64\cmake\ssl.cmake;C:\SUMOLibraries\grpc-1.10.0_64\cmake\gflags.cmake;C:\SUMOLibraries\grpc-1.10.0_64\cmake\benchmark.cmake;C:\SUMOLibraries\grpc-1.10.0_64\cmake\gRPCConfig.cmake.in;C:\SUMOLibraries\grpc-1.10.0_64\cmake\gRPCConfigVersion.cmake.in;C:\SUMOLibraries\grpc-1.10.0_64\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SUMOLibraries\grpc-1.10.0_64\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/SUMOLibraries/grpc-1.10.0_64/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\CMake\bin\cmake.exe -HC:/SUMOLibraries/grpc-1.10.0_64 -BC:/SUMOLibraries/grpc-1.10.0_64 --check-stamp-file C:/SUMOLibraries/grpc-1.10.0_64/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/SUMOLibraries/grpc-1.10.0_64/CMakeLists.txt;C:\SUMOLibraries\grpc-1.10.0_64\CMakeLists.txt;C:\SUMOLibraries\grpc-1.10.0_64\CMakeFiles\3.10.1\CMakeSystem.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInitialize.cmake;C:\SUMOLibraries\grpc-1.10.0_64\CMakeFiles\3.10.1\CMakeCCompiler.cmake;C:\SUMOLibraries\grpc-1.10.0_64\CMakeFiles\3.10.1\CMakeCXXCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;C:\SUMOLibraries\grpc-1.10.0_64\CMakeFiles\3.10.1\CMakeRCCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCXXInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\MSVC-CXX.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC-CXX.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;C:\SUMOLibraries\grpc-1.10.0_64\cmake\msvc_static_runtime.cmake;C:\SUMOLibraries\grpc-1.10.0_64\cmake\zlib.cmake;C:\CMake\share\cmake-3.10\Modules\FindZLIB.cmake;C:\CMake\share\cmake-3.10\Modules\SelectLibraryConfigurations.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\SUMOLibraries\grpc-1.10.0_64\cmake\cares.cmake;C:\SUMOLibraries\grpc-1.10.0_64\cmake\protobuf.cmake;C:\CMake\share\cmake-3.10\Modules\FindProtobuf.cmake;C:\CMake\share\cmake-3.10\Modules\SelectLibraryConfigurations.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\SUMOLibraries\grpc-1.10.0_64\cmake\ssl.cmake;C:\SUMOLibraries\grpc-1.10.0_64\cmake\gflags.cmake;C:\SUMOLibraries\grpc-1.10.0_64\cmake\benchmark.cmake;C:\SUMOLibraries\grpc-1.10.0_64\cmake\gRPCConfig.cmake.in;C:\SUMOLibraries\grpc-1.10.0_64\cmake\gRPCConfigVersion.cmake.in;C:\SUMOLibraries\grpc-1.10.0_64\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\SUMOLibraries\grpc-1.10.0_64\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/SUMOLibraries/grpc-1.10.0_64/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\CMake\bin\cmake.exe -HC:/SUMOLibraries/grpc-1.10.0_64 -BC:/SUMOLibraries/grpc-1.10.0_64 --check-stamp-file C:/SUMOLibraries/grpc-1.10.0_64/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/SUMOLibraries/grpc-1.10.0_64/CMakeLists.txt;C:\SUMOLibraries\grpc-1.10.0_64\CMakeLists.txt;C:\SUMOLibraries\grpc-1.10.0_64\CMakeFiles\3.10.1\CMakeSystem.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInitialize.cmake;C:\SUMOLibraries\grpc-1.10.0_64\CMakeFiles\3.10.1\CMakeCCompiler.cmake;C:\SUMOLibraries\grpc-1.10.0_64\CMakeFiles\3.10.1\CMakeCXXCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;C:\SUMOLibraries\grpc-1.10.0_64\CMakeFiles\3.10.1\CMakeRCCompiler.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCXXInformation.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\MSVC-CXX.cmake;C:\CMake\share\cmake-3.10\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC-CXX.cmake;C:\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;C:\SUMOLibraries\grpc-1.10.0_64\cmake\msvc_static_runtime.cmake;C:\SUMOLibraries\grpc-1.10.0_64\cmake\zlib.cmake;C:\CMake\share\cmake-3.10\Modules\FindZLIB.cmake;C:\CMake\share\cmake-3.10\Modules\SelectLibraryConfigurations.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\SUMOLibraries\grpc-1.10.0_64\cmake\cares.cmake;C:\SUMOLibraries\grpc-1.10.0_64\cmake\protobuf.cmake;C:\CMake\share\cmake-3.10\Modules\FindProtobuf.cmake;C:\CMake\share\cmake-3.10\Modules\SelectLibraryConfigurations.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\SUMOLibraries\grpc-1.10.0_64\cmake\ssl.cmake;C:\SUMOLibraries\grpc-1.10.0_64\cmake\gflags.cmake;C:\SUMOLibraries\grpc-1.10.0_64\cmake\benchmark.cmake;C:\SUMOLibraries\grpc-1.10.0_64\cmake\gRPCConfig.cmake.in;C:\SUMOLibraries\grpc-1.10.0_64\cmake\gRPCConfigVersion.cmake.in;C:\SUMOLibraries\grpc-1.10.0_64\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\SUMOLibraries\grpc-1.10.0_64\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0\test\core\security\create_jwt.cc" />
-    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0\test\core\util\cmdline.cc" />
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\test\core\security\create_jwt.cc"  />
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\test\core\util\cmdline.cc"  />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\SUMOLibraries\grpc-1.10.0\ZERO_CHECK.vcxproj">
-      <Project>{74285063-80B8-360B-BBB4-B1F9996A1E61}</Project>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.10.0_64\ZERO_CHECK.vcxproj">
+      <Project>{E2D2EB9A-4C9F-3C77-9B74-3BA0584DE22B}</Project>
       <Name>ZERO_CHECK</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\SUMOLibraries\grpc-1.10.0\third_party\cares\cares\c-ares.vcxproj">
-      <Project>{5F4393DA-6C1C-381C-BA9E-61252A4167DD}</Project>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.10.0_64\third_party\cares\cares\c-ares.vcxproj">
+      <Project>{37C0BFB0-42EC-3C00-98E8-1FB19150A7AE}</Project>
       <Name>c-ares</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\SUMOLibraries\grpc-1.10.0\third_party\boringssl\crypto\crypto.vcxproj">
-      <Project>{DCBDB04C-9A43-3324-9879-0232FA286A03}</Project>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.10.0_64\third_party\boringssl\crypto\crypto.vcxproj">
+      <Project>{B6A86388-2FEE-3DB4-8F77-6A59AAD42E81}</Project>
       <Name>crypto</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\SUMOLibraries\grpc-1.10.0\gpr.vcxproj">
-      <Project>{445812FC-C9D2-38D9-B51C-4866DCFC8C9E}</Project>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.10.0_64\gpr.vcxproj">
+      <Project>{9E690467-D212-31E7-91DC-10D93211611A}</Project>
       <Name>gpr</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\SUMOLibraries\grpc-1.10.0\grpc.vcxproj">
-      <Project>{D42149EF-E67D-3921-AFC6-120D20BD7EC7}</Project>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.10.0_64\grpc.vcxproj">
+      <Project>{AA3DB69E-1895-37EF-80EC-292AC097BF80}</Project>
       <Name>grpc</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\SUMOLibraries\grpc-1.10.0\third_party\boringssl\ssl\ssl.vcxproj">
-      <Project>{52780C89-D4EE-3A67-BD6F-67493EAAC586}</Project>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.10.0_64\third_party\boringssl\ssl\ssl.vcxproj">
+      <Project>{E508E216-B8CE-33EF-AE68-6212C25B4F6A}</Project>
       <Name>ssl</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
