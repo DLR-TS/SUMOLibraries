@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\gens\src\proto\grpc\health\v1\health.pb.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\gens\src\proto\grpc\health\v1\health.grpc.pb.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\gens\src\proto\grpc\testing\echo_messages.pb.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\gens\src\proto\grpc\testing\echo_messages.grpc.pb.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\gens\src\proto\grpc\testing\echo.pb.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\gens\src\proto\grpc\testing\echo.grpc.pb.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\gens\src\proto\grpc\testing\duplicate\echo_duplicate.pb.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\gens\src\proto\grpc\testing\duplicate\echo_duplicate.grpc.pb.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\test\cpp\end2end\test_service_impl.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\test\cpp\util\byte_buffer_proto_helper.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\test\cpp\util\string_ref_helper.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\test\cpp\util\subprocess.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\src\cpp\codegen\codegen_init.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\SUMOLibraries\grpc-1.10.0_64\gens\src\proto\grpc\health\v1\health.pb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SUMOLibraries\grpc-1.10.0_64\gens\src\proto\grpc\health\v1\health.grpc.pb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SUMOLibraries\grpc-1.10.0_64\gens\src\proto\grpc\testing\echo_messages.pb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SUMOLibraries\grpc-1.10.0_64\gens\src\proto\grpc\testing\echo_messages.grpc.pb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SUMOLibraries\grpc-1.10.0_64\gens\src\proto\grpc\testing\echo.pb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SUMOLibraries\grpc-1.10.0_64\gens\src\proto\grpc\testing\echo.grpc.pb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SUMOLibraries\grpc-1.10.0_64\gens\src\proto\grpc\testing\echo_mock.grpc.pb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SUMOLibraries\grpc-1.10.0_64\gens\src\proto\grpc\testing\duplicate\echo_duplicate.pb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SUMOLibraries\grpc-1.10.0_64\gens\src\proto\grpc\testing\duplicate\echo_duplicate.grpc.pb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\SUMOLibraries\grpc-1.10.0_64\CMakeLists.txt" />
+    <CustomBuild Include="C:\SUMOLibraries\grpc-1.10.0_64\CMakeFiles\e9a4c342e9dd05e95f9dd50fbe72061d\health.grpc.pb.cc.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SUMOLibraries\grpc-1.10.0_64\CMakeFiles\a7247be8b5bf09d3ea90f842f9af8157\echo_messages.grpc.pb.cc.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SUMOLibraries\grpc-1.10.0_64\CMakeFiles\a7247be8b5bf09d3ea90f842f9af8157\echo.grpc.pb.cc.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\SUMOLibraries\grpc-1.10.0_64\CMakeFiles\688d8e9199c08d530870640a8e78ba9f\echo_duplicate.grpc.pb.cc.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{94DFC242-9497-371E-8548-742DC9ECAD3C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{94C0B931-83FC-3815-B2ED-D16F3AC5687C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{D8E06529-5314-3CB3-B8FF-05789D87457D}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
