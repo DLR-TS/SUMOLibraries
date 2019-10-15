@@ -1,133 +1,133 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\src\core\lib\gpr\alloc.cc">
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0\src\core\lib\gpr\alloc.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\src\core\lib\gpr\arena.cc">
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0\src\core\lib\gpr\arena.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\src\core\lib\gpr\atm.cc">
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0\src\core\lib\gpr\atm.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\src\core\lib\gpr\cpu_iphone.cc">
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0\src\core\lib\gpr\cpu_iphone.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\src\core\lib\gpr\cpu_linux.cc">
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0\src\core\lib\gpr\cpu_linux.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\src\core\lib\gpr\cpu_posix.cc">
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0\src\core\lib\gpr\cpu_posix.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\src\core\lib\gpr\cpu_windows.cc">
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0\src\core\lib\gpr\cpu_windows.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\src\core\lib\gpr\env_linux.cc">
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0\src\core\lib\gpr\env_linux.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\src\core\lib\gpr\env_posix.cc">
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0\src\core\lib\gpr\env_posix.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\src\core\lib\gpr\env_windows.cc">
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0\src\core\lib\gpr\env_windows.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\src\core\lib\gpr\fork.cc">
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0\src\core\lib\gpr\fork.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\src\core\lib\gpr\host_port.cc">
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0\src\core\lib\gpr\host_port.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\src\core\lib\gpr\log.cc">
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0\src\core\lib\gpr\log.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\src\core\lib\gpr\log_android.cc">
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0\src\core\lib\gpr\log_android.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\src\core\lib\gpr\log_linux.cc">
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0\src\core\lib\gpr\log_linux.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\src\core\lib\gpr\log_posix.cc">
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0\src\core\lib\gpr\log_posix.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\src\core\lib\gpr\log_windows.cc">
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0\src\core\lib\gpr\log_windows.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\src\core\lib\gpr\mpscq.cc">
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0\src\core\lib\gpr\mpscq.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\src\core\lib\gpr\murmur_hash.cc">
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0\src\core\lib\gpr\murmur_hash.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\src\core\lib\gpr\string.cc">
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0\src\core\lib\gpr\string.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\src\core\lib\gpr\string_posix.cc">
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0\src\core\lib\gpr\string_posix.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\src\core\lib\gpr\string_util_windows.cc">
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0\src\core\lib\gpr\string_util_windows.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\src\core\lib\gpr\string_windows.cc">
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0\src\core\lib\gpr\string_windows.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\src\core\lib\gpr\sync.cc">
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0\src\core\lib\gpr\sync.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\src\core\lib\gpr\sync_posix.cc">
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0\src\core\lib\gpr\sync_posix.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\src\core\lib\gpr\sync_windows.cc">
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0\src\core\lib\gpr\sync_windows.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\src\core\lib\gpr\thd.cc">
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0\src\core\lib\gpr\thd.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\src\core\lib\gpr\thd_posix.cc">
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0\src\core\lib\gpr\thd_posix.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\src\core\lib\gpr\thd_windows.cc">
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0\src\core\lib\gpr\thd_windows.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\src\core\lib\gpr\time.cc">
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0\src\core\lib\gpr\time.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\src\core\lib\gpr\time_posix.cc">
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0\src\core\lib\gpr\time_posix.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\src\core\lib\gpr\time_precise.cc">
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0\src\core\lib\gpr\time_precise.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\src\core\lib\gpr\time_windows.cc">
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0\src\core\lib\gpr\time_windows.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\src\core\lib\gpr\tls_pthread.cc">
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0\src\core\lib\gpr\tls_pthread.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\src\core\lib\gpr\tmpfile_msys.cc">
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0\src\core\lib\gpr\tmpfile_msys.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\src\core\lib\gpr\tmpfile_posix.cc">
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0\src\core\lib\gpr\tmpfile_posix.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\src\core\lib\gpr\tmpfile_windows.cc">
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0\src\core\lib\gpr\tmpfile_windows.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\src\core\lib\gpr\wrap_memcpy.cc">
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0\src\core\lib\gpr\wrap_memcpy.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\src\core\lib\profiling\basic_timers.cc">
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0\src\core\lib\profiling\basic_timers.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\src\core\lib\profiling\stap_timers.cc">
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0\src\core\lib\profiling\stap_timers.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\SUMOLibraries\grpc-1.10.0_64\CMakeLists.txt" />
+    <CustomBuild Include="C:\SUMOLibraries\grpc-1.10.0\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{94DFC242-9497-371E-8548-742DC9ECAD3C}</UniqueIdentifier>
+      <UniqueIdentifier>{40D1E830-92D8-35E7-9E00-FFC8257463A2}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

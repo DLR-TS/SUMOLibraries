@@ -1,39 +1,39 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\gens\src\proto\grpc\status\status.pb.cc">
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0\gens\src\proto\grpc\status\status.pb.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\gens\src\proto\grpc\status\status.grpc.pb.cc">
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0\gens\src\proto\grpc\status\status.grpc.pb.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0_64\src\cpp\util\error_details.cc">
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.10.0\src\cpp\util\error_details.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\SUMOLibraries\grpc-1.10.0_64\gens\src\proto\grpc\status\status.pb.h">
+    <ClInclude Include="C:\SUMOLibraries\grpc-1.10.0\gens\src\proto\grpc\status\status.pb.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\SUMOLibraries\grpc-1.10.0_64\gens\src\proto\grpc\status\status.grpc.pb.h">
+    <ClInclude Include="C:\SUMOLibraries\grpc-1.10.0\gens\src\proto\grpc\status\status.grpc.pb.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\SUMOLibraries\grpc-1.10.0_64\CMakeLists.txt" />
-    <CustomBuild Include="C:\SUMOLibraries\grpc-1.10.0_64\CMakeFiles\8f3d1d36f6a39e1bdb47d346ab72b617\status.grpc.pb.cc.rule">
+    <CustomBuild Include="C:\SUMOLibraries\grpc-1.10.0\CMakeFiles\07922e7f9b06aa87e0ac269fd3f4922d\status.grpc.pb.cc.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
+    <CustomBuild Include="C:\SUMOLibraries\grpc-1.10.0\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{94DFC242-9497-371E-8548-742DC9ECAD3C}</UniqueIdentifier>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{2C774753-5FEC-3F6A-BB8A-E1AECA4270A7}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{94C0B931-83FC-3815-B2ED-D16F3AC5687C}</UniqueIdentifier>
+      <UniqueIdentifier>{5F95465C-CAAF-3271-BC77-4CCD3F07FC50}</UniqueIdentifier>
     </Filter>
-    <Filter Include="CMake Rules">
-      <UniqueIdentifier>{D8E06529-5314-3CB3-B8FF-05789D87457D}</UniqueIdentifier>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{40D1E830-92D8-35E7-9E00-FFC8257463A2}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
