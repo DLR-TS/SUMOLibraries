@@ -232,7 +232,7 @@ pj_open_lib_ex(projCtx ctx, const char *name, const char *mode,
 #ifdef WIN32
         /* Special case for SUMO */
         } else if ((sysname = getenv("SUMO_HOME")) != nullptr) {
-            fname = std::string(sysname) + "\\data\\proj.db";
+            fname = std::string(sysname) + "\\data\\proj\\proj.db";
             sysname = fname.c_str();
 #endif
         /* or hardcoded path */
