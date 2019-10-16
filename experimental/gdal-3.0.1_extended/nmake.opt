@@ -54,25 +54,25 @@ MSVC_VER = 1900
 # But the paths *should* be absolute (relative paths mess up in submakefiles).
 
 !IFNDEF GDAL_HOME
-GDAL_HOME = C:/SUMOLibraries/gdal-3.0.1_extended
+GDAL_HOME = C:/SUMOLibraries/experimental/gdal-3.0.1_extended
 !ENDIF
 !IFNDEF BINDIR
-BINDIR = "C:/SUMOLibraries/gdal-3.0.1_extended/bin"
+BINDIR = "C:/SUMOLibraries/experimental/gdal-3.0.1_extended/bin"
 !ENDIF
 !IFNDEF PLUGINDIR
-PLUGINDIR = "C:/SUMOLibraries/gdal-3.0.1_extended/gdalplugins"
+PLUGINDIR = "C:/SUMOLibraries/experimental/gdal-3.0.1_extended/gdalplugins"
 !ENDIF
 !IFNDEF LIBDIR
-LIBDIR = "C:/SUMOLibraries/gdal-3.0.1_extended/lib"
+LIBDIR = "C:/SUMOLibraries/experimental/gdal-3.0.1_extended/lib"
 !ENDIF
 !IFNDEF INCDIR
-INCDIR = "C:/SUMOLibraries/gdal-3.0.1_extended/include"
+INCDIR = "C:/SUMOLibraries/experimental/gdal-3.0.1_extended/include"
 !ENDIF
 !IFNDEF DATADIR
-DATADIR = "C:/SUMOLibraries/gdal-3.0.1_extended/data"
+DATADIR = "C:/SUMOLibraries/experimental/gdal-3.0.1_extended/data"
 !ENDIF
 !IFNDEF HTMLDIR
-HTMLDIR = "C:/SUMOLibraries/gdal-3.0.1_extended/html"
+HTMLDIR = "C:/SUMOLibraries/experimental/gdal-3.0.1_extended/html"
 !ENDIF
 
 # Set this to the installed directory containing python.  If you don't
@@ -761,8 +761,8 @@ QHULL_SETTING = INTERNAL
 # CRYPTOPP_LIB = c:/install-cryptopp-x64/lib/cryptlib.lib
 
 # OpenSSL stuff (needed if using curl in multithreaded way, with OpenSSL backend)
-OPENSSL_INC = -IC:/SUMOLibraries\3rdPartyLibs\gdal\openssl-1.0.2/include
-OPENSSL_LIB = C:/SUMOLibraries\3rdPartyLibs\gdal\openssl-1.0.2/lib/ssleay32.lib C:/SUMOLibraries\3rdPartyLibs\gdal\openssl-1.0.2/lib/libeay32.lib crypt32.lib
+OPENSSL_INC = -IC:/SUMOLibraries/3rdPartyLibs/grpc/openssl-1.1.1/include
+OPENSSL_LIB = C:/SUMOLibraries/3rdPartyLibs/grpc/openssl-1.1.1/lib/libcrypto.lib C:/SUMOLibraries/3rdPartyLibs/grpc/openssl-1.1.1/lib/libssl.lib crypt32.lib
 
 # Comment out to disable MRF support.
 MRF_SETTING = yes
