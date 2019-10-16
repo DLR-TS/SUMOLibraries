@@ -3,10 +3,10 @@ CMakeFiles
 Debug
 Release
 
-# visual studio files
+# visual studio folders
 .vs
 
-#files by extension
+# files by extension
 *.obj
 *.tlog
 *.pdb
@@ -21,11 +21,13 @@ Release
 *.pyc
 *.FileListAbsolute.txt
 
-# documentation
+# big files
 /gdal-3.0.1/ogr/ogrsf_frmts/ogrsf_frmts_sup.lib
 /gdal-3.0.1/ogr/ogrsf_frmts/ogrsf_frmts.lib
-/gdal-3.0.1_extended/ogr/ogrsf_frmts/ogrsf_frmts_sup.lib
-/gdal-3.0.1_extended/ogr/ogrsf_frmts/ogrsf_frmts.lib
+/experimental/gdal-3.0.1_extended/ogr/ogrsf_frmts/ogrsf_frmts_sup.lib
+/experimental/gdal-3.0.1_extended/ogr/ogrsf_frmts/ogrsf_frmts.lib
+
+# documentation
 /32bits/xerces-c-3.2.2/doc
 /32bits/xerces-c-3.2.2/share/doc
 /FFMPEG-4.2.0/doc
