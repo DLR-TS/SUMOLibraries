@@ -1,0 +1,70 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 16
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ALL_BUILD", "ALL_BUILD.vcxproj", "{D2EECD3E-5DD9-32CF-BD5C-DE45C718F0A5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B9A5F116-F387-39E6-914D-34F1DB1A960D} = {B9A5F116-F387-39E6-914D-34F1DB1A960D}
+		{38025A1E-14C6-3CE9-B042-A5D4BA931E7F} = {38025A1E-14C6-3CE9-B042-A5D4BA931E7F}
+		{42515DC3-673B-37E1-B72B-D6FD195727CE} = {42515DC3-673B-37E1-B72B-D6FD195727CE}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "INSTALL", "INSTALL.vcxproj", "{BF575D90-C3F8-3F1E-AF03-F8E66264E9D2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D2EECD3E-5DD9-32CF-BD5C-DE45C718F0A5} = {D2EECD3E-5DD9-32CF-BD5C-DE45C718F0A5}
+		{B9A5F116-F387-39E6-914D-34F1DB1A960D} = {B9A5F116-F387-39E6-914D-34F1DB1A960D}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ZERO_CHECK", "ZERO_CHECK.vcxproj", "{B9A5F116-F387-39E6-914D-34F1DB1A960D}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gflags", "gflags.vcxproj", "{5329C178-8A07-3A24-A79D-00778300DBFB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B9A5F116-F387-39E6-914D-34F1DB1A960D} = {B9A5F116-F387-39E6-914D-34F1DB1A960D}
+		{42515DC3-673B-37E1-B72B-D6FD195727CE} = {42515DC3-673B-37E1-B72B-D6FD195727CE}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gflags_nothreads", "gflags_nothreads.vcxproj", "{C51DD284-B914-3310-BEB9-D126605D71C8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B9A5F116-F387-39E6-914D-34F1DB1A960D} = {B9A5F116-F387-39E6-914D-34F1DB1A960D}
+		{38025A1E-14C6-3CE9-B042-A5D4BA931E7F} = {38025A1E-14C6-3CE9-B042-A5D4BA931E7F}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gflags_nothreads_static", "gflags_nothreads_static.vcxproj", "{38025A1E-14C6-3CE9-B042-A5D4BA931E7F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B9A5F116-F387-39E6-914D-34F1DB1A960D} = {B9A5F116-F387-39E6-914D-34F1DB1A960D}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gflags_static", "gflags_static.vcxproj", "{42515DC3-673B-37E1-B72B-D6FD195727CE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B9A5F116-F387-39E6-914D-34F1DB1A960D} = {B9A5F116-F387-39E6-914D-34F1DB1A960D}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "uninstall", "uninstall.vcxproj", "{7A519188-35E9-33EF-B795-E1BD390CF7AE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B9A5F116-F387-39E6-914D-34F1DB1A960D} = {B9A5F116-F387-39E6-914D-34F1DB1A960D}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D2EECD3E-5DD9-32CF-BD5C-DE45C718F0A5}.Release|x64.ActiveCfg = Release|x64
+		{D2EECD3E-5DD9-32CF-BD5C-DE45C718F0A5}.Release|x64.Build.0 = Release|x64
+		{BF575D90-C3F8-3F1E-AF03-F8E66264E9D2}.Release|x64.ActiveCfg = Release|x64
+		{B9A5F116-F387-39E6-914D-34F1DB1A960D}.Release|x64.ActiveCfg = Release|x64
+		{B9A5F116-F387-39E6-914D-34F1DB1A960D}.Release|x64.Build.0 = Release|x64
+		{5329C178-8A07-3A24-A79D-00778300DBFB}.Release|x64.ActiveCfg = Release|x64
+		{C51DD284-B914-3310-BEB9-D126605D71C8}.Release|x64.ActiveCfg = Release|x64
+		{38025A1E-14C6-3CE9-B042-A5D4BA931E7F}.Release|x64.ActiveCfg = Release|x64
+		{38025A1E-14C6-3CE9-B042-A5D4BA931E7F}.Release|x64.Build.0 = Release|x64
+		{42515DC3-673B-37E1-B72B-D6FD195727CE}.Release|x64.ActiveCfg = Release|x64
+		{42515DC3-673B-37E1-B72B-D6FD195727CE}.Release|x64.Build.0 = Release|x64
+		{7A519188-35E9-33EF-B795-E1BD390CF7AE}.Release|x64.ActiveCfg = Release|x64
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A8781EB4-6691-3035-9C56-5FF5553C2C56}
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
