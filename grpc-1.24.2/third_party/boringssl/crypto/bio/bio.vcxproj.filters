@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\bio\bio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\bio\bio_mem.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\bio\connect.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\bio\fd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\bio\file.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\bio\hexdump.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\bio\pair.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\bio\printf.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\bio\socket.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\bio\socket_helper.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\bio\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{0DFAEDEA-2A42-310F-8813-76FF7F7D09C7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

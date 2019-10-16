@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\evp\digestsign.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\evp\evp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\evp\evp_asn1.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\evp\evp_ctx.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\evp\p_dsa_asn1.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\evp\p_ec.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\evp\p_ec_asn1.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\evp\p_ed25519.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\evp\p_ed25519_asn1.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\evp\p_rsa.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\evp\p_rsa_asn1.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\evp\pbkdf.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\evp\print.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\evp\scrypt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\evp\sign.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\evp\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{0DFAEDEA-2A42-310F-8813-76FF7F7D09C7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

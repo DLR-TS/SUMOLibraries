@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\asn1\asn1_test.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\base64\base64_test.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\buf\buf_test.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\bio\bio_test.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\bytestring\bytestring_test.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\chacha\chacha_test.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\cipher_extra\aead_test.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\cipher_extra\cipher_test.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\cmac\cmac_test.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\compiler_test.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\constant_time_test.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\curve25519\ed25519_test.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\curve25519\spake25519_test.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\curve25519\x25519_test.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\ecdh\ecdh_test.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\dh\dh_test.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\digest_extra\digest_test.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\dsa\dsa_test.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\err\err_test.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\evp\evp_extra_test.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\evp\evp_test.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\evp\pbkdf_test.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\evp\scrypt_test.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\fipsmodule\aes\aes_test.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\fipsmodule\bn\bn_test.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\fipsmodule\ec\ec_test.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\fipsmodule\ec\p256-x86_64_test.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\fipsmodule\ecdsa\ecdsa_test.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\fipsmodule\modes\gcm_test.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\fipsmodule\rand\ctrdrbg_test.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\hkdf\hkdf_test.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\hmac_extra\hmac_test.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\lhash\lhash_test.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\obj\obj_test.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\pkcs7\pkcs7_test.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\pkcs8\pkcs8_test.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\pkcs8\pkcs12_test.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\poly1305\poly1305_test.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\pool\pool_test.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\refcount_test.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\rsa_extra\rsa_test.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\self_test.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\test\file_test_gtest.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\thread_test.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\x509\x509_test.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\x509v3\tab_test.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\x509v3\v3name_test.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto_test_data.dir\$(Configuration)\crypto_test_data.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\test\boringssl_gtest_main.dir\$(Configuration)\gtest_main.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\test\test_support.dir\$(Configuration)\file_test.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\test\test_support.dir\$(Configuration)\malloc.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\test\test_support.dir\$(Configuration)\test_util.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Object Libraries">
+      <UniqueIdentifier>{F06B912B-97E5-3FCB-93C0-10D0AA5CE6A3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{0DFAEDEA-2A42-310F-8813-76FF7F7D09C7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

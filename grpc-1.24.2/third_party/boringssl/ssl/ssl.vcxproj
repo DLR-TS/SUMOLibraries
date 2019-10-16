@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0EC4BC90-83A5-3631-A681-45C50B297853}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>ssl</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\ssl\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ssl.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ssl</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\third_party\googletest\include;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\ssl\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) -utf-8 -w44265</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4061;4100;4127;4200;4204;4221;4242;4244;4267;4371;4388;4296;4350;4365;4389;4464;4510;4512;4514;4548;4610;4623;4625;4626;4668;4706;4710;4711;4800;4820;5026;5027;5045</DisableSpecificWarnings>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>NDEBUG;_WIN32_WINNT=0x600;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;_HAS_EXCEPTIONS=0;WIN32_LEAN_AND_MEAN;NOMINMAX;_STL_EXTRA_DISABLED_WARNINGS=4774 4987;BORINGSSL_IMPLEMENTATION;OPENSSL_NO_ASM;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WIN32_WINNT=0x600;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;_HAS_EXCEPTIONS=0;WIN32_LEAN_AND_MEAN;NOMINMAX;_STL_EXTRA_DISABLED_WARNINGS=4774 4987;BORINGSSL_IMPLEMENTATION;OPENSSL_NO_ASM;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\third_party\googletest\include;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\ssl\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\third_party\googletest\include;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\ssl\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\ssl\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/SUMOLibraries/grpc-1.24.2/third_party/boringssl/ssl/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\CMake\bin\cmake.exe -SC:/SUMOLibraries/grpc-1.24.2 -BC:/SUMOLibraries/grpc-1.24.2 --check-stamp-file C:/SUMOLibraries/grpc-1.24.2/third_party/boringssl/ssl/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\ssl\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\ssl\bio_ssl.cc" />
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\ssl\custom_extensions.cc" />
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\ssl\d1_both.cc" />
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\ssl\d1_lib.cc" />
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\ssl\d1_pkt.cc" />
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\ssl\d1_srtp.cc" />
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\ssl\dtls_method.cc" />
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\ssl\dtls_record.cc" />
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\ssl\handoff.cc" />
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\ssl\handshake.cc" />
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\ssl\handshake_client.cc" />
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\ssl\handshake_server.cc" />
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\ssl\s3_both.cc" />
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\ssl\s3_lib.cc" />
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\ssl\s3_pkt.cc" />
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\ssl\ssl_aead_ctx.cc" />
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\ssl\ssl_asn1.cc" />
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\ssl\ssl_buffer.cc" />
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\ssl\ssl_cert.cc" />
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\ssl\ssl_cipher.cc" />
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\ssl\ssl_file.cc" />
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\ssl\ssl_key_share.cc" />
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\ssl\ssl_lib.cc" />
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\ssl\ssl_privkey.cc" />
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\ssl\ssl_session.cc" />
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\ssl\ssl_stat.cc" />
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\ssl\ssl_transcript.cc" />
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\ssl\ssl_versions.cc" />
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\ssl\ssl_x509.cc" />
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\ssl\t1_enc.cc" />
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\ssl\t1_lib.cc" />
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\ssl\tls_method.cc" />
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\ssl\tls_record.cc" />
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\ssl\tls13_both.cc" />
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\ssl\tls13_client.cc" />
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\ssl\tls13_enc.cc" />
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\ssl\tls13_server.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\ZERO_CHECK.vcxproj">
+      <Project>{B2F6149E-6279-34D1-8991-D0E530322040}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\crypto.vcxproj">
+      <Project>{1F48ED85-B031-366F-8500-93545475E711}</Project>
+      <Name>crypto</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

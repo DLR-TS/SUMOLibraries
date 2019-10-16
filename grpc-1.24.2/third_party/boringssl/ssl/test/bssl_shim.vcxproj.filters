@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\ssl\test\async_bio.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\ssl\test\bssl_shim.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\ssl\test\packeted_bio.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\ssl\test\test_config.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\ssl\test\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\test\test_support.dir\$(Configuration)\file_test.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\test\test_support.dir\$(Configuration)\malloc.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\test\test_support.dir\$(Configuration)\test_util.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Object Libraries">
+      <UniqueIdentifier>{F06B912B-97E5-3FCB-93C0-10D0AA5CE6A3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{0DFAEDEA-2A42-310F-8813-76FF7F7D09C7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

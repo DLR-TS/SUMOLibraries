@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{722B6BEA-99FC-3CC6-8880-3BCC3F610ABE}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>crypto_test_data</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">crypto_test_data.dir\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">crypto_test_data.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">crypto_test_data</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\third_party\googletest\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) -utf-8 -w44265</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4061;4100;4127;4200;4204;4221;4242;4244;4267;4371;4388;4296;4350;4365;4389;4464;4510;4512;4514;4548;4610;4623;4625;4626;4668;4706;4710;4711;4800;4820;5026;5027;5045</DisableSpecificWarnings>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>NDEBUG;_WIN32_WINNT=0x600;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;_HAS_EXCEPTIONS=0;WIN32_LEAN_AND_MEAN;NOMINMAX;_STL_EXTRA_DISABLED_WARNINGS=4774 4987;BORINGSSL_IMPLEMENTATION;OPENSSL_NO_ASM;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WIN32_WINNT=0x600;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;_HAS_EXCEPTIONS=0;WIN32_LEAN_AND_MEAN;NOMINMAX;_STL_EXTRA_DISABLED_WARNINGS=4774 4987;BORINGSSL_IMPLEMENTATION;OPENSSL_NO_ASM;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\third_party\googletest\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\third_party\googletest\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\SUMOLibraries\grpc-1.24.2\CMakeFiles\2a838e80768ff98d34dc294d52f3967e\crypto_test_data.cc.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating crypto_test_data.cc</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+cd C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Go\bin\go.exe run util/embed_test_data.go crypto/cipher_extra/test/aes_128_cbc_sha1_ssl3_tests.txt crypto/cipher_extra/test/aes_128_cbc_sha1_tls_implicit_iv_tests.txt crypto/cipher_extra/test/aes_128_cbc_sha1_tls_tests.txt crypto/cipher_extra/test/aes_128_cbc_sha256_tls_tests.txt crypto/cipher_extra/test/aes_128_ccm_bluetooth_tests.txt crypto/cipher_extra/test/aes_128_ccm_bluetooth_8_tests.txt crypto/cipher_extra/test/aes_128_ctr_hmac_sha256.txt crypto/cipher_extra/test/aes_128_gcm_siv_tests.txt crypto/cipher_extra/test/aes_128_gcm_tests.txt crypto/cipher_extra/test/aes_256_cbc_sha1_ssl3_tests.txt crypto/cipher_extra/test/aes_256_cbc_sha1_tls_implicit_iv_tests.txt crypto/cipher_extra/test/aes_256_cbc_sha1_tls_tests.txt crypto/cipher_extra/test/aes_256_cbc_sha256_tls_tests.txt crypto/cipher_extra/test/aes_256_cbc_sha384_tls_tests.txt crypto/cipher_extra/test/aes_256_ctr_hmac_sha256.txt crypto/cipher_extra/test/aes_256_gcm_siv_tests.txt crypto/cipher_extra/test/aes_256_gcm_tests.txt crypto/cipher_extra/test/chacha20_poly1305_tests.txt crypto/cipher_extra/test/cipher_tests.txt crypto/cipher_extra/test/des_ede3_cbc_sha1_ssl3_tests.txt crypto/cipher_extra/test/des_ede3_cbc_sha1_tls_implicit_iv_tests.txt crypto/cipher_extra/test/des_ede3_cbc_sha1_tls_tests.txt crypto/cipher_extra/test/nist_cavp/aes_128_cbc.txt crypto/cipher_extra/test/nist_cavp/aes_128_ctr.txt crypto/cipher_extra/test/nist_cavp/aes_128_gcm.txt crypto/cipher_extra/test/nist_cavp/aes_192_cbc.txt crypto/cipher_extra/test/nist_cavp/aes_192_ctr.txt crypto/cipher_extra/test/nist_cavp/aes_256_cbc.txt crypto/cipher_extra/test/nist_cavp/aes_256_ctr.txt crypto/cipher_extra/test/nist_cavp/aes_256_gcm.txt crypto/cipher_extra/test/nist_cavp/tdes_cbc.txt crypto/cipher_extra/test/nist_cavp/tdes_ecb.txt crypto/curve25519/ed25519_tests.txt crypto/ecdh/ecdh_tests.txt crypto/evp/evp_tests.txt crypto/evp/scrypt_tests.txt crypto/fipsmodule/aes/aes_tests.txt crypto/fipsmodule/bn/bn_tests.txt crypto/fipsmodule/ec/ec_scalar_base_mult_tests.txt crypto/fipsmodule/ec/p256-x86_64_tests.txt crypto/fipsmodule/ecdsa/ecdsa_sign_tests.txt crypto/fipsmodule/ecdsa/ecdsa_verify_tests.txt crypto/fipsmodule/modes/gcm_tests.txt crypto/fipsmodule/rand/ctrdrbg_vectors.txt crypto/hmac_extra/hmac_tests.txt crypto/poly1305/poly1305_tests.txt crypto/x509/many_constraints.pem crypto/x509/many_names1.pem crypto/x509/many_names2.pem crypto/x509/many_names3.pem crypto/x509/some_names1.pem crypto/x509/some_names2.pem crypto/x509/some_names3.pem &gt; C:/SUMOLibraries/grpc-1.24.2/third_party/boringssl/crypto_test_data.cc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\util\embed_test_data.go;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\cipher_extra\test\aes_128_cbc_sha1_ssl3_tests.txt;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\cipher_extra\test\aes_128_cbc_sha1_tls_implicit_iv_tests.txt;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\cipher_extra\test\aes_128_cbc_sha1_tls_tests.txt;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\cipher_extra\test\aes_128_cbc_sha256_tls_tests.txt;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\cipher_extra\test\aes_128_ccm_bluetooth_tests.txt;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\cipher_extra\test\aes_128_ccm_bluetooth_8_tests.txt;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\cipher_extra\test\aes_128_ctr_hmac_sha256.txt;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\cipher_extra\test\aes_128_gcm_siv_tests.txt;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\cipher_extra\test\aes_128_gcm_tests.txt;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\cipher_extra\test\aes_256_cbc_sha1_ssl3_tests.txt;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\cipher_extra\test\aes_256_cbc_sha1_tls_implicit_iv_tests.txt;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\cipher_extra\test\aes_256_cbc_sha1_tls_tests.txt;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\cipher_extra\test\aes_256_cbc_sha256_tls_tests.txt;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\cipher_extra\test\aes_256_cbc_sha384_tls_tests.txt;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\cipher_extra\test\aes_256_ctr_hmac_sha256.txt;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\cipher_extra\test\aes_256_gcm_siv_tests.txt;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\cipher_extra\test\aes_256_gcm_tests.txt;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\cipher_extra\test\chacha20_poly1305_tests.txt;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\cipher_extra\test\cipher_tests.txt;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\cipher_extra\test\des_ede3_cbc_sha1_ssl3_tests.txt;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\cipher_extra\test\des_ede3_cbc_sha1_tls_implicit_iv_tests.txt;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\cipher_extra\test\des_ede3_cbc_sha1_tls_tests.txt;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\cipher_extra\test\nist_cavp\aes_128_cbc.txt;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\cipher_extra\test\nist_cavp\aes_128_ctr.txt;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\cipher_extra\test\nist_cavp\aes_128_gcm.txt;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\cipher_extra\test\nist_cavp\aes_192_cbc.txt;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\cipher_extra\test\nist_cavp\aes_192_ctr.txt;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\cipher_extra\test\nist_cavp\aes_256_cbc.txt;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\cipher_extra\test\nist_cavp\aes_256_ctr.txt;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\cipher_extra\test\nist_cavp\aes_256_gcm.txt;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\cipher_extra\test\nist_cavp\tdes_cbc.txt;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\cipher_extra\test\nist_cavp\tdes_ecb.txt;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\curve25519\ed25519_tests.txt;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\ecdh\ecdh_tests.txt;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\evp\evp_tests.txt;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\evp\scrypt_tests.txt;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\fipsmodule\aes\aes_tests.txt;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\fipsmodule\bn\bn_tests.txt;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\fipsmodule\ec\ec_scalar_base_mult_tests.txt;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\fipsmodule\ec\p256-x86_64_tests.txt;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\fipsmodule\ecdsa\ecdsa_sign_tests.txt;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\fipsmodule\ecdsa\ecdsa_verify_tests.txt;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\fipsmodule\modes\gcm_tests.txt;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\fipsmodule\rand\ctrdrbg_vectors.txt;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\hmac_extra\hmac_tests.txt;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\poly1305\poly1305_tests.txt;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\x509\many_constraints.pem;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\x509\many_names1.pem;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\x509\many_names2.pem;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\x509\many_names3.pem;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\x509\some_names1.pem;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\x509\some_names2.pem;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\x509\some_names3.pem;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto_test_data.cc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/SUMOLibraries/grpc-1.24.2/third_party/boringssl/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\CMake\bin\cmake.exe -SC:/SUMOLibraries/grpc-1.24.2 -BC:/SUMOLibraries/grpc-1.24.2 --check-stamp-file C:/SUMOLibraries/grpc-1.24.2/third_party/boringssl/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\CMake\share\cmake-3.15\Modules\FindCygwin.cmake;C:\CMake\share\cmake-3.15\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.15\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.15\Modules\FindPerl.cmake;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\sources.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto_test_data.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\ZERO_CHECK.vcxproj">
+      <Project>{B2F6149E-6279-34D1-8991-D0E530322040}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

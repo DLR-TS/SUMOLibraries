@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C4D54E1C-A66F-3821-8535-A871759F80BE}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>decrepit</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\decrepit\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">decrepit.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">decrepit</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\third_party\googletest\include;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\decrepit\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) -utf-8 -w44265</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4061;4100;4127;4200;4204;4221;4242;4244;4267;4371;4388;4296;4350;4365;4389;4464;4510;4512;4514;4548;4610;4623;4625;4626;4668;4706;4710;4711;4800;4820;5026;5027;5045</DisableSpecificWarnings>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>NDEBUG;_WIN32_WINNT=0x600;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;_HAS_EXCEPTIONS=0;WIN32_LEAN_AND_MEAN;NOMINMAX;_STL_EXTRA_DISABLED_WARNINGS=4774 4987;BORINGSSL_IMPLEMENTATION;OPENSSL_NO_ASM;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WIN32_WINNT=0x600;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;_HAS_EXCEPTIONS=0;WIN32_LEAN_AND_MEAN;NOMINMAX;_STL_EXTRA_DISABLED_WARNINGS=4774 4987;BORINGSSL_IMPLEMENTATION;OPENSSL_NO_ASM;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\third_party\googletest\include;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\decrepit\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\third_party\googletest\include;C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\decrepit\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\decrepit\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/SUMOLibraries/grpc-1.24.2/third_party/boringssl/decrepit/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\CMake\bin\cmake.exe -SC:/SUMOLibraries/grpc-1.24.2 -BC:/SUMOLibraries/grpc-1.24.2 --check-stamp-file C:/SUMOLibraries/grpc-1.24.2/third_party/boringssl/decrepit/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\decrepit\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\decrepit\bio\bio_decrepit.dir\$(Configuration)\base64_bio.obj" />
+    <Object Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\decrepit\blowfish\blowfish.dir\$(Configuration)\blowfish.obj" />
+    <Object Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\decrepit\cast\cast.dir\$(Configuration)\cast.obj" />
+    <Object Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\decrepit\cast\cast.dir\$(Configuration)\cast_tables.obj" />
+    <Object Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\decrepit\cfb\cfb.dir\$(Configuration)\cfb.obj" />
+    <Object Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\decrepit\des\des_decrepit.dir\$(Configuration)\cfb64ede.obj" />
+    <Object Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\decrepit\dh\dh_decrepit.dir\$(Configuration)\dh_decrepit.obj" />
+    <Object Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\decrepit\dsa\dsa_decrepit.dir\$(Configuration)\dsa_decrepit.obj" />
+    <Object Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\decrepit\evp\evp_decrepit.dir\$(Configuration)\dss1.obj" />
+    <Object Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\decrepit\evp\evp_decrepit.dir\$(Configuration)\evp_do_all.obj" />
+    <Object Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\decrepit\obj\obj_decrepit.dir\$(Configuration)\obj_decrepit.obj" />
+    <Object Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\decrepit\rc4\rc4_decrepit.dir\$(Configuration)\rc4_decrepit.obj" />
+    <Object Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\decrepit\ripemd\ripemd_decrepit.dir\$(Configuration)\ripemd.obj" />
+    <Object Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\decrepit\rsa\rsa_decrepit.dir\$(Configuration)\rsa_decrepit.obj" />
+    <Object Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\decrepit\ssl\ssl_decrepit.dir\$(Configuration)\ssl_decrepit.obj" />
+    <Object Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\decrepit\x509\x509_decrepit.dir\$(Configuration)\x509_decrepit.obj" />
+    <Object Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\decrepit\xts\xts.dir\$(Configuration)\xts.obj" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\ZERO_CHECK.vcxproj">
+      <Project>{B2F6149E-6279-34D1-8991-D0E530322040}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\decrepit\bio\bio_decrepit.vcxproj">
+      <Project>{D0F52EAD-EDA2-333D-9482-6C3441B02C66}</Project>
+      <Name>bio_decrepit</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\decrepit\blowfish\blowfish.vcxproj">
+      <Project>{06FDEA1D-1714-3B2E-BF1A-E1B0F2A15B04}</Project>
+      <Name>blowfish</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\decrepit\cast\cast.vcxproj">
+      <Project>{E46C0E7B-2CE6-36F8-8C6C-158B28426890}</Project>
+      <Name>cast</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\decrepit\cfb\cfb.vcxproj">
+      <Project>{37DDE063-04E0-3892-ACA5-FD8D50949916}</Project>
+      <Name>cfb</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\crypto\crypto.vcxproj">
+      <Project>{1F48ED85-B031-366F-8500-93545475E711}</Project>
+      <Name>crypto</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\decrepit\des\des_decrepit.vcxproj">
+      <Project>{A47E3E0F-97B2-332F-AEFF-C15E8D6FE5C8}</Project>
+      <Name>des_decrepit</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\decrepit\dh\dh_decrepit.vcxproj">
+      <Project>{DEFB323D-CC9F-30E4-AC0B-98091365831D}</Project>
+      <Name>dh_decrepit</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\decrepit\dsa\dsa_decrepit.vcxproj">
+      <Project>{D52DB1A2-F927-3022-B260-BDB0B804A4E2}</Project>
+      <Name>dsa_decrepit</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\decrepit\evp\evp_decrepit.vcxproj">
+      <Project>{7C54A3E8-2B76-3F07-A472-47B3DF800311}</Project>
+      <Name>evp_decrepit</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\decrepit\obj\obj_decrepit.vcxproj">
+      <Project>{8ABC6BDC-F30F-3AC4-96DE-A9E68EE718F4}</Project>
+      <Name>obj_decrepit</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\decrepit\rc4\rc4_decrepit.vcxproj">
+      <Project>{F10E9A66-7BF3-3C53-9464-FAE5CEA91F89}</Project>
+      <Name>rc4_decrepit</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\decrepit\ripemd\ripemd_decrepit.vcxproj">
+      <Project>{A9583439-AD8C-3627-9558-9D694872621C}</Project>
+      <Name>ripemd_decrepit</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\decrepit\rsa\rsa_decrepit.vcxproj">
+      <Project>{71BFE20F-C09E-3419-BA5D-14F07C678C61}</Project>
+      <Name>rsa_decrepit</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\ssl\ssl.vcxproj">
+      <Project>{0EC4BC90-83A5-3631-A681-45C50B297853}</Project>
+      <Name>ssl</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\decrepit\ssl\ssl_decrepit.vcxproj">
+      <Project>{609CBC13-7CAD-3B36-8F99-39D5B68790D4}</Project>
+      <Name>ssl_decrepit</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\decrepit\x509\x509_decrepit.vcxproj">
+      <Project>{C8EF2689-8A74-3F61-B256-A64F087621F5}</Project>
+      <Name>x509_decrepit</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\grpc-1.24.2\third_party\boringssl\decrepit\xts\xts.vcxproj">
+      <Project>{FA5E0731-F8E2-343D-9627-974EFDE6E86D}</Project>
+      <Name>xts</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
