@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C247C6B7-6D8E-35C1-87AC-6A215C9C6A5B}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\SUMOLibraries\3rdPartyLibs\grpc\benchmark-1.5.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\SUMOLibraries\3rdPartyLibs\grpc\benchmark-1.5.0\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/SUMOLibraries/3rdPartyLibs/grpc/benchmark-1.5.0/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\CMake\bin\cmake.exe -SC:/SUMOLibraries/3rdPartyLibs/grpc/benchmark-1.5.0 -BC:/SUMOLibraries/3rdPartyLibs/grpc/benchmark-1.5.0 --check-stamp-file C:/SUMOLibraries/3rdPartyLibs/grpc/benchmark-1.5.0/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\CMake\share\cmake-3.15\Modules\CMakeCXXInformation.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.15\Modules\CheckCXXCompilerFlag.cmake;C:\CMake\share\cmake-3.15\Modules\CheckCXXSourceCompiles.cmake;C:\CMake\share\cmake-3.15\Modules\CheckIncludeFileCXX.cmake;C:\CMake\share\cmake-3.15\Modules\CheckLibraryExists.cmake;C:\CMake\share\cmake-3.15\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\CMake\share\cmake-3.15\Modules\Compiler\MSVC-CXX.cmake;C:\CMake\share\cmake-3.15\Modules\FindGit.cmake;C:\CMake\share\cmake-3.15\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.15\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.15\Modules\FindThreads.cmake;C:\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC-CXX.cmake;C:\CMake\share\cmake-3.15\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.15\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.15\Modules\Platform\WindowsPaths.cmake;C:\SUMOLibraries\3rdPartyLibs\grpc\benchmark-1.5.0\CMakeFiles\3.15.4\CMakeCXXCompiler.cmake;C:\SUMOLibraries\3rdPartyLibs\grpc\benchmark-1.5.0\CMakeFiles\3.15.4\CMakeRCCompiler.cmake;C:\SUMOLibraries\3rdPartyLibs\grpc\benchmark-1.5.0\CMakeFiles\3.15.4\CMakeSystem.cmake;C:\SUMOLibraries\3rdPartyLibs\grpc\benchmark-1.5.0\cmake\AddCXXCompilerFlag.cmake;C:\SUMOLibraries\3rdPartyLibs\grpc\benchmark-1.5.0\cmake\CXXFeatureCheck.cmake;C:\SUMOLibraries\3rdPartyLibs\grpc\benchmark-1.5.0\cmake\GetGitVersion.cmake;C:\SUMOLibraries\3rdPartyLibs\grpc\benchmark-1.5.0\cmake\GoogleTest.cmake;C:\SUMOLibraries\3rdPartyLibs\grpc\benchmark-1.5.0\cmake\GoogleTest.cmake.in;C:\SUMOLibraries\3rdPartyLibs\grpc\benchmark-1.5.0\third_party\googletest\googletest-paths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SUMOLibraries\3rdPartyLibs\grpc\benchmark-1.5.0\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\grpc\benchmark-1.5.0\ZERO_CHECK.vcxproj">
+      <Project>{3E8C6C81-E9E3-3611-97FB-0E378A2F15AC}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\grpc\benchmark-1.5.0\test\basic_test.vcxproj">
+      <Project>{5B73DA44-7190-3889-B028-BD176E3303A7}</Project>
+      <Name>basic_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\grpc\benchmark-1.5.0\src\benchmark.vcxproj">
+      <Project>{F843C3DE-FCE8-3C05-B31E-83D910247C3F}</Project>
+      <Name>benchmark</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\grpc\benchmark-1.5.0\test\benchmark_gtest.vcxproj">
+      <Project>{6D6C78A0-B4ED-32E5-8159-3A7D8E53CD36}</Project>
+      <Name>benchmark_gtest</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\grpc\benchmark-1.5.0\src\benchmark_main.vcxproj">
+      <Project>{6AA2B055-C7DA-3B44-85B8-2B14377EAF18}</Project>
+      <Name>benchmark_main</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\grpc\benchmark-1.5.0\test\benchmark_name_gtest.vcxproj">
+      <Project>{1D7FD405-D1B1-35AD-8504-73264B2711C2}</Project>
+      <Name>benchmark_name_gtest</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\grpc\benchmark-1.5.0\test\benchmark_test.vcxproj">
+      <Project>{E77B2CCB-F5FE-3CBB-8860-CD56BCF67952}</Project>
+      <Name>benchmark_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\grpc\benchmark-1.5.0\test\commandlineflags_gtest.vcxproj">
+      <Project>{1F88467A-0B49-35C5-B110-F0643C799784}</Project>
+      <Name>commandlineflags_gtest</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\grpc\benchmark-1.5.0\test\complexity_test.vcxproj">
+      <Project>{FE392E91-8DC1-38EB-A280-6F8886BE211A}</Project>
+      <Name>complexity_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\grpc\benchmark-1.5.0\test\diagnostics_test.vcxproj">
+      <Project>{CE20D574-7A56-3200-9477-3371D8054FB3}</Project>
+      <Name>diagnostics_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\grpc\benchmark-1.5.0\test\display_aggregates_only_test.vcxproj">
+      <Project>{BF5DFEFD-A4F0-3A3E-A4A8-366787B5E987}</Project>
+      <Name>display_aggregates_only_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\grpc\benchmark-1.5.0\test\donotoptimize_test.vcxproj">
+      <Project>{A26C40EB-10C2-3F53-9892-512D1A495559}</Project>
+      <Name>donotoptimize_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\grpc\benchmark-1.5.0\test\filter_test.vcxproj">
+      <Project>{68431186-A17E-3ECF-8515-1AFA72C69CF1}</Project>
+      <Name>filter_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\grpc\benchmark-1.5.0\test\fixture_test.vcxproj">
+      <Project>{E73B0E15-C8AD-37A3-A8F3-94FA39E93579}</Project>
+      <Name>fixture_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\grpc\benchmark-1.5.0\test\internal_threading_test.vcxproj">
+      <Project>{CAB6E2AB-51FA-3487-9045-E28394EFE4E5}</Project>
+      <Name>internal_threading_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\grpc\benchmark-1.5.0\test\link_main_test.vcxproj">
+      <Project>{DF490644-BED4-35D4-8DB9-CA6CDE79D37F}</Project>
+      <Name>link_main_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\grpc\benchmark-1.5.0\test\map_test.vcxproj">
+      <Project>{39126ADF-E679-3F28-A57B-90B418DD70E4}</Project>
+      <Name>map_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\grpc\benchmark-1.5.0\test\memory_manager_test.vcxproj">
+      <Project>{122CC55D-F711-3935-A698-A7C41219E139}</Project>
+      <Name>memory_manager_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\grpc\benchmark-1.5.0\test\multiple_ranges_test.vcxproj">
+      <Project>{E5348F22-F571-3E50-ACFF-2A0BFAAACA95}</Project>
+      <Name>multiple_ranges_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\grpc\benchmark-1.5.0\test\options_test.vcxproj">
+      <Project>{D1EBCF9B-B980-36F8-B56E-7ECAF6D9097C}</Project>
+      <Name>options_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\grpc\benchmark-1.5.0\test\output_test_helper.vcxproj">
+      <Project>{2D52C5BE-743E-33E0-BE72-F6D7F0A7CE16}</Project>
+      <Name>output_test_helper</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\grpc\benchmark-1.5.0\test\register_benchmark_test.vcxproj">
+      <Project>{36816CCA-0F8B-3C65-AEF3-192E5108FFF9}</Project>
+      <Name>register_benchmark_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\grpc\benchmark-1.5.0\test\report_aggregates_only_test.vcxproj">
+      <Project>{645E8F67-0A7F-3918-A7E6-432DBADFEE28}</Project>
+      <Name>report_aggregates_only_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\grpc\benchmark-1.5.0\test\reporter_output_test.vcxproj">
+      <Project>{34DE6DF8-CD66-3DD7-807C-805B6BE7C529}</Project>
+      <Name>reporter_output_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\grpc\benchmark-1.5.0\test\skip_with_error_test.vcxproj">
+      <Project>{826060A9-CDD6-36BD-9002-C976B9E8A40A}</Project>
+      <Name>skip_with_error_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\grpc\benchmark-1.5.0\test\statistics_gtest.vcxproj">
+      <Project>{0093CF20-44D7-361F-8734-E41C4509545A}</Project>
+      <Name>statistics_gtest</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\grpc\benchmark-1.5.0\test\string_util_gtest.vcxproj">
+      <Project>{397C9B7A-2714-3300-94AE-21657CD1ADBF}</Project>
+      <Name>string_util_gtest</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\grpc\benchmark-1.5.0\test\templated_fixture_test.vcxproj">
+      <Project>{B09DC18B-BC61-3989-BD97-77AA15BDE673}</Project>
+      <Name>templated_fixture_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\grpc\benchmark-1.5.0\test\user_counters_tabular_test.vcxproj">
+      <Project>{80E1E552-8B98-3DBE-B848-CB69080F3706}</Project>
+      <Name>user_counters_tabular_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\grpc\benchmark-1.5.0\test\user_counters_test.vcxproj">
+      <Project>{4FE80799-8908-37BA-A501-0444809ACF9A}</Project>
+      <Name>user_counters_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\SUMOLibraries\3rdPartyLibs\grpc\benchmark-1.5.0\test\user_counters_thousands_test.vcxproj">
+      <Project>{1D37C741-24AE-3091-97C9-8C1F4BC9F3A3}</Project>
+      <Name>user_counters_thousands_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
