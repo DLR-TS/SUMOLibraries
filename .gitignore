@@ -1,7 +1,12 @@
+# cmake output files
 CMakeFiles
 Debug
 Release
+
+# visual studio files
 .vs
+
+#files by extension
 *.obj
 *.tlog
 *.pdb
@@ -16,7 +21,42 @@ Release
 *.pyc
 *.FileListAbsolute.txt
 
+# documentation
 /gdal-3.0.1/ogr/ogrsf_frmts/ogrsf_frmts_sup.lib
 /gdal-3.0.1/ogr/ogrsf_frmts/ogrsf_frmts.lib
 /gdal-3.0.1_extended/ogr/ogrsf_frmts/ogrsf_frmts_sup.lib
 /gdal-3.0.1_extended/ogr/ogrsf_frmts/ogrsf_frmts.lib
+/32bits/xerces-c-3.2.2/doc
+/32bits/xerces-c-3.2.2/share/doc
+/FFMPEG-4.2.0/doc
+/fox-1.6.57/doc
+/gdal-3.0.1/doc
+/gdal-3.0.1_extended/doc
+/grpc-1.24.2/doc
+/grpc-1.24.2/src/csharp/doc
+/msvc12/32bits/proj_gdal-1911/doc
+/msvc12/proj_gdal-1911/doc
+/swigwin-3.0.12/Doc
+/xerces-c-3.2.2/doc
+/xerces-c-3.2.2/share/doc
+/3rdPartyLibs/grpc/benchmark-1.5.0/docs
+/32bits/proj-6.1.1/googletest-src/googlemock/docs
+/32bits/proj-6.1.1/googletest-src/googletest/docs
+/gdal-3.0.1/swig/include/python/docs
+/gdal-3.0.1_extended/swig/include/python/docs
+/googletest-1.8.0/googlemock/docs
+/googletest-1.8.0/googletest/docs
+/grpc-1.24.2/third_party/boringssl/third_party/googletest/docs
+/grpc-1.24.2/third_party/boringssl-with-bazel/src/third_party/googletest/docs
+/grpc-1.24.2/third_party/envoy-api/docs
+/grpc-1.24.2/third_party/googletest/googlemock/docs
+/grpc-1.24.2/third_party/googletest/googletest/docs
+/grpc-1.24.2/third_party/libcxx/docs
+/grpc-1.24.2/third_party/libcxx/utils/google-benchmark/docs
+/proj-6.1.1/googletest-src/googlemock/docs
+/proj-6.1.1/googletest-src/googletest/docs
+/3rdPartyLibs/tiff-4.0.9/share/doc
+/3rdPartyLibs/zlib-1.2.11/doc
+/32bits/3rdPartyLibs/tiff-4.0.9/share/doc
+/32bits/3rdPartyLibs/zlib-1.2.11/doc
+/32bits/fox-1.6.57/doc
