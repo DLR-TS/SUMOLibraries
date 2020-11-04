@@ -26,7 +26,7 @@ set(CPACK_DEFAULT_PACKAGE_DESCRIPTION_FILE "C:/CMake/share/cmake-3.18/Templates/
 set(CPACK_DEFAULT_PACKAGE_DESCRIPTION_SUMMARY "freetype built using CMake")
 set(CPACK_GENERATOR "ZIP")
 set(CPACK_INSTALL_CMAKE_PROJECTS "C:/SUMOLibraries/freetype-2.10.4/builds/windows/vc2019;freetype;ALL;/")
-set(CPACK_INSTALL_PREFIX "C:/Program Files (x86)/freetype")
+set(CPACK_INSTALL_PREFIX "C:/SUMOLibraries/freetype-2.10.4")
 set(CPACK_MODULE_PATH "C:/SUMOLibraries/freetype-2.10.4/builds/cmake")
 set(CPACK_NSIS_DISPLAY_NAME "freetype 2.10.4")
 set(CPACK_NSIS_INSTALLER_ICON_CODE "")
