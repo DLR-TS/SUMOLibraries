@@ -1,0 +1,35 @@
+
+=========================================================
+COMPULSORY MIGRATION
+=========================================================
+
+(1) "batch_junit_performance" replaced by "default_performance_stem"
+====================================================================
+The ability to identify the "main performance measure being used" has been generalised so it can apply to more situations.
+
+The basic difference is that it will no longer work to configure it differently per batch session. If you have set "batch_junit_performance", you will need to replace it as follows
+
+from
+
+[batch_junit_performance]
+my_session:my_performance
+
+to
+
+default_performance_stem:my_performance
+
+
+=========================================================
+CHANGES IN DEFAULT BEHAVIOUR (OR PROCEDURE)
+=========================================================
+
+(1) run_dependent_text with sections will not filter anything if the end marker is never found
+==============================================================================================
+If you have a run_dependent_text filter of the form
+
+[run_dependent_text]
+stdout:text1{->}text2
+[end]
+
+and the file you are filtering contains text1 but not text2, nothing will be filtered any more.
+In TextTest 3.23 and earlier, the whole file from the text1 marker onwards would be removed.

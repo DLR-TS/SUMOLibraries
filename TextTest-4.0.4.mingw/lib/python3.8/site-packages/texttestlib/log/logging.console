@@ -1,0 +1,44 @@
+
+[logger_root]
+handlers=root
+level=ERROR
+
+[handler_root]
+class=StreamHandler
+level=ERROR
+args=(sys.stdout,)
+
+[handler_stdout]
+class=StreamHandler
+args=(sys.stdout,)
+#formatter=timed
+
+[formatter_timed]
+format=%(asctime)s - %(message)s
+
+[formatter_debug]
+format=%(name)s %(levelname)s - %(message)s
+
+# ====== The following are enabled by default ======
+# ======= Section for standard log ======
+[logger_standard log]
+handlers=stdout
+qualname=standard log
+level=INFO
+
+# ======= Section for kill processes ======
+[logger_kill processes]
+handlers=stdout
+qualname=kill processes
+level=INFO
+
+# ====== Cruft that python logging module needs ======
+[loggers]
+keys=root,standard log,kill processes
+
+[handlers]
+keys=root,stdout
+
+[formatters]
+keys=timed,debug
+

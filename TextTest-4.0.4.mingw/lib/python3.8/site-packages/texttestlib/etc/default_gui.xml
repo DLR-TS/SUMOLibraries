@@ -1,0 +1,65 @@
+<ui>
+
+  <menubar name="MainMenuBar">
+
+    <menu name="filemenu" action="filemenu">
+      <placeholder name="FirstInFileMenu" />
+      <menuitem name="Load Selection..." action="Load Selection..."/>
+      <separator/>
+      <menuitem name="Save Selection..." action="Save Selection..."/>
+      <separator/>
+      <menuitem action="Enter Failure Information"/>
+      <separator/>
+      <menuitem name="Quit" action="Quit"/>
+    </menu> 
+    <menu action="editmenu" />
+    
+    <menu action="viewmenu">
+      <menuitem action="Set Run Name"/>
+      <separator/>
+      <menuitem action="Show Processes"/>
+      <separator/>
+      <menuitem action="Show only selected"/>
+      <menuitem action="Hide selected"/>
+      <menuitem action="Show all"/>
+      <separator/>
+      <menuitem name="Toolbar" action="Toolbar"/>
+      <menuitem name="Shortcut bar" action="Shortcut bar"/>
+      <menuitem name="Status bar" action="Status bar"/>
+    </menu>
+    
+    <menu action="actionsmenu">
+      <menuitem action="Select"/>
+      <menuitem action="Filter"/>
+      <separator/>
+    </menu>
+ 
+    <placeholder name="ExtraMenus" />
+    
+    <menu action="helpmenu">
+      <menuitem action="Quick Start"/>
+      <menuitem action="Migration Notes"/>
+      <menuitem action="Change Logs"/>
+      <separator/>
+      <placeholder name="Custom Help" />
+      <menuitem action="Component Versions"/>
+      <menuitem action="Credits"/>
+      <menuitem action="License"/>
+      <separator/>
+      <menuitem action="About TextTest"/>
+    </menu>
+
+  </menubar>
+
+  <toolbar name="MainToolBar">
+  </toolbar>
+
+  <popup name="TestPopupMenu">
+  </popup>
+
+  <popup name="TestFilePopupMenu">
+    <menuitem action="View File"/>
+    <placeholder name="ExtraViewers" />
+  </popup>
+
+</ui>
