@@ -1,0 +1,1045 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4CBAE89D-AA41-363F-8106-7CC7A56597C9}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>xerces-c-headers</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Librerias\SUMOLibraries\xerces-c-3.2.3;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Librerias\SUMOLibraries\xerces-c-3.2.3;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\CMakeLists.txt">
+      <StdOutEncoding>UTF-8</StdOutEncoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Librerias/SUMOLibraries/xerces-c-3.2.3/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\CMake\bin\cmake.exe -SC:/Librerias/SUMOLibraries/xerces-c-3.2.3 -BC:/Librerias/SUMOLibraries/xerces-c-3.2.3 --check-stamp-file C:/Librerias/SUMOLibraries/xerces-c-3.2.3/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\CMake\share\cmake-3.18\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\CMake\share\cmake-3.18\Modules\CMakePackageConfigHelpers.cmake;C:\CMake\share\cmake-3.18\Modules\WriteBasicConfigVersionFile.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\XercesCConfig.cmake.in;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\version.rc.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Librerias/SUMOLibraries/xerces-c-3.2.3/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\CMake\bin\cmake.exe -SC:/Librerias/SUMOLibraries/xerces-c-3.2.3 -BC:/Librerias/SUMOLibraries/xerces-c-3.2.3 --check-stamp-file C:/Librerias/SUMOLibraries/xerces-c-3.2.3/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\CMake\share\cmake-3.18\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\CMake\share\cmake-3.18\Modules\CMakePackageConfigHelpers.cmake;C:\CMake\share\cmake-3.18\Modules\WriteBasicConfigVersionFile.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\XercesCConfig.cmake.in;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\version.rc.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\ArrayIndexOutOfBoundsException.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\Base64.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\BaseRefVectorOf.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\BaseRefVectorOf.c">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\BinFileInputStream.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\BinInputStream.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\BinMemInputStream.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\BitOps.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\BitSet.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\CountedPointer.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\CountedPointer.c">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\DefaultPanicHandler.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\EmptyStackException.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\EncodingValidator.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\FlagJanitor.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\FlagJanitor.c">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\Hashers.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\Hash2KeysSetOf.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\Hash2KeysSetOf.c">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\HexBin.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\IllegalArgumentException.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\InvalidCastException.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\IOException.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\Janitor.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\Janitor.c">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\KeyRefPair.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\KeyRefPair.c">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\KeyValuePair.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\KeyValuePair.c">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\KVStringPair.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\Mutexes.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\LogicalPath.c">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\NameIdPool.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\NameIdPool.c">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\NoSuchElementException.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\NullPointerException.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\NumberFormatException.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\OutOfMemoryException.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\PanicHandler.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\ParseException.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\PlatformUtils.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\PSVIUni.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\QName.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\RefArrayOf.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\RefArrayOf.c">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\RefArrayVectorOf.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\RefArrayVectorOf.c">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\RefHash2KeysTableOf.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\RefHash2KeysTableOf.c">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\RefHash3KeysIdPool.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\RefHash3KeysIdPool.c">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\RefHashTableOf.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\RefHashTableOf.c">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\RefStackOf.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\RefStackOf.c">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\RefVectorOf.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\RefVectorOf.c">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\regx\ASCIIRangeFactory.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\regx\BlockRangeFactory.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\regx\BMPattern.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\regx\CharToken.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\regx\ClosureToken.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\regx\ConcatToken.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\regx\Match.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\regx\Op.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\regx\OpFactory.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\regx\ParenToken.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\regx\ParserForXMLSchema.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\regx\RangeFactory.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\regx\RangeToken.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\regx\RangeTokenMap.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\regx\RegularExpression.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\regx\RegxDefs.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\regx\RegxParser.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\regx\RegxUtil.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\regx\StringToken.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\regx\Token.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\regx\TokenFactory.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\regx\TokenInc.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\regx\UniCharTable.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\regx\UnicodeRangeFactory.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\regx\UnionToken.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\regx\XMLRangeFactory.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\regx\XMLUniCharacter.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\RuntimeException.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\SchemaDateTimeException.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\SecurityManager.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\StringPool.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\SynchronizedStringPool.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\TranscodingException.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\TransENameMap.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\TransENameMap.c">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\TransService.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\UnexpectedEOFException.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\UnsupportedEncodingException.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\UTFDataFormatException.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\ValueArrayOf.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\ValueArrayOf.c">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\ValueHashTableOf.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\ValueHashTableOf.c">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\ValueStackOf.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\ValueStackOf.c">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\ValueVectorOf.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\ValueVectorOf.c">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\XercesDefs.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\XMemory.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\XML256TableTranscoder.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\XML88591Transcoder.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\XMLAbstractDoubleFloat.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\XMLASCIITranscoder.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\XMLBigDecimal.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\XMLBigInteger.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\XMLChar.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\XMLChTranscoder.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\XMLDateTime.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\XMLDOMMsg.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\XMLDouble.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\XMLEBCDICTranscoder.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\XMLEntityResolver.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\XMLEnumerator.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\XMLException.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\XMLExceptMsgs.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\XMLFileMgr.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\XMLFloat.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\XMLIBM1047Transcoder.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\XMLIBM1140Transcoder.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\XMLInitializer.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\XMLInteger.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\XMLMutexMgr.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\XMLMsgLoader.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\XMLNetAccessor.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\XMLNumber.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\XMLResourceIdentifier.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\XMLString.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\XMLStringTokenizer.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\XMLUCS4Transcoder.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\XMLUni.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\XMLUniDefs.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\XMLUri.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\XMLURL.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\XMLUTF16Transcoder.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\XMLUTF8Transcoder.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\XMLWin1252Transcoder.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\DOM.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\DOMAttr.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\DOMCDATASection.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\DOMCharacterData.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\DOMComment.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\DOMConfiguration.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\DOMDocument.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\DOMDocumentFragment.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\DOMDocumentRange.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\DOMDocumentTraversal.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\DOMDocumentType.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\DOMElement.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\DOMEntity.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\DOMEntityReference.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\DOMError.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\DOMErrorHandler.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\DOMException.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\DOMImplementation.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\DOMImplementationList.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\DOMImplementationLS.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\DOMImplementationRegistry.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\DOMImplementationSource.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\DOMLocator.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\DOMLSException.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\DOMLSInput.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\DOMLSOutput.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\DOMLSParser.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\DOMLSParserFilter.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\DOMLSResourceResolver.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\DOMLSSerializer.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\DOMLSSerializerFilter.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\DOMMemoryManager.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\DOMNamedNodeMap.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\DOMNode.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\DOMNodeFilter.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\DOMNodeIterator.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\DOMNodeList.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\DOMNotation.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\DOMProcessingInstruction.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\DOMPSVITypeInfo.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\DOMRange.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\DOMRangeException.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\DOMStringList.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\DOMText.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\DOMTreeWalker.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\DOMTypeInfo.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\DOMUserDataHandler.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\DOMXPathEvaluator.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\DOMXPathException.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\DOMXPathExpression.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\DOMXPathNamespace.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\DOMXPathNSResolver.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\DOMXPathResult.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\StDOMNode.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\impl\DOMAttrImpl.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\impl\DOMAttrMapImpl.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\impl\DOMAttrNSImpl.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\impl\DOMCasts.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\impl\DOMCDATASectionImpl.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\impl\DOMCharacterDataImpl.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\impl\DOMChildNode.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\impl\DOMCommentImpl.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\impl\DOMConfigurationImpl.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\impl\DOMDeepNodeListImpl.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\impl\DOMDeepNodeListPool.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\impl\DOMDeepNodeListPool.c">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\impl\DOMDocumentFragmentImpl.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\impl\DOMDocumentImpl.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\impl\DOMDocumentTypeImpl.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\impl\DOMElementImpl.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\impl\DOMElementNSImpl.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\impl\DOMEntityImpl.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\impl\DOMEntityReferenceImpl.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\impl\DOMErrorImpl.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\impl\DOMImplementationImpl.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\impl\DOMImplementationListImpl.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\impl\DOMLocatorImpl.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\impl\DOMNamedNodeMapImpl.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\impl\DOMNodeBase.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\impl\DOMNodeIDMap.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\impl\DOMNodeImpl.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\impl\DOMNodeIteratorImpl.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\impl\DOMNodeListImpl.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\impl\DOMNodeVector.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\impl\DOMNormalizer.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\impl\DOMNotationImpl.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\impl\DOMParentNode.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\impl\DOMProcessingInstructionImpl.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\impl\DOMRangeImpl.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\impl\DOMStringListImpl.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\impl\DOMStringPool.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\impl\DOMTextImpl.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\impl\DOMTreeWalkerImpl.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\impl\DOMTypeInfoImpl.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\impl\DOMLSSerializerImpl.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\impl\DOMLSInputImpl.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\impl\DOMLSOutputImpl.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\impl\DOMXPathExpressionImpl.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\impl\DOMXPathNSResolverImpl.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\impl\DOMXPathResultImpl.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\dom\impl\XSDElementNSImpl.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\BinOutputStream.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\LocalFileFormatTarget.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\LocalFileInputSource.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\MemBufFormatTarget.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\MemBufInputSource.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\MemoryManager.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\psvi\PSVIAttribute.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\psvi\PSVIAttributeList.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\psvi\PSVIElement.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\psvi\PSVIHandler.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\psvi\PSVIItem.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\psvi\XSAnnotation.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\psvi\XSAttributeDeclaration.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\psvi\XSAttributeGroupDefinition.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\psvi\XSAttributeUse.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\psvi\XSComplexTypeDefinition.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\psvi\XSConstants.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\psvi\XSElementDeclaration.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\psvi\XSFacet.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\psvi\XSIDCDefinition.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\psvi\XSModel.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\psvi\XSModelGroup.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\psvi\XSModelGroupDefinition.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\psvi\XSMultiValueFacet.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\psvi\XSNamedMap.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\psvi\XSNamedMap.c">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\psvi\XSNamespaceItem.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\psvi\XSNotationDeclaration.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\psvi\XSObject.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\psvi\XSParticle.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\psvi\XSSimpleTypeDefinition.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\psvi\XSTypeDefinition.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\psvi\XSValue.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\psvi\XSWildcard.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\StdInInputSource.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\StdOutFormatTarget.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\URLInputSource.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\ValidationContext.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\Wrapper4DOMLSInput.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\Wrapper4InputSource.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\XMLAttDef.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\XMLAttDefList.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\XMLAttr.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\XMLBuffer.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\XMLBufferMgr.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\XMLContentModel.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\XMLDocumentHandler.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\XMLDTDDescription.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\XMLElementDecl.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\XMLEntityDecl.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\XMLEntityHandler.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\XMLErrorCodes.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\XMLErrorReporter.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\XMLFormatter.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\XMLGrammarDescription.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\XMLGrammarPool.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\XMLGrammarPoolImpl.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\XMLNotationDecl.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\XMLPScanToken.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\XMLRecognizer.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\XMLRefInfo.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\XMLSchemaDescription.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\XMLValidator.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\framework\XMLValidityCodes.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\internal\BinFileOutputStream.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\internal\BinMemOutputStream.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\internal\CharTypeTables.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\internal\DGXMLScanner.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\internal\ElemStack.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\internal\EndOfEntityException.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\internal\IANAEncodings.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\internal\IGXMLScanner.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\internal\MemoryManagerImpl.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\internal\ReaderMgr.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\internal\SGXMLScanner.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\internal\ValidationContextImpl.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\internal\VecAttributesImpl.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\internal\VecAttrListImpl.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\internal\WFXMLScanner.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\internal\XMLInternalErrorHandler.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\internal\XMLReader.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\internal\XMLScanner.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\internal\XMLScannerResolver.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\internal\XProtoType.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\internal\XSAXMLScanner.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\internal\XSerializable.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\internal\XSerializationException.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\internal\XSerializeEngine.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\internal\XSObjectFactory.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\internal\XTemplateSerializer.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\parsers\AbstractDOMParser.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\parsers\DOMLSParserImpl.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\parsers\SAX2XMLFilterImpl.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\parsers\SAX2XMLReaderImpl.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\parsers\SAXParser.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\parsers\XercesDOMParser.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\sax\AttributeList.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\sax\DocumentHandler.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\sax\DTDHandler.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\sax\EntityResolver.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\sax\ErrorHandler.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\sax\HandlerBase.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\sax\InputSource.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\sax\Locator.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\sax\Parser.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\sax\SAXException.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\sax\SAXParseException.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\sax2\Attributes.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\sax2\ContentHandler.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\sax2\DeclHandler.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\sax2\DefaultHandler.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\sax2\LexicalHandler.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\sax2\SAX2XMLFilter.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\sax2\SAX2XMLReader.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\sax2\XMLReaderFactory.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\common\AllContentModel.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\common\CMAny.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\common\CMBinaryOp.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\common\CMLeaf.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\common\CMRepeatingLeaf.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\common\CMNode.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\common\CMStateSet.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\common\CMUnaryOp.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\common\ContentLeafNameTypeVector.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\common\ContentSpecNode.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\common\DFAContentModel.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\common\Grammar.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\common\GrammarResolver.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\common\MixedContentModel.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\common\SimpleContentModel.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\datatype\AbstractNumericFacetValidator.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\datatype\AbstractNumericValidator.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\datatype\AbstractStringValidator.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\datatype\AnySimpleTypeDatatypeValidator.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\datatype\AnyURIDatatypeValidator.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\datatype\Base64BinaryDatatypeValidator.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\datatype\BooleanDatatypeValidator.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\datatype\DatatypeValidator.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\datatype\DatatypeValidatorFactory.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\datatype\DateDatatypeValidator.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\datatype\DateTimeDatatypeValidator.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\datatype\DateTimeValidator.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\datatype\DayDatatypeValidator.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\datatype\DecimalDatatypeValidator.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\datatype\DoubleDatatypeValidator.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\datatype\DurationDatatypeValidator.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\datatype\ENTITYDatatypeValidator.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\datatype\FloatDatatypeValidator.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\datatype\HexBinaryDatatypeValidator.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\datatype\IDDatatypeValidator.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\datatype\IDREFDatatypeValidator.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\datatype\InvalidDatatypeFacetException.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\datatype\InvalidDatatypeValueException.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\datatype\ListDatatypeValidator.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\datatype\MonthDatatypeValidator.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\datatype\MonthDayDatatypeValidator.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\datatype\NameDatatypeValidator.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\datatype\NCNameDatatypeValidator.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\datatype\NOTATIONDatatypeValidator.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\datatype\QNameDatatypeValidator.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\datatype\StringDatatypeValidator.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\datatype\TimeDatatypeValidator.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\datatype\UnionDatatypeValidator.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\datatype\XMLCanRepGroup.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\datatype\YearDatatypeValidator.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\datatype\YearMonthDatatypeValidator.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\DTD\DocTypeHandler.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\DTD\DTDAttDef.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\DTD\DTDAttDefList.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\DTD\DTDElementDecl.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\DTD\DTDEntityDecl.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\DTD\DTDGrammar.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\DTD\DTDScanner.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\DTD\DTDValidator.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\DTD\XMLDTDDescriptionImpl.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\schema\ComplexTypeInfo.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\schema\GeneralAttributeCheck.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\schema\identity\FieldActivator.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\schema\identity\FieldValueMap.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\schema\identity\IC_Field.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\schema\identity\IC_Key.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\schema\identity\IC_KeyRef.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\schema\identity\IC_Selector.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\schema\identity\IC_Unique.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\schema\identity\IdentityConstraint.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\schema\identity\IdentityConstraintHandler.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\schema\identity\ValueStore.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\schema\identity\ValueStoreCache.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\schema\identity\XercesXPath.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\schema\identity\XPathException.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\schema\identity\XPathMatcher.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\schema\identity\XPathMatcherStack.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\schema\identity\XPathSymbols.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\schema\NamespaceScope.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\schema\PSVIDefs.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\schema\SchemaAttDef.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\schema\SchemaAttDefList.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\schema\SchemaElementDecl.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\schema\SchemaGrammar.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\schema\SchemaInfo.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\schema\SchemaSymbols.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\schema\SchemaValidator.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\schema\SubstitutionGroupComparator.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\schema\TraverseSchema.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\schema\XercesAttGroupInfo.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\schema\XercesElementWildcard.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\schema\XercesGroupInfo.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\schema\XMLSchemaDescriptionImpl.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\schema\XSDDOMParser.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\schema\XSDErrorReporter.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\schema\XSDLocator.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\validators\schema\XUtil.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\xinclude\XIncludeDOMDocumentProcessor.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\xinclude\XIncludeLocation.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\xinclude\XIncludeUtils.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\NetAccessors\WinSock\WinSockNetAccessor.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\NetAccessors\WinSock\BinHTTPURLInputStream.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\NetAccessors\BinHTTPInputStreamCommon.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\Transcoders\Win32\Win32TransService.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\MsgLoaders\InMemory\InMemMsgLoader.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\MsgLoaders\InMemory\XercesMessages_en_US.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\MutexManagers\StdMutexMgr.hpp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\FileManagers\WindowsFileMgr.hpp">
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\ZERO_CHECK.vcxproj">
+      <Project>{2D4D61BF-070D-3324-AE79-5E22C9332258}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1415CE6D-122C-33CA-8B60-E8AF60E93951}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>doc-xml</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\doc\CMakeLists.txt">
+      <StdOutEncoding>UTF-8</StdOutEncoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Librerias/SUMOLibraries/xerces-c-3.2.3/doc/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\CMake\bin\cmake.exe -SC:/Librerias/SUMOLibraries/xerces-c-3.2.3 -BC:/Librerias/SUMOLibraries/xerces-c-3.2.3 --check-stamp-file C:/Librerias/SUMOLibraries/xerces-c-3.2.3/doc/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\CMake\share\cmake-3.18\Modules\CMakeFindJavaCommon.cmake;C:\CMake\share\cmake-3.18\Modules\FindJava.cmake;C:\CMake\share\cmake-3.18\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.18\Modules\FindPackageMessage.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\doc\style\dtd\entities.ent.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Librerias\SUMOLibraries\xerces-c-3.2.3\doc\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Librerias/SUMOLibraries/xerces-c-3.2.3/doc/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\CMake\bin\cmake.exe -SC:/Librerias/SUMOLibraries/xerces-c-3.2.3 -BC:/Librerias/SUMOLibraries/xerces-c-3.2.3 --check-stamp-file C:/Librerias/SUMOLibraries/xerces-c-3.2.3/doc/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\CMake\share\cmake-3.18\Modules\CMakeFindJavaCommon.cmake;C:\CMake\share\cmake-3.18\Modules\FindJava.cmake;C:\CMake\share\cmake-3.18\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.18\Modules\FindPackageMessage.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\doc\style\dtd\entities.ent.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Librerias\SUMOLibraries\xerces-c-3.2.3\doc\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <XML Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\doc\apidocs.xml">
+    </XML>
+    <XML Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\doc\applications.xml">
+    </XML>
+    <XML Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\doc\bug-report.xml">
+    </XML>
+    <XML Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\doc\build.xml">
+    </XML>
+    <XML Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\doc\charter.xml">
+    </XML>
+    <XML Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\doc\createdoc.xml">
+    </XML>
+    <XML Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\doc\domcount.xml">
+    </XML>
+    <XML Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\doc\domprint.xml">
+    </XML>
+    <XML Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\doc\download.xml">
+    </XML>
+    <XML Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\doc\enumval.xml">
+    </XML>
+    <XML Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\doc\faq-build.xml">
+    </XML>
+    <XML Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\doc\faq-contributing.xml">
+    </XML>
+    <XML Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\doc\faq-distrib.xml">
+    </XML>
+    <XML Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\doc\faq-other.xml">
+    </XML>
+    <XML Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\doc\faq-parse.xml">
+    </XML>
+    <XML Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\doc\feedback.xml">
+    </XML>
+    <XML Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\doc\install.xml">
+    </XML>
+    <XML Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\doc\mailing-lists.xml">
+    </XML>
+    <XML Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\doc\memparse.xml">
+    </XML>
+    <XML Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\doc\migration.xml">
+    </XML>
+    <XML Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\doc\migration_archive.xml">
+    </XML>
+    <XML Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\doc\pparse.xml">
+    </XML>
+    <XML Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\doc\program-dom.xml">
+    </XML>
+    <XML Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\doc\program-others.xml">
+    </XML>
+    <XML Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\doc\program-sax.xml">
+    </XML>
+    <XML Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\doc\program-sax2.xml">
+    </XML>
+    <XML Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\doc\program.xml">
+    </XML>
+    <XML Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\doc\psviwriter.xml">
+    </XML>
+    <XML Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\doc\readme.xml">
+    </XML>
+    <XML Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\doc\redirect.xml">
+    </XML>
+    <XML Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\doc\releases.xml">
+    </XML>
+    <XML Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\doc\releases_archive.xml">
+    </XML>
+    <XML Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\doc\releases_plan.xml">
+    </XML>
+    <XML Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\doc\samples.xml">
+    </XML>
+    <XML Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\doc\sax2count.xml">
+    </XML>
+    <XML Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\doc\sax2print.xml">
+    </XML>
+    <XML Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\doc\saxcount.xml">
+    </XML>
+    <XML Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\doc\saxprint.xml">
+    </XML>
+    <XML Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\doc\schema.xml">
+    </XML>
+    <XML Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\doc\scmprint.xml">
+    </XML>
+    <XML Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\doc\secadv.xml">
+    </XML>
+    <XML Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\doc\senumval.xml">
+    </XML>
+    <XML Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\doc\source-repository.xml">
+    </XML>
+    <XML Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\doc\stdinparse.xml">
+    </XML>
+    <XML Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\doc\xerces-c_book.xml">
+    </XML>
+    <XML Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\doc\xinclude.xml">
+    </XML>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\ZERO_CHECK.vcxproj">
+      <Project>{2D4D61BF-070D-3324-AE79-5E22C9332258}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
