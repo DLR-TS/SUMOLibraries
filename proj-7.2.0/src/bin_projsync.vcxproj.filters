@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\proj-7.2.0\src\apps\projsync.cpp">
+      <Filter>Source Files\Bin</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Librerias\SUMOLibraries\proj-7.2.0\src\CMakeLists.txt">
+      <Filter>CMake Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Files">
+      <UniqueIdentifier>{54D586DD-E9C3-39F5-9460-E201AABB807B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{22A5B296-5D83-383D-BEA3-696F377F6F44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Bin">
+      <UniqueIdentifier>{E69E3676-EB1F-3389-B4CB-4491DDECCABB}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
