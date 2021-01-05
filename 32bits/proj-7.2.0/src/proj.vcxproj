@@ -23,12 +23,12 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
     <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
     <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
@@ -41,14 +41,18 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\lib\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\bin\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">proj.dir\Debug\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">proj_d</TargetName>
-    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\lib\Release\</OutDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">proj_7_2_d</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\bin\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">proj.dir\Release\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">proj</TargetName>
-    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.lib</TargetExt>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">proj_7_2</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -65,11 +69,11 @@
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level4</WarningLevel>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NOMINMAX;TIFF_ENABLED;_CRT_SECURE_NO_WARNINGS;MUTEX_win32;PROJ_LIB="C:/Librerias/SUMOLibraries/32bits/proj-7.2.0/share/proj";CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NOMINMAX;TIFF_ENABLED;PROJ_MSVC_DLL_EXPORT=1;_CRT_SECURE_NO_WARNINGS;MUTEX_win32;PROJ_LIB="C:/Librerias/SUMOLibraries/32bits/proj-7.2.0/share/proj";CMAKE_INTDIR="Debug";proj_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;NOMINMAX;TIFF_ENABLED;_CRT_SECURE_NO_WARNINGS;MUTEX_win32;PROJ_LIB=\"C:/Librerias/SUMOLibraries/32bits/proj-7.2.0/share/proj\";CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;NOMINMAX;TIFF_ENABLED;PROJ_MSVC_DLL_EXPORT=1;_CRT_SECURE_NO_WARNINGS;MUTEX_win32;PROJ_LIB=\"C:/Librerias/SUMOLibraries/32bits/proj-7.2.0/share/proj\";CMAKE_INTDIR=\"Debug\";proj_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src;C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\include;C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\sqlite-3.3.0;C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\tiff-4.0.9\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
@@ -80,9 +84,19 @@
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
-    <Lib>
+    <Link>
+      <AdditionalDependencies>C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\sqlite-3.3.0\sqlite3.lib;C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\tiff-4.0.9\lib\tiffd.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/Librerias/SUMOLibraries/32bits/proj-7.2.0/lib;C:/Librerias/SUMOLibraries/32bits/proj-7.2.0/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
-    </Lib>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Librerias/SUMOLibraries/32bits/proj-7.2.0/lib/Debug/proj_d.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Librerias/SUMOLibraries/32bits/proj-7.2.0/bin/Debug/proj_7_2_d.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -97,13 +111,13 @@
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level4</WarningLevel>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;NOMINMAX;TIFF_ENABLED;_CRT_SECURE_NO_WARNINGS;MUTEX_win32;PROJ_LIB="C:/Librerias/SUMOLibraries/32bits/proj-7.2.0/share/proj";CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;NOMINMAX;TIFF_ENABLED;PROJ_MSVC_DLL_EXPORT=1;_CRT_SECURE_NO_WARNINGS;MUTEX_win32;PROJ_LIB="C:/Librerias/SUMOLibraries/32bits/proj-7.2.0/share/proj";CMAKE_INTDIR="Release";proj_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;NOMINMAX;TIFF_ENABLED;_CRT_SECURE_NO_WARNINGS;MUTEX_win32;PROJ_LIB=\"C:/Librerias/SUMOLibraries/32bits/proj-7.2.0/share/proj\";CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;NOMINMAX;TIFF_ENABLED;PROJ_MSVC_DLL_EXPORT=1;_CRT_SECURE_NO_WARNINGS;MUTEX_win32;PROJ_LIB=\"C:/Librerias/SUMOLibraries/32bits/proj-7.2.0/share/proj\";CMAKE_INTDIR=\"Release\";proj_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src;C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\include;C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\sqlite-3.3.0;C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\tiff-4.0.9\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
@@ -114,9 +128,19 @@
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
-    <Lib>
+    <Link>
+      <AdditionalDependencies>C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\sqlite-3.3.0\sqlite3.lib;C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\tiff-4.0.9\lib\tiff.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/Librerias/SUMOLibraries/32bits/proj-7.2.0/lib;C:/Librerias/SUMOLibraries/32bits/proj-7.2.0/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
-    </Lib>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Librerias/SUMOLibraries/32bits/proj-7.2.0/lib/Release/proj.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Librerias/SUMOLibraries/32bits/proj-7.2.0/bin/Release/proj_7_2.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
     <CustomBuild Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\CMakeLists.txt">

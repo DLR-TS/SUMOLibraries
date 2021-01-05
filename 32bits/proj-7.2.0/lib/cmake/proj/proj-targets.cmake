@@ -51,7 +51,7 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target PROJ::proj
-add_library(PROJ::proj STATIC IMPORTED)
+add_library(PROJ::proj SHARED IMPORTED)
 
 set_target_properties(PROJ::proj PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
