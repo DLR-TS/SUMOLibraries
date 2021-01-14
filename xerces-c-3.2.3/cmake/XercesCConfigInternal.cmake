@@ -53,7 +53,7 @@ add_library(xerces_xerces-c SHARED IMPORTED)
 
 set_target_properties(xerces_xerces-c PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "Threads::Threads"
+  INTERFACE_LINK_LIBRARIES "wsock32.lib;Threads::Threads"
 )
 
 if(CMAKE_VERSION VERSION_LESS 2.8.12)

@@ -252,70 +252,70 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=OFF
 DIFF_EXECUTABLE:FILEPATH=C:/TextTest/diff.exe
 
 //Path to a program.
-DOXYGEN_EXECUTABLE:FILEPATH=DOXYGEN_EXECUTABLE-NOTFOUND
+DOXYGEN_EXECUTABLE:FILEPATH=C:/Doxygen/bin/doxygen.exe
 
 //ICU data library (debug)
 ICU_DATA_LIBRARY_DEBUG:FILEPATH=ICU_DATA_LIBRARY_DEBUG-NOTFOUND
 
 //ICU data library (release)
-ICU_DATA_LIBRARY_RELEASE:FILEPATH=ICU_DATA_LIBRARY_RELEASE-NOTFOUND
+ICU_DATA_LIBRARY_RELEASE:FILEPATH=C:/Librerias/SUMOLibraries/3rdPartyLibs/icu4c-68.2/lib64/icudt.lib
 
 //ICU derb executable
-ICU_DERB_EXECUTABLE:FILEPATH=ICU_DERB_EXECUTABLE-NOTFOUND
+ICU_DERB_EXECUTABLE:FILEPATH=C:/Librerias/SUMOLibraries/3rdPartyLibs/icu4c-68.2/bin64/derb.exe
 
 //ICU genbrk executable
-ICU_GENBRK_EXECUTABLE:FILEPATH=ICU_GENBRK_EXECUTABLE-NOTFOUND
+ICU_GENBRK_EXECUTABLE:FILEPATH=C:/Librerias/SUMOLibraries/3rdPartyLibs/icu4c-68.2/bin64/genbrk.exe
 
 //ICU genccode executable
-ICU_GENCCODE_EXECUTABLE:FILEPATH=ICU_GENCCODE_EXECUTABLE-NOTFOUND
+ICU_GENCCODE_EXECUTABLE:FILEPATH=C:/Librerias/SUMOLibraries/3rdPartyLibs/icu4c-68.2/bin64/genccode.exe
 
 //ICU gencfu executable
-ICU_GENCFU_EXECUTABLE:FILEPATH=ICU_GENCFU_EXECUTABLE-NOTFOUND
+ICU_GENCFU_EXECUTABLE:FILEPATH=C:/Librerias/SUMOLibraries/3rdPartyLibs/icu4c-68.2/bin64/gencfu.exe
 
 //ICU gencmn executable
-ICU_GENCMN_EXECUTABLE:FILEPATH=ICU_GENCMN_EXECUTABLE-NOTFOUND
+ICU_GENCMN_EXECUTABLE:FILEPATH=C:/Librerias/SUMOLibraries/3rdPartyLibs/icu4c-68.2/bin64/gencmn.exe
 
 //ICU gencnval executable
-ICU_GENCNVAL_EXECUTABLE:FILEPATH=ICU_GENCNVAL_EXECUTABLE-NOTFOUND
+ICU_GENCNVAL_EXECUTABLE:FILEPATH=C:/Librerias/SUMOLibraries/3rdPartyLibs/icu4c-68.2/bin64/gencnval.exe
 
 //ICU gendict executable
-ICU_GENDICT_EXECUTABLE:FILEPATH=ICU_GENDICT_EXECUTABLE-NOTFOUND
+ICU_GENDICT_EXECUTABLE:FILEPATH=C:/Librerias/SUMOLibraries/3rdPartyLibs/icu4c-68.2/bin64/gendict.exe
 
 //ICU gennorm2 executable
-ICU_GENNORM2_EXECUTABLE:FILEPATH=ICU_GENNORM2_EXECUTABLE-NOTFOUND
+ICU_GENNORM2_EXECUTABLE:FILEPATH=C:/Librerias/SUMOLibraries/3rdPartyLibs/icu4c-68.2/bin64/gennorm2.exe
 
 //ICU genrb executable
-ICU_GENRB_EXECUTABLE:FILEPATH=ICU_GENRB_EXECUTABLE-NOTFOUND
+ICU_GENRB_EXECUTABLE:FILEPATH=C:/Librerias/SUMOLibraries/3rdPartyLibs/icu4c-68.2/bin64/genrb.exe
 
 //ICU gensprep executable
-ICU_GENSPREP_EXECUTABLE:FILEPATH=ICU_GENSPREP_EXECUTABLE-NOTFOUND
+ICU_GENSPREP_EXECUTABLE:FILEPATH=C:/Librerias/SUMOLibraries/3rdPartyLibs/icu4c-68.2/bin64/gensprep.exe
 
 //ICU icu-config executable
 ICU_ICU-CONFIG_EXECUTABLE:FILEPATH=ICU_ICU-CONFIG_EXECUTABLE-NOTFOUND
 
 //ICU icuinfo executable
-ICU_ICUINFO_EXECUTABLE:FILEPATH=ICU_ICUINFO_EXECUTABLE-NOTFOUND
+ICU_ICUINFO_EXECUTABLE:FILEPATH=C:/Librerias/SUMOLibraries/3rdPartyLibs/icu4c-68.2/bin64/icuinfo.exe
 
 //ICU icupkg executable
-ICU_ICUPKG_EXECUTABLE:FILEPATH=ICU_ICUPKG_EXECUTABLE-NOTFOUND
+ICU_ICUPKG_EXECUTABLE:FILEPATH=C:/Librerias/SUMOLibraries/3rdPartyLibs/icu4c-68.2/bin64/icupkg.exe
 
 //ICU include directory
 ICU_INCLUDE_DIR:PATH=ICU_INCLUDE_DIR-NOTFOUND
 
 //ICU makeconv executable
-ICU_MAKECONV_EXECUTABLE:FILEPATH=ICU_MAKECONV_EXECUTABLE-NOTFOUND
+ICU_MAKECONV_EXECUTABLE:FILEPATH=C:/Librerias/SUMOLibraries/3rdPartyLibs/icu4c-68.2/bin64/makeconv.exe
 
 //ICU pkgdata executable
-ICU_PKGDATA_EXECUTABLE:FILEPATH=ICU_PKGDATA_EXECUTABLE-NOTFOUND
+ICU_PKGDATA_EXECUTABLE:FILEPATH=C:/Librerias/SUMOLibraries/3rdPartyLibs/icu4c-68.2/bin64/pkgdata.exe
 
 //ICU uconv executable
-ICU_UCONV_EXECUTABLE:FILEPATH=ICU_UCONV_EXECUTABLE-NOTFOUND
+ICU_UCONV_EXECUTABLE:FILEPATH=C:/Librerias/SUMOLibraries/3rdPartyLibs/icu4c-68.2/bin64/uconv.exe
 
 //ICU uc library (debug)
-ICU_UC_LIBRARY_DEBUG:FILEPATH=ICU_UC_LIBRARY_DEBUG-NOTFOUND
+ICU_UC_LIBRARY_DEBUG:FILEPATH=C:/Librerias/SUMOLibraries/3rdPartyLibs/icu4c-68.2/lib64/icuucd.lib
 
 //ICU uc library (release)
-ICU_UC_LIBRARY_RELEASE:FILEPATH=ICU_UC_LIBRARY_RELEASE-NOTFOUND
+ICU_UC_LIBRARY_RELEASE:FILEPATH=C:/Librerias/SUMOLibraries/3rdPartyLibs/icu4c-68.2/lib64/icuuc.lib
 
 //Path to a program.
 Java_IDLJ_EXECUTABLE:FILEPATH=Java_IDLJ_EXECUTABLE-NOTFOUND
@@ -342,7 +342,7 @@ Java_JAVA_EXECUTABLE:FILEPATH=C:/Program Files (x86)/Java/jre1.8.0_271/bin/java.
 NSL_LIBRARY:FILEPATH=NSL_LIBRARY-NOTFOUND
 
 //Path to a library.
-SOCKET_LIBRARY:FILEPATH=SOCKET_LIBRARY-NOTFOUND
+SOCKET_LIBRARY:FILEPATH=wsock32.lib
 
 //Enable extra compiler warnings
 extra-warnings:BOOL=OFF
@@ -385,6 +385,9 @@ transcoder:STRING=windows
 
 //Value Computed by CMake
 xerces-c_BINARY_DIR:STATIC=C:/Librerias/SUMOLibraries/xerces-c-3.2.3
+
+//Dependencies for the target
+xerces-c_LIB_DEPENDS:STATIC=general;wsock32.lib;
 
 //Value Computed by CMake
 xerces-c_SOURCE_DIR:STATIC=C:/Librerias/SUMOLibraries/xerces-c-3.2.3
@@ -561,6 +564,8 @@ CXX_FLAG_W3:INTERNAL=1
 CXX_HAS_inline:INTERNAL=1
 //Test CXX_matching-delete-operator
 CXX_matching-delete-operator:INTERNAL=1
+//Details about finding ICU
+FIND_PACKAGE_MESSAGE_DETAILS_ICU:INTERNAL=[C:/Librerias/SUMOLibraries/3rdPartyLibs/icu4c-68.2/include][optimized;C:/Librerias/SUMOLibraries/3rdPartyLibs/icu4c-68.2/lib64/icuuc.lib;debug;C:/Librerias/SUMOLibraries/3rdPartyLibs/icu4c-68.2/lib64/icuucd.lib;C:/Librerias/SUMOLibraries/3rdPartyLibs/icu4c-68.2/lib64/icudt.lib][ON][v68.2()]
 //Details about finding Java
 FIND_PACKAGE_MESSAGE_DETAILS_Java:INTERNAL=[C:/Program Files (x86)/Java/jre1.8.0_271/bin/java.exe][cfound components: Runtime ][v1.8.0.271()]
 //Details about finding Threads
