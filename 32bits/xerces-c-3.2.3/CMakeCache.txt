@@ -252,7 +252,7 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=OFF
 DIFF_EXECUTABLE:FILEPATH=C:/TextTest/diff.exe
 
 //Path to a program.
-DOXYGEN_EXECUTABLE:FILEPATH=DOXYGEN_EXECUTABLE-NOTFOUND
+DOXYGEN_EXECUTABLE:FILEPATH=C:/Doxygen/bin/doxygen.exe
 
 //ICU data library (debug)
 ICU_DATA_LIBRARY_DEBUG:FILEPATH=ICU_DATA_LIBRARY_DEBUG-NOTFOUND
@@ -342,7 +342,7 @@ Java_JAVA_EXECUTABLE:FILEPATH=C:/Program Files (x86)/Java/jre1.8.0_271/bin/java.
 NSL_LIBRARY:FILEPATH=NSL_LIBRARY-NOTFOUND
 
 //Path to a library.
-SOCKET_LIBRARY:FILEPATH=SOCKET_LIBRARY-NOTFOUND
+SOCKET_LIBRARY:FILEPATH=wsock32.lib
 
 //Enable extra compiler warnings
 extra-warnings:BOOL=OFF
@@ -385,6 +385,9 @@ transcoder:STRING=windows
 
 //Value Computed by CMake
 xerces-c_BINARY_DIR:STATIC=C:/Librerias/SUMOLibraries/32bits/xerces-c-3.2.3
+
+//Dependencies for the target
+xerces-c_LIB_DEPENDS:STATIC=general;wsock32.lib;
 
 //Value Computed by CMake
 xerces-c_SOURCE_DIR:STATIC=C:/Librerias/SUMOLibraries/32bits/xerces-c-3.2.3
