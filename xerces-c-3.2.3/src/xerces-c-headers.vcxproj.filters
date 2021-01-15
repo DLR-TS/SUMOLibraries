@@ -1381,14 +1381,11 @@
     <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\xinclude\XIncludeUtils.hpp">
       <Filter>xercesc\xinclude</Filter>
     </None>
-    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\NetAccessors\WinSock\WinSockNetAccessor.hpp">
-      <Filter>xercesc\util\NetAccessors\WinSock</Filter>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\NetAccessors\Curl\CurlNetAccessor.hpp">
+      <Filter>xercesc\util\NetAccessors\Curl</Filter>
     </None>
-    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\NetAccessors\WinSock\BinHTTPURLInputStream.hpp">
-      <Filter>xercesc\util\NetAccessors\WinSock</Filter>
-    </None>
-    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\NetAccessors\BinHTTPInputStreamCommon.hpp">
-      <Filter>xercesc\util\NetAccessors</Filter>
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\NetAccessors\Curl\CurlURLInputStream.hpp">
+      <Filter>xercesc\util\NetAccessors\Curl</Filter>
     </None>
     <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\Transcoders\Win32\Win32TransService.hpp">
       <Filter>xercesc\util\Transcoders\Win32</Filter>
@@ -1452,8 +1449,8 @@
     <Filter Include="xercesc\util\NetAccessors">
       <UniqueIdentifier>{7747C647-D522-34A5-8E0A-816AE20FAF4E}</UniqueIdentifier>
     </Filter>
-    <Filter Include="xercesc\util\NetAccessors\WinSock">
-      <UniqueIdentifier>{91D2D724-4877-3BE3-8168-30CCA5D063C3}</UniqueIdentifier>
+    <Filter Include="xercesc\util\NetAccessors\Curl">
+      <UniqueIdentifier>{67C58717-E8E2-3464-AEB9-EBA86D36DCD8}</UniqueIdentifier>
     </Filter>
     <Filter Include="xercesc\util\Transcoders">
       <UniqueIdentifier>{029F7251-7420-3394-80E6-B76B43F0D362}</UniqueIdentifier>

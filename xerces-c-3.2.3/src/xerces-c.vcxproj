@@ -56,7 +56,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Librerias\SUMOLibraries\xerces-c-3.2.3;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Librerias\SUMOLibraries\xerces-c-3.2.3;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src;C:\Librerias\SUMOLibraries\3rdPartyLibs\curl-7.74.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -74,10 +74,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;XERCES_DLL_NAME=\"xerces-c_3_2D.dll\0\";_THREAD_SAFE=1;HAVE_CONFIG_H=1;XERCES_BUILDING_LIBRARY=1;CMAKE_INTDIR=\"Debug\";xerces_c_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Librerias\SUMOLibraries\xerces-c-3.2.3;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Librerias\SUMOLibraries\xerces-c-3.2.3;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src;C:\Librerias\SUMOLibraries\3rdPartyLibs\curl-7.74.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Librerias\SUMOLibraries\xerces-c-3.2.3;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Librerias\SUMOLibraries\xerces-c-3.2.3;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src;C:\Librerias\SUMOLibraries\3rdPartyLibs\curl-7.74.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -85,7 +85,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>wsock32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>wsock32.lib;C:\Librerias\SUMOLibraries\3rdPartyLibs\curl-7.74.0\lib\libcurl_imp.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -100,7 +100,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Librerias\SUMOLibraries\xerces-c-3.2.3;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Librerias\SUMOLibraries\xerces-c-3.2.3;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src;C:\Librerias\SUMOLibraries\3rdPartyLibs\curl-7.74.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
@@ -118,10 +118,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;XERCES_DLL_NAME=\"xerces-c_3_2.dll\0\";_THREAD_SAFE=1;HAVE_CONFIG_H=1;XERCES_BUILDING_LIBRARY=1;CMAKE_INTDIR=\"Release\";xerces_c_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Librerias\SUMOLibraries\xerces-c-3.2.3;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Librerias\SUMOLibraries\xerces-c-3.2.3;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src;C:\Librerias\SUMOLibraries\3rdPartyLibs\curl-7.74.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Librerias\SUMOLibraries\xerces-c-3.2.3;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Librerias\SUMOLibraries\xerces-c-3.2.3;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src;C:\Librerias\SUMOLibraries\3rdPartyLibs\curl-7.74.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -129,7 +129,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>wsock32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>wsock32.lib;C:\Librerias\SUMOLibraries\3rdPartyLibs\curl-7.74.0\lib\libcurl-d_imp.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -467,9 +467,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\xinclude\XIncludeDOMDocumentProcessor.cpp" />
     <ClCompile Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\xinclude\XIncludeLocation.cpp" />
     <ClCompile Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\xinclude\XIncludeUtils.cpp" />
-    <ClCompile Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\NetAccessors\WinSock\WinSockNetAccessor.cpp" />
-    <ClCompile Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\NetAccessors\WinSock\BinHTTPURLInputStream.cpp" />
-    <ClCompile Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\NetAccessors\BinHTTPInputStreamCommon.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\NetAccessors\Curl\CurlNetAccessor.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\NetAccessors\Curl\CurlURLInputStream.cpp" />
     <ClCompile Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\Transcoders\Win32\Win32TransService.cpp" />
     <ClCompile Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\MsgLoaders\InMemory\InMemMsgLoader.cpp" />
     <ClCompile Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\MutexManagers\StdMutexMgr.cpp" />

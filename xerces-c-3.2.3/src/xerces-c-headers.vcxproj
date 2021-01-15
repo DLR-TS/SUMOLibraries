@@ -1014,11 +1014,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </None>
     <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\xinclude\XIncludeUtils.hpp">
     </None>
-    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\NetAccessors\WinSock\WinSockNetAccessor.hpp">
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\NetAccessors\Curl\CurlNetAccessor.hpp">
     </None>
-    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\NetAccessors\WinSock\BinHTTPURLInputStream.hpp">
-    </None>
-    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\NetAccessors\BinHTTPInputStreamCommon.hpp">
+    <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\NetAccessors\Curl\CurlURLInputStream.hpp">
     </None>
     <None Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\Transcoders\Win32\Win32TransService.hpp">
     </None>

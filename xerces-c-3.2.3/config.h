@@ -461,13 +461,13 @@
 /* #undef XERCES_USE_NETACCESSOR_CFURL */
 
 /* Define to use the CURL NetAccessor */
-/* #undef XERCES_USE_NETACCESSOR_CURL */
+#define XERCES_USE_NETACCESSOR_CURL 1
 
 /* Define to use the Sockets-based NetAccessor */
 /* #undef XERCES_USE_NETACCESSOR_SOCKET */
 
 /* Define to use the WinSock NetAccessor */
-#define XERCES_USE_NETACCESSOR_WINSOCK 1
+/* #undef XERCES_USE_NETACCESSOR_WINSOCK */
 
 /* Define to use the GNU iconv transcoder */
 /* #undef XERCES_USE_TRANSCODER_GNUICONV */

@@ -1914,15 +1914,11 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xdevelopmentx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xdevelopmentx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/xercesc/util/NetAccessors/WinSock" TYPE FILE FILES "C:/Librerias/SUMOLibraries/xerces-c-3.2.3/src/xercesc/util/NetAccessors/WinSock/WinSockNetAccessor.hpp")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/xercesc/util/NetAccessors/Curl" TYPE FILE FILES "C:/Librerias/SUMOLibraries/xerces-c-3.2.3/src/xercesc/util/NetAccessors/Curl/CurlNetAccessor.hpp")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xdevelopmentx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/xercesc/util/NetAccessors/WinSock" TYPE FILE FILES "C:/Librerias/SUMOLibraries/xerces-c-3.2.3/src/xercesc/util/NetAccessors/WinSock/BinHTTPURLInputStream.hpp")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xdevelopmentx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/xercesc/util/NetAccessors" TYPE FILE FILES "C:/Librerias/SUMOLibraries/xerces-c-3.2.3/src/xercesc/util/NetAccessors/BinHTTPInputStreamCommon.hpp")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/xercesc/util/NetAccessors/Curl" TYPE FILE FILES "C:/Librerias/SUMOLibraries/xerces-c-3.2.3/src/xercesc/util/NetAccessors/Curl/CurlURLInputStream.hpp")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xdevelopmentx" OR NOT CMAKE_INSTALL_COMPONENT)

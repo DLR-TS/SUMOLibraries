@@ -30,7 +30,7 @@ if(network)
   # CURL
 
   # Requires select() which is UNIX only
-  if(UNIX)
+  if(WIN32)
     find_package(CURL)
     if(CURL_FOUND)
       list(APPEND netaccessors curl)
