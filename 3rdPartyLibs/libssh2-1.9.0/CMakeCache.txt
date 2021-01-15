@@ -18,7 +18,7 @@
 BUILD_EXAMPLES:BOOL=ON
 
 //Build Shared Libraries
-BUILD_SHARED_LIBS:BOOL=OFF
+BUILD_SHARED_LIBS:BOOL=ON
 
 //Build libssh2 test suite
 BUILD_TESTING:BOOL=OFF
@@ -597,7 +597,7 @@ NEED_LIB_WS2_32:INTERNAL=1
 OPENSSL_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //Files that must be in the same directory as the executables at
 // runtime.
-RUNTIME_DEPENDENCIES:INTERNAL=C:/Librerias/SUMOLibraries/3rdPartyLibs/openssl-1.1.1/libcrypto-1_1-x64.dll;C:/Librerias/SUMOLibraries/3rdPartyLibs/openssl-1.1.1/libssl-1_1-x64.dll
+RUNTIME_DEPENDENCIES:INTERNAL=C:/Librerias/SUMOLibraries/3rdPartyLibs/openssl-1.1.1/libcrypto-1_1-x64.dll;C:/Librerias/SUMOLibraries/3rdPartyLibs/openssl-1.1.1/libssl-1_1-x64.dll;$<TARGET_FILE:libssh2>
 //ADVANCED property for variable: SH_EXECUTABLE
 SH_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: SSL_EAY_LIBRARY_DEBUG

@@ -23,12 +23,12 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
     <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
     <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
@@ -44,11 +44,15 @@
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Librerias\SUMOLibraries\3rdPartyLibs\libssh2-1.9.0\src\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">libssh2.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">libssh2</TargetName>
-    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Librerias\SUMOLibraries\3rdPartyLibs\libssh2-1.9.0\src\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">libssh2.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">libssh2</TargetName>
-    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -64,11 +68,11 @@
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level4</WarningLevel>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;LIBSSH2_OPENSSL;LIBSSH2_HAVE_ZLIB=1;LIBSSH2_DH_GEX_NEW=1;LIBSSH2_WIN32;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;LIBSSH2_CLEAR_MEMORY;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;LIBSSH2_OPENSSL;LIBSSH2_HAVE_ZLIB=1;LIBSSH2_DH_GEX_NEW=1;LIBSSH2_WIN32;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;LIBSSH2_CLEAR_MEMORY;CMAKE_INTDIR="Debug";libssh2_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;LIBSSH2_OPENSSL;LIBSSH2_HAVE_ZLIB=1;LIBSSH2_DH_GEX_NEW=1;LIBSSH2_WIN32;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;LIBSSH2_CLEAR_MEMORY;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;LIBSSH2_OPENSSL;LIBSSH2_HAVE_ZLIB=1;LIBSSH2_DH_GEX_NEW=1;LIBSSH2_WIN32;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;LIBSSH2_CLEAR_MEMORY;CMAKE_INTDIR=\"Debug\";libssh2_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>C:\Librerias\SUMOLibraries\3rdPartyLibs\libssh2-1.9.0\include;C:\Librerias\SUMOLibraries\3rdPartyLibs\openssl-1.1.1\include;C:\Librerias\SUMOLibraries\3rdPartyLibs\zlib-1.2.11\include;C:\Librerias\SUMOLibraries\3rdPartyLibs\libssh2-1.9.0\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
@@ -79,9 +83,19 @@
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
-    <Lib>
+    <Link>
+      <AdditionalDependencies>C:\Librerias\SUMOLibraries\3rdPartyLibs\openssl-1.1.1\libssl.lib;C:\Librerias\SUMOLibraries\3rdPartyLibs\openssl-1.1.1\libcrypto.lib;crypt32.lib;C:\Librerias\SUMOLibraries\3rdPartyLibs\zlib-1.2.11\lib\zlibd.lib;ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
-    </Lib>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/src/Debug/libssh2.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/src/Debug/libssh2.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -95,13 +109,13 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level4</WarningLevel>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;LIBSSH2_OPENSSL;LIBSSH2_HAVE_ZLIB=1;LIBSSH2_DH_GEX_NEW=1;LIBSSH2_WIN32;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;LIBSSH2_CLEAR_MEMORY;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;LIBSSH2_OPENSSL;LIBSSH2_HAVE_ZLIB=1;LIBSSH2_DH_GEX_NEW=1;LIBSSH2_WIN32;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;LIBSSH2_CLEAR_MEMORY;CMAKE_INTDIR="Release";libssh2_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;LIBSSH2_OPENSSL;LIBSSH2_HAVE_ZLIB=1;LIBSSH2_DH_GEX_NEW=1;LIBSSH2_WIN32;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;LIBSSH2_CLEAR_MEMORY;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;LIBSSH2_OPENSSL;LIBSSH2_HAVE_ZLIB=1;LIBSSH2_DH_GEX_NEW=1;LIBSSH2_WIN32;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;LIBSSH2_CLEAR_MEMORY;CMAKE_INTDIR=\"Release\";libssh2_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>C:\Librerias\SUMOLibraries\3rdPartyLibs\libssh2-1.9.0\include;C:\Librerias\SUMOLibraries\3rdPartyLibs\openssl-1.1.1\include;C:\Librerias\SUMOLibraries\3rdPartyLibs\zlib-1.2.11\include;C:\Librerias\SUMOLibraries\3rdPartyLibs\libssh2-1.9.0\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
@@ -112,9 +126,19 @@
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
-    <Lib>
+    <Link>
+      <AdditionalDependencies>C:\Librerias\SUMOLibraries\3rdPartyLibs\openssl-1.1.1\libssl.lib;C:\Librerias\SUMOLibraries\3rdPartyLibs\openssl-1.1.1\libcrypto.lib;crypt32.lib;C:\Librerias\SUMOLibraries\3rdPartyLibs\zlib-1.2.11\lib\zlib.lib;ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
-    </Lib>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/src/Release/libssh2.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/src/Release/libssh2.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
     <CustomBuild Include="C:\Librerias\SUMOLibraries\3rdPartyLibs\libssh2-1.9.0\src\CMakeLists.txt">

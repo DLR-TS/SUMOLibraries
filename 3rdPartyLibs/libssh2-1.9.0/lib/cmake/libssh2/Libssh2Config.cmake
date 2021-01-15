@@ -51,7 +51,7 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target Libssh2::libssh2
-add_library(Libssh2::libssh2 STATIC IMPORTED)
+add_library(Libssh2::libssh2 SHARED IMPORTED)
 
 set_target_properties(Libssh2::libssh2 PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"

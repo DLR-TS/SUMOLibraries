@@ -48,6 +48,7 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "copy_example_dependencies", "example\copy_example_dependencies.vcxproj", "{817917B1-11E0-3B19-AC5D-34FA9DDC8445}"
 	ProjectSection(ProjectDependencies) = postProject
 		{3B2D5948-A869-3726-B668-0C2B62FF038D} = {3B2D5948-A869-3726-B668-0C2B62FF038D}
+		{D23C66E6-48FD-33C0-B413-B1CD84210BFC} = {D23C66E6-48FD-33C0-B413-B1CD84210BFC}
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "example-direct_tcpip", "example\example-direct_tcpip.vcxproj", "{BD4886FE-5E48-3FA0-8637-EA7B2A4166D3}"

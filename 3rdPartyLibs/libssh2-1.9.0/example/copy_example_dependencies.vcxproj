@@ -54,7 +54,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message>	</Message>
+      <Message>		</Message>
       <Command>setlocal
 C:\CMake\bin\cmake.exe -E make_directory C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/$(Configuration)
 if %errorlevel% neq 0 goto :cmEnd
@@ -70,6 +70,17 @@ setlocal
 C:\CMake\bin\cmake.exe -E make_directory C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/$(Configuration)
 if %errorlevel% neq 0 goto :cmEnd
 C:\CMake\bin\cmake.exe -E copy C:/Librerias/SUMOLibraries/3rdPartyLibs/openssl-1.1.1/libssl-1_1-x64.dll C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/$(Configuration)
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+C:\CMake\bin\cmake.exe -E make_directory C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/$(Configuration)
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E copy C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/src/Debug/libssh2.dll C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/$(Configuration)
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -89,7 +100,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message>	</Message>
+      <Message>		</Message>
       <Command>setlocal
 C:\CMake\bin\cmake.exe -E make_directory C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/$(Configuration)
 if %errorlevel% neq 0 goto :cmEnd
@@ -105,6 +116,17 @@ setlocal
 C:\CMake\bin\cmake.exe -E make_directory C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/$(Configuration)
 if %errorlevel% neq 0 goto :cmEnd
 C:\CMake\bin\cmake.exe -E copy C:/Librerias/SUMOLibraries/3rdPartyLibs/openssl-1.1.1/libssl-1_1-x64.dll C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/$(Configuration)
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+C:\CMake\bin\cmake.exe -E make_directory C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/$(Configuration)
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E copy C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/src/Release/libssh2.dll C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/$(Configuration)
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -153,6 +175,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\3rdPartyLibs\libssh2-1.9.0\src\libssh2.vcxproj">
+      <Project>{D23C66E6-48FD-33C0-B413-B1CD84210BFC}</Project>
+      <Name>libssh2</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

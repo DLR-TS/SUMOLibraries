@@ -42,7 +42,7 @@ unset(_expectedTargets)
 
 
 # Create imported target Libssh2::libssh2
-add_library(Libssh2::libssh2 STATIC IMPORTED)
+add_library(Libssh2::libssh2 SHARED IMPORTED)
 
 set_target_properties(Libssh2::libssh2 PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/include"
@@ -51,17 +51,17 @@ set_target_properties(Libssh2::libssh2 PROPERTIES
 # Import target "Libssh2::libssh2" for configuration "Debug"
 set_property(TARGET Libssh2::libssh2 APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(Libssh2::libssh2 PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_DEBUG "C;RC"
-  IMPORTED_LINK_INTERFACE_LIBRARIES_DEBUG "C:/Librerias/SUMOLibraries/3rdPartyLibs/openssl-1.1.1/libssl.lib;C:/Librerias/SUMOLibraries/3rdPartyLibs/openssl-1.1.1/libcrypto.lib;crypt32;C:/Librerias/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/lib/zlibd.lib;ws2_32"
-  IMPORTED_LOCATION_DEBUG "C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/src/Debug/libssh2.lib"
+  IMPORTED_IMPLIB_DEBUG "C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/src/Debug/libssh2.lib"
+  IMPORTED_LINK_INTERFACE_LIBRARIES_DEBUG ""
+  IMPORTED_LOCATION_DEBUG "C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/src/Debug/libssh2.dll"
   )
 
 # Import target "Libssh2::libssh2" for configuration "Release"
 set_property(TARGET Libssh2::libssh2 APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(Libssh2::libssh2 PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "C;RC"
-  IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "C:/Librerias/SUMOLibraries/3rdPartyLibs/openssl-1.1.1/libssl.lib;C:/Librerias/SUMOLibraries/3rdPartyLibs/openssl-1.1.1/libcrypto.lib;crypt32;C:/Librerias/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/lib/zlib.lib;ws2_32"
-  IMPORTED_LOCATION_RELEASE "C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/src/Release/libssh2.lib"
+  IMPORTED_IMPLIB_RELEASE "C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/src/Release/libssh2.lib"
+  IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE ""
+  IMPORTED_LOCATION_RELEASE "C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/src/Release/libssh2.dll"
   )
 
 # This file does not depend on other imported targets which have
