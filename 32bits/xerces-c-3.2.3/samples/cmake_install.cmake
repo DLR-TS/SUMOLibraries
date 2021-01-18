@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:\Librerias\SUMOLibraries\32bits\xerces-c-3.2.3")
+  set(CMAKE_INSTALL_PREFIX "C:/Librerias/SUMOLibraries/32bits/xerces-c-3.2.3")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

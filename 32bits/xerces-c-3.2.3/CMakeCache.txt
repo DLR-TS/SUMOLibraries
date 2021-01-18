@@ -113,7 +113,7 @@ CMAKE_INSTALL_MANDIR:PATH=
 CMAKE_INSTALL_OLDINCLUDEDIR:PATH=/usr/include
 
 //Install path prefix, prepended onto install directories.
-CMAKE_INSTALL_PREFIX:PATH=C:\Librerias\SUMOLibraries\32bits\xerces-c-3.2.3
+CMAKE_INSTALL_PREFIX:PATH=C:/Librerias/SUMOLibraries/32bits/xerces-c-3.2.3
 
 //Run-time variable data (LOCALSTATEDIR/run)
 CMAKE_INSTALL_RUNSTATEDIR:PATH=
@@ -248,6 +248,18 @@ CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=OFF
 
+//The directory containing a CMake configuration file for CURL.
+CURL_DIR:PATH=CURL_DIR-NOTFOUND
+
+//Path to a file.
+CURL_INCLUDE_DIR:PATH=C:/Librerias/SUMOLibraries/32bits/3rdPartyLibs/curl-7.74.0/include
+
+//Path to a library.
+CURL_LIBRARY_DEBUG:FILEPATH=C:/Librerias/SUMOLibraries/32bits/3rdPartyLibs/curl-7.74.0/lib/libcurl-d_imp.lib
+
+//Path to a library.
+CURL_LIBRARY_RELEASE:FILEPATH=C:/Librerias/SUMOLibraries/32bits/3rdPartyLibs/curl-7.74.0/lib/libcurl_imp.lib
+
 //Path to a program.
 DIFF_EXECUTABLE:FILEPATH=C:/TextTest/diff.exe
 
@@ -341,6 +353,9 @@ Java_JAVA_EXECUTABLE:FILEPATH=C:/Program Files (x86)/Java/jre1.8.0_271/bin/java.
 //Path to a library.
 NSL_LIBRARY:FILEPATH=NSL_LIBRARY-NOTFOUND
 
+//pkg-config executable
+PKG_CONFIG_EXECUTABLE:FILEPATH=C:/Perl/perl/bin/pkg-config
+
 //Path to a library.
 SOCKET_LIBRARY:FILEPATH=wsock32.lib
 
@@ -366,7 +381,7 @@ mutex-manager:STRING=standard
 network:BOOL=ON
 
 //Network accessor (winsock)
-network-accessor:STRING=winsock
+network-accessor:STRING=curl
 
 //Accept backslash as a path delimiter
 path-delimiter-backslash:BOOL=ON
@@ -387,7 +402,7 @@ transcoder:STRING=windows
 xerces-c_BINARY_DIR:STATIC=C:/Librerias/SUMOLibraries/32bits/xerces-c-3.2.3
 
 //Dependencies for the target
-xerces-c_LIB_DEPENDS:STATIC=general;wsock32.lib;
+xerces-c_LIB_DEPENDS:STATIC=general;wsock32.lib;optimized;C:/Librerias/SUMOLibraries/32bits/3rdPartyLibs/curl-7.74.0/lib/libcurl_imp.lib;debug;C:/Librerias/SUMOLibraries/32bits/3rdPartyLibs/curl-7.74.0/lib/libcurl-d_imp.lib;
 
 //Value Computed by CMake
 xerces-c_SOURCE_DIR:STATIC=C:/Librerias/SUMOLibraries/32bits/xerces-c-3.2.3
@@ -558,12 +573,22 @@ CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Test CSTDINT_FUNCTIONAL
 CSTDINT_FUNCTIONAL:INTERNAL=1
+//ADVANCED property for variable: CURL_DIR
+CURL_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CURL_INCLUDE_DIR
+CURL_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CURL_LIBRARY_DEBUG
+CURL_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CURL_LIBRARY_RELEASE
+CURL_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //Test CXX_FLAG_W3
 CXX_FLAG_W3:INTERNAL=1
 //Test CXX_HAS_inline
 CXX_HAS_inline:INTERNAL=1
 //Test CXX_matching-delete-operator
 CXX_matching-delete-operator:INTERNAL=1
+//Details about finding CURL
+FIND_PACKAGE_MESSAGE_DETAILS_CURL:INTERNAL=[optimized;C:/Librerias/SUMOLibraries/32bits/3rdPartyLibs/curl-7.74.0/lib/libcurl_imp.lib;debug;C:/Librerias/SUMOLibraries/32bits/3rdPartyLibs/curl-7.74.0/lib/libcurl-d_imp.lib][C:/Librerias/SUMOLibraries/32bits/3rdPartyLibs/curl-7.74.0/include][c ][v7.74.0()]
 //Details about finding Java
 FIND_PACKAGE_MESSAGE_DETAILS_Java:INTERNAL=[C:/Program Files (x86)/Java/jre1.8.0_271/bin/java.exe][cfound components: Runtime ][v1.8.0.271()]
 //Details about finding Threads
@@ -810,6 +835,8 @@ Java_JAVADOC_EXECUTABLE-ADVANCED:INTERNAL=1
 Java_JAVAH_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Java_JAVA_EXECUTABLE
 Java_JAVA_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
+PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
 //CHECK_TYPE_SIZE: sizeof(char16_t)
 SIZEOF_CHAR16_T:INTERNAL=2
 //CHECK_TYPE_SIZE: sizeof(signed int)
@@ -857,5 +884,5 @@ XERCES_HAVE_SSE2_INTRINSIC:INTERNAL=1
 //Test XERCES_HAVE_STD_THREAD
 XERCES_HAVE_STD_THREAD:INTERNAL=1
 //CMAKE_INSTALL_PREFIX during last run
-_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=C:\Librerias\SUMOLibraries\32bits\xerces-c-3.2.3
+_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=C:/Librerias/SUMOLibraries/32bits/xerces-c-3.2.3
 
