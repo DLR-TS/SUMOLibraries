@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7FB1AE9B-7217-3D9F-8BE0-E578DECB4765}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>uninstall</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\curl-7.74.0\include;C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\libssh2-1.9.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\curl-7.74.0\include;C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\libssh2-1.9.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\curl-7.74.0\CMakeFiles\91e343eb1b38b7ef39c29f98b19185f6\uninstall.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+C:\CMake\bin\cmake.exe -P C:/Librerias/SUMOLibraries/32bits/3rdPartyLibs/curl-7.74.0/CMake/cmake_uninstall.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\curl-7.74.0\CMakeFiles\uninstall</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</VerifyInputsAndOutputsExist>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+C:\CMake\bin\cmake.exe -P C:/Librerias/SUMOLibraries/32bits/3rdPartyLibs/curl-7.74.0/CMake/cmake_uninstall.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\curl-7.74.0\CMakeFiles\uninstall</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</VerifyInputsAndOutputsExist>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\curl-7.74.0\CMakeLists.txt">
+      <StdOutEncoding>UTF-8</StdOutEncoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Librerias/SUMOLibraries/32bits/3rdPartyLibs/curl-7.74.0/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+C:\CMake\bin\cmake.exe -SC:/Librerias/SUMOLibraries/32bits/3rdPartyLibs/curl-7.74.0 -BC:/Librerias/SUMOLibraries/32bits/3rdPartyLibs/curl-7.74.0 --check-stamp-file C:/Librerias/SUMOLibraries/32bits/3rdPartyLibs/curl-7.74.0/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\CMake\share\cmake-3.18\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\CMake\share\cmake-3.18\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.18\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\CMake\share\cmake-3.18\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.18\Modules\CMakeDependentOption.cmake;C:\CMake\share\cmake-3.18\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.18\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.18\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.18\Modules\CMakePackageConfigHelpers.cmake;C:\CMake\share\cmake-3.18\Modules\CMakePushCheckState.cmake;C:\CMake\share\cmake-3.18\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.18\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.18\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.18\Modules\CheckCCompilerFlag.cmake;C:\CMake\share\cmake-3.18\Modules\CheckCSourceCompiles.cmake;C:\CMake\share\cmake-3.18\Modules\CheckCSourceRuns.cmake;C:\CMake\share\cmake-3.18\Modules\CheckCXXSourceCompiles.cmake;C:\CMake\share\cmake-3.18\Modules\CheckFunctionExists.c;C:\CMake\share\cmake-3.18\Modules\CheckFunctionExists.cmake;C:\CMake\share\cmake-3.18\Modules\CheckIncludeFile.cmake;C:\CMake\share\cmake-3.18\Modules\CheckIncludeFileCXX.cmake;C:\CMake\share\cmake-3.18\Modules\CheckIncludeFiles.cmake;C:\CMake\share\cmake-3.18\Modules\CheckLibraryExists.cmake;C:\CMake\share\cmake-3.18\Modules\CheckStructHasMember.cmake;C:\CMake\share\cmake-3.18\Modules\CheckSymbolExists.cmake;C:\CMake\share\cmake-3.18\Modules\CheckTypeSize.cmake;C:\CMake\share\cmake-3.18\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\CMake\share\cmake-3.18\Modules\Compiler\MSVC-C.cmake;C:\CMake\share\cmake-3.18\Modules\FindCygwin.cmake;C:\CMake\share\cmake-3.18\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.18\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.18\Modules\FindPerl.cmake;C:\CMake\share\cmake-3.18\Modules\FindThreads.cmake;C:\CMake\share\cmake-3.18\Modules\FindZLIB.cmake;C:\CMake\share\cmake-3.18\Modules\GNUInstallDirs.cmake;C:\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.18\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.18\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.18\Modules\SelectLibraryConfigurations.cmake;C:\CMake\share\cmake-3.18\Modules\WriteBasicConfigVersionFile.cmake;C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\curl-7.74.0\CMake\CurlSymbolHiding.cmake;C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\curl-7.74.0\CMake\FindLibSSH2.cmake;C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\curl-7.74.0\CMake\Macros.cmake;C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\curl-7.74.0\CMake\OtherTests.cmake;C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\curl-7.74.0\CMake\Platforms\WindowsCache.cmake;C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\curl-7.74.0\CMake\Utilities.cmake;C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\curl-7.74.0\CMake\cmake_uninstall.cmake.in;C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\curl-7.74.0\CMake\curl-config.cmake.in;C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\curl-7.74.0\CMakeFiles\3.18.3\CMakeCCompiler.cmake;C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\curl-7.74.0\CMakeFiles\3.18.3\CMakeRCCompiler.cmake;C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\curl-7.74.0\CMakeFiles\3.18.3\CMakeSystem.cmake;C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\curl-7.74.0\curl-config.in;C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\curl-7.74.0\libcurl.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\curl-7.74.0\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Librerias/SUMOLibraries/32bits/3rdPartyLibs/curl-7.74.0/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+C:\CMake\bin\cmake.exe -SC:/Librerias/SUMOLibraries/32bits/3rdPartyLibs/curl-7.74.0 -BC:/Librerias/SUMOLibraries/32bits/3rdPartyLibs/curl-7.74.0 --check-stamp-file C:/Librerias/SUMOLibraries/32bits/3rdPartyLibs/curl-7.74.0/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\CMake\share\cmake-3.18\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\CMake\share\cmake-3.18\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.18\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\CMake\share\cmake-3.18\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.18\Modules\CMakeDependentOption.cmake;C:\CMake\share\cmake-3.18\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.18\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.18\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.18\Modules\CMakePackageConfigHelpers.cmake;C:\CMake\share\cmake-3.18\Modules\CMakePushCheckState.cmake;C:\CMake\share\cmake-3.18\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.18\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.18\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.18\Modules\CheckCCompilerFlag.cmake;C:\CMake\share\cmake-3.18\Modules\CheckCSourceCompiles.cmake;C:\CMake\share\cmake-3.18\Modules\CheckCSourceRuns.cmake;C:\CMake\share\cmake-3.18\Modules\CheckCXXSourceCompiles.cmake;C:\CMake\share\cmake-3.18\Modules\CheckFunctionExists.c;C:\CMake\share\cmake-3.18\Modules\CheckFunctionExists.cmake;C:\CMake\share\cmake-3.18\Modules\CheckIncludeFile.cmake;C:\CMake\share\cmake-3.18\Modules\CheckIncludeFileCXX.cmake;C:\CMake\share\cmake-3.18\Modules\CheckIncludeFiles.cmake;C:\CMake\share\cmake-3.18\Modules\CheckLibraryExists.cmake;C:\CMake\share\cmake-3.18\Modules\CheckStructHasMember.cmake;C:\CMake\share\cmake-3.18\Modules\CheckSymbolExists.cmake;C:\CMake\share\cmake-3.18\Modules\CheckTypeSize.cmake;C:\CMake\share\cmake-3.18\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\CMake\share\cmake-3.18\Modules\Compiler\MSVC-C.cmake;C:\CMake\share\cmake-3.18\Modules\FindCygwin.cmake;C:\CMake\share\cmake-3.18\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.18\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.18\Modules\FindPerl.cmake;C:\CMake\share\cmake-3.18\Modules\FindThreads.cmake;C:\CMake\share\cmake-3.18\Modules\FindZLIB.cmake;C:\CMake\share\cmake-3.18\Modules\GNUInstallDirs.cmake;C:\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.18\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.18\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.18\Modules\SelectLibraryConfigurations.cmake;C:\CMake\share\cmake-3.18\Modules\WriteBasicConfigVersionFile.cmake;C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\curl-7.74.0\CMake\CurlSymbolHiding.cmake;C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\curl-7.74.0\CMake\FindLibSSH2.cmake;C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\curl-7.74.0\CMake\Macros.cmake;C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\curl-7.74.0\CMake\OtherTests.cmake;C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\curl-7.74.0\CMake\Platforms\WindowsCache.cmake;C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\curl-7.74.0\CMake\Utilities.cmake;C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\curl-7.74.0\CMake\cmake_uninstall.cmake.in;C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\curl-7.74.0\CMake\curl-config.cmake.in;C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\curl-7.74.0\CMakeFiles\3.18.3\CMakeCCompiler.cmake;C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\curl-7.74.0\CMakeFiles\3.18.3\CMakeRCCompiler.cmake;C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\curl-7.74.0\CMakeFiles\3.18.3\CMakeSystem.cmake;C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\curl-7.74.0\curl-config.in;C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\curl-7.74.0\libcurl.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\curl-7.74.0\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\curl-7.74.0\CMakeFiles\uninstall">
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\curl-7.74.0\ZERO_CHECK.vcxproj">
+      <Project>{766DA0BE-B3D3-356C-AAFB-6A5400ADE50E}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
