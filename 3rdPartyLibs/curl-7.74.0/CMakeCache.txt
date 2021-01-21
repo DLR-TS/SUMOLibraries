@@ -247,7 +247,7 @@ CMAKE_USE_OPENLDAP:BOOL=OFF
 CMAKE_USE_OPENSSL:BOOL=OFF
 
 //enable Windows native SSL/TLS
-CMAKE_USE_SCHANNEL:BOOL=OFF
+CMAKE_USE_SCHANNEL:BOOL=ON
 
 //enable wolfSSL for SSL/TLS
 CMAKE_USE_WOLFSSL:BOOL=OFF
@@ -343,6 +343,9 @@ CURL_TARGET_WINDOWS_VERSION:STRING=
 //Turn compiler warnings into errors
 CURL_WERROR:BOOL=OFF
 
+//Use windows libraries to allow NTLM authentication without openssl
+CURL_WINDOWS_SSPI:BOOL=ON
+
 //Build curl with ZLIB support (AUTO, ON or OFF)
 CURL_ZLIB:STRING=ON
 
@@ -388,6 +391,21 @@ LIBSSH2_INCLUDE_DIR:PATH=C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/i
 //Path to a library.
 LIBSSH2_LIBRARY:FILEPATH=C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/lib/libssh2.lib
 
+//Path to a library.
+LIB_EAY_DEBUG:FILEPATH=LIB_EAY_DEBUG-NOTFOUND
+
+//Path to a library.
+LIB_EAY_LIBRARY_DEBUG:FILEPATH=LIB_EAY_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+LIB_EAY_RELEASE:FILEPATH=C:/Librerias/SUMOLibraries/3rdPartyLibs/openssl-1.1.1/libcrypto.lib
+
+//Path to a file.
+OPENSSL_APPLINK_SOURCE:FILEPATH=OPENSSL_APPLINK_SOURCE-NOTFOUND
+
+//Path to a file.
+OPENSSL_INCLUDE_DIR:PATH=C:/Librerias/SUMOLibraries/3rdPartyLibs/openssl-1.1.1/include
+
 //Path to a program.
 PERL_EXECUTABLE:FILEPATH=C:/Perl/perl/bin/perl.exe
 
@@ -396,6 +414,15 @@ PICKY_COMPILER:BOOL=ON
 
 //Path to a file.
 RANDOM_FILE:FILEPATH=RANDOM_FILE-NOTFOUND
+
+//Path to a library.
+SSL_EAY_DEBUG:FILEPATH=SSL_EAY_DEBUG-NOTFOUND
+
+//Path to a library.
+SSL_EAY_LIBRARY_DEBUG:FILEPATH=SSL_EAY_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+SSL_EAY_RELEASE:FILEPATH=C:/Librerias/SUMOLibraries/3rdPartyLibs/openssl-1.1.1/libssl.lib
 
 //Use Nghttp2 library
 USE_NGHTTP2:BOOL=OFF
@@ -623,6 +650,8 @@ CYGWIN_BAT-ADVANCED:INTERNAL=1
 ENABLE_IPV6-ADVANCED:INTERNAL=1
 //Details about finding LibSSH2
 FIND_PACKAGE_MESSAGE_DETAILS_LibSSH2:INTERNAL=[C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/lib/libssh2.lib][C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/include][v1.9.0()]
+//Details about finding OpenSSL
+FIND_PACKAGE_MESSAGE_DETAILS_OpenSSL:INTERNAL=[C:/Librerias/SUMOLibraries/3rdPartyLibs/openssl-1.1.1/libcrypto.lib][C:/Librerias/SUMOLibraries/3rdPartyLibs/openssl-1.1.1/include][c ][v1.1.1i()]
 //Details about finding Perl
 FIND_PACKAGE_MESSAGE_DETAILS_Perl:INTERNAL=[C:/Perl/perl/bin/perl.exe][v5.32.0()]
 //Details about finding Threads
@@ -735,6 +764,20 @@ HAVE_MACH_ABSOLUTE_TIME:INTERNAL=
 HAVE_MSG_NOSIGNAL:INTERNAL=
 //Have includes windows.h;winsock.h;ws2tcpip.h;winsock2.h;stdio.h;sys/stat.h;sys/types.h;sys/utime.h;assert.h;errno.h;fcntl.h;io.h;locale.h;netinet/tcp.h
 HAVE_NETINET_TCP_H:INTERNAL=
+//Have include openssl/crypto.h
+HAVE_OPENSSL_CRYPTO_H:INTERNAL=1
+//Have include openssl/err.h
+HAVE_OPENSSL_ERR_H:INTERNAL=1
+//Have include openssl/pem.h
+HAVE_OPENSSL_PEM_H:INTERNAL=1
+//Have include openssl/rand.h
+HAVE_OPENSSL_RAND_H:INTERNAL=1
+//Have include openssl/rsa.h
+HAVE_OPENSSL_RSA_H:INTERNAL=1
+//Have include openssl/ssl.h
+HAVE_OPENSSL_SSL_H:INTERNAL=1
+//Have include openssl/x509.h
+HAVE_OPENSSL_X509_H:INTERNAL=1
 //Have includes windows.h;winsock.h;ws2tcpip.h;winsock2.h;stdio.h;sys/stat.h;sys/types.h;sys/utime.h;assert.h;errno.h;fcntl.h;io.h;locale.h;pem.h
 HAVE_PEM_H:INTERNAL=
 //Have symbol pipe
@@ -849,6 +892,10 @@ HTTP_ONLY-ADVANCED:INTERNAL=1
 LIBSSH2_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: LIBSSH2_LIBRARY
 LIBSSH2_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: LIB_EAY_LIBRARY_DEBUG
+LIB_EAY_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OPENSSL_INCLUDE_DIR
+OPENSSL_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PERL_EXECUTABLE
 PERL_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: RANDOM_FILE
@@ -877,6 +924,8 @@ SIZEOF_STRUCT_SOCKADDR_STORAGE:INTERNAL=128
 SIZEOF_TIME_T:INTERNAL=8
 //CHECK_TYPE_SIZE: sizeof(__int64)
 SIZEOF___INT64:INTERNAL=8
+//ADVANCED property for variable: SSL_EAY_LIBRARY_DEBUG
+SSL_EAY_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 //Test USE_UNIX_SOCKETS
 USE_UNIX_SOCKETS:INTERNAL=
 //ADVANCED property for variable: ZLIB_INCLUDE_DIR
