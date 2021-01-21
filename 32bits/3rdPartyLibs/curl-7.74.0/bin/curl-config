@@ -84,13 +84,13 @@ while test $# -gt 0; do
         ;;
 
     --feature|--features)
-        for feature in IPv6 libz AsynchDNS alt-svc NTLM ""; do
+        for feature in SSL IPv6 libz AsynchDNS SSPI alt-svc SPNEGO Kerberos NTLM ""; do
             test -n "$feature" && echo "$feature"
         done
         ;;
 
     --protocols)
-        for protocol in DICT FILE FTP GOPHER HTTP IMAP LDAP MQTT POP3 RTSP SCP SFTP SMB SMTP TELNET TFTP; do
+        for protocol in DICT FILE FTP FTPS GOPHER HTTP HTTPS IMAP IMAPS LDAP MQTT POP3 POP3S RTSP SCP SFTP SMB SMBS SMTP SMTPS TELNET TFTP; do
             echo "$protocol"
         done
         ;;
@@ -161,18 +161,18 @@ while test $# -gt 0; do
            CURLLIBDIR=""
         fi
         if test "Xyes" = "Xno"; then
-          echo ${CURLLIBDIR}-lcurl  -lwldap32 -lwinmm -lws2_32 -ladvapi32 C:/Librerias/SUMOLibraries/32bits/3rdPartyLibs/zlib-1.2.11/lib/zlib.lib C:/Librerias/SUMOLibraries/32bits/3rdPartyLibs/libssh2-1.9.0/lib/libssh2.lib
+          echo ${CURLLIBDIR}-lcurl  -lwldap32 -lwinmm -lws2_32 -ladvapi32 -lcrypt32 C:/Librerias/SUMOLibraries/32bits/3rdPartyLibs/zlib-1.2.11/lib/zlib.lib C:/Librerias/SUMOLibraries/32bits/3rdPartyLibs/libssh2-1.9.0/lib/libssh2.lib
         else
           echo ${CURLLIBDIR}-lcurl
         fi
         ;;
     --ssl-backends)
-        echo ""
+        echo "Schannel"
         ;;
 
     --static-libs)
         if test "Xno" != "Xno" ; then
-          echo C:/Librerias/SUMOLibraries/32bits/3rdPartyLibs/curl-7.74.0/lib/libcurl.lib /machine:X86  -lwldap32 -lwinmm -lws2_32 -ladvapi32 C:/Librerias/SUMOLibraries/32bits/3rdPartyLibs/zlib-1.2.11/lib/zlib.lib C:/Librerias/SUMOLibraries/32bits/3rdPartyLibs/libssh2-1.9.0/lib/libssh2.lib
+          echo C:/Librerias/SUMOLibraries/32bits/3rdPartyLibs/curl-7.74.0/lib/libcurl.lib /machine:X86  -lwldap32 -lwinmm -lws2_32 -ladvapi32 -lcrypt32 C:/Librerias/SUMOLibraries/32bits/3rdPartyLibs/zlib-1.2.11/lib/zlib.lib C:/Librerias/SUMOLibraries/32bits/3rdPartyLibs/libssh2-1.9.0/lib/libssh2.lib
         else
           echo "curl was built with static libraries disabled" >&2
           exit 1

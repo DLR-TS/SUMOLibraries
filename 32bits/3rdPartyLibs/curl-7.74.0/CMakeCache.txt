@@ -247,7 +247,7 @@ CMAKE_USE_OPENLDAP:BOOL=OFF
 CMAKE_USE_OPENSSL:BOOL=OFF
 
 //enable Windows native SSL/TLS
-CMAKE_USE_SCHANNEL:BOOL=OFF
+CMAKE_USE_SCHANNEL:BOOL=ON
 
 //enable wolfSSL for SSL/TLS
 CMAKE_USE_WOLFSSL:BOOL=OFF
@@ -342,6 +342,9 @@ CURL_TARGET_WINDOWS_VERSION:STRING=
 
 //Turn compiler warnings into errors
 CURL_WERROR:BOOL=OFF
+
+//Use windows libraries to allow NTLM authentication without openssl
+CURL_WINDOWS_SSPI:BOOL=ON
 
 //Build curl with ZLIB support (AUTO, ON or OFF)
 CURL_ZLIB:STRING=ON
