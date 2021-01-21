@@ -1,0 +1,815 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7343B1AD-CC80-362B-98C2-BD2D52E51EEB}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>osg</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Librerias\SUMOLibraries\OSG-3.6.5\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">osg.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">osg161-osgd</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Librerias\SUMOLibraries\OSG-3.6.5\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">osg.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">osg161-osg</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Librerias\SUMOLibraries\OSG-3.6.5\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4589;4706;4127;4100</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_WIN32_WINNT=0x0A00;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;OSG_LIBRARY;CMAKE_INTDIR="Debug";osg_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_WIN32_WINNT=0x0A00;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;OSG_LIBRARY;CMAKE_INTDIR=\"Debug\";osg_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Librerias\SUMOLibraries\OSG-3.6.5\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Librerias\SUMOLibraries\OSG-3.6.5\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\lib\OpenThreadsd.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Librerias/SUMOLibraries/OSG-3.6.5/lib/osgd.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Librerias/SUMOLibraries/OSG-3.6.5/bin/osg161-osgd.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Librerias\SUMOLibraries\OSG-3.6.5\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DisableSpecificWarnings>4589;4706;4127;4100</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_WIN32_WINNT=0x0A00;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;OSG_LIBRARY;CMAKE_INTDIR="Release";osg_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_WIN32_WINNT=0x0A00;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;OSG_LIBRARY;CMAKE_INTDIR=\"Release\";osg_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Librerias\SUMOLibraries\OSG-3.6.5\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Librerias\SUMOLibraries\OSG-3.6.5\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\lib\OpenThreads.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Librerias/SUMOLibraries/OSG-3.6.5/lib/osg.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Librerias/SUMOLibraries/OSG-3.6.5/bin/osg161-osg.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\CMakeLists.txt">
+      <StdOutEncoding>UTF-8</StdOutEncoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Librerias/SUMOLibraries/OSG-3.6.5/src/osg/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\CMake\bin\cmake.exe -SC:/Librerias/SUMOLibraries/OSG-3.6.5 -BC:/Librerias/SUMOLibraries/OSG-3.6.5 --check-stamp-file C:/Librerias/SUMOLibraries/OSG-3.6.5/src/osg/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Librerias\SUMOLibraries\OSG-3.6.5\CMakeModules\ModuleInstall.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Librerias/SUMOLibraries/OSG-3.6.5/src/osg/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\CMake\bin\cmake.exe -SC:/Librerias/SUMOLibraries/OSG-3.6.5 -BC:/Librerias/SUMOLibraries/OSG-3.6.5 --check-stamp-file C:/Librerias/SUMOLibraries/OSG-3.6.5/src/osg/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Librerias\SUMOLibraries\OSG-3.6.5\CMakeModules\ModuleInstall.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\io_utils">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\os_utils">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\AlphaFunc">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\AnimationPath">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\ApplicationUsage">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\ArgumentParser">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Array">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\AttributeDispatchers">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\AudioStream">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\AutoTransform">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Billboard">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\BindImageTexture">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\BlendColor">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\BlendEquation">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\BlendEquationi">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\BlendFunc">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\BlendFunci">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\BoundingBox">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\BoundingSphere">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\BoundsChecking">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\buffered_value">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\BufferIndexBinding">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\BufferObject">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\BufferTemplate">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Callback">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Camera">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\CameraView">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Capability">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\ClampColor">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\ClearNode">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\ClipControl">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\ClipNode">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\ClipPlane">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\ClusterCullingCallback">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\CollectOccludersVisitor">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\ColorMask">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\ColorMaski">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\ColorMatrix">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\ComputeBoundsVisitor">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\DispatchCompute">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\ContextData">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\ConvexPlanarOccluder">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\ConvexPlanarPolygon">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\CoordinateSystemNode">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\CopyOp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\CullFace">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\CullingSet">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\CullSettings">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\CullStack">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\DeleteHandler">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Depth">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\DepthRangeIndexed">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\DisplaySettings">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Drawable">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\DrawPixels">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Endian">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Export">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\fast_back_stack">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Fog">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\FragmentProgram">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\FrameBufferObject">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\FrameStamp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\FrontFace">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Geode">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Geometry">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\GL2Extensions">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\GLDefines">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\GLExtensions">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\GLObjects">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\GLU">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\GraphicsCostEstimator">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\GraphicsContext">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\GraphicsThread">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Group">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Hint">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Identifier">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Image">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\ImageSequence">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\ImageStream">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\ImageUtils">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\KdTree">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Light">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\LightModel">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\LightSource">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\LineSegment">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\LineStipple">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\LineWidth">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\LOD">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\LogicOp">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Material">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Math">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Matrix">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Matrixd">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Matrixf">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\MatrixTransform">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\MixinVector">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Multisample">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Node">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\NodeCallback">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\NodeTrackerCallback">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\NodeVisitor">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Notify">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Object">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\observer_ptr">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Observer">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\ObserverNodePath">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\OccluderNode">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\OcclusionQueryNode">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\OperationThread">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\PatchParameter">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\PagedLOD">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Plane">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Point">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\PointSprite">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\PolygonMode">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\PolygonOffset">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\PolygonStipple">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Polytope">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\PositionAttitudeTransform">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\PrimitiveSet">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\PrimitiveSetIndirect">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\PrimitiveRestartIndex">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Program">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Projection">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\ProxyNode">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Quat">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Referenced">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\ref_ptr">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\RenderInfo">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\SampleMaski">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Sampler">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Scissor">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\ScissorIndexed">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\ScriptEngine">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Sequence">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\ShadeModel">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Shader">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\ShaderAttribute">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\ShaderComposer">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\ShadowVolumeOccluder">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Shape">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\ShapeDrawable">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\State">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\StateAttribute">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\StateAttributeCallback">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\StateSet">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Stats">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Stencil">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\StencilTwoSided">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Switch">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\TemplatePrimitiveFunctor">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\TemplatePrimitiveIndexFunctor">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\TexEnv">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\TexEnvCombine">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\TexEnvFilter">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\TexGen">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\TexGenNode">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\TexMat">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Texture">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Texture1D">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Texture2D">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Texture2DMultisample">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Texture2DArray">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Texture3D">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\TextureBuffer">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\TextureCubeMap">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\TextureRectangle">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Timer">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\TransferFunction">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Transform">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\TriangleFunctor">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\TriangleIndexFunctor">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\TriangleLinePointIndexFunctor">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Types">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Uniform">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\UserDataContainer">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\ValueObject">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\ValueMap">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\ValueStack">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Vec2">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Vec2b">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Vec2d">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Vec2f">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Vec2i">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Vec2s">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Vec2ub">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Vec2ui">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Vec2us">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Vec3">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Vec3b">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Vec3d">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Vec3f">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Vec3i">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Vec3s">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Vec3ub">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Vec3ui">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Vec3us">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Vec4">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Vec4b">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Vec4d">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Vec4f">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Vec4i">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Vec4s">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Vec4ub">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Vec4ui">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Vec4us">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\VertexAttribDivisor">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\VertexArrayState">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\VertexProgram">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\View">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Viewport">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\ViewportIndexed">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Version">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\Config">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osg\GL">
+    </None>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\os_utils.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\AlphaFunc.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\AnimationPath.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\ApplicationUsage.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\ArgumentParser.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\Array.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\AttributeDispatchers.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\AudioStream.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\AutoTransform.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\Billboard.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\BindImageTexture.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\BlendColor.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\BlendEquation.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\BlendEquationi.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\BlendFunc.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\BlendFunci.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\BufferIndexBinding.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\BufferObject.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\Callback.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\Capability.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\Camera.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\CameraView.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\ClampColor.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\ClearNode.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\ClipControl.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\ClipNode.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\ClipPlane.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\ClusterCullingCallback.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\CollectOccludersVisitor.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\ColorMask.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\ColorMaski.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\ColorMatrix.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\ComputeBoundsVisitor.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\DispatchCompute.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\ContextData.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\ConvexPlanarOccluder.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\ConvexPlanarPolygon.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\CoordinateSystemNode.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\CopyOp.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\CullFace.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\CullingSet.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\CullSettings.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\CullStack.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\DeleteHandler.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\Depth.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\DepthRangeIndexed.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\DisplaySettings.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\Drawable.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\DrawPixels.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\dxtctool.cpp" />
+    <ClInclude Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\dxtctool.h" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\Fog.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\FragmentProgram.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\FrameBufferObject.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\FrameStamp.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\FrontFace.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\Geode.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\Geometry.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\GLExtensions.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\GLObjects.cpp" />
+    <ClInclude Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\GLStaticLibrary.h" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\GLStaticLibrary.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\GraphicsCostEstimator.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\GraphicsContext.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\GraphicsThread.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\Group.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\Hint.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\Identifier.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\Image.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\ImageSequence.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\ImageStream.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\ImageUtils.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\KdTree.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\Light.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\LightModel.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\LightSource.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\LineSegment.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\LineStipple.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\LineWidth.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\LOD.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\LogicOp.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\Material.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\Math.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\Matrixd.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\MatrixDecomposition.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\Matrixf.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\MatrixTransform.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\Multisample.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\Node.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\NodeTrackerCallback.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\NodeVisitor.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\Notify.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\Object.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\Observer.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\ObserverNodePath.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\OccluderNode.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\OcclusionQueryNode.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\OperationThread.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\PatchParameter.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\PagedLOD.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\Point.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\PointSprite.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\PolygonMode.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\PolygonOffset.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\PolygonStipple.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\Polytope.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\PositionAttitudeTransform.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\PrimitiveSet.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\PrimitiveSetIndirect.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\PrimitiveRestartIndex.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\Program.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\Projection.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\ProxyNode.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\Quat.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\Referenced.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\SampleMaski.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\Sampler.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\Scissor.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\ScissorIndexed.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\ScriptEngine.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\Sequence.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\ShadeModel.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\Shader.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\ShaderAttribute.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\ShaderComposer.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\ShadowVolumeOccluder.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\Shape.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\ShapeDrawable.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\StateAttribute.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\State.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\StateSet.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\Stats.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\Stencil.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\StencilTwoSided.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\Switch.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\TexEnvCombine.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\TexEnv.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\TexEnvFilter.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\TexGen.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\TexGenNode.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\TexMat.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\Texture1D.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\Texture2DArray.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\Texture2D.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\Texture2DMultisample.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\Texture3D.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\Texture.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\TextureBuffer.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\TextureCubeMap.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\TextureRectangle.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\Timer.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\TransferFunction.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\Transform.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\Uniform.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\UserDataContainer.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\ValueMap.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\ValueStack.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\Version.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\VertexAttribDivisor.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\VertexArrayState.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\VertexProgram.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\View.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\Viewport.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\ViewportIndexed.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\glu\libutil\error.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\glu\libutil\mipmap.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\glu\libtess\normal.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\glu\libtess\memalloc.cpp" />
+    <ClInclude Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\glu\libtess\dict-list.h" />
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\glu\libtess\alg-outline">
+    </None>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\glu\libtess\priorityq.cpp" />
+    <ClInclude Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\glu\libtess\normal.h" />
+    <ClInclude Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\glu\libtess\dict.h" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\glu\libtess\render.cpp" />
+    <ClInclude Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\glu\libtess\tessmono.h" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\glu\libtess\mesh.cpp" />
+    <ClInclude Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\glu\libtess\render.h" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\glu\libtess\tessmono.cpp" />
+    <ClInclude Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\glu\libtess\priorityq.h" />
+    <ClInclude Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\glu\libtess\sweep.h" />
+    <ClInclude Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\glu\libtess\priorityq-sort.h" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\glu\libtess\sweep.cpp" />
+    <ClInclude Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\glu\libtess\tess.h" />
+    <ClInclude Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\glu\libtess\geom.h" />
+    <ClInclude Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\glu\libtess\memalloc.h" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\glu\libtess\dict.cpp" />
+    <ClInclude Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\glu\libtess\priorityq-heap.h" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\glu\libtess\geom.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\glu\libtess\tess.cpp" />
+    <ClInclude Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\glu\libtess\mesh.h" />
+    <ResourceCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\PlatformSpecifics\Windows\OpenSceneGraphVersionInfo.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\ZERO_CHECK.vcxproj">
+      <Project>{DD47887F-046C-32DF-842D-CA213A5DE851}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\OpenThreads\win32\OpenThreads.vcxproj">
+      <Project>{9C2D3112-1C0D-3024-A8DF-B79F23AB7583}</Project>
+      <Name>OpenThreads</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

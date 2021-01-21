@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F322297C-4CAA-33BB-A234-B8F939B8CC94}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>osgUtil</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Librerias\SUMOLibraries\OSG-3.6.5\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">osgUtil.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">osg161-osgUtild</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Librerias\SUMOLibraries\OSG-3.6.5\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">osgUtil.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">osg161-osgUtil</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Librerias\SUMOLibraries\OSG-3.6.5\include;C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\tristripper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4589;4706;4127;4100</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_WIN32_WINNT=0x0A00;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;OSGUTIL_LIBRARY;CMAKE_INTDIR="Debug";osgUtil_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_WIN32_WINNT=0x0A00;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;OSGUTIL_LIBRARY;CMAKE_INTDIR=\"Debug\";osgUtil_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Librerias\SUMOLibraries\OSG-3.6.5\include;C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\tristripper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Librerias\SUMOLibraries\OSG-3.6.5\include;C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\tristripper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\lib\osgd.lib;..\..\lib\OpenThreadsd.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Librerias/SUMOLibraries/OSG-3.6.5/lib/osgUtild.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Librerias/SUMOLibraries/OSG-3.6.5/bin/osg161-osgUtild.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Librerias\SUMOLibraries\OSG-3.6.5\include;C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\tristripper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DisableSpecificWarnings>4589;4706;4127;4100</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_WIN32_WINNT=0x0A00;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;OSGUTIL_LIBRARY;CMAKE_INTDIR="Release";osgUtil_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_WIN32_WINNT=0x0A00;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;OSGUTIL_LIBRARY;CMAKE_INTDIR=\"Release\";osgUtil_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Librerias\SUMOLibraries\OSG-3.6.5\include;C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\tristripper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Librerias\SUMOLibraries\OSG-3.6.5\include;C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\tristripper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\lib\osg.lib;..\..\lib\OpenThreads.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Librerias/SUMOLibraries/OSG-3.6.5/lib/osgUtil.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Librerias/SUMOLibraries/OSG-3.6.5/bin/osg161-osgUtil.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\CMakeLists.txt">
+      <StdOutEncoding>UTF-8</StdOutEncoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Librerias/SUMOLibraries/OSG-3.6.5/src/osgUtil/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\CMake\bin\cmake.exe -SC:/Librerias/SUMOLibraries/OSG-3.6.5 -BC:/Librerias/SUMOLibraries/OSG-3.6.5 --check-stamp-file C:/Librerias/SUMOLibraries/OSG-3.6.5/src/osgUtil/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Librerias\SUMOLibraries\OSG-3.6.5\CMakeModules\ModuleInstall.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Librerias/SUMOLibraries/OSG-3.6.5/src/osgUtil/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\CMake\bin\cmake.exe -SC:/Librerias/SUMOLibraries/OSG-3.6.5 -BC:/Librerias/SUMOLibraries/OSG-3.6.5 --check-stamp-file C:/Librerias/SUMOLibraries/OSG-3.6.5/src/osgUtil/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Librerias\SUMOLibraries\OSG-3.6.5\CMakeModules\ModuleInstall.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgUtil\ConvertVec">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgUtil\CubeMapGenerator">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgUtil\CullVisitor">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgUtil\DelaunayTriangulator">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgUtil\DisplayRequirementsVisitor">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgUtil\DrawElementTypeSimplifier">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgUtil\EdgeCollector">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgUtil\Export">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgUtil\GLObjectsVisitor">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgUtil\HalfWayMapGenerator">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgUtil\HighlightMapGenerator">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgUtil\IntersectionVisitor">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgUtil\IntersectVisitor">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgUtil\IncrementalCompileOperation">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgUtil\LineSegmentIntersector">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgUtil\MeshOptimizers">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgUtil\OperationArrayFunctor">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgUtil\Optimizer">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgUtil\PerlinNoise">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgUtil\PlaneIntersector">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgUtil\PolytopeIntersector">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgUtil\PositionalStateContainer">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgUtil\PrintVisitor">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgUtil\RayIntersector">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgUtil\ReflectionMapGenerator">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgUtil\RenderBin">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgUtil\RenderLeaf">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgUtil\RenderStage">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgUtil\ReversePrimitiveFunctor">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgUtil\SceneView">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgUtil\SceneGraphBuilder">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgUtil\ShaderGen">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgUtil\Simplifier">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgUtil\SmoothingVisitor">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgUtil\StateGraph">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgUtil\Statistics">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgUtil\TangentSpaceGenerator">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgUtil\Tessellator">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgUtil\TransformAttributeFunctor">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgUtil\TransformCallback">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgUtil\TriStripVisitor">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgUtil\UpdateVisitor">
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgUtil\Version">
+    </None>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\CubeMapGenerator.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\CullVisitor.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\DelaunayTriangulator.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\DisplayRequirementsVisitor.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\DrawElementTypeSimplifier.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\EdgeCollector.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\GLObjectsVisitor.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\HalfWayMapGenerator.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\HighlightMapGenerator.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\IntersectionVisitor.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\IntersectVisitor.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\IncrementalCompileOperation.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\LineSegmentIntersector.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\MeshOptimizers.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\Optimizer.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\PerlinNoise.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\PlaneIntersector.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\PolytopeIntersector.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\PositionalStateContainer.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\PrintVisitor.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\RayIntersector.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\RenderBin.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\RenderLeaf.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\RenderStage.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\ReversePrimitiveFunctor.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\SceneView.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\ShaderGen.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\Simplifier.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\SmoothingVisitor.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\SceneGraphBuilder.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\StateGraph.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\Statistics.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\TangentSpaceGenerator.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\Tessellator.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\TransformAttributeFunctor.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\TransformCallback.cpp" />
+    <ClInclude Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\tristripper\include\detail\graph_array.h" />
+    <ClInclude Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\tristripper\include\detail\types.h" />
+    <ClInclude Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\tristripper\include\detail\cache_simulator.h" />
+    <ClInclude Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\tristripper\include\detail\policy.h" />
+    <ClInclude Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\tristripper\include\detail\heap_array.h" />
+    <ClInclude Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\tristripper\include\detail\connectivity_graph.h" />
+    <ClInclude Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\tristripper\include\tri_stripper.h" />
+    <ClInclude Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\tristripper\include\public_types.h" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\tristripper\src\tri_stripper.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\tristripper\src\policy.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\tristripper\src\connectivity_graph.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\TriStripVisitor.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\UpdateVisitor.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\Version.cpp" />
+    <ResourceCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\PlatformSpecifics\Windows\OpenSceneGraphVersionInfo.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\ZERO_CHECK.vcxproj">
+      <Project>{DD47887F-046C-32DF-842D-CA213A5DE851}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\OpenThreads\win32\OpenThreads.vcxproj">
+      <Project>{9C2D3112-1C0D-3024-A8DF-B79F23AB7583}</Project>
+      <Name>OpenThreads</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\osg.vcxproj">
+      <Project>{7343B1AD-CC80-362B-98C2-BD2D52E51EEB}</Project>
+      <Name>osg</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
