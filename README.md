@@ -1,23 +1,34 @@
 # SUMOLibraries
 A repository with current SUMO Libraries used in Windows compatibles with Visual Studio 2019. Contains:
 
-* FFMPEG-3.4.1
-* OSG-3.4.0
-* fox-1.6.55
+* FFMPEG-4.3.1
+* OSG-3.6.5
+* TextTest-4.0.4
+* apache-maven-3.6.1
+* eigen-3.3.9
+* fox-1.6.57
+* freetype-2.10.4
+* gdal-3.2.1
 * gl2ps-1.4.0
 * googletest-1.8.0
-* grpc-1.10.0
-* OSG-3.4.0
-* proj_gdal-1911
+* mimalloc-1.6.7
+* proj-7.2.0
+* spatialite-4.3.0a
 * swigwin-3.0.12
-* xerces-c-3.2.0
+* xerces-c-3.2.3
 
 And the third party libs:
 
+* SDL2-2.0.14
 * bzip2-1.0.6
-* freetype-2.9
+* curl-7.74.0
+* gdal
 * jpeg-9c
 * libpng-1.6.34
+* libssh2-1.9.0
+* openssl-1.1.1
+* protobuf-3.9.1
+* sqlite-3.3.0
 * tiff-4.0.9
 * zlib-1.2.11
 
