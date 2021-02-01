@@ -1,0 +1,14 @@
+prefix=/c/Librerias/SUMOLibraries/FFMPEG-4.3.1_inst
+exec_prefix=${prefix}
+libdir=/c/Librerias/SUMOLibraries/FFMPEG-4.3.1_inst/lib
+includedir=/c/Librerias/SUMOLibraries/FFMPEG-4.3.1_inst/include
+
+Name: libpostproc
+Description: FFmpeg postprocessing library
+Version: 55.7.100
+Requires: 
+Requires.private: libavutil >= 56.51.100
+Conflicts:
+Libs: -L${libdir}  -lpostproc 
+Libs.private: 
+Cflags: -I${includedir}
