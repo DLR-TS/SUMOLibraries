@@ -1,0 +1,20 @@
+1) Install MSYS2, 
+
+2) execute pacman -S make
+
+3) uncomment set MSYS2_PATH_TYPE=inherit in msys2_shell.cmd
+
+4) Open MSVC console x64 and run msys2_shell.cmd
+
+5) export PATH="/C:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64":$PATH
+
+6) export PATH="/C:\YASM":$PATH (or install)
+
+7) check "where cl / where link"
+
+8) go to go to /c/Librerias\SUMOLibraries\FFMPEG-4.3.1
+
+9) Configure
+	Basic: ./configure --target-os=win64 --arch=x86_64 --toolchain=msvc --prefix=/c/Librerias/SUMOLibraries/FFMPEG-4.3.1_inst --enable-asm --enable-yasm --enable-shared 
+
+	Advanced: ./configure --target-os=win64 --arch=x86_64 --toolchain=msvc --prefix=/c/Librerias/SUMOLibraries/FFMPEG-4.3.1_inst --enable-asm --enable-yasm --enable-shared --disable-static --enable-libx264 --enable-gpl --extra-ldflags="-LIBPATH:C:\Librerias\SUMOLibraries\3rdPartyLibs\x264-1.6.1\lib\" --extra-cflags="-IC:\Librerias\SUMOLibraries\3rdPartyLibs\x264-1.6.1\include\"
