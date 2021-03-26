@@ -88,6 +88,9 @@ CurlURLInputStream::CurlURLInputStream(const XMLURL& urlSource, const XMLNetHTTP
     curl_easy_setopt(fEasy, CURLOPT_FOLLOWLOCATION, (long)1);
     curl_easy_setopt(fEasy, CURLOPT_MAXREDIRS, (long)6);
 
+    // try native CA store for certificate verification on windows
+    curl_easy_setopt(fEasy, CURLOPT_SSL_OPTIONS, CURLSSLOPT_NATIVE_CA);
+
     // Add username and password if authentication is required
     const XMLCh *username = urlSource.getUser();
     const XMLCh *password = urlSource.getPassword();
