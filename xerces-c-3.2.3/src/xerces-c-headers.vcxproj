@@ -77,7 +77,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\CMake\share\cmake-3.18\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\CMake\share\cmake-3.18\Modules\CMakePackageConfigHelpers.cmake;C:\CMake\share\cmake-3.18\Modules\WriteBasicConfigVersionFile.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\XercesCConfig.cmake.in;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\version.rc.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\CMake\share\cmake-3.19\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\CMake\share\cmake-3.19\Modules\CMakePackageConfigHelpers.cmake;C:\CMake\share\cmake-3.19\Modules\WriteBasicConfigVersionFile.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\XercesCConfig.cmake.in;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\version.rc.cmake.in;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Librerias/SUMOLibraries/xerces-c-3.2.3/src/CMakeLists.txt</Message>
@@ -90,7 +90,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\CMake\share\cmake-3.18\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\CMake\share\cmake-3.18\Modules\CMakePackageConfigHelpers.cmake;C:\CMake\share\cmake-3.18\Modules\WriteBasicConfigVersionFile.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\XercesCConfig.cmake.in;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\version.rc.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\CMake\share\cmake-3.19\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\CMake\share\cmake-3.19\Modules\CMakePackageConfigHelpers.cmake;C:\CMake\share\cmake-3.19\Modules\WriteBasicConfigVersionFile.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\XercesCConfig.cmake.in;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\version.rc.cmake.in;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
     </CustomBuild>

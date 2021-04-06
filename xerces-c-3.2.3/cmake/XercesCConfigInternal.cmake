@@ -53,7 +53,7 @@ add_library(xerces_xerces-c SHARED IMPORTED)
 
 set_target_properties(xerces_xerces-c PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "wsock32.lib;\$<\$<NOT:\$<CONFIG:DEBUG>>:C:/Librerias/SUMOLibraries/3rdPartyLibs/curl-7.74.0/lib/libcurl-d_imp.lib>;\$<\$<CONFIG:DEBUG>:C:/Librerias/SUMOLibraries/3rdPartyLibs/curl-7.74.0/lib/libcurl_imp.lib>;Threads::Threads"
+  INTERFACE_LINK_LIBRARIES "wsock32.lib;\$<\$<NOT:\$<CONFIG:DEBUG>>:C:/Librerias/SUMOLibraries/3rdPartyLibs/curl-7.74.0/lib/libcurl_imp.lib>;\$<\$<CONFIG:DEBUG>:C:/Librerias/SUMOLibraries/3rdPartyLibs/curl-7.74.0/lib/libcurl-d_imp.lib>;Threads::Threads"
 )
 
 if(CMAKE_VERSION VERSION_LESS 2.8.12)

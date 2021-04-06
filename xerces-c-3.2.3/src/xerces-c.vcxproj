@@ -85,7 +85,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>wsock32.lib;C:\Librerias\SUMOLibraries\3rdPartyLibs\curl-7.74.0\lib\libcurl_imp.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>wsock32.lib;C:\Librerias\SUMOLibraries\3rdPartyLibs\curl-7.74.0\lib\libcurl-d_imp.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -129,7 +129,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>wsock32.lib;C:\Librerias\SUMOLibraries\3rdPartyLibs\curl-7.74.0\lib\libcurl-d_imp.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>wsock32.lib;C:\Librerias\SUMOLibraries\3rdPartyLibs\curl-7.74.0\lib\libcurl_imp.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -155,7 +155,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\CMake\share\cmake-3.18\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\CMake\share\cmake-3.18\Modules\CMakePackageConfigHelpers.cmake;C:\CMake\share\cmake-3.18\Modules\WriteBasicConfigVersionFile.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\XercesCConfig.cmake.in;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\version.rc.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\CMake\share\cmake-3.19\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\CMake\share\cmake-3.19\Modules\CMakePackageConfigHelpers.cmake;C:\CMake\share\cmake-3.19\Modules\WriteBasicConfigVersionFile.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\XercesCConfig.cmake.in;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\version.rc.cmake.in;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Librerias/SUMOLibraries/xerces-c-3.2.3/src/CMakeLists.txt</Message>
@@ -168,7 +168,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\CMake\share\cmake-3.18\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\CMake\share\cmake-3.18\Modules\CMakePackageConfigHelpers.cmake;C:\CMake\share\cmake-3.18\Modules\WriteBasicConfigVersionFile.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\XercesCConfig.cmake.in;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\version.rc.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\CMake\share\cmake-3.19\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\CMake\share\cmake-3.19\Modules\CMakePackageConfigHelpers.cmake;C:\CMake\share\cmake-3.19\Modules\WriteBasicConfigVersionFile.cmake;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\XercesCConfig.cmake.in;C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\xercesc\util\version.rc.cmake.in;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Librerias\SUMOLibraries\xerces-c-3.2.3\src\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
     </CustomBuild>
