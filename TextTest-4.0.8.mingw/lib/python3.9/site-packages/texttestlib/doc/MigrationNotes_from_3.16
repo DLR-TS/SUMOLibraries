@@ -1,0 +1,46 @@
+
+Nothing to migrate, but note the following behaviour changes:
+
+=========================================================
+CHANGES IN DEFAULT BEHAVIOUR (OR PROCEDURE)
+=========================================================
+
+(1) Accelerator for "Select"
+============================
+This used to be Ctrl+S but is now Ctrl+Alt+F. This is because it was added to the dynamic GUI
+where it would otherwise have clashed with the accelerator for "Save". Naturally you can reset
+it to whatever using the setting "gui_accelerators".
+
+(2) Selection tab: "Test paths containing" entry replaces "Test suites containing"
+==================================================================================
+(Also -ts flag on the command line)
+
+It basically works in the same way as before, but instead of searching the test suite path
+and selecting tests under it, it uses the whole test path. Also, it now supports separating
+the suite/test names with spaces as well as path separators. So before you could write
+
+suite/subsuite  (or ite/.*sui)
+
+which you still can, but you can also write
+
+suite/subsuite/test (or ite/.*sui.*/test)
+
+or 
+
+suite subsuite test 
+
+(3) Default directory to save selections to
+===========================================
+This always used to default to a temporary location. Now it defaults to a location under the test suite
+in the static GUI, unless files have already been saved in the temporary location. This is chiefly a workaround
+for a bug in GTK 2.16 and later.
+
+(4) Dynamic GUI colour scheme
+=============================
+The colours are somewhat more subtle than before. You can set "test_colours" and "file_colours" to restore
+the previous ones if you want to do that.
+
+(5) New test statuses "Initial filter" and "Final filter"
+=========================================================
+If you've set status-dependent values like "hide_test_category" or "test_colours" you'll probably want
+to add some values for these ones.

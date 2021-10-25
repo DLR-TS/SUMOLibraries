@@ -1,0 +1,32 @@
+
+
+=========================================================
+CHANGES IN DEFAULT BEHAVIOUR (OR PROCEDURE)
+=========================================================
+
+(1) Scripts that use batch session parameters
+=============================================
+There are several scripts which apply to batch mode data. These are
+
+batch.ArchiveRepository
+batch.CollectFiles (deprecated)
+batch.GenerateGraphs
+batch.GenerateSummaryPage
+
+All of these have had some way of referring to the batch session, usually as a script parameter (with different names for each). These are now removed. To supply the batch session for all of these, do it in the normal way, i.e. with the -b parameter. So for example
+
+texttest -s "batch.CollectFiles session=nightjob"
+
+will no longer work, and should now be done via
+
+texttest -s batch.CollectFiles -b nightjob
+
+(2) Default accelerator for "Remove Files" removed
+==================================================
+Up to 3.21, Ctrl+Delete has removed files, if any were selected, and tests if they were not. This was deemed confusing and had the side effect of preventing removal of tests if any files were selected.
+
+Ctrl+Delete will therefore now always try to remove the tests. This can be done also when files are selected. There is no longer any default accelerator for removing files, it has to be done with the popup menu.
+
+(3) performance_variation_% and performance_test_minimum when using SGE parallel environments
+=============================================================================================
+In the distant past it was decided that when a test ran in several processes (using SGE) performance measurement was less reliable and hence it was a good idea to multiply the limits by the number of processes run before comparing. This now seems arbitrary and confusing, so it is removed. It's obviously easy to recreate this for a specific test suite if desired.

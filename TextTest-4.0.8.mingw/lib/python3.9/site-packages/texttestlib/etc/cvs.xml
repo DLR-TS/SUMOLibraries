@@ -1,0 +1,90 @@
+<ui>
+
+  <menubar name="MainMenuBar">
+
+    <placeholder name="ExtraMenus">
+      <menu name="VCS Top Menu" action="CVSmenu">
+        <menuitem action="CVS Log"/>
+        <menuitem action="CVS Log Recursive"/>
+        <menuitem action="CVS Log Latest"/>
+        <separator/>
+        <menuitem action="CVS Difference"/>
+        <menuitem action="CVS Difference Recursive"/>
+        <menuitem action="CVS Filtered Difference"/>
+        <menuitem action="CVS Filtered Difference Recursive"/>
+        <separator/>
+        <menuitem action="CVS Status"/>
+        <menuitem action="CVS Status Recursive"/>
+        <separator/>
+        <menuitem action="CVS Annotate"/>
+        <menuitem action="CVS Annotate Recursive"/>
+        <separator/>
+        <menuitem action="CVS Add"/>
+        <menuitem action="CVS Add Recursive"/>
+        <separator/>
+        <menuitem action="CVS Update"/>
+      </menu>
+    </placeholder>
+
+  </menubar>
+
+  <popup name="TestPopupMenu">
+    <menu name="VCS Popup Menu" action="CVSmenu">
+      <menuitem action="CVS Log"/>
+      <menuitem action="CVS Log Recursive"/>
+      <menuitem action="CVS Log Latest"/>
+      <separator/>
+      <menuitem action="CVS Difference"/>
+      <menuitem action="CVS Difference Recursive"/>
+      <menuitem action="CVS Filtered Difference"/>
+      <menuitem action="CVS Filtered Difference Recursive"/>
+      <separator/>
+      <menuitem action="CVS Status"/>
+      <menuitem action="CVS Status Recursive"/>
+      <separator/>
+      <menuitem action="CVS Annotate"/>
+      <menuitem action="CVS Annotate Recursive"/>
+      <separator/>
+      <menuitem action="CVS Add"/>
+      <menuitem action="CVS Add Recursive"/>
+      <separator/>
+      <menuitem action="CVS Update"/>
+    </menu>
+  </popup>
+
+  <popup name="TestFilePopupMenu">
+    <menu name="VCS File Popup Menu" action="CVSmenu">
+      <menuitem action="CVS Log"/>
+      <menuitem action="CVS Log Recursive"/>
+      <menuitem action="CVS Log Latest"/>
+      <separator/>
+      <menuitem action="CVS Difference"/>
+      <menuitem action="CVS Difference Recursive"/>
+      <menuitem action="CVS Filtered Difference"/>
+      <menuitem action="CVS Filtered Difference Recursive"/>
+      <separator/>
+      <menuitem action="CVS Status"/>
+      <menuitem action="CVS Status Recursive"/>
+      <separator/>
+      <menuitem action="CVS Annotate"/>
+      <menuitem action="CVS Annotate Recursive"/>
+      <separator/>
+      <menuitem action="CVS Add"/>
+      <menuitem action="CVS Add Recursive"/>
+      <separator/>
+      <menuitem action="CVS Update"/>
+    </menu>
+  </popup>
+
+  <popup name="ConfigFilePopupMenu">
+    <menu name="VCS File Popup Menu" action="CVSmenu">
+      <menuitem action="CVS Log"/>
+      <menuitem action="CVS Log Latest"/>
+      <menuitem action="CVS Difference"/>
+      <menuitem action="CVS Status"/>
+      <menuitem action="CVS Annotate"/>
+      <menuitem action="CVS Add"/>
+    </menu>
+  </popup>
+
+</ui>
