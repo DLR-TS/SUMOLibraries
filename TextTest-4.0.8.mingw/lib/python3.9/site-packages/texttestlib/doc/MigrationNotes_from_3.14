@@ -1,0 +1,64 @@
+
+The main things that need migrating are version-specific "options" files. Otherwise there are a couple
+of changes in behaviour you might want to note.
+
+=========================================================
+COMPULSORY MIGRATION
+=========================================================
+(1) Versioned "options" files.
+
+TextTest 3.15 handles options files much more like e.g. "environment" files and "knownbugs" files have
+been handled up until now. It allows them to be placed in test suites and view them as cumulative, i.e. it attempts 
+to amalgamate them with each other. This breaks backward compatibility in the case where
+you have tests that contain both "options.app" and "options.app.v1" files. For example, if
+options.app contains "-a" and options.app.v1 contains "-b", then if you run version v1 of the
+test it will now run with "-a -b" rather than just "-b" as before.
+
+Many such versioned files simply add an extra option, if so you just need to delete the repeated options.
+The simplest way to restore backward compatibility is to add {CLEAR} to the beginning of the line,
+in which case all other options files will be ignored.
+
+You can also for example do {CLEAR -a} which in this case will have the same effect. See the guide
+to test suites on the website for more complete documentation of this new feature.
+
+(2) Bug system location no longer recognises "default"
+
+This was never intentionally supported, but it has previously worked to identify your only bug system
+(e.g. bugzilla here) with 
+
+bug_system_location:http://bugzilla.mysite.com
+
+or even
+
+[bug_system_location]
+default:http://bugzilla.mysite.com
+
+This will not work any more. You have to explicitly say what bug system it is, i.e. 
+
+[bug_system_location]
+bugzilla:http://bugzilla.mysite.com
+
+Hopefully anyone with any sense did that anyway, but just in case :)
+
+=========================================================
+CHANGES IN DEFAULT BEHAVIOUR (OR PROCEDURE)
+=========================================================
+
+(1) Dynamic GUI no longer writes to standard output directly
+============================================================
+It uses the logging mechanism like everything else. To restore the output by
+default, copy the log/logging.console file from the TextTest source tree to
+$TEXTTEST_PERSONAL_CONFIG/log/logging.gui (i.e. ~/.texttest/log/logging.gui 
+unless you repoint the personal configuration directory)
+
+(2) Data file configuration now lives under $TEXTTEST_PERSONAL_CONFIG/etc
+=========================================================================
+Also for consistency with the log layout. If you have .gtkrc-2.0 or .xml files
+for configuring the tool bar in your personal configuration, you'll need to move them
+to this subdirectory.
+
+(3) Default "debug" logging file now called logging.debug instead of log4py.conf
+================================================================================
+For consistency with the above. So you need to go to $TEXTTEST_PERSONAL_CONFIG/log if
+you have such a location and do this rename.
+

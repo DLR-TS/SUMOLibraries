@@ -1,0 +1,67 @@
+=========================================================
+COMPULSORY MIGRATION
+=========================================================
+
+(1) Mapping multiple files to one in "collate_file" now generates a warning
+===========================================================================
+If you have
+
+[collate_file]
+my_file:some/path/file*
+
+and the expansion matches more than one file created by the test, previously
+we have simply taken the first one and proceeded. Now, however, this situation 
+generates a warning.
+
+There are three ways to handle this problem:
+
+a) Change the pattern expansion to more specifically point out the file you want
+b) Change it to
+
+[collate_file]
+my_file*:some/path/file*
+
+so that all the files are collated and added, if multiple ones are present.
+c) Suppress the warning using "suppress_stderr_text".
+
+
+(2) auto_collapse_successful config file entry is no longer used
+================================================================
+You should just remove it
+
+========================================================
+CHANGE IN ENVIRONMENT
+========================================================
+
+
+=========================================================
+CHANGES IN DEFAULT BEHAVIOUR (OR PROCEDURE)
+=========================================================
+
+
+(1) All test categories except Failed are now invisible by default
+==================================================================
+You should use 'show_test_category' to unhide categories. 'hide_test_category' would now only be used for hiding Failed category.
+
+(2) batch_result_repository now stores succeeded tests in a single file
+======================================================================
+This should make the HTML report faster to generate. To migrate, run e.g.
+
+texttest -b <batch_session> -s batch.MigrateBatchRepository
+
+which will convert the existing repository. Otherwise, just archive from time to time, and the new format will be written,
+so gradually migration will occur anyway.
+
+(3) batch_result_repository will be automatically cleaned of old results
+========================================================================
+The default behaviour of -coll is now to remove all files it doesn't make use of.
+This reduces the possibilities of generating long-term data from the repositories, doing data mining etc, but keeps them in trim
+without needing to run batch.ArchiveRepository by hand from time to time.
+
+For people who want to keep more historical data, add the new --manualarchive flag when generating the web page, which restores the old
+behaviour.
+
+(4) When a viewer program is started in the dynamic GUI, the file is no longer deselected automatically.
+========================================================================================================
+This long-standing behaviour of TextTest annoyed some users, and being unable to find
+anyone to speak up for it, we have removed it.

@@ -1,0 +1,60 @@
+
+There is almost certainly no migration needed. There are very few GUI changes at all: version 3.12
+has concentrated on the HTML report and various internal things. A few things in TextTest 3.13
+will be different from 3.12 by default : this is worth a quick scan in case any of
+this applies to you.
+
+=========================================================
+CHANGES IN DEFAULT BEHAVIOUR (OR PROCEDURE)
+=========================================================
+
+(1) The HTML historical batch report now looks a bit different by default
+=========================================================================
+Instead of generating an "All" page it will generate one page per month. The basic point is
+to speed up generation of the pages once there is lots of data, as the older pages won't need
+to be regenerated. Also to avoid creating a huge All page that the browser can't really handle.
+
+If you really miss your All page the behaviour from 3.12 can be restored by setting the config
+file setting "historical_report_subpages" to "All".
+
+There are quite a few things you can do that you can't do before. You can specify your own subpages:
+the above is not a magic name: it just tells it to create a page called "All" with no filtering. You
+can also create pages for certain weekdays and with certain cutoffs back in time (as in the "Last Six
+Runs" page which is present by default). See the website for how to do this.
+
+(2) import_config_file now behaves like "import" in Python or #include in C
+===========================================================================
+The basic effect is that it is exactly equivalent to pasting the contents of the imported file into your 
+config file at that point.
+
+Obviously this isn't guaranteed to behave the same as in version 3.12, where settings in the config file always
+had priority over those in the imported file. Now it depends on where the file is imported which setting will be
+preferred in the case of a conflict.
+
+It's obviously more flexible (imported files can import other files, for example) and should be more
+intuitive but there's a small possibibility your config files aren't completely back-compatible.
+ 
+(3) The CVS browser is now enabled automatically if your tests are in CVS
+=========================================================================
+If you previously enabled it by setting "interactive_action_module:cvs" in your config file
+you should remove this line. It will be silently ignored (via a back-compatibility hack) but
+it may confuse future generations...
+
+(4) Command-line traffic matching algorithm improved and is a bit different
+===========================================================================
+If you've recorded command-line traffic and your tests don't reproduce the commands exactly,
+the procedure for finding the correct recorded traffic is a bit different. It will tend to prefer
+arguments to change than to disappear entirely now, which is reckoned to be preferable in general,
+especially with path names. It will also handle the TextTest sandbox directly, so if your traffic
+contains absolute paths there it should have an easier time matching up different sandbox paths.
+
+(5) Extra syntax checking on your config file
+=============================================
+It's possible you may get warnings/popups which you didn't get before. But hopefully you
+will deserve them... in particular mistakenly missing [end] markers will create warnings now.
+
+(6) TextTest's default location for its internal logging is now ~/.texttest/log
+===============================================================================
+Instead of $TEXTTEST_HOME/Diagnostics. But it is still configurable as before. The configuration file
+lives with the source in the log subdirectory and should probably be copied to the above location
+and edited as desired if you need to debug TextTest this way.
