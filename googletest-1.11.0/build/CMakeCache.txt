@@ -116,7 +116,7 @@ CMAKE_INSTALL_MANDIR:PATH=
 CMAKE_INSTALL_OLDINCLUDEDIR:PATH=/usr/include
 
 //Install path prefix, prepended onto install directories.
-CMAKE_INSTALL_PREFIX:PATH=C:/Program Files/googletest-distribution
+CMAKE_INSTALL_PREFIX:PATH=C:/Librerias/SUMOLibraries/googletest-1.11.0
 
 //Run-time variable data (LOCALSTATEDIR/run)
 CMAKE_INSTALL_RUNSTATEDIR:PATH=
@@ -474,7 +474,7 @@ FIND_PACKAGE_MESSAGE_DETAILS_Python:INTERNAL=[C:/Python38/python.exe][cfound com
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //CMAKE_INSTALL_PREFIX during last run
-_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=C:/Program Files/googletest-distribution
+_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=C:/Librerias/SUMOLibraries/googletest-1.11.0
 //Path to a program.
 _Python_EXECUTABLE:INTERNAL=C:/Python38/python.exe
 //Python Properties
