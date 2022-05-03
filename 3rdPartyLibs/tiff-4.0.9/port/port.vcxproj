@@ -116,9 +116,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <CustomBuild Include="C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\port\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/port/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Librerias/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/port/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-C:\CMake\bin\cmake.exe -SC:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9 -BC:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9 --check-stamp-file C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/port/CMakeFiles/generate.stamp
+C:\CMake\bin\cmake.exe -SC:/Librerias/SUMOLibraries/3rdPartyLibs/tiff-4.0.9 -BC:/Librerias/SUMOLibraries/3rdPartyLibs/tiff-4.0.9 --check-stamp-file C:/Librerias/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/port/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -129,9 +129,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\port\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/port/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Librerias/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/port/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-C:\CMake\bin\cmake.exe -SC:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9 -BC:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9 --check-stamp-file C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/port/CMakeFiles/generate.stamp
+C:\CMake\bin\cmake.exe -SC:/Librerias/SUMOLibraries/3rdPartyLibs/tiff-4.0.9 -BC:/Librerias/SUMOLibraries/3rdPartyLibs/tiff-4.0.9 --check-stamp-file C:/Librerias/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/port/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
