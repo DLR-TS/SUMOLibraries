@@ -4,10 +4,6 @@
     <PreferredToolArchitecture>x64</PreferredToolArchitecture>
   </PropertyGroup>
   <ItemGroup Label="ProjectConfigurations">
-    <ProjectConfiguration Include="Debug|x64">
-      <Configuration>Debug</Configuration>
-      <Platform>x64</Platform>
-    </ProjectConfiguration>
     <ProjectConfiguration Include="Release|x64">
       <Configuration>Release</Configuration>
       <Platform>x64</Platform>
@@ -22,11 +18,6 @@
     <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v143</PlatformToolset>
-  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
@@ -41,12 +32,6 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Librerias\SUMOLibraries\gl2ps-1.4.2\build\Debug\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">shared.dir\Debug\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">gl2ps</TargetName>
-    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
-    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
-    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Librerias\SUMOLibraries\gl2ps-1.4.2\build\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">shared.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">gl2ps</TargetName>
@@ -54,49 +39,6 @@
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
   </PropertyGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <ClCompile>
-      <AdditionalIncludeDirectories>C:\Librerias\SUMOLibraries\3rdPartyLibs\zlib-1.2.12\include;C:\Librerias\SUMOLibraries\3rdPartyLibs\libpng-1.6.37\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
-      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <ExceptionHandling>
-      </ExceptionHandling>
-      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
-      <Optimization>Disabled</Optimization>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
-      <UseFullPaths>false</UseFullPaths>
-      <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;GL2PSDLL;GL2PSDLL_EXPORTS;HAVE_NO_VSNPRINTF;HAVE_ZLIB;HAVE_PNG;CMAKE_INTDIR="Debug";shared_EXPORTS</PreprocessorDefinitions>
-      <ObjectFileName>$(IntDir)</ObjectFileName>
-    </ClCompile>
-    <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;GL2PSDLL;GL2PSDLL_EXPORTS;HAVE_NO_VSNPRINTF;HAVE_ZLIB;HAVE_PNG;CMAKE_INTDIR=\"Debug\";shared_EXPORTS</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Librerias\SUMOLibraries\3rdPartyLibs\zlib-1.2.12\include;C:\Librerias\SUMOLibraries\3rdPartyLibs\libpng-1.6.37\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ResourceCompile>
-    <Midl>
-      <AdditionalIncludeDirectories>C:\Librerias\SUMOLibraries\3rdPartyLibs\zlib-1.2.12\include;C:\Librerias\SUMOLibraries\3rdPartyLibs\libpng-1.6.37\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
-      <HeaderFileName>%(Filename).h</HeaderFileName>
-      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
-      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
-      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
-    </Midl>
-    <Link>
-      <AdditionalDependencies>opengl32.lib;glu32.lib;C:\Librerias\SUMOLibraries\3rdPartyLibs\zlib-1.2.12\lib\zlibd.lib;C:\Librerias\SUMOLibraries\3rdPartyLibs\libpng-1.6.37\lib\libpng16d.lib;C:\Librerias\SUMOLibraries\3rdPartyLibs\zlib-1.2.12\lib\zlibd.lib;C:\Librerias\SUMOLibraries\3rdPartyLibs\libpng-1.6.37\lib\libpng16d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Librerias/SUMOLibraries/gl2ps-1.4.2/build/Debug/gl2ps.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Librerias/SUMOLibraries/gl2ps-1.4.2/build/Debug/gl2ps.pdb</ProgramDataBaseFile>
-      <SubSystem>Console</SubSystem>
-    </Link>
-    <ProjectReference>
-      <LinkLibraryDependencies>false</LinkLibraryDependencies>
-    </ProjectReference>
-  </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>C:\Librerias\SUMOLibraries\3rdPartyLibs\zlib-1.2.12\include;C:\Librerias\SUMOLibraries\3rdPartyLibs\libpng-1.6.37\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -143,19 +85,6 @@
   <ItemGroup>
     <CustomBuild Include="C:\Librerias\SUMOLibraries\gl2ps-1.4.2\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Librerias/SUMOLibraries/gl2ps-1.4.2/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-C:\CMake\bin\cmake.exe -SC:/Librerias/SUMOLibraries/gl2ps-1.4.2 -BC:/Librerias/SUMOLibraries/gl2ps-1.4.2/build --check-stamp-file C:/Librerias/SUMOLibraries/gl2ps-1.4.2/build/CMakeFiles/generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\CMake\share\cmake-3.22\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.22\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.22\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.22\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.22\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.22\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.22\Modules\CPack.cmake;C:\CMake\share\cmake-3.22\Modules\CPackComponent.cmake;C:\CMake\share\cmake-3.22\Modules\CheckFunctionExists.cmake;C:\CMake\share\cmake-3.22\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\CMake\share\cmake-3.22\Modules\Compiler\MSVC-C.cmake;C:\CMake\share\cmake-3.22\Modules\FindGLUT.cmake;C:\CMake\share\cmake-3.22\Modules\FindLATEX.cmake;C:\CMake\share\cmake-3.22\Modules\FindOpenGL.cmake;C:\CMake\share\cmake-3.22\Modules\FindPNG.cmake;C:\CMake\share\cmake-3.22\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.22\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.22\Modules\FindPkgConfig.cmake;C:\CMake\share\cmake-3.22\Modules\FindZLIB.cmake;C:\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.22\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.22\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.22\Modules\SelectLibraryConfigurations.cmake;C:\CMake\share\cmake-3.22\Templates\CPackConfig.cmake.in;C:\Librerias\SUMOLibraries\gl2ps-1.4.2\build\CMakeFiles\3.22.0-rc2\CMakeCCompiler.cmake;C:\Librerias\SUMOLibraries\gl2ps-1.4.2\build\CMakeFiles\3.22.0-rc2\CMakeRCCompiler.cmake;C:\Librerias\SUMOLibraries\gl2ps-1.4.2\build\CMakeFiles\3.22.0-rc2\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Librerias\SUMOLibraries\gl2ps-1.4.2\build\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Librerias/SUMOLibraries/gl2ps-1.4.2/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
 C:\CMake\bin\cmake.exe -SC:/Librerias/SUMOLibraries/gl2ps-1.4.2 -BC:/Librerias/SUMOLibraries/gl2ps-1.4.2/build --check-stamp-file C:/Librerias/SUMOLibraries/gl2ps-1.4.2/build/CMakeFiles/generate.stamp
