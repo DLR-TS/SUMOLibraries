@@ -255,10 +255,10 @@ PNG_PREFIX:STRING=
 PNG_SHARED:BOOL=ON
 
 //Build static lib
-PNG_STATIC:BOOL=ON
+PNG_STATIC:BOOL=OFF
 
 //Build libpng tests
-PNG_TESTS:BOOL=OFF
+PNG_TESTS:BOOL=ON
 
 //Path to a file.
 ZLIB_INCLUDE_DIR:PATH=C:/Librerias/SUMOLibraries/3rdPartyLibs/zlib-1.2.12/include

@@ -14,11 +14,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{4B9411C9-066B-3B26-AAE9-B429762AE8D3}</ProjectGuid>
+    <ProjectGuid>{8DF58841-1D0F-38CE-9865-9B2B7965B994}</ProjectGuid>
     <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
     <Platform>x64</Platform>
-    <ProjectName>pngfix</ProjectName>
+    <ProjectName>pngimage</ProjectName>
     <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -42,14 +42,14 @@
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Librerias\SUMOLibraries\3rdPartyLibs\libpng-1.6.37\build\Debug\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pngfix.dir\Debug\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pngfix</TargetName>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pngimage.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pngimage</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Librerias\SUMOLibraries\3rdPartyLibs\libpng-1.6.37\build\Release\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">pngfix.dir\Release\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">pngfix</TargetName>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">pngimage.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">pngimage</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
@@ -89,8 +89,8 @@
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Librerias/SUMOLibraries/3rdPartyLibs/libpng-1.6.37/build/Debug/pngfix.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Librerias/SUMOLibraries/3rdPartyLibs/libpng-1.6.37/build/Debug/pngfix.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Librerias/SUMOLibraries/3rdPartyLibs/libpng-1.6.37/build/Debug/pngimage.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Librerias/SUMOLibraries/3rdPartyLibs/libpng-1.6.37/build/Debug/pngimage.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -132,8 +132,8 @@
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Librerias/SUMOLibraries/3rdPartyLibs/libpng-1.6.37/build/Release/pngfix.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Librerias/SUMOLibraries/3rdPartyLibs/libpng-1.6.37/build/Release/pngfix.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Librerias/SUMOLibraries/3rdPartyLibs/libpng-1.6.37/build/Release/pngimage.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Librerias/SUMOLibraries/3rdPartyLibs/libpng-1.6.37/build/Release/pngimage.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -172,7 +172,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Librerias\SUMOLibraries\3rdPartyLibs\libpng-1.6.37\contrib\tools\pngfix.c" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\3rdPartyLibs\libpng-1.6.37\contrib\libtests\pngimage.c" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:\Librerias\SUMOLibraries\3rdPartyLibs\libpng-1.6.37\build\ZERO_CHECK.vcxproj">

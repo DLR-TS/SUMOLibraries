@@ -16,7 +16,7 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 set(_targetsDefined)
 set(_targetsNotDefined)
 set(_expectedTargets)
-foreach(_expectedTarget png png_static)
+foreach(_expectedTarget png)
   list(APPEND _expectedTargets ${_expectedTarget})
   if(NOT TARGET ${_expectedTarget})
     list(APPEND _targetsNotDefined ${_expectedTarget})
@@ -53,13 +53,6 @@ endif()
 add_library(png SHARED IMPORTED)
 
 set_target_properties(png PROPERTIES
-  INTERFACE_LINK_LIBRARIES "\$<\$<NOT:\$<CONFIG:DEBUG>>:C:/Librerias/SUMOLibraries/3rdPartyLibs/zlib-1.2.12/lib/zlib.lib>;\$<\$<CONFIG:DEBUG>:C:/Librerias/SUMOLibraries/3rdPartyLibs/zlib-1.2.12/lib/zlibd.lib>"
-)
-
-# Create imported target png_static
-add_library(png_static STATIC IMPORTED)
-
-set_target_properties(png_static PROPERTIES
   INTERFACE_LINK_LIBRARIES "\$<\$<NOT:\$<CONFIG:DEBUG>>:C:/Librerias/SUMOLibraries/3rdPartyLibs/zlib-1.2.12/lib/zlib.lib>;\$<\$<CONFIG:DEBUG>:C:/Librerias/SUMOLibraries/3rdPartyLibs/zlib-1.2.12/lib/zlibd.lib>"
 )
 
