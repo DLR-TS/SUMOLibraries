@@ -257,11 +257,11 @@ INCLUDE_GNM_FRMTS = YES
 #SETARGV =	"D:\Software\VStudio\VC98\lib\wsetargv.obj"
 
 # PROJ stuff (required dependency: PROJ >= 6)
-PROJ_INCLUDE = -IC:\Librerias\SUMOLibraries\proj-8.1.1\include
+PROJ_INCLUDE = -IC:\Librerias\SUMOLibraries\proj-9.0.0\include
 # Note: add shell32.lib is needed starting with PROJ 7.0 in some circumstances
 # for static linking. See https://github.com/OSGeo/gdal/issues/2488
 # And ole32.lib also since PROJ 7.1 (see https://github.com/OSGeo/gdal/issues/2743)
-PROJ_LIBRARY = C:\Librerias\SUMOLibraries\proj-8.1.1\lib\proj.lib shell32.lib ole32.lib
+PROJ_LIBRARY = C:\Librerias\SUMOLibraries\proj-9.0.0\lib\proj.lib shell32.lib ole32.lib
 
 # Uncomment to build with libiconv library to support extended character
 # recoding capabilities. GDAL's internal stub implementation supports
@@ -270,10 +270,10 @@ PROJ_LIBRARY = C:\Librerias\SUMOLibraries\proj-8.1.1\lib\proj.lib shell32.lib ol
 # const or leave it empty. Take a look on your iconv() declaration in iconv.h.
 # If the second parameter declared as const char** then you need to define
 # ICONV_CONST=const otherwise leave it empty.
-#LIBICONV_DIR = "C:\Program Files\GnuWin32"
-#LIBICONV_INCLUDE = -I$(LIBICONV_DIR)\include
-#LIBICONV_LIBRARY = $(LIBICONV_DIR)\lib\libiconv.lib
-#LIBICONV_CFLAGS = -DICONV_CONST=const
+LIBICONV_DIR = "C:\Librerias\SUMOLibraries\3rdPartyLibs\libiconv-1.16"
+LIBICONV_INCLUDE = -I$(LIBICONV_DIR)\include
+LIBICONV_LIBRARY = $(LIBICONV_DIR)\lib\libiconv.lib
+LIBICONV_CFLAGS = -DICONV_CONST=
 
 # Comment out the following to disable BSB support.
 !IFNDEF BSB_SUPPORTED
@@ -319,8 +319,8 @@ JPEG_LIB = C:\Librerias\SUMOLibraries\3rdPartyLibs\jpeg-9c\lib\jpeg.lib
 
 #if using an external png library uncomment the following lines
 PNG_EXTERNAL_LIB = 1
-PNGDIR = C:\Librerias\SUMOLibraries\3rdPartyLibs\libpng-1.6.34
-PNG_LIB = C:\Librerias\SUMOLibraries\3rdPartyLibs\libpng-1.6.34\lib\libpng16.lib
+PNGDIR = C:\Librerias\SUMOLibraries\3rdPartyLibs\libpng-1.6.37\include
+PNG_LIB = C:\Librerias\SUMOLibraries\3rdPartyLibs\libpng-1.6.37\lib\libpng16.lib
 
 # if using an external libtiff library. Must be libtiff >= 4.0
 TIFF_INC =	-IC:\Librerias\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\include
@@ -650,19 +650,21 @@ INGRES_LIB = "$(INGRES_HOME)\lib\iilibapi.lib" \
 
 
 # SQLite Libraries
-SQLITE_INC=-IC:\Librerias\SUMOLibraries\3rdPartyLibs\sqlite-3.3.0
-SQLITE_LIB=C:\Librerias\SUMOLibraries\3rdPartyLibs\sqlite-3.3.0\sqlite3.lib
+SQLITE_INC = -IC:\Librerias\SUMOLibraries\3rdPartyLibs\sqlite-3.3.0
+SQLITE_LIB = C:\Librerias\SUMOLibraries\3rdPartyLibs\sqlite-3.3.0\sqlite3.lib
 # For spatialite support, try this instead (assuming you grab the libspatialite-amalgamation-2.3.1 and installed it in osgeo4w):
 # The -DSPATIALITE_AMALGAMATION, which cause "spatialite/sqlite3.h" to be included instead of "sqlite3.h" might not be necessary
 # depending on the layout of the include directories. In case of compilation errors, remove it.
 # For RasterLite2 support, add something like -Ic:\install-rl2\include -DHAVE_RASTERLITE2
-#SQLITE_INC=-IC:\osgeo4w\include -DHAVE_SPATIALITE -DSPATIALITE_AMALGAMATION
+SQLITE_INC = -IC:\Librerias\SUMOLibraries\3rdPartyLibs\sqlite-3.3.0 \
+		     -IC:\Librerias\SUMOLibraries\spatialite-5.0.1\include -DHAVE_SPATIALITE
 # For RasterLite2 support, add something like c:\install-rl2\lib\librasterlite2.lib
-#SQLITE_LIB=C:\osgeo4w\lib\spatialite_i.lib
+SQLITE_LIB = C:\Librerias\SUMOLibraries\spatialite-5.0.1\lib\spatialite_i.lib \
+			 C:\Librerias\SUMOLibraries\3rdPartyLibs\sqlite-3.3.0\sqlite3.lib
 # Uncomment following line if libsqlite3 has been compiled with SQLITE_HAS_COLUMN_METADATA=yes
 #SQLITE_HAS_COLUMN_METADATA=yes
 # Uncomment following line if spatialite is 4.1.2 or later
-#SPATIALITE_412_OR_LATER=yes
+SPATIALITE_412_OR_LATER=yes
 
 # PCRE Library (REGEXP support for SQLite) for example from http://sourceforge.net/projects/gnuwin32/files/pcre/7.0/pcre-7.0.exe/download
 #PCRE_INC=-I"C:\Program Files\GNUWin32\include" -DHAVE_PCRE
@@ -738,10 +740,10 @@ OCI_INCLUDE =	-I$(ORACLE_HOME)\oci\include
 
 # Uncomment to use libcurl (DLL by default)
 # The cURL library is used for WCS, WMS, GeoJSON, SRS call importFromUrl(), WFS, CouchDB, /vsicurl/ etc.
-CURL_DIR=C:/Librerias/SUMOLibraries/3rdPartyLibs/curl-7.74.0
-CURL_INC = -IC:/Librerias/SUMOLibraries/3rdPartyLibs/curl-7.74.0/include
+CURL_DIR=C:\Librerias\SUMOLibraries\3rdPartyLibs\curl-7.83.0
+CURL_INC = -IC:\Librerias\SUMOLibraries\3rdPartyLibs\curl-7.83.0/include
 # Uncomment following line to use libcurl as dynamic library
-CURL_LIB = C:\Librerias\SUMOLibraries\3rdPartyLibs\curl-7.74.0\lib\libcurl_imp.lib wsock32.lib wldap32.lib winmm.lib
+CURL_LIB = C:\Librerias\SUMOLibraries\3rdPartyLibs\curl-7.83.0\lib\libcurl_imp.lib wsock32.lib wldap32.lib winmm.lib
 # Uncomment following two lines to use libcurl as static library
 #CURL_LIB = $(CURL_DIR)/libcurl.lib wsock32.lib wldap32.lib winmm.lib
 #CURL_CFLAGS = -DCURL_STATICLIB
@@ -753,9 +755,9 @@ CURL_LIB = C:\Librerias\SUMOLibraries\3rdPartyLibs\curl-7.74.0\lib\libcurl_imp.l
 #DODS_FLAGS = -DLIBDAP_39
 
 # Uncomment for GEOS support (GEOS >= 3.1.0 required)
-#GEOS_DIR=C:/warmerda/geos
-#GEOS_CFLAGS = -I$(GEOS_DIR)/capi -I$(GEOS_DIR)/source/headers -DHAVE_GEOS
-#GEOS_LIB     = $(GEOS_DIR)/source/geos_c_i.lib
+GEOS_DIR=C:\Librerias\SUMOLibraries\3rdPartyLibs\geos-3.10.2
+GEOS_CFLAGS = -I$(GEOS_DIR)/capi -I$(GEOS_DIR)/include -DHAVE_GEOS
+GEOS_LIB     = $(GEOS_DIR)/lib/geos_c.lib
 
 # Uncomment for SOSI support
 #SOSI_PLUGIN = YES
@@ -772,8 +774,8 @@ CURL_LIB = C:\Librerias\SUMOLibraries\3rdPartyLibs\curl-7.74.0\lib\libcurl_imp.l
 
 #if using an external zlib uncomment the following lines
 ZLIB_EXTERNAL_LIB = 1
-ZLIB_INC = -IC:\Librerias\SUMOLibraries\3rdPartyLibs\zlib-1.2.11\include
-ZLIB_LIB = C:\Librerias\SUMOLibraries\3rdPartyLibs\zlib-1.2.11\lib\zlib.lib
+ZLIB_INC = -IC:\Librerias\SUMOLibraries\3rdPartyLibs\zlib-1.2.12\include
+ZLIB_LIB = C:\Librerias\SUMOLibraries\3rdPartyLibs\zlib-1.2.12\lib\zlib.lib
 
 # Uncomment for libdeflate support (still requires zlib in some cases)
 #LIBDEFLATE_CFLAGS = -Ie:/dev/install-libdeflate-1.6/include
@@ -840,8 +842,9 @@ ZLIB_LIB = C:\Librerias\SUMOLibraries\3rdPartyLibs\zlib-1.2.11\lib\zlib.lib
 #WEBP_LIBS = e:/libwebp-0.1-windows/dev/lib/libwebp_a.lib
 
 # Uncomment for libxml2 support (for cpl_xml_validate.cpp routines, used optionally by the GML driver)
-#LIBXML2_INC = -Iz:\home\even\release-1500-dev\release-1500\include
-#LIBXML2_LIB = z:\home\even\release-1500-dev\release-1500\lib\libxml2.lib
+LIBXML2_INC = -I$(LIBICONV_DIR)\include \
+			  -IC:\Librerias\SUMOLibraries\3rdPartyLibs\libxml2-2.9.3\include\libxml2
+LIBXML2_LIB = C:\Librerias\SUMOLibraries\3rdPartyLibs\libxml2-2.9.3\lib\libxml2.lib
 
 # Uncomment for freexl support
 #
@@ -850,8 +853,8 @@ ZLIB_LIB = C:\Librerias\SUMOLibraries\3rdPartyLibs\zlib-1.2.11\lib\zlib.lib
 # cl /c src/freexl.c /Iheaders /IE:\release-1500-dev\release-1500\include /DDLL_EXPORT
 # link /dll E:\release-1500-dev\release-1500\lib\iconv.lib freexl.obj /out:freexl.dll /implib:freexl_i.lib
 #
-#FREEXL_CFLAGS = -Ie:/freexl-1.0.0a/headers
-#FREEXL_LIBS = e:/freexl-1.0.0a/freexl_i.lib
+FREEXL_CFLAGS = -IC:\Librerias\SUMOLibraries\3rdPartyLibs\freexl-1.0.6\include
+FREEXL_LIBS = C:\Librerias\SUMOLibraries\3rdPartyLibs\freexl-1.0.6\lib/freexl_i.lib
 
 # Uncomment for libgta support
 #

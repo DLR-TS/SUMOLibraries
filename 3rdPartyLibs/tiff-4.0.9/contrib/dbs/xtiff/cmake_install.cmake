@@ -1,4 +1,4 @@
-# Install script for directory: C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/contrib/dbs/xtiff
+# Install script for directory: C:/Librerias/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/contrib/dbs/xtiff
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
