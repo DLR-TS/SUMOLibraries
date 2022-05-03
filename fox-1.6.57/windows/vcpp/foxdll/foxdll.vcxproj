@@ -156,7 +156,7 @@
       <WarningLevel>Level3</WarningLevel>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <AdditionalIncludeDirectories>..\..\..\include;C:\Librerias\SUMOLibraries\3rdPartyLibs\bzip2-1.0.6;C:\Librerias\SUMOLibraries\3rdPartyLibs\zlib-1.2.12\include;C:\Librerias\SUMOLibraries\3rdPartyLibs\jpeg-9c;C:\Librerias\SUMOLibraries\3rdPartyLibs\libpng-1.6.34;C:\Librerias\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\include;C:\Librerias\SUMOLibraries\3rdPartyLibs\bzip2-1.0.6;C:\Librerias\SUMOLibraries\3rdPartyLibs\zlib-1.2.12\include;C:\Librerias\SUMOLibraries\3rdPartyLibs\jpeg-9c;C:\Librerias\SUMOLibraries\3rdPartyLibs\libpng-1.6.37\include;C:\Librerias\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;HAVE_ZLIB_H;HAVE_BZ2LIB_H;HAVE_TIFF_H;HAVE_PNG_H;HAVE_JPEG_H;WIN32;_DEBUG;_WINDOWS;UNICODE;_USRDLL;FOXDLL;FOXDLL_EXPORTS;HAVE_GL_H;HAVE_GLU_H;HAVE_VSSCANF;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
       <PrecompiledHeaderOutputFile>.\Debug\foxdll.pch</PrecompiledHeaderOutputFile>
@@ -185,7 +185,7 @@
       <SubSystem>Console</SubSystem>
       <OutputFile>..\..\..\lib\FOXDLLD-1.6.dll</OutputFile>
       <ImportLibrary>.\..\..\..\lib\FOXDLLD-1.6.lib</ImportLibrary>
-      <AdditionalDependencies>C:\Librerias\SUMOLibraries\3rdPartyLibs\bzip2-1.0.6\lib\libbz2.lib;C:\Librerias\SUMOLibraries\3rdPartyLibs\zlib-1.2.12\lib\zlibd.lib;C:\Librerias\SUMOLibraries\3rdPartyLibs\libpng-1.6.34\lib\libpng16d.lib;C:\Librerias\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\lib\tiffd.lib;C:\Librerias\SUMOLibraries\3rdPartyLibs\jpeg-9c\lib\jpeg.lib;opengl32.lib;glu32.lib;comctl32.lib;wsock32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>C:\Librerias\SUMOLibraries\3rdPartyLibs\bzip2-1.0.6\lib\libbz2.lib;C:\Librerias\SUMOLibraries\3rdPartyLibs\zlib-1.2.12\lib\zlibd.lib;C:\Librerias\SUMOLibraries\3rdPartyLibs\libpng-1.6.37\lib\libpng16d.lib;C:\Librerias\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\lib\tiffd.lib;C:\Librerias\SUMOLibraries\3rdPartyLibs\jpeg-9c\lib\jpeg.lib;opengl32.lib;glu32.lib;comctl32.lib;wsock32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ProgramDatabaseFile>..\..\..\lib\FOXDLLD-1.6.pdb</ProgramDatabaseFile>
       <GenerateMapFile>false</GenerateMapFile>
       <AssemblyDebug>true</AssemblyDebug>
@@ -246,7 +246,7 @@
       <IntrinsicFunctions>false</IntrinsicFunctions>
       <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
       <StringPooling>true</StringPooling>
-      <AdditionalIncludeDirectories>..\..\..\include;C:\Librerias\SUMOLibraries\3rdPartyLibs\bzip2-1.0.6;C:\Librerias\SUMOLibraries\3rdPartyLibs\zlib-1.2.12\include;C:\Librerias\SUMOLibraries\3rdPartyLibs\jpeg-9c;C:\Librerias\SUMOLibraries\3rdPartyLibs\libpng-1.6.34;C:\Librerias\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\include;C:\Librerias\SUMOLibraries\3rdPartyLibs\bzip2-1.0.6;C:\Librerias\SUMOLibraries\3rdPartyLibs\zlib-1.2.12\include;C:\Librerias\SUMOLibraries\3rdPartyLibs\jpeg-9c;C:\Librerias\SUMOLibraries\3rdPartyLibs\libpng-1.6.37\include;C:\Librerias\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;HAVE_ZLIB_H;HAVE_BZ2LIB_H;HAVE_TIFF_H;HAVE_PNG_H;HAVE_JPEG_H;WIN32;NDEBUG;_WINDOWS;UNICODE;_USRDLL;FOXDLL;FOXDLL_EXPORTS;HAVE_GL_H;HAVE_GLU_H;HAVE_VSSCANF;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
       <PrecompiledHeaderOutputFile>.\Release\foxdll.pch</PrecompiledHeaderOutputFile>
@@ -273,7 +273,7 @@
       <SubSystem>Console</SubSystem>
       <OutputFile>..\..\..\lib\FOXDLL-1.6.dll</OutputFile>
       <ImportLibrary>.\..\..\..\lib\FOXDLL-1.6.lib</ImportLibrary>
-      <AdditionalDependencies>C:\Librerias\SUMOLibraries\3rdPartyLibs\bzip2-1.0.6\lib\libbz2.lib;C:\Librerias\SUMOLibraries\3rdPartyLibs\zlib-1.2.12\lib\zlib.lib;C:\Librerias\SUMOLibraries\3rdPartyLibs\libpng-1.6.34\lib\libpng16.lib;C:\Librerias\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\lib\tiff.lib;C:\Librerias\SUMOLibraries\3rdPartyLibs\jpeg-9c\lib\jpeg.lib;opengl32.lib;glu32.lib;comctl32.lib;wsock32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>C:\Librerias\SUMOLibraries\3rdPartyLibs\bzip2-1.0.6\lib\libbz2.lib;C:\Librerias\SUMOLibraries\3rdPartyLibs\zlib-1.2.12\lib\zlib.lib;C:\Librerias\SUMOLibraries\3rdPartyLibs\libpng-1.6.37\lib\libpng16.lib;C:\Librerias\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\lib\tiff.lib;C:\Librerias\SUMOLibraries\3rdPartyLibs\jpeg-9c\lib\jpeg.lib;opengl32.lib;glu32.lib;comctl32.lib;wsock32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ProgramDatabaseFile>..\..\..\lib\FOXDLL-1.6.pdb</ProgramDatabaseFile>
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
       <GenerateMapFile>false</GenerateMapFile>
