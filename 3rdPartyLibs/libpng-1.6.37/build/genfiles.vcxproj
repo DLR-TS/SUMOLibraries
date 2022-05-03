@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{49CBF460-F979-3AC5-9011-06368CFD0D86}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>genfiles</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Librerias\SUMOLibraries\3rdPartyLibs\zlib-1.2.12\include;C:\Librerias\SUMOLibraries\3rdPartyLibs\libpng-1.6.37\build;C:\Librerias\SUMOLibraries\3rdPartyLibs\libpng-1.6.37;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Librerias\SUMOLibraries\3rdPartyLibs\zlib-1.2.12\include;C:\Librerias\SUMOLibraries\3rdPartyLibs\libpng-1.6.37\build;C:\Librerias\SUMOLibraries\3rdPartyLibs\libpng-1.6.37;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Librerias\SUMOLibraries\3rdPartyLibs\libpng-1.6.37\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Librerias/SUMOLibraries/3rdPartyLibs/libpng-1.6.37/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\CMake\bin\cmake.exe -SC:/Librerias/SUMOLibraries/3rdPartyLibs/libpng-1.6.37 -BC:/Librerias/SUMOLibraries/3rdPartyLibs/libpng-1.6.37/build --check-stamp-file C:/Librerias/SUMOLibraries/3rdPartyLibs/libpng-1.6.37/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\CMake\share\cmake-3.22\Modules\CMakeASMInformation.cmake;C:\CMake\share\cmake-3.22\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.22\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.22\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.22\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.22\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.22\Modules\CMakeParseArguments.cmake;C:\CMake\share\cmake-3.22\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.22\Modules\CheckCSourceCompiles.cmake;C:\CMake\share\cmake-3.22\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\CMake\share\cmake-3.22\Modules\Compiler\MSVC-ASM.cmake;C:\CMake\share\cmake-3.22\Modules\Compiler\MSVC-C.cmake;C:\CMake\share\cmake-3.22\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.22\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.22\Modules\FindZLIB.cmake;C:\CMake\share\cmake-3.22\Modules\GNUInstallDirs.cmake;C:\CMake\share\cmake-3.22\Modules\Internal\CheckSourceCompiles.cmake;C:\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.22\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.22\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.22\Modules\SelectLibraryConfigurations.cmake;C:\Librerias\SUMOLibraries\3rdPartyLibs\libpng-1.6.37\build\CMakeFiles\3.22.0-rc2\CMakeASMCompiler.cmake;C:\Librerias\SUMOLibraries\3rdPartyLibs\libpng-1.6.37\build\CMakeFiles\3.22.0-rc2\CMakeCCompiler.cmake;C:\Librerias\SUMOLibraries\3rdPartyLibs\libpng-1.6.37\build\CMakeFiles\3.22.0-rc2\CMakeRCCompiler.cmake;C:\Librerias\SUMOLibraries\3rdPartyLibs\libpng-1.6.37\build\CMakeFiles\3.22.0-rc2\CMakeSystem.cmake;C:\Librerias\SUMOLibraries\3rdPartyLibs\libpng-1.6.37\scripts\genchk.cmake.in;C:\Librerias\SUMOLibraries\3rdPartyLibs\libpng-1.6.37\scripts\genout.cmake.in;C:\Librerias\SUMOLibraries\3rdPartyLibs\libpng-1.6.37\scripts\gensrc.cmake.in;C:\Librerias\SUMOLibraries\3rdPartyLibs\libpng-1.6.37\scripts\pnglibconf.h.prebuilt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Librerias\SUMOLibraries\3rdPartyLibs\libpng-1.6.37\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Librerias/SUMOLibraries/3rdPartyLibs/libpng-1.6.37/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\CMake\bin\cmake.exe -SC:/Librerias/SUMOLibraries/3rdPartyLibs/libpng-1.6.37 -BC:/Librerias/SUMOLibraries/3rdPartyLibs/libpng-1.6.37/build --check-stamp-file C:/Librerias/SUMOLibraries/3rdPartyLibs/libpng-1.6.37/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\CMake\share\cmake-3.22\Modules\CMakeASMInformation.cmake;C:\CMake\share\cmake-3.22\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.22\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.22\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.22\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.22\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.22\Modules\CMakeParseArguments.cmake;C:\CMake\share\cmake-3.22\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.22\Modules\CheckCSourceCompiles.cmake;C:\CMake\share\cmake-3.22\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\CMake\share\cmake-3.22\Modules\Compiler\MSVC-ASM.cmake;C:\CMake\share\cmake-3.22\Modules\Compiler\MSVC-C.cmake;C:\CMake\share\cmake-3.22\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.22\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.22\Modules\FindZLIB.cmake;C:\CMake\share\cmake-3.22\Modules\GNUInstallDirs.cmake;C:\CMake\share\cmake-3.22\Modules\Internal\CheckSourceCompiles.cmake;C:\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.22\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.22\Modules\Platform\WindowsPaths.cmake;C:\CMake\share\cmake-3.22\Modules\SelectLibraryConfigurations.cmake;C:\Librerias\SUMOLibraries\3rdPartyLibs\libpng-1.6.37\build\CMakeFiles\3.22.0-rc2\CMakeASMCompiler.cmake;C:\Librerias\SUMOLibraries\3rdPartyLibs\libpng-1.6.37\build\CMakeFiles\3.22.0-rc2\CMakeCCompiler.cmake;C:\Librerias\SUMOLibraries\3rdPartyLibs\libpng-1.6.37\build\CMakeFiles\3.22.0-rc2\CMakeRCCompiler.cmake;C:\Librerias\SUMOLibraries\3rdPartyLibs\libpng-1.6.37\build\CMakeFiles\3.22.0-rc2\CMakeSystem.cmake;C:\Librerias\SUMOLibraries\3rdPartyLibs\libpng-1.6.37\scripts\genchk.cmake.in;C:\Librerias\SUMOLibraries\3rdPartyLibs\libpng-1.6.37\scripts\genout.cmake.in;C:\Librerias\SUMOLibraries\3rdPartyLibs\libpng-1.6.37\scripts\gensrc.cmake.in;C:\Librerias\SUMOLibraries\3rdPartyLibs\libpng-1.6.37\scripts\pnglibconf.h.prebuilt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Librerias\SUMOLibraries\3rdPartyLibs\libpng-1.6.37\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\3rdPartyLibs\libpng-1.6.37\build\ZERO_CHECK.vcxproj">
+      <Project>{AB5DE632-12C7-3A1C-8CAB-0D6787FB6AAE}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
