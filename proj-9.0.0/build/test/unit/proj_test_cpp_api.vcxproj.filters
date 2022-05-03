@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\proj-9.0.0\test\unit\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\proj-9.0.0\test\unit\test_util.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\proj-9.0.0\test\unit\test_common.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\proj-9.0.0\test\unit\test_crs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\proj-9.0.0\test\unit\test_metadata.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\proj-9.0.0\test\unit\test_io.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\proj-9.0.0\test\unit\test_operation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\proj-9.0.0\test\unit\test_operationfactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\proj-9.0.0\test\unit\test_datum.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\proj-9.0.0\test\unit\test_factory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\proj-9.0.0\test\unit\test_c_api.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\proj-9.0.0\test\unit\test_grids.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Librerias\SUMOLibraries\proj-9.0.0\test\unit\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{7B43B114-E14C-37EA-80BB-099A4354F311}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
