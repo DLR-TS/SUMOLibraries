@@ -21,15 +21,15 @@ BIBER_COMPILER:FILEPATH=C:/MiKTeX/miktex/bin/x64/biber.exe
 BIBTEX_COMPILER:FILEPATH=C:/MiKTeX/miktex/bin/x64/bibtex.exe
 
 //Path to a program.
-CMAKE_AR:FILEPATH=C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.31.31103/bin/Hostx64/x64/lib.exe
+CMAKE_AR:FILEPATH=C:/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.32.31326/bin/Hostx64/x64/lib.exe
 
 //Choose build type
-CMAKE_BUILD_TYPE:STRING=Release
+CMAKE_BUILD_TYPE:STRING=RelWithDebInfo
 
 //Semicolon separated list of supported configuration types, only
 // supports Debug, Release, MinSizeRel, and RelWithDebInfo, anything
 // else will be ignored.
-CMAKE_CONFIGURATION_TYPES:STRING=Release
+CMAKE_CONFIGURATION_TYPES:STRING=RelWithDebInfo
 
 //Flags used by the C compiler during all build types.
 CMAKE_C_FLAGS:STRING=/DWIN32 /D_WINDOWS /W3
@@ -68,7 +68,7 @@ CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=/debug /INCREMENTAL
 CMAKE_INSTALL_PREFIX:PATH=C:/Librerias/SUMOLibraries/gl2ps-1.4.2
 
 //Path to a program.
-CMAKE_LINKER:FILEPATH=C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.31.31103/bin/Hostx64/x64/link.exe
+CMAKE_LINKER:FILEPATH=C:/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.32.31326/bin/Hostx64/x64/link.exe
 
 //Flags used by the linker during the creation of modules during
 // all build types.
@@ -195,13 +195,13 @@ GHOSTSCRIPT_LIBRARY_PATH:PATH=GHOSTSCRIPT_LIBRARY_PATH-NOTFOUND
 GL2PS_EXTRA_VERSION:STRING=
 
 //Path to a file.
-GLUT_INCLUDE_DIR:PATH=GLUT_INCLUDE_DIR-NOTFOUND
+GLUT_INCLUDE_DIR:PATH=
 
 //Path to a library.
-GLUT_glut_LIBRARY_DEBUG:FILEPATH=GLUT_glut_LIBRARY_DEBUG-NOTFOUND
+GLUT_glut_LIBRARY_DEBUG:FILEPATH=
 
 //Path to a library.
-GLUT_glut_LIBRARY_RELEASE:FILEPATH=GLUT_glut_LIBRARY_RELEASE-NOTFOUND
+GLUT_glut_LIBRARY_RELEASE:FILEPATH=
 
 //Path to a program.
 HTLATEX_COMPILER:FILEPATH=C:/MiKTeX/miktex/bin/x64/htlatex.exe
@@ -338,7 +338,7 @@ CMAKE_EXTRA_GENERATOR:INTERNAL=
 //Name of generator.
 CMAKE_GENERATOR:INTERNAL=Visual Studio 17 2022
 //Generator instance identifier.
-CMAKE_GENERATOR_INSTANCE:INTERNAL=C:/Program Files/Microsoft Visual Studio/2022/Community
+CMAKE_GENERATOR_INSTANCE:INTERNAL=C:/Microsoft Visual Studio/2022/Community
 //Name of generator platform.
 CMAKE_GENERATOR_PLATFORM:INTERNAL=
 //Name of generator toolset.
@@ -411,6 +411,8 @@ CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 DVIPDF_CONVERTER-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: DVIPS_CONVERTER
 DVIPS_CONVERTER-ADVANCED:INTERNAL=1
+//Details about finding GLUT
+FIND_PACKAGE_MESSAGE_DETAILS_GLUT:INTERNAL=[C:/Windows Kits/10/Lib/10.0.19041.0/um/x64/GlU32.Lib][C:/Windows Kits/10/Include/10.0.19041.0/um][v()]
 //Details about finding LATEX
 FIND_PACKAGE_MESSAGE_DETAILS_LATEX:INTERNAL=[C:/MiKTeX/miktex/bin/x64/latex.exe][c ][v()]
 //Details about finding OpenGL
