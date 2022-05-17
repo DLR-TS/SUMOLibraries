@@ -180,16 +180,16 @@ DVIPDF_CONVERTER:FILEPATH=C:/MiKTeX/miktex/bin/x64/dvipdfm.exe
 DVIPS_CONVERTER:FILEPATH=C:/MiKTeX/miktex/bin/x64/dvips.exe
 
 //Enable PNG support
-ENABLE_PNG:BOOL=ON
+ENABLE_PNG:BOOL=OFF
 
 //Enable compression using ZLIB
 ENABLE_ZLIB:BOOL=ON
 
 //Path to the GhostScript binary directory.
-GHOSTSCRIPT_BINARY_PATH:PATH=GHOSTSCRIPT_BINARY_PATH-NOTFOUND
+GHOSTSCRIPT_BINARY_PATH:PATH=C:/Librerias/gs9.56.1/bin
 
 //Path to the GhostScript library directory.
-GHOSTSCRIPT_LIBRARY_PATH:PATH=GHOSTSCRIPT_LIBRARY_PATH-NOTFOUND
+GHOSTSCRIPT_LIBRARY_PATH:PATH=C:/Librerias/gs9.56.1/lib
 
 //GL2PS extra version string
 GL2PS_EXTRA_VERSION:STRING=
@@ -282,7 +282,7 @@ gl2ps_IS_TOP_LEVEL:STATIC=ON
 gl2ps_SOURCE_DIR:STATIC=C:/Librerias/SUMOLibraries/gl2ps-1.4.2
 
 //Dependencies for the target
-shared_LIB_DEPENDS:STATIC=general;opengl32;general;glu32;optimized;C:/Librerias/SUMOLibraries/3rdPartyLibs/zlib-1.2.12/lib/zlib.lib;debug;C:/Librerias/SUMOLibraries/3rdPartyLibs/zlib-1.2.12/lib/zlibd.lib;optimized;C:/Librerias/SUMOLibraries/3rdPartyLibs/libpng-1.6.37/lib/libpng16.lib;debug;C:/Librerias/SUMOLibraries/3rdPartyLibs/libpng-1.6.37/lib/libpng16d.lib;optimized;C:/Librerias/SUMOLibraries/3rdPartyLibs/zlib-1.2.12/lib/zlib.lib;debug;C:/Librerias/SUMOLibraries/3rdPartyLibs/zlib-1.2.12/lib/zlibd.lib;
+shared_LIB_DEPENDS:STATIC=general;opengl32;general;glu32;optimized;C:/Librerias/SUMOLibraries/3rdPartyLibs/zlib-1.2.12/lib/zlib.lib;debug;C:/Librerias/SUMOLibraries/3rdPartyLibs/zlib-1.2.12/lib/zlibd.lib;
 
 
 ########################
