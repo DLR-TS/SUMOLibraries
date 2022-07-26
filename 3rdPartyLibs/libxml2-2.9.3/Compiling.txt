@@ -1,0 +1,3 @@
+cscript configure.js compiler=msvc prefix=c:\opt include=C:\SUMOLibraries\3rdPartyLibs\zlib-1.2.12\include;C:\SUMOLibraries\3rdPartyLibs\libiconv-1.16\include lib=C:\SUMOLibraries\3rdPartyLibs\zlib-1.2.12\lib;C:\SUMOLibraries\3rdPartyLibs\libiconv-1.16\lib
+
+edit iconv.lib -> libiconv.lib
