@@ -1,0 +1,69 @@
+=========================================================
+COMPULSORY MIGRATION
+=========================================================
+
+(1) "slow_motion_replay_speed" config file setting is no longer used
+====================================================================
+It can be configured now on the running tab of the static GUI. You should just remove it.
+
+(2) Deprecated script batch.CollectFiles is removed
+===================================================
+use "-coll mail" instead to send mails alone. "-coll" will send mails and build the HTML report.
+
+=========================================================
+CHANGES IN DEFAULT BEHAVIOUR (OR PROCEDURE)
+=========================================================
+
+(1) "run_dependent_text": overlapping filters now behave as expected
+====================================================================
+
+If you have a file
+
+A
+B
+C
+D
+E
+F
+G
+
+and you filter it with two filters
+
+[run_dependent_text]
+stdout:C{->}F
+stdout:B{->}E
+
+this will now as expected remove all the lines between B and F. Previously it would remove the entire file
+after B. This was a bug, but is included here as it may change the behaviour of long-established filters.
+
+(2) Running "-coll", with both HTML report and email enabled
+============================================================
+The email will now just contain links to the HTML report instead of complete plain-text information.
+Also, it will be generated after the HTML report, in 3.25 it was generated first.
+ 
+(3) "Replace Text in Files" now treats replacement string as a single whole instead of as separate parts
+========================================================================================================
+So if you have a file
+
+Apples
+Bananas
+
+and you replace using search expression
+
+(Apples)
+(Bananas)
+
+and replacement
+
+\2
+\1
+
+you will now as expected get
+
+Bananas
+Apples
+
+There was no way to do this before. Though of course this change can change the behaviour on some setups also: the
+back references have to be numbered correctly.
+
+

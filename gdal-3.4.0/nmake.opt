@@ -657,14 +657,12 @@ SQLITE_LIB = C:\Librerias\SUMOLibraries\3rdPartyLibs\sqlite-3.3.0\sqlite3.lib
 # depending on the layout of the include directories. In case of compilation errors, remove it.
 # For RasterLite2 support, add something like -Ic:\install-rl2\include -DHAVE_RASTERLITE2
 SQLITE_INC = -IC:\Librerias\SUMOLibraries\3rdPartyLibs\sqlite-3.3.0 \
-		     -IC:\Librerias\SUMOLibraries\spatialite-5.0.1\include -DHAVE_SPATIALITE
 # For RasterLite2 support, add something like c:\install-rl2\lib\librasterlite2.lib
-SQLITE_LIB = C:\Librerias\SUMOLibraries\spatialite-5.0.1\lib\spatialite_i.lib \
-			 C:\Librerias\SUMOLibraries\3rdPartyLibs\sqlite-3.3.0\sqlite3.lib
+SQLITE_LIB = C:\Librerias\SUMOLibraries\3rdPartyLibs\sqlite-3.3.0\sqlite3.lib
 # Uncomment following line if libsqlite3 has been compiled with SQLITE_HAS_COLUMN_METADATA=yes
 #SQLITE_HAS_COLUMN_METADATA=yes
 # Uncomment following line if spatialite is 4.1.2 or later
-SPATIALITE_412_OR_LATER=yes
+#SPATIALITE_412_OR_LATER=yes
 
 # PCRE Library (REGEXP support for SQLite) for example from http://sourceforge.net/projects/gnuwin32/files/pcre/7.0/pcre-7.0.exe/download
 #PCRE_INC=-I"C:\Program Files\GNUWin32\include" -DHAVE_PCRE
@@ -1171,7 +1169,7 @@ DWG_LIB_LINK =
 !IFDEF WIN64
 !UNDEF STDCALL
 !ELSE
-SYM_PREFIX=_
+SYM_PREFIX=
 !ENDIF
 
 EXTERNAL_LIBS =	$(OGDILIB) $(XERCES_LIB) $(EXPAT_LIB) $(OCI_LIB) $(PG_LIB) \

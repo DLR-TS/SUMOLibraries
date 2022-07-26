@@ -1,0 +1,107 @@
+Some features are easiest to understand by example. For complete newcomers to TextTest it's recommended
+to follow the "Getting Started" tutorial and then possibly the "Course Material" which can be seen at
+http://www.texttest.org/index.php?page=documentation_trunk. For those who basically know the tool but
+want to explore features they haven't used, the self-tests provide a wealth of working examples.
+
+These can be downloaded from source control. Install the Bazaar source control tool and then do
+bzr branch lp:/~geoff.bache/texttest/selftest-trunk
+See http://www.texttest.org/index.php?page=download for more details.
+
+There are various "TargetApp" directories to be found under it. Each of these contains a test-suite 
+for a simple program (which are in turn part of the larger test suite for TextTest, as it tests 
+itself testing these programs)
+
+To run these apps by hand, you can view and run them in TextTest:
+
+1) Set the environment variable STANDARD to point at the "standard" file at the top level of the self-tests
+2) texttest -d <path to TargetApp> -gx  
+
+What there is to find (below is just a selection):
+
+TargetApp                                  : used by default as it's very basic, this test suite has
+                                               one test (that fails) on a "Hello World" program.
+
+TestSelf/TestSelection/TargetApp           : Contains a few tests with related names, to explore the
+                                               functionality for selecting tests and saving those selections.
+
+TestSelf/ChangeTestResults/TargetApp       : Contains a few tests that fail in various ways, to explore
+                                               how these are reported and how the results can be saved.
+
+TestSelf/RunDependentText/TargetApp        : useful for understanding the run-dependent text filtering
+
+TestSelf/EnvironmentFile/TargetApp         : useful for understanding how environment variables are 
+                                               set and unset
+
+TestSelf/DiagnosticHandling/TargetApp      : useful for understanding integration with log4py, log4j 
+                                               and log4cpp to configuration of produced logs.
+
+TestSelf/TestData/TargetApp                : useful for understanding how TextTest handles test data, and
+                                               the differences between data that is only to be read and that
+                                               which can also be written.
+
+TestSelf/CollateFiles/TargetApp            : useful for understanding how TextTest collects files of any
+                                               name written by an application
+
+TestSelf/Checkouts/TargetApp               : useful for understanding how the checkout mechanism for 
+                                               version control integration works.
+
+TestSelf/BatchTests/TargetApp              : useful for understanding how batch mode works (both plain-text 
+                                             and HTML reports)
+
+TestSelf/MemoryTests/TargetApp             : useful for understanding how memory consumption is compared
+
+TestSelf/PerformanceTests/TargetApp        : useful for understanding how performance-related info is in general 
+                                             compared by extracting and comparing numbers from log files.
+
+TestSelf/KnownBugs/TargetApp               : useful for finding out how textual patterns are identified
+                                               as known bugs, and also linked to bugs in Bugzilla
+
+TestSelf/RunningTests/TargetApp            : shows how you can view your tests before
+                                               they compmlete in the dynamic GUI
+
+TestSelf/BaseVersions/TargetApp            : shows how to get version settings to inherit from each other.
+
+TestSelf/ExtraVersions/TargetApp           : shows how to automatically run other versions than the default
+                                               when running normally.
+
+TestSelf/UITesting/GUI/TargetApp           : useful for understanding TextTest's integration with Use Case
+                                               Recorders such as StoryText and JUseCase for GUI testing.
+
+GUI/DynamicGUI/Filtering/TargetApp         : useful for exploring the status tab from the dynamic GUI and what
+                                             it can do.
+
+GUI/DynamicGUI/TextView/TargetApp          : mostly on unicode handling
+
+GUI/StaticGUI/TargetApp                    : fairly large suite that's a residue of the previous default one.
+
+GUI/StaticGUI/StartFromScratch/TargetApp   : useful for getting a handle on what a totally empty test suite
+                                               should look like
+
+TestSelf/TrafficInterception/TargetApp     : useful for understanding how TextTest can record and replay
+                                               results from "third-party" programs run on the command line
+                                               and thus produce repeatable results.
+
+TestSelf/TrafficInterception/ClientServer/TargetApp
+                                             : useful for undestanding how TextTest can record and replay 
+                                               textual traffic on a network connection, allowing creation
+                                               of component tests for client/server systems.
+
+TestSelf/BatchTests/CollectFiles/TargetApp : useful for understanding how batch reporting works.
+
+TestSelf/EmptyTestSuites/TargetApp         : useful for understanding how TextTest handles various unusual
+                                               things in the testsuite files.
+
+TestSelf/PerformanceTests/UnixOnly/TargetApp :
+                                             (UNIX only) shows how performance can be extracted directly via the "time" program
+
+TestSelf/CollateFiles/UnixOnly/TargetApp   : (UNIX only) useful for understanding core file processing
+
+TestSelf/Miscellaneous/UnixOnly/TargetApp  : (UNIX only) useful for understanding how the virtual display
+                                               integration with Xvfb works (to prevent application GUIs popping up)
+
+QueueSystems/TargetApp                     : useful for understanding the queuesystem configuration and
+                                               the associated plugin for LSF and Sun Grid Engine
+
+
+Once you've browsed these a bit and can read them, you can also use the actual self-tests to see how 
+TextTest itself works and what features it has...
