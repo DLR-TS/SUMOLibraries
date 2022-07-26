@@ -47,7 +47,7 @@ BUILD_PROJINFO:BOOL=ON
 BUILD_PROJSYNC:BOOL=ON
 
 //Build PROJ library shared.
-BUILD_SHARED_LIBS:BOOL=ON
+BUILD_SHARED_LIBS:BOOL=OFF
 
 //Build the testing tree.
 BUILD_TESTING:BOOL=ON
@@ -56,12 +56,12 @@ BUILD_TESTING:BOOL=ON
 CMAKECONFIGDIR:PATH=lib/cmake
 
 //Path to a program.
-CMAKE_AR:FILEPATH=C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.31.31103/bin/Hostx64/x64/lib.exe
+CMAKE_AR:FILEPATH=C:/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.32.31326/bin/Hostx64/x64/lib.exe
 
 //Semicolon separated list of supported configuration types, only
 // supports Debug, Release, MinSizeRel, and RelWithDebInfo, anything
 // else will be ignored.
-CMAKE_CONFIGURATION_TYPES:STRING=Debug;Release
+CMAKE_CONFIGURATION_TYPES:STRING=Release
 
 //Flags used by the CXX compiler during all build types.
 CMAKE_CXX_FLAGS:STRING=/DWIN32 /D_WINDOWS /W3 /GR /EHsc
@@ -120,6 +120,9 @@ CMAKE_EXE_LINKER_FLAGS_RELEASE:STRING=/INCREMENTAL:NO
 //Flags used by the linker during RELWITHDEBINFO builds.
 CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=/debug /INCREMENTAL
 
+//Value Computed by CMake.
+CMAKE_FIND_PACKAGE_REDIRECTS_DIR:STATIC=C:/Librerias/SUMOLibraries/proj-9.0.0/build/CMakeFiles/pkgRedirects
+
 //User executables (bin)
 CMAKE_INSTALL_BINDIR:PATH=bin
 
@@ -169,7 +172,7 @@ CMAKE_INSTALL_SHAREDSTATEDIR:PATH=com
 CMAKE_INSTALL_SYSCONFDIR:PATH=etc
 
 //Path to a program.
-CMAKE_LINKER:FILEPATH=C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.31.31103/bin/Hostx64/x64/link.exe
+CMAKE_LINKER:FILEPATH=C:/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.32.31326/bin/Hostx64/x64/link.exe
 
 //Flags used by the linker during the creation of modules during
 // all build types.
@@ -291,7 +294,7 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=OFF
 
 //Path to the coverage program that CTest uses for performing coverage
 // inspection
-COVERAGE_COMMAND:FILEPATH=C:/CodeBlocks/MinGW/bin/gcov.exe
+COVERAGE_COMMAND:FILEPATH=COVERAGE_COMMAND-NOTFOUND
 
 //Extra command line flags to pass to the coverage tool
 COVERAGE_EXTRA_FLAGS:STRING=-l
@@ -353,20 +356,32 @@ ENABLE_TIFF:BOOL=ON
 //Path to a program.
 EXE_SQLITE3:FILEPATH=C:/Librerias/SUMOLibraries/3rdPartyLibs/sqlite-3.3.0/sqlite3.exe
 
+//Path to a library.
+GMOCK_LIBRARY:FILEPATH=GMOCK_LIBRARY-NOTFOUND
+
+//Path to a library.
+GMOCK_LIBRARY_DEBUG:FILEPATH=GMOCK_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+GMOCK_MAIN_LIBRARY:FILEPATH=GMOCK_MAIN_LIBRARY-NOTFOUND
+
+//Path to a library.
+GMOCK_MAIN_LIBRARY_DEBUG:FILEPATH=GMOCK_MAIN_LIBRARY_DEBUG-NOTFOUND
+
 //Path to a file.
-GTEST_INCLUDE_DIR:PATH=
+GTEST_INCLUDE_DIR:PATH=GTEST_INCLUDE_DIR-NOTFOUND
 
 //Path to a library.
-GTEST_LIBRARY:FILEPATH=
+GTEST_LIBRARY:FILEPATH=GTEST_LIBRARY-NOTFOUND
 
 //Path to a library.
-GTEST_LIBRARY_DEBUG:FILEPATH=
+GTEST_LIBRARY_DEBUG:FILEPATH=GTEST_LIBRARY_DEBUG-NOTFOUND
 
 //Path to a library.
-GTEST_MAIN_LIBRARY:FILEPATH=
+GTEST_MAIN_LIBRARY:FILEPATH=GTEST_MAIN_LIBRARY-NOTFOUND
 
 //Path to a library.
-GTEST_MAIN_LIBRARY_DEBUG:FILEPATH=
+GTEST_MAIN_LIBRARY_DEBUG:FILEPATH=GTEST_MAIN_LIBRARY_DEBUG-NOTFOUND
 
 //The directory containing a CMake configuration file for GTest.
 GTest_DIR:PATH=GTest_DIR-NOTFOUND
@@ -441,7 +456,7 @@ PROJ_SOURCE_DIR:STATIC=C:/Librerias/SUMOLibraries/proj-9.0.0
 RUN_NETWORK_DEPENDENT_TESTS:BOOL=ON
 
 //Name of the computer/site where compile is being run
-SITE:STRING=Pablo-Sobremesa
+SITE:STRING=SOBREMESA-PABLO
 
 //Path to a file.
 SQLITE3_INCLUDE_DIR:PATH=C:/Librerias/SUMOLibraries/3rdPartyLibs/sqlite-3.3.0
@@ -537,7 +552,7 @@ CMAKE_CACHEFILE_DIR:INTERNAL=c:/Librerias/SUMOLibraries/proj-9.0.0/build
 //Major version of cmake used to create the current loaded cache
 CMAKE_CACHE_MAJOR_VERSION:INTERNAL=3
 //Minor version of cmake used to create the current loaded cache
-CMAKE_CACHE_MINOR_VERSION:INTERNAL=22
+CMAKE_CACHE_MINOR_VERSION:INTERNAL=24
 //Patch version of cmake used to create the current loaded cache
 CMAKE_CACHE_PATCH_VERSION:INTERNAL=0
 //Path to CMake executable.
@@ -589,13 +604,17 @@ CMAKE_EXTRA_GENERATOR:INTERNAL=
 //Name of generator.
 CMAKE_GENERATOR:INTERNAL=Visual Studio 17 2022
 //Generator instance identifier.
-CMAKE_GENERATOR_INSTANCE:INTERNAL=C:/Program Files/Microsoft Visual Studio/2022/Community
+CMAKE_GENERATOR_INSTANCE:INTERNAL=C:/Microsoft Visual Studio/2022/Community
 //Name of generator platform.
 CMAKE_GENERATOR_PLATFORM:INTERNAL=
 //Name of generator toolset.
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
-//Have include pthread.h
-CMAKE_HAVE_PTHREAD_H:INTERNAL=
+//Test CMAKE_HAVE_LIBC_PTHREAD
+CMAKE_HAVE_LIBC_PTHREAD:INTERNAL=
+//Have library pthreads
+CMAKE_HAVE_PTHREADS_CREATE:INTERNAL=
+//Have library pthread
+CMAKE_HAVE_PTHREAD_CREATE:INTERNAL=
 //Source directory with the top level CMakeLists.txt file for this
 // project
 CMAKE_HOME_DIRECTORY:INTERNAL=C:/Librerias/SUMOLibraries/proj-9.0.0
@@ -663,7 +682,7 @@ CMAKE_RC_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_RC_FLAGS_RELWITHDEBINFO
 CMAKE_RC_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //Path to CMake installation.
-CMAKE_ROOT:INTERNAL=C:/CMake/share/cmake-3.22
+CMAKE_ROOT:INTERNAL=C:/CMake/share/cmake-3.24
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS
 CMAKE_SHARED_LINKER_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS_DEBUG
@@ -724,14 +743,20 @@ DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
 ENABLE_TIFF-ADVANCED:INTERNAL=1
 //Details about finding CURL
 FIND_PACKAGE_MESSAGE_DETAILS_CURL:INTERNAL=[optimized;C:/Librerias/SUMOLibraries/3rdPartyLibs/curl-7.83.0/lib/libcurl_imp.lib;debug;C:/Librerias/SUMOLibraries/3rdPartyLibs/curl-7.83.0/lib/libcurl-d_imp.lib][C:/Librerias/SUMOLibraries/3rdPartyLibs/curl-7.83.0/include][c ][v7.83.0()]
-//Details about finding GTest
-FIND_PACKAGE_MESSAGE_DETAILS_GTest:INTERNAL=[C:/Librerias/SUMOLibraries/googletest-1.11.0/lib/gtest.lib][C:/Librerias/SUMOLibraries/googletest-1.11.0/include][C:/Librerias/SUMOLibraries/googletest-1.11.0/lib/gtest_main.lib][v(1.8.1)]
 //Details about finding Python
-FIND_PACKAGE_MESSAGE_DETAILS_Python:INTERNAL=[C:/Python310/python.exe][cfound components: Interpreter ][v3.10.4()]
+FIND_PACKAGE_MESSAGE_DETAILS_Python:INTERNAL=[C:/Python310/python.exe][cfound components: Interpreter ][v3.10.5()]
 //Details about finding TIFF
 FIND_PACKAGE_MESSAGE_DETAILS_TIFF:INTERNAL=[optimized;C:/Librerias/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/lib/tiff.lib;debug;C:/Librerias/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/lib/tiffd.lib][C:/Librerias/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/include][c ][v4.0.9()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
+//ADVANCED property for variable: GMOCK_LIBRARY
+GMOCK_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: GMOCK_LIBRARY_DEBUG
+GMOCK_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: GMOCK_MAIN_LIBRARY
+GMOCK_MAIN_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: GMOCK_MAIN_LIBRARY_DEBUG
+GMOCK_MAIN_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: GTEST_INCLUDE_DIR
 GTEST_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: GTEST_LIBRARY
@@ -772,6 +797,8 @@ PROJ_INCLUDE_SUBDIR-ADVANCED:INTERNAL=1
 PROJ_LIB_SUBDIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: SITE
 SITE-ADVANCED:INTERNAL=1
+//Result of TRY_COMPILE
+THREADS_HAVE_PTHREAD_ARG:INTERNAL=FALSE
 //ADVANCED property for variable: TIFF_INCLUDE_DIR
 TIFF_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: TIFF_LIBRARY_DEBUG
@@ -783,7 +810,7 @@ _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=C:/Librerias/SUMOLibraries/pr
 //Path to a program.
 _Python_EXECUTABLE:INTERNAL=C:/Python310/python.exe
 //Python Properties
-_Python_INTERPRETER_PROPERTIES:INTERNAL=Python;3;10;4;64;;cp310-win_amd64;C:\Python310\Lib;C:\Python310\Lib;C:\Python310\Lib\site-packages;C:\Python310\Lib\site-packages
+_Python_INTERPRETER_PROPERTIES:INTERNAL=Python;3;10;5;64;;cp310-win_amd64;C:\Python310\Lib;C:\Python310\Lib;C:\Python310\Lib\site-packages;C:\Python310\Lib\site-packages
 _Python_INTERPRETER_SIGNATURE:INTERNAL=7df3158d636d36d5081bf361c4bf02b0
 cmake_package_name:INTERNAL=GTest
 //ADVANCED property for variable: gmock_build_tests
