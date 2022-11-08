@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.4\samples\src\CreateDOMDocument\CreateDOMDocument.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Librerias\SUMOLibraries\xerces-c-3.2.4\samples\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{A1E07DF2-A4C0-3893-B076-3A0F4AB915C3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
