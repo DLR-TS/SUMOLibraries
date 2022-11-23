@@ -1,4 +1,4 @@
-# Install script for directory: C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/contrib/dbs
+# Install script for directory: C:/Librerias/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/contrib/dbs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/contrib/dbs/xtiff/cmake_install.cmake")
+  include("C:/Librerias/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/contrib/dbs/xtiff/cmake_install.cmake")
 
 endif()
 
