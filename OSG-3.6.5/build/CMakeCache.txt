@@ -620,7 +620,7 @@ FONTCONFIG_LIBRARY:FILEPATH=FONTCONFIG_LIBRARY-NOTFOUND
 FREETYPE_INCLUDE_DIR_freetype2:PATH=C:/SUMOLibraries/freetype-2.10.4/include/freetype2
 
 //Path to a file.
-FREETYPE_INCLUDE_DIR_ft2build:PATH=FREETYPE_INCLUDE_DIR_ft2build-NOTFOUND
+FREETYPE_INCLUDE_DIR_ft2build:PATH=C:/SUMOLibraries/freetype-2.10.4/include/freetype
 
 //Path to a library.
 FREETYPE_LIBRARY_DEBUG:FILEPATH=C:/SUMOLibraries/freetype-2.10.4/lib/freetyped.lib
@@ -629,16 +629,16 @@ FREETYPE_LIBRARY_DEBUG:FILEPATH=C:/SUMOLibraries/freetype-2.10.4/lib/freetyped.l
 FREETYPE_LIBRARY_RELEASE:FILEPATH=C:/SUMOLibraries/freetype-2.10.4/lib/freetype.lib
 
 //Path to the GDAL include directory
-GDAL_INCLUDE_DIR:PATH=GDAL_INCLUDE_DIR-NOTFOUND
+GDAL_INCLUDE_DIR:PATH=C:/SUMOLibraries/gdal-3.4.0/include
 
 //Path to the GDAL library
-GDAL_LIBRARY:FILEPATH=GDAL_LIBRARY-NOTFOUND
+GDAL_LIBRARY:FILEPATH=C:/SUMOLibraries/gdal-3.4.0/lib/gdal_i.lib
 
 //Path to a file.
-GIFLIB_INCLUDE_DIR:PATH=GIFLIB_INCLUDE_DIR-NOTFOUND
+GIFLIB_INCLUDE_DIR:PATH=C:/SUMOLibraries/3rdPartyLibs/giflib-5.2.1/include
 
 //Path to a library.
-GIFLIB_LIBRARY:FILEPATH=GIFLIB_LIBRARY-NOTFOUND
+GIFLIB_LIBRARY:FILEPATH=C:/SUMOLibraries/3rdPartyLibs/giflib-5.2.1/lib/giflib.lib
 
 //Path to a file.
 GLIBCONFIG_INCLUDE_DIR:PATH=GLIBCONFIG_INCLUDE_DIR-NOTFOUND
@@ -1172,7 +1172,7 @@ OSG_USE_REF_PTR_SAFE_DEREFERENCE:BOOL=OFF
 
 //Set to ON to use a UTF8 locale for filenames instead of the default
 // locale.
-OSG_USE_UTF8_FILENAME:BOOL=OFF
+OSG_USE_UTF8_FILENAME:BOOL=ON
 
 //Windowing system type for graphics window creation; options:
 // Win32 or None.
@@ -1378,6 +1378,15 @@ osgdb_dot_LIB_DEPENDS:STATIC=general;OpenThreads;general;osg;general;osgDB;gener
 osgdb_dxf_LIB_DEPENDS:STATIC=general;OpenThreads;general;osg;general;osgDB;general;osgUtil;general;osgText;general;opengl32;
 
 //Dependencies for the target
+osgdb_freetype_LIB_DEPENDS:STATIC=general;OpenThreads;general;osg;general;osgDB;general;osgUtil;general;osgText;optimized;C:/SUMOLibraries/freetype-2.10.4/lib/freetype.lib;debug;C:/SUMOLibraries/freetype-2.10.4/lib/freetyped.lib;general;opengl32;
+
+//Dependencies for the target
+osgdb_gdal_LIB_DEPENDS:STATIC=general;OpenThreads;general;osg;general;osgDB;general;osgUtil;general;osgTerrain;general;C:/SUMOLibraries/gdal-3.4.0/lib/gdal_i.lib;general;opengl32;
+
+//Dependencies for the target
+osgdb_gif_LIB_DEPENDS:STATIC=general;OpenThreads;general;osg;general;osgDB;general;osgUtil;general;C:/SUMOLibraries/3rdPartyLibs/giflib-5.2.1/lib/giflib.lib;general;opengl32;
+
+//Dependencies for the target
 osgdb_gles_LIB_DEPENDS:STATIC=general;OpenThreads;general;osg;general;osgDB;general;osgUtil;general;osgAnimation;general;opengl32;
 
 //Dependencies for the target
@@ -1421,6 +1430,9 @@ osgdb_normals_LIB_DEPENDS:STATIC=general;OpenThreads;general;osg;general;osgDB;g
 
 //Dependencies for the target
 osgdb_obj_LIB_DEPENDS:STATIC=general;OpenThreads;general;osg;general;osgDB;general;osgUtil;general;opengl32;
+
+//Dependencies for the target
+osgdb_ogr_LIB_DEPENDS:STATIC=general;OpenThreads;general;osg;general;osgDB;general;osgUtil;general;C:/SUMOLibraries/gdal-3.4.0/lib/gdal_i.lib;general;opengl32;
 
 //Dependencies for the target
 osgdb_openflight_LIB_DEPENDS:STATIC=general;OpenThreads;general;osg;general;osgDB;general;osgUtil;general;osgSim;general;opengl32;
@@ -1686,7 +1698,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MT
 CMAKE_MT-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=115
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=119
 //Platform information initialized
 CMAKE_PLATFORM_INFO_INITIALIZED:INTERNAL=1
 //noop for ranlib
@@ -1836,6 +1848,10 @@ EGL_INCLUDE_DIR-ADVANCED:INTERNAL=1
 EGL_LIBRARY-ADVANCED:INTERNAL=1
 //Details about finding CURL
 FIND_PACKAGE_MESSAGE_DETAILS_CURL:INTERNAL=[optimized;C:/SUMOLibraries/3rdPartyLibs/curl-7.83.0/lib/libcurl_imp.lib;debug;C:/SUMOLibraries/3rdPartyLibs/curl-7.83.0/lib/libcurl-d_imp.lib][C:/SUMOLibraries/3rdPartyLibs/curl-7.83.0/include][c ][v7.83.0()]
+//Details about finding Freetype
+FIND_PACKAGE_MESSAGE_DETAILS_Freetype:INTERNAL=[optimized;C:/SUMOLibraries/freetype-2.10.4/lib/freetype.lib;debug;C:/SUMOLibraries/freetype-2.10.4/lib/freetyped.lib][C:/SUMOLibraries/freetype-2.10.4/include/freetype;C:/SUMOLibraries/freetype-2.10.4/include/freetype2][v2.10.4()]
+//Details about finding GDAL
+FIND_PACKAGE_MESSAGE_DETAILS_GDAL:INTERNAL=[C:/SUMOLibraries/gdal-3.4.0/lib/gdal_i.lib][C:/SUMOLibraries/gdal-3.4.0/include][v3.4.0()]
 //Details about finding JPEG
 FIND_PACKAGE_MESSAGE_DETAILS_JPEG:INTERNAL=[C:/SUMOLibraries/3rdPartyLibs/jpeg-9c/lib/jpeg.lib][C:/SUMOLibraries/3rdPartyLibs/jpeg-9c][v90()]
 //Details about finding LibXml2
