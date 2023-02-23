@@ -21,7 +21,7 @@
 #
 ###########################################################################
 
-prefix=C:/Librerias/SUMOLibraries/3rdPartyLibs/curl-7.83.0
+prefix=C:/SUMOLibraries/3rdPartyLibs/curl-7.83.0
 exec_prefix=${prefix}
 includedir=${prefix}/include
 cppflag_curl_staticlib=
@@ -155,13 +155,13 @@ while test $# -gt 0; do
         ;;
 
     --libs)
-        if test "XC:/Librerias/SUMOLibraries/3rdPartyLibs/curl-7.83.0/lib" != "X/usr/lib" -a "XC:/Librerias/SUMOLibraries/3rdPartyLibs/curl-7.83.0/lib" != "X/usr/lib64"; then
-           CURLLIBDIR="-LC:/Librerias/SUMOLibraries/3rdPartyLibs/curl-7.83.0/lib "
+        if test "XC:/SUMOLibraries/3rdPartyLibs/curl-7.83.0/lib" != "X/usr/lib" -a "XC:/SUMOLibraries/3rdPartyLibs/curl-7.83.0/lib" != "X/usr/lib64"; then
+           CURLLIBDIR="-LC:/SUMOLibraries/3rdPartyLibs/curl-7.83.0/lib "
         else
            CURLLIBDIR=""
         fi
         if test "Xyes" = "Xno"; then
-          echo ${CURLLIBDIR}-lcurl  -lwldap32 -lwinmm -lws2_32 C:/Librerias/SUMOLibraries/3rdPartyLibs/zlib-1.2.12/lib/zlib.lib C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/lib/libssh2.lib -ladvapi32 -lcrypt32
+          echo ${CURLLIBDIR}-lcurl  -lwldap32 -lwinmm -lws2_32 C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.12/lib/zlib.lib C:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/lib/libssh2.lib -ladvapi32 -lcrypt32
         else
           echo ${CURLLIBDIR}-lcurl
         fi
@@ -172,7 +172,7 @@ while test $# -gt 0; do
 
     --static-libs)
         if test "Xno" != "Xno" ; then
-          echo C:/Librerias/SUMOLibraries/3rdPartyLibs/curl-7.83.0/lib/libcurl.lib /machine:x64  -lwldap32 -lwinmm -lws2_32 C:/Librerias/SUMOLibraries/3rdPartyLibs/zlib-1.2.12/lib/zlib.lib C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/lib/libssh2.lib -ladvapi32 -lcrypt32
+          echo C:/SUMOLibraries/3rdPartyLibs/curl-7.83.0/lib/libcurl.lib /machine:x64  -lwldap32 -lwinmm -lws2_32 C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.12/lib/zlib.lib C:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/lib/libssh2.lib -ladvapi32 -lcrypt32
         else
           echo "curl was built with static libraries disabled" >&2
           exit 1

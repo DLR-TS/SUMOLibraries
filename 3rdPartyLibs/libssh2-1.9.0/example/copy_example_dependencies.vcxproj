@@ -56,20 +56,9 @@
     <PostBuildEvent>
       <Message>		</Message>
       <Command>setlocal
-C:\CMake\bin\cmake.exe -E make_directory C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/$(Configuration)
+C:\CMake\bin\cmake.exe -E make_directory C:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/$(Configuration)
 if %errorlevel% neq 0 goto :cmEnd
-C:\CMake\bin\cmake.exe -E copy C:/Librerias/SUMOLibraries/3rdPartyLibs/openssl-1.1.1/libcrypto-1_1-x64.dll C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/$(Configuration)
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-C:\CMake\bin\cmake.exe -E make_directory C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/$(Configuration)
-if %errorlevel% neq 0 goto :cmEnd
-C:\CMake\bin\cmake.exe -E copy C:/Librerias/SUMOLibraries/3rdPartyLibs/openssl-1.1.1/libssl-1_1-x64.dll C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/$(Configuration)
+C:\CMake\bin\cmake.exe -E copy C:/SUMOLibraries/3rdPartyLibs/openssl-1.1.1/libcrypto-1_1-x64.dll C:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/$(Configuration)
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -78,9 +67,20 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-C:\CMake\bin\cmake.exe -E make_directory C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/$(Configuration)
+C:\CMake\bin\cmake.exe -E make_directory C:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/$(Configuration)
 if %errorlevel% neq 0 goto :cmEnd
-C:\CMake\bin\cmake.exe -E copy C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/src/Debug/libssh2.dll C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/$(Configuration)
+C:\CMake\bin\cmake.exe -E copy C:/SUMOLibraries/3rdPartyLibs/openssl-1.1.1/libssl-1_1-x64.dll C:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/$(Configuration)
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+C:\CMake\bin\cmake.exe -E make_directory C:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/$(Configuration)
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E copy C:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/src/Debug/libssh2.dll C:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/$(Configuration)
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -102,20 +102,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message>		</Message>
       <Command>setlocal
-C:\CMake\bin\cmake.exe -E make_directory C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/$(Configuration)
+C:\CMake\bin\cmake.exe -E make_directory C:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/$(Configuration)
 if %errorlevel% neq 0 goto :cmEnd
-C:\CMake\bin\cmake.exe -E copy C:/Librerias/SUMOLibraries/3rdPartyLibs/openssl-1.1.1/libcrypto-1_1-x64.dll C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/$(Configuration)
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-C:\CMake\bin\cmake.exe -E make_directory C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/$(Configuration)
-if %errorlevel% neq 0 goto :cmEnd
-C:\CMake\bin\cmake.exe -E copy C:/Librerias/SUMOLibraries/3rdPartyLibs/openssl-1.1.1/libssl-1_1-x64.dll C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/$(Configuration)
+C:\CMake\bin\cmake.exe -E copy C:/SUMOLibraries/3rdPartyLibs/openssl-1.1.1/libcrypto-1_1-x64.dll C:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/$(Configuration)
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -124,9 +113,20 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-C:\CMake\bin\cmake.exe -E make_directory C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/$(Configuration)
+C:\CMake\bin\cmake.exe -E make_directory C:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/$(Configuration)
 if %errorlevel% neq 0 goto :cmEnd
-C:\CMake\bin\cmake.exe -E copy C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/src/Release/libssh2.dll C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/$(Configuration)
+C:\CMake\bin\cmake.exe -E copy C:/SUMOLibraries/3rdPartyLibs/openssl-1.1.1/libssl-1_1-x64.dll C:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/$(Configuration)
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+C:\CMake\bin\cmake.exe -E make_directory C:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/$(Configuration)
+if %errorlevel% neq 0 goto :cmEnd
+C:\CMake\bin\cmake.exe -E copy C:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/src/Release/libssh2.dll C:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/$(Configuration)
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -139,9 +139,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   <ItemGroup>
     <CustomBuild Include="C:\Librerias\SUMOLibraries\3rdPartyLibs\libssh2-1.9.0\example\CMakeLists.txt">
       <StdOutEncoding>UTF-8</StdOutEncoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-C:\CMake\bin\cmake.exe -SC:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0 -BC:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0 --check-stamp-file C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/CMakeFiles/generate.stamp
+C:\CMake\bin\cmake.exe -SC:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0 -BC:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0 --check-stamp-file C:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -152,9 +152,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\CMake\share\cmake-3.18\Modules\CMakeParseArguments.cmake;C:\CMake\share\cmake-3.18\Modules\CheckIncludeFiles.cmake;C:\CMake\share\cmake-3.18\Modules\CheckSymbolExists.cmake;C:\Librerias\SUMOLibraries\3rdPartyLibs\libssh2-1.9.0\cmake\CopyRuntimeDependencies.cmake;C:\Librerias\SUMOLibraries\3rdPartyLibs\libssh2-1.9.0\cmake\SocketLibraries.cmake;C:\Librerias\SUMOLibraries\3rdPartyLibs\libssh2-1.9.0\example\libssh2_config_cmake.h.in;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Librerias\SUMOLibraries\3rdPartyLibs\libssh2-1.9.0\example\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-C:\CMake\bin\cmake.exe -SC:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0 -BC:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0 --check-stamp-file C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/CMakeFiles/generate.stamp
+C:\CMake\bin\cmake.exe -SC:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0 -BC:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0 --check-stamp-file C:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone

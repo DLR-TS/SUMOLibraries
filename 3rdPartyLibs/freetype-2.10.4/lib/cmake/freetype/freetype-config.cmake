@@ -55,7 +55,7 @@ add_library(freetype STATIC IMPORTED)
 
 set_target_properties(freetype PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include/freetype2"
-  INTERFACE_LINK_LIBRARIES "\$<\$<NOT:\$<CONFIG:DEBUG>>:C:/Librerias/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/lib/zlib.lib>;\$<\$<CONFIG:DEBUG>:C:/Librerias/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/lib/zlibd.lib>;\$<\$<NOT:\$<CONFIG:DEBUG>>:C:/Librerias/SUMOLibraries/3rdPartyLibs/bzip2-1.0.6/lib/libbz2.lib>;\$<\$<CONFIG:DEBUG>:C:/Librerias/SUMOLibraries/3rdPartyLibs/bzip2-1.0.6/lib/libbz2d.lib>;\$<\$<NOT:\$<CONFIG:DEBUG>>:C:/Librerias/SUMOLibraries/3rdPartyLibs/libpng-1.6.34/lib/libpng16.lib>;\$<\$<CONFIG:DEBUG>:C:/Librerias/SUMOLibraries/3rdPartyLibs/libpng-1.6.34/lib/libpng16d.lib>;\$<\$<NOT:\$<CONFIG:DEBUG>>:C:/Librerias/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/lib/zlib.lib>;\$<\$<CONFIG:DEBUG>:C:/Librerias/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/lib/zlibd.lib>"
+  INTERFACE_LINK_LIBRARIES "\$<\$<NOT:\$<CONFIG:DEBUG>>:C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/lib/zlib.lib>;\$<\$<CONFIG:DEBUG>:C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/lib/zlibd.lib>;\$<\$<NOT:\$<CONFIG:DEBUG>>:C:/SUMOLibraries/3rdPartyLibs/bzip2-1.0.6/lib/libbz2.lib>;\$<\$<CONFIG:DEBUG>:C:/SUMOLibraries/3rdPartyLibs/bzip2-1.0.6/lib/libbz2d.lib>;\$<\$<NOT:\$<CONFIG:DEBUG>>:C:/SUMOLibraries/3rdPartyLibs/libpng-1.6.34/lib/libpng16.lib>;\$<\$<CONFIG:DEBUG>:C:/SUMOLibraries/3rdPartyLibs/libpng-1.6.34/lib/libpng16d.lib>;\$<\$<NOT:\$<CONFIG:DEBUG>>:C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/lib/zlib.lib>;\$<\$<CONFIG:DEBUG>:C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/lib/zlibd.lib>"
 )
 
 if(CMAKE_VERSION VERSION_LESS 2.8.12)
