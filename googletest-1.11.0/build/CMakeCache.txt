@@ -116,7 +116,7 @@ CMAKE_INSTALL_MANDIR:PATH=
 CMAKE_INSTALL_OLDINCLUDEDIR:PATH=/usr/include
 
 //Install path prefix, prepended onto install directories.
-CMAKE_INSTALL_PREFIX:PATH=C:/Librerias/SUMOLibraries/googletest-1.11.0
+CMAKE_INSTALL_PREFIX:PATH=C:/SUMOLibraries/googletest-1.11.0
 
 //Run-time variable data (LOCALSTATEDIR/run)
 CMAKE_INSTALL_RUNSTATEDIR:PATH=
@@ -256,34 +256,34 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=OFF
 INSTALL_GTEST:BOOL=ON
 
 //Value Computed by CMake
-gmock_BINARY_DIR:STATIC=C:/Librerias/SUMOLibraries/googletest-1.11.0/build/googlemock
+gmock_BINARY_DIR:STATIC=C:/SUMOLibraries/googletest-1.11.0/build/googlemock
 
 //Value Computed by CMake
 gmock_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-gmock_SOURCE_DIR:STATIC=C:/Librerias/SUMOLibraries/googletest-1.11.0/googlemock
+gmock_SOURCE_DIR:STATIC=C:/SUMOLibraries/googletest-1.11.0/googlemock
 
 //Build all of Google Mock's own tests.
 gmock_build_tests:BOOL=OFF
 
 //Value Computed by CMake
-googletest-distribution_BINARY_DIR:STATIC=C:/Librerias/SUMOLibraries/googletest-1.11.0/build
+googletest-distribution_BINARY_DIR:STATIC=C:/SUMOLibraries/googletest-1.11.0/build
 
 //Value Computed by CMake
 googletest-distribution_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-googletest-distribution_SOURCE_DIR:STATIC=C:/Librerias/SUMOLibraries/googletest-1.11.0
+googletest-distribution_SOURCE_DIR:STATIC=C:/SUMOLibraries/googletest-1.11.0
 
 //Value Computed by CMake
-gtest_BINARY_DIR:STATIC=C:/Librerias/SUMOLibraries/googletest-1.11.0/build/googletest
+gtest_BINARY_DIR:STATIC=C:/SUMOLibraries/googletest-1.11.0/build/googletest
 
 //Value Computed by CMake
 gtest_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-gtest_SOURCE_DIR:STATIC=C:/Librerias/SUMOLibraries/googletest-1.11.0/googletest
+gtest_SOURCE_DIR:STATIC=C:/SUMOLibraries/googletest-1.11.0/googletest
 
 //Build gtest's sample programs.
 gtest_build_samples:BOOL=OFF
@@ -375,7 +375,7 @@ CMAKE_GENERATOR_TOOLSET:INTERNAL=
 CMAKE_HAVE_PTHREAD_H:INTERNAL=
 //Source directory with the top level CMakeLists.txt file for this
 // project
-CMAKE_HOME_DIRECTORY:INTERNAL=C:/Librerias/SUMOLibraries/googletest-1.11.0
+CMAKE_HOME_DIRECTORY:INTERNAL=C:/SUMOLibraries/googletest-1.11.0
 //ADVANCED property for variable: CMAKE_INSTALL_BINDIR
 CMAKE_INSTALL_BINDIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_INSTALL_DATADIR
@@ -474,13 +474,13 @@ FIND_PACKAGE_MESSAGE_DETAILS_Python:INTERNAL=[C:/Python38/python.exe][cfound com
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //CMAKE_INSTALL_PREFIX during last run
-_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=C:/Librerias/SUMOLibraries/googletest-1.11.0
+_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=C:/SUMOLibraries/googletest-1.11.0
 //Path to a program.
 _Python_EXECUTABLE:INTERNAL=C:/Python38/python.exe
 //Python Properties
 _Python_INTERPRETER_PROPERTIES:INTERNAL=Python;3;8;5;64;;cp38-win_amd64;C:\Python38\Lib;C:\Python38\Lib;C:\Python38\Lib\site-packages;C:\Python38\Lib\site-packages
 _Python_INTERPRETER_SIGNATURE:INTERNAL=416563d29391dc6f49e2d14c727182ca
 cmake_package_name:INTERNAL=GTest
-generated_dir:INTERNAL=C:/Librerias/SUMOLibraries/googletest-1.11.0/build/googletest/generated
+generated_dir:INTERNAL=C:/SUMOLibraries/googletest-1.11.0/build/googletest/generated
 targets_export_name:INTERNAL=GTestTargets
 

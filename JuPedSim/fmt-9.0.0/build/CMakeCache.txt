@@ -99,7 +99,7 @@ CMAKE_INSTALL_MANDIR:PATH=
 CMAKE_INSTALL_OLDINCLUDEDIR:PATH=/usr/include
 
 //Install path prefix, prepended onto install directories.
-CMAKE_INSTALL_PREFIX:PATH=C:/Librerias/SUMOLibraries/JuPedSim/fmt-9.0.0
+CMAKE_INSTALL_PREFIX:PATH=C:/SUMOLibraries/JuPedSim/fmt-9.0.0
 
 //Run-time variable data (LOCALSTATEDIR/run)
 CMAKE_INSTALL_RUNSTATEDIR:PATH=
@@ -226,7 +226,7 @@ CMAKE_VISIBILITY_INLINES_HIDDEN:BOOL=ON
 DOXYGEN:FILEPATH=DOXYGEN-NOTFOUND
 
 //Value Computed by CMake
-FMT_BINARY_DIR:STATIC=C:/Librerias/SUMOLibraries/JuPedSim/fmt-9.0.0/build
+FMT_BINARY_DIR:STATIC=C:/SUMOLibraries/JuPedSim/fmt-9.0.0/build
 
 //Installation directory for cmake files, a relative path that
 // will be joined with C:/Program Files/FMT or an absolute path.
@@ -273,7 +273,7 @@ FMT_PEDANTIC:BOOL=OFF
 FMT_PKGCONFIG_DIR:PATH=lib/pkgconfig
 
 //Value Computed by CMake
-FMT_SOURCE_DIR:STATIC=C:/Librerias/SUMOLibraries/JuPedSim/fmt-9.0.0
+FMT_SOURCE_DIR:STATIC=C:/SUMOLibraries/JuPedSim/fmt-9.0.0
 
 //Expose headers with marking them as system.
 FMT_SYSTEM_HEADERS:BOOL=OFF
@@ -348,7 +348,7 @@ CMAKE_GENERATOR_TOOLSET:INTERNAL=
 CMAKE_HAVE_PTHREAD_H:INTERNAL=
 //Source directory with the top level CMakeLists.txt file for this
 // project
-CMAKE_HOME_DIRECTORY:INTERNAL=C:/Librerias/SUMOLibraries/JuPedSim/fmt-9.0.0
+CMAKE_HOME_DIRECTORY:INTERNAL=C:/SUMOLibraries/JuPedSim/fmt-9.0.0
 //ADVANCED property for variable: CMAKE_INSTALL_BINDIR
 CMAKE_INSTALL_BINDIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_INSTALL_DATADIR
@@ -445,7 +445,7 @@ CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //CMAKE_INSTALL_PREFIX during last run
-_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=C:/Librerias/SUMOLibraries/JuPedSim/fmt-9.0.0
+_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=C:/SUMOLibraries/JuPedSim/fmt-9.0.0
 //Result of TRY_COMPILE
 compile_result_unused:INTERNAL=FALSE
 

@@ -18,7 +18,7 @@
 BUILD_TESTING:BOOL=OFF
 
 //Value Computed by CMake
-CLI11_BINARY_DIR:STATIC=C:/Librerias/SUMOLibraries/JuPedSim/CLI11-2.3.1/build
+CLI11_BINARY_DIR:STATIC=C:/SUMOLibraries/JuPedSim/CLI11-2.3.1/build
 
 //Turn on boost test (currently may fail with Boost 1.70)
 CLI11_BOOST:BOOL=OFF
@@ -46,7 +46,7 @@ CLI11_SANITIZERS:BOOL=OFF
 CLI11_SINGLE_FILE:BOOL=OFF
 
 //Value Computed by CMake
-CLI11_SOURCE_DIR:STATIC=C:/Librerias/SUMOLibraries/JuPedSim/CLI11-2.3.1
+CLI11_SOURCE_DIR:STATIC=C:/SUMOLibraries/JuPedSim/CLI11-2.3.1
 
 //Turn all warnings into errors (for CI)
 CLI11_WARNINGS_AS_ERRORS:BOOL=OFF
@@ -129,7 +129,7 @@ CMAKE_INSTALL_MANDIR:PATH=
 CMAKE_INSTALL_OLDINCLUDEDIR:PATH=/usr/include
 
 //Install path prefix, prepended onto install directories.
-CMAKE_INSTALL_PREFIX:PATH=C:/Librerias/SUMOLibraries/JuPedSim/CLI11-2.3.1
+CMAKE_INSTALL_PREFIX:PATH=C:/SUMOLibraries/JuPedSim/CLI11-2.3.1
 
 //Run-time variable data (LOCALSTATEDIR/run)
 CMAKE_INSTALL_RUNSTATEDIR:PATH=
@@ -308,7 +308,7 @@ DOXYGEN_DOT_EXECUTABLE:FILEPATH=DOXYGEN_DOT_EXECUTABLE-NOTFOUND
 DOXYGEN_EXECUTABLE:FILEPATH=DOXYGEN_EXECUTABLE-NOTFOUND
 
 //Directory under which to collect all populated content
-FETCHCONTENT_BASE_DIR:PATH=C:/Librerias/SUMOLibraries/JuPedSim/CLI11-2.3.1/build/_deps
+FETCHCONTENT_BASE_DIR:PATH=C:/SUMOLibraries/JuPedSim/CLI11-2.3.1/build/_deps
 
 //Disables all attempts to download or update content and assumes
 // source dirs already exist
@@ -393,7 +393,7 @@ CMAKE_GENERATOR_PLATFORM:INTERNAL=x64
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
 //Source directory with the top level CMakeLists.txt file for this
 // project
-CMAKE_HOME_DIRECTORY:INTERNAL=C:/Librerias/SUMOLibraries/JuPedSim/CLI11-2.3.1
+CMAKE_HOME_DIRECTORY:INTERNAL=C:/SUMOLibraries/JuPedSim/CLI11-2.3.1
 //ADVANCED property for variable: CMAKE_INSTALL_BINDIR
 CMAKE_INSTALL_BINDIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_INSTALL_DATADIR
@@ -522,5 +522,5 @@ MEMORYCHECK_SUPPRESSIONS_FILE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: SITE
 SITE-ADVANCED:INTERNAL=1
 //CMAKE_INSTALL_PREFIX during last run
-_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=C:/Librerias/SUMOLibraries/JuPedSim/CLI11-2.3.1
+_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=C:/SUMOLibraries/JuPedSim/CLI11-2.3.1
 

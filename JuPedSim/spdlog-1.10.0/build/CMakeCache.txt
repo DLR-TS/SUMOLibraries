@@ -95,7 +95,7 @@ CMAKE_INSTALL_MANDIR:PATH=
 CMAKE_INSTALL_OLDINCLUDEDIR:PATH=/usr/include
 
 //Install path prefix, prepended onto install directories.
-CMAKE_INSTALL_PREFIX:PATH=C:/Librerias/SUMOLibraries/JuPedSim/spdlog-1.10.0
+CMAKE_INSTALL_PREFIX:PATH=C:/SUMOLibraries/JuPedSim/spdlog-1.10.0
 
 //Run-time variable data (LOCALSTATEDIR/run)
 CMAKE_INSTALL_RUNSTATEDIR:PATH=
@@ -320,22 +320,22 @@ SPDLOG_WCHAR_FILENAMES:BOOL=OFF
 SPDLOG_WCHAR_SUPPORT:BOOL=OFF
 
 //Value Computed by CMake
-spdlog_BINARY_DIR:STATIC=C:/Librerias/SUMOLibraries/JuPedSim/spdlog-1.10.0/build
+spdlog_BINARY_DIR:STATIC=C:/SUMOLibraries/JuPedSim/spdlog-1.10.0/build
 
 //Value Computed by CMake
 spdlog_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-spdlog_SOURCE_DIR:STATIC=C:/Librerias/SUMOLibraries/JuPedSim/spdlog-1.10.0
+spdlog_SOURCE_DIR:STATIC=C:/SUMOLibraries/JuPedSim/spdlog-1.10.0
 
 //Value Computed by CMake
-spdlog_examples_BINARY_DIR:STATIC=C:/Librerias/SUMOLibraries/JuPedSim/spdlog-1.10.0/build/example
+spdlog_examples_BINARY_DIR:STATIC=C:/SUMOLibraries/JuPedSim/spdlog-1.10.0/build/example
 
 //Value Computed by CMake
 spdlog_examples_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-spdlog_examples_SOURCE_DIR:STATIC=C:/Librerias/SUMOLibraries/JuPedSim/spdlog-1.10.0/example
+spdlog_examples_SOURCE_DIR:STATIC=C:/SUMOLibraries/JuPedSim/spdlog-1.10.0/example
 
 
 ########################
@@ -396,7 +396,7 @@ CMAKE_GENERATOR_TOOLSET:INTERNAL=
 CMAKE_HAVE_PTHREAD_H:INTERNAL=
 //Source directory with the top level CMakeLists.txt file for this
 // project
-CMAKE_HOME_DIRECTORY:INTERNAL=C:/Librerias/SUMOLibraries/JuPedSim/spdlog-1.10.0
+CMAKE_HOME_DIRECTORY:INTERNAL=C:/SUMOLibraries/JuPedSim/spdlog-1.10.0
 //ADVANCED property for variable: CMAKE_INSTALL_BINDIR
 CMAKE_INSTALL_BINDIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_INSTALL_DATADIR
@@ -497,5 +497,5 @@ CPACK_SOURCE_ZIP-ADVANCED:INTERNAL=1
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //CMAKE_INSTALL_PREFIX during last run
-_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=C:/Librerias/SUMOLibraries/JuPedSim/spdlog-1.10.0
+_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=C:/SUMOLibraries/JuPedSim/spdlog-1.10.0
 

@@ -178,31 +178,31 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=OFF
 EXECUTABLE_OUTPUT_PATH:PATH=
 
 //Installation directory for executables
-INSTALL_BIN_DIR:PATH=C:/Librerias/SUMOLibraries/3rdPartyLibs/zlib-1.2.12/bin
+INSTALL_BIN_DIR:PATH=C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.12/bin
 
 //Installation directory for headers
-INSTALL_INC_DIR:PATH=C:/Librerias/SUMOLibraries/3rdPartyLibs/zlib-1.2.12/include
+INSTALL_INC_DIR:PATH=C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.12/include
 
 //Installation directory for libraries
-INSTALL_LIB_DIR:PATH=C:/Librerias/SUMOLibraries/3rdPartyLibs/zlib-1.2.12/lib
+INSTALL_LIB_DIR:PATH=C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.12/lib
 
 //Installation directory for manual pages
-INSTALL_MAN_DIR:PATH=C:/Librerias/SUMOLibraries/3rdPartyLibs/zlib-1.2.12/share/man
+INSTALL_MAN_DIR:PATH=C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.12/share/man
 
 //Installation directory for pkgconfig (.pc) files
-INSTALL_PKGCONFIG_DIR:PATH=C:/Librerias/SUMOLibraries/3rdPartyLibs/zlib-1.2.12/share/pkgconfig
+INSTALL_PKGCONFIG_DIR:PATH=C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.12/share/pkgconfig
 
 //Single output directory for building all libraries.
 LIBRARY_OUTPUT_PATH:PATH=
 
 //Value Computed by CMake
-zlib_BINARY_DIR:STATIC=C:/Librerias/SUMOLibraries/3rdPartyLibs/zlib-1.2.12/build
+zlib_BINARY_DIR:STATIC=C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.12/build
 
 //Value Computed by CMake
 zlib_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-zlib_SOURCE_DIR:STATIC=C:/Librerias/SUMOLibraries/3rdPartyLibs/zlib-1.2.12
+zlib_SOURCE_DIR:STATIC=C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.12
 
 
 ########################
@@ -261,7 +261,7 @@ CMAKE_GENERATOR_PLATFORM:INTERNAL=
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
 //Source directory with the top level CMakeLists.txt file for this
 // project
-CMAKE_HOME_DIRECTORY:INTERNAL=C:/Librerias/SUMOLibraries/3rdPartyLibs/zlib-1.2.12
+CMAKE_HOME_DIRECTORY:INTERNAL=C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.12
 //ADVANCED property for variable: CMAKE_LINKER
 CMAKE_LINKER-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MODULE_LINKER_FLAGS

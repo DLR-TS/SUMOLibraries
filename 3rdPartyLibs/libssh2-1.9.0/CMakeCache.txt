@@ -104,7 +104,7 @@ CMAKE_INSTALL_MANDIR:PATH=
 CMAKE_INSTALL_OLDINCLUDEDIR:PATH=/usr/include
 
 //Install path prefix, prepended onto install directories.
-CMAKE_INSTALL_PREFIX:PATH=C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0
+CMAKE_INSTALL_PREFIX:PATH=C:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0
 
 //Run-time variable data (LOCALSTATEDIR/run)
 CMAKE_INSTALL_RUNSTATEDIR:PATH=
@@ -254,10 +254,10 @@ CPACK_SOURCE_ZIP:BOOL=ON
 CRYPTO_BACKEND:STRING=
 
 //Path to a file.
-DLL_LIBEAY32:FILEPATH=C:/Librerias/SUMOLibraries/3rdPartyLibs/openssl-1.1.1/libcrypto-1_1-x64.dll
+DLL_LIBEAY32:FILEPATH=C:/SUMOLibraries/3rdPartyLibs/openssl-1.1.1/libcrypto-1_1-x64.dll
 
 //Path to a file.
-DLL_SSLEAY32:FILEPATH=C:/Librerias/SUMOLibraries/3rdPartyLibs/openssl-1.1.1/libssl-1_1-x64.dll
+DLL_SSLEAY32:FILEPATH=C:/SUMOLibraries/3rdPartyLibs/openssl-1.1.1/libssl-1_1-x64.dll
 
 //Permit "none" cipher -- NOT RECOMMENDED
 ENABLE_CRYPT_NONE:BOOL=OFF
@@ -284,7 +284,7 @@ LIB_EAY_DEBUG:FILEPATH=LIB_EAY_DEBUG-NOTFOUND
 LIB_EAY_LIBRARY_DEBUG:FILEPATH=LIB_EAY_LIBRARY_DEBUG-NOTFOUND
 
 //Path to a library.
-LIB_EAY_RELEASE:FILEPATH=C:/Librerias/SUMOLibraries/3rdPartyLibs/openssl-1.1.1/libcrypto.lib
+LIB_EAY_RELEASE:FILEPATH=C:/SUMOLibraries/3rdPartyLibs/openssl-1.1.1/libcrypto.lib
 
 //Path to a program.
 MAN_EXECUTABLE:FILEPATH=MAN_EXECUTABLE-NOTFOUND
@@ -293,7 +293,7 @@ MAN_EXECUTABLE:FILEPATH=MAN_EXECUTABLE-NOTFOUND
 OPENSSL_APPLINK_SOURCE:FILEPATH=OPENSSL_APPLINK_SOURCE-NOTFOUND
 
 //Path to a file.
-OPENSSL_INCLUDE_DIR:PATH=C:/Librerias/SUMOLibraries/3rdPartyLibs/openssl-1.1.1/include
+OPENSSL_INCLUDE_DIR:PATH=C:/SUMOLibraries/3rdPartyLibs/openssl-1.1.1/include
 
 //Path to a program.
 SH_EXECUTABLE:FILEPATH=SH_EXECUTABLE-NOTFOUND
@@ -305,25 +305,25 @@ SSL_EAY_DEBUG:FILEPATH=SSL_EAY_DEBUG-NOTFOUND
 SSL_EAY_LIBRARY_DEBUG:FILEPATH=SSL_EAY_LIBRARY_DEBUG-NOTFOUND
 
 //Path to a library.
-SSL_EAY_RELEASE:FILEPATH=C:/Librerias/SUMOLibraries/3rdPartyLibs/openssl-1.1.1/libssl.lib
+SSL_EAY_RELEASE:FILEPATH=C:/SUMOLibraries/3rdPartyLibs/openssl-1.1.1/libssl.lib
 
 //Path to a file.
-ZLIB_INCLUDE_DIR:PATH=C:/Librerias/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/include
+ZLIB_INCLUDE_DIR:PATH=C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/include
 
 //Path to a library.
-ZLIB_LIBRARY_DEBUG:FILEPATH=C:/Librerias/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/lib/zlibd.lib
+ZLIB_LIBRARY_DEBUG:FILEPATH=C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/lib/zlibd.lib
 
 //Path to a library.
-ZLIB_LIBRARY_RELEASE:FILEPATH=C:/Librerias/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/lib/zlib.lib
+ZLIB_LIBRARY_RELEASE:FILEPATH=C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/lib/zlib.lib
 
 //Value Computed by CMake
-libssh2_BINARY_DIR:STATIC=C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0
+libssh2_BINARY_DIR:STATIC=C:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0
 
 //Dependencies for the target
-libssh2_LIB_DEPENDS:STATIC=general;C:/Librerias/SUMOLibraries/3rdPartyLibs/openssl-1.1.1/libssl.lib;general;C:/Librerias/SUMOLibraries/3rdPartyLibs/openssl-1.1.1/libcrypto.lib;general;crypt32;optimized;C:/Librerias/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/lib/zlib.lib;debug;C:/Librerias/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/lib/zlibd.lib;general;ws2_32;
+libssh2_LIB_DEPENDS:STATIC=general;C:/SUMOLibraries/3rdPartyLibs/openssl-1.1.1/libssl.lib;general;C:/SUMOLibraries/3rdPartyLibs/openssl-1.1.1/libcrypto.lib;general;crypt32;optimized;C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/lib/zlib.lib;debug;C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/lib/zlibd.lib;general;ws2_32;
 
 //Value Computed by CMake
-libssh2_SOURCE_DIR:STATIC=C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0
+libssh2_SOURCE_DIR:STATIC=C:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0
 
 //Dependencies for the target
 openssh_fixture_LIB_DEPENDS:STATIC=general;ws2_32;
@@ -389,7 +389,7 @@ CMAKE_GENERATOR_PLATFORM:INTERNAL=x64
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
 //Source directory with the top level CMakeLists.txt file for this
 // project
-CMAKE_HOME_DIRECTORY:INTERNAL=C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0
+CMAKE_HOME_DIRECTORY:INTERNAL=C:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0
 //ADVANCED property for variable: CMAKE_INSTALL_BINDIR
 CMAKE_INSTALL_BINDIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_INSTALL_DATADIR
@@ -498,9 +498,9 @@ CPACK_SOURCE_7Z-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CPACK_SOURCE_ZIP
 CPACK_SOURCE_ZIP-ADVANCED:INTERNAL=1
 //Details about finding OpenSSL
-FIND_PACKAGE_MESSAGE_DETAILS_OpenSSL:INTERNAL=[C:/Librerias/SUMOLibraries/3rdPartyLibs/openssl-1.1.1/libcrypto.lib][C:/Librerias/SUMOLibraries/3rdPartyLibs/openssl-1.1.1/include][c ][v1.1.1i()]
+FIND_PACKAGE_MESSAGE_DETAILS_OpenSSL:INTERNAL=[C:/SUMOLibraries/3rdPartyLibs/openssl-1.1.1/libcrypto.lib][C:/SUMOLibraries/3rdPartyLibs/openssl-1.1.1/include][c ][v1.1.1i()]
 //Details about finding ZLIB
-FIND_PACKAGE_MESSAGE_DETAILS_ZLIB:INTERNAL=[optimized;C:/Librerias/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/lib/zlib.lib;debug;C:/Librerias/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/lib/zlibd.lib][C:/Librerias/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/include][v1.2.11()]
+FIND_PACKAGE_MESSAGE_DETAILS_ZLIB:INTERNAL=[optimized;C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/lib/zlib.lib;debug;C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/lib/zlibd.lib][C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.11/include][v1.2.11()]
 //ADVANCED property for variable: GREP_EXECUTABLE
 GREP_EXECUTABLE-ADVANCED:INTERNAL=1
 //Have includes arpa/inet.h
@@ -597,7 +597,7 @@ NEED_LIB_WS2_32:INTERNAL=1
 OPENSSL_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //Files that must be in the same directory as the executables at
 // runtime.
-RUNTIME_DEPENDENCIES:INTERNAL=C:/Librerias/SUMOLibraries/3rdPartyLibs/openssl-1.1.1/libcrypto-1_1-x64.dll;C:/Librerias/SUMOLibraries/3rdPartyLibs/openssl-1.1.1/libssl-1_1-x64.dll;$<TARGET_FILE:libssh2>
+RUNTIME_DEPENDENCIES:INTERNAL=C:/SUMOLibraries/3rdPartyLibs/openssl-1.1.1/libcrypto-1_1-x64.dll;C:/SUMOLibraries/3rdPartyLibs/openssl-1.1.1/libssl-1_1-x64.dll;$<TARGET_FILE:libssh2>
 //ADVANCED property for variable: SH_EXECUTABLE
 SH_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: SSL_EAY_LIBRARY_DEBUG
@@ -609,5 +609,5 @@ ZLIB_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: ZLIB_LIBRARY_RELEASE
 ZLIB_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //CMAKE_INSTALL_PREFIX during last run
-_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0
+_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=C:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0
 
