@@ -69,7 +69,7 @@
       <StdOutEncoding>UTF-8</StdOutEncoding>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Checking Build System</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-C:\CMake\bin\cmake.exe -SC:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0 -BC:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0 --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/libssh2.sln
+C:\CMake\bin\cmake.exe -SC:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0 -BC:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0 --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/libssh2.sln
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -82,7 +82,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Checking Build System</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-C:\CMake\bin\cmake.exe -SC:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0 -BC:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0 --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/libssh2.sln
+C:\CMake\bin\cmake.exe -SC:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0 -BC:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0 --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/libssh2.sln
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone

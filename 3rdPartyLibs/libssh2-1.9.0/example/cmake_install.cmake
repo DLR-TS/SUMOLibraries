@@ -1,8 +1,8 @@
-# Install script for directory: C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example
+# Install script for directory: C:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0")
+  set(CMAKE_INSTALL_PREFIX "C:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

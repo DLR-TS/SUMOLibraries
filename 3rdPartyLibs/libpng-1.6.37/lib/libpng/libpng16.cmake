@@ -53,7 +53,7 @@ endif()
 add_library(png SHARED IMPORTED)
 
 set_target_properties(png PROPERTIES
-  INTERFACE_LINK_LIBRARIES "\$<\$<NOT:\$<CONFIG:DEBUG>>:C:/Librerias/SUMOLibraries/3rdPartyLibs/zlib-1.2.12/lib/zlib.lib>;\$<\$<CONFIG:DEBUG>:C:/Librerias/SUMOLibraries/3rdPartyLibs/zlib-1.2.12/lib/zlibd.lib>"
+  INTERFACE_LINK_LIBRARIES "\$<\$<NOT:\$<CONFIG:DEBUG>>:C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.12/lib/zlib.lib>;\$<\$<CONFIG:DEBUG>:C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.12/lib/zlibd.lib>"
 )
 
 if(CMAKE_VERSION VERSION_LESS 2.8.12)

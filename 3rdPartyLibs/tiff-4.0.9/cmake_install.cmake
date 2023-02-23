@@ -1,4 +1,4 @@
-# Install script for directory: C:/Librerias/SUMOLibraries/3rdPartyLibs/tiff-4.0.9
+# Install script for directory: C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,26 +34,26 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "C:/Librerias/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/lib/pkgconfig/libtiff-4.pc")
+   "C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/lib/pkgconfig/libtiff-4.pc")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "C:/Librerias/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/lib/pkgconfig" TYPE FILE FILES "C:/Librerias/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/libtiff-4.pc")
+file(INSTALL DESTINATION "C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/lib/pkgconfig" TYPE FILE FILES "C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/libtiff-4.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Librerias/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/port/cmake_install.cmake")
-  include("C:/Librerias/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/libtiff/cmake_install.cmake")
-  include("C:/Librerias/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/tools/cmake_install.cmake")
-  include("C:/Librerias/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/test/cmake_install.cmake")
-  include("C:/Librerias/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/contrib/cmake_install.cmake")
-  include("C:/Librerias/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/build/cmake_install.cmake")
-  include("C:/Librerias/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/man/cmake_install.cmake")
-  include("C:/Librerias/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/html/cmake_install.cmake")
+  include("C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/port/cmake_install.cmake")
+  include("C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/libtiff/cmake_install.cmake")
+  include("C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/tools/cmake_install.cmake")
+  include("C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/test/cmake_install.cmake")
+  include("C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/contrib/cmake_install.cmake")
+  include("C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/build/cmake_install.cmake")
+  include("C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/man/cmake_install.cmake")
+  include("C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/html/cmake_install.cmake")
 
 endif()
 
@@ -65,5 +65,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Librerias/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
