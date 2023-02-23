@@ -156,7 +156,7 @@ CMAKE_INSTALL_MANDIR:PATH=
 CMAKE_INSTALL_OLDINCLUDEDIR:PATH=/usr/include
 
 //Install path prefix, prepended onto install directories.
-CMAKE_INSTALL_PREFIX:PATH=C:/SUMOLibraries/OSG-3.6.5_install
+CMAKE_INSTALL_PREFIX:PATH=C:/SUMOLibraries/OSG-3.6.5
 
 //Run-time variable data (LOCALSTATEDIR/run)
 CMAKE_INSTALL_RUNSTATEDIR:PATH=
@@ -1252,7 +1252,7 @@ ZEROCONF_INCLUDE_DIR:PATH=ZEROCONF_INCLUDE_DIR-NOTFOUND
 ZEROCONF_LIBRARY:FILEPATH=ZEROCONF_LIBRARY-NOTFOUND
 
 //Path to a file.
-ZLIB_INCLUDE_DIR:PATH=C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.12
+ZLIB_INCLUDE_DIR:PATH=C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.12/include
 
 //Path to a library.
 ZLIB_LIBRARY_DEBUG:FILEPATH=C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.12/lib/zlibd.lib
@@ -1865,7 +1865,7 @@ FIND_PACKAGE_MESSAGE_DETAILS_TIFF:INTERNAL=[optimized;C:/SUMOLibraries/3rdPartyL
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //Details about finding ZLIB
-FIND_PACKAGE_MESSAGE_DETAILS_ZLIB:INTERNAL=[optimized;C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.12/lib/zlib.lib;debug;C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.12/lib/zlibd.lib][C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.12][v1.2.12()]
+FIND_PACKAGE_MESSAGE_DETAILS_ZLIB:INTERNAL=[optimized;C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.12/lib/zlib.lib;debug;C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.12/lib/zlibd.lib][C:/SUMOLibraries/3rdPartyLibs/zlib-1.2.12/include][v1.2.12()]
 //ADVANCED property for variable: FONTCONFIG_INCLUDE_DIR
 FONTCONFIG_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: FONTCONFIG_LIBRARY
@@ -2038,7 +2038,7 @@ ZLIB_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: ZLIB_LIBRARY_RELEASE
 ZLIB_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //CMAKE_INSTALL_PREFIX during last run
-_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=C:/SUMOLibraries/OSG-3.6.5_install
+_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=C:/SUMOLibraries/OSG-3.6.5
 //Test _OPENTHREADS_ATOMIC_USE_BSD_ATOMIC
 _OPENTHREADS_ATOMIC_USE_BSD_ATOMIC:INTERNAL=
 //Result of TRY_COMPILE
