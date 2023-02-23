@@ -9,7 +9,9 @@ SPDX-License-Identifier: MIT
 #ifndef _GIF_HASH_H_
 #define _GIF_HASH_H_
 
+#ifndef _WIN32
 #include <unistd.h>
+#endif
 #include <stdint.h>
 
 #define HT_SIZE			8192	   /* 12bits = 4096 or twice as big! */
