@@ -1,0 +1,14 @@
+prefix=/home/alva_pa/tmp/installed
+exec_prefix=${prefix}
+libdir=/home/alva_pa/tmp/installed/lib
+includedir=/home/alva_pa/tmp/installed/include
+
+Name: libavfilter
+Description: FFmpeg audio/video filtering library
+Version: 9.4.100
+Requires: 
+Requires.private: libswscale >= 7.2.100, libpostproc >= 57.2.100, libavformat >= 60.4.100, libavcodec >= 60.6.100, libswresample >= 4.11.100, libavutil >= 58.3.100
+Conflicts:
+Libs: -L${libdir}  -lavfilter 
+Libs.private: 
+Cflags: -I${includedir}
