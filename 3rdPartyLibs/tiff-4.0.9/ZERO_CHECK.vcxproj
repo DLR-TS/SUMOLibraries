@@ -68,7 +68,7 @@
     <CustomBuild Include="C:\SUMOLibraries\3rdPartyLibs\tiff-4.0.9\CMakeFiles\8124030d1354a5e8f0590159baf39dca\generate.stamp.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Checking Build System</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-C:\CMake\bin\cmake.exe -SC:/Librerias/SUMOLibraries/3rdPartyLibs/tiff-4.0.9 -BC:/Librerias/SUMOLibraries/3rdPartyLibs/tiff-4.0.9 --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Librerias/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/tiff.sln
+C:\CMake\bin\cmake.exe -SC:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9 -BC:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9 --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/tiff.sln
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -81,7 +81,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Checking Build System</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-C:\CMake\bin\cmake.exe -SC:/Librerias/SUMOLibraries/3rdPartyLibs/tiff-4.0.9 -BC:/Librerias/SUMOLibraries/3rdPartyLibs/tiff-4.0.9 --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Librerias/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/tiff.sln
+C:\CMake\bin\cmake.exe -SC:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9 -BC:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9 --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/SUMOLibraries/3rdPartyLibs/tiff-4.0.9/tiff.sln
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone

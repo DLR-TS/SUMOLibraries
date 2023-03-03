@@ -89,8 +89,8 @@
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/Debug/example-sftpdir_nonblock.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/Debug/example-sftpdir_nonblock.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/Debug/example-sftpdir_nonblock.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/Debug/example-sftpdir_nonblock.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -132,8 +132,8 @@
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/Release/example-sftpdir_nonblock.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/Release/example-sftpdir_nonblock.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/Release/example-sftpdir_nonblock.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/Release/example-sftpdir_nonblock.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -143,9 +143,9 @@
   <ItemGroup>
     <CustomBuild Include="C:\Librerias\SUMOLibraries\3rdPartyLibs\libssh2-1.9.0\example\CMakeLists.txt">
       <StdOutEncoding>UTF-8</StdOutEncoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-C:\CMake\bin\cmake.exe -SC:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0 -BC:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0 --check-stamp-file C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/CMakeFiles/generate.stamp
+C:\CMake\bin\cmake.exe -SC:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0 -BC:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0 --check-stamp-file C:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -156,9 +156,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\CMake\share\cmake-3.18\Modules\CMakeParseArguments.cmake;C:\CMake\share\cmake-3.18\Modules\CheckIncludeFiles.cmake;C:\CMake\share\cmake-3.18\Modules\CheckSymbolExists.cmake;C:\Librerias\SUMOLibraries\3rdPartyLibs\libssh2-1.9.0\cmake\CopyRuntimeDependencies.cmake;C:\Librerias\SUMOLibraries\3rdPartyLibs\libssh2-1.9.0\cmake\SocketLibraries.cmake;C:\Librerias\SUMOLibraries\3rdPartyLibs\libssh2-1.9.0\example\libssh2_config_cmake.h.in;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Librerias\SUMOLibraries\3rdPartyLibs\libssh2-1.9.0\example\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-C:\CMake\bin\cmake.exe -SC:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0 -BC:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0 --check-stamp-file C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/CMakeFiles/generate.stamp
+C:\CMake\bin\cmake.exe -SC:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0 -BC:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0 --check-stamp-file C:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
