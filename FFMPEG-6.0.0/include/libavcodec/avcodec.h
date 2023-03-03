@@ -771,13 +771,11 @@ typedef struct AVCodecContext {
      */
     float dark_masking;
 
-#if FF_API_SLICE_OFFSET
     /**
      * slice count
      * - encoding: Set by libavcodec.
      * - decoding: Set by user (or 0).
      */
-    attribute_deprecated
     int slice_count;
 
     /**
@@ -785,9 +783,7 @@ typedef struct AVCodecContext {
      * - encoding: Set/allocated by libavcodec.
      * - decoding: Set/allocated by user (or NULL).
      */
-    attribute_deprecated
     int *slice_offset;
-#endif
 
     /**
      * sample aspect ratio (0 if unknown)
@@ -1588,19 +1584,12 @@ typedef struct AVCodecContext {
 #define FF_PROFILE_DNXHR_HQX     4
 #define FF_PROFILE_DNXHR_444     5
 
-#define FF_PROFILE_DTS                20
-#define FF_PROFILE_DTS_ES             30
-#define FF_PROFILE_DTS_96_24          40
-#define FF_PROFILE_DTS_HD_HRA         50
-#define FF_PROFILE_DTS_HD_MA          60
-#define FF_PROFILE_DTS_EXPRESS        70
-#define FF_PROFILE_DTS_HD_MA_X        61
-#define FF_PROFILE_DTS_HD_MA_X_IMAX   62
-
-
-#define FF_PROFILE_EAC3_DDP_ATMOS         30
-
-#define FF_PROFILE_TRUEHD_ATMOS           30
+#define FF_PROFILE_DTS         20
+#define FF_PROFILE_DTS_ES      30
+#define FF_PROFILE_DTS_96_24   40
+#define FF_PROFILE_DTS_HD_HRA  50
+#define FF_PROFILE_DTS_HD_MA   60
+#define FF_PROFILE_DTS_EXPRESS 70
 
 #define FF_PROFILE_MPEG2_422    0
 #define FF_PROFILE_MPEG2_HIGH   1
@@ -1665,7 +1654,6 @@ typedef struct AVCodecContext {
 #define FF_PROFILE_HEVC_MAIN_10                     2
 #define FF_PROFILE_HEVC_MAIN_STILL_PICTURE          3
 #define FF_PROFILE_HEVC_REXT                        4
-#define FF_PROFILE_HEVC_SCC                         9
 
 #define FF_PROFILE_VVC_MAIN_10                      1
 #define FF_PROFILE_VVC_MAIN_10_444                 33

@@ -5,9 +5,9 @@ includedir=/home/alva_pa/tmp/installed/include
 
 Name: libswresample
 Description: FFmpeg audio resampling library
-Version: 4.11.100
+Version: 4.10.100
 Requires: 
-Requires.private: libavutil >= 58.3.100
+Requires.private: libavutil >= 58.2.100
 Conflicts:
 Libs: -L${libdir}  -lswresample 
 Libs.private: 

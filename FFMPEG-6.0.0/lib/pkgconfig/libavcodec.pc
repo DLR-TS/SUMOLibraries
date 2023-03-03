@@ -5,9 +5,9 @@ includedir=/home/alva_pa/tmp/installed/include
 
 Name: libavcodec
 Description: FFmpeg codec library
-Version: 60.6.100
+Version: 60.3.100
 Requires: 
-Requires.private: libswresample >= 4.11.100, libavutil >= 58.3.100
+Requires.private: libswresample >= 4.10.100, libavutil >= 58.2.100
 Conflicts:
 Libs: -L${libdir}  -lavcodec 
 Libs.private: -libpath:/home/alva_pa/tmp/installed/lib libx264.lib mfuuid.lib ole32.lib strmiids.lib ole32.lib user32.lib
