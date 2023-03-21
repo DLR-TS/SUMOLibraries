@@ -30,10 +30,10 @@ BUILD_GEOSOP:BOOL=ON
 BUILD_SHARED_LIBS:BOOL=ON
 
 //Build the testing tree.
-BUILD_TESTING:BOOL=ON
+BUILD_TESTING:BOOL=OFF
 
 //Path to a program.
-CMAKE_AR:FILEPATH=C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.31.31103/bin/Hostx64/x64/lib.exe
+CMAKE_AR:FILEPATH=C:/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.35.32215/bin/Hostx64/x64/lib.exe
 
 //Semicolon separated list of supported configuration types, only
 // supports Debug, Release, MinSizeRel, and RelWithDebInfo, anything
@@ -146,7 +146,7 @@ CMAKE_INSTALL_SHAREDSTATEDIR:PATH=com
 CMAKE_INSTALL_SYSCONFDIR:PATH=etc
 
 //Path to a program.
-CMAKE_LINKER:FILEPATH=C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.31.31103/bin/Hostx64/x64/link.exe
+CMAKE_LINKER:FILEPATH=C:/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.35.32215/bin/Hostx64/x64/link.exe
 
 //Flags used by the linker during the creation of modules during
 // all build types.
@@ -268,7 +268,7 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=OFF
 
 //Path to the coverage program that CTest uses for performing coverage
 // inspection
-COVERAGE_COMMAND:FILEPATH=C:/CodeBlocks/MinGW/bin/gcov.exe
+COVERAGE_COMMAND:FILEPATH=COVERAGE_COMMAND-NOTFOUND
 
 //Extra command line flags to pass to the coverage tool
 COVERAGE_EXTRA_FLAGS:STRING=-l
@@ -304,7 +304,7 @@ MEMORYCHECK_COMMAND:FILEPATH=MEMORYCHECK_COMMAND-NOTFOUND
 MEMORYCHECK_SUPPRESSIONS_FILE:FILEPATH=
 
 //Name of the computer/site where compile is being run
-SITE:STRING=Pablo-Sobremesa
+SITE:STRING=PABLO-SOBREMESA
 
 
 ########################
@@ -318,15 +318,13 @@ CMAKE_CACHEFILE_DIR:INTERNAL=c:/SUMOLibraries/3rdPartyLibs/geos-3.10.2/build
 //Major version of cmake used to create the current loaded cache
 CMAKE_CACHE_MAJOR_VERSION:INTERNAL=3
 //Minor version of cmake used to create the current loaded cache
-CMAKE_CACHE_MINOR_VERSION:INTERNAL=22
+CMAKE_CACHE_MINOR_VERSION:INTERNAL=23
 //Patch version of cmake used to create the current loaded cache
-CMAKE_CACHE_PATCH_VERSION:INTERNAL=0
+CMAKE_CACHE_PATCH_VERSION:INTERNAL=2
 //Path to CMake executable.
 CMAKE_COMMAND:INTERNAL=C:/CMake/bin/cmake.exe
 //Path to cpack program executable.
 CMAKE_CPACK_COMMAND:INTERNAL=C:/CMake/bin/cpack.exe
-//ADVANCED property for variable: CMAKE_CTEST_COMMAND
-CMAKE_CTEST_COMMAND-ADVANCED:INTERNAL=1
 //Path to ctest program executable.
 CMAKE_CTEST_COMMAND:INTERNAL=C:/CMake/bin/ctest.exe
 //ADVANCED property for variable: CMAKE_CXX_FLAGS
@@ -370,7 +368,7 @@ CMAKE_EXTRA_GENERATOR:INTERNAL=
 //Name of generator.
 CMAKE_GENERATOR:INTERNAL=Visual Studio 17 2022
 //Generator instance identifier.
-CMAKE_GENERATOR_INSTANCE:INTERNAL=C:/Program Files/Microsoft Visual Studio/2022/Community
+CMAKE_GENERATOR_INSTANCE:INTERNAL=C:/Microsoft Visual Studio/2022/Community
 //Name of generator platform.
 CMAKE_GENERATOR_PLATFORM:INTERNAL=
 //Name of generator toolset.
@@ -427,7 +425,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MT
 CMAKE_MT-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=13
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=9
 //Platform information initialized
 CMAKE_PLATFORM_INFO_INITIALIZED:INTERNAL=1
 //noop for ranlib
@@ -446,7 +444,7 @@ CMAKE_RC_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_RC_FLAGS_RELWITHDEBINFO
 CMAKE_RC_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //Path to CMake installation.
-CMAKE_ROOT:INTERNAL=C:/CMake/share/cmake-3.22
+CMAKE_ROOT:INTERNAL=C:/CMake/share/cmake-3.23
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS
 CMAKE_SHARED_LINKER_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS_DEBUG
