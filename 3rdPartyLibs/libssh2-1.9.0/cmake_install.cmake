@@ -1,8 +1,8 @@
-# Install script for directory: C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0
+# Install script for directory: C:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0")
+  set(CMAKE_INSTALL_PREFIX "C:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,20 +34,20 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/doc/libssh2" TYPE FILE FILES
-    "C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/docs/AUTHORS"
-    "C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/COPYING"
-    "C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/docs/HACKING"
-    "C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/README"
-    "C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/RELEASE-NOTES"
-    "C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/NEWS"
+    "C:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/docs/AUTHORS"
+    "C:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/COPYING"
+    "C:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/docs/HACKING"
+    "C:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/README"
+    "C:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/RELEASE-NOTES"
+    "C:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/NEWS"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/src/cmake_install.cmake")
-  include("C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/cmake_install.cmake")
-  include("C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/docs/cmake_install.cmake")
+  include("C:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/src/cmake_install.cmake")
+  include("C:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/example/cmake_install.cmake")
+  include("C:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/docs/cmake_install.cmake")
 
 endif()
 
@@ -59,5 +59,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -45,23 +45,23 @@ unset(_expectedTargets)
 add_library(Libssh2::libssh2 SHARED IMPORTED)
 
 set_target_properties(Libssh2::libssh2 PROPERTIES
-  INTERFACE_INCLUDE_DIRECTORIES "C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/include"
+  INTERFACE_INCLUDE_DIRECTORIES "C:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/include"
 )
 
 # Import target "Libssh2::libssh2" for configuration "Debug"
 set_property(TARGET Libssh2::libssh2 APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(Libssh2::libssh2 PROPERTIES
-  IMPORTED_IMPLIB_DEBUG "C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/src/Debug/libssh2.lib"
+  IMPORTED_IMPLIB_DEBUG "C:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/src/Debug/libssh2.lib"
   IMPORTED_LINK_INTERFACE_LIBRARIES_DEBUG ""
-  IMPORTED_LOCATION_DEBUG "C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/src/Debug/libssh2.dll"
+  IMPORTED_LOCATION_DEBUG "C:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/src/Debug/libssh2.dll"
   )
 
 # Import target "Libssh2::libssh2" for configuration "Release"
 set_property(TARGET Libssh2::libssh2 APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(Libssh2::libssh2 PROPERTIES
-  IMPORTED_IMPLIB_RELEASE "C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/src/Release/libssh2.lib"
+  IMPORTED_IMPLIB_RELEASE "C:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/src/Release/libssh2.lib"
   IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE ""
-  IMPORTED_LOCATION_RELEASE "C:/Librerias/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/src/Release/libssh2.dll"
+  IMPORTED_LOCATION_RELEASE "C:/SUMOLibraries/3rdPartyLibs/libssh2-1.9.0/src/Release/libssh2.dll"
   )
 
 # This file does not depend on other imported targets which have

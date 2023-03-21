@@ -1,0 +1,14 @@
+prefix=/home/alva_pa/tmp/installed
+exec_prefix=${prefix}
+libdir=/home/alva_pa/tmp/installed/lib
+includedir=/home/alva_pa/tmp/installed/include
+
+Name: libswscale
+Description: FFmpeg image rescaling library
+Version: 7.1.100
+Requires: 
+Requires.private: libavutil >= 58.2.100
+Conflicts:
+Libs: -L${libdir}  -lswscale 
+Libs.private: 
+Cflags: -I${includedir}
