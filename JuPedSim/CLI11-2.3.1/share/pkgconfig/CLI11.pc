@@ -1,9 +1,0 @@
-prefix=C:/Librerias/SUMOLibraries/JuPedSim/CLI11-2.3.1
-exec_prefix=${prefix}
-includedir=${prefix}/include
-
-Name: CLI11
-Description: C++ command line parser
-Version: 2.3.1
-
-Cflags: -I${includedir}
