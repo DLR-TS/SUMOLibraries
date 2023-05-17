@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\lwo\Block.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\lwo\Clip.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\lwo\Converter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\lwo\Object.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\lwo\old_lw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\lwo\Polygon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\lwo\ReaderWriterLWO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\lwo\Surface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\lwo\Tessellator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\lwo\Unit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\lwo\VertexMap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\lwo\Block.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\lwo\Clip.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\lwo\Converter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\lwo\iffparser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\lwo\Layer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\lwo\lwo2chunks.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\lwo\lwo2parser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\lwo\lwo2read.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\lwo\lwo2types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\lwo\Object.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\lwo\old_lw.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\lwo\Polygon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\lwo\Surface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\lwo\Tessellator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\lwo\Unit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\lwo\VertexMap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\lwo\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\PlatformSpecifics\Windows\OpenSceneGraphVersionInfo.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{798227C8-F63D-377D-B402-249FA1A7EF5E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{75F9FA5D-64E2-39A3-800D-3A429F06C13A}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

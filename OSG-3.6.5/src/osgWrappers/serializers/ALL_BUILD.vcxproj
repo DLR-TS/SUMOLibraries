@@ -1,0 +1,633 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{15C0171E-AA3F-379C-931F-D08918F330B8}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Librerias\SUMOLibraries\OSG-3.6.5\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Librerias\SUMOLibraries\OSG-3.6.5\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\CMakeLists.txt">
+      <StdOutEncoding>UTF-8</StdOutEncoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Librerias/SUMOLibraries/OSG-3.6.5/src/osgWrappers/serializers/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\CMake\bin\cmake.exe -SC:/Librerias/SUMOLibraries/OSG-3.6.5 -BC:/Librerias/SUMOLibraries/OSG-3.6.5 --check-stamp-file C:/Librerias/SUMOLibraries/OSG-3.6.5/src/osgWrappers/serializers/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Librerias/SUMOLibraries/OSG-3.6.5/src/osgWrappers/serializers/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\CMake\bin\cmake.exe -SC:/Librerias/SUMOLibraries/OSG-3.6.5 -BC:/Librerias/SUMOLibraries/OSG-3.6.5 --check-stamp-file C:/Librerias/SUMOLibraries/OSG-3.6.5/src/osgWrappers/serializers/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\ZERO_CHECK.vcxproj">
+      <Project>{DD47887F-046C-32DF-842D-CA213A5DE851}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\3dc\osgdb_3dc.vcxproj">
+      <Project>{62822A19-78A1-3F66-9296-FF127A37A442}</Project>
+      <Name>osgdb_3dc</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\3ds\osgdb_3ds.vcxproj">
+      <Project>{2C0AAC39-B1F7-3F0D-9742-DE8ACC46F444}</Project>
+      <Name>osgdb_3ds</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\ac\osgdb_ac.vcxproj">
+      <Project>{5773885E-9DEB-325C-B513-E1DF0BC9DB39}</Project>
+      <Name>osgdb_ac</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\bmp\osgdb_bmp.vcxproj">
+      <Project>{35C66001-42C5-3A78-8147-634819213FC5}</Project>
+      <Name>osgdb_bmp</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\bsp\osgdb_bsp.vcxproj">
+      <Project>{B3A5065F-E053-35D6-818C-F6F3C85AB93A}</Project>
+      <Name>osgdb_bsp</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\bvh\osgdb_bvh.vcxproj">
+      <Project>{33858180-E27E-31C4-B9BE-3248B1A4511F}</Project>
+      <Name>osgdb_bvh</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\cfg\osgdb_cfg.vcxproj">
+      <Project>{4F9CE51B-C3AD-3418-9DCE-B082FADB54A9}</Project>
+      <Name>osgdb_cfg</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\curl\osgdb_curl.vcxproj">
+      <Project>{662AE78E-B3E4-3753-9272-D96170F18A5B}</Project>
+      <Name>osgdb_curl</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\dds\osgdb_dds.vcxproj">
+      <Project>{04151598-2CA0-34AF-A2D6-DE56676FEF88}</Project>
+      <Name>osgdb_dds</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\deprecated-dotosg\osg\osgdb_deprecated_osg.vcxproj">
+      <Project>{14C0ADD1-22E7-38D3-802A-B3E00FC74AE5}</Project>
+      <Name>osgdb_deprecated_osg</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\deprecated-dotosg\osgAnimation\osgdb_deprecated_osganimation.vcxproj">
+      <Project>{B91589F7-0A31-318B-BDB0-BEE4F7FB41A5}</Project>
+      <Name>osgdb_deprecated_osganimation</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\deprecated-dotosg\osgFX\osgdb_deprecated_osgfx.vcxproj">
+      <Project>{2E57F486-42DC-3C6F-A51E-500CF3DCFC8B}</Project>
+      <Name>osgdb_deprecated_osgfx</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\deprecated-dotosg\osgParticle\osgdb_deprecated_osgparticle.vcxproj">
+      <Project>{35CF6442-3B6A-3599-9A32-AFC57828A2BF}</Project>
+      <Name>osgdb_deprecated_osgparticle</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\deprecated-dotosg\osgShadow\osgdb_deprecated_osgshadow.vcxproj">
+      <Project>{F6988B59-D35B-3B66-8BAA-36A61D9E2ED5}</Project>
+      <Name>osgdb_deprecated_osgshadow</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\deprecated-dotosg\osgSim\osgdb_deprecated_osgsim.vcxproj">
+      <Project>{801F6096-1D32-320B-9451-964465DC8664}</Project>
+      <Name>osgdb_deprecated_osgsim</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\deprecated-dotosg\osgTerrain\osgdb_deprecated_osgterrain.vcxproj">
+      <Project>{3DF50016-8A1E-313F-ACA8-98C021E3E5B0}</Project>
+      <Name>osgdb_deprecated_osgterrain</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\deprecated-dotosg\osgText\osgdb_deprecated_osgtext.vcxproj">
+      <Project>{B63D17A7-BB16-3322-B769-6AA4201D292D}</Project>
+      <Name>osgdb_deprecated_osgtext</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\deprecated-dotosg\osgViewer\osgdb_deprecated_osgviewer.vcxproj">
+      <Project>{E2FFDF7A-BE43-3956-A3D0-4398D68CE9CE}</Project>
+      <Name>osgdb_deprecated_osgviewer</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\deprecated-dotosg\osgVolume\osgdb_deprecated_osgvolume.vcxproj">
+      <Project>{0F5814F1-4622-3EC8-9B86-547544E194B1}</Project>
+      <Name>osgdb_deprecated_osgvolume</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\deprecated-dotosg\osgWidget\osgdb_deprecated_osgwidget.vcxproj">
+      <Project>{ED5EF9C7-9AD1-3451-ADC8-246A27E67EEB}</Project>
+      <Name>osgdb_deprecated_osgwidget</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\dot\osgdb_dot.vcxproj">
+      <Project>{89F904E2-97EA-3817-BDF1-2C3E251D9E03}</Project>
+      <Name>osgdb_dot</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\dxf\osgdb_dxf.vcxproj">
+      <Project>{CFF52C20-C177-3311-B97C-B397933134DF}</Project>
+      <Name>osgdb_dxf</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\freetype\osgdb_freetype.vcxproj">
+      <Project>{32551712-D4E4-3561-A00F-91BA85432F1F}</Project>
+      <Name>osgdb_freetype</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\gdal\osgdb_gdal.vcxproj">
+      <Project>{1AD58968-8731-3889-A575-51630258CF6C}</Project>
+      <Name>osgdb_gdal</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\gles\osgdb_gles.vcxproj">
+      <Project>{CD4E820A-08F5-3903-97E2-8A0029D604AB}</Project>
+      <Name>osgdb_gles</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\glsl\osgdb_glsl.vcxproj">
+      <Project>{5DFBD9A3-D8A8-3CB5-904D-01156B038952}</Project>
+      <Name>osgdb_glsl</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\gz\osgdb_gz.vcxproj">
+      <Project>{6945CF7D-51F0-32AA-A2F7-F3F6DE76ED71}</Project>
+      <Name>osgdb_gz</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\hdr\osgdb_hdr.vcxproj">
+      <Project>{AC1DCDE9-8C6B-315F-AE8E-1E9E1C06C601}</Project>
+      <Name>osgdb_hdr</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\ive\osgdb_ive.vcxproj">
+      <Project>{6BB3122C-516D-34B2-ADC7-A9960A17F0AD}</Project>
+      <Name>osgdb_ive</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\jpeg\osgdb_jpeg.vcxproj">
+      <Project>{3302144F-7849-308A-AF34-B449E4CBEA5A}</Project>
+      <Name>osgdb_jpeg</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\ktx\osgdb_ktx.vcxproj">
+      <Project>{F1758B95-78F3-3938-A00C-9ACF2D852F1D}</Project>
+      <Name>osgdb_ktx</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\logo\osgdb_logo.vcxproj">
+      <Project>{03E1EA49-6139-398B-A9AD-C1101979D01C}</Project>
+      <Name>osgdb_logo</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\lua\osgdb_lua.vcxproj">
+      <Project>{72CACC0F-0C2B-3226-B6F9-331EE333B5D9}</Project>
+      <Name>osgdb_lua</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\lwo\osgdb_lwo.vcxproj">
+      <Project>{9E0F4769-21C6-3B3A-A97B-399BD886F7BE}</Project>
+      <Name>osgdb_lwo</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\lws\osgdb_lws.vcxproj">
+      <Project>{F033D9F4-173B-3CF8-80DA-9C1E9CA17293}</Project>
+      <Name>osgdb_lws</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\md2\osgdb_md2.vcxproj">
+      <Project>{DA4B5E77-2408-3D14-A1E8-02DD577F23DA}</Project>
+      <Name>osgdb_md2</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\mdl\osgdb_mdl.vcxproj">
+      <Project>{4AE1FD62-AC74-3A84-B4DF-2D5E52526A8C}</Project>
+      <Name>osgdb_mdl</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\normals\osgdb_normals.vcxproj">
+      <Project>{48D4270B-9501-3EC3-BCB5-02963FB20933}</Project>
+      <Name>osgdb_normals</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\obj\osgdb_obj.vcxproj">
+      <Project>{6BFE298B-22B5-3D6D-A065-9BDC3B0B4AE2}</Project>
+      <Name>osgdb_obj</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\ogr\osgdb_ogr.vcxproj">
+      <Project>{5180119F-43B5-3093-8DA1-A595F95A50F4}</Project>
+      <Name>osgdb_ogr</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\OpenFlight\osgdb_openflight.vcxproj">
+      <Project>{07FE3FEF-9B9D-3DB9-81CF-D61A30F3D068}</Project>
+      <Name>osgdb_openflight</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\osc\osgdb_osc.vcxproj">
+      <Project>{305DFE6D-811C-36C5-92FE-A959AD44D90B}</Project>
+      <Name>osgdb_osc</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\osg\osgdb_osg.vcxproj">
+      <Project>{09D01F3E-3927-379F-B667-5B19F52EE3BD}</Project>
+      <Name>osgdb_osg</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\osga\osgdb_osga.vcxproj">
+      <Project>{F6AC05B3-84DA-3706-B551-0DFC6D7EF95E}</Project>
+      <Name>osgdb_osga</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\osgjs\osgdb_osgjs.vcxproj">
+      <Project>{DBF67CFB-6266-3489-B8CE-653B1181D322}</Project>
+      <Name>osgdb_osgjs</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\shadow\osgdb_osgshadow.vcxproj">
+      <Project>{8AEF69FC-A437-3E0E-A4B9-6C823FC760D8}</Project>
+      <Name>osgdb_osgshadow</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\terrain\osgdb_osgterrain.vcxproj">
+      <Project>{A4E38E5B-9E58-353D-AFD1-54907EA4118C}</Project>
+      <Name>osgdb_osgterrain</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\osgtgz\osgdb_osgtgz.vcxproj">
+      <Project>{B72B6BE6-AB20-3C34-90C6-5479808978AA}</Project>
+      <Name>osgdb_osgtgz</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\view\osgdb_osgviewer.vcxproj">
+      <Project>{547A91FE-4631-30C3-B771-B69F60B48C61}</Project>
+      <Name>osgdb_osgviewer</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\p3d\osgdb_p3d.vcxproj">
+      <Project>{EC2E48E6-30C8-3904-AFE8-ED977F66C82D}</Project>
+      <Name>osgdb_p3d</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\pic\osgdb_pic.vcxproj">
+      <Project>{EE3038F4-48A2-3541-A8BB-23175620A414}</Project>
+      <Name>osgdb_pic</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\ply\osgdb_ply.vcxproj">
+      <Project>{92FFE0C4-2DE7-3453-93E0-057E119427AF}</Project>
+      <Name>osgdb_ply</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\png\osgdb_png.vcxproj">
+      <Project>{6DC19794-06B7-395A-8981-E4BE4B772A08}</Project>
+      <Name>osgdb_png</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\pnm\osgdb_pnm.vcxproj">
+      <Project>{10056608-3F89-39BE-8446-018E28B16235}</Project>
+      <Name>osgdb_pnm</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\pov\osgdb_pov.vcxproj">
+      <Project>{5FBA12DF-08D9-348F-B8CE-A79F2AB2C179}</Project>
+      <Name>osgdb_pov</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\pvr\osgdb_pvr.vcxproj">
+      <Project>{AAF66847-C2EE-32DE-ABDE-69577BAF99B4}</Project>
+      <Name>osgdb_pvr</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\revisions\osgdb_revisions.vcxproj">
+      <Project>{A69B466E-623B-3B3A-94CF-29210F91DDFC}</Project>
+      <Name>osgdb_revisions</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\rgb\osgdb_rgb.vcxproj">
+      <Project>{9BBE500D-F410-371F-8832-3C986FB20E08}</Project>
+      <Name>osgdb_rgb</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\rot\osgdb_rot.vcxproj">
+      <Project>{47537AE1-EFF8-3416-B947-F66F38E053DB}</Project>
+      <Name>osgdb_rot</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\scale\osgdb_scale.vcxproj">
+      <Project>{8EE5913A-F4E9-3B1C-A07A-99947A3445DD}</Project>
+      <Name>osgdb_scale</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osg\osgdb_serializers_osg.vcxproj">
+      <Project>{41E1C9B2-62F9-39A8-861F-D03CEF7F3FF0}</Project>
+      <Name>osgdb_serializers_osg</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgAnimation\osgdb_serializers_osganimation.vcxproj">
+      <Project>{164504CC-9B4E-3BD6-9BC9-21C0624C25CF}</Project>
+      <Name>osgdb_serializers_osganimation</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgFX\osgdb_serializers_osgfx.vcxproj">
+      <Project>{26AF0BBE-7C54-37D2-87D6-88E142A503CC}</Project>
+      <Name>osgdb_serializers_osgfx</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgGA\osgdb_serializers_osgga.vcxproj">
+      <Project>{C30E9CB8-B5F9-33F3-A5FE-2F316D06DDEF}</Project>
+      <Name>osgdb_serializers_osgga</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgManipulator\osgdb_serializers_osgmanipulator.vcxproj">
+      <Project>{5D9E5011-266F-3F0B-8333-C733F8927DEA}</Project>
+      <Name>osgdb_serializers_osgmanipulator</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgParticle\osgdb_serializers_osgparticle.vcxproj">
+      <Project>{7EA403F1-27C9-3E1F-B501-C66E1C7DCF36}</Project>
+      <Name>osgdb_serializers_osgparticle</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgShadow\osgdb_serializers_osgshadow.vcxproj">
+      <Project>{A24B448F-6546-3C06-B0EE-C1A782A3E516}</Project>
+      <Name>osgdb_serializers_osgshadow</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgSim\osgdb_serializers_osgsim.vcxproj">
+      <Project>{811311C3-8C44-3C01-9AE9-39B927205B8B}</Project>
+      <Name>osgdb_serializers_osgsim</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgTerrain\osgdb_serializers_osgterrain.vcxproj">
+      <Project>{30E99323-8104-31FB-B00D-6EB2C250925B}</Project>
+      <Name>osgdb_serializers_osgterrain</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgText\osgdb_serializers_osgtext.vcxproj">
+      <Project>{6DB3210B-687D-3E54-B122-9D8CB46EE16E}</Project>
+      <Name>osgdb_serializers_osgtext</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgUI\osgdb_serializers_osgui.vcxproj">
+      <Project>{823ABA41-DF1E-313A-BAD0-EC40551D5006}</Project>
+      <Name>osgdb_serializers_osgui</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgUtil\osgdb_serializers_osgutil.vcxproj">
+      <Project>{5B525019-3D4F-3579-8DF6-2698264BB45C}</Project>
+      <Name>osgdb_serializers_osgutil</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgViewer\osgdb_serializers_osgviewer.vcxproj">
+      <Project>{D2762B0F-DF31-36B1-8266-52B69B3C0037}</Project>
+      <Name>osgdb_serializers_osgviewer</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgVolume\osgdb_serializers_osgvolume.vcxproj">
+      <Project>{B49E61F5-A0A0-34F4-88AB-A3A1C4E12B83}</Project>
+      <Name>osgdb_serializers_osgvolume</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\shp\osgdb_shp.vcxproj">
+      <Project>{FB778604-FA5F-3F01-9FD2-C5D9733928F0}</Project>
+      <Name>osgdb_shp</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\stl\osgdb_stl.vcxproj">
+      <Project>{DF49F012-A5BD-3314-9F5C-9A066EE76394}</Project>
+      <Name>osgdb_stl</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\tf\osgdb_tf.vcxproj">
+      <Project>{20205695-BE99-3846-9FBA-3A69AE823D4A}</Project>
+      <Name>osgdb_tf</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\tga\osgdb_tga.vcxproj">
+      <Project>{06725E1B-8821-30E9-BA15-4942B3759CEE}</Project>
+      <Name>osgdb_tga</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\tgz\osgdb_tgz.vcxproj">
+      <Project>{B793DBEC-98A7-3990-9A42-A1A8B733682C}</Project>
+      <Name>osgdb_tgz</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\tiff\osgdb_tiff.vcxproj">
+      <Project>{B28A942D-A4ED-3C22-BB3F-BFE061F1D25B}</Project>
+      <Name>osgdb_tiff</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\trans\osgdb_trans.vcxproj">
+      <Project>{17CF49BA-1A11-3659-AB55-70635BE2EEA5}</Project>
+      <Name>osgdb_trans</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\trk\osgdb_trk.vcxproj">
+      <Project>{D6250906-7362-3334-8E8A-62D5630D8C4D}</Project>
+      <Name>osgdb_trk</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\txf\osgdb_txf.vcxproj">
+      <Project>{F83B740A-53BD-35F5-A059-DC19FD1F6C16}</Project>
+      <Name>osgdb_txf</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\txp\osgdb_txp.vcxproj">
+      <Project>{07CFE52B-5FC7-3E16-9BB9-DD20E9C3A21E}</Project>
+      <Name>osgdb_txp</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\vtf\osgdb_vtf.vcxproj">
+      <Project>{EA8873B0-0728-3748-9D7D-D545CBFAC990}</Project>
+      <Name>osgdb_vtf</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\x\osgdb_x.vcxproj">
+      <Project>{F12145F5-FBA4-30DB-8F5C-8955677C3DDF}</Project>
+      <Name>osgdb_x</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgPlugins\zip\osgdb_zip.vcxproj">
+      <Project>{CC3A3CB0-C75E-3DC9-9EA6-AC27238D1D38}</Project>
+      <Name>osgdb_zip</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

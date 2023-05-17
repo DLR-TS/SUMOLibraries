@@ -1,0 +1,728 @@
+
+[logger_root]
+handlers=root
+level=ERROR
+
+[handler_root]
+class=StreamHandler
+level=ERROR
+args=(sys.stdout,)
+
+[handler_stdout]
+class=StreamHandler
+args=(sys.stdout,)
+#formatter=timed
+
+[formatter_timed]
+format=%(asctime)s - %(message)s
+
+[formatter_debug]
+format=%(name)s %(levelname)s - %(message)s
+
+# ====== The following are disabled by default ======
+# ======= Section for Action Runner ======
+[logger_Action Runner]
+handlers=Action Runner
+qualname=Action Runner
+#level=INFO
+
+[handler_Action Runner]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/actionrunner.diag', 'a')
+
+# ======= Section for Activator ======
+[logger_Activator]
+handlers=Activator
+qualname=Activator
+#level=INFO
+
+[handler_Activator]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/activator.diag', 'a')
+
+# ======= Section for Check For Bugs ======
+[logger_Check For Bugs]
+handlers=Check For Bugs
+qualname=Check For Bugs
+#level=INFO
+
+[handler_Check For Bugs]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/checkforbugs.diag', 'a')
+
+# ======= Section for Collate Files ======
+[logger_Collate Files]
+handlers=Collate Files
+qualname=Collate Files
+#level=INFO
+
+[handler_Collate Files]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/collatefiles.diag', 'a')
+
+# ======= Section for Ec2Machine ======
+[logger_Ec2Machine]
+handlers=Ec2Machine
+qualname=Ec2Machine
+#level=INFO
+
+[handler_Ec2Machine]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/ec2machine.diag', 'a')
+
+# ======= Section for Environment Creator ======
+[logger_Environment Creator]
+handlers=Environment Creator
+qualname=Environment Creator
+#level=INFO
+
+[handler_Environment Creator]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/environmentcreator.diag', 'a')
+
+# ======= Section for File View GUI ======
+[logger_File View GUI]
+handlers=File View GUI
+qualname=File View GUI
+#level=INFO
+
+[handler_File View GUI]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/fileviewgui.diag', 'a')
+
+# ======= Section for FileComparison ======
+[logger_FileComparison]
+handlers=FileComparison
+qualname=FileComparison
+#level=INFO
+
+[handler_FileComparison]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/filecomparison.diag', 'a')
+
+# ======= Section for Filter Actions ======
+[logger_Filter Actions]
+handlers=Filter Actions
+qualname=Filter Actions
+#level=INFO
+
+[handler_Filter Actions]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/filteractions.diag', 'a')
+
+# ======= Section for Find Applications ======
+[logger_Find Applications]
+handlers=Find Applications
+qualname=Find Applications
+#level=INFO
+
+[handler_Find Applications]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/findapplications.diag', 'a')
+
+# ======= Section for GUI notebook ======
+[logger_GUI notebook]
+handlers=GUI notebook
+qualname=GUI notebook
+#level=INFO
+
+[handler_GUI notebook]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/guinotebook.diag', 'a')
+
+# ======= Section for GenerateWebPages ======
+[logger_GenerateWebPages]
+handlers=GenerateWebPages
+qualname=GenerateWebPages
+#level=INFO
+
+[handler_GenerateWebPages]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/generatewebpages.diag', 'a')
+
+# ======= Section for Idle Handlers ======
+[logger_Idle Handlers]
+handlers=Idle Handlers
+qualname=Idle Handlers
+#level=INFO
+
+[handler_Idle Handlers]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/idlehandlers.diag', 'a')
+
+# ======= Section for Interactive Actions ======
+[logger_Interactive Actions]
+handlers=Interactive Actions
+qualname=Interactive Actions
+#level=INFO
+
+[handler_Interactive Actions]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/interactiveactions.diag', 'a')
+
+# ======= Section for JUnit Report Writer ======
+[logger_JUnit Report Writer]
+handlers=JUnit Report Writer
+qualname=JUnit Report Writer
+#level=INFO
+
+[handler_JUnit Report Writer]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/junitreportwriter.diag', 'a')
+
+# ======= Section for Mail Sender ======
+[logger_Mail Sender]
+handlers=Mail Sender
+qualname=Mail Sender
+#level=INFO
+
+[handler_Mail Sender]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/mailsender.diag', 'a')
+
+# ======= Section for Menu Bar ======
+[logger_Menu Bar]
+handlers=Menu Bar
+qualname=Menu Bar
+#level=INFO
+
+[handler_Menu Bar]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/menubar.diag', 'a')
+
+# ======= Section for MultiEntryDictionary ======
+[logger_MultiEntryDictionary]
+handlers=MultiEntryDictionary
+qualname=MultiEntryDictionary
+#level=INFO
+
+[handler_MultiEntryDictionary]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/multientrydictionary.diag', 'a')
+
+# ======= Section for Observable ======
+[logger_Observable]
+handlers=Observable
+qualname=Observable
+#level=INFO
+
+[handler_Observable]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/observable.diag', 'a')
+
+# ======= Section for Prepare Writedir ======
+[logger_Prepare Writedir]
+handlers=Prepare Writedir
+qualname=Prepare Writedir
+#level=INFO
+
+[handler_Prepare Writedir]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/preparewritedir.diag', 'a')
+
+# ======= Section for Progress Monitor ======
+[logger_Progress Monitor]
+handlers=Progress Monitor
+qualname=Progress Monitor
+#level=INFO
+
+[handler_Progress Monitor]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/progressmonitor.diag', 'a')
+
+# ======= Section for Queue System Submit ======
+[logger_Queue System Submit]
+handlers=Queue System Submit
+qualname=Queue System Submit
+#level=INFO
+
+[handler_Queue System Submit]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/queuesystemsubmit.diag', 'a')
+
+# ======= Section for Reconnection ======
+[logger_Reconnection]
+handlers=Reconnection
+qualname=Reconnection
+#level=INFO
+
+[handler_Reconnection]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/reconnection.diag', 'a')
+
+# ======= Section for Run Dependent Text ======
+[logger_Run Dependent Text]
+handlers=Run Dependent Text
+qualname=Run Dependent Text
+#level=INFO
+
+[handler_Run Dependent Text]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/rundependenttext.diag', 'a')
+
+# ======= Section for Save Repository ======
+[logger_Save Repository]
+handlers=Save Repository
+qualname=Save Repository
+#level=INFO
+
+[handler_Save Repository]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/saverepository.diag', 'a')
+
+# ======= Section for Select Tests ======
+[logger_Select Tests]
+handlers=Select Tests
+qualname=Select Tests
+#level=INFO
+
+[handler_Select Tests]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/selecttests.diag', 'a')
+
+# ======= Section for Slave Server ======
+[logger_Slave Server]
+handlers=Slave Server
+qualname=Slave Server
+#level=INFO
+
+[handler_Slave Server]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/slaveserver.diag', 'a')
+
+# ======= Section for Submission Rules ======
+[logger_Submission Rules]
+handlers=Submission Rules
+qualname=Submission Rules
+#level=INFO
+
+[handler_Submission Rules]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/submissionrules.diag', 'a')
+
+# ======= Section for Test Column GUI ======
+[logger_Test Column GUI]
+handlers=Test Column GUI
+qualname=Test Column GUI
+#level=INFO
+
+[handler_Test Column GUI]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/testcolumngui.diag', 'a')
+
+# ======= Section for Test Tree ======
+[logger_Test Tree]
+handlers=Test Tree
+qualname=Test Tree
+#level=INFO
+
+[handler_Test Tree]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/testtree.diag', 'a')
+
+# ======= Section for TestComparison ======
+[logger_TestComparison]
+handlers=TestComparison
+qualname=TestComparison
+#level=INFO
+
+[handler_TestComparison]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/testcomparison.diag', 'a')
+
+# ======= Section for TestSelectionFilter ======
+[logger_TestSelectionFilter]
+handlers=TestSelectionFilter
+qualname=TestSelectionFilter
+#level=INFO
+
+[handler_TestSelectionFilter]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/testselectionfilter.diag', 'a')
+
+# ======= Section for Top Window ======
+[logger_Top Window]
+handlers=Top Window
+qualname=Top Window
+#level=INFO
+
+[handler_Top Window]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/topwindow.diag', 'a')
+
+# ======= Section for Unique Names ======
+[logger_Unique Names]
+handlers=Unique Names
+qualname=Unique Names
+#level=INFO
+
+[handler_Unique Names]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/uniquenames.diag', 'a')
+
+# ======= Section for application ======
+[logger_application]
+handlers=application
+qualname=application
+#level=INFO
+
+[handler_application]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/application.diag', 'a')
+
+# ======= Section for batch collect ======
+[logger_batch collect]
+handlers=batch collect
+qualname=batch collect
+#level=INFO
+
+[handler_batch collect]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/batchcollect.diag', 'a')
+
+# ======= Section for catalogues ======
+[logger_catalogues]
+handlers=catalogues
+qualname=catalogues
+#level=INFO
+
+[handler_catalogues]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/catalogues.diag', 'a')
+
+# ======= Section for check for crashes ======
+[logger_check for crashes]
+handlers=check for crashes
+qualname=check for crashes
+#level=INFO
+
+[handler_check for crashes]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/checkforcrashes.diag', 'a')
+
+# ======= Section for kill processes ======
+[logger_kill processes]
+handlers=kill processes
+qualname=kill processes
+#level=INFO
+
+[handler_kill processes]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/killprocesses.diag', 'a')
+
+# ======= Section for locks ======
+[logger_locks]
+handlers=locks
+qualname=locks
+#level=INFO
+
+[handler_locks]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/locks.diag', 'a')
+
+# ======= Section for makeperformance ======
+[logger_makeperformance]
+handlers=makeperformance
+qualname=makeperformance
+#level=INFO
+
+[handler_makeperformance]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/makeperformance.diag', 'a')
+
+# ======= Section for option finder ======
+[logger_option finder]
+handlers=option finder
+qualname=option finder
+#level=INFO
+
+[handler_option finder]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/optionfinder.diag', 'a')
+
+# ======= Section for read environment ======
+[logger_read environment]
+handlers=read environment
+qualname=read environment
+#level=INFO
+
+[handler_read environment]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/readenvironment.diag', 'a')
+
+# ======= Section for remote commands ======
+[logger_remote commands]
+handlers=remote commands
+qualname=remote commands
+#level=INFO
+
+[handler_remote commands]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/remotecommands.diag', 'a')
+
+# ======= Section for run test ======
+[logger_run test]
+handlers=run test
+qualname=run test
+#level=INFO
+
+[handler_run test]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/runtest.diag', 'a')
+
+# ======= Section for standard log ======
+[logger_standard log]
+handlers=standard log
+qualname=standard log
+#level=INFO
+
+[handler_standard log]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/standardlog.diag', 'a')
+
+# ======= Section for test objects ======
+[logger_test objects]
+handlers=test objects
+qualname=test objects
+#level=INFO
+
+[handler_test objects]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/testobjects.diag', 'a')
+
+# ======= Section for virtual display ======
+[logger_virtual display]
+handlers=virtual display
+qualname=virtual display
+#level=INFO
+
+[handler_virtual display]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/virtualdisplay.diag', 'a')
+
+# ======= Section for Centre finding ======
+[logger_Centre finding]
+handlers=Centre finding
+qualname=Centre finding
+#level=DEBUG
+
+[handler_Centre finding]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/centrefinding.diag', 'a')
+
+# ======= Section for Eclipse RCP jobs ======
+[logger_Eclipse RCP jobs]
+handlers=Eclipse RCP jobs
+qualname=Eclipse RCP jobs
+#level=DEBUG
+
+[handler_Eclipse RCP jobs]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/eclipsercpjobs.diag', 'a')
+
+# ======= Section for Indexer ======
+[logger_Indexer]
+handlers=Indexer
+qualname=Indexer
+#level=DEBUG
+
+[handler_Indexer]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/indexer.diag', 'a')
+
+# ======= Section for Shortcut Tracker ======
+[logger_Shortcut Tracker]
+handlers=Shortcut Tracker
+qualname=Shortcut Tracker
+#level=DEBUG
+
+[handler_Shortcut Tracker]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/shortcuttracker.diag', 'a')
+
+# ======= Section for TreeViewDescriber ======
+[logger_TreeViewDescriber]
+handlers=TreeViewDescriber
+qualname=TreeViewDescriber
+#level=DEBUG
+
+[handler_TreeViewDescriber]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/treeviewdescriber.diag', 'a')
+
+# ======= Section for gui log ======
+[logger_gui log]
+handlers=gui log
+qualname=gui log
+#level=DEBUG
+
+[handler_gui log]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/guilog.diag', 'a')
+
+# ======= Section for gui map ======
+[logger_gui map]
+handlers=gui map
+qualname=gui map
+#level=DEBUG
+
+[handler_gui map]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/guimap.diag', 'a')
+
+# ======= Section for storytext record ======
+[logger_storytext record]
+handlers=storytext record
+qualname=storytext record
+#level=DEBUG
+
+[handler_storytext record]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/storytextrecord.diag', 'a')
+
+# ======= Section for storytext replay log ======
+[logger_storytext replay log]
+handlers=storytext replay log
+qualname=storytext replay log
+#level=DEBUG
+
+[handler_storytext replay log]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/storytextreplaylog.diag', 'a')
+
+# ======= Section for widget structure ======
+[logger_widget structure]
+handlers=widget structure
+qualname=widget structure
+#level=DEBUG
+
+[handler_widget structure]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('%(TEXTTEST_PERSONAL_LOG)s/widgetstructure.diag', 'a')
+
+# ====== Cruft that python logging module needs ======
+[loggers]
+keys=root,Action Runner,Activator,Check For Bugs,Collate Files,Ec2Machine,Environment Creator,File View GUI,FileComparison,Filter Actions,Find Applications,GUI notebook,GenerateWebPages,Idle Handlers,Interactive Actions,JUnit Report Writer,Mail Sender,Menu Bar,MultiEntryDictionary,Observable,Prepare Writedir,Progress Monitor,Queue System Submit,Reconnection,Run Dependent Text,Save Repository,Select Tests,Slave Server,Submission Rules,Test Column GUI,Test Tree,TestComparison,TestSelectionFilter,Top Window,Unique Names,application,batch collect,catalogues,check for crashes,kill processes,locks,makeperformance,option finder,read environment,remote commands,run test,standard log,test objects,virtual display,Centre finding,Eclipse RCP jobs,Indexer,Shortcut Tracker,TreeViewDescriber,gui log,gui map,storytext record,storytext replay log,widget structure
+
+[handlers]
+keys=root,Action Runner,Activator,Centre finding,Check For Bugs,Collate Files,Ec2Machine,Eclipse RCP jobs,Environment Creator,File View GUI,FileComparison,Filter Actions,Find Applications,GUI notebook,GenerateWebPages,Idle Handlers,Indexer,Interactive Actions,JUnit Report Writer,Mail Sender,Menu Bar,MultiEntryDictionary,Observable,Prepare Writedir,Progress Monitor,Queue System Submit,Reconnection,Run Dependent Text,Save Repository,Select Tests,Shortcut Tracker,Slave Server,Submission Rules,Test Column GUI,Test Tree,TestComparison,TestSelectionFilter,Top Window,TreeViewDescriber,Unique Names,application,batch collect,catalogues,check for crashes,gui log,gui map,kill processes,locks,makeperformance,option finder,read environment,remote commands,run test,standard log,stdout,storytext record,storytext replay log,test objects,virtual display,widget structure
+
+[formatters]
+keys=timed,debug
+

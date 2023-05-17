@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\png.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\pngerror.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\pngget.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\pngmem.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\pngpread.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\pngread.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\pngrio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\pngrtran.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\pngrutil.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\pngset.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\pngtrans.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\pngwio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\pngwrite.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\pngwtran.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\pngwutil.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\png.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\pngconf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\pnglibconf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\pngpriv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\pngdebug.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\pnginfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\pngstruct.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\SUMOLibraries\32bits\3rdPartyLibs\libpng-1.6.34\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{9CB072E7-C3F0-3628-BB83-D2DC8142BF93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{F3C3D571-0B9B-3A6C-9A3F-23506C2659AC}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

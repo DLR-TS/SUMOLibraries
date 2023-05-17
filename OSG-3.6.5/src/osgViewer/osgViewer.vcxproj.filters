@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgViewer\config\AcrossAllScreens.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgViewer\config\PanoramicSphericalDisplay.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgViewer\config\SingleScreen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgViewer\config\SingleWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgViewer\config\SphericalDisplay.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgViewer\config\WoWVxDisplay.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgViewer\CompositeViewer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgViewer\GraphicsWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgViewer\HelpHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgViewer\Keystone.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgViewer\Renderer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgViewer\Scene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgViewer\ScreenCaptureHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgViewer\StatsHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgViewer\Version.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgViewer\View.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgViewer\Viewer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgViewer\ViewerBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgViewer\ViewerEventHandlers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgViewer\GraphicsWindowWin32.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgViewer\PixelBufferWin32.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgViewer\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgViewer\CompositeViewer">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgViewer\Export">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgViewer\GraphicsWindow">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgViewer\Keystone">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgViewer\Renderer">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgViewer\Scene">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgViewer\Version">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgViewer\View">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgViewer\Viewer">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgViewer\ViewerBase">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgViewer\ViewerEventHandlers">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgViewer\api\Win32\GraphicsHandleWin32">
+      <Filter>Header Files\api</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgViewer\api\Win32\GraphicsWindowWin32">
+      <Filter>Header Files\api</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgViewer\api\Win32\PixelBufferWin32">
+      <Filter>Header Files\api</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\PlatformSpecifics\Windows\OpenSceneGraphVersionInfo.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{798227C8-F63D-377D-B402-249FA1A7EF5E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\api">
+      <UniqueIdentifier>{728C4306-2359-3C10-85B7-118C0F3570CE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{75F9FA5D-64E2-39A3-800D-3A429F06C13A}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

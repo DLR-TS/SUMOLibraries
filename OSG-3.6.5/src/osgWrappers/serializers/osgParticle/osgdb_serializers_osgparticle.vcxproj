@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7EA403F1-27C9-3E1F-B501-C66E1C7DCF36}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>Plugins osg serializer osgparticle</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Librerias\SUMOLibraries\OSG-3.6.5\bin\osgPlugins-3.6.5\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">osgdb_serializers_osgparticle.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">osgdb_serializers_osgparticled</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Librerias\SUMOLibraries\OSG-3.6.5\bin\osgPlugins-3.6.5\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">osgdb_serializers_osgparticle.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">osgdb_serializers_osgparticle</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Librerias\SUMOLibraries\OSG-3.6.5\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4589;4706;4127;4100</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <StructMemberAlignment>16Bytes</StructMemberAlignment>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_WIN32_WINNT=0x0A00;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;CMAKE_INTDIR="Debug";osgdb_serializers_osgparticle_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_WIN32_WINNT=0x0A00;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;CMAKE_INTDIR=\"Debug\";osgdb_serializers_osgparticle_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Librerias\SUMOLibraries\OSG-3.6.5\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Librerias\SUMOLibraries\OSG-3.6.5\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\..\..\lib\osgParticled.lib;opengl32.lib;..\..\..\..\lib\osgDBd.lib;C:\Librerias\SUMOLibraries\3rdPartyLibs\zlib-1.2.11\lib\zlibd.lib;..\..\..\..\lib\osgUtild.lib;..\..\..\..\lib\osgd.lib;..\..\..\..\lib\OpenThreadsd.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Librerias/SUMOLibraries/OSG-3.6.5/lib/osgPlugins-3.6.5/osgdb_serializers_osgparticled.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Librerias/SUMOLibraries/OSG-3.6.5/bin/osgPlugins-3.6.5/osgdb_serializers_osgparticled.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Librerias\SUMOLibraries\OSG-3.6.5\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DisableSpecificWarnings>4589;4706;4127;4100</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <StructMemberAlignment>16Bytes</StructMemberAlignment>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_WIN32_WINNT=0x0A00;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;CMAKE_INTDIR="Release";osgdb_serializers_osgparticle_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_WIN32_WINNT=0x0A00;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;CMAKE_INTDIR=\"Release\";osgdb_serializers_osgparticle_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Librerias\SUMOLibraries\OSG-3.6.5\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Librerias\SUMOLibraries\OSG-3.6.5\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\..\..\lib\osgParticle.lib;opengl32.lib;..\..\..\..\lib\osgDB.lib;C:\Librerias\SUMOLibraries\3rdPartyLibs\zlib-1.2.11\lib\zlib.lib;..\..\..\..\lib\osgUtil.lib;..\..\..\..\lib\osg.lib;..\..\..\..\lib\OpenThreads.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Librerias/SUMOLibraries/OSG-3.6.5/lib/osgPlugins-3.6.5/osgdb_serializers_osgparticle.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Librerias/SUMOLibraries/OSG-3.6.5/bin/osgPlugins-3.6.5/osgdb_serializers_osgparticle.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgParticle\CMakeLists.txt">
+      <StdOutEncoding>UTF-8</StdOutEncoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Librerias/SUMOLibraries/OSG-3.6.5/src/osgWrappers/serializers/osgParticle/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\CMake\bin\cmake.exe -SC:/Librerias/SUMOLibraries/OSG-3.6.5 -BC:/Librerias/SUMOLibraries/OSG-3.6.5 --check-stamp-file C:/Librerias/SUMOLibraries/OSG-3.6.5/src/osgWrappers/serializers/osgParticle/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgParticle\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Librerias/SUMOLibraries/OSG-3.6.5/src/osgWrappers/serializers/osgParticle/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\CMake\bin\cmake.exe -SC:/Librerias/SUMOLibraries/OSG-3.6.5 -BC:/Librerias/SUMOLibraries/OSG-3.6.5 --check-stamp-file C:/Librerias/SUMOLibraries/OSG-3.6.5/src/osgWrappers/serializers/osgParticle/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgParticle\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgParticle\AccelOperator.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgParticle\AngularAccelOperator.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgParticle\AngularDampingOperator.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgParticle\BounceOperator.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgParticle\BoxPlacer.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgParticle\CenteredPlacer.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgParticle\CompositePlacer.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgParticle\ConnectedParticleSystem.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgParticle\ConstantRateCounter.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgParticle\Counter.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgParticle\DampingOperator.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgParticle\DomainOperator.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgParticle\Emitter.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgParticle\ExplosionDebrisEffect.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgParticle\ExplosionEffect.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgParticle\ExplosionOperator.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgParticle\FireEffect.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgParticle\FluidFrictionOperator.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgParticle\FluidProgram.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgParticle\ForceOperator.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgParticle\Interpolator.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgParticle\LibraryWrapper.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgParticle\LinearInterpolator.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgParticle\ModularEmitter.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgParticle\ModularProgram.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgParticle\MultiSegmentPlacer.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgParticle\Operator.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgParticle\OrbitOperator.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgParticle\Particle.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgParticle\ParticleEffect.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgParticle\ParticleProcessor.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgParticle\ParticleSystem.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgParticle\ParticleSystemUpdater.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgParticle\Placer.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgParticle\PointPlacer.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgParticle\PrecipitationEffect.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgParticle\Program.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgParticle\RadialShooter.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgParticle\RandomRateCounter.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgParticle\SectorPlacer.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgParticle\SegmentPlacer.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgParticle\Shooter.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgParticle\SinkOperator.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgParticle\SmokeEffect.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgParticle\SmokeTrailEffect.cpp" />
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgWrappers\serializers\osgParticle\VariableRateCounter.cpp" />
+    <ResourceCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\PlatformSpecifics\Windows\OpenSceneGraphVersionInfo.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\ZERO_CHECK.vcxproj">
+      <Project>{DD47887F-046C-32DF-842D-CA213A5DE851}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\OpenThreads\win32\OpenThreads.vcxproj">
+      <Project>{9C2D3112-1C0D-3024-A8DF-B79F23AB7583}</Project>
+      <Name>OpenThreads</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osg\osg.vcxproj">
+      <Project>{7343B1AD-CC80-362B-98C2-BD2D52E51EEB}</Project>
+      <Name>osg</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgDB\osgDB.vcxproj">
+      <Project>{11D0BBD7-B890-3D03-8C20-F68C57118045}</Project>
+      <Name>osgDB</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgParticle\osgParticle.vcxproj">
+      <Project>{3D1A476D-5F2C-3FA5-A987-E432676DD01A}</Project>
+      <Name>osgParticle</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgUtil\osgUtil.vcxproj">
+      <Project>{F322297C-4CAA-33BB-A234-B8F939B8CC94}</Project>
+      <Name>osgUtil</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

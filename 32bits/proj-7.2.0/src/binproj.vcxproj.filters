@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\apps\proj.cpp">
+      <Filter>Source Files\Bin</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\apps\emess.cpp">
+      <Filter>Source Files\Bin</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\apps\utils.cpp">
+      <Filter>Source Files\Bin</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Librerias\SUMOLibraries\32bits\proj-7.2.0\src\CMakeLists.txt">
+      <Filter>CMake Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Files">
+      <UniqueIdentifier>{C7CCB47C-3E9A-38F5-8D07-BE63677BD631}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4B4AACAE-E214-33F3-9184-CD9FF124D7A5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Bin">
+      <UniqueIdentifier>{A6591BFD-0BF4-3C77-9F3F-9BB5B996E94E}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

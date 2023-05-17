@@ -1,0 +1,41 @@
+# NetCDF C Configuration Summary
+==============================
+
+# General
+-------
+NetCDF Version:		4.7.0
+Configured On:		
+Host System:		--
+Build Directory: 	C:/vcpkg/buildtrees/netcdf-c/x64-windows-rel
+Install Prefix:         C:/vcpkg/packages/netcdf-c_x64-windows
+
+# Compiling Options
+-----------------
+C Compiler:		C:/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.22.27905/bin/Hostx64/x64/cl.exe
+CFLAGS:			 /DWIN32 /D_WINDOWS /W3 /utf-8 /MP  /MD /O2 /Oi /Gy /DNDEBUG /Z7 
+CPPFLAGS:		 
+LDFLAGS:		/machine:x64 /LARGEADDRESSAWARE /STACK:40000000 /DEBUG /INCREMENTAL:NO /OPT:REF /OPT:ICF 
+AM_CFLAGS:		
+AM_CPPFLAGS:		
+AM_LDFLAGS:		
+Shared Library:		yes
+Static Library:		no
+Extra libraries:	-lhdf5_hl -lhdf5 -loptimized -lcurl -ldebug -lcurl-d
+
+# Features
+--------
+NetCDF-2 API:		yes
+HDF4 Support:		no
+HDF5 Support:		yes
+NetCDF-4 API:		yes
+NC-4 Parallel Support:	no
+PnetCDF Support:	no
+DAP2 Support:		yes
+DAP4 Support:		yes
+Byte-Range Support:	no
+Diskless Support:	yes
+MMap Support:		no
+JNA Support:		no
+CDF5 Support:		yes
+ERANGE Fill Support:	yes
+Relaxed Boundary Check:	yes

@@ -1,0 +1,90 @@
+<ui>
+
+  <menubar name="MainMenuBar">
+
+    <menu name="filemenu" action="filemenu">
+      <placeholder name="FirstInFileMenu">
+        <menuitem action="Approve"/>
+        <menuitem action="Approve As..."/>
+        <separator/>
+      </placeholder>
+    </menu>
+   
+    <menu action="actionsmenu">
+      <menuitem action="Kill"/>
+      <menuitem action="Mark"/>
+      <menuitem action="Unmark"/>
+      <menuitem action="Load from Rerun"/>
+      <separator/>
+      <menuitem action="Rerun"/>
+      <menuitem action="Recompute Status"/>
+      <menuitem action="Reload tests..."/>
+      <separator/>
+      <menuitem action="Split result files"/>
+      <separator/>
+      <placeholder name="ExtraTestActions">
+        <separator/>
+        <menuitem action="Generate test summary"/>
+      </placeholder>
+    </menu>
+  </menubar>
+
+  <toolbar name="MainToolBar">
+    <toolitem action="Quit"/>
+    <toolitem action="Kill"/>
+    <toolitem action="Approve"/>
+    <separator/>
+  </toolbar>
+
+  <popup name="TestPopupMenu">
+    <menuitem action="Enter Failure Information"/>
+    <menuitem action="Find Failure Information"/>
+    <separator/>
+    <menuitem action="Approve"/>
+    <menuitem action="Approve As..."/>
+    <separator/>
+    <menuitem action="Kill"/>
+    <placeholder name="ExtraTestActions" >
+        <separator/>
+        <menuitem action="Generate test summary"/>
+    </placeholder>
+    <separator/>
+    <menuitem action="Mark"/>
+    <menuitem action="Unmark"/>
+    <menuitem action="Load from Rerun"/>
+    <separator/>
+    <menuitem action="Rerun"/>
+    <menuitem action="Recompute Status"/>
+    <menuitem action="Reload tests..."/>
+    <separator/>
+    <menuitem action="Split result files"/>
+    <separator/>
+  </popup>
+
+  <popup name="TestFilePopupMenu">
+    <menuitem action="View Filtered File"/>
+    <separator/>
+    <menuitem action="View Original File"/>
+    <placeholder name="ExtraOrigViewers" />
+    <menuitem action="View Filtered Original File"/>
+    <separator/>
+    <menuitem action="View Differences"/>
+    <placeholder name="ExtraDiffViewers" />
+    <menuitem action="View Raw Differences"/>
+    <separator/>
+    <menuitem action="View Differences (between tests)"/>
+    <placeholder name="ExtraBetweenViewers" />
+    <menuitem action="View Raw Differences (between tests)"/>
+    <separator/>
+    <menuitem action="Follow File Progress"/>
+    <separator/>
+    <menuitem action="File Properties"/>
+    <menuitem action="Copy Path To Clipboard"/>
+    <separator/>
+    <menuitem action="Select Tests With Same Diff"/>
+    <separator/>
+    <menuitem action="Approve"/>
+    <menuitem action="Approve As..."/>
+  </popup>
+
+</ui>

@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgText\DefaultFont.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgText\GlyphGeometry.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgText\Font.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgText\FadeText.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgText\Glyph.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgText\String.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgText\Style.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgText\TextBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgText\Text.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgText\Text3D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgText\Version.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgText\DefaultFont.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgText\GlyphGeometry.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\src\osgText\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgText\Export">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgText\Font">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgText\Font3D">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgText\FadeText">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgText\Glyph">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgText\KerningType">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgText\String">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgText\Style">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgText\TextBase">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgText\Text">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgText\Text3D">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\include\osgText\Version">
+      <Filter>Header Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="C:\Librerias\SUMOLibraries\OSG-3.6.5\PlatformSpecifics\Windows\OpenSceneGraphVersionInfo.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{798227C8-F63D-377D-B402-249FA1A7EF5E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{75F9FA5D-64E2-39A3-800D-3A429F06C13A}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

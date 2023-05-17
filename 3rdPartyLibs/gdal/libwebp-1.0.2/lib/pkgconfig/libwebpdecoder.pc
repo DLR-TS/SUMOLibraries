@@ -1,0 +1,11 @@
+prefix=C:/vcpkg/packages/libwebp_x64-windows
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: libwebpdecoder
+Description: Library for the WebP graphics format (decode only)
+Version: 1.0.2
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lwebpdecoder
+Libs.private:   

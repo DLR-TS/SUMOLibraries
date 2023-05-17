@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\gdal\szip-2.1.1\src\rice.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\gdal\szip-2.1.1\src\sz_api.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SUMOLibraries\3rdPartyLibs\gdal\szip-2.1.1\src\encoding.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\gdal\szip-2.1.1\src\ricehdf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\gdal\szip-2.1.1\src\szip_adpt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SUMOLibraries\3rdPartyLibs\gdal\szip-2.1.1\src\szlib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\SUMOLibraries\3rdPartyLibs\gdal\szip-2.1.1\src\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{D18AA6A8-CE70-3F26-9B25-5DC10E171BF1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{45C599BE-9B6C-3098-95B9-DC4F0800C087}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

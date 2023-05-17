@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\libssh2-1.9.0\src\openssl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\libssh2-1.9.0\src\agent.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\libssh2-1.9.0\src\bcrypt_pbkdf.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\libssh2-1.9.0\src\blowfish.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\libssh2-1.9.0\src\channel.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\libssh2-1.9.0\src\comp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\libssh2-1.9.0\src\crypt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\libssh2-1.9.0\src\global.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\libssh2-1.9.0\src\hostkey.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\libssh2-1.9.0\src\keepalive.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\libssh2-1.9.0\src\kex.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\libssh2-1.9.0\src\knownhost.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\libssh2-1.9.0\src\mac.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\libssh2-1.9.0\src\misc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\libssh2-1.9.0\src\packet.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\libssh2-1.9.0\src\pem.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\libssh2-1.9.0\src\publickey.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\libssh2-1.9.0\src\scp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\libssh2-1.9.0\src\session.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\libssh2-1.9.0\src\sftp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\libssh2-1.9.0\src\transport.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\libssh2-1.9.0\src\userauth.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\libssh2-1.9.0\src\version.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\libssh2-1.9.0\src\openssl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\libssh2-1.9.0\src\blf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\libssh2-1.9.0\src\channel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\libssh2-1.9.0\src\comp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\libssh2-1.9.0\src\crypto.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\libssh2-1.9.0\src\libssh2_priv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\libssh2-1.9.0\src\mac.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\libssh2-1.9.0\src\misc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\libssh2-1.9.0\src\packet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\libssh2-1.9.0\src\session.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\libssh2-1.9.0\src\sftp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\libssh2-1.9.0\src\transport.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\libssh2-1.9.0\src\userauth.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\libssh2-1.9.0\src\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="C:\Librerias\SUMOLibraries\32bits\3rdPartyLibs\libssh2-1.9.0\win32\libssh2.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{4ECB13F4-6C97-3447-84C8-CBF89F68D165}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{1F4F8230-B224-3DD5-91AD-33DC71956D44}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,11 @@
+prefix=C:/Users/delphi/Code/lib/xerces-c-3.2.0-win32
+exec_prefix=C:/Users/delphi/Code/lib/xerces-c-3.2.0-win32
+libdir=C:/Users/delphi/Code/lib/xerces-c-3.2.0-win32/lib
+includedir=C:/Users/delphi/Code/lib/xerces-c-3.2.0-win32/include
+
+Name: Xerces-C++
+Description: Validating XML parser library for C++
+Version: 
+Libs: -LC:/Users/delphi/Code/lib/xerces-c-3.2.0-win32/lib -lxerces-c
+Libs.private: 
+Cflags: -IC:/Users/delphi/Code/lib/xerces-c-3.2.0-win32/include

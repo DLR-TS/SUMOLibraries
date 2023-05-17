@@ -1,0 +1,104 @@
+<ui>
+
+  <menubar name="MainMenuBar">
+
+    <menu action="editmenu">
+      <menuitem action="Add Test"/>
+      <menuitem action="Add Suite"/>
+      <menuitem action="Add Application"/>
+      <separator/>
+      <menuitem action="Cut"/>
+      <menuitem action="Copy"/>
+      <menuitem action="Paste"/>
+      <menuitem action="Remove Tests"/>
+      <menuitem action="Rename Test"/>
+      <menuitem action="Edit Description"/>
+      <separator/>
+      <menuitem name="Move to first" action="Move to first"/>
+      <menuitem name="Move up" action="Move up"/>
+      <menuitem name="Move down" action="Move down"/>
+      <menuitem name="Move to last" action="Move to last"/>
+      <separator/>
+      <menuitem name="Sort Test Suite File" action="Sort Test Suite File"/>
+      <menuitem name="Reversed Sort Test Suite File" action="Reversed Sort Test Suite File"/>
+      <separator/>
+    </menu>
+    
+    <menu action="actionsmenu">
+      <menuitem action="Run"/>
+      <menuitem action="Reconnect..."/>
+      <menuitem action="Replace Text in Files"/>
+      <placeholder name="ExtraActions" />
+      <separator/>
+      <menuitem action="Refresh"/>
+      <menuitem action="Reset"/>
+    </menu>
+    
+  </menubar>
+
+  <toolbar name="MainToolBar">    
+    <toolitem action="Quit"/>
+    <separator/>
+    <toolitem action="Select"/>
+    <toolitem action="Refresh"/>
+    <toolitem action="Run"/>
+  </toolbar>
+
+  <popup name="TestPopupMenu">
+    <menuitem action="Add Test"/>
+    <menuitem action="Add Suite"/>
+    <separator/>
+    <menuitem action="Cut"/>
+    <menuitem action="Copy"/>
+    <menuitem action="Paste"/>
+    <menuitem action="Rename Test"/>
+    <menuitem action="Edit Description"/>
+    <menuitem action="Remove Tests For Popup"/>
+    <separator/>
+    <menuitem action="Enter Failure Information"/>
+    <separator/>
+    <menuitem action="Show only selected"/>
+    <menuitem action="Hide selected"/>
+    <separator/>    
+    <menuitem action="Run"/>
+    <placeholder name="ExtraTestActions" />
+    <separator/>
+    <menu action="reordermenu">
+      <menuitem name="Move to first" action="Move to first"/>
+      <menuitem name="Move up" action="Move up"/>
+      <menuitem name="Move down" action="Move down"/>
+      <menuitem name="Move to last" action="Move to last"/>
+      <separator/>
+      <menuitem name="Sort Test Suite File" action="Sort Test Suite File"/>
+      <menuitem name="Reversed Sort Test Suite File" action="Reversed Sort Test Suite File"/>
+      <separator/>
+    </menu>
+  </popup>
+
+  <popup name="TestFilePopupMenu">
+    <separator/>
+    <menuitem action="Test Filtering"/>
+    <menuitem action="Show Filters"/>
+    <separator/>
+    <menuitem action="File Properties"/>
+    <menuitem action="Copy Path To Clipboard"/>
+    <separator/>
+    <menuitem action="Create/Import"/>
+    <separator/>
+    <menuitem action="Rename File"/>
+    <menuitem action="Remove Files"/>
+    <separator/>
+  </popup>
+
+  <popup name="ConfigFilePopupMenu">
+    <menuitem action="View In Editor"/>
+    <menuitem action="File Properties"/>
+    <menuitem action="Copy Path To Clipboard"/>
+    <separator/>
+    <menuitem action="Rename File"/>
+    <menuitem action="Remove Files"/>
+    <separator/>
+  </popup>
+
+
+</ui>
