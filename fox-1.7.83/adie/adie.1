@@ -1,0 +1,184 @@
+.TH adie 1 "May 2023" "Adie Editor" "Adie Text Editor Manual"
+
+.SH NAME
+Adie \- The ADvanced Interactive Editor
+
+.SH SYNOPSIS
+.B adie
+.RB [ options ]
+.RB [
+.I files...
+.RB ]
+
+.SH INTRODUCTION
+Adie is an extremely fast and convenient programming text editor using the FOX Toolkit.
+The text being edited can be colorized by user-configurable colors and user-configurable syntax
+rules.  However, many programming languages are already supported with supplied syntax coloring
+rules in the "Adie.stx" rules-file.  At this time, syntax rules are available for C, C++, C#,
+Pascal, Python, Fortran, Ada, Ruby, Perl, Lua, Java, JavaScript, Go, Assembler, Shell, Matlab,
+and many more.
+The rule-set used for colorizing is determined either by file-extensions or by file contents, but
+may be forced explicitly if needed.
+
+For each visited file, Adie remembers the location in that file, bookmarks, and whether custom
+syntax rule-set was used so that next time the file is visited, the user will be positioned
+at the same place in the file, and the text will be colorized like last time.
+
+.SH OPTIONS
+.TP
+\fB\-h\fR, or \fB\--help\fR
+Print summary usage information of all the supported options.
+
+.TP
+\fB\--view\fR
+Open the file for viewing only.  Editor commands which change the text are not allowed.
+
+.TP
+\fB\--edit\fR
+Open the file for editing.
+
+.TP
+\fB\--version\fR
+Display version and license information.
+
+.TP
+\fR \fB\--line=\fR\fI<number>\fR
+Jump to given line number after opening file for editing.
+
+.TP
+\fR \fB\--column=\fR\fI<number>\fR
+Jump to given column number after opening file for editing; often used in addition to the previous
+parameter to jump to a particular place in the text.
+
+.TP
+\fR \fB\--syntax=\fR\fI<syntax>\fR
+Load the syntax rules from the given syntax file rather than searching for the syntax file in the
+usual places (a file called "Adie.stx" in one of the $PATH directories, or the syntax file listed
+in the configuration settings).
+
+.TP
+\fB\--size=\fR\fI[<width>{xX}<height>][{+-}<xoffset>{+-}<yoffset>]\fR
+Specify size of the new window to be opened.
+
+.TP
+\fB\--line=\fR\fI<number>\fR
+Jump to given line number.
+
+.TP
+\fB\--column=\fR\fI<number>\fR
+Jump to given column number.
+
+.TP
+\fB\--lang=\fR\fI<language>\fR
+After loading the file, switch to the given programming language for syntax coloring.  The normal rules
+for determining the file's syntax (file extension of content maching) are ignored.
+
+.SH FEATURES
+
+.I General Features
+
+Preferences are configurable with convenient dialogs.
+
+- Programmable syntax coloring and text styles.
+.br
+- Active or current text line highlighting.
+.br
+- Optional line number display.
+.br
+- Preferences are configurable with convenient dialogs.
+.br
+- Text size only limited by available memory.
+.br
+- Persistent bookmarks may be set for each file.
+.br
+- Persistent scroll position is remembered for each visited file.
+.br
+- Wheel mouse scroll support.
+.br
+- Online help built in.
+
+.I File Access Features.
+
+- File Dialog supporting bookmarked directories.
+.br
+- Dropping a file into Adie opens the file.
+.br
+- Single-click access to file using File/Directory browser.
+.br
+- Visit recently edited files.
+.br
+- Jump to file and line number of highlighted compiler warnings or errors.
+.br
+- Customizable list of file patterns; show only source files, for example.
+.br
+- Open a file by highlighting a #include directive.
+.br
+- Customizable list of directories to search for header files.
+.br
+- Detect if file changed outside of editor to prevent accidental overwriting.
+
+.I Editing Features.
+
+- Unlimited undo/redo capability.
+.br
+- Cut and paste to clipboard support.
+.br
+- X11 primary selection support using middle-mouse paste.
+.br
+- Drag-and-drop support for text move or copy.
+.br
+- Brace matching, statement block, and expression block selection.
+.br
+- Up to 10 persistent bookmarks may be set in each file.
+.br
+- Search and replace history is stored persistently.
+.br
+- Auto-indent feature.
+.br
+- Strip trailing spaces, strip carriage-returns for DOS files.
+.br
+- Indent or unindent selected text; clean indentation.
+.br
+- Search for highlighted text.
+.br
+- Goto line number, goto highlighted line number, goto matching brace, goto begin/end of block.
+.br
+- Fixed word wrap column, or continuous word wrap mode.
+.br
+- Mouse wheel or right-mouse scroll support.
+.br
+- Customizable word-delimiters to select words by double-clicks.
+.br
+- Insert files or extract highlighted text to file.
+
+.I Syntax Coloring Features.
+
+- Syntax coloring is programmable, using PERL-like regular expressions.
+.br
+- Syntax patterns are keyed to file extension, file contents, modelines, or explicitly set by user.
+.br
+- Text styles including foreground, background, selection colors, as well as underlining and strike-throughs.
+.br
+- Syntax expressions, text styles, and language modes can be set up from convenient dialogs.
+.br
+- Color fallback mechanism to minimize style setup hassles.
+
+
+.SH AUTHOR
+This manpage was originally written by Bastian Kleineidam <calvin@debian.org>
+for the Debian distribution of the FOX Toolkit, and is currently maintained
+by Jeroen van der Zijp (jeroen@fox-toolkit.net).
+
+.SH COPYRIGHT
+Copyright \(co 1997,2023 Jeroen van der Zijp.
+.br
+This is free software; see the source for copying conditions.  There is
+NO warranty; not even for MERCHANTABILITY or FITNESS FOR  A  PARTICULAR
+PURPOSE.
+.SH SEE ALSO
+The Adie text editor is a part of the FOX GUI Toolkit.  Further information
+can be found at:
+
+.B http://www.fox-toolkit.org
+
+The FOX Toolkit website includes detailed information about the Adie Editor.

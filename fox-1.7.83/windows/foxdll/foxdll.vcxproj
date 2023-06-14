@@ -1,0 +1,1010 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{30535787-8AF6-4749-BD23-35458C699297}</ProjectGuid>
+    <RootNamespace>foxdll</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(SolutionDir)\..\include;$(IncludePath)</IncludePath>
+    <CustomBuildBeforeTargets>BuildGenerateSources</CustomBuildBeforeTargets>
+    <ExtensionsToDeleteOnClean>$(SolutionDir)..\lib\icons.h;$(SolutionDir)..\lib\icons.cpp;$(ExtensionsToDeleteOnClean)</ExtensionsToDeleteOnClean>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(SolutionDir)\..\include;$(IncludePath)</IncludePath>
+    <CustomBuildBeforeTargets>BuildGenerateSources</CustomBuildBeforeTargets>
+    <ExtensionsToDeleteOnClean>$(SolutionDir)..\lib\icons.h;$(SolutionDir)..\lib\icons.cpp;$(ExtensionsToDeleteOnClean)</ExtensionsToDeleteOnClean>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>
+      </SDLCheck>
+      <PreprocessorDefinitions>UNICODE;WIN32;DEBUG;_CRT_SECURE_NO_WARNINGS;BUILD_WINDOWS;FOXDLL;FOXDLL_EXPORTS;HAVE_GL_H;HAVE_GLU_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeaderFile />
+      <PrecompiledHeaderOutputFile />
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <SmallerTypeCheck>false</SmallerTypeCheck>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <ControlFlowGuard>false</ControlFlowGuard>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <CustomBuildStep>
+      <Command>cd $(SolutionDir)..\lib
+$(OutputPath)reswrap.exe -nc -i  icons.h -n FX -o icons.cpp arrownext.gif arrowprev.gif bigapp.gif bigcdrom.gif bigcomputer.gif bigdesktop.gif bigdoc.gif bigfloppy.gif bigfloppy3.gif bigfloppy5.gif bigfolder.gif bigfolderopen.gif bigharddisk.gif bignetdrive.gif bignethood.gif bookmrk_gif.gif bookclr_gif.gif bookset_gif.gif bookdel_gif.gif clearentry.gif cmymode.gif dialmode.gif dirup_gif.gif docktop.gif dockbottom.gif dockleft.gif dockright.gif dockfree.gif dockflip.gif entericon.gif erroricon.gif eyedrop.gif filecancel.gif fileaccept.gif filecopy.gif filemove.gif filehidden.gif filelink.gif filerename.gif filedelete.gif fileshown.gif foldernew.gif gotohome.gif gotowork.gif hammer_gif.gif hsvmode.gif infoicon.gif landscape.gif listmode.gif miniapp.gif minicdrom.gif minicomputer.gif minidesktop.gif minidoc.gif minifloppy.gif minifloppy3.gif minifloppy5.gif minifolder.gif minifolderopen.gif miniharddisk.gif mininetdrive.gif mininethood.gif minizipdrive.gif newfolder.bmp portrait.gif questionicon.gif rgbmode.gif searchicon.gif showbigicons.gif showdetails.gif showsmallicons.gif sorting.bmp redo_gif.gif undo_gif.gif warningicon.gif winclose.gif winmaximize.gif winminimize.gif winrestore.gif
+$(OutputPath)reswrap.exe -nc -h -n FX -o icons.h arrownext.gif arrowprev.gif bigapp.gif bigcdrom.gif bigcomputer.gif bigdesktop.gif bigdoc.gif bigfloppy.gif bigfloppy3.gif bigfloppy5.gif bigfolder.gif bigfolderopen.gif bigharddisk.gif bignetdrive.gif bignethood.gif bookmrk_gif.gif bookclr_gif.gif bookset_gif.gif bookdel_gif.gif clearentry.gif cmymode.gif dialmode.gif dirup_gif.gif docktop.gif dockbottom.gif dockleft.gif dockright.gif dockfree.gif dockflip.gif entericon.gif erroricon.gif eyedrop.gif filecancel.gif fileaccept.gif filecopy.gif filemove.gif filehidden.gif filelink.gif filerename.gif filedelete.gif fileshown.gif foldernew.gif gotohome.gif gotowork.gif hammer_gif.gif hsvmode.gif infoicon.gif landscape.gif listmode.gif miniapp.gif minicdrom.gif minicomputer.gif minidesktop.gif minidoc.gif minifloppy.gif minifloppy3.gif minifloppy5.gif minifolder.gif minifolderopen.gif miniharddisk.gif mininetdrive.gif mininethood.gif minizipdrive.gif newfolder.bmp portrait.gif questionicon.gif rgbmode.gif searchicon.gif showbigicons.gif showdetails.gif showsmallicons.gif sorting.bmp redo_gif.gif undo_gif.gif warningicon.gif winclose.gif winmaximize.gif winminimize.gif winrestore.gif</Command>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Outputs>icons.cpp;icons.h;%(Outputs)</Outputs>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Inputs>arrownext.gif;arrowprev.gif;bigapp.gif;bigcdrom.gif;bigcomputer.gif;bigdesktop.gif;bigdoc.gif;bigfloppy.gif;bigfloppy3.gif;bigfloppy5.gif;bigfolder.gif;bigfolderopen.gif;bigharddisk.gif;bignetdrive.gif;bignethood.gif;bookadd.bmp;bookclr.gif;bookdel.bmp;bookset.gif;clearentry.gif;cmymode.gif;deleteicon.gif;dialmode.gif;dirupicon.gif;dockbottom.gif;dockflip.gif;dockfree.gif;dockleft.gif;dockright.gif;docktop.gif;entericon.gif;erroricon.gif;eyedrop.gif;fileaccept.gif;filecancel.gif;filecopy.gif;filedelete.gif;filehidden.gif;filelink.gif;filemove.gif;filerename.gif;fileshown.gif;foldernew.gif;gotohome.gif;gotowork.gif;hsvmode.gif;infoicon.gif;landscape.gif;listmode.gif;miniapp.gif;minicdrom.gif;minicomputer.gif;minidesktop.gif;minidoc.gif;minifloppy.gif;minifloppy3.gif;minifloppy5.gif;minifolder.gif;minifolderopen.gif;miniharddisk.gif;mininetdrive.gif;mininethood.gif;minizipdrive.gif;newfolder.bmp;portrait.gif;questionicon.gif;rgbmode.gif;searchicon.gif;showbigicons.gif;showdetails.gif;showsmallicons.gif;sorting.bmp;undo_gif.gif;warningicon.gif;winclose.gif;winmaximize.gif;winminimize.gif;winrestore.gif;%(Inputs)</Inputs>
+      <Message>Reswrapping icons...</Message>
+    </CustomBuildStep>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;uuid.lib;odbc32.lib;odbccp32.lib;Imm32.lib;Msimg32.lib;Ws2_32.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>
+      </SDLCheck>
+      <PreprocessorDefinitions>UNICODE;WIN32;NDEBUG;_CRT_SECURE_NO_WARNINGS;BUILD_WINDOWS;FOXDLL;FOXDLL_EXPORTS;HAVE_GL_H;HAVE_GLU_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <StringPooling>true</StringPooling>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeaderFile />
+      <PrecompiledHeaderOutputFile />
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <ControlFlowGuard>false</ControlFlowGuard>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;uuid.lib;odbc32.lib;odbccp32.lib;Imm32.lib;Msimg32.lib;Ws2_32.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <CustomBuildStep>
+      <Command>cd $(SolutionDir)..\lib
+$(OutputPath)reswrap.exe -nc -i  icons.h -n FX -o icons.cpp  arrownext.gif arrowprev.gif bigapp.gif bigcdrom.gif bigcomputer.gif bigdesktop.gif bigdoc.gif bigfloppy.gif bigfloppy3.gif bigfloppy5.gif bigfolder.gif bigfolderopen.gif bigharddisk.gif bignetdrive.gif bignethood.gif bookmrk_gif.gif bookclr_gif.gif bookset_gif.gif bookdel_gif.gif clearentry.gif cmymode.gif dialmode.gif dirup_gif.gif docktop.gif dockbottom.gif dockleft.gif dockright.gif dockfree.gif dockflip.gif entericon.gif erroricon.gif eyedrop.gif filecancel.gif fileaccept.gif filecopy.gif filemove.gif filehidden.gif filelink.gif filerename.gif filedelete.gif fileshown.gif foldernew.gif gotohome.gif gotowork.gif hammer_gif.gif hsvmode.gif infoicon.gif landscape.gif listmode.gif miniapp.gif minicdrom.gif minicomputer.gif minidesktop.gif minidoc.gif minifloppy.gif minifloppy3.gif minifloppy5.gif minifolder.gif minifolderopen.gif miniharddisk.gif mininetdrive.gif mininethood.gif minizipdrive.gif newfolder.bmp portrait.gif questionicon.gif rgbmode.gif searchicon.gif showbigicons.gif showdetails.gif showsmallicons.gif sorting.bmp redo_gif.gif undo_gif.gif warningicon.gif winclose.gif winmaximize.gif winminimize.gif winrestore.gif
+$(OutputPath)reswrap.exe -nc -h -n FX -o icons.h  arrownext.gif arrowprev.gif bigapp.gif bigcdrom.gif bigcomputer.gif bigdesktop.gif bigdoc.gif bigfloppy.gif bigfloppy3.gif bigfloppy5.gif bigfolder.gif bigfolderopen.gif bigharddisk.gif bignetdrive.gif bignethood.gif bookmrk_gif.gif bookclr_gif.gif bookset_gif.gif bookdel_gif.gif clearentry.gif cmymode.gif dialmode.gif dirup_gif.gif docktop.gif dockbottom.gif dockleft.gif dockright.gif dockfree.gif dockflip.gif entericon.gif erroricon.gif eyedrop.gif filecancel.gif fileaccept.gif filecopy.gif filemove.gif filehidden.gif filelink.gif filerename.gif filedelete.gif fileshown.gif foldernew.gif gotohome.gif gotowork.gif hammer_gif.gif hsvmode.gif infoicon.gif landscape.gif listmode.gif miniapp.gif minicdrom.gif minicomputer.gif minidesktop.gif minidoc.gif minifloppy.gif minifloppy3.gif minifloppy5.gif minifolder.gif minifolderopen.gif miniharddisk.gif mininetdrive.gif mininethood.gif minizipdrive.gif newfolder.bmp portrait.gif questionicon.gif rgbmode.gif searchicon.gif showbigicons.gif showdetails.gif showsmallicons.gif sorting.bmp redo_gif.gif undo_gif.gif warningicon.gif winclose.gif winmaximize.gif winminimize.gif winrestore.gif</Command>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Outputs>icons.cpp;icons.h;%(Outputs)</Outputs>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Inputs>arrownext.gif;arrowprev.gif;bigapp.gif;bigcdrom.gif;bigcomputer.gif;bigdesktop.gif;bigdoc.gif;bigfloppy.gif;bigfloppy3.gif;bigfloppy5.gif;bigfolder.gif;bigfolderopen.gif;bigharddisk.gif;bignetdrive.gif;bignethood.gif;bookadd.bmp;bookclr.gif;bookdel.bmp;bookset.gif;clearentry.gif;cmymode.gif;deleteicon.gif;dialmode.gif;dirupicon.gif;dockbottom.gif;dockflip.gif;dockfree.gif;dockleft.gif;dockright.gif;docktop.gif;entericon.gif;erroricon.gif;eyedrop.gif;fileaccept.gif;filecancel.gif;filecopy.gif;filedelete.gif;filehidden.gif;filelink.gif;filemove.gif;filerename.gif;fileshown.gif;foldernew.gif;gotohome.gif;gotowork.gif;hsvmode.gif;infoicon.gif;landscape.gif;listmode.gif;miniapp.gif;minicdrom.gif;minicomputer.gif;minidesktop.gif;minidoc.gif;minifloppy.gif;minifloppy3.gif;minifloppy5.gif;minifolder.gif;minifolderopen.gif;miniharddisk.gif;mininetdrive.gif;mininethood.gif;minizipdrive.gif;newfolder.bmp;portrait.gif;questionicon.gif;rgbmode.gif;searchicon.gif;showbigicons.gif;showdetails.gif;showsmallicons.gif;sorting.bmp;undo_gif.gif;warningicon.gif;winclose.gif;winmaximize.gif;winminimize.gif;winrestore.gif;%(Inputs)</Inputs>
+      <Message>Reswrapping icons...</Message>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\fx.h" />
+    <ClInclude Include="..\..\include\fx3d.h" />
+    <ClInclude Include="..\..\include\FX4Splitter.h" />
+    <ClInclude Include="..\..\include\FX7Segment.h" />
+    <ClInclude Include="..\..\include\FX885910Codec.h" />
+    <ClInclude Include="..\..\include\FX885911Codec.h" />
+    <ClInclude Include="..\..\include\FX885913Codec.h" />
+    <ClInclude Include="..\..\include\FX885914Codec.h" />
+    <ClInclude Include="..\..\include\FX885915Codec.h" />
+    <ClInclude Include="..\..\include\FX885916Codec.h" />
+    <ClInclude Include="..\..\include\FX88591Codec.h" />
+    <ClInclude Include="..\..\include\FX88592Codec.h" />
+    <ClInclude Include="..\..\include\FX88593Codec.h" />
+    <ClInclude Include="..\..\include\FX88594Codec.h" />
+    <ClInclude Include="..\..\include\FX88595Codec.h" />
+    <ClInclude Include="..\..\include\FX88596Codec.h" />
+    <ClInclude Include="..\..\include\FX88597Codec.h" />
+    <ClInclude Include="..\..\include\FX88598Codec.h" />
+    <ClInclude Include="..\..\include\FX88599Codec.h" />
+    <ClInclude Include="..\..\include\FXAccelTable.h" />
+    <ClInclude Include="..\..\include\FXApp.h" />
+    <ClInclude Include="..\..\include\FXArray.h" />
+    <ClInclude Include="..\..\include\FXArrowButton.h" />
+    <ClInclude Include="..\..\include\fxascii.h" />
+    <ClInclude Include="..\..\include\FXAtomic.h" />
+    <ClInclude Include="..\..\include\FXAutoPtr.h" />
+    <ClInclude Include="..\..\include\FXAutoThreadStorageKey.h" />
+    <ClInclude Include="..\..\include\FXBarrier.h" />
+    <ClInclude Include="..\..\include\FXBitmap.h" />
+    <ClInclude Include="..\..\include\FXBitmapFrame.h" />
+    <ClInclude Include="..\..\include\FXBitmapView.h" />
+    <ClInclude Include="..\..\include\FXBMPIcon.h" />
+    <ClInclude Include="..\..\include\FXBMPImage.h" />
+    <ClInclude Include="..\..\include\FXButton.h" />
+    <ClInclude Include="..\..\include\FXBZFileStream.h" />
+    <ClInclude Include="..\..\include\FXCalendar.h" />
+    <ClInclude Include="..\..\include\FXCalendarView.h" />
+    <ClInclude Include="..\..\include\FXCallback.h" />
+    <ClInclude Include="..\..\include\FXCanvas.h" />
+    <ClInclude Include="..\..\include\fxchar.h" />
+    <ClInclude Include="..\..\include\FXCheckButton.h" />
+    <ClInclude Include="..\..\include\FXChoiceBox.h" />
+    <ClInclude Include="..\..\include\FXColorBar.h" />
+    <ClInclude Include="..\..\include\FXColorDialog.h" />
+    <ClInclude Include="..\..\include\FXColorList.h" />
+    <ClInclude Include="..\..\include\FXColorRing.h" />
+    <ClInclude Include="..\..\include\FXColors.h" />
+    <ClInclude Include="..\..\include\FXColorSelector.h" />
+    <ClInclude Include="..\..\include\FXColorWell.h" />
+    <ClInclude Include="..\..\include\FXColorWheel.h" />
+    <ClInclude Include="..\..\include\FXComboBox.h" />
+    <ClInclude Include="..\..\include\FXCompletion.h" />
+    <ClInclude Include="..\..\include\FXComplexd.h" />
+    <ClInclude Include="..\..\include\FXComplexf.h" />
+    <ClInclude Include="..\..\include\FXComposeContext.h" />
+    <ClInclude Include="..\..\include\FXComposite.h" />
+    <ClInclude Include="..\..\include\FXCondition.h" />
+    <ClInclude Include="..\..\include\FXConsole.h" />
+    <ClInclude Include="..\..\include\FXCP1250Codec.h" />
+    <ClInclude Include="..\..\include\FXCP1251Codec.h" />
+    <ClInclude Include="..\..\include\FXCP1252Codec.h" />
+    <ClInclude Include="..\..\include\FXCP1253Codec.h" />
+    <ClInclude Include="..\..\include\FXCP1254Codec.h" />
+    <ClInclude Include="..\..\include\FXCP1255Codec.h" />
+    <ClInclude Include="..\..\include\FXCP1256Codec.h" />
+    <ClInclude Include="..\..\include\FXCP1257Codec.h" />
+    <ClInclude Include="..\..\include\FXCP1258Codec.h" />
+    <ClInclude Include="..\..\include\FXCP437Codec.h" />
+    <ClInclude Include="..\..\include\FXCP850Codec.h" />
+    <ClInclude Include="..\..\include\FXCP852Codec.h" />
+    <ClInclude Include="..\..\include\FXCP855Codec.h" />
+    <ClInclude Include="..\..\include\FXCP856Codec.h" />
+    <ClInclude Include="..\..\include\FXCP857Codec.h" />
+    <ClInclude Include="..\..\include\FXCP860Codec.h" />
+    <ClInclude Include="..\..\include\FXCP861Codec.h" />
+    <ClInclude Include="..\..\include\FXCP862Codec.h" />
+    <ClInclude Include="..\..\include\FXCP863Codec.h" />
+    <ClInclude Include="..\..\include\FXCP864Codec.h" />
+    <ClInclude Include="..\..\include\FXCP865Codec.h" />
+    <ClInclude Include="..\..\include\FXCP866Codec.h" />
+    <ClInclude Include="..\..\include\FXCP869Codec.h" />
+    <ClInclude Include="..\..\include\FXCP874Codec.h" />
+    <ClInclude Include="..\..\include\fxcpuid.h" />
+    <ClInclude Include="..\..\include\FXCURCursor.h" />
+    <ClInclude Include="..\..\include\FXCursor.h" />
+    <ClInclude Include="..\..\include\FXDataTarget.h" />
+    <ClInclude Include="..\..\include\FXDate.h" />
+    <ClInclude Include="..\..\include\FXDC.h" />
+    <ClInclude Include="..\..\include\FXDCPrint.h" />
+    <ClInclude Include="..\..\include\FXDCWindow.h" />
+    <ClInclude Include="..\..\include\FXDDSIcon.h" />
+    <ClInclude Include="..\..\include\FXDDSImage.h" />
+    <ClInclude Include="..\..\include\FXDebugTarget.h" />
+    <ClInclude Include="..\..\include\fxdefs.h" />
+    <ClInclude Include="..\..\include\FXDelegator.h" />
+    <ClInclude Include="..\..\include\FXDial.h" />
+    <ClInclude Include="..\..\include\FXDialogBox.h" />
+    <ClInclude Include="..\..\include\FXDictionary.h" />
+    <ClInclude Include="..\..\include\FXDictionaryOf.h" />
+    <ClInclude Include="..\..\include\FXDir.h" />
+    <ClInclude Include="..\..\include\FXDirBox.h" />
+    <ClInclude Include="..\..\include\FXDirDialog.h" />
+    <ClInclude Include="..\..\include\FXDirList.h" />
+    <ClInclude Include="..\..\include\FXDirSelector.h" />
+    <ClInclude Include="..\..\include\FXDirVisitor.h" />
+    <ClInclude Include="..\..\include\FXDirWatch.h" />
+    <ClInclude Include="..\..\include\FXDispatcher.h" />
+    <ClInclude Include="..\..\include\FXDisplay.h" />
+    <ClInclude Include="..\..\include\FXDLL.h" />
+    <ClInclude Include="..\..\include\FXDockBar.h" />
+    <ClInclude Include="..\..\include\FXDockHandler.h" />
+    <ClInclude Include="..\..\include\FXDockSite.h" />
+    <ClInclude Include="..\..\include\FXDockTitle.h" />
+    <ClInclude Include="..\..\include\FXDocument.h" />
+    <ClInclude Include="..\..\include\FXDragCorner.h" />
+    <ClInclude Include="..\..\include\FXDrawable.h" />
+    <ClInclude Include="..\..\include\FXDriveBox.h" />
+    <ClInclude Include="..\..\include\FXElement.h" />
+    <ClInclude Include="..\..\include\fxendian.h" />
+    <ClInclude Include="..\..\include\FXEvent.h" />
+    <ClInclude Include="..\..\include\FXEventDispatcher.h" />
+    <ClInclude Include="..\..\include\FXEventLoop.h" />
+    <ClInclude Include="..\..\include\FXException.h" />
+    <ClInclude Include="..\..\include\FXEXEIcon.h" />
+    <ClInclude Include="..\..\include\FXEXEImage.h" />
+    <ClInclude Include="..\..\include\FXExpression.h" />
+    <ClInclude Include="..\..\include\FXExtentd.h" />
+    <ClInclude Include="..\..\include\FXExtentf.h" />
+    <ClInclude Include="..\..\include\FXFile.h" />
+    <ClInclude Include="..\..\include\FXFileAssociations.h" />
+    <ClInclude Include="..\..\include\FXFileDialog.h" />
+    <ClInclude Include="..\..\include\FXFileList.h" />
+    <ClInclude Include="..\..\include\FXFileProgressDialog.h" />
+    <ClInclude Include="..\..\include\FXFileSelector.h" />
+    <ClInclude Include="..\..\include\FXFileStream.h" />
+    <ClInclude Include="..\..\include\FXFoldingList.h" />
+    <ClInclude Include="..\..\include\FXFont.h" />
+    <ClInclude Include="..\..\include\FXFontDialog.h" />
+    <ClInclude Include="..\..\include\FXFontSelector.h" />
+    <ClInclude Include="..\..\include\FXFrame.h" />
+    <ClInclude Include="..\..\include\FXGauge.h" />
+    <ClInclude Include="..\..\include\FXGIFCursor.h" />
+    <ClInclude Include="..\..\include\FXGIFIcon.h" />
+    <ClInclude Include="..\..\include\FXGIFImage.h" />
+    <ClInclude Include="..\..\include\FXGLCanvas.h" />
+    <ClInclude Include="..\..\include\FXGLContext.h" />
+    <ClInclude Include="..\..\include\FXGLObject.h" />
+    <ClInclude Include="..\..\include\FXGLViewer.h" />
+    <ClInclude Include="..\..\include\FXGLVisual.h" />
+    <ClInclude Include="..\..\include\FXGradientBar.h" />
+    <ClInclude Include="..\..\include\FXGroupBox.h" />
+    <ClInclude Include="..\..\include\FXGZFileStream.h" />
+    <ClInclude Include="..\..\include\FXhalf.h" />
+    <ClInclude Include="..\..\include\FXHash.h" />
+    <ClInclude Include="..\..\include\FXHashOf.h" />
+    <ClInclude Include="..\..\include\FXHeader.h" />
+    <ClInclude Include="..\..\include\FXHorizontalFrame.h" />
+    <ClInclude Include="..\..\include\FXICOIcon.h" />
+    <ClInclude Include="..\..\include\FXICOImage.h" />
+    <ClInclude Include="..\..\include\FXIcon.h" />
+    <ClInclude Include="..\..\include\FXIconCache.h" />
+    <ClInclude Include="..\..\include\FXIconList.h" />
+    <ClInclude Include="..\..\include\FXIconSource.h" />
+    <ClInclude Include="..\..\include\FXId.h" />
+    <ClInclude Include="..\..\include\FXIFFIcon.h" />
+    <ClInclude Include="..\..\include\FXIFFImage.h" />
+    <ClInclude Include="..\..\include\FXImage.h" />
+    <ClInclude Include="..\..\include\FXImageFrame.h" />
+    <ClInclude Include="..\..\include\FXImageView.h" />
+    <ClInclude Include="..\..\include\FXInputDialog.h" />
+    <ClInclude Include="..\..\include\FXIO.h" />
+    <ClInclude Include="..\..\include\FXIOBuffer.h" />
+    <ClInclude Include="..\..\include\FXIODevice.h" />
+    <ClInclude Include="..\..\include\FXJP2Icon.h" />
+    <ClInclude Include="..\..\include\FXJP2Image.h" />
+    <ClInclude Include="..\..\include\FXJPGIcon.h" />
+    <ClInclude Include="..\..\include\FXJPGImage.h" />
+    <ClInclude Include="..\..\include\FXJSON.h" />
+    <ClInclude Include="..\..\include\FXJSONFile.h" />
+    <ClInclude Include="..\..\include\FXJSONString.h" />
+    <ClInclude Include="..\..\include\fxkeys.h" />
+    <ClInclude Include="..\..\include\FXKnob.h" />
+    <ClInclude Include="..\..\include\FXKOI8RCodec.h" />
+    <ClInclude Include="..\..\include\FXLabel.h" />
+    <ClInclude Include="..\..\include\FXLFQueue.h" />
+    <ClInclude Include="..\..\include\FXList.h" />
+    <ClInclude Include="..\..\include\FXListBox.h" />
+    <ClInclude Include="..\..\include\FXLocale.h" />
+    <ClInclude Include="..\..\include\FXMainWindow.h" />
+    <ClInclude Include="..\..\include\FXMappedFile.h" />
+    <ClInclude Include="..\..\include\FXMat2d.h" />
+    <ClInclude Include="..\..\include\FXMat2f.h" />
+    <ClInclude Include="..\..\include\FXMat3d.h" />
+    <ClInclude Include="..\..\include\FXMat3f.h" />
+    <ClInclude Include="..\..\include\FXMat4d.h" />
+    <ClInclude Include="..\..\include\FXMat4f.h" />
+    <ClInclude Include="..\..\include\fxmath.h" />
+    <ClInclude Include="..\..\include\FXMatrix.h" />
+    <ClInclude Include="..\..\include\FXMDIButton.h" />
+    <ClInclude Include="..\..\include\FXMDIChild.h" />
+    <ClInclude Include="..\..\include\FXMDIClient.h" />
+    <ClInclude Include="..\..\include\FXMemoryStream.h" />
+    <ClInclude Include="..\..\include\FXMenuBar.h" />
+    <ClInclude Include="..\..\include\FXMenuButton.h" />
+    <ClInclude Include="..\..\include\FXMenuCaption.h" />
+    <ClInclude Include="..\..\include\FXMenuCascade.h" />
+    <ClInclude Include="..\..\include\FXMenuCheck.h" />
+    <ClInclude Include="..\..\include\FXMenuCommand.h" />
+    <ClInclude Include="..\..\include\FXMenuPane.h" />
+    <ClInclude Include="..\..\include\FXMenuRadio.h" />
+    <ClInclude Include="..\..\include\FXMenuSeparator.h" />
+    <ClInclude Include="..\..\include\FXMenuTitle.h" />
+    <ClInclude Include="..\..\include\FXMessageBox.h" />
+    <ClInclude Include="..\..\include\FXMessageChannel.h" />
+    <ClInclude Include="..\..\include\FXMetaClass.h" />
+    <ClInclude Include="..\..\include\FXMutex.h" />
+    <ClInclude Include="..\..\include\FXObject.h" />
+    <ClInclude Include="..\..\include\FXObjectList.h" />
+    <ClInclude Include="..\..\include\FXOptionMenu.h" />
+    <ClInclude Include="..\..\include\FXPacker.h" />
+    <ClInclude Include="..\..\include\FXParallel.h" />
+    <ClInclude Include="..\..\include\FXParseBuffer.h" />
+    <ClInclude Include="..\..\include\FXPath.h" />
+    <ClInclude Include="..\..\include\FXPCXIcon.h" />
+    <ClInclude Include="..\..\include\FXPCXImage.h" />
+    <ClInclude Include="..\..\include\FXPicker.h" />
+    <ClInclude Include="..\..\include\FXPipe.h" />
+    <ClInclude Include="..\..\include\FXPNGIcon.h" />
+    <ClInclude Include="..\..\include\FXPNGImage.h" />
+    <ClInclude Include="..\..\include\FXPoint.h" />
+    <ClInclude Include="..\..\include\FXPopup.h" />
+    <ClInclude Include="..\..\include\FXPPMIcon.h" />
+    <ClInclude Include="..\..\include\FXPPMImage.h" />
+    <ClInclude Include="..\..\include\FXPrintDialog.h" />
+    <ClInclude Include="..\..\include\FXProcess.h" />
+    <ClInclude Include="..\..\include\FXProgressBar.h" />
+    <ClInclude Include="..\..\include\FXProgressDialog.h" />
+    <ClInclude Include="..\..\include\FXPtrList.h" />
+    <ClInclude Include="..\..\include\FXPtrQueue.h" />
+    <ClInclude Include="..\..\include\FXQuatd.h" />
+    <ClInclude Include="..\..\include\FXQuatf.h" />
+    <ClInclude Include="..\..\include\FXRadioButton.h" />
+    <ClInclude Include="..\..\include\FXRandom.h" />
+    <ClInclude Include="..\..\include\FXRanged.h" />
+    <ClInclude Include="..\..\include\FXRangef.h" />
+    <ClInclude Include="..\..\include\FXRangeSlider.h" />
+    <ClInclude Include="..\..\include\FXRASIcon.h" />
+    <ClInclude Include="..\..\include\FXRASImage.h" />
+    <ClInclude Include="..\..\include\FXReactor.h" />
+    <ClInclude Include="..\..\include\FXReadWriteLock.h" />
+    <ClInclude Include="..\..\include\FXRealSlider.h" />
+    <ClInclude Include="..\..\include\FXRealSpinner.h" />
+    <ClInclude Include="..\..\include\FXRecentFiles.h" />
+    <ClInclude Include="..\..\include\FXRectangle.h" />
+    <ClInclude Include="..\..\include\FXRefPtr.h" />
+    <ClInclude Include="..\..\include\FXRegion.h" />
+    <ClInclude Include="..\..\include\FXRegistry.h" />
+    <ClInclude Include="..\..\include\FXReplaceDialog.h" />
+    <ClInclude Include="..\..\include\FXReverseDictionary.h" />
+    <ClInclude Include="..\..\include\FXReverseDictionaryOf.h" />
+    <ClInclude Include="..\..\include\FXRex.h" />
+    <ClInclude Include="..\..\include\FXRGBIcon.h" />
+    <ClInclude Include="..\..\include\FXRGBImage.h" />
+    <ClInclude Include="..\..\include\FXRootWindow.h" />
+    <ClInclude Include="..\..\include\FXRuler.h" />
+    <ClInclude Include="..\..\include\FXRulerView.h" />
+    <ClInclude Include="..\..\include\FXRunnable.h" />
+    <ClInclude Include="..\..\include\FXScopedThread.h" />
+    <ClInclude Include="..\..\include\FXScrollArea.h" />
+    <ClInclude Include="..\..\include\FXScrollBar.h" />
+    <ClInclude Include="..\..\include\FXScrollPane.h" />
+    <ClInclude Include="..\..\include\FXScrollWindow.h" />
+    <ClInclude Include="..\..\include\FXSearchDialog.h" />
+    <ClInclude Include="..\..\include\FXSemaphore.h" />
+    <ClInclude Include="..\..\include\FXSemaQueue.h" />
+    <ClInclude Include="..\..\include\FXSeparator.h" />
+    <ClInclude Include="..\..\include\FXSettings.h" />
+    <ClInclude Include="..\..\include\FXShell.h" />
+    <ClInclude Include="..\..\include\FXShutter.h" />
+    <ClInclude Include="..\..\include\FXSize.h" />
+    <ClInclude Include="..\..\include\FXSlider.h" />
+    <ClInclude Include="..\..\include\FXSocket.h" />
+    <ClInclude Include="..\..\include\FXSphered.h" />
+    <ClInclude Include="..\..\include\FXSpheref.h" />
+    <ClInclude Include="..\..\include\FXSpinLock.h" />
+    <ClInclude Include="..\..\include\FXSpinner.h" />
+    <ClInclude Include="..\..\include\FXSplashWindow.h" />
+    <ClInclude Include="..\..\include\FXSplitter.h" />
+    <ClInclude Include="..\..\include\FXSpring.h" />
+    <ClInclude Include="..\..\include\FXStat.h" />
+    <ClInclude Include="..\..\include\FXStatusBar.h" />
+    <ClInclude Include="..\..\include\FXStatusLine.h" />
+    <ClInclude Include="..\..\include\FXStream.h" />
+    <ClInclude Include="..\..\include\FXString.h" />
+    <ClInclude Include="..\..\include\FXStringDictionary.h" />
+    <ClInclude Include="..\..\include\FXSwitcher.h" />
+    <ClInclude Include="..\..\include\FXSystem.h" />
+    <ClInclude Include="..\..\include\FXTabBar.h" />
+    <ClInclude Include="..\..\include\FXTabBook.h" />
+    <ClInclude Include="..\..\include\FXTabItem.h" />
+    <ClInclude Include="..\..\include\FXTable.h" />
+    <ClInclude Include="..\..\include\FXTaskGroup.h" />
+    <ClInclude Include="..\..\include\FXText.h" />
+    <ClInclude Include="..\..\include\FXTextCodec.h" />
+    <ClInclude Include="..\..\include\FXTextField.h" />
+    <ClInclude Include="..\..\include\FXTGAIcon.h" />
+    <ClInclude Include="..\..\include\FXTGAImage.h" />
+    <ClInclude Include="..\..\include\FXThread.h" />
+    <ClInclude Include="..\..\include\FXThreadPool.h" />
+    <ClInclude Include="..\..\include\FXTIFIcon.h" />
+    <ClInclude Include="..\..\include\FXTIFImage.h" />
+    <ClInclude Include="..\..\include\FXToggleButton.h" />
+    <ClInclude Include="..\..\include\FXToolBar.h" />
+    <ClInclude Include="..\..\include\FXToolBarGrip.h" />
+    <ClInclude Include="..\..\include\FXToolBarShell.h" />
+    <ClInclude Include="..\..\include\FXToolBarTab.h" />
+    <ClInclude Include="..\..\include\FXToolTip.h" />
+    <ClInclude Include="..\..\include\FXTopWindow.h" />
+    <ClInclude Include="..\..\include\FXTranslator.h" />
+    <ClInclude Include="..\..\include\FXTreeList.h" />
+    <ClInclude Include="..\..\include\FXTreeListBox.h" />
+    <ClInclude Include="..\..\include\FXTriStateButton.h" />
+    <ClInclude Include="..\..\include\FXUndoList.h" />
+    <ClInclude Include="..\..\include\fxunicode.h" />
+    <ClInclude Include="..\..\include\FXURL.h" />
+    <ClInclude Include="..\..\include\FXUTF16Codec.h" />
+    <ClInclude Include="..\..\include\FXUTF32Codec.h" />
+    <ClInclude Include="..\..\include\FXUTF8Codec.h" />
+    <ClInclude Include="..\..\include\FXVariant.h" />
+    <ClInclude Include="..\..\include\FXVariantArray.h" />
+    <ClInclude Include="..\..\include\FXVariantMap.h" />
+    <ClInclude Include="..\..\include\FXVec2d.h" />
+    <ClInclude Include="..\..\include\FXVec2f.h" />
+    <ClInclude Include="..\..\include\FXVec3d.h" />
+    <ClInclude Include="..\..\include\FXVec3f.h" />
+    <ClInclude Include="..\..\include\FXVec4d.h" />
+    <ClInclude Include="..\..\include\FXVec4f.h" />
+    <ClInclude Include="..\..\include\fxver.h" />
+    <ClInclude Include="..\..\include\FXVerticalFrame.h" />
+    <ClInclude Include="..\..\include\FXVisual.h" />
+    <ClInclude Include="..\..\include\FXWEBPIcon.h" />
+    <ClInclude Include="..\..\include\FXWEBPImage.h" />
+    <ClInclude Include="..\..\include\FXWindow.h" />
+    <ClInclude Include="..\..\include\FXWizard.h" />
+    <ClInclude Include="..\..\include\FXWorker.h" />
+    <ClInclude Include="..\..\include\FXWSQueue.h" />
+    <ClInclude Include="..\..\include\FXXBMIcon.h" />
+    <ClInclude Include="..\..\include\FXXBMImage.h" />
+    <ClInclude Include="..\..\include\FXXML.h" />
+    <ClInclude Include="..\..\include\FXXMLFile.h" />
+    <ClInclude Include="..\..\include\FXXMLString.h" />
+    <ClInclude Include="..\..\include\FXXPMIcon.h" />
+    <ClInclude Include="..\..\include\FXXPMImage.h" />
+    <ClInclude Include="..\..\include\xincs.h" />
+    <ClInclude Include="..\..\lib\fxpriv.h" />
+    <ClInclude Include="..\..\lib\FXReactorCore.h" />
+    <ClInclude Include="..\..\lib\icons.h" />
+    <ClInclude Include="..\..\lib\jitter.h" />
+    <ClInclude Include="..\..\lib\leapseconds.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\lib\FX4Splitter.cpp" />
+    <ClCompile Include="..\..\lib\FX7Segment.cpp" />
+    <ClCompile Include="..\..\lib\FX885910Codec.cpp" />
+    <ClCompile Include="..\..\lib\FX885911Codec.cpp" />
+    <ClCompile Include="..\..\lib\FX885913Codec.cpp" />
+    <ClCompile Include="..\..\lib\FX885914Codec.cpp" />
+    <ClCompile Include="..\..\lib\FX885915Codec.cpp" />
+    <ClCompile Include="..\..\lib\FX885916Codec.cpp" />
+    <ClCompile Include="..\..\lib\FX88591Codec.cpp" />
+    <ClCompile Include="..\..\lib\FX88592Codec.cpp" />
+    <ClCompile Include="..\..\lib\FX88593Codec.cpp" />
+    <ClCompile Include="..\..\lib\FX88594Codec.cpp" />
+    <ClCompile Include="..\..\lib\FX88595Codec.cpp" />
+    <ClCompile Include="..\..\lib\FX88596Codec.cpp" />
+    <ClCompile Include="..\..\lib\FX88597Codec.cpp" />
+    <ClCompile Include="..\..\lib\FX88598Codec.cpp" />
+    <ClCompile Include="..\..\lib\FX88599Codec.cpp" />
+    <ClCompile Include="..\..\lib\FXAccelTable.cpp" />
+    <ClCompile Include="..\..\lib\FXApp.cpp" />
+    <ClCompile Include="..\..\lib\FXArray.cpp" />
+    <ClCompile Include="..\..\lib\FXArrowButton.cpp" />
+    <ClCompile Include="..\..\lib\fxascii.cpp" />
+    <ClCompile Include="..\..\lib\FXAtomic.cpp" />
+    <ClCompile Include="..\..\lib\FXAutoThreadStorageKey.cpp" />
+    <ClCompile Include="..\..\lib\FXBarrier.cpp" />
+    <ClCompile Include="..\..\lib\fxbase64.cpp" />
+    <ClCompile Include="..\..\lib\fxbase85.cpp" />
+    <ClCompile Include="..\..\lib\FXBitmap.cpp" />
+    <ClCompile Include="..\..\lib\FXBitmapFrame.cpp" />
+    <ClCompile Include="..\..\lib\FXBitmapView.cpp" />
+    <ClCompile Include="..\..\lib\FXBMPIcon.cpp" />
+    <ClCompile Include="..\..\lib\FXBMPImage.cpp" />
+    <ClCompile Include="..\..\lib\fxbmpio.cpp" />
+    <ClCompile Include="..\..\lib\FXButton.cpp" />
+    <ClCompile Include="..\..\lib\FXBZFileStream.cpp" />
+    <ClCompile Include="..\..\lib\FXCalendar.cpp" />
+    <ClCompile Include="..\..\lib\FXCalendarView.cpp" />
+    <ClCompile Include="..\..\lib\FXCanvas.cpp" />
+    <ClCompile Include="..\..\lib\fxchar.cpp" />
+    <ClCompile Include="..\..\lib\FXCheckButton.cpp" />
+    <ClCompile Include="..\..\lib\FXChoiceBox.cpp" />
+    <ClCompile Include="..\..\lib\FXColorBar.cpp" />
+    <ClCompile Include="..\..\lib\FXColorDialog.cpp" />
+    <ClCompile Include="..\..\lib\FXColorList.cpp" />
+    <ClCompile Include="..\..\lib\FXColorRing.cpp" />
+    <ClCompile Include="..\..\lib\FXColors.cpp" />
+    <ClCompile Include="..\..\lib\FXColorSelector.cpp" />
+    <ClCompile Include="..\..\lib\FXColorWell.cpp" />
+    <ClCompile Include="..\..\lib\FXColorWheel.cpp" />
+    <ClCompile Include="..\..\lib\FXComboBox.cpp" />
+    <ClCompile Include="..\..\lib\FXCompletion.cpp" />
+    <ClCompile Include="..\..\lib\FXComplexd.cpp" />
+    <ClCompile Include="..\..\lib\FXComplexf.cpp" />
+    <ClCompile Include="..\..\lib\fxcompose.cpp" />
+    <ClCompile Include="..\..\lib\FXComposeContext.cpp" />
+    <ClCompile Include="..\..\lib\FXComposite.cpp" />
+    <ClCompile Include="..\..\lib\FXCondition.cpp" />
+    <ClCompile Include="..\..\lib\FXConsole.cpp" />
+    <ClCompile Include="..\..\lib\FXCP1250Codec.cpp" />
+    <ClCompile Include="..\..\lib\FXCP1251Codec.cpp" />
+    <ClCompile Include="..\..\lib\FXCP1252Codec.cpp" />
+    <ClCompile Include="..\..\lib\FXCP1253Codec.cpp" />
+    <ClCompile Include="..\..\lib\FXCP1254Codec.cpp" />
+    <ClCompile Include="..\..\lib\FXCP1255Codec.cpp" />
+    <ClCompile Include="..\..\lib\FXCP1256Codec.cpp" />
+    <ClCompile Include="..\..\lib\FXCP1257Codec.cpp" />
+    <ClCompile Include="..\..\lib\FXCP1258Codec.cpp" />
+    <ClCompile Include="..\..\lib\FXCP437Codec.cpp" />
+    <ClCompile Include="..\..\lib\FXCP850Codec.cpp" />
+    <ClCompile Include="..\..\lib\FXCP852Codec.cpp" />
+    <ClCompile Include="..\..\lib\FXCP855Codec.cpp" />
+    <ClCompile Include="..\..\lib\FXCP856Codec.cpp" />
+    <ClCompile Include="..\..\lib\FXCP857Codec.cpp" />
+    <ClCompile Include="..\..\lib\FXCP860Codec.cpp" />
+    <ClCompile Include="..\..\lib\FXCP861Codec.cpp" />
+    <ClCompile Include="..\..\lib\FXCP862Codec.cpp" />
+    <ClCompile Include="..\..\lib\FXCP863Codec.cpp" />
+    <ClCompile Include="..\..\lib\FXCP864Codec.cpp" />
+    <ClCompile Include="..\..\lib\FXCP865Codec.cpp" />
+    <ClCompile Include="..\..\lib\FXCP866Codec.cpp" />
+    <ClCompile Include="..\..\lib\FXCP869Codec.cpp" />
+    <ClCompile Include="..\..\lib\FXCP874Codec.cpp" />
+    <ClCompile Include="..\..\lib\fxcpuid.cpp" />
+    <ClCompile Include="..\..\lib\FXCURCursor.cpp" />
+    <ClCompile Include="..\..\lib\FXCursor.cpp" />
+    <ClCompile Include="..\..\lib\FXDataTarget.cpp" />
+    <ClCompile Include="..\..\lib\FXDate.cpp" />
+    <ClCompile Include="..\..\lib\FXDC.cpp" />
+    <ClCompile Include="..\..\lib\FXDCPrint.cpp" />
+    <ClCompile Include="..\..\lib\FXDCWindow.cpp" />
+    <ClCompile Include="..\..\lib\FXDDSIcon.cpp" />
+    <ClCompile Include="..\..\lib\FXDDSImage.cpp" />
+    <ClCompile Include="..\..\lib\fxddsio.cpp" />
+    <ClCompile Include="..\..\lib\FXDebugTarget.cpp" />
+    <ClCompile Include="..\..\lib\FXDelegator.cpp" />
+    <ClCompile Include="..\..\lib\FXDial.cpp" />
+    <ClCompile Include="..\..\lib\FXDialogBox.cpp" />
+    <ClCompile Include="..\..\lib\FXDictionary.cpp" />
+    <ClCompile Include="..\..\lib\FXDir.cpp" />
+    <ClCompile Include="..\..\lib\FXDirBox.cpp" />
+    <ClCompile Include="..\..\lib\FXDirDialog.cpp" />
+    <ClCompile Include="..\..\lib\FXDirList.cpp" />
+    <ClCompile Include="..\..\lib\FXDirSelector.cpp" />
+    <ClCompile Include="..\..\lib\FXDirVisitor.cpp" />
+    <ClCompile Include="..\..\lib\FXDirWatch.cpp" />
+    <ClCompile Include="..\..\lib\FXDispatcher.cpp" />
+    <ClCompile Include="..\..\lib\FXDisplay.cpp" />
+    <ClCompile Include="..\..\lib\FXDLL.cpp" />
+    <ClCompile Include="..\..\lib\FXDockBar.cpp" />
+    <ClCompile Include="..\..\lib\FXDockHandler.cpp" />
+    <ClCompile Include="..\..\lib\FXDockSite.cpp" />
+    <ClCompile Include="..\..\lib\FXDockTitle.cpp" />
+    <ClCompile Include="..\..\lib\FXDocument.cpp" />
+    <ClCompile Include="..\..\lib\FXDragCorner.cpp" />
+    <ClCompile Include="..\..\lib\FXDrawable.cpp" />
+    <ClCompile Include="..\..\lib\FXDriveBox.cpp" />
+    <ClCompile Include="..\..\lib\FXEventDispatcher.cpp" />
+    <ClCompile Include="..\..\lib\FXEventLoop.cpp" />
+    <ClCompile Include="..\..\lib\FXException.cpp" />
+    <ClCompile Include="..\..\lib\FXEXEIcon.cpp" />
+    <ClCompile Include="..\..\lib\FXEXEImage.cpp" />
+    <ClCompile Include="..\..\lib\fxexeio.cpp" />
+    <ClCompile Include="..\..\lib\FXExpression.cpp" />
+    <ClCompile Include="..\..\lib\FXExtentd.cpp" />
+    <ClCompile Include="..\..\lib\FXExtentf.cpp" />
+    <ClCompile Include="..\..\lib\fxezquantize.cpp" />
+    <ClCompile Include="..\..\lib\FXFile.cpp" />
+    <ClCompile Include="..\..\lib\FXFileAssociations.cpp" />
+    <ClCompile Include="..\..\lib\FXFileDialog.cpp" />
+    <ClCompile Include="..\..\lib\FXFileList.cpp" />
+    <ClCompile Include="..\..\lib\FXFileProgressDialog.cpp" />
+    <ClCompile Include="..\..\lib\FXFileSelector.cpp" />
+    <ClCompile Include="..\..\lib\FXFileStream.cpp" />
+    <ClCompile Include="..\..\lib\FXFoldingList.cpp" />
+    <ClCompile Include="..\..\lib\FXFont.cpp" />
+    <ClCompile Include="..\..\lib\FXFontDialog.cpp" />
+    <ClCompile Include="..\..\lib\FXFontSelector.cpp" />
+    <ClCompile Include="..\..\lib\FXFrame.cpp" />
+    <ClCompile Include="..\..\lib\fxfsquantize.cpp" />
+    <ClCompile Include="..\..\lib\FXGauge.cpp" />
+    <ClCompile Include="..\..\lib\FXGIFCursor.cpp" />
+    <ClCompile Include="..\..\lib\FXGIFIcon.cpp" />
+    <ClCompile Include="..\..\lib\FXGIFImage.cpp" />
+    <ClCompile Include="..\..\lib\fxgifio.cpp" />
+    <ClCompile Include="..\..\lib\FXGLCanvas.cpp" />
+    <ClCompile Include="..\..\lib\FXGLContext.cpp" />
+    <ClCompile Include="..\..\lib\FXGLObject.cpp" />
+    <ClCompile Include="..\..\lib\FXGLViewer.cpp" />
+    <ClCompile Include="..\..\lib\FXGLVisual.cpp" />
+    <ClCompile Include="..\..\lib\FXGradientBar.cpp" />
+    <ClCompile Include="..\..\lib\FXGroupBox.cpp" />
+    <ClCompile Include="..\..\lib\FXGZFileStream.cpp" />
+    <ClCompile Include="..\..\lib\FXhalf.cpp" />
+    <ClCompile Include="..\..\lib\FXHash.cpp" />
+    <ClCompile Include="..\..\lib\FXHeader.cpp" />
+    <ClCompile Include="..\..\lib\FXHorizontalFrame.cpp" />
+    <ClCompile Include="..\..\lib\FXICOIcon.cpp" />
+    <ClCompile Include="..\..\lib\FXICOImage.cpp" />
+    <ClCompile Include="..\..\lib\FXIcon.cpp" />
+    <ClCompile Include="..\..\lib\FXIconCache.cpp" />
+    <ClCompile Include="..\..\lib\FXIconList.cpp" />
+    <ClCompile Include="..\..\lib\FXIconSource.cpp" />
+    <ClCompile Include="..\..\lib\FXId.cpp" />
+    <ClCompile Include="..\..\lib\FXIFFIcon.cpp" />
+    <ClCompile Include="..\..\lib\FXIFFImage.cpp" />
+    <ClCompile Include="..\..\lib\fxiffio.cpp" />
+    <ClCompile Include="..\..\lib\FXImage.cpp" />
+    <ClCompile Include="..\..\lib\FXImageFrame.cpp" />
+    <ClCompile Include="..\..\lib\FXImageView.cpp" />
+    <ClCompile Include="..\..\lib\FXInputDialog.cpp" />
+    <ClCompile Include="..\..\lib\FXIO.cpp" />
+    <ClCompile Include="..\..\lib\FXIOBuffer.cpp" />
+    <ClCompile Include="..\..\lib\FXIODevice.cpp" />
+    <ClCompile Include="..\..\lib\FXJP2Icon.cpp" />
+    <ClCompile Include="..\..\lib\FXJP2Image.cpp" />
+    <ClCompile Include="..\..\lib\fxjp2io.cpp" />
+    <ClCompile Include="..\..\lib\fxjpegio.cpp" />
+    <ClCompile Include="..\..\lib\FXJPGIcon.cpp" />
+    <ClCompile Include="..\..\lib\FXJPGImage.cpp" />
+    <ClCompile Include="..\..\lib\FXJSON.cpp" />
+    <ClCompile Include="..\..\lib\FXJSONFile.cpp" />
+    <ClCompile Include="..\..\lib\FXJSONString.cpp" />
+    <ClCompile Include="..\..\lib\fxkeyboard.cpp" />
+    <ClCompile Include="..\..\lib\fxkeysym.cpp" />
+    <ClCompile Include="..\..\lib\FXKnob.cpp" />
+    <ClCompile Include="..\..\lib\FXKOI8RCodec.cpp" />
+    <ClCompile Include="..\..\lib\FXLabel.cpp" />
+    <ClCompile Include="..\..\lib\fxleaps.cpp" />
+    <ClCompile Include="..\..\lib\FXLFQueue.cpp" />
+    <ClCompile Include="..\..\lib\FXList.cpp" />
+    <ClCompile Include="..\..\lib\FXListBox.cpp" />
+    <ClCompile Include="..\..\lib\FXLocale.cpp" />
+    <ClCompile Include="..\..\lib\FXMainWindow.cpp" />
+    <ClCompile Include="..\..\lib\FXMappedFile.cpp" />
+    <ClCompile Include="..\..\lib\FXMat2d.cpp" />
+    <ClCompile Include="..\..\lib\FXMat2f.cpp" />
+    <ClCompile Include="..\..\lib\FXMat3d.cpp" />
+    <ClCompile Include="..\..\lib\FXMat3f.cpp" />
+    <ClCompile Include="..\..\lib\FXMat4d.cpp" />
+    <ClCompile Include="..\..\lib\FXMat4f.cpp" />
+    <ClCompile Include="..\..\lib\fxmath.cpp" />
+    <ClCompile Include="..\..\lib\FXMatrix.cpp" />
+    <ClCompile Include="..\..\lib\FXMDIButton.cpp" />
+    <ClCompile Include="..\..\lib\FXMDIChild.cpp" />
+    <ClCompile Include="..\..\lib\FXMDIClient.cpp" />
+    <ClCompile Include="..\..\lib\FXMemoryStream.cpp" />
+    <ClCompile Include="..\..\lib\FXMenuBar.cpp" />
+    <ClCompile Include="..\..\lib\FXMenuButton.cpp" />
+    <ClCompile Include="..\..\lib\FXMenuCaption.cpp" />
+    <ClCompile Include="..\..\lib\FXMenuCascade.cpp" />
+    <ClCompile Include="..\..\lib\FXMenuCheck.cpp" />
+    <ClCompile Include="..\..\lib\FXMenuCommand.cpp" />
+    <ClCompile Include="..\..\lib\FXMenuPane.cpp" />
+    <ClCompile Include="..\..\lib\FXMenuRadio.cpp" />
+    <ClCompile Include="..\..\lib\FXMenuSeparator.cpp" />
+    <ClCompile Include="..\..\lib\FXMenuTitle.cpp" />
+    <ClCompile Include="..\..\lib\FXMessageBox.cpp" />
+    <ClCompile Include="..\..\lib\FXMessageChannel.cpp" />
+    <ClCompile Include="..\..\lib\FXMetaClass.cpp" />
+    <ClCompile Include="..\..\lib\FXMutex.cpp" />
+    <ClCompile Include="..\..\lib\fxntp.cpp" />
+    <ClCompile Include="..\..\lib\FXObject.cpp" />
+    <ClCompile Include="..\..\lib\FXObjectList.cpp" />
+    <ClCompile Include="..\..\lib\FXOptionMenu.cpp" />
+    <ClCompile Include="..\..\lib\fxosver.cpp" />
+    <ClCompile Include="..\..\lib\FXPacker.cpp" />
+    <ClCompile Include="..\..\lib\FXParseBuffer.cpp" />
+    <ClCompile Include="..\..\lib\fxparsegeometry.cpp" />
+    <ClCompile Include="..\..\lib\FXPath.cpp" />
+    <ClCompile Include="..\..\lib\FXPCXIcon.cpp" />
+    <ClCompile Include="..\..\lib\FXPCXImage.cpp" />
+    <ClCompile Include="..\..\lib\fxpcxio.cpp" />
+    <ClCompile Include="..\..\lib\FXPicker.cpp" />
+    <ClCompile Include="..\..\lib\FXPipe.cpp" />
+    <ClCompile Include="..\..\lib\FXPNGIcon.cpp" />
+    <ClCompile Include="..\..\lib\FXPNGImage.cpp" />
+    <ClCompile Include="..\..\lib\fxpngio.cpp" />
+    <ClCompile Include="..\..\lib\FXPoint.cpp" />
+    <ClCompile Include="..\..\lib\FXPopup.cpp" />
+    <ClCompile Include="..\..\lib\FXPPMIcon.cpp" />
+    <ClCompile Include="..\..\lib\FXPPMImage.cpp" />
+    <ClCompile Include="..\..\lib\fxppmio.cpp" />
+    <ClCompile Include="..\..\lib\FXPrintDialog.cpp" />
+    <ClCompile Include="..\..\lib\fxprintf.cpp" />
+    <ClCompile Include="..\..\lib\fxpriv.cpp" />
+    <ClCompile Include="..\..\lib\FXProcess.cpp" />
+    <ClCompile Include="..\..\lib\FXProgressBar.cpp" />
+    <ClCompile Include="..\..\lib\FXProgressDialog.cpp" />
+    <ClCompile Include="..\..\lib\fxpsio.cpp" />
+    <ClCompile Include="..\..\lib\FXPtrList.cpp" />
+    <ClCompile Include="..\..\lib\FXPtrQueue.cpp" />
+    <ClCompile Include="..\..\lib\FXQuatd.cpp" />
+    <ClCompile Include="..\..\lib\FXQuatf.cpp" />
+    <ClCompile Include="..\..\lib\FXRadioButton.cpp" />
+    <ClCompile Include="..\..\lib\FXRandom.cpp" />
+    <ClCompile Include="..\..\lib\FXRanged.cpp" />
+    <ClCompile Include="..\..\lib\FXRangef.cpp" />
+    <ClCompile Include="..\..\lib\FXRangeSlider.cpp" />
+    <ClCompile Include="..\..\lib\FXRASIcon.cpp" />
+    <ClCompile Include="..\..\lib\FXRASImage.cpp" />
+    <ClCompile Include="..\..\lib\fxrasio.cpp" />
+    <ClCompile Include="..\..\lib\FXReactor.cpp" />
+    <ClCompile Include="..\..\lib\FXReadWriteLock.cpp" />
+    <ClCompile Include="..\..\lib\FXRealSlider.cpp" />
+    <ClCompile Include="..\..\lib\FXRealSpinner.cpp" />
+    <ClCompile Include="..\..\lib\FXRecentFiles.cpp" />
+    <ClCompile Include="..\..\lib\FXRectangle.cpp" />
+    <ClCompile Include="..\..\lib\FXRegion.cpp" />
+    <ClCompile Include="..\..\lib\FXRegistry.cpp" />
+    <ClCompile Include="..\..\lib\FXReplaceDialog.cpp" />
+    <ClCompile Include="..\..\lib\FXReverseDictionary.cpp" />
+    <ClCompile Include="..\..\lib\FXRex.cpp" />
+    <ClCompile Include="..\..\lib\FXRGBIcon.cpp" />
+    <ClCompile Include="..\..\lib\FXRGBImage.cpp" />
+    <ClCompile Include="..\..\lib\fxrgbio.cpp" />
+    <ClCompile Include="..\..\lib\FXRootWindow.cpp" />
+    <ClCompile Include="..\..\lib\FXRuler.cpp" />
+    <ClCompile Include="..\..\lib\FXRulerView.cpp" />
+    <ClCompile Include="..\..\lib\fxscanf.cpp" />
+    <ClCompile Include="..\..\lib\FXScopedThread.cpp" />
+    <ClCompile Include="..\..\lib\FXScrollArea.cpp" />
+    <ClCompile Include="..\..\lib\FXScrollBar.cpp" />
+    <ClCompile Include="..\..\lib\FXScrollPane.cpp" />
+    <ClCompile Include="..\..\lib\FXScrollWindow.cpp" />
+    <ClCompile Include="..\..\lib\FXSearchDialog.cpp" />
+    <ClCompile Include="..\..\lib\FXSemaphore.cpp" />
+    <ClCompile Include="..\..\lib\FXSemaQueue.cpp" />
+    <ClCompile Include="..\..\lib\FXSeparator.cpp" />
+    <ClCompile Include="..\..\lib\FXSettings.cpp" />
+    <ClCompile Include="..\..\lib\FXShell.cpp" />
+    <ClCompile Include="..\..\lib\FXShutter.cpp" />
+    <ClCompile Include="..\..\lib\FXSize.cpp" />
+    <ClCompile Include="..\..\lib\FXSlider.cpp" />
+    <ClCompile Include="..\..\lib\FXSocket.cpp" />
+    <ClCompile Include="..\..\lib\FXSphered.cpp" />
+    <ClCompile Include="..\..\lib\FXSpheref.cpp" />
+    <ClCompile Include="..\..\lib\FXSpinLock.cpp" />
+    <ClCompile Include="..\..\lib\FXSpinner.cpp" />
+    <ClCompile Include="..\..\lib\FXSplashWindow.cpp" />
+    <ClCompile Include="..\..\lib\FXSplitter.cpp" />
+    <ClCompile Include="..\..\lib\FXSpring.cpp" />
+    <ClCompile Include="..\..\lib\FXStat.cpp" />
+    <ClCompile Include="..\..\lib\FXStatusBar.cpp" />
+    <ClCompile Include="..\..\lib\FXStatusLine.cpp" />
+    <ClCompile Include="..\..\lib\FXStream.cpp" />
+    <ClCompile Include="..\..\lib\FXString.cpp" />
+    <ClCompile Include="..\..\lib\FXStringDictionary.cpp" />
+    <ClCompile Include="..\..\lib\fxstrtod.cpp" />
+    <ClCompile Include="..\..\lib\fxstrtoll.cpp" />
+    <ClCompile Include="..\..\lib\fxstrtoull.cpp" />
+    <ClCompile Include="..\..\lib\FXSwitcher.cpp" />
+    <ClCompile Include="..\..\lib\FXSystem.cpp" />
+    <ClCompile Include="..\..\lib\FXSystemTime.cpp" />
+    <ClCompile Include="..\..\lib\FXSystemTimeFormat.cpp" />
+    <ClCompile Include="..\..\lib\FXSystemTimeParse.cpp" />
+    <ClCompile Include="..\..\lib\FXTabBar.cpp" />
+    <ClCompile Include="..\..\lib\fxtabbify.cpp" />
+    <ClCompile Include="..\..\lib\FXTabBook.cpp" />
+    <ClCompile Include="..\..\lib\FXTabItem.cpp" />
+    <ClCompile Include="..\..\lib\FXTable.cpp" />
+    <ClCompile Include="..\..\lib\fxtargaio.cpp" />
+    <ClCompile Include="..\..\lib\FXTaskGroup.cpp" />
+    <ClCompile Include="..\..\lib\FXText.cpp" />
+    <ClCompile Include="..\..\lib\FXTextCodec.cpp" />
+    <ClCompile Include="..\..\lib\FXTextField.cpp" />
+    <ClCompile Include="..\..\lib\FXTGAIcon.cpp" />
+    <ClCompile Include="..\..\lib\FXTGAImage.cpp" />
+    <ClCompile Include="..\..\lib\FXThread.cpp" />
+    <ClCompile Include="..\..\lib\FXThreadPool.cpp" />
+    <ClCompile Include="..\..\lib\FXTIFIcon.cpp" />
+    <ClCompile Include="..\..\lib\FXTIFImage.cpp" />
+    <ClCompile Include="..\..\lib\fxtifio.cpp" />
+    <ClCompile Include="..\..\lib\FXToggleButton.cpp" />
+    <ClCompile Include="..\..\lib\FXToolBar.cpp" />
+    <ClCompile Include="..\..\lib\FXToolBarGrip.cpp" />
+    <ClCompile Include="..\..\lib\FXToolBarShell.cpp" />
+    <ClCompile Include="..\..\lib\FXToolBarTab.cpp" />
+    <ClCompile Include="..\..\lib\FXToolTip.cpp" />
+    <ClCompile Include="..\..\lib\FXTopWindow.cpp" />
+    <ClCompile Include="..\..\lib\FXTranslator.cpp" />
+    <ClCompile Include="..\..\lib\FXTreeList.cpp" />
+    <ClCompile Include="..\..\lib\FXTreeListBox.cpp" />
+    <ClCompile Include="..\..\lib\FXTriStateButton.cpp" />
+    <ClCompile Include="..\..\lib\FXUndoList.cpp" />
+    <ClCompile Include="..\..\lib\fxunicode.cpp" />
+    <ClCompile Include="..\..\lib\FXURL.cpp" />
+    <ClCompile Include="..\..\lib\FXUTF16Codec.cpp" />
+    <ClCompile Include="..\..\lib\FXUTF32Codec.cpp" />
+    <ClCompile Include="..\..\lib\FXUTF8Codec.cpp" />
+    <ClCompile Include="..\..\lib\fxutils.cpp" />
+    <ClCompile Include="..\..\lib\FXVariant.cpp" />
+    <ClCompile Include="..\..\lib\FXVariantArray.cpp" />
+    <ClCompile Include="..\..\lib\FXVariantMap.cpp" />
+    <ClCompile Include="..\..\lib\FXVec2d.cpp" />
+    <ClCompile Include="..\..\lib\FXVec2f.cpp" />
+    <ClCompile Include="..\..\lib\FXVec3d.cpp" />
+    <ClCompile Include="..\..\lib\FXVec3f.cpp" />
+    <ClCompile Include="..\..\lib\FXVec4d.cpp" />
+    <ClCompile Include="..\..\lib\FXVec4f.cpp" />
+    <ClCompile Include="..\..\lib\FXVerticalFrame.cpp" />
+    <ClCompile Include="..\..\lib\FXVisual.cpp" />
+    <ClCompile Include="..\..\lib\FXWEBPIcon.cpp" />
+    <ClCompile Include="..\..\lib\FXWEBPImage.cpp" />
+    <ClCompile Include="..\..\lib\fxwebpio.cpp" />
+    <ClCompile Include="..\..\lib\FXWindow.cpp" />
+    <ClCompile Include="..\..\lib\FXWizard.cpp" />
+    <ClCompile Include="..\..\lib\FXWorker.cpp" />
+    <ClCompile Include="..\..\lib\FXWSQueue.cpp" />
+    <ClCompile Include="..\..\lib\fxwuquantize.cpp" />
+    <ClCompile Include="..\..\lib\FXXBMIcon.cpp" />
+    <ClCompile Include="..\..\lib\FXXBMImage.cpp" />
+    <ClCompile Include="..\..\lib\fxxbmio.cpp" />
+    <ClCompile Include="..\..\lib\FXXML.cpp" />
+    <ClCompile Include="..\..\lib\FXXMLFile.cpp" />
+    <ClCompile Include="..\..\lib\FXXMLString.cpp" />
+    <ClCompile Include="..\..\lib\FXXPMIcon.cpp" />
+    <ClCompile Include="..\..\lib\FXXPMImage.cpp" />
+    <ClCompile Include="..\..\lib\fxxpmio.cpp" />
+    <ClCompile Include="..\..\lib\icons.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\lib\arrownext.gif" />
+    <Image Include="..\..\lib\arrowprev.gif" />
+    <Image Include="..\..\lib\bigapp.gif" />
+    <Image Include="..\..\lib\bigcdrom.gif" />
+    <Image Include="..\..\lib\bigcomputer.gif" />
+    <Image Include="..\..\lib\bigdesktop.gif" />
+    <Image Include="..\..\lib\bigdoc.gif" />
+    <Image Include="..\..\lib\bigfloppy.gif" />
+    <Image Include="..\..\lib\bigfloppy3.gif" />
+    <Image Include="..\..\lib\bigfloppy5.gif" />
+    <Image Include="..\..\lib\bigfolder.gif" />
+    <Image Include="..\..\lib\bigfolderopen.gif" />
+    <Image Include="..\..\lib\bigharddisk.gif" />
+    <Image Include="..\..\lib\bignetdrive.gif" />
+    <Image Include="..\..\lib\bignethood.gif" />
+    <Image Include="..\..\lib\bookadd.bmp" />
+    <Image Include="..\..\lib\bookclr.gif" />
+    <Image Include="..\..\lib\bookclr_gif.gif" />
+    <Image Include="..\..\lib\bookdel.bmp" />
+    <Image Include="..\..\lib\bookdel_gif.gif" />
+    <Image Include="..\..\lib\bookmrk_gif.gif" />
+    <Image Include="..\..\lib\booknxt_gif.gif" />
+    <Image Include="..\..\lib\bookprv_gif.gif" />
+    <Image Include="..\..\lib\bookset.gif" />
+    <Image Include="..\..\lib\bookset_gif.gif" />
+    <Image Include="..\..\lib\clearentry.gif" />
+    <Image Include="..\..\lib\cmymode.gif" />
+    <Image Include="..\..\lib\deleteicon.gif" />
+    <Image Include="..\..\lib\dialmode.gif" />
+    <Image Include="..\..\lib\dirup_gif.gif" />
+    <Image Include="..\..\lib\dockbottom.gif" />
+    <Image Include="..\..\lib\dockflip.gif" />
+    <Image Include="..\..\lib\dockfree.gif" />
+    <Image Include="..\..\lib\dockleft.gif" />
+    <Image Include="..\..\lib\dockright.gif" />
+    <Image Include="..\..\lib\docktop.gif" />
+    <Image Include="..\..\lib\entericon.gif" />
+    <Image Include="..\..\lib\erroricon.gif" />
+    <Image Include="..\..\lib\eyedrop.gif" />
+    <Image Include="..\..\lib\fileaccept.gif" />
+    <Image Include="..\..\lib\filecancel.gif" />
+    <Image Include="..\..\lib\filecopy.gif" />
+    <Image Include="..\..\lib\filedelete.gif" />
+    <Image Include="..\..\lib\filehidden.gif" />
+    <Image Include="..\..\lib\filelink.gif" />
+    <Image Include="..\..\lib\filemove.gif" />
+    <Image Include="..\..\lib\filerename.gif" />
+    <Image Include="..\..\lib\fileshown.gif" />
+    <Image Include="..\..\lib\foldernew.gif" />
+    <Image Include="..\..\lib\gotohome.gif" />
+    <Image Include="..\..\lib\gotowork.gif" />
+    <Image Include="..\..\lib\hammer_gif.gif" />
+    <Image Include="..\..\lib\hsvmode.gif" />
+    <Image Include="..\..\lib\icons.cpparrownext.gif" />
+    <Image Include="..\..\lib\infoicon.gif" />
+    <Image Include="..\..\lib\landscape.gif" />
+    <Image Include="..\..\lib\listmode.gif" />
+    <Image Include="..\..\lib\miniapp.gif" />
+    <Image Include="..\..\lib\minicdrom.gif" />
+    <Image Include="..\..\lib\minicomputer.gif" />
+    <Image Include="..\..\lib\minidesktop.gif" />
+    <Image Include="..\..\lib\minidoc.gif" />
+    <Image Include="..\..\lib\minifloppy.gif" />
+    <Image Include="..\..\lib\minifloppy3.gif" />
+    <Image Include="..\..\lib\minifloppy5.gif" />
+    <Image Include="..\..\lib\minifolder.gif" />
+    <Image Include="..\..\lib\minifolderopen.gif" />
+    <Image Include="..\..\lib\miniharddisk.gif" />
+    <Image Include="..\..\lib\mininetdrive.gif" />
+    <Image Include="..\..\lib\mininethood.gif" />
+    <Image Include="..\..\lib\minizipdrive.gif" />
+    <Image Include="..\..\lib\newfolder.bmp" />
+    <Image Include="..\..\lib\portrait.gif" />
+    <Image Include="..\..\lib\questionicon.gif" />
+    <Image Include="..\..\lib\redo_gif.gif" />
+    <Image Include="..\..\lib\rgbmode.gif" />
+    <Image Include="..\..\lib\searchicon.gif" />
+    <Image Include="..\..\lib\showbigicons.gif" />
+    <Image Include="..\..\lib\showdetails.gif" />
+    <Image Include="..\..\lib\showsmallicons.gif" />
+    <Image Include="..\..\lib\sorting.bmp" />
+    <Image Include="..\..\lib\undo_gif.gif" />
+    <Image Include="..\..\lib\warningicon.gif" />
+    <Image Include="..\..\lib\winclose.gif" />
+    <Image Include="..\..\lib\winmaximize.gif" />
+    <Image Include="..\..\lib\winminimize.gif" />
+    <Image Include="..\..\lib\winrestore.gif" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

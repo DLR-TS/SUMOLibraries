@@ -1,0 +1,2795 @@
+#################################################################################
+#                                                                               #
+#                       A d i e   S y n t a x   F i l e                         #
+#                                                                               #
+#################################################################################
+# Copyright (C) 2004,2023 by Jeroen van der Zijp.   All Rights Reserved.        #
+#################################################################################
+# This program is free software; you can redistribute it and/or modify          #
+# it under the terms of the GNU General Public License as published by          #
+# the Free Software Foundation; either version 2 of the License, or             #
+# (at your option) any later version.                                           #
+#                                                                               #
+# This program is distributed in the hope that it will be useful,               #
+# but WITHOUT ANY WARRANTY; without even the implied warranty of                #
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the                 #
+# GNU General Public License for more details.                                  #
+#                                                                               #
+# You should have received a copy of the GNU General Public License             #
+# along with this program; if not, write to the Free Software                   #
+# Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA.    #
+#################################################################################
+
+#
+# Notes:
+#
+# - Please send addition changes or additions to this file to:
+#
+#       jeroen@fox-toolkit.net
+#
+# - Use bracketed patterns with sub-patterns instead of complex
+#   regular expressions; complex regular expressions can recurse
+#   deeply, which can be very expensive.
+#
+# - Rule name is used as registry key; should be unique if
+#   different colors are desired!
+#
+# - A backslash "\" escapes only if followed by '"'; otherwise its
+#   just a backslash.
+#
+# - Put this file in some directory in $PATH and Adie will find it.
+#
+# - If default rule (rule with no patterns at all) is used as parent
+#   of all the other rules, then Adie will show colors different from
+#   the default editor settings. Colors of a child rule are inherited
+#   from its parent rule.
+#
+# - The "style" keyword can be used to give a syntactical element a color
+#   when no color preference has been given yet by the user.
+#   If the user sets colors for a syntactical element, those will take
+#   precedence over the built-in ones.
+#   Not all syntactical elements have been provided a color, on purpose;
+#   some patterns are uncommon and not all users may want to colorize them.
+#
+# - The "group" keyword can be used to tie together families of programming
+#   languages, in terms of their color schemes. For instance C++, C, C# and
+#   Java have been given the same group name, allowing them to have similar
+#   color schemes.
+#   Languages not explicitly given a group name are colored by themselves.
+#
+# - The patterns selected to color source are determined by (1) matching file
+#   extensions to wild-card match against the list of file extensions, or
+#   (2) reading a fragment of the file and searching it for a regular expression.
+#
+
+#################################################################################
+
+# Adie editor syntax-file syntax coloring (yup!)
+language "Adie Syntax"
+  filesmatch "*.stx"
+  contextlines 1
+  rule "Comment"
+    open  "#"
+    close "$"
+    style "darkgreen"
+    rule "FIXME"
+      pattern "FIXME"
+      style   "fuchsia"
+    end
+  end
+  rule "Keyword"
+    pattern "\<(language|filesmatch|contentsmatch|delimiters|contextlines|contextchars|rule|group|pattern|open|close|stop|span|end|style|autoindent|wrapwidth|tabwidth|wordwrap|expandtabs)\>"
+    style   "yellow"
+  end
+  rule "String"
+    open  "\""
+    close "\""
+    stop  "$"
+    style "blue"
+    rule "Escape"
+      pattern "\\\""
+      style   "red"
+    end
+  end
+end
+
+
+# Tables
+language "Data"
+  filesmatch "*.dat,*.plt,*.csv"
+  contentsmatch "^\s*+([-+]?+\d++\.?+\d*+([eE][-+]?+\d++)?+[ \t,]*+)++$"
+  contextlines 1
+  rule "Table"
+    span "^\s*+([-+]?+\d++\.?+\d*+([eE][-+]?+\d++)?+[ \t,]*+)++$"
+    style "cyan"
+    rule "Data1"  open "[-+\d\.Ee]++" close "$" stop "$" style "yellow"
+    rule "Data2"  open "[-+\d\.Ee]++" close "$" stop "$" style "cyan"
+    rule "Data3"  open "[-+\d\.Ee]++" close "$" stop "$" style "orange"
+    rule "Data4"  open "[-+\d\.Ee]++" close "$" stop "$" style "magenta"
+    rule "Data5"  open "[-+\d\.Ee]++" close "$" stop "$" style "green"
+    rule "Data6"  open "[-+\d\.Ee]++" close "$" stop "$" style "yellow"
+    rule "Data7"  open "[-+\d\.Ee]++" close "$" stop "$" style "cyan"
+    rule "Data8"  open "[-+\d\.Ee]++" close "$" stop "$" style "orange"
+    rule "Data9"  open "[-+\d\.Ee]++" close "$" stop "$" style "magenta"
+    rule "Data10" open "[-+\d\.Ee]++" close "$" stop "$" style "green"
+    rule "Data11" open "[-+\d\.Ee]++" close "$" stop "$" style "yellow"
+    rule "Data12" open "[-+\d\.Ee]++" close "$" stop "$" style "cyan"
+    rule "Data13" open "[-+\d\.Ee]++" close "$" stop "$" style "orange"
+    rule "Data14" open "[-+\d\.Ee]++" close "$" stop "$" style "magenta"
+    rule "Data15" open "[-+\d\.Ee]++" close "$" stop "$" style "green"
+    rule "Data16" open "[-+\d\.Ee]++" close "$" stop "$" style "yellow"
+    rule "Data17" open "[-+\d\.Ee]++" close "$" stop "$" style "cyan"
+    rule "Data18" open "[-+\d\.Ee]++" close "$" stop "$" style "orange"
+    rule "Data19" open "[-+\d\.Ee]++" close "$" stop "$" style "magenta"
+    rule "Data20" open "[-+\d\.Ee]++" close "$" stop "$" style "green"
+    rule "Data21" open "[-+\d\.Ee]++" close "$" stop "$" style "yellow"
+    rule "Data22" open "[-+\d\.Ee]++" close "$" stop "$" style "cyan"
+    rule "Data23" open "[-+\d\.Ee]++" close "$" stop "$" style "orange"
+    rule "Data24" open "[-+\d\.Ee]++" close "$" stop "$" style "magenta"
+    rule "Data25" open "[-+\d\.Ee]++" close "$" stop "$" style "green"
+    rule "Data26" open "[-+\d\.Ee]++" close "$" stop "$" style "yellow"
+    rule "Data27" open "[-+\d\.Ee]++" close "$" stop "$" style "cyan"
+    rule "Data28" open "[-+\d\.Ee]++" close "$" stop "$" style "orange"
+    rule "Data29" open "[-+\d\.Ee]++" close "$" stop "$" style "magenta"
+    rule "Data30" open "[-+\d\.Ee]++" close "$" stop "$" style "green"
+    rule "Data31" open "[-+\d\.Ee]++" close "$" stop "$" style "yellow"
+    rule "Data32" open "[-+\d\.Ee]++" close "$" stop "$" style "cyan"
+    rule "Data33" open "[-+\d\.Ee]++" close "$" stop "$" style "orange"
+    rule "Data34" open "[-+\d\.Ee]++" close "$" stop "$" style "magenta"
+    rule "Data35" open "[-+\d\.Ee]++" close "$" stop "$" style "green"
+    rule "Data36" open "[-+\d\.Ee]++" close "$" stop "$" style "yellow"
+    rule "Data37" open "[-+\d\.Ee]++" close "$" stop "$" style "cyan"
+    rule "Data38" open "[-+\d\.Ee]++" close "$" stop "$" style "orange"
+    rule "Data39" open "[-+\d\.Ee]++" close "$" stop "$" style "magenta"
+    rule "Data30" open "[-+\d\.Ee]++" close "$" stop "$" style "green" end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end
+  end
+end
+
+
+# FOX Registry syntax coloring
+language "Registry"
+  filesmatch "*.ini,*.INI,*.rc"
+  contentsmatch  "^\s*?\[[^]]*?\]"
+  contextlines 1
+  rule "Comment"
+    open  "^\s*?[#;]"
+    close "$"
+    style "darkgreen"
+  end
+  rule "RegistrySection"
+    pattern "^\s*?\[[^]]*+\]\s*?$"
+    style   "orange"
+  end
+  rule "RegistryEntry"
+    open  "^\s*?[^[=#;\s][^=]*?(?==)"
+    close "$"
+    stop  "$"
+    style "darkgreen"
+    rule "RegistryEquals"
+      open  "\s*?=\s*?"
+      close "$"
+      stop  "$"
+      style "red"
+      rule "RegistryString"
+        open  "\""
+        close "\""
+        stop  "$"
+        style "blue"
+        rule "OctalEscape"
+          pattern "\\[0-7]{1,3}"
+          style   "carrot"
+        end
+        rule "HexEscape"
+          pattern "\\x\h\h"
+          style   "carrot"
+        end
+        rule "ControlEscape"
+          pattern "\\."
+          style   "carrot"
+        end
+      end
+      rule "RegistryValue"
+        pattern ".*?$"
+        style   "blue"
+      end
+    end
+  end
+end
+
+
+# Julia programming language
+language "Julia"
+  filesmatch "*.jl"
+  contextlines 1
+
+  # Comment
+  rule "Comment"
+    open  "#"
+    close "$"
+    style "darkgreen"
+  end
+
+  # Multi-line comment
+  rule "MultiLineComment"
+    open  "#="
+    close "=#"
+    style "darkgreen"
+  end
+
+  # Keyword
+  rule "Keyword"
+    pattern "\<(abstract|as|begin|break|catch|const|continue|function|elseif|else|end|export|finally|for|global|let|local|if|importall|import|immutable|include|in|isa|macro|module|mutable|println|require|return|struct|supertype|try|typeof|type|using|while|where)\>"
+    style   "red"
+  end
+
+  # Types
+  rule "Type"
+    pattern "\<(AbstractArray|AbstractChar|AbstractFloat|AbstractString|Array|Bool|Char|Integer|Int8|UInt8|Int16|UInt16|Int32|UInt32|Int64|UInt64|Int128|UInt128|Int|UInt|Float16|Float32|Float64|Float128|Nothing|Number|Real|Regex|Signed|Type|Unsigned|UnionAll|Union)\>"
+    style   "blue"
+  end
+
+  # Operators
+  rule "Operator"
+    pattern "(\[|\]|\+=|\+|-=|-|\*=|\*|/=|//=|//|/|\\|%=|%|\^=|\^|!=|!|&&|&=|&|\|\||\|=|\||~=|~|>>>=|>>>|>>=|>>|<<=|<<|==|=>|=|\.^|<=|<:|<|>=|>|::|:|\.\.|\.|\>|<\||\?|,)"
+    style   "red"
+  end
+
+  # Constants
+  rule "Constants"
+    pattern "\<(false|true|Inf|NaN|im|nothing)\>"
+    style   "blue"
+  end
+
+  # Number
+  rule "Number"
+    pattern "\<((\.\d+([eE][+-]?\d+)?|\d+\.\d*([eE][+-]?\d+)?|\d+[Ee][+-]?\d+|0[Xx]\.\h+[Pp][+-]?\d+|0[Xx]\h+\.\h*[Pp][+-]?\d+|0[Xx]\h+[Pp][+-]?\d+)[LlFfQq]?|(0[xX]\h+|0[0-7]*|[1-9]\d*)[Uu]?[Ll]{0,2})\>"
+    style   "blue"
+  end
+
+  # String
+  rule "StringTriQuoted"
+    open  "\"\"\""
+    close "\"\"\""
+    style "blue"
+    rule "OctalEscape"
+      pattern "\\[0-7]{1,3}"
+      style   "carrot"
+    end
+    rule "HexEscape"
+      pattern "\\x\h\h"
+      style   "carrot"
+    end
+    rule "ControlEscape"
+      pattern "\\."
+      style   "carrot"
+    end
+  end
+
+  # String
+  rule "String"
+    open  "\""
+    close "\""
+    stop  "$"
+    style "blue"
+    rule "OctalEscape"
+      pattern "\\[0-7]{1,3}"
+      style   "carrot"
+    end
+    rule "HexEscape"
+      pattern "\\x\h\h"
+      style   "carrot"
+    end
+    rule "ControlEscape"
+      pattern "\\."
+      style   "carrot"
+    end
+  end
+
+  # Char constant
+  rule "Char"
+    open  "'"
+    close "'"
+    stop  "$"
+    style "blue"
+    rule "OctalEscape"
+      pattern "\\[0-7]{1,3}"
+      style   "carrot"
+    end
+    rule "HexEscape"
+      pattern "\\x\h\h"
+      style   "carrot"
+    end
+    rule "ControlEscape"
+      pattern "\\."
+      style   "carrot"
+    end
+  end
+  rule "Braces"
+    pattern "(\{|\})"
+    style   "red"
+  end
+  rule "Parentheses"
+    pattern "(\(|\))"
+    style   "red"
+  end
+end
+
+
+# C++ programming language
+language "C++"
+
+  # File patterns for this language mode
+  filesmatch "*.C,*.cpp,*.cc,*.cxx,*.c++,*.cu,*.H,*.hpp,*.hh,*.hxx,*.h++,*.h,*.cuh,*.ino"
+  contentsmatch "[Cc]\+\+"
+
+  contextlines 1
+
+  # Word delimiters
+  delimiters "~.,/\`'!@#$%^&*()-=+{}|[]\":;<>?"
+
+  # All C-like languages use similar color schemes
+  group "C-Like"
+
+  # Merge
+  rule "MergeMine"
+    open  "^<<<<<<<.*?\n"
+    close "(?=^=======\n)"
+  end
+  rule "MergeDivision"
+    pattern "^=======\n"
+  end
+  rule "MergeYours"
+    open  "(?<=^=======\n)"
+    close "^>>>>>>>.*?\n"
+  end
+
+  # C++ style comment
+  rule "CPPDocComment"
+    open  "///(?!/)"
+    close "$"
+    style "darkgreen"
+  end
+
+  # C++ style comment
+  rule "CPPComment"
+    open  "//"
+    close "$"
+    style "darkgreen"
+    rule "FIXME"
+      pattern "FIXME"
+      style   "fuchsia"
+    end
+  end
+
+  # C style comment
+  rule "CDocComment"
+    open  "/\*\*(?=\s)"
+    close "\*/"
+    style "darkgreen"
+  end
+
+  # C style comment
+  rule "CComment"
+    open  "/\*"
+    close "\*/"
+    style "darkgreen"
+    rule "FIXME"
+      pattern "FIXME"
+      style   "fuchsia"
+    end
+  end
+
+  # String
+  rule "String"
+    open  "\""
+    close "\""
+    stop  "$"
+    style "blue"
+    rule "OctalEscape"
+      pattern "\\[0-7]{1,3}"
+      style   "carrot"
+    end
+    rule "HexEscape"
+      pattern "\\x\h\h"
+      style   "carrot"
+    end
+    rule "ControlEscape"
+      pattern "\\."
+      style   "carrot"
+    end
+    rule "Format"
+      pattern "%\*?(\d+\$)?['#0 +-]*(\*(\d+\$)?|\d*)(\.(\*(\d+\$)?|\d*))?(ll|l|hh|h|L|q|t|z)?([dDbiouxXeEfFgGaAcspn]|\[.*?\])"
+      style   "fuchsia"
+    end
+  end
+
+  # Char constant
+  rule "Char"
+    open  "'"
+    close "'"
+    stop  "$"
+    style "blue"
+    rule "OctalEscape"
+      pattern "\\[0-7]{1,3}"
+      style   "carrot"
+    end
+    rule "HexEscape"
+      pattern "\\x\h\h"
+      style   "carrot"
+    end
+    rule "ControlEscape"
+      pattern "\\."
+      style   "carrot"
+    end
+  end
+
+  # Preprocessor
+  rule "Preprocessor"
+    open  "^\s*(?=#)"
+    close "$"
+    style "blue"
+
+    # PP blocked
+    rule "PPBlocked"
+      open  "#if\s+0"
+      close "#endif"
+      style "gray"
+      rule "PPSubblock"
+        open  "/\*"
+        close "\*/"
+        style "gray"
+      end
+      rule "PPSubblock"
+        open  "//"
+        close "$"
+        style "gray"
+      end
+      rule "PPSubblock"
+        open  "#if"
+        close "#endif"
+        style "gray"
+        rule "PPSubblock"
+          open  "#if"
+          close "#endif"
+          style "gray"
+          rule "PPSubblock"
+            open  "#if"
+            close "#endif"
+            style "gray"
+          end
+        end
+      end
+    end
+
+    # Continuation
+    rule "PreprocessorContinuation"
+      pattern "\\\n"
+      style   "blue"
+    end
+
+    # Comments
+    rule "CComment"
+      open  "/\*"
+      close "\*/"
+      style "darkgreen"
+    end
+    rule "CPPComment"
+      open  "//"
+      close "$"
+      style "darkgreen"
+    end
+  end
+
+  # Special macros
+  rule "FOXMacro"
+    pattern "\<(FXAPI|FXDEFMAP|FXTRACE|FXMAPFUNCS|FXMAPFUNC|FXIMPLEMENT|FXIMPLEMENT_ABSTRACT|FXDECLARE|FXDECLARE_ABSTRACT|FXMAPTYPES|FXMAPTYPE|FXMETACLASS|FXRGBA|FXRGB|FXREDVAL|FXGREENVAL|FXBLUEVAL|FXALPHAVAL|FXASSERT_STATIC|FXASSERT|FXSELID|FXSELTYPE|FXSEL|FXMINMAX|FXMIN3|FXMIN4|FXMIN|FXMAX3|FXMAX4|FXMAX|FXSWAP|FXCLAMP|FXABS|FXSGNZ|FXSGN|FXSGNX|FXLERP|ARRAYNUMBER|STRUCTOFFSET|CONTAINER|__likely|__unlikely|__threadlocal|__noreturn|__prefetchw|__prefetch|__restrict|constructElms|destructElms|copyElms|moveElms|bitmoveElms|bitcopyElms|swapElms|equalElms|fillElms|clearElms|allocElms|callocElms|dupElms|resizeElms|freeElms|construct|destruct)\>"
+  end
+
+  rule "FOXType"
+    pattern "\<(FXuchar|FXschar|FXwchar|FXnchar|FXchar|FXbool|FXushort|FXshort|FXuint|FXint|FXhalf|FXfloat|FXdouble|FXulong|FXlong|FXival|FXuval|FXptr|FXColor|FXPixel|FXTime|FXString)\>"
+  end
+
+  rule "Keyword"
+    pattern "\<(alignas|alignof|and_eq|and|asm|auto|bitand|bitor|break|case|catch|class|compl|concept|consteval|constexpr|constinit|const_cast|const|continue|decltype|default|delete|do|dynamic_cast|else|enum|explicit|export|extern|final|for|friend|goto|if|inline|mutable|namespace|new|noexcept|not_eq|not|nullptr|operator|or_eq|or|override|private|protected|public|reinterpret_cast|return|sizeof|static_assert|static_cast|static_assert|static|struct|switch|template|this|thread_local|throw|try|typedef|typeid|typename|union|using|virtual|volatile|while|xor_eq|xor|true|false|maybe)\>"
+    style   "red"
+  end
+
+  rule "Number"
+    pattern "\<(((\.\d++|\d++((\.\d*+)?|(?=[Ee][+-]?\d++)))([eE][+-]?+\d++)?|0[Xx](\.\h++|\h++(\.\h*+)?)[Pp][+-]?\d++)[LlFfQq]?|(0[xX]\h++|0[0-7]*+|[1-9]\d*+)[Uu]?[Ll]{0,2})\>"
+    style   "blue"
+  end
+
+  rule "Type"
+    pattern "\<(unsigned|signed|int|short|long|float|double|bool|void|char8_t|char16_t|char32_t|char|wchar_t)\>"
+    style   "blue"
+  end
+
+  rule "Braces"
+    pattern "(\{|\})"
+    style   "red"
+  end
+
+  rule "Parentheses"
+    pattern "(\(|\))"
+    style   "red"
+  end
+
+  rule "Operator"
+    pattern "(\[|\]|\+\+|\+=|\+|--|-=|->\*|->|-|==|=|&&|&=|&|\|\||\|=|\||\^=|\^|<<=|<<|<=|<|>>=|>>|>=|>|!=|!|~=|~|\*=|\*|/=|/|%=|%|\?|:|\.\.\.|\.|;|,)"
+    style   "red"
+  end
+end
+
+
+# C programming language
+language "C"
+
+  # File patterns for this language mode
+  filesmatch "*.c,*.h"
+
+  # Word delimiters
+  delimiters "~.,/\`'!@#$%^&*()-=+{}|[]\":;<>?"
+
+  contextlines 1
+
+  # All C-like languages use similar color schemes
+  group "C-Like"
+
+  # Merge
+  rule "MergeMine"
+    open  "^<<<<<<<.*?\n"
+    close "(?=^=======\n)"
+  end
+  rule "MergeDivision"
+    pattern "^=======\n"
+  end
+  rule "MergeYours"
+    open  "(?<=^=======\n)"
+    close "^>>>>>>>.*?\n"
+  end
+
+  # C style comment
+  rule "CDocComment"
+    open  "/\*\*(?=\s)"
+    close "\*/"
+    style "darkgreen"
+  end
+
+  # C style comment
+  rule "CComment"
+    open  "/\*"
+    close "\*/"
+    style "darkgreen"
+    rule "FIXME"
+      pattern "FIXME"
+      style   "fuchsia"
+    end
+  end
+
+  # C++ style comment
+  rule "CPPComment"
+    open  "//"
+    close "$"
+    style "darkgreen"
+  end
+
+  # String
+  rule "String"
+    open  "\""
+    close "\""
+    stop  "$"
+    style "blue"
+    rule "OctalEscape"
+      pattern "\\[0-7]{1,3}"
+      style   "carrot"
+    end
+    rule "HexEscape"
+      pattern "\\x\h\h"
+      style   "carrot"
+    end
+    rule "ControlEscape"
+      pattern "\\."
+      style   "carrot"
+    end
+    rule "Format"
+      pattern "%\*?(\d+\$)?['#0 +-]*(\*(\d+\$)?|\d*)(\.(\*(\d+\$)?|\d*))?(ll|l|hh|h|L|q|t|z)?([dDbiouxXeEfFgGaAcspn]|\[.*?\])"
+      style   "fuchsia"
+    end
+  end
+
+  # Char constant
+  rule "Char"
+    open  "'"
+    close "'"
+    stop  "$"
+    style "blue"
+    rule "OctalEscape"
+      pattern "\\[0-7]{1,3}"
+      style   "carrot"
+    end
+    rule "HexEscape"
+      pattern "\\x\h\h"
+      style   "carrot"
+    end
+    rule "ControlEscape"
+      pattern "\\."
+      style   "carrot"
+    end
+  end
+
+  # Preprocessor
+  rule "Preprocessor"
+    open  "^\s*(?=#)"
+    close "$"
+    style "blue"
+
+    # PP blocked
+    rule "PPBlocked"
+      open  "#if\s+0"
+      close "#endif"
+      style "gray"
+      rule "PPSubblock"
+        open "/\*"
+        close "\*/"
+        style "gray"
+      end
+      rule "PPSubblock"
+        open  "//"
+        close "$"
+        style "gray"
+      end
+      rule "PPSubblock"
+        open  "#if"
+        close "#endif"
+        style "gray"
+        rule "PPSubblock"
+          open  "#if"
+          close "#endif"
+          style "gray"
+          rule "PPSubblock"
+            open  "#if"
+            close "#endif"
+            style "gray"
+          end
+        end
+      end
+    end
+
+    # Continuation
+    rule "PreprocessorContinuation"
+      pattern "\\\n"
+      style   "blue"
+    end
+
+    # Comments
+    rule "CComment"
+      open  "/\*"
+      close "\*/"
+      style "darkgreen"
+    end
+    rule "CPPComment"
+      open  "//"
+      close "$"
+      style "darkgreen"
+    end
+  end
+
+  rule "Keyword"
+    pattern "\<(for|while|if|else|do|struct|enum|union|switch|case|default|return|break|continue|goto|static|volatile|const|auto|register|inline|extern)\>"
+    style   "red"
+  end
+
+  rule "Number"
+    pattern "\<(((\.\d++|\d++((\.\d*+)?|(?=[Ee][+-]?\d++)))([eE][+-]?+\d++)?|0[Xx](\.\h++|\h++(\.\h*+)?)[Pp][+-]?\d++)[LlFfQq]?|(0[xX]\h++|0[0-7]*+|[1-9]\d*+)[Uu]?[Ll]{0,2})\>"
+    style   "blue"
+  end
+
+  rule "Type"
+    pattern "\<(unsigned|signed|int|char|short|long|float|double|bool|complex|void|wchar_t)\>"
+    style   "blue"
+  end
+
+  rule "Braces"
+    pattern "(\{|\})"
+    style   "red"
+  end
+
+  rule "Parentheses"
+    pattern "(\(|\))"
+    style   "red"
+  end
+
+  rule "Operator"
+    pattern "(\[|\]|\+\+|\+=|\+|--|-=|->\*|->|-|==|=|&&|&=|&|\|\||\|=|\||\^=|\^|<<=|<<|<=|<|>>=|>>|>=|>|!=|!|~=|~|\*=|\*|/=|/|%=|%|\?|:|\.\.\.|\.|;|,)"
+    style   "red"
+  end
+end
+
+
+# Rust programming language
+language "Rust"
+
+  # File patterns for this language mode
+  filesmatch "*.rs"
+
+  contextlines 1
+
+  # Word delimiters
+  delimiters "~.,/\`'!@#$%^&*()-=+{}|[]\":;<>?"
+
+  # All C-like languages use similar color schemes
+  group "C-Like"
+
+  # Comment
+  rule "Comment"
+    open  "//"
+    close "$"
+    style "darkgreen"
+    rule "FIXME"
+      pattern "FIXME"
+      style   "fuchsia"
+    end
+  end
+
+  # String
+  rule "String"
+    open  "\""
+    close "\""
+    stop  "$"
+    style "blue"
+    rule "OctalEscape"
+      pattern "\\[0-7]{1,3}"
+      style   "carrot"
+    end
+    rule "HexEscape"
+      pattern "\\x\h\h"
+      style   "carrot"
+    end
+    rule "ControlEscape"
+      pattern "\\."
+      style   "carrot"
+    end
+  end
+
+  # Char constant
+  rule "Char"
+    open  "'"
+    close "'"
+    stop  "$"
+    style "blue"
+    rule "OctalEscape"
+      pattern "\\[0-7]{1,3}"
+      style   "carrot"
+    end
+    rule "HexEscape"
+      pattern "\\x\h\h"
+      style   "carrot"
+    end
+    rule "ControlEscape"
+      pattern "\\."
+      style   "carrot"
+    end
+  end
+
+  # Special macros
+  rule "Keyword"
+    pattern "\<(as|async|await|break|const|continue|crate|dyn|else|enum|extern|false|fn|for|if|impl|in|let|loop|match|mod|move|mut|pub|ref|return|Self|self|static|struct|super|trait|true|type|union|unsafe|use|where|while|abstract|become|box|do|final|macro|override|priv|try|typeof|unsized|virtual|yield)\>"
+    style   "red"
+  end
+
+  rule "Number"
+    pattern "\<(((\.\d++|\d++((\.\d*+)?|(?=[Ee][+-]?\d++)))([eE][+-]?+\d++)?)(f(32|64))?|([1-9][0-9_]*+|0[xX]\h[\h_]*+|0o[0-7][0-7_]*+|0b[01][01_]*+|b'\\?.')([iu](8|16|32|64|128|size))?)\>"
+    style   "blue"
+  end
+
+  rule "Type"
+    pattern "\<(i8|u8|i16|u16|i32|u32|i64|u64|i128|i128|isize|usize|f32|f64|bool|char)\>"
+    style   "blue"
+  end
+
+  rule "Braces"
+    pattern "(\{|\})"
+    style   "red"
+  end
+
+  rule "Parentheses"
+    pattern "(\(|\))"
+    style   "red"
+  end
+
+  rule "Operator"
+    pattern "(\[|\]|\+\+|\+=|\+|--|-=|->\*|->|-|==|=|&&|&=|&|\|\||\|=|\||\^=|\^|<<=|<<|<=|<|>>=|>>|>=|>|!=|!|~=|~|\*=|\*|/=|/|%=|%|\?|:|\.\.\.|\.\.=|\.|;|,|@)"
+    style   "red"
+  end
+end
+
+
+# Fortran Programming Language
+language "Fortran"
+
+  # File patterns for this language mode
+  filesmatch "*.f,*.F,*.f90,*.F90,*.FOR,*.for,*.interface,*.INTERFACE"
+
+  contextlines 1
+
+  # Word delimiters
+  delimiters "~.,/\`'!@$%^&*()-=+{}|[]\":;<>?"
+
+  # Merge
+  rule "MergeMine"
+    open  "^<<<<<<<.*?\n"
+    close "(?=^=======\n)"
+  end
+  rule "MergeDivision"
+    pattern "^=======\n"
+  end
+  rule "MergeYours"
+    open  "(?<=^=======\n)"
+    close "^>>>>>>>.*?\n"
+  end
+
+  # Comment
+  rule "Comment"
+    open  "!|^C|^c|^\*"
+    close "$"
+    style "darkgreen"
+    rule "FIXME"
+      pattern "FIXME"
+      style   "fuchsia"
+    end
+  end
+
+  # Decimal number
+  rule "Number"
+    pattern "(([bBoOzZ](('\h+')|(\"\h+\")))|(((\.\d+)|(\d+(\.\d*)?))([eEdD][-+]?\d+)?)|(?i\.true\.|\.false\.))(_\d)?"
+    style   "blue"
+  end
+
+  # String
+  rule "String"
+    open  "'"
+    close "'"
+    stop  "$"
+    style "blue"
+  end
+
+  # String
+  rule "String"
+    open  "\""
+    close "\""
+    stop  "$"
+    style "blue"
+  end
+
+  # Types
+  rule "Types"
+    pattern "\<(?iINTEGER|REAL|COMPLEX|DOUBLE *?PRECISION|CHARACTER|LOGICAL|TYPE|END *?TYPE)\>"
+    style   "blue"
+  end
+
+  # Attribute
+  rule "Attribute"
+    pattern "\<(?iPARAMETER|ALLOCATABLE|DIMENSION|EXTERNAL|INTENT *?(IN|OUT|INOUT)|INTRINSIC|OPTIONAL|POINTER|SAVE|TARGET|PRIVATE|PUBLIC|KIND|IMPLICIT( *?NONE)?|COMMON|NAMELIST|EQUIVALENCE|DATA|SEQUENCE)\>"
+    style   "blue"
+  end
+
+  # Reserved keywords
+  rule "Keyword"
+    pattern "\<(?iINCLUDE|IF|THEN|ELSE *?IF|ELSE|END *?IF|SELECT *?CASE|CASE|DEFAULT|END *?SELECT|DO *?WHILE|DO|END *?DO|CYCLE|CONTINUE|GO *?TO|MODULE|CONTAINS|USE|ONLY|END *?MODULE|SUBROUTINE|END *?SUBROUTINE|PROGRAM|END *?PROGRAM|INTERFACE|END *?INTERFACE|FUNCTION|END *?FUNCTION|EXIT|CALL|RETURN|RECURSIVE|WHERE|ELSE *?WHERE|END *?WHERE|FORALL|END *?FORALL|END)\>"
+    style   "red"
+  end
+
+  # Operators
+  rule "Operator"
+    pattern "(?i\.AND\.|\.OR\.|\.NOT\.|\.EQV\.|\.NEQV\.|\.EQ\.|\.NE\.|\.LT\.|\.LE\.|\.GT\.|\.GE\.|<=|<|>=|>|==|/=|%|\*\*|\*|\+|\-|/|=|\(|\)|:|,|//)"
+    style   "red"
+  end
+
+  # Identifiers
+  rule "Identifier"
+    pattern "\<(\l[\l\d_]*)\>"
+  end
+end
+
+
+# Matlab language
+language "Matlab"
+
+  # File patterns for this language mode
+  filesmatch "*.m"
+
+  # Word delimiters
+  delimiters "~.,/\`'!@#$%^&*()-=+{}|[]\":;<>?"
+  contextlines 1
+
+  # Line comment
+  rule "LineComment"
+    open  "%"
+    close "$"
+    style "darkgreen"
+  end
+
+  # Multiline comment
+  rule "MultiLineComment"
+    open  "%\{"
+    close "%\}"
+    style "darkgreen"
+  end
+
+  # String
+  rule "String"
+    open  "\'"
+    close "\'"
+    stop  "$"
+    style "blue"
+    rule "OctalEscape"
+      pattern "\\[0-7]+"
+      style   "carrot"
+    end
+    rule "HexEscape"
+      pattern "\\x\h+"
+      style   "carrot"
+    end
+    rule "ControlEscape"
+      pattern "\\."
+      style   "carrot"
+    end
+  end
+
+  rule "Keyword"
+    pattern "\<(break|case|catch|continue|else|elseif|end|for|function|global|if|otherwise|persistent|return|switch|try|while)\>"
+    style   "red"
+  end
+
+  rule "Number"
+    pattern "\<(((\d+\.?\d*)|(\.\d+))([eE][-+]?\d+)?)[ij]?\>"
+    style   "blue"
+  end
+
+  rule "Operator"
+    pattern "(\+|-|\.\*|\.\/|\.\\|:|\.\^|\.'|\'|\*|\/|\\|\^|==|=|<=|<|>=|>|~=)"
+    style   "red"
+  end
+end
+
+
+# Java programming language
+language "Java"
+
+  # File patterns for this language mode
+  filesmatch "*.java"
+
+  # Word delimiters
+  delimiters "~.,/\`'!@#$%^&*()-=+{}|[]\":;<>?"
+  contextlines 1
+
+  # All C-like languages use similar color schemes
+  group "C-Like"
+
+  # Merge
+  rule "MergeMine"
+    open  "^<<<<<<<.*?\n"
+    close "(?=^=======\n)"
+  end
+  rule "MergeDivision"
+    pattern "^=======\n"
+  end
+  rule "MergeYours"
+    open  "(?<=^=======\n)"
+    close "^>>>>>>>.*?\n"
+  end
+
+  # Line comment
+  rule "LineComment"
+    open  "//"
+    close "$"
+    style "darkgreen"
+  end
+
+  # Multiline comment
+  rule "MultiLineComment"
+    open  "/\*"
+    close "\*/"
+    style "darkgreen"
+  end
+
+  # String
+  rule "String"
+    open  "\""
+    close "\""
+    stop  "$"
+    style "blue"
+    rule "OctalEscape"
+      pattern "\\\d+"
+      style   "carrot"
+    end
+    rule "HexEscape"
+      pattern "\\x\h+"
+      style   "carrot"
+    end
+    rule "ControlEscape"
+      pattern "\\."
+      style   "carrot"
+    end
+  end
+
+
+  # Char constant
+  rule "Char"
+    open  "'"
+    close "'"
+    style "blue"
+    rule "OctalEscape"
+      pattern "\\\d+"
+      style   "carrot"
+    end
+    rule "HexEscape"
+      pattern "\\x\h+"
+      style   "carrot"
+    end
+    rule "ControlEscape"
+      pattern "\\."
+      style   "carrot"
+    end
+  end
+
+  # Preprocessor
+  rule "Preprocessor"
+    open  "^\s*#"
+    close "$"
+    style "blue"
+    rule "PreprocessorContinuation"
+      pattern "\\\n"
+      style   "blue"
+    end
+  end
+
+  rule "Keyword"
+    pattern "\<(abstract|default|if|private|this|do|implements|protected|throw|break|import|public|throws|else|instanceof|return|transient|case|extends|try|catch|final|interface|static|finally|strictfp|volatile|class|native|super|while|const|for|new|switch|continue|goto|package|synchronized|null)\>"
+    style   "red"
+  end
+
+  rule "Number"
+    pattern "\<((0[xX][0-9a-fA-F]+)|((\d+\.?\d*)|(\.\d+))([eE][-+]?\d+)?)(L|l|F|f|D|d)?\>"
+  end
+
+  rule "Type"
+    pattern "\<(boolean|double|int|short|void|char|float|long|byte)\>"
+    style   "red"
+  end
+
+  rule "Braces"
+    pattern "(\{|\})"
+    style   "red"
+  end
+
+  rule "Parentheses"
+    pattern "(\(|\))"
+    style   "red"
+  end
+
+  rule "Operator"
+    pattern "(\[|\]|==|=|>>>=|>>>|>>=|>>|>=|>|<|<<=|<<|<=|!=|!|~|&&|\|\||\|=|\||\+\+|\+=|\+|--|-=|-|\*=|\*|/=|/|&=|&|\^=|\^|%=|%|\?|:)"
+    style   "red"
+  end
+end
+
+
+# C# programming language
+language "C#"
+
+  # File patterns for this language mode
+  filesmatch "*.cs"
+
+  # Word delimiters
+  delimiters "~.,/\`'!@#$%^&*()-=+{}|[]\":;<>?"
+  contextlines 1
+
+  # All C-like languages use similar color schemes
+  group "C-Like"
+
+  # Merge
+  rule "MergeMine"
+    open  "^<<<<<<<.*?\n"
+    close "(?=^=======\n)"
+  end
+  rule "MergeDivision"
+    pattern "^=======\n"
+  end
+  rule "MergeYours"
+    open  "(?<=^=======\n)"
+    close "^>>>>>>>.*?\n"
+  end
+
+  # Line comment
+  rule "LineComment"
+    open  "//"
+    close "$"
+    style "darkgreen"
+  end
+
+  # Multiline comment
+  rule "MultiLineComment"
+    open  "/\*"
+    close "\*/"
+    style "darkgreen"
+  end
+
+  # String
+  rule "String"
+    open  "\""
+    close "\""
+    stop "$"
+    style "blue"
+    rule "OctalEscape"
+      pattern "\\\d+"
+      style   "carrot"
+    end
+    rule "HexEscape"
+      pattern "\\x\h+"
+      style   "carrot"
+    end
+    rule "ControlEscape"
+      pattern "\\."
+      style   "carrot"
+    end
+  end
+
+
+  # Char constant
+  rule "Char"
+    open  "'"
+    close "'"
+    style "blue"
+    rule "OctalEscape"
+      pattern "\\\d+"
+      style   "carrot"
+    end
+    rule "HexEscape"
+      pattern "\\x\h+"
+      style   "carrot"
+    end
+    rule "ControlEscape"
+      pattern "\\."
+      style   "carrot"
+    end
+  end
+
+  # Preprocessor
+  rule "Preprocessor"
+    open  "^\s*#"
+    close "$"
+    style "blue"
+    rule "PreprocessorContinuation"
+      pattern "\\\n"
+      style   "blue"
+    end
+  end
+
+  rule "Keyword"
+    pattern "\<(abstract|as|add|alias|ascending|async|await|base|by|break|case|catch|checked|class|const|continue|default|delegate|descending|do|dynamic|else|enum|event|equals|explicit|extern|false|finally|fixed|for|foreach|from|goto|get|global|group|if|implicit|in|interface|internal|into|is|join|let|lock|namespace|nameof|new|notnull|null|object|on|operator|orderby|out|override|params|partial|private|protected|public|readonly|ref|remove|return|sealed|select|set|sizeof|stackalloc|static|struct|switch|this|throw|true|try|typeof|unchecked|unsafe|unmanaged|using|value|var|virtual|volatile|when|while|with|yield)\>"
+    style   "red"
+  end
+
+  rule "Number"
+    pattern "\<((0[xX][0-9a-fA-F]+)|((\d+\.?\d*)|(\.\d+))([eE][-+]?\d+)?)(U|u|L|l|UL|Ul|uL|ul|LU|Lu|lU|lu|F|f|D|d|M|m)?\>"
+    style   "blue"
+  end
+
+  rule "Type"
+    pattern "\<(bool|char|byte|sbyte|float|double|short|int|long|ushort|uint|ulong|decimal|string|void)\>"
+  end
+
+  rule "Braces"
+    pattern "(\{|\})"
+    style   "red"
+  end
+
+  rule "Parentheses"
+    pattern "(\(|\))"
+    style   "red"
+  end
+
+  rule "Operator"
+    pattern "(\[|\]|\+\+|\+=|\+|--|-=|->\*|->|-|==|=|&&|&=|&|\|\||\|=|\||\^=|\^|<<=|<<|<=|<|>>=|>>|>=|>|!=|!|~=|~|\*=|\*|/=|/|%=|%|\?|:)"
+    style   "red"
+  end
+end
+
+
+# GLSL shading language
+language "GLSL"
+
+  # File patterns for this language mode
+  filesmatch "*.frag,*.vert,*.glsl"
+  contentsmatch "\AGLSL"
+
+  # Word delimiters
+  delimiters "~.,/\`'!@#$%^&*()-=+{}|[]\":;<>?"
+  contextlines 1
+
+  # All C-like languages use similar color schemes
+  group "C-Like"
+
+  # C++ style comment
+  rule "CPPComment"
+    open  "//"
+    close "$"
+    style "darkgreen"
+  end
+
+  # C style comment
+  rule "CComment"
+    open  "/\*"
+    close "\*/"
+    style "darkgreen"
+  end
+
+  # Preprocessor
+  rule "Preprocessor"
+    open  "^\s*#"
+    close "$"
+    style "blue"
+    rule "PreprocessorContinuation"
+      pattern "\\\n"
+      style   "blue"
+    end
+  end
+
+  rule "Keyword"
+    pattern "\<(if|else|for|while|do|switch|case|default|discard|return|break|continue|struct)\>"
+    style   "red"
+  end
+
+  rule "Number"
+    pattern "\<((0[xX][0-9a-fA-F]+)|((\d+\.?\d*)|(\.\d+))([eE][-+]?\d+)?)(L|l|UL|ul|u|U|F|f)?\>"
+    style   "blue"
+  end
+
+  rule "Type"
+    pattern "\<(void|bool|int|uint|atomic_uint|float|double)\>"
+  end
+
+  rule "Vector"
+    pattern "\<(vec2|vec3|vec4|dvec2|dvec3|dvec4|bvec2|bvec3|bvec4|ivec2|ivec3|ivec4|uvec2|uvec3|uvec4)\>"
+  end
+
+  rule "Matrix"
+    pattern "\<(mat2|mat3|mat4|mat2x2|mat2x3|mat2x4|mat3x2|mat3x3|mat3x4|mat4x2|mat4x3|mat4x4|dmat2|dmat3|dmat4|dmat2x2|dmat2x3|dmat2x4|dmat3x2|dmat3x3|dmat3x4|dmat4x2|dmat4x3|dmat4x4)\>"
+  end
+
+  rule "Sampler"
+    pattern "\<(sampler1D|image1D|sampler2D|image2D|sampler3D|image3D|samplerCube|imageCube|sampler2DRect|image2DRect|sampler1DArray|image1DArray|sampler2DArray|image2DArray|samplerBuffer|imageBuffer|sampler2DMS|image2DMS|sampler2DMSArray|image2DMSArray|samplerCubeArray|imageCubeArray|sampler1DShadow|sampler2DShadow|sampler2DRectShadow|sampler2DArrayShadow|sampler1DArrayShadow|sampler2DArrayShadow|samplerCubeShadow|samplerCubeArrayShadow|isampler1D|iimage1D|isampler2D|iimage2D|isampler3D|iimage3D|isamplerCube|iimageCube|isampler2DRect|iimage2DRect|isampler1DArray|iimage1DArray|isampler2DArray|iimage2DArray|isamplerBuffer|iimageBuffer|isampler2DMS|iimage2DMS|isampler2DMSArray|iimage2DMSArray|isamplerCubeArray|iimageCubeArray|usampler1D|uimage1D|usampler2D|uimage2D|usampler3D|uimage3D|usamplerCube|uimageCube|usampler2DRect|uimage2DRect|usampler1DArray|uimage1DArray|usampler2DArray|uimage2DArray|usamplerBuffer|uimageBuffer|usampler2DMS|uimage2DMS|usampler2DMSArray|uimage2DMSArray|usamplerCubeArray|uimageCubeArray)\>"
+  end
+
+  rule "Qualifier"
+    pattern "\<(const|in|out|inout|attribute|uniform|varying|invariant|coherent|volatile|restrict|readonly|writeonly|centroid|sample|flat|noperspective|smooth|patch|layout)\>"
+  end
+
+  rule "Braces"
+    pattern "(\{|\})"
+    style   "red"
+  end
+
+  rule "Parentheses"
+    pattern "(\(|\))"
+    style   "red"
+  end
+
+  rule "Operator"
+    pattern "(\[|\]|\+\+|\+=|\+|--|-=|-|==|=|&&|\|\||\^=|\^|<=|<|>=|>|!=|!|\*=|\*|/=|/)"
+    style   "red"
+  end
+
+  rule "Predefined"
+    pattern "\<(gl_Position|gl_PointSize|gl_ClipVertex|gl_Color|gl_Normal|gl_Vertex|gl_MultiTexCoord0|gl_MultiTexCoord1|gl_MultiTexCoord2|gl_MultiTexCoord3|gl_MultiTexCoord4|gl_MultiTexCoord5|gl_MultiTexCoord6|gl_MultiTexCoord7|gl_FogCoord|gl_FrontColor|gl_BackColor|gl_FrontSecondaryColor|gl_BackSecondaryColor|gl_TexCoord|gl_FogFragCoord|gl_SecondaryColor|gl_FragCoord|gl_FrontFacing|gl_FragColor|gl_FragDepth|gl_MaxLights|gl_MaxClipPlanes|gl_MaxTextureUnits|gl_MaxTextureCoordsARB|gl_MaxVertexAttributesGL2|gl_MaxVertexUniformFloatsGL2|gl_MaxVaryingFloatsGL2|gl_MaxVertexTextureUnitsGL2|gl_MaxFragmentTextureUnitsGL2|gl_MaxFragmentUniformFloatsGL2|gl_ModelViewMatrix|gl_ProjectionMatrix|gl_ModelViewProjectionMatrix|gl_NormalMatrix|gl_TextureMatrix|gl_MaxTextureCoordsARB|gl_NormalScale|gl_DepthRange|gl_ClipPlane|gl_MaxClipPlanes|gl_Point|gl_FrontMaterial|gl_BackMaterial|gl_LightSource|gl_MaxLights|gl_LightModel|gl_FrontLightModel|gl_BackLightModel|gl_FrontLightProduct|gl_BackLightProduct|gl_TextureEnvColor|gl_EyePlaneS|gl_EyePlaneT|gl_EyePlaneR|gl_EyePlaneQ|gl_ObjectPlaneS|gl_ObjectPlaneT|gl_ObjectPlaneR|gl_ObjectPlaneQ|gl_Fog)\>"
+  end
+
+  rule "Functions"
+    pattern "\<(radians|degress|sin|cos|tan|asin|acos|atan|atan|pow|exp2|log2|sqrt|inversesqrt|abs|sign|floor|ceil|fract|mod|min|max|clamp|mix|step|smoothstep|length|distance|dot|cross|normalize|ftransform|faceforward|reflect|matrixCompMult|lessThan|lessThanEqual|greaterThan|greaterThanEqual|equal|notEqual|any|all|not|texture1D|texture1DProj|texture1DLod|texture1DProjLod|texture2D|texture2DProj|texture2DLod|texture2DProjLod|texture3D|texture3DProj|texture3DLod|texture3DProjLod|textureCube|textureCubeLod|shadow1D|shadow2D|shadow1DProj|shadow2DProj|shadow1DLod|shadow2DLod|shadow1DProjLod|shadow2DProjLod|dFdx|dFdy|fwidth|noise1|noise2|noise3|noise4)\>"
+  end
+end
+
+
+# JavaScript
+language "JavaScript"
+
+  # File patterns for this language mode
+  filesmatch "*.js,*.json"
+
+  # Word delimiters
+  delimiters "~.,/\`'!@#$%^&*()-=+{}|[]\":;<>?"
+  contextlines 1
+
+  # All C-like languages use similar color schemes
+  group "C-Like"
+
+  # Merge
+  rule "MergeMine"
+    open  "^<<<<<<<.*?\n"
+    close "(?=^=======\n)"
+  end
+  rule "MergeDivision"
+    pattern "^=======\n"
+  end
+  rule "MergeYours"
+    open  "(?<=^=======\n)"
+    close "^>>>>>>>.*?\n"
+  end
+
+  # C style comment (but we can nest)
+  rule "CComment"
+    open  "/\*"
+    close "\*/"
+    style "darkgreen"
+    rule "CComment"
+      open  "/\*"
+      close "\*/"
+      style "darkgreen"
+      rule "CComment"
+        open  "/\*"
+        close "\*/"
+        style "darkgreen"
+      end
+    end
+  end
+
+  # C++ style comment
+  rule "CPPComment"
+    open "//"
+    close "$"
+    style "darkgreen"
+  end
+
+  # String
+  rule "String"
+    open  "\""
+    close "\""
+    stop "$"
+    style "blue"
+    rule "HexEscape"
+      pattern "\\x\h\h"
+      style   "fuchsia"
+    end
+    rule "UnicodeEscape"
+      pattern "\\u\h\h\h\h"
+      style   "fuchsia"
+    end
+    rule "ControlEscape"
+      pattern "\\[0'\"\\nrvtbf]"
+      style   "fuchsia"
+    end
+  end
+
+  # String
+  rule "String"
+    open  "\'"
+    close "\'"
+    stop  "$"
+    style "blue"
+    rule "HexEscape"
+      pattern "\\x\h\h"
+      style   "fuchsia"
+    end
+    rule "UnicodeEscape"
+      pattern "\\u\h\h\h\h"
+      style   "fuchsia"
+    end
+    rule "ControlEscape"
+      pattern "\\[0'\"\\nrvtbf]"
+      style   "fuchsia"
+    end
+  end
+
+  # Include
+  rule "Include"
+    pattern "include +(\'[^']++\'|\"[^\"]++\")"
+    style   "red"
+  end
+
+  # Keywords
+  rule "Keyword"
+    pattern "\<(await|break|case|catch|const|continue|debugger|default|delete|do|else|enum|export|extends|finally|for|function|if|import|in|instanceof|new|return|super|switch|this|throw|try|typeof|var|void|while|with|yield|null|true|false)\>"
+    style   "red"
+  end
+
+  rule "Number"
+    pattern "\<(((\d+\.?\d*)|(\.\d+))([eE][-+]?\d+)?)[ij]?\>"
+    style   "blue"
+  end
+
+  rule "Braces"
+    pattern "(\{|\})"
+    style   "red"
+  end
+
+  rule "Parentheses"
+    pattern "(\(|\))"
+    style   "red"
+  end
+
+  rule "Operator"
+    pattern "(\[|\]|\.|;|,|<<=|<<|<=|<|>>>=|>>>|>>=|>>|>=|>|===|==|=|!==|!=|!|\+\+|\+=|\+|--|-=|-|%=|%|\*=|\*|\^=|\^|~=|~|&&|&=|&|\|\||\|=|\||:|/=|/|\?)"
+    style   "red"
+  end
+end
+
+
+# TypeScript
+language "TypeScript"
+
+  # File patterns for this language mode
+  filesmatch "*.ts"
+
+  # Word delimiters
+  delimiters "~.,/\`'!@#$%^&*()-=+{}|[]\":;<>?"
+  contextlines 1
+
+  # All C-like languages use similar color schemes
+  group "C-Like"
+
+  # Merge
+  rule "MergeMine"
+    open  "^<<<<<<<.*?\n"
+    close "(?=^=======\n)"
+  end
+  rule "MergeDivision"
+    pattern "^=======\n"
+  end
+  rule "MergeYours"
+    open  "(?<=^=======\n)"
+    close "^>>>>>>>.*?\n"
+  end
+
+  # C style comment
+  rule "CComment"
+    open  "/\*"
+    close "\*/"
+    style "darkgreen"
+  end
+
+  # C++ style comment
+  rule "CPPComment"
+    open  "//"
+    close "$"
+    style "darkgreen"
+  end
+
+  # String
+  rule "String"
+    open  "\""
+    close "\""
+    stop  "$"
+    style "blue"
+    rule "HexEscape"
+      pattern "\\x\h\h"
+      style   "fuchsia"
+    end
+    rule "UnicodeEscape"
+      pattern "\\u\h\h\h\h"
+      style   "fuchsia"
+    end
+    rule "ControlEscape"
+      pattern "\\[0'\"\\nrvtbf]"
+      style   "fuchsia"
+    end
+  end
+
+  # String
+  rule "String"
+    open  "\'"
+    close "\'"
+    stop  "$"
+    style "blue"
+    rule "HexEscape"
+      pattern "\\x\h\h"
+      style   "fuchsia"
+    end
+    rule "UnicodeEscape"
+      pattern "\\u\h\h\h\h"
+      style   "fuchsia"
+    end
+    rule "ControlEscape"
+      pattern "\\[0'\"\\nrvtbf]"
+      style   "fuchsia"
+    end
+  end
+
+  # Keywords
+  rule "Keyword"
+    pattern "\<(any|as|boolean|break|case|catch|class|const|constructor|continue|debugger|declare|default|delete|do|else|enum|export|extends|false|finally|for|from|function|get|if|implements|import|in|instanceof|interface|let|module|new|null|number|of|package|private|protected|public|require|return|set|static|string|super|switch|symbol|this|throw|true|try|type|typeof|var|void|while|with|yield)\>"
+    style   "red"
+  end
+
+  rule "Number"
+    pattern "\<(((\d+\.?\d*)|(\.\d+))([eE][-+]?\d+)?)[ij]?\>"
+    style   "blue"
+  end
+
+  rule "Braces"
+    pattern "(\{|\})"
+    style   "red"
+  end
+
+  rule "Parentheses"
+    pattern "(\(|\))"
+    style   "red"
+  end
+
+  rule "Operator"
+    pattern "(\[|\]|\.|;|,|<<=|<<|<=|<|>>>=|>>>|>>=|>>|>=|>|===|==|=|!==|!=|!|\+\+|\+=|\+|--|-=|-|%=|%|\*=|\*|\^=|\^|~=|~|&&|&=|&|\|\||\|=|\||:|/=|/|\?)"
+    style   "red"
+  end
+end
+
+
+# Pascal
+language "Pascal"
+  filesmatch "*.pas,*.p"
+  contextlines 1
+  rule "Number"
+    pattern "\<((0[xX][0-9a-fA-F]+)|((\d+\.?\d*)|(\.\d+))([eE][-+]?\d+)?)(L|l|UL|ul|u|U|F|f)?\>"
+    style   "blue"
+  end
+  rule "String"
+    pattern "\'[^']*?\'"
+    style   "blue"
+  end
+  rule "Type"
+    pattern "\<(?iInteger|Shortint|SmallInt|Longint|Int64|Byte|Word|Cardinal|QWord|Boolean|ByteBool|LongBool|Char)\>"
+  end
+  rule "Comment"
+    pattern "\(\*.*?\*\)|\{.*?\}"
+    style   "darkgreen"
+  end
+  rule "Operator"
+    pattern "(:=|:|@|\\+=|\\+|-=|-|=|\\^|<=|<|>=|>|\\*=|\\*|/=|/|\\.)"
+    style   "red"
+  end
+  rule "Keyword"
+    pattern "\<(?iabsolute|and|array|asm|begin|break|case|const|constructor|continue|destructor|div|do|downto|else|end|file|for|function|goto|if|implementation|in|inherited|inline|interface|label|mod|nil|not|object|of|on|operator|or|packed|procedure|program|record|repeat|self|set|shl|shr|string|then|to|type|unit|until|uses|var|while|with|xor)\>"
+    style   "red"
+  end
+end
+
+
+# Ada Programming Language
+language "Ada"
+
+  # File patterns for this language mode
+  filesmatch "*.ada,*.ad,*.ads,*.adb,*.a,*.ADA,*.AD,*.ADS,*.ADB,*.A"
+
+  contextlines 1
+
+  # Word delimiters
+  delimiters "~.,/\`'!@$%^&*()-=+{}|[]\":;<>?"
+
+  # Comment
+  rule "Comment"
+    open  "--"
+    close "$"
+    style "darkgreen"
+  end
+
+  # String
+  rule "String"
+    open  "\""
+    close "\""
+    stop  "$"
+    style "blue"
+  end
+
+  # Char constant
+  rule "Char"
+    pattern "'([^\\]|\\.)'"
+    style   "blue"
+  end
+
+  # Pragma
+  rule "Pragma"
+    pattern "(?n(?ipragma)\s+\l[\l\d]*(?:_\l[\l\d]*)*\s*\([^)]*\)\s*;)"
+  end
+
+  rule "Attribute"
+    pattern "(?i'size\s+(use)>)|'\l[\l\d]*(?:_[\l\d]+)*"
+  end
+
+  # Statement label
+  rule "Label"
+    pattern "<<\l[\l\d]*(_[\l\d]+)*>>"
+  end
+
+  # Based number
+  rule "BasedNumber"
+    pattern "(\d+(_\d+)*#\h+(_\h+)*(\.\h+(_\h+)*)?#([eE][-+]?\d+(_\d+)*)?)"
+  end
+
+  # Decimal number
+  rule "Number"
+    pattern "(\d+(_\d+)*(\.\d+(_\d+)*)?([eE][-+]?\d+(_\d+)*)?)"
+  end
+
+  # Reserved keywords
+  rule "Keyword"
+    pattern "\<(?iabort|abstract|abs|accept|access|aliased|all|and|array|at|begin|body|case|constant|declare|delay|delta|digits|do|else|elsif|end|entry|exception|exit|for|function|generic|goto|if|interface|in|is|limited|loop|mod|new|nor|not|null|of|or|others|out|overriding|package|pragma|private|procedure|protected|raise|range|record|rem|renames|requeue|return|reverse|select|separate|some|subtype|synchronized|tagged|task|terminate|then|type|until|use|when|while|with|xor)\>"
+    style   "red"
+  end
+
+  # Operators
+  rule "Operator"
+    pattern "(=|/=|<=|<|>=|>|\+|-|&|\*\*|\*|/|:=|:)"
+  end
+
+  # Types
+  rule "Types"
+    pattern "\<(boolean|character|count|duration|float|integer|long_float|long_integer|priority|short_float|short_integer|string)\>"
+  end
+
+  # Identifiers
+  rule "Identifier"
+    pattern "\<(\l[\l\d]*(_[\l\d]+)*)\>"
+  end
+end
+
+
+# Python
+language "Python"
+  filesmatch "*.py"
+  contentsmatch "\A#!(.*?)python"
+  delimiters "~.,/\`'!@#$%^&*()-=+{}|[]\":;<>?"
+
+  contextlines 1
+
+  # Numbers
+  rule "Number"
+    pattern "\<((0[xX][0-9a-fA-F]+)|((\d+\.?\d*)|(\.\d+))([eE][-+]?\d+)?)(L|l|UL|ul|u|U|F|f)?\>"
+    style   "blue"
+  end
+
+  # Quoted string (')
+  rule "String"
+    open  "'(?!'')"
+    close "'(?!'')"
+    style "blue"
+    rule "ControlEscape"
+      pattern "\\(\\|'|\"|a|b|f|n|r|t|v)"
+      style   "fuchsia"
+    end
+    rule "OctalEscape"
+      pattern "\\\d+"
+      style   "fuchsia"
+    end
+    rule "HexEscape"
+      pattern "\\x\h\h"
+      style   "fuchsia"
+    end
+    rule "Unicode"
+      pattern "(\\u\h{4}|\\U\h{8})"
+      style   "fuchsia"
+    end
+  end
+
+  # Quoted string (")
+  rule "String"
+    open  "\"(?!\"\")"
+    close "\"(?!\"\")"
+    style "blue"
+    rule "ControlEscape"
+      pattern "\\(\\|'|\"|a|b|f|n|r|t|v)"
+      style   "fuchsia"
+    end
+    rule "OctalEscape"
+      pattern "\\\d+"
+      style   "fuchsia"
+    end
+    rule "HexEscape"
+      pattern "\\x\h\h"
+      style   "fuchsia"
+    end
+    rule "Unicode"
+      pattern "(\\u\h{4}|\\U\h{8})"
+      style   "fuchsia"
+    end
+  end
+
+  # Triple quoted string (')
+  rule "String"
+    open  "'''"
+    close "'''"
+    style "blue"
+    rule "ControlEscape"
+      pattern "\\(\\|'|\"|a|b|f|n|r|t|v)"
+      style   "fuchsia"
+    end
+    rule "OctalEscape"
+      pattern "\\\d+"
+      style   "fuchsia"
+    end
+    rule "HexEscape"
+      pattern "\\x\h\h"
+      style   "fuchsia"
+    end
+    rule "Unicode"
+      pattern "(\\u\h{4}|\\U\h{8})"
+      style   "fuchsia"
+    end
+  end
+
+  # Triple quoted string (")
+  rule "String"
+    open  "\"\"\""
+    close "\"\"\""
+    style "blue"
+    rule "ControlEscape"
+      pattern "\\(\\|'|\"|a|b|f|n|r|t|v)"
+      style   "fuchsia"
+    end
+    rule "OctalEscape"
+      pattern "\\\d+"
+      style   "fuchsia"
+    end
+    rule "HexEscape"
+      pattern "\\x\h\h"
+      style   "fuchsia"
+    end
+    rule "Unicode"
+      pattern "(\\u\h{4}|\\U\h{8})"
+      style   "fuchsia"
+    end
+  end
+
+  rule "Comment"
+    pattern "#.*?$"
+    style   "darkgreen"
+  end
+
+  rule "Operator"
+    pattern "\+\+|\+=|\+|--|-=|-|==|=|&&|&=|&|=|\^=|\^|<<=|<<|<=|<|>>=|>>|>=|>|!=|!=|!|~=|~|\*=|\*|/=|/|%=|%|:"
+    style   "red"
+  end
+
+  rule "Braces"
+    pattern "(\{|\})"
+    style   "red"
+  end
+
+  rule "Parentheses"
+    pattern "(\(|\))"
+    style   "red"
+  end
+
+  rule "Brackets"
+    pattern "(\[|\])"
+    style   "red"
+  end
+
+  rule "Keyword"
+    pattern "\<(and|del|from|not|while|as|elif|global|or|with|assert|else|if|pass|yield|break|except|import|print|class|exec|in|raise|continue|finally|is|return|def|for|lambda|try)\>"
+    style   "red"
+  end
+end
+
+
+# Ruby
+language "Ruby"
+  filesmatch "*.rb"
+  contextlines 1
+  rule "Number"
+    pattern "\<((0[xX][0-9a-fA-F]+)|((\d+\.?\d*)|(\.\d+))([eE][-+]?\d+)?)(L|l|UL|ul|u|U|F|f)?\>"
+    style   "blue"
+  end
+  rule "SingleString"
+    open  "'"
+    close "'"
+    style "blue"
+    rule "CharEscape"
+      pattern "\\."
+      style   "fuchsia"
+    end
+  end
+  rule "DoubleString"
+    open  "\""
+    close "\""
+    style "blue"
+    rule "CharEscape"
+      pattern "\\."
+      style   "fuchsia"
+    end
+  end
+  rule "Comment"
+    pattern "#.*?$"
+    style   "darkgreen"
+  end
+  rule "Operator"
+    pattern "\+=|\+|-=|-|===|==|=|&&|&=|&|\|\||\|=|\||\^=|\^|<<=|<<|<=|<|>>=|>>|>=|>|!=|!|~=|~|\*=|\*|/=|/|%=|%"
+  end
+  rule "Keyword"
+    pattern "\<(alias|and|BEGIN|begin|break|case|class|def|defined|do|else|elsif|END|end|ensure|false|for|if|in|module|next|nil|not|or|redo|rescue|retry|return|self|super|then|true|undef|unless|until|when|while|yield)\>"
+    style   "red"
+  end
+end
+
+
+# Perl
+language "Perl"
+  filesmatch "*.pl"
+  contextlines 1
+  rule "Comment"
+    open  "#"
+    close "$"
+    style "darkgreen"
+  end
+  rule "Statement"
+    pattern "\<(if|until|while|elsif|else|unless|for(each)?|continue|last|goto|next|redo|do(?=\s*\{)|BEGIN|END)\>"
+  end
+  rule "Operator"
+    pattern     "\<(lt|gt|le|ge|eq|ne|cmp|not|and|or|xor|sub|x)\>"
+  end
+  rule "String"
+    open  "\""
+    close "\""
+    stop  "$"
+    style "blue"
+    rule "OctalEscape"
+      pattern "\\\d+"
+      style   "fuchsia"
+    end
+    rule "HexEscape"
+      pattern "\\x\h+"
+      style   "fuchsia"
+    end
+    rule "ControlEscape"
+      pattern "\\."
+      style   "fuchsia"
+    end
+  end
+  rule "String"
+    open  "'"
+    close "'"
+    stop  "$"
+    style "blue"
+    rule "OctalEscape"
+      pattern "\\\d+"
+      style   "fuchsia"
+    end
+    rule "HexEscape"
+      pattern "\\x\h+"
+      style   "fuchsia"
+    end
+    rule "ControlEscape"
+      pattern "\\."
+      style   "fuchsia"
+    end
+  end
+end
+
+
+# TCL/TK
+language "TCL/TK"
+  filesmatch "*.tcl"
+  contextlines 1
+  rule "Comment"
+    open  "#"
+    close "$"
+    style "darkgreen"
+  end
+  rule "Operator"
+    pattern "(\*|/|%|\+|-|<<|<=|<|>>|>=|>|!=|==|&&|&|\|\||\||\^|\?|:)"
+    style   "red"
+  end
+  rule "Number"
+    pattern "\<((0[xX][0-9a-fA-F]+)|((\d+\.?\d*)|(\.\d+))([eE][-+]?\d+)?)(L|LL|l|ll|UL|ULL|ul|ull|u|U|F|f|Q|q)?\>"
+    style   "blue"
+  end
+  rule "Keyword"
+    pattern "\<(if|elsif|else|switch|foreach|for|while|proc)\>"
+  end
+  rule "String"
+    open  "\""
+    close "\""
+    stop  "$"
+    style "blue"
+    rule "OctalEscape"
+      pattern "\\\d+"
+      style   "fuchsia"
+    end
+    rule "HexEscape"
+      pattern "\\x\h+"
+      style   "fuchsia"
+    end
+    rule "ControlEscape"
+      pattern "\\."
+      style   "fuchsia"
+    end
+  end
+end
+
+
+# Lua
+language "Lua"
+
+  # File patterns for this language mode
+  filesmatch "*.lua"
+
+  # Word delimiters
+  delimiters "~.,/\`'!@#$%^&*()-=+{}|[]\":;<>?"
+  contextlines 1
+
+  # Short comment
+  rule "SingleLineComment"
+    open  "--"
+    close "$"
+    style "darkgreen"
+  end
+
+  # String
+  rule "String"
+    open  "\""
+    close "\""
+    stop  "$"
+    style "blue"
+    rule "OctalEscape"
+      pattern "\\\d+"
+      style   "fuchsia"
+    end
+    rule "ControlEscape"
+      pattern "\\."
+      style   "fuchsia"
+    end
+  end
+
+  # String
+  rule "String"
+    open  "\'"
+    close "\'"
+    stop  "$"
+    style "blue"
+    rule "OctalEscape"
+      pattern "\\\d+"
+      style   "fuchsia"
+    end
+    rule "ControlEscape"
+      pattern "\\."
+      style   "fuchsia"
+    end
+  end
+
+  rule "Keyword"
+    pattern "\<(and|break|do|else|elseif|end|false|for|function|if|in|local|nil|not|or|repeat|return|then|true|until|while)\>"
+    style "red"
+  end
+  rule "Number"
+    pattern "\<(((\d+\.?\d*)|(\.\d+))([eE][-+]?\d+)?)[ij]?\>"
+    style   "blue"
+  end
+  rule "Operator"
+    pattern "(\+|-|\*|/|%|\^|#|==|~=|<=|>=|<|>|=|\(|\)|\{|\}|\[|\]|;|:|,|\.\.\.|\.\.|\.)"
+    style   "red"
+  end
+end
+
+
+# Assembly language
+language "AS"
+
+  # File patterns for this language mode
+  filesmatch "*.s,*.S"
+
+  # Word delimiters
+  delimiters "~.,/\`'!@#$%^&*()-=+{}|[]\":;<>?"
+
+  contextlines 1
+
+  # Block comment
+  rule "BlockComment"
+    open  "/\*"
+    close "\*/"
+    style "darkgreen"
+  end
+
+  # Line comment
+  rule "LineComment"
+    pattern ";.*?$"
+    style   "darkgreen"
+  end
+
+  # Number
+  rule "Number"
+    pattern "\<((0[xXbB][0-9a-fA-F]+)|((\d+\.?\d*)|(\.\d+))([eE][-+]?\d+)?)\>"
+    style   "blue"
+  end
+
+  # Operator
+  rule "Operator"
+    pattern "(\*|/|%|<<|>>|<>|<=|<|>=|>|\+|-|~|\|\||\||&&|&|\^|!=|!|==)"
+    style   "red"
+  end
+
+  # String
+  rule "String"
+    open   "\""
+    close  "\""
+    stop   "$"
+    style "blue"
+    rule "OctalEscape"
+      pattern "\\\d+"
+      style   "fuchsia"
+    end
+    rule "HexEscape"
+      pattern "\\x\h+"
+      style   "fuchsia"
+    end
+    rule "ControlEscape"
+      pattern "\\."
+      style   "fuchsia"
+    end
+  end
+
+  # Char constant
+  rule "Char"
+    open  "'"
+    close "'"
+    stop  "$"
+    style "blue"
+    rule "OctalEscape"
+      pattern "\\\d+"
+      style   "fuchsia"
+    end
+    rule "HexEscape"
+      pattern "\\x\h+"
+      style   "fuchsia"
+    end
+    rule "ControlEscape"
+      pattern "\\."
+      style   "fuchsia"
+    end
+  end
+end
+
+
+# Go Programming language
+language "Go"
+
+  # File patterns for this language mode
+  filesmatch "*.go"
+
+  contextlines 1
+
+  # Word delimiters
+  delimiters "~.,/\`'!@#$%^&*()-=+{}|[]\":;<>?"
+
+  # All C-like languages use similar color schemes
+  group "C-Like"
+
+  # C++ style comment
+  rule "CPPComment"
+    open   "//"
+    close  "$"
+    style "darkgreen"
+    rule "FIXME"
+      pattern "FIXME"
+      style   "fuchsia"
+    end
+  end
+
+  # C style comment
+  rule "CComment"
+    open  "/\*"
+    close "\*/"
+    style "darkgreen"
+    rule "FIXME"
+      pattern "FIXME"
+      style   "fuchsia"
+    end
+  end
+
+  # Char constant
+  rule "Char"
+    open  "'"
+    close "'"
+    stop  "$"
+    style "blue"
+    rule "OctalEscape"
+      pattern "\\[0-7]{3}"
+      style   "fuchsia"
+    end
+    rule "HexEscape"
+      pattern "\\x\h\h"
+      style   "fuchsia"
+    end
+    rule "Unicode"
+      pattern "\\u\h\h\h\h"
+      style   "fuchsia"
+    end
+    rule "Unicode"
+      pattern "\\U\h\h\h\h\h\h\h\h"
+      style   "fuchsia"
+    end
+    rule "ControlEscape"
+      pattern "\\[abfnrtv\\']"
+      style   "fuchsia"
+    end
+  end
+
+  # String
+  rule "String"
+    open   "\""
+    close  "\""
+    stop   "$"
+    style "blue"
+    rule "OctalEscape"
+      pattern "\\[0-7]{3}"
+      style   "fuchsia"
+    end
+    rule "HexEscape"
+      pattern "\\x\h\h"
+      style   "fuchsia"
+    end
+    rule "Unicode"
+      pattern "\\u\h\h\h\h"
+      style   "fuchsia"
+    end
+    rule "Unicode"
+      pattern "\\U\h\h\h\h\h\h\h\h"
+      style   "fuchsia"
+    end
+    rule "ControlEscape"
+      pattern "\\[abfnrtv\\\"]"
+      style   "fuchsia"
+    end
+  end
+
+  # String
+  rule "RawString"
+    open   "\`"
+    close  "\`"
+  end
+
+  rule "Keyword"
+    pattern "\<(break|case|chan|const|continue|default|defer|else|fallthrough|for|func|go|goto|if|import|interface|map|package|range|return|select|struct|switch|type|var)\>"
+    style   "red"
+  end
+
+  rule "Operator"
+    pattern "(\+\+|\+=|\+|--|-=|-|\*=|\*|/=|/|%=|%|&&|&^=|&=|&^|&|\^=|\^|<<=|<<|<=|<-|<|>>=|>>|>=|>|\|\||\|=|\||==|=|!=|!|:=|:|\.\.\.|\.|\(|\[|\{|,|\)|\]|\}|;)"
+    style   "red"
+  end
+
+  rule "Number"
+    pattern "\<((0[xX][0-9a-fA-F]+)|((\d+\.?\d*)|(\.\d+))([eE][-+]?\d+)?i?)\>"
+    style   "blue"
+  end
+
+  rule "Type"
+    pattern "\<(uint8|uint16|uint32|uint64|int8|int16|int32|int64|float32|float64|complex64|complex128|byte|rune|uint|int|uintptr)\>"
+  end
+
+  rule "Braces"
+    pattern "(\{|\})"
+    style   "red"
+  end
+
+  rule "Parentheses"
+    pattern "(\(|\))"
+    style   "red"
+  end
+end
+
+
+# IDL interface definition language
+language "IDL"
+
+  # File patterns for this language mode
+  filesmatch "*.idl"
+
+  # Word delimiters
+  delimiters "~.,/\`'!@#$%^&*()-=+{}|[]\":;<>?"
+  contextlines 1
+
+  # All C-like languages use similar color schemes
+  group "C-Like"
+
+  # C++ style comment
+  rule "CPPDocComment"
+    open   "///(?!/)"
+    close  "$"
+    style         "darkgreen"
+  end
+
+  # C++ style comment
+  rule "CPPComment"
+    open   "//"
+    close  "$"
+    style         "darkgreen"
+  end
+
+  # C style comment
+  rule "CDocComment"
+    open   "/\*\*(?=\s)"
+    close  "\*/"
+    style         "darkgreen"
+  end
+
+  # C style comment
+  rule "CComment"
+    open   "/\*"
+    close  "\*/"
+    style         "darkgreen"
+  end
+
+  # String
+  rule "String"
+    open   "\""
+    close  "\""
+    stop   "$"
+    style         "blue"
+    rule "OctalEscape"
+      pattern     "\\\d+"
+      style       "fuchsia"
+    end
+    rule "HexEscape"
+      pattern     "\\x\h+"
+      style       "fuchsia"
+    end
+    rule "ControlEscape"
+      pattern     "\\."
+      style       "fuchsia"
+    end
+  end
+
+  # Char constant
+  rule "Char"
+    open  "'"
+    close "'"
+    style         "blue"
+    rule "OctalEscape"
+      pattern     "\\\d+"
+      style       "fuchsia"
+    end
+    rule "HexEscape"
+      pattern     "\\x\h+"
+      style       "fuchsia"
+    end
+    rule "ControlEscape"
+      pattern     "\\."
+      style       "fuchsia"
+    end
+  end
+
+  # Preprocessor
+  rule "Preprocessor"
+    open  "^\s*(?=#)"
+    close "$"
+    style        "blue"
+
+    # Continuation
+    rule "PreprocessorContinuation"
+      pattern "\\\n"
+      style   "blue"
+    end
+
+    # Comments
+    rule "CComment"
+      open   "/\*"
+      close  "\*/"
+      style         "darkgreen"
+    end
+    rule "CPPComment"
+      open   "//"
+      close  "$"
+      style         "darkgreen"
+    end
+  end
+
+  rule "Keyword"
+    pattern     "\<(abstract|alias|any|attribute|boolean|case|char|component|connector|const|consumes|context|custom|default|double|emits|enum|eventtype|exception|factory|FALSE|finder|fixed|float|getraises|home|import|in|inout|interface|local|long|mirrorport|module|multiple|native|object|octet|oneway|out|port|porttype|primarykey|private|provides|pseudo|public|publishes|raises|readonly|sequence|setraises|short|string|struct|supports|switch|TRUE|truncatable|typedef|typeid|typename|typeprefix|union|unsigned|uses|valuebase|valuetype|void|wchar|wstring)\>"
+  end
+
+  rule "Number"
+    pattern     "\<((0[xX][0-9a-fA-F]+)|((\d+\.?\d*)|(\.\d+))([eE][-+]?\d+)?)(L|l|UL|ul|u|U|F|f)?\>"
+    style       "blue"
+  end
+
+  rule "Braces"
+    pattern     "(\{|\})"
+    style       "red"
+  end
+
+  rule "Parentheses"
+    pattern     "(\(|\))"
+    style       "red"
+  end
+
+  rule "Operator"
+    pattern     "(\+|-|&|\||\^|<<|<|>>|>|~|\*|/|%|\[|\]|=|::|:|;|,|\.\.\.|@|//@)"
+    style       "red"
+  end
+end
+
+
+# Shell scripts
+language "Shell"
+
+  # File patterns for this language mode
+  filesmatch "*.sh,.bashrc"
+
+  # Or contents
+  contentsmatch "\A#!(.*?)(ba)?sh"
+
+  contextlines 1
+  rule "Comment"
+    pattern    "#.*?$"
+    style      "darkgreen"
+  end
+  rule "Escape"
+    pattern     "\\[\\"$]"
+    style       "red"
+  end
+  rule "Variable"
+    pattern     "\$([-*@#?$!0-9_]|[a-zA-Z_][0-9a-zA-Z_]*)"
+    style       "yellow"
+  end
+  rule "CurlyVariable"
+    open   "\$\{"
+    close  "\}"
+    stop   "$"
+    style         "blue"
+  end
+  rule "Command Substitution"
+    open   "`"
+    close  "`"
+    style         "blue"
+    rule "CSEscape"
+      pattern     "\\[\\"$]"
+      style       "red"
+    end
+    rule "CSVariable"
+      pattern     "\$([-*@#?$!0-9_]|[a-zA-Z_][0-9a-zA-Z_]*)"
+      style       "yellow"
+    end
+    rule "CSCurlyVariable"
+      open   "\$\{"
+      close  "\}"
+      stop   "$"
+      style         "blue"
+    end
+  end
+  rule "SQString"
+    open   "'"
+    close  "'"
+    style         "blue"
+  end
+  rule "DQString"
+    open   "\""
+    close  "\""
+    style         "blue"
+    rule "DQEscape"
+      pattern     "\\[\\"$]"
+      style       "red"
+    end
+    rule "DQVariable"
+      pattern     "\$([-*@#?$!0-9_]|[a-zA-Z_][0-9a-zA-Z_]*)"
+      style       "yellow"
+    end
+    rule "DQCurlyVariable"
+      open   "\$\{"
+      close  "\}"
+      stop   "$"
+      style         "blue"
+    end
+  end
+  rule "Keyword"
+    pattern    "\<(for|in|do|done|if|then|else|elif|fi|switch|case|esac|while|function|select|until|time)\>"
+    style      "blue"
+  end
+  rule "Operator"
+    pattern    "(=|;;|;|!|\{|\}|\[\[|\]\])"
+    style      "red"
+  end
+end
+
+
+# Makefiles
+language "Make"
+  filesmatch "GNUmakefile,Makefile*,makefile*"
+  contextlines 1000
+  expandtabs   no
+  rule "Comment"
+    open  "#"
+    close "$"
+    style         "darkgreen"
+    rule "CommentContinuation"
+      pattern  "\\\n"
+      style    "darkgreen"
+    end
+  end
+  rule "Keyword"
+    pattern    "^\s*?\<(define|endef|undefine|ifdef|ifndef|ifeq|ifneq|else|endif|include|-include|sinclude|override|export|unexport|private|vpath)\>"
+    style      "brown"
+  end
+  rule "Assignment"
+    open "^\s*?[A-Za-z0-9_+$()]++\s*?(\?=|\+=|::=|:=|=)"
+    close "$"
+    rule "AssignmentContinuation"
+      pattern "\\\n"
+    end
+  end
+  rule "PhonyDependencies"
+    open "^(\.PHONY|\.SUFFIXES|\.DEFAULT|\.PRECIOUS|\.INTERMEDIATE|\.SECONDARY|\.SECONDEXPANSION|\.DELETE_ON_ERROR|\.IGNORE|\.LOW_RESOLUTION_TIME|\.SILENT|\.EXPORT_ALL_VARIABLES|\.NOTPARALLEL|\.ONESHELL|\.POSIX|\.DEFAULT_GOAL)\s*::?"
+    close "$|;"
+    rule "PhonyDependencyContinuation"
+      pattern "\\\n"
+    end
+  end
+  rule "Dependencies"
+    open "^([\w%./$(){}@^<*?%+-]++\s*)+?::?"
+    close "$|;"
+    rule "DependencyContinuation"
+      pattern "\\\n"
+    end
+  end
+  rule "String"
+    open   "\""
+    close  "\""
+    stop   "$"
+    style         "blue"
+    rule "OctalEscape"
+      pattern     "\\\d+"
+      style       "fuchsia"
+    end
+    rule "HexEscape"
+      pattern     "\\x\h+"
+      style       "fuchsia"
+    end
+    rule "ControlEscape"
+      pattern     "\\."
+      style       "fuchsia"
+    end
+  end
+  rule "String"
+    open   "'"
+    close  "'"
+    stop   "$"
+    style         "blue"
+    rule "OctalEscape"
+      pattern     "\\\d+"
+      style       "fuchsia"
+    end
+    rule "HexEscape"
+      pattern     "\\x\h+"
+      style       "fuchsia"
+    end
+    rule "ControlEscape"
+      pattern     "\\."
+      style       "fuchsia"
+    end
+  end
+end
+
+
+# Makefiles
+language "CMake"
+  filesmatch "*.cmake,*.cmake.in,*.ctest,*.ctest.in,CMakeLists.txt"
+  contextlines 1
+  rule "BracketComment"
+    open  "#\[\["
+    close "\]\]"
+    style         "darkgreen"
+  end
+  rule "Comment"
+    open  "#"
+    close "$"
+    style         "darkgreen"
+  end
+  rule "Command"
+    open  "\s*?[A-Za-z_][A-Za-z0-9_]*?\s*?\("
+    close "\)"
+    style        "blue"
+    rule "Comment"
+      open  "#"
+      close "$"
+      style         "darkgreen"
+    end
+    rule "QuotedArgument"
+      open   "\""
+      close  "\""
+      stop   "$"
+      style         "blue"
+      rule "Escape"
+        pattern     "\\[()#\" \\$@^;trn]"
+        style       "fuchsia"
+      end
+    end
+    rule "Argument"
+      pattern     "[^\s()#\"\']+?"
+      style       "red"
+    end
+  end
+end
+
+
+# GNU configure scripts
+language "Configure"
+  filesmatch "configure.in,configure.ac"
+  contextlines 1
+  rule "Comment"
+    pattern    "\<dnl\>.*?$"
+    style         "darkgreen"
+  end
+  rule "Comment"
+    pattern    "#.*?$"
+    style      "darkgreen"
+  end
+  rule "String"
+    open  "'"
+    close "'"
+    style        "blue"
+    rule "ControlEscape"
+      pattern     "\\."
+      style       "fuchsia"
+    end
+  end
+  rule "String"
+    open  "\""
+    close "\""
+    style        "blue"
+    rule "ControlEscape"
+      pattern     "\\."
+      style       "fuchsia"
+    end
+  end
+  rule "Macro"
+    pattern    "\<A[CM]\w*\>"
+    style      "blue"
+  end
+  rule "ShellResult"
+    open  "`"
+    close "`"
+    style        "red"
+    rule "ControlEscape"
+      pattern     "\\."
+      style       "fuchsia"
+    end
+  end
+end
+
+
+# HTML and XML
+language "XML/HTML"
+  filesmatch "*.xml,*.htm,*.html,*.svg,*.ui"
+  contentsmatch "<\?xml"
+  contextlines 1
+
+  rule "Comment"
+    open  "<!--"
+    close "-->"
+    style "darkgreen"
+  end
+
+  rule "CDATA"
+    open  "<!\[CDATA\["
+    close "\]\]>"
+    style "cyan"
+  end
+
+  rule "Declaration"
+    open  "<!"
+    close ">"
+    style "blue"
+  end
+
+  rule "EntityRef"
+    pattern "\&\l\w*;"
+    style   "yellow"
+  end
+
+  rule "CharRef"
+    pattern "\&#(\d+|x\h+);"
+    style   "yellow"
+  end
+
+  rule "Instruction"
+    open  "<\?"
+    close "\?>"
+    style "red"
+    rule "String"
+      open  "\""
+      close "\""
+      style "blue"
+    end
+    rule "String"
+      open  "\'"
+      close "\'"
+      style "blue"
+    end
+  end
+
+  rule "Element"
+    open  "</?"
+    close "/?>"
+    style "red"
+    rule "Name"
+      pattern "[:_\l][\w.-]+"
+      style   "yellow"
+    end
+    rule "Equals"
+      pattern "="
+      style   "red"
+    end
+    rule "String"
+      open  "\""
+      close "\""
+      style "blue"
+    end
+    rule "String"
+      open  "'"
+      close "'"
+      style "blue"
+    end
+  end
+end
+
+
+# LaTeX text formatting language
+language "LaTeX"
+  filesmatch "*.tex"
+  delimiters "~.,/\`'!@#$%^&*()_-=+{}|[]\":;<>?"
+  contextlines 1
+  rule "Math"
+    open  "\$|\\\[|\\\(|\\begin(?=(\{(equation|align)\*?\}))"
+    close "\$|\\\]|\\\)|\\end(?=(\{(equation|align)\*?\}))"
+
+    rule "Comment"
+      open  "%"
+      close "$"
+      stop  "$"
+      style         "darkgreen"
+    end
+    rule "CurlyBrace"
+      pattern "\{|\}"
+    end
+    rule "MathCommand"
+      open  "\\(?!([^a-zA-Z]|end\{(equation|align)\*?\}))"
+      close "(?=[^a-zA-Z])|$"
+      stop  "(?=\$)|\\((?=\])|(?=\))|(?=end\{(equation|align)\}))"
+      rule "Comment"
+        open  "%"
+        close "$"
+        stop  "$"
+        style         "darkgreen"
+      end
+      rule "MathGreek"
+        pattern "\<([aA]lpha|[bB]eta|[gG]amma|[eE]psilon|[dD]elta|[eE]ta|[iI]ota|[kK]appa|[lL]ambda|[mM]u|[nN]u|[pP]i|[rR]ho|[sS]igma|[tT]au|[pP]hi|[pP]si|[xX]i|[uU]psilon|[zZ]eta|[tT]heta|[oO]mega)(\>|(?=_))"
+      end
+    end
+  end
+
+  rule "Command"
+    open  "\\{1}(?!\\)"
+    close "(?=[^a-zA-Z])|$"
+    stop  "\{|\}| |$"
+    rule "TextFormating"
+      pattern "\<(textbf|texttt|textsl|textit|emph)\>"
+    end
+    rule "Sectioning"
+      pattern "\<(section|subsection|subsubsection|paragraph|chapter)\>"
+    end
+    rule "Reference"
+      pattern "\<(cite|ref|label)\>"
+    end
+    rule "Includes"
+      pattern "\<(usepackage|include|input|includegraphics)\>"
+    end
+    rule "Footnote"
+      pattern "\<(footnote)\>"
+    end
+
+    rule "Comment"
+      open  "%"
+      close "$"
+      stop  "$"
+      style         "darkgreen"
+    end
+
+    rule "Breaks"
+      pattern "\<(clearpage|newpage)\>"
+    end
+  end
+
+  rule "CurlyBrace"
+       pattern "\{|\}"
+  end
+
+  rule "Comment"
+    open  "%"
+    close "$"
+    stop  "$"
+    style         "darkgreen"
+  end
+
+  rule "Breaks"
+    pattern "\\{2}"
+  end
+end
+
+
+# HTLM/PHP Markup patterns
+# Contributed by: Andy Preston <mail@andy-preston.co.uk>
+language "Markup"
+  filesmatch "*.html,*.xhtml,*.xml,*.sgml,*.php"
+  contextlines 1
+  rule "PHP"
+    open "<\?php"
+    close "\?>"
+    rule "String"
+      open  "\""
+      close "\""
+      rule "ControlEscape"
+         pattern     "\\."
+      end
+      rule "Variable"
+        pattern "\$[A-Za-z_][0-9A-Za-z_]*"
+      end
+    end
+    rule "SString"
+      open  "'"
+      close "'"
+      rule "SQuote"
+         pattern     "''"
+      end
+    end
+    rule "Number"
+      pattern "\<((0[xX][0-9a-fA-F]+)|((\d+\.?\d*)|(\.\d+))([eE][-+]?\d+)?)\>"
+    end
+    rule "Variable"
+      pattern "\$\$?[A-Za-z_][0-9A-Za-z_]*"
+    end
+    rule "Comment"
+      pattern    "#.*?$"
+      style      "darkgreen"
+    end
+    rule "CPPComment"
+      open  "//"
+      close "$"
+      style      "darkgreen"
+    end
+    rule "CComment"
+      open  "/\*"
+      close "\*/"
+      style      "darkgreen"
+    end
+    rule "Keyword"
+      pattern "\<(and|break|case|class|do|echo|else|elseif|endfor|endwhile|for|function|global|if|include|new|or|print|return|static|switch|while|xor)\>"
+      style   "red"
+    end
+    rule "Operator"
+      # there's a bit of a kludge here, for the "?" operator, a "?" matches against the "?>" at the end of a block of PHP
+      # so I've had to make it \?[^>] which means the character following the "?" is treated as part of the operator
+      # If you write this: "$x = $y ? 1 : 2" it looks fine, but if you write "$x=$y?1:2" the "1" is shown as part of the operator
+      pattern "(,|=|\+=|-=|\*=|/=|\.=|%=|&=|\|=|\^=|~=|<<=|>>=|:|\?[^>]|\|\||&&|\||\^|&|==|!=|===|!==|<|<=|>|>=|<<|>>|\+|-|\.|\*|/|%|!|~|\+\+|--|\(int\)|\(double\)|\(string\)|\(array\)|\(object\)|@|\[|\])"
+    end
+  end
+  rule "Comment"
+    open  "<!--"
+    close "-->"
+  end
+  rule "Tag"
+    open  "<"
+    close ">"
+    rule "Attribute"
+      pattern " [A-Za-z_][A-Za-z0-9_-]+"
+    end
+    rule "Value"
+      span "=?\"[^\"]*\""
+      rule "HexTriplet"
+        pattern "#\h\h\h\h\h\h"
+      end
+    end
+  end
+  rule "Special"
+    open  "&"
+    close ";"
+  end
+end
+
+

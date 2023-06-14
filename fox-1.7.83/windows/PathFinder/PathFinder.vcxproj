@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{586608DF-6AEA-4FED-838A-4D334F3CCEEC}</ProjectGuid>
+    <RootNamespace>PathFinder</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <CustomBuildBeforeTargets>BuildGenerateSources</CustomBuildBeforeTargets>
+    <IncludePath>$(SolutionDir)\..\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(OutDir);$(LibraryPath)</LibraryPath>
+    <LinkIncremental>false</LinkIncremental>
+    <ExtensionsToDeleteOnClean>icons.h;icons.cpp;$(ExtensionsToDeleteOnClean)</ExtensionsToDeleteOnClean>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <CustomBuildBeforeTargets>BuildGenerateSources</CustomBuildBeforeTargets>
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(SolutionDir)\..\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(OutDir);$(LibraryPath)</LibraryPath>
+    <ExtensionsToDeleteOnClean>icons.h;icons.cpp;$(ExtensionsToDeleteOnClean)</ExtensionsToDeleteOnClean>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>
+      </SDLCheck>
+      <PreprocessorDefinitions>UNICODE;WIN32;DEBUG;_CRT_SECURE_NO_WARNINGS;BUILD_WINDOWS;FOXDLL_EXPORTS;HAVE_GL_H;HAVE_GLU_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeaderFile />
+      <PrecompiledHeaderOutputFile />
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <ControlFlowGuard>false</ControlFlowGuard>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <CustomBuildStep>
+      <Command>cd $(SolutionDir)..\pathfinder
+$(OutputPath)reswrap.exe -h -o icons.h  bigicons.bmp blocks_gif.gif bookclr_gif.gif bookdel_gif.gif bookmrk_gif.gif booknxt_gif.gif bookprv_gif.gif bookset_gif.gif closepanel.gif config_gif.gif copy_gif.gif cut_gif.gif delete_gif.gif desktop.bmp details.bmp dirup_gif.gif enter.gif file_gif.gif filehidden.gif fileshown.gif foldernew_gif.gif foxbig.gif foxmini.gif goback_gif.gif godown_gif.gif goforw_gif.gif gotodir.bmp goup_gif.gif home_gif.gif hosts.bmp iconpath.gif link_gif.gif location.gif maphost.bmp miscellaneous_gif.gif move_gif.gif newfolder.bmp paste.gif pattern_gif.gif property_gif.gif quit_gif.gif rename_gif.gif rotateleft.gif rotateright.gif run_bmp.bmp search.gif setdir.gif smallicons.bmp sorting.bmp unmaphost.bmp warningicon_gif.gif work.gif work_gif.gif 
+$(OutputPath)reswrap.exe -i icons.h -o icons.cpp bigicons.bmp blocks_gif.gif bookclr_gif.gif bookdel_gif.gif bookmrk_gif.gif booknxt_gif.gif bookprv_gif.gif bookset_gif.gif closepanel.gif config_gif.gif copy_gif.gif cut_gif.gif delete_gif.gif desktop.bmp details.bmp dirup_gif.gif enter.gif file_gif.gif filehidden.gif fileshown.gif foldernew_gif.gif foxbig.gif foxmini.gif goback_gif.gif godown_gif.gif goforw_gif.gif gotodir.bmp goup_gif.gif home_gif.gif hosts.bmp iconpath.gif link_gif.gif location.gif maphost.bmp miscellaneous_gif.gif move_gif.gif newfolder.bmp paste.gif pattern_gif.gif property_gif.gif quit_gif.gif rename_gif.gif rotateleft.gif rotateright.gif run_bmp.bmp search.gif setdir.gif smallicons.bmp sorting.bmp unmaphost.bmp warningicon_gif.gif work.gif work_gif.gif 
+</Command>
+      <Message>Reswrapping icons...</Message>
+      <Inputs>bigicons.bmp;blocks_gif.gif;bookclr_gif.gif;bookdel_gif.gif;bookmrk_gif.gif;booknxt_gif.gif;bookprv_gif.gif;bookset_gif.gif;closepanel.gif;config_gif.gif;copy_gif.gif;cut_gif.gif;delete_gif.gif;desktop.bmp;details.bmp;dirup_gif.gif;enter.gif;file_gif.gif;filehidden.gif;fileshown.gif;foldernew_gif.gif;foxbig.gif;foxmini.gif;goback_gif.gif;godown_gif.gif;goforw_gif.gif;gotodir.bmp;goup_gif.gif;home_gif.gif;hosts.bmp;iconpath.gif;link_gif.gif;location.gif;maphost.bmp;miscellaneous_gif.gif;move_gif.gif;newfolder.bmp;paste.gif;pattern_gif.gif;property_gif.gif;quit_gif.gif;rename_gif.gif;rotateleft.gif;rotateright.gif;run_bmp.bmp;search.gif;setdir.gif;smallicons.bmp;sorting.bmp;unmaphost.bmp;warningicon_gif.gif;work.gif;work_gif.gif</Inputs>
+      <Outputs>icons.h;icons.cpp</Outputs>
+    </CustomBuildStep>
+    <Link>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;uuid.lib;odbc32.lib;odbccp32.lib;Imm32.lib;Msimg32.lib;Ws2_32.lib;opengl32.lib;glu32.lib;foxlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>
+      </SDLCheck>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <PreprocessorDefinitions>UNICODE;WIN32;NDEBUG;_CRT_SECURE_NO_WARNINGS;BUILD_WINDOWS;FOXDLL_EXPORTS;HAVE_GL_H;HAVE_GLU_H</PreprocessorDefinitions>
+      <PrecompiledHeaderFile />
+      <PrecompiledHeaderOutputFile />
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <StringPooling>true</StringPooling>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <ControlFlowGuard>false</ControlFlowGuard>
+      <OmitFramePointers>true</OmitFramePointers>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;uuid.lib;odbc32.lib;odbccp32.lib;Imm32.lib;Msimg32.lib;Ws2_32.lib;opengl32.lib;glu32.lib;foxlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+    </Link>
+    <CustomBuildStep>
+      <Inputs>bigicons.bmp;blocks_gif.gif;bookclr_gif.gif;bookdel_gif.gif;bookmrk_gif.gif;booknxt_gif.gif;bookprv_gif.gif;bookset_gif.gif;closepanel.gif;config_gif.gif;copy_gif.gif;cut_gif.gif;delete_gif.gif;desktop.bmp;details.bmp;dirup_gif.gif;enter.gif;file_gif.gif;filehidden.gif;fileshown.gif;foldernew_gif.gif;foxbig.gif;foxmini.gif;goback_gif.gif;godown_gif.gif;goforw_gif.gif;gotodir.bmp;goup_gif.gif;home_gif.gif;hosts.bmp;iconpath.gif;link_gif.gif;location.gif;maphost.bmp;miscellaneous_gif.gif;move_gif.gif;newfolder.bmp;paste.gif;pattern_gif.gif;property_gif.gif;quit_gif.gif;rename_gif.gif;rotateleft.gif;rotateright.gif;run_bmp.bmp;search.gif;setdir.gif;smallicons.bmp;sorting.bmp;unmaphost.bmp;warningicon_gif.gif;work.gif;work_gif.gif</Inputs>
+      <Message>Reswrapping icons...</Message>
+      <Command>cd $(SolutionDir)..\pathfinder
+$(OutputPath)reswrap.exe -h -o icons.h  bigicons.bmp blocks_gif.gif bookclr_gif.gif bookdel_gif.gif bookmrk_gif.gif booknxt_gif.gif bookprv_gif.gif bookset_gif.gif closepanel.gif config_gif.gif copy_gif.gif cut_gif.gif delete_gif.gif desktop.bmp details.bmp dirup_gif.gif enter.gif file_gif.gif filehidden.gif fileshown.gif foldernew_gif.gif foxbig.gif foxmini.gif goback_gif.gif godown_gif.gif goforw_gif.gif gotodir.bmp goup_gif.gif home_gif.gif hosts.bmp iconpath.gif link_gif.gif location.gif maphost.bmp miscellaneous_gif.gif move_gif.gif newfolder.bmp paste.gif pattern_gif.gif property_gif.gif quit_gif.gif rename_gif.gif rotateleft.gif rotateright.gif run_bmp.bmp search.gif setdir.gif smallicons.bmp sorting.bmp unmaphost.bmp warningicon_gif.gif work.gif work_gif.gif 
+$(OutputPath)reswrap.exe -i icons.h -o icons.cpp bigicons.bmp blocks_gif.gif bookclr_gif.gif bookdel_gif.gif bookmrk_gif.gif booknxt_gif.gif bookprv_gif.gif bookset_gif.gif closepanel.gif config_gif.gif copy_gif.gif cut_gif.gif delete_gif.gif desktop.bmp details.bmp dirup_gif.gif enter.gif file_gif.gif filehidden.gif fileshown.gif foldernew_gif.gif foxbig.gif foxmini.gif goback_gif.gif godown_gif.gif goforw_gif.gif gotodir.bmp goup_gif.gif home_gif.gif hosts.bmp iconpath.gif link_gif.gif location.gif maphost.bmp miscellaneous_gif.gif move_gif.gif newfolder.bmp paste.gif pattern_gif.gif property_gif.gif quit_gif.gif rename_gif.gif rotateleft.gif rotateright.gif run_bmp.bmp search.gif setdir.gif smallicons.bmp sorting.bmp unmaphost.bmp warningicon_gif.gif work.gif work_gif.gif 
+</Command>
+      <Outputs>icons.h;icons.cpp</Outputs>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\pathfinder\CopyDialog.cpp" />
+    <ClCompile Include="..\..\pathfinder\icons.cpp" />
+    <ClCompile Include="..\..\pathfinder\PathFinder.cpp" />
+    <ClCompile Include="..\..\pathfinder\Preferences.cpp" />
+    <ClCompile Include="..\..\pathfinder\PropertyDialog.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\pathfinder\CopyDialog.h" />
+    <ClInclude Include="..\..\pathfinder\icons.h" />
+    <ClInclude Include="..\..\pathfinder\PathFinder.h" />
+    <ClInclude Include="..\..\pathfinder\Preferences.h" />
+    <ClInclude Include="..\..\pathfinder\PropertyDialog.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\pathfinder\bigicons.bmp" />
+    <Image Include="..\..\pathfinder\blocks_gif.gif" />
+    <Image Include="..\..\pathfinder\bookclr_gif.gif" />
+    <Image Include="..\..\pathfinder\bookdel_gif.gif" />
+    <Image Include="..\..\pathfinder\bookmrk_gif.gif" />
+    <Image Include="..\..\pathfinder\booknxt_gif.gif" />
+    <Image Include="..\..\pathfinder\bookprv_gif.gif" />
+    <Image Include="..\..\pathfinder\bookset_gif.gif" />
+    <Image Include="..\..\pathfinder\closepanel.gif" />
+    <Image Include="..\..\pathfinder\config_gif.gif" />
+    <Image Include="..\..\pathfinder\copy.gif" />
+    <Image Include="..\..\pathfinder\copyit.gif" />
+    <Image Include="..\..\pathfinder\copy_gif.gif" />
+    <Image Include="..\..\pathfinder\cut.gif" />
+    <Image Include="..\..\pathfinder\cut_gif.gif" />
+    <Image Include="..\..\pathfinder\delete_gif.gif" />
+    <Image Include="..\..\pathfinder\desktop.bmp" />
+    <Image Include="..\..\pathfinder\details.bmp" />
+    <Image Include="..\..\pathfinder\dirup2.gif" />
+    <Image Include="..\..\pathfinder\dirup2_gif.gif" />
+    <Image Include="..\..\pathfinder\dirup_gif.gif" />
+    <Image Include="..\..\pathfinder\enter.gif" />
+    <Image Include="..\..\pathfinder\execute.bmp" />
+    <Image Include="..\..\pathfinder\filehidden.gif" />
+    <Image Include="..\..\pathfinder\fileshown.gif" />
+    <Image Include="..\..\pathfinder\file_gif.gif" />
+    <Image Include="..\..\pathfinder\foldernew.gif" />
+    <Image Include="..\..\pathfinder\foldernew_gif.gif" />
+    <Image Include="..\..\pathfinder\foxbig.gif" />
+    <Image Include="..\..\pathfinder\foxmini.gif" />
+    <Image Include="..\..\pathfinder\goback_gif.gif" />
+    <Image Include="..\..\pathfinder\godown_gif.gif" />
+    <Image Include="..\..\pathfinder\goforw_gif.gif" />
+    <Image Include="..\..\pathfinder\gotodir.bmp" />
+    <Image Include="..\..\pathfinder\goup_gif.gif" />
+    <Image Include="..\..\pathfinder\home_gif.gif" />
+    <Image Include="..\..\pathfinder\hosts.bmp" />
+    <Image Include="..\..\pathfinder\iconpath.gif" />
+    <Image Include="..\..\pathfinder\linkit.bmp" />
+    <Image Include="..\..\pathfinder\link_gif.gif" />
+    <Image Include="..\..\pathfinder\location.gif" />
+    <Image Include="..\..\pathfinder\maphost.bmp" />
+    <Image Include="..\..\pathfinder\miscellaneous_gif.gif" />
+    <Image Include="..\..\pathfinder\moveit.gif" />
+    <Image Include="..\..\pathfinder\move_gif.gif" />
+    <Image Include="..\..\pathfinder\newfolder.bmp" />
+    <Image Include="..\..\pathfinder\paste.gif" />
+    <Image Include="..\..\pathfinder\pattern_gif.gif" />
+    <Image Include="..\..\pathfinder\properties.bmp" />
+    <Image Include="..\..\pathfinder\property_gif.gif" />
+    <Image Include="..\..\pathfinder\quit_gif.gif" />
+    <Image Include="..\..\pathfinder\renameit.gif" />
+    <Image Include="..\..\pathfinder\rename_gif.gif" />
+    <Image Include="..\..\pathfinder\rotateleft.gif" />
+    <Image Include="..\..\pathfinder\rotateright.gif" />
+    <Image Include="..\..\pathfinder\run_bmp.bmp" />
+    <Image Include="..\..\pathfinder\search.gif" />
+    <Image Include="..\..\pathfinder\setdir.gif" />
+    <Image Include="..\..\pathfinder\smallicons.bmp" />
+    <Image Include="..\..\pathfinder\sorting.bmp" />
+    <Image Include="..\..\pathfinder\unmaphost.bmp" />
+    <Image Include="..\..\pathfinder\warningicon_gif.gif" />
+    <Image Include="..\..\pathfinder\work.gif" />
+    <Image Include="..\..\pathfinder\work_gif.gif" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
