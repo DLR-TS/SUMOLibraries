@@ -172,6 +172,9 @@
       <OutputFile>.\Release\reswrap.exe</OutputFile>
       <AdditionalDependencies>comctl32.lib;wsock32.lib;mpr.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
