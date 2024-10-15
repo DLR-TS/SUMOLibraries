@@ -1,0 +1,10 @@
+prefix=C:/SUMOLibraries/3rdPartyLibs/freeglut-3.6.0
+libdir=C:/SUMOLibraries/3rdPartyLibs/freeglut-3.6.0/lib
+includedir=${prefix}/include
+
+Name: glut
+Description: A freely licensed and improved alternative to the GLUT library
+Version: 3.6.0
+Libs: -L${libdir} -lfreeglut
+Libs.private: -lopengl32 -lwinmm -lgdi32
+Cflags: -I${includedir} -DFREEGLUT_STATIC
