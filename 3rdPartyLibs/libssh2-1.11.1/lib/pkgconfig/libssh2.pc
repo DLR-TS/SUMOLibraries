@@ -1,0 +1,21 @@
+###########################################################################
+# libssh2 installation details
+#
+# Copyright (C) The libssh2 project and its contributors.
+# SPDX-License-Identifier: BSD-3-Clause
+###########################################################################
+
+prefix=C:/SUMOLibraries/3rdPartyLibs/libssh2-1.11.1
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libssh2
+URL: https://libssh2.org/
+Description: Library for SSH-based communication
+Version: 1.11.1
+Requires: 
+Requires.private: zlib
+Libs: -L${libdir} -lssh2 
+Libs.private: -lws2_32 -lcrypt32 -lbcrypt -loptimized C:/SUMOLibraries/3rdPartyLibs/zlib-1.3.1/lib/zlib.lib -ldebug C:/SUMOLibraries/3rdPartyLibs/zlib-1.3.1/lib/zlibd.lib
+Cflags: -I${includedir}
