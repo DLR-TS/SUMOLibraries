@@ -1,0 +1,10 @@
+prefix=C:/SUMOLibraries/3rdPartyLibs/jpeg-9f
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libjpeg
+Description: Reads and writes JPEG files
+Version: 9.6.0
+Libs: -L${libdir} -ljpeg
+Cflags: -I${includedir}
