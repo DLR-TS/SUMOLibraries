@@ -1,0 +1,13 @@
+prefix=C:/SUMOLibraries/3rdPartyLibs/zlib-1.3.1
+exec_prefix=C:/SUMOLibraries/3rdPartyLibs/zlib-1.3.1
+libdir=C:/SUMOLibraries/3rdPartyLibs/zlib-1.3.1/lib
+sharedlibdir=C:/SUMOLibraries/3rdPartyLibs/zlib-1.3.1/lib
+includedir=C:/SUMOLibraries/3rdPartyLibs/zlib-1.3.1/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.3.1
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
