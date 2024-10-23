@@ -1,0 +1,11 @@
+prefix=C:\SUMOLibraries/xerces-c-3.3.0
+exec_prefix=C:\SUMOLibraries/xerces-c-3.3.0
+libdir=C:\SUMOLibraries/xerces-c-3.3.0/lib
+includedir=C:\SUMOLibraries/xerces-c-3.3.0/include
+
+Name: Xerces-C++
+Description: Validating XML parser library for C++
+Version: 3.3.0
+Libs: -LC:\SUMOLibraries/xerces-c-3.3.0/lib -lxerces-c
+Libs.private: 
+Cflags: -IC:\SUMOLibraries/xerces-c-3.3.0/include
