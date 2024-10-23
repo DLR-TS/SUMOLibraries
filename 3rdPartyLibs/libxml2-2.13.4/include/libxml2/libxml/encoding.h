@@ -25,7 +25,7 @@
 #include <libxml/xmlversion.h>
 
 #ifdef LIBXML_ICONV_ENABLED
-#include <iconv.h>
+#include "..\..\..\3rdPartyLibs\libiconv-1.17\include\iconv.h"
 #endif
 
 #ifdef __cplusplus
