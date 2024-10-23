@@ -1,4 +1,0 @@
-SET(TARGET_SRC osgfont.cpp)
-SET(TARGET_ADDED_LIBRARIES osgText)
-
-SETUP_EXAMPLE(osgfont)
