@@ -288,7 +288,7 @@
 #endif
 
 #ifndef FMT_UNICODE
-#  define FMT_UNICODE 1
+#  define FMT_UNICODE 0
 #endif
 
 // Check if rtti is available.
