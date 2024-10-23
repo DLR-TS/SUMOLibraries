@@ -1,0 +1,266 @@
+.\" Man page generated from reStructuredText.
+.
+.
+.nr rst2man-indent-level 0
+.
+.de1 rstReportMargin
+\\$1 \\n[an-margin]
+level \\n[rst2man-indent-level]
+level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
+-
+\\n[rst2man-indent0]
+\\n[rst2man-indent1]
+\\n[rst2man-indent2]
+..
+.de1 INDENT
+.\" .rstReportMargin pre:
+. RS \\$1
+. nr rst2man-indent\\n[rst2man-indent-level] \\n[an-margin]
+. nr rst2man-indent-level +1
+.\" .rstReportMargin post:
+..
+.de UNINDENT
+. RE
+.\" indent \\n[an-margin]
+.\" old: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.nr rst2man-indent-level -1
+.\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.in \\n[rst2man-indent\\n[rst2man-indent-level]]u
+..
+.TH "GDALMDIMINFO" "1" "Oct 07, 2024" "" "GDAL"
+.SH NAME
+gdalmdiminfo \- Reports structure and content of a multidimensional dataset
+.SH SYNOPSIS
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+gdalmdiminfo [\-\-help] [\-\-help\-general]
+             [\-oo <NAME>=<VALUE>]... [\-arrayoption <NAME>=<VALUE>]...
+             [\-detailed] [\-nopretty] [\-array <array_name>] [\-limit <number>]
+             [\-stats] [\-if <format>]... <datasetname>
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.SH DESCRIPTION
+.sp
+\fBgdalmdiminfo\fP program lists various information about a GDAL supported
+multidimensional raster dataset as JSON output. It follows the
+following \fI\%JSON schema\fP
+.sp
+The following command line parameters can appear in any order
+.INDENT 0.0
+.TP
+.B \-\-help
+Show this help message and exit
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-help\-general
+Gives a brief usage message for the generic GDAL commandline options and exit.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-detailed
+Most verbose output. Report attribute data types and array values.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-nopretty
+Outputs on a single line without any indentation.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-array <array_name>
+Name of the array used to restrict the output to the specified array.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-limit <number>
+Number of values in each dimension that is used to limit the display of
+array values. By default, unlimited. Only taken into account if used with
+\-detailed.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-oo <NAME>=<VALUE>
+Dataset open option (format specific).
+This option may be used several times.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-arrayoption <NAME>=<VALUE>
+Option passed to \fI\%GDALGroup::GetMDArrayNames()\fP to filter reported
+arrays. Such option is format specific. Consult driver documentation.
+This option may be used several times.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-stats
+Read and display image statistics. Force computation if no
+statistics are stored in an image.
+.sp
+New in version 3.2.
+
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-if <format>
+Format/driver name to be attempted to open the input file(s). It is generally
+not necessary to specify it, but it can be used to skip automatic driver
+detection, when it fails to select the appropriate driver.
+This option can be repeated several times to specify several candidate drivers.
+Note that it does not force those drivers to open the dataset. In particular,
+some drivers have requirements on file extensions.
+.sp
+New in version 3.2.
+
+.UNINDENT
+.SH C API
+.sp
+This utility is also callable from C with \fI\%GDALMultiDimInfo()\fP\&.
+.SH EXAMPLES
+.INDENT 0.0
+.IP \(bu 2
+Display general structure1
+.UNINDENT
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+$ gdalmdiminfo netcdf\-4d.nc
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+{
+  \(dqtype\(dq: \(dqgroup\(dq,
+  \(dqname\(dq: \(dq/\(dq,
+  \(dqattributes\(dq: {
+    \(dqConventions\(dq: \(dqCF\-1.5\(dq
+  },
+  \(dqdimensions\(dq: [
+    {
+      \(dqname\(dq: \(dqlevelist\(dq,
+      \(dqfull_name\(dq: \(dq/levelist\(dq,
+      \(dqsize\(dq: 2,
+      \(dqtype\(dq: \(dqVERTICAL\(dq,
+      \(dqindexing_variable\(dq: \(dq/levelist\(dq
+    },
+    {
+      \(dqname\(dq: \(dqlongitude\(dq,
+      \(dqfull_name\(dq: \(dq/longitude\(dq,
+      \(dqsize\(dq: 10,
+      \(dqtype\(dq: \(dqHORIZONTAL_X\(dq,
+      \(dqdirection\(dq: \(dqEAST\(dq,
+      \(dqindexing_variable\(dq: \(dq/longitude\(dq
+    },
+    {
+      \(dqname\(dq: \(dqlatitude\(dq,
+      \(dqfull_name\(dq: \(dq/latitude\(dq,
+      \(dqsize\(dq: 10,
+      \(dqtype\(dq: \(dqHORIZONTAL_Y\(dq,
+      \(dqdirection\(dq: \(dqNORTH\(dq,
+      \(dqindexing_variable\(dq: \(dq/latitude\(dq
+    },
+    {
+      \(dqname\(dq: \(dqtime\(dq,
+      \(dqfull_name\(dq: \(dq/time\(dq,
+        \(dqsize\(dq: 4,
+      \(dqtype\(dq: \(dqTEMPORAL\(dq,
+      \(dqindexing_variable\(dq: \(dq/time\(dq
+      }
+  ],
+  \(dqarrays\(dq: {
+    \(dqlevelist\(dq: {
+      \(dqdatatype\(dq: \(dqInt32\(dq,
+      \(dqdimensions\(dq: [
+          \(dq/levelist\(dq
+        ],
+      \(dqattributes\(dq: {
+        \(dqlong_name\(dq: \(dqpressure_level\(dq
+      },
+      \(dqunit\(dq: \(dqmillibars\(dq
+    },
+    \(dqlongitude\(dq: {
+      \(dqdatatype\(dq: \(dqFloat32\(dq,
+      \(dqdimensions\(dq: [
+        \(dq/longitude\(dq
+      ],
+      \(dqattributes\(dq: {
+        \(dqstandard_name\(dq: \(dqlongitude\(dq,
+        \(dqlong_name\(dq: \(dqlongitude\(dq,
+        \(dqaxis\(dq: \(dqX\(dq
+      },
+      \(dqunit\(dq: \(dqdegrees_east\(dq
+    },
+    \(dqlatitude\(dq: {
+      \(dqdatatype\(dq: \(dqFloat32\(dq,
+      \(dqdimensions\(dq: [
+        \(dq/latitude\(dq
+      ],
+      \(dqattributes\(dq: {
+        \(dqstandard_name\(dq: \(dqlatitude\(dq,
+        \(dqlong_name\(dq: \(dqlatitude\(dq,
+        \(dqaxis\(dq: \(dqY\(dq
+      },
+      \(dqunit\(dq: \(dqdegrees_north\(dq
+    },
+    \(dqtime\(dq: {
+      \(dqdatatype\(dq: \(dqFloat64\(dq,
+      \(dqdimensions\(dq: [
+        \(dq/time\(dq
+      ],
+      \(dqattributes\(dq: {
+        \(dqstandard_name\(dq: \(dqtime\(dq,
+        \(dqcalendar\(dq: \(dqstandard\(dq
+      },
+      \(dqunit\(dq: \(dqhours since 1900\-01\-01 00:00:00\(dq
+    },
+    \(dqt\(dq: {
+      \(dqdatatype\(dq: \(dqInt32\(dq,
+      \(dqdimensions\(dq: [
+        \(dq/time\(dq,
+        \(dq/levelist\(dq,
+        \(dq/latitude\(dq,
+        \(dq/longitude\(dq
+      ],
+      \(dqnodata_value\(dq: \-32767
+    }
+  },
+  \(dqstructural_info\(dq: {
+    \(dqNC_FORMAT\(dq: \(dqCLASSIC\(dq
+  }
+}
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.IP \(bu 2
+Display detailed information about a given array
+.UNINDENT
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+$ gdalmdiminfo netcdf\-4d.nc \-array t \-detailed \-limit 3
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.SH AUTHOR
+Even Rouault <even.rouault@spatialys.com>
+.SH COPYRIGHT
+1998-2024
+.\" Generated by docutils manpage writer.
+.

@@ -1,0 +1,17 @@
+CONFIG_VERSION=3.9.3
+CONFIG_INST_PREFIX=C:/SUMOLibraries/gdal-3.9.3
+CONFIG_INST_LIBS=-LIBPATH:C:/SUMOLibraries/gdal-3.9.3/lib gdal
+CONFIG_INST_CFLAGS=-IC:/SUMOLibraries/gdal-3.9.3/include
+CONFIG_INST_DATA=C:/SUMOLibraries/gdal-3.9.3/share/gdal
+prefix=${CONFIG_INST_PREFIX}
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${exec_prefix}/include
+datadir=${CONFIG_INST_DATA}
+
+Name: libgdal
+Description: Geospatial Data Abstraction Library
+Version: ${CONFIG_VERSION}
+Libs: ${CONFIG_INST_LIBS}
+Libs.private: C:/SUMOLibraries/3rdPartyLibs/libiconv-1.17/lib/libiconv.lib C:/SUMOLibraries/3rdPartyLibs/libiconv-1.17/lib/libcharset.lib C:/SUMOLibraries/3rdPartyLibs/openssl-3.3.2/lib/libcrypto.lib C:/SUMOLibraries/3rdPartyLibs/openssl-3.3.2/lib/libssl.lib crypt32 wbemuuid ws2_32 C:/SUMOLibraries/3rdPartyLibs/zlib-1.3.1/lib/zlib.lib C:/SUMOLibraries/libspatialite-5.1.0/lib/spatialite_i.lib C:/SUMOLibraries/3rdPartyLibs/sqlite-3.46.1/lib/sqlite3.lib C:/SUMOLibraries/xerces-c-3.3.0/lib/xerces-c_3.lib legacy_stdio_definitions.lib odbccp32.lib C:/SUMOLibraries/3rdPartyLibs/freexl-2.0.0/lib/freexl_i.lib C:/SUMOLibraries/3rdPartyLibs/libexpat-2.6.3/lib/libexpatd.lib C:/SUMOLibraries/3rdPartyLibs/libxml2-2.13.4/lib/libxml2.lib C:/SUMOLibraries/3rdPartyLibs/geos-3.13.0/lib/geos_c.lib C:/SUMOLibraries/3rdPartyLibs/curl-8.10.1/lib/libcurl-d_imp.lib psapi C:/SUMOLibraries/proj-9.5.0/lib/proj_d.lib
+Cflags: ${CONFIG_INST_CFLAGS}
