@@ -52,7 +52,7 @@
 #endif
 #endif
 
-#include "..\build\port\cpl_config.h"
+#include "cpl_config.h"
 
 /* ==================================================================== */
 /*      A few sanity checks, mainly to detect problems that sometimes   */
