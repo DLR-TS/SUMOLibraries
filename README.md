@@ -7,7 +7,7 @@ A repository with current SUMO Libraries used in Windows compatibles with Visual
 * apache-maven-3.8.5
 * eigen-3.4.0
 * fox-1.6.57
-* gdal-3.4.0
+* gdal-3.9.3
 * gettext-0.21
 * gl2ps-1.4.2
 * googletest-1.11.0
