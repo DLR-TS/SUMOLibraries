@@ -641,7 +641,7 @@ typedef tagMSG                 FXRawEvent;
 #ifndef FLOAT_MATH_FUNCTIONS
 #ifndef __USE_ISOC99
 #ifndef __APPLE__
-#define fabsf(x)    ((float)fabs((double)(x)))
+//#define fabsf(x)    ((float)fabs((double)(x)))
 #define ceilf(x)    ((float)ceil((double)(x)))
 #define floorf(x)   ((float)floor((double)(x)))
 #define fmodf(x,y)  ((float)fmod((double)(x),(double)(y)))

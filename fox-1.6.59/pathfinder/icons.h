@@ -3,17 +3,8 @@
 /* created by reswrap from file bigicons.bmp */
 extern const unsigned char bigicons[];
 
-/* created by reswrap from file closepanel.gif */
-extern const unsigned char closepanel[];
-
-/* created by reswrap from file clrbook.gif */
-extern const unsigned char clrbook[];
-
 /* created by reswrap from file copy.bmp */
 extern const unsigned char copy[];
-
-/* created by reswrap from file copyit.gif */
-extern const unsigned char copyit[];
 
 /* created by reswrap from file cut.bmp */
 extern const unsigned char cut[];
@@ -30,6 +21,42 @@ extern const unsigned char details[];
 /* created by reswrap from file dirup.bmp */
 extern const unsigned char dirup[];
 
+/* created by reswrap from file goback.bmp */
+extern const unsigned char goback[];
+
+/* created by reswrap from file goforw.bmp */
+extern const unsigned char goforw[];
+
+/* created by reswrap from file gotodir.bmp */
+extern const unsigned char gotodir[];
+
+/* created by reswrap from file hosts.bmp */
+extern const unsigned char hosts[];
+
+/* created by reswrap from file maphost.bmp */
+extern const unsigned char maphost[];
+
+/* created by reswrap from file paste.bmp */
+extern const unsigned char paste[];
+
+/* created by reswrap from file properties.bmp */
+extern const unsigned char properties[];
+
+/* created by reswrap from file smallicons.bmp */
+extern const unsigned char smallicons[];
+
+/* created by reswrap from file unmaphost.bmp */
+extern const unsigned char unmaphost[];
+
+/* created by reswrap from file closepanel.gif */
+extern const unsigned char closepanel[];
+
+/* created by reswrap from file clrbook.gif */
+extern const unsigned char clrbook[];
+
+/* created by reswrap from file copyit.gif */
+extern const unsigned char copyit[];
+
 /* created by reswrap from file enter.gif */
 extern const unsigned char enter[];
 
@@ -42,20 +69,8 @@ extern const unsigned char foxbig[];
 /* created by reswrap from file foxmini.gif */
 extern const unsigned char foxmini[];
 
-/* created by reswrap from file goback.bmp */
-extern const unsigned char goback[];
-
-/* created by reswrap from file goforw.bmp */
-extern const unsigned char goforw[];
-
-/* created by reswrap from file gotodir.bmp */
-extern const unsigned char gotodir[];
-
 /* created by reswrap from file home.gif */
 extern const unsigned char home[];
-
-/* created by reswrap from file hosts.bmp */
-extern const unsigned char hosts[];
 
 /* created by reswrap from file iconpath.gif */
 extern const unsigned char iconpath[];
@@ -66,23 +81,14 @@ extern const unsigned char linkit[];
 /* created by reswrap from file location.gif */
 extern const unsigned char location[];
 
-/* created by reswrap from file maphost.bmp */
-extern const unsigned char maphost[];
-
 /* created by reswrap from file mimetype.gif */
 extern const unsigned char mimetype[];
 
 /* created by reswrap from file moveit.gif */
 extern const unsigned char moveit[];
 
-/* created by reswrap from file paste.bmp */
-extern const unsigned char paste[];
-
 /* created by reswrap from file pattern_gif.gif */
 extern const unsigned char pattern_gif[];
-
-/* created by reswrap from file properties.bmp */
-extern const unsigned char properties[];
 
 /* created by reswrap from file quit_gif.gif */
 extern const unsigned char quit_gif[];
@@ -101,12 +107,6 @@ extern const unsigned char setbook[];
 
 /* created by reswrap from file setdir.gif */
 extern const unsigned char setdir[];
-
-/* created by reswrap from file smallicons.bmp */
-extern const unsigned char smallicons[];
-
-/* created by reswrap from file unmaphost.bmp */
-extern const unsigned char unmaphost[];
 
 /* created by reswrap from file work.gif */
 extern const unsigned char work[];

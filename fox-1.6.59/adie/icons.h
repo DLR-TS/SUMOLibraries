@@ -33,9 +33,6 @@ extern const unsigned char cut_gif[];
 /* created by reswrap from file delete_gif.gif */
 extern const unsigned char delete_gif[];
 
-/* created by reswrap from file delimit_gif.gif */
-extern const unsigned char delimit_gif[];
-
 /* created by reswrap from file fonts_gif.gif */
 extern const unsigned char fonts_gif[];
 
@@ -60,11 +57,11 @@ extern const unsigned char open_gif[];
 /* created by reswrap from file palette_gif.gif */
 extern const unsigned char palette_gif[];
 
-/* created by reswrap from file pattern_gif.gif */
-extern const unsigned char pattern_gif[];
-
 /* created by reswrap from file paste_gif.gif */
 extern const unsigned char paste_gif[];
+
+/* created by reswrap from file pattern_gif.gif */
+extern const unsigned char pattern_gif[];
 
 /* created by reswrap from file print_gif.gif */
 extern const unsigned char print_gif[];
@@ -78,14 +75,14 @@ extern const unsigned char redo_gif[];
 /* created by reswrap from file reload_gif.gif */
 extern const unsigned char reload_gif[];
 
-/* created by reswrap from file saveall_gif.gif */
-extern const unsigned char saveall_gif[];
+/* created by reswrap from file save_gif.gif */
+extern const unsigned char save_gif[];
 
 /* created by reswrap from file saveas_gif.gif */
 extern const unsigned char saveas_gif[];
 
-/* created by reswrap from file save_gif.gif */
-extern const unsigned char save_gif[];
+/* created by reswrap from file saveall_gif.gif */
+extern const unsigned char saveall_gif[];
 
 /* created by reswrap from file search_gif.gif */
 extern const unsigned char search_gif[];
