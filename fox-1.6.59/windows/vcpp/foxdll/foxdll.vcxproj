@@ -163,7 +163,7 @@
       <SubSystem>Console</SubSystem>
       <OutputFile>..\..\..\bin\fox-16d.dll</OutputFile>
       <ImportLibrary>.\..\..\..\lib\fox-16d.lib</ImportLibrary>
-      <AdditionalDependencies>opengl32.lib;glu32.lib;comctl32.lib;wsock32.lib;D:\SUMOLibraries\3rdPartyLibs\tiff-4.7.0\lib\tiffd.lib;D:\SUMOLibraries\3rdPartyLibs\libpng-1.6.44\lib\libpng16d.lib;D:\SUMOLibraries\3rdPartyLibs\jpeg-9f\lib\jpeg.lib;D:\SUMOLibraries\3rdPartyLibs\bzip2-1.1.0\lib\bz2.lib;D:\SUMOLibraries\3rdPartyLibs\zlib-1.3.1\lib\zlibd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;comctl32.lib;wsock32.lib;D:\SUMOLibraries\fox-1.6.59\lib\fox-16d.lib;D:\SUMOLibraries\3rdPartyLibs\tiff-4.7.0\lib\tiffd.lib;D:\SUMOLibraries\3rdPartyLibs\libpng-1.6.44\lib\libpng16d.lib;D:\SUMOLibraries\3rdPartyLibs\jpeg-9f\lib\jpeg.lib;D:\SUMOLibraries\3rdPartyLibs\bzip2-1.1.0\lib\bz2.lib;D:\SUMOLibraries\3rdPartyLibs\zlib-1.3.1\lib\zlibd.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ProgramDatabaseFile>.\..\..\..\bin\fox-16d.pdb</ProgramDatabaseFile>
     </Link>
   </ItemDefinitionGroup>
@@ -249,7 +249,7 @@
       <SubSystem>Console</SubSystem>
       <OutputFile>..\..\..\bin\fox-16.dll</OutputFile>
       <ImportLibrary>.\..\..\..\lib\fox-16.lib</ImportLibrary>
-      <AdditionalDependencies>opengl32.lib;glu32.lib;comctl32.lib;wsock32.lib;D:\SUMOLibraries\3rdPartyLibs\tiff-4.7.0\lib\tiff.lib;D:\SUMOLibraries\3rdPartyLibs\libpng-1.6.44\lib\libpng16.lib;D:\SUMOLibraries\3rdPartyLibs\jpeg-9f\lib\jpeg.lib;D:\SUMOLibraries\3rdPartyLibs\bzip2-1.1.0\lib\bz2.lib;D:\SUMOLibraries\3rdPartyLibs\zlib-1.3.1\lib\zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;comctl32.lib;wsock32.lib;D:\SUMOLibraries\fox-1.6.59\lib\fox-16.lib;D:\SUMOLibraries\3rdPartyLibs\tiff-4.7.0\lib\tiff.lib;D:\SUMOLibraries\3rdPartyLibs\libpng-1.6.44\lib\libpng16.lib;D:\SUMOLibraries\3rdPartyLibs\jpeg-9f\lib\jpeg.lib;D:\SUMOLibraries\3rdPartyLibs\bzip2-1.1.0\lib\bz2.lib;D:\SUMOLibraries\3rdPartyLibs\zlib-1.3.1\lib\zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <GenerateDebugInformation>false</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
