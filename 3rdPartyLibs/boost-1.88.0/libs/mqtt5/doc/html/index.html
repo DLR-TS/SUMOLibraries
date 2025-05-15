@@ -1,0 +1,109 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Chapter 1. Boost.MQTT5: a C++17 MQTT client</title>
+<link rel="stylesheet" href="../../../../doc/src/boostbook.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="index.html" title="Chapter 1. Boost.MQTT5: a C++17 MQTT client">
+<link rel="next" href="mqtt5/intro.html" title="Introduction">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table cellpadding="2" width="100%"><tr>
+<td valign="top"><img alt="Boost C++ Libraries" width="277" height="86" src="../../../../boost.png"></td>
+<td align="center"><a href="../../../../index.html">Home</a></td>
+<td align="center"><a href="../../../../libs/libraries.htm">Libraries</a></td>
+<td align="center"><a href="http://www.boost.org/users/people.html">People</a></td>
+<td align="center"><a href="http://www.boost.org/users/faq.html">FAQ</a></td>
+<td align="center"><a href="../../../../more/index.htm">More</a></td>
+</tr></table>
+<hr>
+<div class="spirit-nav"><a accesskey="n" href="mqtt5/intro.html"><img src="../../../../doc/src/images/next.png" alt="Next"></a></div>
+<div class="chapter">
+<div class="titlepage"><div>
+<div><h2 class="title">
+<a name="mqtt5"></a>Chapter 1. Boost.MQTT5: a C++17 MQTT client</h2></div>
+<div><div class="author"><h3 class="author">
+<span class="firstname">Ivica</span> <span class="surname">Siladić</span>
+</h3></div></div>
+<div><div class="author"><h3 class="author">
+<span class="firstname">Bruno</span> <span class="surname">Iljazović</span>
+</h3></div></div>
+<div><div class="author"><h3 class="author">
+<span class="firstname">Korina</span> <span class="surname">Šimičević</span>
+</h3></div></div>
+<div><p class="copyright">Copyright © 2023-2025 Mireo</p></div>
+<div><div class="legalnotice">
+<a name="mqtt5.legal"></a><p>
+        Distributed under the Boost Software License, Version 1.0. (See accompanying
+        file LICENSE_1_0.txt or copy at <a href="http://www.boost.org/LICENSE_1_0.txt" target="_top">http://www.boost.org/LICENSE_1_0.txt</a>)
+      </p>
+</div></div>
+</div></div>
+<div class="toc">
+<p><b>Table of Contents</b></p>
+<dl class="toc">
+<dt><span class="section"><a href="mqtt5/intro.html">Introduction</a></span></dt>
+<dt><span class="section"><a href="mqtt5/getting_started.html">Getting Started</a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="mqtt5/getting_started.html#mqtt5.getting_started.transport_protocol">Choosing a
+      Suitable Transport Protocol</a></span></dt>
+<dt><span class="section"><a href="mqtt5/getting_started.html#mqtt5.getting_started.configuration">Configuring Your
+      MQTT Connection</a></span></dt>
+<dt><span class="section"><a href="mqtt5/getting_started.html#mqtt5.getting_started.establishing_a_connection">Establishing
+      a Connection</a></span></dt>
+<dt><span class="section"><a href="mqtt5/getting_started.html#mqtt5.getting_started.using_the_client">Using the Client</a></span></dt>
+<dt><span class="section"><a href="mqtt5/getting_started.html#mqtt5.getting_started.debugging">Debugging the Client</a></span></dt>
+</dl></dd>
+<dt><span class="section"><a href="mqtt5/auto_reconnect.html">Built-in Auto-Reconnect and Retry
+    Mechanism</a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="mqtt5/auto_reconnect.html#mqtt5.auto_reconnect.sentry"></a></span></dt>
+<dt><span class="section"><a href="mqtt5/auto_reconnect.html#mqtt5.auto_reconnect.cons">Considerations and Limitations</a></span></dt>
+</dl></dd>
+<dt><span class="section"><a href="mqtt5/connection_maintenance.html">Maintaining a Stable Connection</a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="mqtt5/connection_maintenance.html#mqtt5.connection_maintenance.keep_alive">Understanding
+      Keep Alive and Server Keep Alive</a></span></dt>
+<dt><span class="section"><a href="mqtt5/connection_maintenance.html#mqtt5.connection_maintenance.half_open_connections">Detecting
+      and Handling Half-open Connections</a></span></dt>
+</dl></dd>
+<dt><span class="section"><a href="mqtt5/optimising_communication.html">Optimising Communication</a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="mqtt5/optimising_communication.html#mqtt5.optimising_communication.multiflight">The Multiflight
+      Mode</a></span></dt>
+<dt><span class="section"><a href="mqtt5/optimising_communication.html#mqtt5.optimising_communication.packet_queuing">Efficient
+      Bandwidth Usage With Packet Queuing</a></span></dt>
+<dt><span class="section"><a href="mqtt5/optimising_communication.html#mqtt5.optimising_communication.packet_ordering">Packet
+      Ordering</a></span></dt>
+</dl></dd>
+<dt><span class="section"><a href="mqtt5/disconnecting_the_client.html">Disconnecting the Client</a></span></dt>
+<dd><dl><dt><span class="section"><a href="mqtt5/disconnecting_the_client.html#mqtt5.disconnecting_the_client.reusing_the_client">Restarting
+      the Client After Disconnection</a></span></dt></dl></dd>
+<dt><span class="section"><a href="mqtt5/asio_compliance.html">Compliance With Boost.Asio</a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="mqtt5/asio_compliance/allocators.html">Allocators</a></span></dt>
+<dt><span class="section"><a href="mqtt5/asio_compliance/per_op_cancellation.html">Per-Operation
+      Cancellation</a></span></dt>
+<dt><span class="section"><a href="mqtt5/asio_compliance/executors.html">Executors</a></span></dt>
+</dl></dd>
+<dt><span class="section"><a href="mqtt5/multithreading.html">Using the mqtt_client in a Multithreaded
+    Environment</a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="mqtt5/multithreading.html#mqtt5.multithreading.thread_safety">Thread Safety of
+      ASIO-Compliant Objects</a></span></dt>
+<dt><span class="section"><a href="mqtt5/multithreading.html#mqtt5.multithreading.executors_threads_strands">Executors,
+      Threads, and Strands</a></span></dt>
+<dt><span class="section"><a href="mqtt5/multithreading.html#mqtt5.multithreading.thread_safe_code">Writing Thread-Safe
+      Code</a></span></dt>
+</dl></dd>
+<dt><span class="section"><a href="mqtt5/examples.html">Examples</a></span></dt>
+<dt><span class="section"><a href="mqtt5/ref.html">Reference</a></span></dt>
+</dl>
+</div>
+</div>
+<div class="copyright-footer"></div>
+<hr>
+<div class="spirit-nav"><a accesskey="n" href="mqtt5/intro.html"><img src="../../../../doc/src/images/next.png" alt="Next"></a></div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+# Copyright 2022 Klemens D. Morgenstern
+# Distributed under the Boost Software License, Version 1.0.
+# https://www.boost.org/LICENSE_1_0.txt
+
+import asciidoctor ;
+
+html index.html : index.adoc  ;
+
+install html_ : index.html : <location>html ;
+
+pdf process.pdf : index.adoc ;
+explicit process.pdf ;
+
+install pdf_ : process.pdf : <location>pdf ;
+explicit pdf_ ;
+
+install images
+    :
+        images/posix_exec_err.svg
+        images/posix_fork_err.svg
+        images/posix_success.svg
+        images/windows_exec.svg
+    :
+        <location>html/images
+    ;
+
+alias boostdoc ;
+explicit boostdoc ;
+alias boostrelease : html_ ;
+explicit boostrelease ;
+

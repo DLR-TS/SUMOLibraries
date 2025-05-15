@@ -1,0 +1,118 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>boost::mqtt5::logger::at_connack</title>
+<link rel="stylesheet" href="../../../../../../../doc/src/boostbook.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="../../../index.html" title="Chapter 1. Boost.MQTT5: a C++17 MQTT client">
+<link rel="up" href="../boost__mqtt5__logger.html" title="boost::mqtt5::logger">
+<link rel="prev" href="at_ws_handshake.html" title="boost::mqtt5::logger::at_ws_handshake">
+<link rel="next" href="at_disconnect.html" title="boost::mqtt5::logger::at_disconnect">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table cellpadding="2" width="100%"><tr>
+<td valign="top"><img alt="Boost C++ Libraries" width="277" height="86" src="../../../../../../../boost.png"></td>
+<td align="center"><a href="../../../../../../../index.html">Home</a></td>
+<td align="center"><a href="../../../../../../../libs/libraries.htm">Libraries</a></td>
+<td align="center"><a href="http://www.boost.org/users/people.html">People</a></td>
+<td align="center"><a href="http://www.boost.org/users/faq.html">FAQ</a></td>
+<td align="center"><a href="../../../../../../../more/index.htm">More</a></td>
+</tr></table>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="at_ws_handshake.html"><img src="../../../../../../../doc/src/images/prev.png" alt="Prev"></a><a accesskey="u" href="../boost__mqtt5__logger.html"><img src="../../../../../../../doc/src/images/up.png" alt="Up"></a><a accesskey="h" href="../../../index.html"><img src="../../../../../../../doc/src/images/home.png" alt="Home"></a><a accesskey="n" href="at_disconnect.html"><img src="../../../../../../../doc/src/images/next.png" alt="Next"></a>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h5 class="title">
+<a name="mqtt5.ref.boost__mqtt5__logger.at_connack"></a><a class="link" href="at_connack.html" title="boost::mqtt5::logger::at_connack">boost::mqtt5::logger::at_connack</a>
+</h5></div></div></div>
+<p>
+          <a class="indexterm" name="id10896"></a>
+Outputs the contents of the <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901074" target="_top"><code class="computeroutput"><span class="identifier">CONNACK</span></code></a> packet sent by the Broker.
+        </p>
+<h6>
+<a name="mqtt5.ref.boost__mqtt5__logger.at_connack.h0"></a>
+          <span class="phrase"><a name="mqtt5.ref.boost__mqtt5__logger.at_connack.synopsis"></a></span><a class="link" href="at_connack.html#mqtt5.ref.boost__mqtt5__logger.at_connack.synopsis">Synopsis</a>
+        </h6>
+<pre class="programlisting"><span class="keyword">void</span>
+<span class="identifier">at_connack</span><span class="special">(</span>
+    <a class="link" href="../boost__mqtt5__reason_code.html" title="boost::mqtt5::reason_code"><code class="literal">boost::mqtt5::reason_code</code></a> <span class="identifier">rc</span><span class="special">,</span>
+    <span class="keyword">bool</span> <span class="identifier">session_present</span><span class="special">,</span>
+    <span class="keyword">const</span> <span class="identifier">connack_props</span><span class="special">&amp;</span> <span class="identifier">ca_props</span><span class="special">);</span>
+</pre>
+<h6>
+<a name="mqtt5.ref.boost__mqtt5__logger.at_connack.h1"></a>
+          <span class="phrase"><a name="mqtt5.ref.boost__mqtt5__logger.at_connack.parameters"></a></span><a class="link" href="at_connack.html#mqtt5.ref.boost__mqtt5__logger.at_connack.parameters">Parameters</a>
+        </h6>
+<div class="informaltable"><table class="table">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead><tr>
+<th>
+                  <p>
+                    Name
+                  </p>
+                </th>
+<th>
+                  <p>
+                    Description
+                  </p>
+                </th>
+</tr></thead>
+<tbody>
+<tr>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="identifier">rc</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    Reason Code in the received <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901074" target="_top"><code class="computeroutput"><span class="identifier">CONNACK</span></code></a> packet indicating
+                    the result of the MQTT handshake.
+                  </p>
+                </td>
+</tr>
+<tr>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="identifier">session_present</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    A flag indicating whether the Broker already has a session associated
+                    with this connection.
+                  </p>
+                </td>
+</tr>
+<tr>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="identifier">ca_props</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    <a class="link" href="../connack_props.html" title="CONNACK properties"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">connack_props</span></code></a>
+                    received in the <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901074" target="_top"><code class="computeroutput"><span class="identifier">CONNACK</span></code></a> packet.
+                  </p>
+                </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="copyright-footer">Copyright © 2023-2025 Mireo<p>
+        Distributed under the Boost Software License, Version 1.0. (See accompanying
+        file LICENSE_1_0.txt or copy at <a href="http://www.boost.org/LICENSE_1_0.txt" target="_top">http://www.boost.org/LICENSE_1_0.txt</a>)
+      </p>
+</div>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="at_ws_handshake.html"><img src="../../../../../../../doc/src/images/prev.png" alt="Prev"></a><a accesskey="u" href="../boost__mqtt5__logger.html"><img src="../../../../../../../doc/src/images/up.png" alt="Up"></a><a accesskey="h" href="../../../index.html"><img src="../../../../../../../doc/src/images/home.png" alt="Home"></a><a accesskey="n" href="at_disconnect.html"><img src="../../../../../../../doc/src/images/next.png" alt="Next"></a>
+</div>
+</body>
+</html>

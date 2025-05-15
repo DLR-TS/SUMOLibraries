@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Hash Quality :: Boost.Unordered</title>
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../unordered/_/css/site.css">
+  </head>
+  <body class="article">
+<div class="body">
+<div class="nav-container" data-component="unordered" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="intro.html">Boost.Unordered</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="intro.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="buckets.html">Basics of Hash Tables</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="hash_equality.html">Equality Predicates and Hash Functions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="regular.html">Regular Containers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="concurrent.html">Concurrent Containers</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="hash_quality.html">Hash Quality</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="compliance.html">Standard Compliance</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="structures.html">Data Structures</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="debuggability.html">Debuggability</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="benchmarks.html">Benchmarks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="rationale.html">Implementation Rationale</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="ref.html">Reference</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_map_fwd.html"><code>&lt;boost/unordered/unordered_map_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_map_top.html"><code>&lt;boost/unordered_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_map.html"><code>&lt;boost/unordered/unordered_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_map.html"><code>unordered_map</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_multimap.html"><code>unordered_multimap</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_set_fwd.html"><code>&lt;boost/unordered/unordered_set_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_set_top.html"><code>&lt;boost/unordered_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_set.html"><code>&lt;boost/unordered/unordered_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_set.html"><code>unordered_set</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_multiset.html"><code>unordered_multiset</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/hash_traits.html">Hash Traits</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/stats.html">Statistics</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_flat_map_fwd.html"><code>&lt;boost/unordered/unordered_flat_map_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_flat_map.html"><code>&lt;boost/unordered/unordered_flat_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_flat_map.html"><code>unordered_flat_map</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_flat_set_fwd.html"><code>&lt;boost/unordered/unordered_flat_set_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_flat_set.html"><code>&lt;boost/unordered/unordered_flat_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_flat_set.html"><code>unordered_flat_set</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_node_map_fwd.html"><code>&lt;boost/unordered/unordered_node_map_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_node_map.html"><code>&lt;boost/unordered/unordered_node_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_node_map.html"><code>unordered_node_map</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_node_set_fwd.html"><code>&lt;boost/unordered/unordered_node_set_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_node_set.html"><code>&lt;boost/unordered/unordered_node_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_node_set.html"><code>unordered_node_set</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_flat_map_fwd.html"><code>&lt;boost/unordered/concurrent_flat_map_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_flat_map.html"><code>&lt;boost/unordered/concurrent_flat_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/concurrent_flat_map.html"><code>concurrent_flat_map</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_flat_set_fwd.html"><code>&lt;boost/unordered/concurrent_flat_set_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_flat_set.html"><code>&lt;boost/unordered/concurrent_flat_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/concurrent_flat_set.html"><code>concurrent_flat_set</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_node_map_fwd.html"><code>&lt;boost/unordered/concurrent_node_map_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_node_map.html"><code>&lt;boost/unordered/concurrent_node_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/concurrent_node_map.html"><code>concurrent_node_map</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_node_set_fwd.html"><code>&lt;boost/unordered/concurrent_node_set_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_node_set.html"><code>&lt;boost/unordered/concurrent_node_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/concurrent_node_set.html"><code>concurrent_node_set</code></a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="changes.html">Change Log</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="bibliography.html">Bibliography</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="copyright.html">Copyright and License</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="intro.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="intro.html">Boost.Unordered</a></li>
+    <li><a href="hash_quality.html">Hash Quality</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Hash Quality</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>In order to work properly, hash tables require that the supplied hash function
+be of <em>good quality</em>, roughly meaning that it uses its <code>std::size_t</code> output
+space as uniformly as possible, much like a random number generator would do
+—except, of course, that the value of a hash function is not random but strictly determined
+by its input argument.</p>
+</div>
+<div class="paragraph">
+<p>Closed-addressing containers in Boost.Unordered are fairly robust against
+hash functions with less-than-ideal quality, but open-addressing and concurrent
+containers are much more sensitive to this factor, and their performance can
+degrade dramatically if the hash function is not appropriate. In general, if
+you&#8217;re using functions provided by or generated with <a href="../../../../container_hash/index.html" target="_blank" rel="noopener">Boost.Hash</a>,
+the quality will be adequate, but you have to be careful when using alternative
+hash algorithms.</p>
+</div>
+<div class="paragraph">
+<p>The rest of this section applies only to open-addressing and concurrent containers.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="hash_quality_hash_post_mixing_and_the_avalanching_property"><a class="anchor" href="#hash_quality_hash_post_mixing_and_the_avalanching_property"></a>Hash Post-mixing and the Avalanching Property</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Even if your supplied hash function does not conform to the uniform behavior
+required by open addressing, chances are that
+the performance of Boost.Unordered containers will be acceptable, because the library
+executes an internal <em>post-mixing</em> step that improves the statistical
+properties of the calculated hash values. This comes with an extra computational
+cost; if you&#8217;d like to opt out of post-mixing, annotate your hash function as
+follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">struct my_string_hash_function
+{
+  using is_avalanching = std::true_type; // instruct Boost.Unordered to not use post-mixing
+
+  std::size_t operator()(const std::string&amp; x) const
+  {
+    ...
+  }
+};</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>By setting the
+<code><a href="reference/hash_traits.html#hash_traits_hash_is_avalanching" class="xref page">hash_is_avalanching</a></code> trait, we inform Boost.Unordered
+that <code>my_string_hash_function</code> is of sufficient quality to be used directly without
+any post-mixing safety net. This comes at the risk of degraded performance in the
+cases where the hash function is not as well-behaved as we&#8217;ve declared.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="hash_quality_container_statistics"><a class="anchor" href="#hash_quality_container_statistics"></a>Container Statistics</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If we globally define the macro <code>BOOST_UNORDERED_ENABLE_STATS</code>, open-addressing and
+concurrent containers will calculate some internal statistics directly correlated to the
+quality of the hash function:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">#define BOOST_UNORDERED_ENABLE_STATS
+#include &lt;boost/unordered/unordered_map.hpp&gt;
+
+...
+
+int main()
+{
+  boost::unordered_flat_map&lt;std::string, int, my_string_hash&gt; m;
+  ... // use m
+
+  auto stats = m.get_stats();
+  ... // inspect stats
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>stats</code> object provides the following information:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">stats
+     .insertion                                     // <strong>Insertion operations</strong>
+               .count                               // Number of operations
+               .probe_length                        // Probe length per operation
+                            .average
+                            .variance
+                            .deviation
+	 .successful_lookup                             // <strong>Lookup operations (element found)</strong>
+                       .count                       // Number of operations
+                       .probe_length                // Probe length per operation
+                                    .average
+                                    .variance
+                                    .deviation
+                       .num_comparisons             // Elements compared per operation
+			                           .average
+                                       .variance
+                                       .deviation
+	 .unsuccessful_lookup                           // <strong>Lookup operations (element not found)</strong>
+                         .count                     // Number of operations
+                         .probe_length              // Probe length per operation
+                                      .average
+                                      .variance
+                                      .deviation
+                         .num_comparisons           // Elements compared per operation
+			                             .average
+                                         .variance
+                                         .deviation</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Statistics for three internal operations are maintained: insertions (without considering
+the previous lookup to determine that the key is not present yet), successful lookups,
+and unsuccessful lookups (including those issued internally when inserting elements).
+<em>Probe length</em> is  the number of
+<a href="structures.html#structures_open_addressing_containers" class="xref page">bucket groups</a> accessed per operation.
+If the hash function behaves properly:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Average probe lengths should be close to 1.0.</p>
+</li>
+<li>
+<p>The average number of comparisons per successful lookup should be close to 1.0 (that is,
+just the element found is checked).</p>
+</li>
+<li>
+<p>The average number of comparisons per unsuccessful lookup should be close to 0.0.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>An <a href="../../../benchmark/string_stats.cpp" target="_blank" rel="noopener">example</a> is provided that displays container
+statistics for <code>boost::hash&lt;std::string&gt;</code>, an implementation of the
+<a href="https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function#FNV-1a_hash" target="_blank" rel="noopener">FNV-1a hash</a>
+and two ill-behaved custom hash functions that have been incorrectly marked as avalanching:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>                   boost::unordered_flat_map:   319 ms
+                                   insertion: probe length 1.08771
+                           successful lookup: probe length 1.06206, num comparisons 1.02121
+                         unsuccessful lookup: probe length 1.12301, num comparisons 0.0388251
+
+           boost::unordered_flat_map, FNV-1a:   301 ms
+                                   insertion: probe length 1.09567
+                           successful lookup: probe length 1.06202, num comparisons 1.0227
+                         unsuccessful lookup: probe length 1.12195, num comparisons 0.040527
+
+boost::unordered_flat_map, slightly_bad_hash:   654 ms
+                                   insertion: probe length 1.03443
+                           successful lookup: probe length 1.04137, num comparisons 6.22152
+                         unsuccessful lookup: probe length 1.29334, num comparisons 11.0335
+
+         boost::unordered_flat_map, bad_hash: 12216 ms
+                                   insertion: probe length 699.218
+                           successful lookup: probe length 590.183, num comparisons 43.4886
+                         unsuccessful lookup: probe length 1361.65, num comparisons 75.238</pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<script id="site-script" src="../unordered/_/js/site.js" data-ui-root-path="../unordered/_"></script>
+<script async src="../unordered/_/js/vendor/highlight.js"></script>
+  </body>
+</html>

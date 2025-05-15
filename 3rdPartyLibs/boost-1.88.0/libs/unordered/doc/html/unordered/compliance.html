@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Standard Compliance :: Boost.Unordered</title>
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../unordered/_/css/site.css">
+  </head>
+  <body class="article">
+<div class="body">
+<div class="nav-container" data-component="unordered" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="intro.html">Boost.Unordered</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="intro.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="buckets.html">Basics of Hash Tables</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="hash_equality.html">Equality Predicates and Hash Functions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="regular.html">Regular Containers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="concurrent.html">Concurrent Containers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="hash_quality.html">Hash Quality</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="compliance.html">Standard Compliance</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="structures.html">Data Structures</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="debuggability.html">Debuggability</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="benchmarks.html">Benchmarks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="rationale.html">Implementation Rationale</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="ref.html">Reference</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_map_fwd.html"><code>&lt;boost/unordered/unordered_map_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_map_top.html"><code>&lt;boost/unordered_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_map.html"><code>&lt;boost/unordered/unordered_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_map.html"><code>unordered_map</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_multimap.html"><code>unordered_multimap</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_set_fwd.html"><code>&lt;boost/unordered/unordered_set_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_set_top.html"><code>&lt;boost/unordered_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_set.html"><code>&lt;boost/unordered/unordered_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_set.html"><code>unordered_set</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_multiset.html"><code>unordered_multiset</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/hash_traits.html">Hash Traits</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/stats.html">Statistics</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_flat_map_fwd.html"><code>&lt;boost/unordered/unordered_flat_map_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_flat_map.html"><code>&lt;boost/unordered/unordered_flat_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_flat_map.html"><code>unordered_flat_map</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_flat_set_fwd.html"><code>&lt;boost/unordered/unordered_flat_set_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_flat_set.html"><code>&lt;boost/unordered/unordered_flat_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_flat_set.html"><code>unordered_flat_set</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_node_map_fwd.html"><code>&lt;boost/unordered/unordered_node_map_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_node_map.html"><code>&lt;boost/unordered/unordered_node_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_node_map.html"><code>unordered_node_map</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_node_set_fwd.html"><code>&lt;boost/unordered/unordered_node_set_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_node_set.html"><code>&lt;boost/unordered/unordered_node_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_node_set.html"><code>unordered_node_set</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_flat_map_fwd.html"><code>&lt;boost/unordered/concurrent_flat_map_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_flat_map.html"><code>&lt;boost/unordered/concurrent_flat_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/concurrent_flat_map.html"><code>concurrent_flat_map</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_flat_set_fwd.html"><code>&lt;boost/unordered/concurrent_flat_set_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_flat_set.html"><code>&lt;boost/unordered/concurrent_flat_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/concurrent_flat_set.html"><code>concurrent_flat_set</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_node_map_fwd.html"><code>&lt;boost/unordered/concurrent_node_map_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_node_map.html"><code>&lt;boost/unordered/concurrent_node_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/concurrent_node_map.html"><code>concurrent_node_map</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_node_set_fwd.html"><code>&lt;boost/unordered/concurrent_node_set_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_node_set.html"><code>&lt;boost/unordered/concurrent_node_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/concurrent_node_set.html"><code>concurrent_node_set</code></a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="changes.html">Change Log</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="bibliography.html">Bibliography</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="copyright.html">Copyright and License</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="intro.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="intro.html">Boost.Unordered</a></li>
+    <li><a href="compliance.html">Standard Compliance</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Standard Compliance</h1>
+<div class="sect1">
+<h2 id="compliance_closed_addressing_containers"><a class="anchor" href="#compliance_closed_addressing_containers"></a>Closed-addressing Containers</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code>boost::unordered_[multi]set</code> and <code>boost::unordered_[multi]map</code> provide a conformant
+implementation for C++11 (or later) compilers of the latest standard revision of
+C++ unordered associative containers, with very minor deviations as noted.
+The containers are fully <a href="https://en.cppreference.com/w/cpp/named_req/AllocatorAwareContainer" target="_blank" rel="noopener">AllocatorAware</a>
+and support <a href="https://en.cppreference.com/w/cpp/named_req/Allocator#Fancy_pointers" target="_blank" rel="noopener">fancy pointers</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="compliance_deduction_guides"><a class="anchor" href="#compliance_deduction_guides"></a>Deduction Guides</h3>
+<div class="paragraph">
+<p>Deduction guides for
+<a href="https://en.cppreference.com/w/cpp/language/class_template_argument_deduction" target="_blank" rel="noopener">class template argument deduction (CTAD)</a>
+are only available on C++17 (or later) compilers.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="compliance_piecewise_pair_emplacement"><a class="anchor" href="#compliance_piecewise_pair_emplacement"></a>Piecewise Pair Emplacement</h3>
+<div class="paragraph">
+<p>In accordance with the standard specification,
+<code>boost::unordered_[multi]map::emplace</code> supports piecewise pair construction:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">boost::unordered_multimap&lt;std::string, std::complex&gt; x;
+
+x.emplace(
+    std::piecewise_construct,
+    std::make_tuple("key"), std::make_tuple(1, 2));</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Additionally, the same
+functionality is provided via non-standard <code>boost::unordered::piecewise_construct</code>
+and Boost.Tuple:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">x.emplace(
+    boost::unordered::piecewise_construct,
+    boost::make_tuple("key"), boost::make_tuple(1, 2));</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This feature has been retained for backwards compatibility with
+previous versions of Boost.Unordered: users are encouraged to
+update their code to use <code>std::piecewise_construct</code> and
+<code>std::tuple</code>s instead.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="compliance_swap"><a class="anchor" href="#compliance_swap"></a>Swap</h3>
+<div class="paragraph">
+<p>When swapping, <code>Pred</code> and <code>Hash</code> are not currently swapped by calling
+<code>swap</code>, their copy constructors are used. As a consequence, when swapping
+an exception may be thrown from their copy constructor.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="compliance_open_addressing_containers"><a class="anchor" href="#compliance_open_addressing_containers"></a>Open-addressing Containers</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The C++ standard does not currently provide any open-addressing container
+specification to adhere to, so <code>boost::unordered_flat_set</code>/<code>unordered_node_set</code> and
+<code>boost::unordered_flat_map</code>/<code>unordered_node_map</code> take inspiration from <code>std::unordered_set</code> and
+<code>std::unordered_map</code>, respectively, and depart from their interface where
+convenient or as dictated by their internal data structure, which is
+radically different from that imposed by the standard (closed addressing).</p>
+</div>
+<div class="paragraph">
+<p>Open-addressing containers provided by Boost.Unordered only work with reasonably
+compliant C++11 (or later) compilers. Language-level features such as move semantics
+and variadic template parameters are then not emulated.
+The containers are fully <a href="https://en.cppreference.com/w/cpp/named_req/AllocatorAwareContainer" target="_blank" rel="noopener">AllocatorAware</a>
+and support <a href="https://en.cppreference.com/w/cpp/named_req/Allocator#Fancy_pointers" target="_blank" rel="noopener">fancy pointers</a>.</p>
+</div>
+<div class="paragraph">
+<p>The main differences with C++ unordered associative containers are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>In general:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>begin()</code> is not constant-time.</p>
+</li>
+<li>
+<p><code>erase(iterator)</code> does not return an iterator to the following element, but
+a proxy object that converts to that iterator if requested; this avoids
+a potentially costly iterator increment operation when not needed.</p>
+</li>
+<li>
+<p>There is no API for bucket handling (except <code>bucket_count</code>).</p>
+</li>
+<li>
+<p>The maximum load factor of the container is managed internally and can&#8217;t be set by the user. The maximum load,
+exposed through the public function <code>max_load</code>, may decrease on erasure under high-load conditions.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Flat containers (<code>boost::unordered_flat_set</code> and <code>boost::unordered_flat_map</code>):</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>value_type</code> must be move-constructible.</p>
+</li>
+<li>
+<p>Pointer stability is not kept under rehashing.</p>
+</li>
+<li>
+<p>There is no API for node extraction/insertion.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="compliance_concurrent_containers"><a class="anchor" href="#compliance_concurrent_containers"></a>Concurrent Containers</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>There is currently no specification in the C++ standard for this or any other type of concurrent
+data structure. The APIs of <code>boost::concurrent_flat_set</code>/<code>boost::concurrent_node_set</code> and
+<code>boost::concurrent_flat_map</code>/<code>boost::concurrent_node_map</code>
+are modelled after <code>std::unordered_flat_set</code> and <code>std::unordered_flat_map</code>, respectively,
+with the crucial difference that iterators are not provided
+due to their inherent problems in concurrent scenarios (high contention, prone to deadlocking):
+so, Boost.Unordered concurrent containers are technically not models of
+<a href="https://en.cppreference.com/w/cpp/named_req/Container" target="_blank" rel="noopener">Container</a>, although
+they meet all the requirements of <a href="https://en.cppreference.com/w/cpp/named_req/AllocatorAwareContainer" target="_blank" rel="noopener">AllocatorAware</a>
+containers (including
+<a href="https://en.cppreference.com/w/cpp/named_req/Allocator#Fancy_pointers" target="_blank" rel="noopener">fancy pointer</a> support)
+except those implying iterators.</p>
+</div>
+<div class="paragraph">
+<p>In a non-concurrent unordered container, iterators serve two main purposes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Access to an element previously located via lookup.</p>
+</li>
+<li>
+<p>Container traversal.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In place of iterators, Boost.Unordered concurrent containers use <em>internal visitation</em>
+facilities as a thread-safe substitute. Classical operations returning an iterator to an
+element already existing in the container, like for instance:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">iterator find(const key_type&amp; k);
+std::pair&lt;iterator, bool&gt; insert(const value_type&amp; obj);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>are transformed to accept a <em>visitation function</em> that is passed such element:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class F&gt; size_t visit(const key_type&amp; k, F f);
+template&lt;class F&gt; bool insert_or_visit(const value_type&amp; obj, F f);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>(In the second case <code>f</code> is only invoked if there&#8217;s an equivalent element
+to <code>obj</code> in the table, not if insertion is successful). Container traversal
+is served by:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class F&gt; size_t visit_all(F f);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>of which there are parallelized versions in C++17 compilers with parallel
+algorithm support. In general, the interface of concurrent containers
+is derived from that of their non-concurrent counterparts by a fairly straightforward
+process of replacing iterators with visitation where applicable. If for
+regular maps <code>iterator</code> and <code>const_iterator</code> provide mutable and const access to elements,
+respectively, here visitation is granted mutable or const access depending on
+the constness of the member function used (there are also <code>*cvisit</code> overloads for
+explicit const visitation); In the case of <code>boost::concurrent_flat_set</code>, visitation is always const.</p>
+</div>
+<div class="paragraph">
+<p>One notable operation not provided by <code>boost::concurrent_flat_map</code>/<code>boost::concurrent_node_map</code>
+is <code>operator[]</code>/<code>at</code>, which can be
+replaced, if in a more convoluted manner, by
+<code><a href="reference/concurrent_flat_map.html#concurrent_flat_map_try_emplace_or_cvisit" class="xref page">try_emplace_or_visit</a></code>.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<script id="site-script" src="../unordered/_/js/site.js" data-ui-root-path="../unordered/_"></script>
+<script async src="../unordered/_/js/vendor/highlight.js"></script>
+  </body>
+</html>

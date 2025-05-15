@@ -1,0 +1,274 @@
+#  Copyright (C) 2016-2024, Antony Polukhin.
+#
+# Use, modification and distribution is subject to the Boost Software License,
+# Version 1.0. (See accompanying file LICENSE_1_0.txt or copy at
+# http://www.boost.org/LICENSE_1_0.txt)
+#
+
+require-b2 5.0.1 ;
+import-search /boost/config/checks ;
+import boost-stacktrace-features ;
+import config : requires ;
+import configure ;
+import property ;
+
+constant boost_dependencies_private :
+    <library>/boost/assert//boost_assert
+    ;
+
+project
+  : common-requirements $(boost_dependencies)
+  : requirements
+    [ requires cxx11_rvalue_references ]
+    $(boost_dependencies_private)
+  : default-build
+    <visibility>hidden
+  ;
+
+lib dl ;
+lib gcc_s ;
+lib Dbgeng ;
+lib ole32 ;
+
+local LIBBACKTRACE_PATH = [ modules.peek : LIBBACKTRACE_PATH ] ;
+lib backtrace
+  :
+  : <search>$(LIBBACKTRACE_PATH)/lib <link>static
+  :
+  : <include>$(LIBBACKTRACE_PATH)/include
+  ;
+
+actions mp_simple_run_action
+{
+      $(>) > $(<)
+}
+
+rule mp-run-simple ( sources + : args * : input-files * : requirements * : target-name )
+{
+   exe $(target-name)_exe : $(sources) : $(requirements) ;
+   explicit $(target-name)_exe ;
+   make $(target-name).output : $(target-name)_exe : @mp_simple_run_action ;
+   explicit $(target-name).output ;
+   alias $(target-name) : $(target-name).output ;
+}
+
+mp-run-simple has_backtrace.cpp : : : <library>backtrace : libbacktrace ;
+explicit libbacktrace ;
+
+mp-run-simple has_addr2line.cpp : : : : addr2line ;
+explicit addr2line ;
+
+mp-run-simple has_windbg.cpp : : : <library>Dbgeng <library>ole32 : WinDbg ;
+explicit WinDbg ;
+
+mp-run-simple has_windbg_cached.cpp : : : <library>Dbgeng <library>ole32 : WinDbgCached ;
+explicit WinDbgCached ;
+
+rule build-stacktrace-noop ( props * )
+{
+    local enabled = [ property.select <boost.stacktrace.noop> : $(props) ] ;
+    switch $(enabled:G=)
+    {
+        case  "on" :  return ;
+        case "off" :  return <build>no ;
+    }
+}
+
+lib boost_stacktrace_noop
+  : # sources
+    ../src/noop.cpp
+  : # requirements
+    <warnings>all
+    <link>shared:<define>BOOST_STACKTRACE_DYN_LINK=1
+    <conditional>@build-stacktrace-noop
+  : # default build
+  : # usage-requirements
+    #<link>shared:<define>BOOST_STACKTRACE_DYN_LINK=1
+    <define>BOOST_STACKTRACE_NO_LIB=1
+  ;
+
+rule build-stacktrace-backtrace ( props * )
+{
+    local enabled = [ property.select <boost.stacktrace.backtrace> : $(props) ] ;
+    switch $(enabled:G=)
+    {
+        case  "on" :  return ;
+        case "off" :  return <build>no ;
+    }
+
+    if ! [ configure.builds libbacktrace : $(props) : "boost.stacktrace.backtrace" ]
+    {
+        return <build>no ;
+    }
+}
+
+lib boost_stacktrace_backtrace
+  : # sources
+    ../src/backtrace.cpp
+  : # requirements
+    <warnings>all
+    <target-os>linux:<library>dl
+    <library>backtrace
+    <link>shared:<define>BOOST_STACKTRACE_DYN_LINK=1
+    <conditional>@build-stacktrace-backtrace
+  : # default build
+  : # usage-requirements
+    #<link>shared:<define>BOOST_STACKTRACE_DYN_LINK=1
+    <define>BOOST_STACKTRACE_NO_LIB=1
+  ;
+
+rule build-stacktrace-addr2line ( props * )
+{
+    local enabled = [ property.select <boost.stacktrace.addr2line> : $(props) ] ;
+    switch $(enabled:G=)
+    {
+        case  "on" :  return ;
+        case "off" :  return <build>no ;
+    }
+
+    # Disable by default on Windows when not using Cygwin
+    if <target-os>windows in $(props) && ! ( <target-os>cygwin in $(props) )
+    {
+        configure.log-library-search-result "boost.stacktrace.addr2line" : "no" ;
+        return <build>no ;
+    }
+
+    if ! [ configure.builds addr2line : $(props) : "boost.stacktrace.addr2line" ]
+    {
+        return <build>no ;
+    }
+}
+
+lib boost_stacktrace_addr2line
+  : # sources
+    ../src/addr2line.cpp
+  : # requirements
+    <warnings>all
+    <target-os>linux:<library>dl
+    <link>shared:<define>BOOST_STACKTRACE_DYN_LINK=1
+    <conditional>@build-stacktrace-addr2line
+  : # default build
+  : # usage-requirements
+    #<link>shared:<define>BOOST_STACKTRACE_DYN_LINK=1
+    <define>BOOST_STACKTRACE_NO_LIB=1
+  ;
+
+rule build-stacktrace-basic ( props * )
+{
+    local enabled = [ property.select <boost.stacktrace.basic> : $(props) ] ;
+    switch $(enabled:G=)
+    {
+        case  "on" :  return ;
+        case "off" :  return <build>no ;
+    }
+
+    if [ configure.builds WinDbg : $(props) : "boost.stacktrace.basic" ]
+    {
+        return <build>no ;
+    }
+}
+
+lib boost_stacktrace_basic
+  : # sources
+    ../src/basic.cpp
+  : # requirements
+    <warnings>all
+    <target-os>linux:<library>dl
+    <link>shared:<define>BOOST_STACKTRACE_DYN_LINK=1
+    <conditional>@build-stacktrace-basic
+  : # default build
+  : # usage-requirements
+    #<link>shared:<define>BOOST_STACKTRACE_DYN_LINK=1
+    <define>BOOST_STACKTRACE_NO_LIB=1
+  ;
+
+rule build-stacktrace-windbg ( props * )
+{
+    local enabled = [ property.select <boost.stacktrace.windbg> : $(props) ] ;
+    switch $(enabled:G=)
+    {
+        case  "on" :  return ;
+        case "off" :  return <build>no ;
+    }
+
+    if ! [ configure.builds WinDbg : $(props) : "boost.stacktrace.windbg" ]
+    {
+        return <build>no ;
+    }
+}
+
+lib boost_stacktrace_windbg
+  : # sources
+    ../src/windbg.cpp
+  : # requirements
+    <warnings>all
+    <library>Dbgeng <library>ole32
+    <link>shared:<define>BOOST_STACKTRACE_DYN_LINK=1
+    <conditional>@build-stacktrace-windbg
+  : # default build
+  : # usage-requirements
+    #<link>shared:<define>BOOST_STACKTRACE_DYN_LINK=1
+    <define>BOOST_STACKTRACE_NO_LIB=1
+  ;
+
+rule build-stacktrace-windbg-cached ( props * )
+{
+    local enabled = [ property.select <boost.stacktrace.windbg_cached> : $(props) ] ;
+    switch $(enabled:G=)
+    {
+        case  "on" :  return ;
+        case "off" :  return <build>no ;
+    }
+
+    if ! [ configure.builds WinDbgCached : $(props) : "boost.stacktrace.windbg_cached" ]
+    {
+        return <build>no ;
+    }
+}
+
+lib boost_stacktrace_windbg_cached
+  : # sources
+    ../src/windbg_cached.cpp
+  : # requirements
+    <warnings>all
+    <library>Dbgeng <library>ole32
+    <link>shared:<define>BOOST_STACKTRACE_DYN_LINK=1
+    <conditional>@build-stacktrace-windbg-cached
+  : # default build
+  : # usage-requirements
+    #<link>shared:<define>BOOST_STACKTRACE_DYN_LINK=1
+    <define>BOOST_STACKTRACE_NO_LIB=1
+  ;
+
+rule build-stacktrace-from-exception ( props * )
+{
+    local enabled = [ property.select <boost.stacktrace.from_exception> : $(props) ] ;
+    switch $(enabled:G=)
+    {
+        case  "on" :  return ;
+        case "off" :  return <build>no ;
+    }
+
+    local arch = [ property.select <architecture> : $(props) ] ;
+    if $(arch) && ( $(arch:G=) != x86 )
+    {
+        configure.log-library-search-result "boost.stacktrace.from_exception" : "no" ;
+        return <build>no ;
+    }
+    configure.log-library-search-result "boost.stacktrace.from_exception" : "yes" ;
+}
+
+lib boost_stacktrace_from_exception
+  : # sources
+    ../src/from_exception.cpp
+  : # requirements
+    <warnings>all
+    <target-os>linux:<library>dl
+
+    # Enable build when explicitly requested, or by default, when on x86
+    <conditional>@build-stacktrace-from-exception
+  : # default build
+  : # usage-requirements
+    #<link>shared:<define>BOOST_STACKTRACE_DYN_LINK=1
+    <define>BOOST_STACKTRACE_NO_LIB=1
+  ;

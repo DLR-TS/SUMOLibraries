@@ -1,0 +1,105 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>boost::mqtt5::mqtt_client::authenticator</title>
+<link rel="stylesheet" href="../../../../../../../doc/src/boostbook.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="../../../index.html" title="Chapter 1. Boost.MQTT5: a C++17 MQTT client">
+<link rel="up" href="../boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client">
+<link rel="prev" href="brokers.html" title="boost::mqtt5::mqtt_client::brokers">
+<link rel="next" href="keep_alive.html" title="boost::mqtt5::mqtt_client::keep_alive">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table cellpadding="2" width="100%"><tr>
+<td valign="top"><img alt="Boost C++ Libraries" width="277" height="86" src="../../../../../../../boost.png"></td>
+<td align="center"><a href="../../../../../../../index.html">Home</a></td>
+<td align="center"><a href="../../../../../../../libs/libraries.htm">Libraries</a></td>
+<td align="center"><a href="http://www.boost.org/users/people.html">People</a></td>
+<td align="center"><a href="http://www.boost.org/users/faq.html">FAQ</a></td>
+<td align="center"><a href="../../../../../../../more/index.htm">More</a></td>
+</tr></table>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="brokers.html"><img src="../../../../../../../doc/src/images/prev.png" alt="Prev"></a><a accesskey="u" href="../boost__mqtt5__mqtt_client.html"><img src="../../../../../../../doc/src/images/up.png" alt="Up"></a><a accesskey="h" href="../../../index.html"><img src="../../../../../../../doc/src/images/home.png" alt="Home"></a><a accesskey="n" href="keep_alive.html"><img src="../../../../../../../doc/src/images/next.png" alt="Next"></a>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h5 class="title">
+<a name="mqtt5.ref.boost__mqtt5__mqtt_client.authenticator"></a><a class="link" href="authenticator.html" title="boost::mqtt5::mqtt_client::authenticator">boost::mqtt5::mqtt_client::authenticator</a>
+</h5></div></div></div>
+<p>
+          <a class="indexterm" name="id12222"></a>
+Assign an authenticator that the Client will use
+          for <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901256" target="_top"><code class="computeroutput"><span class="identifier">Enhanced</span> <span class="identifier">Authentication</span></code></a>
+          on every connect to a Broker. Re-authentication can be initiated by calling
+          <a class="link" href="re_authenticate.html" title="boost::mqtt5::mqtt_client::re_authenticate"><code class="computeroutput"><span class="identifier">re_authenticate</span></code></a>.
+        </p>
+<h6>
+<a name="mqtt5.ref.boost__mqtt5__mqtt_client.authenticator.h0"></a>
+          <span class="phrase"><a name="mqtt5.ref.boost__mqtt5__mqtt_client.authenticator.synopsis"></a></span><a class="link" href="authenticator.html#mqtt5.ref.boost__mqtt5__mqtt_client.authenticator.synopsis">Synopsis</a>
+        </h6>
+<pre class="programlisting"><span class="keyword">template</span><span class="special">&lt;</span>
+    <span class="keyword">typename</span> <span class="identifier">Authenticator</span><span class="special">&gt;</span>
+<a class="link" href="../boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal">boost::mqtt5::mqtt_client</code></a><span class="special">&amp;</span>
+<span class="identifier">authenticator</span><span class="special">(</span>
+    <span class="identifier">Authenticator</span><span class="special">&amp;&amp;</span> <span class="identifier">authenticator</span><span class="special">);</span>
+</pre>
+<h6>
+<a name="mqtt5.ref.boost__mqtt5__mqtt_client.authenticator.h1"></a>
+          <span class="phrase"><a name="mqtt5.ref.boost__mqtt5__mqtt_client.authenticator.parameters"></a></span><a class="link" href="authenticator.html#mqtt5.ref.boost__mqtt5__mqtt_client.authenticator.parameters">Parameters</a>
+        </h6>
+<div class="informaltable"><table class="table">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead><tr>
+<th>
+                  <p>
+                    Name
+                  </p>
+                </th>
+<th>
+                  <p>
+                    Description
+                  </p>
+                </th>
+</tr></thead>
+<tbody><tr>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="identifier">authenticator</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    Object that will be stored (move-constructed or by reference)
+                    and used for authentication. It needs to satisfy <a class="link" href="../Authenticator.html" title="Authenticator concept"><span class="emphasis"><em>Authenticator</em></span></a>
+                    concept.
+                  </p>
+                </td>
+</tr></tbody>
+</table></div>
+<h6>
+<a name="mqtt5.ref.boost__mqtt5__mqtt_client.authenticator.h2"></a>
+          <span class="phrase"><a name="mqtt5.ref.boost__mqtt5__mqtt_client.authenticator.attention"></a></span><a class="link" href="authenticator.html#mqtt5.ref.boost__mqtt5__mqtt_client.authenticator.attention">Attention</a>
+        </h6>
+<p>
+          This function takes action when the client is in a non-operational state,
+          meaning the <a class="link" href="async_run.html" title="boost::mqtt5::mqtt_client::async_run"><code class="computeroutput"><span class="identifier">async_run</span></code></a> function has not been
+          invoked. Furthermore, you can use this function after the <a class="link" href="cancel.html" title="boost::mqtt5::mqtt_client::cancel"><code class="computeroutput"><span class="identifier">cancel</span></code></a> function has been called,
+          before the <a class="link" href="async_run.html" title="boost::mqtt5::mqtt_client::async_run"><code class="computeroutput"><span class="identifier">async_run</span></code></a> function is invoked
+          again.
+        </p>
+</div>
+<div class="copyright-footer">Copyright © 2023-2025 Mireo<p>
+        Distributed under the Boost Software License, Version 1.0. (See accompanying
+        file LICENSE_1_0.txt or copy at <a href="http://www.boost.org/LICENSE_1_0.txt" target="_top">http://www.boost.org/LICENSE_1_0.txt</a>)
+      </p>
+</div>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="brokers.html"><img src="../../../../../../../doc/src/images/prev.png" alt="Prev"></a><a accesskey="u" href="../boost__mqtt5__mqtt_client.html"><img src="../../../../../../../doc/src/images/up.png" alt="Up"></a><a accesskey="h" href="../../../index.html"><img src="../../../../../../../doc/src/images/home.png" alt="Home"></a><a accesskey="n" href="keep_alive.html"><img src="../../../../../../../doc/src/images/next.png" alt="Next"></a>
+</div>
+</body>
+</html>

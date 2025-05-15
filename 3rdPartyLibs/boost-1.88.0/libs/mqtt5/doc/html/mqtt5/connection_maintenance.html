@@ -1,0 +1,193 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Maintaining a Stable Connection</title>
+<link rel="stylesheet" href="../../../../../doc/src/boostbook.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="../index.html" title="Chapter 1. Boost.MQTT5: a C++17 MQTT client">
+<link rel="up" href="../index.html" title="Chapter 1. Boost.MQTT5: a C++17 MQTT client">
+<link rel="prev" href="auto_reconnect.html" title="Built-in Auto-Reconnect and Retry Mechanism">
+<link rel="next" href="optimising_communication.html" title="Optimising Communication">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table cellpadding="2" width="100%"><tr>
+<td valign="top"><img alt="Boost C++ Libraries" width="277" height="86" src="../../../../../boost.png"></td>
+<td align="center"><a href="../../../../../index.html">Home</a></td>
+<td align="center"><a href="../../../../../libs/libraries.htm">Libraries</a></td>
+<td align="center"><a href="http://www.boost.org/users/people.html">People</a></td>
+<td align="center"><a href="http://www.boost.org/users/faq.html">FAQ</a></td>
+<td align="center"><a href="../../../../../more/index.htm">More</a></td>
+</tr></table>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="auto_reconnect.html"><img src="../../../../../doc/src/images/prev.png" alt="Prev"></a><a accesskey="u" href="../index.html"><img src="../../../../../doc/src/images/up.png" alt="Up"></a><a accesskey="h" href="../index.html"><img src="../../../../../doc/src/images/home.png" alt="Home"></a><a accesskey="n" href="optimising_communication.html"><img src="../../../../../doc/src/images/next.png" alt="Next"></a>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="mqtt5.connection_maintenance"></a><a class="link" href="connection_maintenance.html" title="Maintaining a Stable Connection">Maintaining a Stable Connection</a>
+</h2></div></div></div>
+<p>
+      This chapter delves into the strategies used by the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> to sustain a
+      stable connection with the Broker.
+    </p>
+<div class="section">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="mqtt5.connection_maintenance.keep_alive"></a><a class="link" href="connection_maintenance.html#mqtt5.connection_maintenance.keep_alive" title="Understanding Keep Alive and Server Keep Alive">Understanding
+      Keep Alive and Server Keep Alive</a>
+</h3></div></div></div>
+<p>
+        Firstly, it is important to understand <code class="computeroutput"><span class="identifier">Keep</span>
+        <span class="identifier">Alive</span></code> and <code class="computeroutput"><span class="identifier">Server</span>
+        <span class="identifier">Keep</span> <span class="identifier">Alive</span></code>
+        and their role in maintaining a stable connection.
+      </p>
+<p>
+        The MQTT protocol defines a <code class="computeroutput"><span class="identifier">Keep</span>
+        <span class="identifier">Alive</span></code> value, which is the maximum
+        time interval that is permitted to elapse between the point at which the
+        Client finishes transmitting one packet and the point at which it starts
+        sending the next. In some instances, the Broker might propose a <code class="computeroutput"><span class="identifier">Server</span> <span class="identifier">Keep</span>
+        <span class="identifier">Alive</span></code> interval, which the Client
+        should adopt instead of the previously set <code class="computeroutput"><span class="identifier">Keep</span>
+        <span class="identifier">Alive</span></code> interval (further referred
+        to as the negotiated <code class="computeroutput"><span class="identifier">Keep</span> <span class="identifier">Alive</span></code> interval).
+      </p>
+<p>
+        If the Client does not transmit any packet within a period equal to <code class="computeroutput"><span class="number">1.5</span></code> times the negotiated <code class="computeroutput"><span class="identifier">Keep</span>
+        <span class="identifier">Alive</span></code> interval, the Broker is required
+        to close the connection to the Client.
+      </p>
+<p>
+        The Client is responsible for ensuring that the interval between packets
+        being sent does not exceed the negotiated <code class="computeroutput"><span class="identifier">Keep</span>
+        <span class="identifier">Alive</span></code> interval. The <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> does this
+        automatically by sending a <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901195" target="_top"><code class="computeroutput"><span class="identifier">PINGREQ</span></code></a> to the Broker every negotiated
+        <code class="computeroutput"><span class="identifier">Keep</span> <span class="identifier">Alive</span></code>
+        seconds, independent of any ongoing activity in the connection.
+      </p>
+<p>
+        If the negotiated <code class="computeroutput"><span class="identifier">Keep</span> <span class="identifier">Alive</span></code>
+        interval is <code class="computeroutput"><span class="number">0</span></code>, the Keep Alive
+        mechanism is deactivated, and the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> will <span class="bold"><strong>not</strong></span> send any <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901195" target="_top"><code class="computeroutput"><span class="identifier">PINGREQ</span></code></a> packets. This makes the
+        user responsible for maintaining the connection with the Broker.
+      </p>
+<p>
+        Use <a class="link" href="ref/boost__mqtt5__mqtt_client/keep_alive.html" title="boost::mqtt5::mqtt_client::keep_alive"><code class="literal">mqtt_client::keep_alive</code></a>
+        function during the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> configuration
+        phase to specify your preferred <code class="computeroutput"><span class="identifier">Keep</span>
+        <span class="identifier">Alive</span></code> time in seconds. Otherwise,
+        the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> defaults to
+        a <code class="computeroutput"><span class="identifier">Keep</span> <span class="identifier">Alive</span></code>
+        period of <code class="computeroutput"><span class="number">60</span> <span class="identifier">seconds</span></code>.
+      </p>
+<div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="../../../../../doc/src/images/note.png"></td>
+<th align="left">Note</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+          The MQTT protocol does not use the TCP's built-in keep-alive mechanism
+          as it is inflexible and limited in that it can be configured solely at
+          the operating system level. The default time a connection must be idle
+          before sending the first keep-alive packet is typically set to 2 hours,
+          exceeding the tolerances of most MQTT applications.
+        </p></td></tr>
+</table></div>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="mqtt5.connection_maintenance.half_open_connections"></a><a class="link" href="connection_maintenance.html#mqtt5.connection_maintenance.half_open_connections" title="Detecting and Handling Half-open Connections">Detecting
+      and Handling Half-open Connections</a>
+</h3></div></div></div>
+<p>
+        Ensuring the integrity and stability of network connections is a complex
+        task, given the number of potential disruptions such as software anomalies,
+        hardware failures, signal loss, router complications, interruptions in the
+        connectivity path, and more. A robust Client implementation must accurately
+        detect and resolve such disruptions despite the inherent difficulty in identifying
+        them.
+      </p>
+<p>
+        Under normal circumstances, when one side wants to close the TCP connection,
+        a TCP termination procedure, or a 4-way handshake, is initiated. The initiating
+        side sends a TCP packet indicating the end of data transmission to finish
+        a TCP connection, which is then acknowledged by the receiver. The receiver,
+        in turn, sends the same termination packet, receiving an acknowledgement
+        from the initiating side to conclude the process. This ensures both sides
+        have finished sending and receiving all data and agree to close the connection
+        gracefully.
+      </p>
+<p>
+        However, the connection may be abruptly terminated due to external disturbances.
+        For example, consider a situation in which the Client communicates with a
+        Broker but suddenly experiences an unexpected signal loss. Considering neither
+        side initiated a 4-way handshake to close the connection, the Client has
+        no reason to perceive the connection as anything but open. Consequently,
+        it will continue to send packets to the Broker and await responses, oblivious
+        that the packets would never reach the Broker on the other end. This results
+        in a half-open TCP connection scenario, where the connection is effectively
+        terminated on one end but remains active on the other.
+      </p>
+<p>
+        Without any mechanisms in place to identify half-open connections, the Client
+        risks remaining in a half-open state indefinitely. A common strategy to address
+        a half-open state is to incorporate a timeout mechanism. Within this strategy,
+        the Client anticipates receiving some data from the Broker within a predefined
+        timeout interval. Successful data reception within this interval affirms
+        that the connection is active and stable. However, if no data is received
+        within the timeout interval, the Client will close the connection, presuming
+        network failure. Consequently, if the Client is in the half-open state, then
+        no data will come through to it, and the connection will time out. This condition
+        triggers the Client to initiate the reconnection procedure to try to restore
+        the severed connection.
+      </p>
+<p>
+        To avoid false detections of a half-open state in idle connections, the Client
+        must ensure consistent data exchange. This is achieved through periodic
+        <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901195" target="_top"><code class="computeroutput"><span class="identifier">PINGREQ</span></code></a> packets sent by the Client
+        to the Broker, which responds with <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901200" target="_top"><code class="computeroutput"><span class="identifier">PINGRESP</span></code></a> packet, affirming its
+        operational status.
+      </p>
+<p>
+        The <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> will dispatch
+        a <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901195" target="_top"><code class="computeroutput"><span class="identifier">PINGREQ</span></code></a> at an interval equal to
+        the negotiated <code class="computeroutput"><span class="identifier">Keep</span> <span class="identifier">Alive</span></code>
+        seconds and expects to receive some data <a href="#ftn.mqtt5.connection_maintenance.half_open_connections.f0" class="footnote" name="mqtt5.connection_maintenance.half_open_connections.f0"><sup class="footnote">[1]</sup></a> from the Broker within <code class="computeroutput"><span class="number">1.5</span></code>
+        times the negotiated <code class="computeroutput"><span class="identifier">Keep</span> <span class="identifier">Alive</span></code> seconds. If no data is received within
+        this time, the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> will assume
+        a half-open state and initiate a reconnect procedure described in the <a class="link" href="auto_reconnect.html" title="Built-in Auto-Reconnect and Retry Mechanism">Built-in auto-reconnect and retry mechanism</a>.
+      </p>
+<div class="important"><table border="0" summary="Important">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[Important]" src="../../../../../doc/src/images/important.png"></td>
+<th align="left">Important</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+          If the negotiated <code class="computeroutput"><span class="identifier">Keep</span> <span class="identifier">Alive</span></code> value is set to <code class="computeroutput"><span class="number">0</span></code>,
+          the timeout mechanism to detect a half-open connection is disabled. As
+          a result, the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> loses its
+          capability to identify and adequately respond to half-open scenarios.
+        </p></td></tr>
+</table></div>
+</div>
+<div class="footnotes">
+<br><hr style="width:100; text-align:left;margin-left: 0">
+<div id="ftn.mqtt5.connection_maintenance.half_open_connections.f0" class="footnote"><p><a href="#mqtt5.connection_maintenance.half_open_connections.f0" class="para"><sup class="para">[1] </sup></a>
+          The <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> is not required
+          to specifically receive <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901200" target="_top"><code class="computeroutput"><span class="identifier">PINGRESP</span></code></a> to its <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901195" target="_top"><code class="computeroutput"><span class="identifier">PINGREQ</span></code></a>. Any data from the Broker
+          will suffice to confirm its status.
+        </p></div>
+</div>
+</div>
+<div class="copyright-footer">Copyright © 2023-2025 Mireo<p>
+        Distributed under the Boost Software License, Version 1.0. (See accompanying
+        file LICENSE_1_0.txt or copy at <a href="http://www.boost.org/LICENSE_1_0.txt" target="_top">http://www.boost.org/LICENSE_1_0.txt</a>)
+      </p>
+</div>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="auto_reconnect.html"><img src="../../../../../doc/src/images/prev.png" alt="Prev"></a><a accesskey="u" href="../index.html"><img src="../../../../../doc/src/images/up.png" alt="Up"></a><a accesskey="h" href="../index.html"><img src="../../../../../doc/src/images/home.png" alt="Home"></a><a accesskey="n" href="optimising_communication.html"><img src="../../../../../doc/src/images/next.png" alt="Next"></a>
+</div>
+</body>
+</html>

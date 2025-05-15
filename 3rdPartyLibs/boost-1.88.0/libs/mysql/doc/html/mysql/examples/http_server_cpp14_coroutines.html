@@ -1,0 +1,1045 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>A C++14 REST API server that uses asio::yield_context</title>
+<link rel="stylesheet" href="../../../../../../doc/src/boostbook.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="../../index.html" title="Chapter 1. Boost.MySQL">
+<link rel="up" href="../examples.html" title="Examples">
+<link rel="prev" href="http_server_cpp20.html" title="A REST API server that uses C++20 coroutines">
+<link rel="next" href="../ref.html" title="Reference">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table cellpadding="2" width="100%"><tr>
+<td valign="top"><img alt="Boost C++ Libraries" width="277" height="86" src="../../../../../../boost.png"></td>
+<td align="center"><a href="../../../../../../index.html">Home</a></td>
+<td align="center"><a href="../../../../../../libs/libraries.htm">Libraries</a></td>
+<td align="center"><a href="http://www.boost.org/users/people.html">People</a></td>
+<td align="center"><a href="http://www.boost.org/users/faq.html">FAQ</a></td>
+<td align="center"><a href="../../../../../../more/index.htm">More</a></td>
+</tr></table>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="http_server_cpp20.html"><img src="../../../../../../doc/src/images/prev.png" alt="Prev"></a><a accesskey="u" href="../examples.html"><img src="../../../../../../doc/src/images/up.png" alt="Up"></a><a accesskey="h" href="../../index.html"><img src="../../../../../../doc/src/images/home.png" alt="Home"></a><a accesskey="n" href="../ref.html"><img src="../../../../../../doc/src/images/next.png" alt="Next"></a>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="mysql.examples.http_server_cpp14_coroutines"></a><a class="link" href="http_server_cpp14_coroutines.html" title="A C++14 REST API server that uses asio::yield_context">A C++14
+      REST API server that uses asio::yield_context</a>
+</h3></div></div></div>
+<p>
+        This example assumes you have gone through the <a class="link" href="../examples.html#mysql.examples.setup">setup</a>.
+      </p>
+<pre class="programlisting"><span class="comment">/**
+ * Implements a HTTP REST API using Boost.MySQL and Boost.Beast.
+ * The server is asynchronous and uses asio::yield_context as its completion
+ * style. It only requires C++14 to work.
+ *
+ * It implements a minimal REST API to manage notes.
+ * A note is a simple object containing a user-defined title and content.
+ * The REST API offers CRUD operations on such objects:
+ *    POST   /notes           Creates a new note.
+ *    GET    /notes           Retrieves all notes.
+ *    GET    /notes?id=&lt;id&gt;   Retrieves a single note.
+ *    PUT    /notes?id=&lt;id&gt;   Replaces a note, changing its title and content.
+ *    DELETE /notes?id=&lt;id&gt;   Deletes a note.
+ *
+ * Notes are stored in MySQL. The note_repository class encapsulates
+ * access to MySQL, offering friendly functions to manipulate notes.
+ * server.cpp encapsulates all the boilerplate to launch an HTTP server,
+ * match URLs to API endpoints, and invoke the relevant note_repository functions.
+ *
+ * All communication happens asynchronously. We use stackful coroutines to simplify
+ * development, using asio::spawn and asio::yield_context.
+ * This example requires linking to Boost::context, Boost::json and Boost::url.
+ */</span>
+
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">mysql</span><span class="special">/</span><span class="identifier">any_address</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">mysql</span><span class="special">/</span><span class="identifier">connection_pool</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">mysql</span><span class="special">/</span><span class="identifier">pool_params</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">asio</span><span class="special">/</span><span class="identifier">detached</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">asio</span><span class="special">/</span><span class="identifier">io_context</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">asio</span><span class="special">/</span><span class="identifier">signal_set</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">asio</span><span class="special">/</span><span class="identifier">spawn</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">asio</span><span class="special">/</span><span class="identifier">thread_pool</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">system</span><span class="special">/</span><span class="identifier">error_code</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">cstdlib</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">iostream</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">memory</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">string</span><span class="special">&gt;</span>
+
+<span class="preprocessor">#include</span> <span class="string">"server.hpp"</span>
+
+<span class="keyword">namespace</span> <span class="identifier">asio</span> <span class="special">=</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">;</span>
+<span class="keyword">namespace</span> <span class="identifier">mysql</span> <span class="special">=</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">mysql</span><span class="special">;</span>
+<span class="keyword">using</span> <span class="keyword">namespace</span> <span class="identifier">notes</span><span class="special">;</span>
+
+<span class="keyword">int</span> <span class="identifier">main</span><span class="special">(</span><span class="keyword">int</span> <span class="identifier">argc</span><span class="special">,</span> <span class="keyword">char</span><span class="special">*</span> <span class="identifier">argv</span><span class="special">[])</span>
+<span class="special">{</span>
+    <span class="comment">// Check command line arguments.</span>
+    <span class="keyword">if</span> <span class="special">(</span><span class="identifier">argc</span> <span class="special">!=</span> <span class="number">5</span><span class="special">)</span>
+    <span class="special">{</span>
+        <span class="identifier">std</span><span class="special">::</span><span class="identifier">cerr</span> <span class="special">&lt;&lt;</span> <span class="string">"Usage: "</span> <span class="special">&lt;&lt;</span> <span class="identifier">argv</span><span class="special">[</span><span class="number">0</span><span class="special">]</span> <span class="special">&lt;&lt;</span> <span class="string">" &lt;username&gt; &lt;password&gt; &lt;mysql-hostname&gt; &lt;port&gt;\n"</span><span class="special">;</span>
+        <span class="keyword">return</span> <span class="identifier">EXIT_FAILURE</span><span class="special">;</span>
+    <span class="special">}</span>
+
+    <span class="comment">// Application config</span>
+    <span class="keyword">const</span> <span class="keyword">char</span><span class="special">*</span> <span class="identifier">mysql_username</span> <span class="special">=</span> <span class="identifier">argv</span><span class="special">[</span><span class="number">1</span><span class="special">];</span>
+    <span class="keyword">const</span> <span class="keyword">char</span><span class="special">*</span> <span class="identifier">mysql_password</span> <span class="special">=</span> <span class="identifier">argv</span><span class="special">[</span><span class="number">2</span><span class="special">];</span>
+    <span class="keyword">const</span> <span class="keyword">char</span><span class="special">*</span> <span class="identifier">mysql_hostname</span> <span class="special">=</span> <span class="identifier">argv</span><span class="special">[</span><span class="number">3</span><span class="special">];</span>
+    <span class="keyword">auto</span> <span class="identifier">port</span> <span class="special">=</span> <span class="keyword">static_cast</span><span class="special">&lt;</span><span class="keyword">unsigned</span> <span class="keyword">short</span><span class="special">&gt;(</span><span class="identifier">std</span><span class="special">::</span><span class="identifier">stoi</span><span class="special">(</span><span class="identifier">argv</span><span class="special">[</span><span class="number">4</span><span class="special">]));</span>
+
+    <span class="comment">// An event loop, where the application will run.</span>
+    <span class="identifier">asio</span><span class="special">::</span><span class="identifier">io_context</span> <span class="identifier">ctx</span><span class="special">;</span>
+
+    <span class="comment">// Configuration for the connection pool</span>
+    <span class="identifier">mysql</span><span class="special">::</span><span class="identifier">pool_params</span> <span class="identifier">params</span><span class="special">{</span>
+        <span class="comment">// Connect using TCP, to the given hostname and using the default port</span>
+        <span class="identifier">mysql</span><span class="special">::</span><span class="identifier">host_and_port</span><span class="special">{</span><span class="identifier">mysql_hostname</span><span class="special">},</span>
+
+        <span class="comment">// Authenticate using the given username</span>
+        <span class="identifier">mysql_username</span><span class="special">,</span>
+
+        <span class="comment">// Password for the above username</span>
+        <span class="identifier">mysql_password</span><span class="special">,</span>
+
+        <span class="comment">// Database to use when connecting</span>
+        <span class="string">"boost_mysql_examples"</span><span class="special">,</span>
+    <span class="special">};</span>
+
+    <span class="comment">// Create the connection pool.</span>
+    <span class="comment">// shared_state contains all singleton objects that our application may need.</span>
+    <span class="comment">// Coroutines created by asio::spawn might survive until the io_context is destroyed</span>
+    <span class="comment">// (even after io_context::stop() has been called). This is not the case for callbacks</span>
+    <span class="comment">// and C++20 coroutines. Using a shared_ptr here ensures that the pool survives long enough.</span>
+    <span class="keyword">auto</span> <span class="identifier">st</span> <span class="special">=</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">make_shared</span><span class="special">&lt;</span><span class="identifier">shared_state</span><span class="special">&gt;(</span><span class="identifier">mysql</span><span class="special">::</span><span class="identifier">connection_pool</span><span class="special">(</span><span class="identifier">ctx</span><span class="special">,</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">move</span><span class="special">(</span><span class="identifier">params</span><span class="special">)));</span>
+
+    <span class="comment">// Launch the MySQL pool</span>
+    <span class="identifier">st</span><span class="special">-&gt;</span><span class="identifier">pool</span><span class="special">.</span><span class="identifier">async_run</span><span class="special">(</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">detached</span><span class="special">);</span>
+
+    <span class="comment">// A signal_set allows us to intercept SIGINT and SIGTERM and exit gracefully</span>
+    <span class="identifier">asio</span><span class="special">::</span><span class="identifier">signal_set</span> <span class="identifier">signals</span><span class="special">{</span><span class="identifier">ctx</span><span class="special">.</span><span class="identifier">get_executor</span><span class="special">(),</span> <span class="identifier">SIGINT</span><span class="special">,</span> <span class="identifier">SIGTERM</span><span class="special">};</span>
+    <span class="identifier">signals</span><span class="special">.</span><span class="identifier">async_wait</span><span class="special">([</span><span class="identifier">st</span><span class="special">,</span> <span class="special">&amp;</span><span class="identifier">ctx</span><span class="special">](</span><span class="identifier">boost</span><span class="special">::</span><span class="identifier">system</span><span class="special">::</span><span class="identifier">error_code</span><span class="special">,</span> <span class="keyword">int</span><span class="special">)</span> <span class="special">{</span>
+        <span class="comment">// Stop the execution context. This will cause main to exit</span>
+        <span class="identifier">ctx</span><span class="special">.</span><span class="identifier">stop</span><span class="special">();</span>
+    <span class="special">});</span>
+
+    <span class="comment">// Launch the server. This will run until the context is stopped</span>
+    <span class="identifier">asio</span><span class="special">::</span><span class="identifier">spawn</span><span class="special">(</span>
+        <span class="comment">// Spawn the coroutine in the io_context</span>
+        <span class="identifier">ctx</span><span class="special">,</span>
+
+        <span class="comment">// The coroutine to run</span>
+        <span class="special">[</span><span class="identifier">st</span><span class="special">,</span> <span class="identifier">port</span><span class="special">](</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">yield_context</span> <span class="identifier">yield</span><span class="special">)</span> <span class="special">{</span> <span class="identifier">run_server</span><span class="special">(</span><span class="identifier">st</span><span class="special">,</span> <span class="identifier">port</span><span class="special">,</span> <span class="identifier">yield</span><span class="special">);</span> <span class="special">},</span>
+
+        <span class="comment">// If an exception is thrown in the coroutine, propagate it</span>
+        <span class="special">[](</span><span class="identifier">std</span><span class="special">::</span><span class="identifier">exception_ptr</span> <span class="identifier">exc</span><span class="special">)</span> <span class="special">{</span>
+            <span class="keyword">if</span> <span class="special">(</span><span class="identifier">exc</span><span class="special">)</span>
+                <span class="identifier">std</span><span class="special">::</span><span class="identifier">rethrow_exception</span><span class="special">(</span><span class="identifier">exc</span><span class="special">);</span>
+        <span class="special">}</span>
+    <span class="special">);</span>
+
+    <span class="comment">// Run the server until stopped</span>
+    <span class="identifier">ctx</span><span class="special">.</span><span class="identifier">run</span><span class="special">();</span>
+
+    <span class="identifier">std</span><span class="special">::</span><span class="identifier">cout</span> <span class="special">&lt;&lt;</span> <span class="string">"Server exiting"</span> <span class="special">&lt;&lt;</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">endl</span><span class="special">;</span>
+
+    <span class="comment">// (If we get here, it means we got a SIGINT or SIGTERM)</span>
+    <span class="keyword">return</span> <span class="identifier">EXIT_SUCCESS</span><span class="special">;</span>
+<span class="special">}</span>
+</pre>
+<pre class="programlisting"><span class="comment">//</span>
+<span class="comment">// File: types.hpp</span>
+<span class="comment">//</span>
+<span class="comment">// Contains type definitions used in the REST API and database code.</span>
+<span class="comment">// We use Boost.Describe (BOOST_DESCRIBE_STRUCT) to add reflection</span>
+<span class="comment">// capabilities to our types. This allows using Boost.MySQL</span>
+<span class="comment">// static interface (i.e. static_results&lt;T&gt;) to parse query results,</span>
+<span class="comment">// and Boost.JSON automatic serialization/deserialization.</span>
+
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">describe</span><span class="special">/</span><span class="keyword">class</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">cstdint</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">string</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">vector</span><span class="special">&gt;</span>
+
+<span class="keyword">namespace</span> <span class="identifier">notes</span> <span class="special">{</span>
+
+<span class="keyword">struct</span> <span class="identifier">note_t</span>
+<span class="special">{</span>
+    <span class="comment">// The unique database ID of the object.</span>
+    <span class="identifier">std</span><span class="special">::</span><span class="identifier">int64_t</span> <span class="identifier">id</span><span class="special">;</span>
+
+    <span class="comment">// The note's title.</span>
+    <span class="identifier">std</span><span class="special">::</span><span class="identifier">string</span> <span class="identifier">title</span><span class="special">;</span>
+
+    <span class="comment">// The note's actual content.</span>
+    <span class="identifier">std</span><span class="special">::</span><span class="identifier">string</span> <span class="identifier">content</span><span class="special">;</span>
+<span class="special">};</span>
+<span class="identifier">BOOST_DESCRIBE_STRUCT</span><span class="special">(</span><span class="identifier">note_t</span><span class="special">,</span> <span class="special">(),</span> <span class="special">(</span><span class="identifier">id</span><span class="special">,</span> <span class="identifier">title</span><span class="special">,</span> <span class="identifier">content</span><span class="special">))</span>
+
+<span class="comment">//</span>
+<span class="comment">// REST API requests.</span>
+<span class="comment">//</span>
+
+<span class="comment">// Used for creating and replacing notes</span>
+<span class="keyword">struct</span> <span class="identifier">note_request_body</span>
+<span class="special">{</span>
+    <span class="comment">// The title that the new note should have.</span>
+    <span class="identifier">std</span><span class="special">::</span><span class="identifier">string</span> <span class="identifier">title</span><span class="special">;</span>
+
+    <span class="comment">// The content that the new note should have.</span>
+    <span class="identifier">std</span><span class="special">::</span><span class="identifier">string</span> <span class="identifier">content</span><span class="special">;</span>
+<span class="special">};</span>
+<span class="identifier">BOOST_DESCRIBE_STRUCT</span><span class="special">(</span><span class="identifier">note_request_body</span><span class="special">,</span> <span class="special">(),</span> <span class="special">(</span><span class="identifier">title</span><span class="special">,</span> <span class="identifier">content</span><span class="special">))</span>
+
+<span class="comment">//</span>
+<span class="comment">// REST API responses.</span>
+<span class="comment">//</span>
+
+<span class="comment">// Used by endpoints returning several notes (like GET /notes).</span>
+<span class="keyword">struct</span> <span class="identifier">multi_notes_response</span>
+<span class="special">{</span>
+    <span class="comment">// The retrieved notes.</span>
+    <span class="identifier">std</span><span class="special">::</span><span class="identifier">vector</span><span class="special">&lt;</span><span class="identifier">note_t</span><span class="special">&gt;</span> <span class="identifier">notes</span><span class="special">;</span>
+<span class="special">};</span>
+<span class="identifier">BOOST_DESCRIBE_STRUCT</span><span class="special">(</span><span class="identifier">multi_notes_response</span><span class="special">,</span> <span class="special">(),</span> <span class="special">(</span><span class="identifier">notes</span><span class="special">))</span>
+
+<span class="comment">// Used by endpoints returning a single note (like GET /notes/&lt;id&gt;)</span>
+<span class="keyword">struct</span> <span class="identifier">single_note_response</span>
+<span class="special">{</span>
+    <span class="comment">// The retrieved note.</span>
+    <span class="identifier">note_t</span> <span class="identifier">note</span><span class="special">;</span>
+<span class="special">};</span>
+<span class="identifier">BOOST_DESCRIBE_STRUCT</span><span class="special">(</span><span class="identifier">single_note_response</span><span class="special">,</span> <span class="special">(),</span> <span class="special">(</span><span class="identifier">note</span><span class="special">))</span>
+
+<span class="comment">// Used by DELETE /notes/&lt;id&gt;</span>
+<span class="keyword">struct</span> <span class="identifier">delete_note_response</span>
+<span class="special">{</span>
+    <span class="comment">// true if the note was found and deleted, false if the note didn't exist.</span>
+    <span class="keyword">bool</span> <span class="identifier">deleted</span><span class="special">;</span>
+<span class="special">};</span>
+<span class="identifier">BOOST_DESCRIBE_STRUCT</span><span class="special">(</span><span class="identifier">delete_note_response</span><span class="special">,</span> <span class="special">(),</span> <span class="special">(</span><span class="identifier">deleted</span><span class="special">))</span>
+
+<span class="special">}</span>  <span class="comment">// namespace notes</span>
+</pre>
+<pre class="programlisting"><span class="comment">//</span>
+<span class="comment">// File: repository.hpp</span>
+<span class="comment">//</span>
+
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">mysql</span><span class="special">/</span><span class="identifier">connection_pool</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">mysql</span><span class="special">/</span><span class="identifier">string_view</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">asio</span><span class="special">/</span><span class="identifier">spawn</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">optional</span><span class="special">/</span><span class="identifier">optional</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">cstdint</span><span class="special">&gt;</span>
+
+<span class="preprocessor">#include</span> <span class="string">"types.hpp"</span>
+
+<span class="keyword">namespace</span> <span class="identifier">notes</span> <span class="special">{</span>
+
+<span class="comment">// Encapsulates database logic.</span>
+<span class="comment">// All operations are async, and use stackful coroutines (asio::yield_context).</span>
+<span class="comment">// If the database can't be contacted, or unexpected database errors are found,</span>
+<span class="comment">// an exception of type mysql::error_with_diagnostics is thrown.</span>
+<span class="keyword">class</span> <span class="identifier">note_repository</span>
+<span class="special">{</span>
+    <span class="identifier">boost</span><span class="special">::</span><span class="identifier">mysql</span><span class="special">::</span><span class="identifier">connection_pool</span><span class="special">&amp;</span> <span class="identifier">pool_</span><span class="special">;</span>
+
+<span class="keyword">public</span><span class="special">:</span>
+    <span class="comment">// Constructor (this is a cheap-to-construct object)</span>
+    <span class="identifier">note_repository</span><span class="special">(</span><span class="identifier">boost</span><span class="special">::</span><span class="identifier">mysql</span><span class="special">::</span><span class="identifier">connection_pool</span><span class="special">&amp;</span> <span class="identifier">pool</span><span class="special">)</span> <span class="keyword">noexcept</span> <span class="special">:</span> <span class="identifier">pool_</span><span class="special">(</span><span class="identifier">pool</span><span class="special">)</span> <span class="special">{}</span>
+
+    <span class="comment">// Retrieves all notes present in the database</span>
+    <span class="identifier">std</span><span class="special">::</span><span class="identifier">vector</span><span class="special">&lt;</span><span class="identifier">note_t</span><span class="special">&gt;</span> <span class="identifier">get_notes</span><span class="special">(</span><span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">yield_context</span> <span class="identifier">yield</span><span class="special">);</span>
+
+    <span class="comment">// Retrieves a single note by ID. Returns an empty optional</span>
+    <span class="comment">// if no note with the given ID is present in the database.</span>
+    <span class="identifier">boost</span><span class="special">::</span><span class="identifier">optional</span><span class="special">&lt;</span><span class="identifier">note_t</span><span class="special">&gt;</span> <span class="identifier">get_note</span><span class="special">(</span><span class="identifier">std</span><span class="special">::</span><span class="identifier">int64_t</span> <span class="identifier">note_id</span><span class="special">,</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">yield_context</span> <span class="identifier">yield</span><span class="special">);</span>
+
+    <span class="comment">// Creates a new note in the database with the given components.</span>
+    <span class="comment">// Returns the newly created note, including the newly allocated ID.</span>
+    <span class="identifier">note_t</span> <span class="identifier">create_note</span><span class="special">(</span>
+        <span class="identifier">boost</span><span class="special">::</span><span class="identifier">mysql</span><span class="special">::</span><span class="identifier">string_view</span> <span class="identifier">title</span><span class="special">,</span>
+        <span class="identifier">boost</span><span class="special">::</span><span class="identifier">mysql</span><span class="special">::</span><span class="identifier">string_view</span> <span class="identifier">content</span><span class="special">,</span>
+        <span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">yield_context</span> <span class="identifier">yield</span>
+    <span class="special">);</span>
+
+    <span class="comment">// Replaces the note identified by note_id, setting its components to the</span>
+    <span class="comment">// ones passed. Returns the updated note. If no note with ID matching</span>
+    <span class="comment">// note_id can be found, an empty optional is returned.</span>
+    <span class="identifier">boost</span><span class="special">::</span><span class="identifier">optional</span><span class="special">&lt;</span><span class="identifier">note_t</span><span class="special">&gt;</span> <span class="identifier">replace_note</span><span class="special">(</span>
+        <span class="identifier">std</span><span class="special">::</span><span class="identifier">int64_t</span> <span class="identifier">note_id</span><span class="special">,</span>
+        <span class="identifier">boost</span><span class="special">::</span><span class="identifier">mysql</span><span class="special">::</span><span class="identifier">string_view</span> <span class="identifier">title</span><span class="special">,</span>
+        <span class="identifier">boost</span><span class="special">::</span><span class="identifier">mysql</span><span class="special">::</span><span class="identifier">string_view</span> <span class="identifier">content</span><span class="special">,</span>
+        <span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">yield_context</span> <span class="identifier">yield</span>
+    <span class="special">);</span>
+
+    <span class="comment">// Deletes the note identified by note_id. Returns true if</span>
+    <span class="comment">// a matching note was deleted, false otherwise.</span>
+    <span class="keyword">bool</span> <span class="identifier">delete_note</span><span class="special">(</span><span class="identifier">std</span><span class="special">::</span><span class="identifier">int64_t</span> <span class="identifier">note_id</span><span class="special">,</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">yield_context</span> <span class="identifier">yield</span><span class="special">);</span>
+<span class="special">};</span>
+
+<span class="special">}</span>  <span class="comment">// namespace notes</span>
+</pre>
+<pre class="programlisting"><span class="comment">//</span>
+<span class="comment">// File: repository.cpp</span>
+<span class="comment">//</span>
+<span class="comment">// SQL code to create the notes table is located under $REPO_ROOT/example/db_setup.sql</span>
+<span class="comment">// The table looks like this:</span>
+<span class="comment">//</span>
+<span class="comment">// CREATE TABLE notes(</span>
+<span class="comment">//     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,</span>
+<span class="comment">//     title TEXT NOT NULL,</span>
+<span class="comment">//     content TEXT NOT NULL</span>
+<span class="comment">// );</span>
+
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">mysql</span><span class="special">/</span><span class="identifier">static_results</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">mysql</span><span class="special">/</span><span class="identifier">string_view</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">mysql</span><span class="special">/</span><span class="identifier">with_diagnostics</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">mysql</span><span class="special">/</span><span class="identifier">with_params</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">iterator</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">tuple</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">utility</span><span class="special">&gt;</span>
+
+<span class="preprocessor">#include</span> <span class="string">"repository.hpp"</span>
+<span class="preprocessor">#include</span> <span class="string">"types.hpp"</span>
+
+<span class="keyword">namespace</span> <span class="identifier">asio</span> <span class="special">=</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">;</span>
+<span class="keyword">namespace</span> <span class="identifier">mysql</span> <span class="special">=</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">mysql</span><span class="special">;</span>
+<span class="keyword">using</span> <span class="keyword">namespace</span> <span class="identifier">notes</span><span class="special">;</span>
+<span class="keyword">using</span> <span class="identifier">mysql</span><span class="special">::</span><span class="identifier">with_diagnostics</span><span class="special">;</span>
+
+<span class="identifier">std</span><span class="special">::</span><span class="identifier">vector</span><span class="special">&lt;</span><span class="identifier">note_t</span><span class="special">&gt;</span> <span class="identifier">note_repository</span><span class="special">::</span><span class="identifier">get_notes</span><span class="special">(</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">yield_context</span> <span class="identifier">yield</span><span class="special">)</span>
+<span class="special">{</span>
+    <span class="comment">// Get a fresh connection from the pool. This returns a pooled_connection object,</span>
+    <span class="comment">// which is a proxy to an any_connection object. Connections are returned to the</span>
+    <span class="comment">// pool when the proxy object is destroyed.</span>
+    <span class="comment">// with_diagnostics ensures that thrown exceptions include diagnostic information</span>
+    <span class="identifier">mysql</span><span class="special">::</span><span class="identifier">pooled_connection</span> <span class="identifier">conn</span> <span class="special">=</span> <span class="identifier">pool_</span><span class="special">.</span><span class="identifier">async_get_connection</span><span class="special">(</span><span class="identifier">with_diagnostics</span><span class="special">(</span><span class="identifier">yield</span><span class="special">));</span>
+
+    <span class="comment">// Execute the query to retrieve all notes. We use the static interface to</span>
+    <span class="comment">// parse results directly into static_results.</span>
+    <span class="identifier">mysql</span><span class="special">::</span><span class="identifier">static_results</span><span class="special">&lt;</span><span class="identifier">note_t</span><span class="special">&gt;</span> <span class="identifier">result</span><span class="special">;</span>
+    <span class="identifier">conn</span><span class="special">-&gt;</span><span class="identifier">async_execute</span><span class="special">(</span><span class="string">"SELECT id, title, content FROM notes"</span><span class="special">,</span> <span class="identifier">result</span><span class="special">,</span> <span class="identifier">with_diagnostics</span><span class="special">(</span><span class="identifier">yield</span><span class="special">));</span>
+
+    <span class="comment">// By default, connections are reset after they are returned to the pool</span>
+    <span class="comment">// (by using any_connection::async_reset_connection). This will reset any</span>
+    <span class="comment">// session state we changed while we were using the connection</span>
+    <span class="comment">// (e.g. it will deallocate any statements we prepared).</span>
+    <span class="comment">// We did nothing to mutate session state, so we can tell the pool to skip</span>
+    <span class="comment">// this step, providing a minor performance gain.</span>
+    <span class="comment">// We use pooled_connection::return_without_reset to do this.</span>
+    <span class="identifier">conn</span><span class="special">.</span><span class="identifier">return_without_reset</span><span class="special">();</span>
+
+    <span class="comment">// Move note_t objects into the result vector to save allocations</span>
+    <span class="keyword">return</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">vector</span><span class="special">&lt;</span><span class="identifier">note_t</span><span class="special">&gt;(</span>
+        <span class="identifier">std</span><span class="special">::</span><span class="identifier">make_move_iterator</span><span class="special">(</span><span class="identifier">result</span><span class="special">.</span><span class="identifier">rows</span><span class="special">().</span><span class="identifier">begin</span><span class="special">()),</span>
+        <span class="identifier">std</span><span class="special">::</span><span class="identifier">make_move_iterator</span><span class="special">(</span><span class="identifier">result</span><span class="special">.</span><span class="identifier">rows</span><span class="special">().</span><span class="identifier">end</span><span class="special">())</span>
+    <span class="special">);</span>
+
+    <span class="comment">// If an exception is thrown, pooled_connection's destructor will</span>
+    <span class="comment">// return the connection automatically to the pool.</span>
+<span class="special">}</span>
+
+<span class="identifier">boost</span><span class="special">::</span><span class="identifier">optional</span><span class="special">&lt;</span><span class="identifier">note_t</span><span class="special">&gt;</span> <span class="identifier">note_repository</span><span class="special">::</span><span class="identifier">get_note</span><span class="special">(</span><span class="identifier">std</span><span class="special">::</span><span class="identifier">int64_t</span> <span class="identifier">note_id</span><span class="special">,</span> <span class="identifier">asio</span><span class="special">::</span><span class="identifier">yield_context</span> <span class="identifier">yield</span><span class="special">)</span>
+<span class="special">{</span>
+    <span class="comment">// Get a fresh connection from the pool. This returns a pooled_connection object,</span>
+    <span class="comment">// which is a proxy to an any_connection object. Connections are returned to the</span>
+    <span class="comment">// pool when the proxy object is destroyed.</span>
+    <span class="identifier">mysql</span><span class="special">::</span><span class="identifier">pooled_connection</span> <span class="identifier">conn</span> <span class="special">=</span> <span class="identifier">pool_</span><span class="special">.</span><span class="identifier">async_get_connection</span><span class="special">(</span><span class="identifier">with_diagnostics</span><span class="special">(</span><span class="identifier">yield</span><span class="special">));</span>
+
+    <span class="comment">// When executed, with_params expands a query client-side before sending it to the server.</span>
+    <span class="comment">// Placeholders are marked with {}</span>
+    <span class="identifier">mysql</span><span class="special">::</span><span class="identifier">static_results</span><span class="special">&lt;</span><span class="identifier">note_t</span><span class="special">&gt;</span> <span class="identifier">result</span><span class="special">;</span>
+    <span class="identifier">conn</span><span class="special">-&gt;</span><span class="identifier">async_execute</span><span class="special">(</span>
+        <span class="identifier">mysql</span><span class="special">::</span><span class="identifier">with_params</span><span class="special">(</span><span class="string">"SELECT id, title, content FROM notes WHERE id = {}"</span><span class="special">,</span> <span class="identifier">note_id</span><span class="special">),</span>
+        <span class="identifier">result</span><span class="special">,</span>
+        <span class="identifier">with_diagnostics</span><span class="special">(</span><span class="identifier">yield</span><span class="special">)</span>
+    <span class="special">);</span>
+
+    <span class="comment">// We did nothing to mutate session state, so we can skip reset</span>
+    <span class="identifier">conn</span><span class="special">.</span><span class="identifier">return_without_reset</span><span class="special">();</span>
+
+    <span class="comment">// An empty results object indicates that no note was found</span>
+    <span class="keyword">if</span> <span class="special">(</span><span class="identifier">result</span><span class="special">.</span><span class="identifier">rows</span><span class="special">().</span><span class="identifier">empty</span><span class="special">())</span>
+        <span class="keyword">return</span> <span class="special">{};</span>
+    <span class="keyword">else</span>
+        <span class="keyword">return</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">move</span><span class="special">(</span><span class="identifier">result</span><span class="special">.</span><span class="identifier">rows</span><span class="special">()[</span><span class="number">0</span><span class="special">]);</span>
+<span class="special">}</span>
+
+<span class="identifier">note_t</span> <span class="identifier">note_repository</span><span class="special">::</span><span class="identifier">create_note</span><span class="special">(</span>
+    <span class="identifier">mysql</span><span class="special">::</span><span class="identifier">string_view</span> <span class="identifier">title</span><span class="special">,</span>
+    <span class="identifier">mysql</span><span class="special">::</span><span class="identifier">string_view</span> <span class="identifier">content</span><span class="special">,</span>
+    <span class="identifier">asio</span><span class="special">::</span><span class="identifier">yield_context</span> <span class="identifier">yield</span>
+<span class="special">)</span>
+<span class="special">{</span>
+    <span class="comment">// Get a fresh connection from the pool. This returns a pooled_connection object,</span>
+    <span class="comment">// which is a proxy to an any_connection object. Connections are returned to the</span>
+    <span class="comment">// pool when the proxy object is destroyed.</span>
+    <span class="identifier">mysql</span><span class="special">::</span><span class="identifier">pooled_connection</span> <span class="identifier">conn</span> <span class="special">=</span> <span class="identifier">pool_</span><span class="special">.</span><span class="identifier">async_get_connection</span><span class="special">(</span><span class="identifier">with_diagnostics</span><span class="special">(</span><span class="identifier">yield</span><span class="special">));</span>
+
+    <span class="comment">// We will use statements in this function for the sake of example.</span>
+    <span class="comment">// We don't need to deallocate the statement explicitly,</span>
+    <span class="comment">// since the pool takes care of it after the connection is returned.</span>
+    <span class="comment">// You can also use with_params instead of statements.</span>
+    <span class="identifier">mysql</span><span class="special">::</span><span class="identifier">statement</span> <span class="identifier">stmt</span> <span class="special">=</span> <span class="identifier">conn</span><span class="special">-&gt;</span><span class="identifier">async_prepare_statement</span><span class="special">(</span>
+        <span class="string">"INSERT INTO notes (title, content) VALUES (?, ?)"</span><span class="special">,</span>
+        <span class="identifier">with_diagnostics</span><span class="special">(</span><span class="identifier">yield</span><span class="special">)</span>
+    <span class="special">);</span>
+
+    <span class="comment">// Execute the statement. The statement won't produce any rows,</span>
+    <span class="comment">// so we can use static_results&lt;std::tuple&lt;&gt;&gt;</span>
+    <span class="identifier">mysql</span><span class="special">::</span><span class="identifier">static_results</span><span class="special">&lt;</span><span class="identifier">std</span><span class="special">::</span><span class="identifier">tuple</span><span class="special">&lt;&gt;&gt;</span> <span class="identifier">result</span><span class="special">;</span>
+    <span class="identifier">conn</span><span class="special">-&gt;</span><span class="identifier">async_execute</span><span class="special">(</span><span class="identifier">stmt</span><span class="special">.</span><span class="identifier">bind</span><span class="special">(</span><span class="identifier">title</span><span class="special">,</span> <span class="identifier">content</span><span class="special">),</span> <span class="identifier">result</span><span class="special">,</span> <span class="identifier">with_diagnostics</span><span class="special">(</span><span class="identifier">yield</span><span class="special">));</span>
+
+    <span class="comment">// MySQL reports last_insert_id as a uint64_t regardless of the actual ID type.</span>
+    <span class="comment">// Given our table definition, this cast is safe</span>
+    <span class="keyword">auto</span> <span class="identifier">new_id</span> <span class="special">=</span> <span class="keyword">static_cast</span><span class="special">&lt;</span><span class="identifier">std</span><span class="special">::</span><span class="identifier">int64_t</span><span class="special">&gt;(</span><span class="identifier">result</span><span class="special">.</span><span class="identifier">last_insert_id</span><span class="special">());</span>
+
+    <span class="keyword">return</span> <span class="identifier">note_t</span><span class="special">{</span><span class="identifier">new_id</span><span class="special">,</span> <span class="identifier">title</span><span class="special">,</span> <span class="identifier">content</span><span class="special">};</span>
+
+    <span class="comment">// There's no need to return the connection explicitly to the pool,</span>
+    <span class="comment">// pooled_connection's destructor takes care of it.</span>
+<span class="special">}</span>
+
+<span class="identifier">boost</span><span class="special">::</span><span class="identifier">optional</span><span class="special">&lt;</span><span class="identifier">note_t</span><span class="special">&gt;</span> <span class="identifier">note_repository</span><span class="special">::</span><span class="identifier">replace_note</span><span class="special">(</span>
+    <span class="identifier">std</span><span class="special">::</span><span class="identifier">int64_t</span> <span class="identifier">note_id</span><span class="special">,</span>
+    <span class="identifier">mysql</span><span class="special">::</span><span class="identifier">string_view</span> <span class="identifier">title</span><span class="special">,</span>
+    <span class="identifier">mysql</span><span class="special">::</span><span class="identifier">string_view</span> <span class="identifier">content</span><span class="special">,</span>
+    <span class="identifier">asio</span><span class="special">::</span><span class="identifier">yield_context</span> <span class="identifier">yield</span>
+<span class="special">)</span>
+<span class="special">{</span>
+    <span class="comment">// Get a fresh connection from the pool. This returns a pooled_connection object,</span>
+    <span class="comment">// which is a proxy to an any_connection object. Connections are returned to the</span>
+    <span class="comment">// pool when the proxy object is destroyed.</span>
+    <span class="identifier">mysql</span><span class="special">::</span><span class="identifier">pooled_connection</span> <span class="identifier">conn</span> <span class="special">=</span> <span class="identifier">pool_</span><span class="special">.</span><span class="identifier">async_get_connection</span><span class="special">(</span><span class="identifier">with_diagnostics</span><span class="special">(</span><span class="identifier">yield</span><span class="special">));</span>
+
+    <span class="comment">// Expand and execute the query.</span>
+    <span class="comment">// It won't produce any rows, so we can use static_results&lt;std::tuple&lt;&gt;&gt;</span>
+    <span class="identifier">mysql</span><span class="special">::</span><span class="identifier">static_results</span><span class="special">&lt;</span><span class="identifier">std</span><span class="special">::</span><span class="identifier">tuple</span><span class="special">&lt;&gt;&gt;</span> <span class="identifier">empty_result</span><span class="special">;</span>
+    <span class="identifier">conn</span><span class="special">-&gt;</span><span class="identifier">async_execute</span><span class="special">(</span>
+        <span class="identifier">mysql</span><span class="special">::</span><span class="identifier">with_params</span><span class="special">(</span>
+            <span class="string">"UPDATE notes SET title = {}, content = {} WHERE id = {}"</span><span class="special">,</span>
+            <span class="identifier">title</span><span class="special">,</span>
+            <span class="identifier">content</span><span class="special">,</span>
+            <span class="identifier">note_id</span>
+        <span class="special">),</span>
+        <span class="identifier">empty_result</span><span class="special">,</span>
+        <span class="identifier">with_diagnostics</span><span class="special">(</span><span class="identifier">yield</span><span class="special">)</span>
+    <span class="special">);</span>
+
+    <span class="comment">// We didn't mutate session state, so we can skip reset</span>
+    <span class="identifier">conn</span><span class="special">.</span><span class="identifier">return_without_reset</span><span class="special">();</span>
+
+    <span class="comment">// No affected rows means that the note doesn't exist</span>
+    <span class="keyword">if</span> <span class="special">(</span><span class="identifier">empty_result</span><span class="special">.</span><span class="identifier">affected_rows</span><span class="special">()</span> <span class="special">==</span> <span class="number">0u</span><span class="special">)</span>
+        <span class="keyword">return</span> <span class="special">{};</span>
+
+    <span class="keyword">return</span> <span class="identifier">note_t</span><span class="special">{</span><span class="identifier">note_id</span><span class="special">,</span> <span class="identifier">title</span><span class="special">,</span> <span class="identifier">content</span><span class="special">};</span>
+<span class="special">}</span>
+
+<span class="keyword">bool</span> <span class="identifier">note_repository</span><span class="special">::</span><span class="identifier">delete_note</span><span class="special">(</span><span class="identifier">std</span><span class="special">::</span><span class="identifier">int64_t</span> <span class="identifier">note_id</span><span class="special">,</span> <span class="identifier">asio</span><span class="special">::</span><span class="identifier">yield_context</span> <span class="identifier">yield</span><span class="special">)</span>
+<span class="special">{</span>
+    <span class="comment">// Get a fresh connection from the pool. This returns a pooled_connection object,</span>
+    <span class="comment">// which is a proxy to an any_connection object. Connections are returned to the</span>
+    <span class="comment">// pool when the proxy object is destroyed.</span>
+    <span class="identifier">mysql</span><span class="special">::</span><span class="identifier">pooled_connection</span> <span class="identifier">conn</span> <span class="special">=</span> <span class="identifier">pool_</span><span class="special">.</span><span class="identifier">async_get_connection</span><span class="special">(</span><span class="identifier">with_diagnostics</span><span class="special">(</span><span class="identifier">yield</span><span class="special">));</span>
+
+    <span class="comment">// Expand and execute the query.</span>
+    <span class="comment">// It won't produce any rows, so we can use static_results&lt;std::tuple&lt;&gt;&gt;</span>
+    <span class="identifier">mysql</span><span class="special">::</span><span class="identifier">static_results</span><span class="special">&lt;</span><span class="identifier">std</span><span class="special">::</span><span class="identifier">tuple</span><span class="special">&lt;&gt;&gt;</span> <span class="identifier">empty_result</span><span class="special">;</span>
+    <span class="identifier">conn</span><span class="special">-&gt;</span><span class="identifier">async_execute</span><span class="special">(</span>
+        <span class="identifier">mysql</span><span class="special">::</span><span class="identifier">with_params</span><span class="special">(</span><span class="string">"DELETE FROM notes WHERE id = {}"</span><span class="special">,</span> <span class="identifier">note_id</span><span class="special">),</span>
+        <span class="identifier">empty_result</span><span class="special">,</span>
+        <span class="identifier">with_diagnostics</span><span class="special">(</span><span class="identifier">yield</span><span class="special">)</span>
+    <span class="special">);</span>
+
+    <span class="comment">// We didn't mutate session state, so we can skip reset</span>
+    <span class="identifier">conn</span><span class="special">.</span><span class="identifier">return_without_reset</span><span class="special">();</span>
+
+    <span class="comment">// No affected rows means that the note didn't exist</span>
+    <span class="keyword">return</span> <span class="identifier">empty_result</span><span class="special">.</span><span class="identifier">affected_rows</span><span class="special">()</span> <span class="special">!=</span> <span class="number">0u</span><span class="special">;</span>
+<span class="special">}</span>
+</pre>
+<pre class="programlisting"><span class="comment">//</span>
+<span class="comment">// File: handle_request.hpp</span>
+<span class="comment">//</span>
+
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">mysql</span><span class="special">/</span><span class="identifier">connection_pool</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">asio</span><span class="special">/</span><span class="identifier">spawn</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">beast</span><span class="special">/</span><span class="identifier">http</span><span class="special">/</span><span class="identifier">message</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">beast</span><span class="special">/</span><span class="identifier">http</span><span class="special">/</span><span class="identifier">string_body</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+
+<span class="keyword">namespace</span> <span class="identifier">notes</span> <span class="special">{</span>
+
+<span class="comment">// Handles an individual HTTP request, producing a response.</span>
+<span class="comment">// The caller of this function should use response::version,</span>
+<span class="comment">// response::keep_alive and response::prepare_payload to adjust the response.</span>
+<span class="identifier">boost</span><span class="special">::</span><span class="identifier">beast</span><span class="special">::</span><span class="identifier">http</span><span class="special">::</span><span class="identifier">response</span><span class="special">&lt;</span><span class="identifier">boost</span><span class="special">::</span><span class="identifier">beast</span><span class="special">::</span><span class="identifier">http</span><span class="special">::</span><span class="identifier">string_body</span><span class="special">&gt;</span> <span class="identifier">handle_request</span><span class="special">(</span>
+    <span class="identifier">boost</span><span class="special">::</span><span class="identifier">mysql</span><span class="special">::</span><span class="identifier">connection_pool</span><span class="special">&amp;</span> <span class="identifier">pool</span><span class="special">,</span>
+    <span class="keyword">const</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">beast</span><span class="special">::</span><span class="identifier">http</span><span class="special">::</span><span class="identifier">request</span><span class="special">&lt;</span><span class="identifier">boost</span><span class="special">::</span><span class="identifier">beast</span><span class="special">::</span><span class="identifier">http</span><span class="special">::</span><span class="identifier">string_body</span><span class="special">&gt;&amp;</span> <span class="identifier">request</span><span class="special">,</span>
+    <span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">yield_context</span> <span class="identifier">yield</span>
+<span class="special">);</span>
+
+<span class="special">}</span>  <span class="comment">// namespace notes</span>
+</pre>
+<pre class="programlisting"><span class="comment">//</span>
+<span class="comment">// File: handle_request.cpp</span>
+<span class="comment">//</span>
+<span class="comment">// This file contains all the boilerplate code to dispatch HTTP</span>
+<span class="comment">// requests to API endpoints. Functions here end up calling</span>
+<span class="comment">// note_repository functions.</span>
+
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">mysql</span><span class="special">/</span><span class="identifier">error_code</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">mysql</span><span class="special">/</span><span class="identifier">error_with_diagnostics</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">mysql</span><span class="special">/</span><span class="identifier">string_view</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">asio</span><span class="special">/</span><span class="identifier">spawn</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">beast</span><span class="special">/</span><span class="identifier">http</span><span class="special">/</span><span class="identifier">message</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">beast</span><span class="special">/</span><span class="identifier">http</span><span class="special">/</span><span class="identifier">string_body</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">beast</span><span class="special">/</span><span class="identifier">http</span><span class="special">/</span><span class="identifier">verb</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">charconv</span><span class="special">/</span><span class="identifier">from_chars</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">json</span><span class="special">/</span><span class="identifier">parse</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">json</span><span class="special">/</span><span class="identifier">serialize</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">json</span><span class="special">/</span><span class="identifier">value_from</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">json</span><span class="special">/</span><span class="identifier">value_to</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">optional</span><span class="special">/</span><span class="identifier">optional</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">url</span><span class="special">/</span><span class="identifier">parse</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">cstdint</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">exception</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">iostream</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">string</span><span class="special">&gt;</span>
+
+<span class="preprocessor">#include</span> <span class="string">"handle_request.hpp"</span>
+<span class="preprocessor">#include</span> <span class="string">"repository.hpp"</span>
+<span class="preprocessor">#include</span> <span class="string">"types.hpp"</span>
+
+<span class="keyword">namespace</span> <span class="identifier">asio</span> <span class="special">=</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">;</span>
+<span class="keyword">namespace</span> <span class="identifier">mysql</span> <span class="special">=</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">mysql</span><span class="special">;</span>
+<span class="keyword">namespace</span> <span class="identifier">http</span> <span class="special">=</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">beast</span><span class="special">::</span><span class="identifier">http</span><span class="special">;</span>
+<span class="keyword">using</span> <span class="keyword">namespace</span> <span class="identifier">notes</span><span class="special">;</span>
+
+<span class="keyword">namespace</span> <span class="special">{</span>
+
+<span class="comment">// Helper function that logs errors thrown by db_repository</span>
+<span class="comment">// when an unexpected database error happens</span>
+<span class="keyword">void</span> <span class="identifier">log_mysql_error</span><span class="special">(</span><span class="identifier">boost</span><span class="special">::</span><span class="identifier">system</span><span class="special">::</span><span class="identifier">error_code</span> <span class="identifier">ec</span><span class="special">,</span> <span class="keyword">const</span> <span class="identifier">mysql</span><span class="special">::</span><span class="identifier">diagnostics</span><span class="special">&amp;</span> <span class="identifier">diag</span><span class="special">)</span>
+<span class="special">{</span>
+    <span class="comment">// Inserting the error code only prints the number and category. Add the message, too.</span>
+    <span class="identifier">std</span><span class="special">::</span><span class="identifier">cerr</span> <span class="special">&lt;&lt;</span> <span class="string">"MySQL error: "</span> <span class="special">&lt;&lt;</span> <span class="identifier">ec</span> <span class="special">&lt;&lt;</span> <span class="string">" "</span> <span class="special">&lt;&lt;</span> <span class="identifier">ec</span><span class="special">.</span><span class="identifier">message</span><span class="special">();</span>
+
+    <span class="comment">// client_message() contains client-side generated messages that don't</span>
+    <span class="comment">// contain user-input. This is usually embedded in exceptions.</span>
+    <span class="comment">// When working with error codes, we need to log it explicitly</span>
+    <span class="keyword">if</span> <span class="special">(!</span><span class="identifier">diag</span><span class="special">.</span><span class="identifier">client_message</span><span class="special">().</span><span class="identifier">empty</span><span class="special">())</span>
+    <span class="special">{</span>
+        <span class="identifier">std</span><span class="special">::</span><span class="identifier">cerr</span> <span class="special">&lt;&lt;</span> <span class="string">": "</span> <span class="special">&lt;&lt;</span> <span class="identifier">diag</span><span class="special">.</span><span class="identifier">client_message</span><span class="special">();</span>
+    <span class="special">}</span>
+
+    <span class="comment">// server_message() contains server-side messages, and thus may</span>
+    <span class="comment">// contain user-supplied input. Printing it is safe.</span>
+    <span class="keyword">if</span> <span class="special">(!</span><span class="identifier">diag</span><span class="special">.</span><span class="identifier">server_message</span><span class="special">().</span><span class="identifier">empty</span><span class="special">())</span>
+    <span class="special">{</span>
+        <span class="identifier">std</span><span class="special">::</span><span class="identifier">cerr</span> <span class="special">&lt;&lt;</span> <span class="string">": "</span> <span class="special">&lt;&lt;</span> <span class="identifier">diag</span><span class="special">.</span><span class="identifier">server_message</span><span class="special">();</span>
+    <span class="special">}</span>
+
+    <span class="comment">// Done</span>
+    <span class="identifier">std</span><span class="special">::</span><span class="identifier">cerr</span> <span class="special">&lt;&lt;</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">endl</span><span class="special">;</span>
+<span class="special">}</span>
+
+<span class="comment">// Attempts to parse a numeric ID from a string.</span>
+<span class="comment">// If you're using C++17, you can use std::from_chars, instead</span>
+<span class="identifier">boost</span><span class="special">::</span><span class="identifier">optional</span><span class="special">&lt;</span><span class="identifier">std</span><span class="special">::</span><span class="identifier">int64_t</span><span class="special">&gt;</span> <span class="identifier">parse_id</span><span class="special">(</span><span class="keyword">const</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">string</span><span class="special">&amp;</span> <span class="identifier">from</span><span class="special">)</span>
+<span class="special">{</span>
+    <span class="identifier">std</span><span class="special">::</span><span class="identifier">int64_t</span> <span class="identifier">id</span><span class="special">{};</span>
+    <span class="keyword">auto</span> <span class="identifier">res</span> <span class="special">=</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">charconv</span><span class="special">::</span><span class="identifier">from_chars</span><span class="special">(</span><span class="identifier">from</span><span class="special">.</span><span class="identifier">data</span><span class="special">(),</span> <span class="identifier">from</span><span class="special">.</span><span class="identifier">data</span><span class="special">()</span> <span class="special">+</span> <span class="identifier">from</span><span class="special">.</span><span class="identifier">size</span><span class="special">(),</span> <span class="identifier">id</span><span class="special">);</span>
+    <span class="keyword">if</span> <span class="special">(</span><span class="identifier">res</span><span class="special">.</span><span class="identifier">ec</span> <span class="special">!=</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">errc</span><span class="special">{}</span> <span class="special">||</span> <span class="identifier">res</span><span class="special">.</span><span class="identifier">ptr</span> <span class="special">!=</span> <span class="identifier">from</span><span class="special">.</span><span class="identifier">data</span><span class="special">()</span> <span class="special">+</span> <span class="identifier">from</span><span class="special">.</span><span class="identifier">size</span><span class="special">())</span>
+        <span class="keyword">return</span> <span class="special">{};</span>
+    <span class="keyword">return</span> <span class="identifier">id</span><span class="special">;</span>
+<span class="special">}</span>
+
+<span class="comment">// Helpers to create error responses with a single line of code</span>
+<span class="identifier">http</span><span class="special">::</span><span class="identifier">response</span><span class="special">&lt;</span><span class="identifier">http</span><span class="special">::</span><span class="identifier">string_body</span><span class="special">&gt;</span> <span class="identifier">error_response</span><span class="special">(</span><span class="identifier">http</span><span class="special">::</span><span class="identifier">status</span> <span class="identifier">code</span><span class="special">,</span> <span class="keyword">const</span> <span class="keyword">char</span><span class="special">*</span> <span class="identifier">msg</span><span class="special">)</span>
+<span class="special">{</span>
+    <span class="identifier">http</span><span class="special">::</span><span class="identifier">response</span><span class="special">&lt;</span><span class="identifier">http</span><span class="special">::</span><span class="identifier">string_body</span><span class="special">&gt;</span> <span class="identifier">res</span><span class="special">;</span>
+    <span class="identifier">res</span><span class="special">.</span><span class="identifier">result</span><span class="special">(</span><span class="identifier">code</span><span class="special">);</span>
+    <span class="identifier">res</span><span class="special">.</span><span class="identifier">body</span><span class="special">()</span> <span class="special">=</span> <span class="identifier">msg</span><span class="special">;</span>
+    <span class="keyword">return</span> <span class="identifier">res</span><span class="special">;</span>
+<span class="special">}</span>
+
+<span class="comment">// Like error_response, but always uses a 400 status code</span>
+<span class="identifier">http</span><span class="special">::</span><span class="identifier">response</span><span class="special">&lt;</span><span class="identifier">http</span><span class="special">::</span><span class="identifier">string_body</span><span class="special">&gt;</span> <span class="identifier">bad_request</span><span class="special">(</span><span class="keyword">const</span> <span class="keyword">char</span><span class="special">*</span> <span class="identifier">body</span><span class="special">)</span>
+<span class="special">{</span>
+    <span class="keyword">return</span> <span class="identifier">error_response</span><span class="special">(</span><span class="identifier">http</span><span class="special">::</span><span class="identifier">status</span><span class="special">::</span><span class="identifier">bad_request</span><span class="special">,</span> <span class="identifier">body</span><span class="special">);</span>
+<span class="special">}</span>
+
+<span class="comment">// Like error_response, but always uses a 500 status code and</span>
+<span class="comment">// never provides extra information that might help potential attackers.</span>
+<span class="identifier">http</span><span class="special">::</span><span class="identifier">response</span><span class="special">&lt;</span><span class="identifier">http</span><span class="special">::</span><span class="identifier">string_body</span><span class="special">&gt;</span> <span class="identifier">internal_server_error</span><span class="special">()</span>
+<span class="special">{</span>
+    <span class="keyword">return</span> <span class="identifier">error_response</span><span class="special">(</span><span class="identifier">http</span><span class="special">::</span><span class="identifier">status</span><span class="special">::</span><span class="identifier">internal_server_error</span><span class="special">,</span> <span class="string">"Internal server error"</span><span class="special">);</span>
+<span class="special">}</span>
+
+<span class="comment">// Creates a response with a serialized JSON body.</span>
+<span class="comment">// T should be a type with Boost.Describe metadata containing the</span>
+<span class="comment">// body data to be serialized</span>
+<span class="keyword">template</span> <span class="special">&lt;</span><span class="keyword">class</span> <span class="identifier">T</span><span class="special">&gt;</span>
+<span class="identifier">http</span><span class="special">::</span><span class="identifier">response</span><span class="special">&lt;</span><span class="identifier">http</span><span class="special">::</span><span class="identifier">string_body</span><span class="special">&gt;</span> <span class="identifier">json_response</span><span class="special">(</span><span class="keyword">const</span> <span class="identifier">T</span><span class="special">&amp;</span> <span class="identifier">body</span><span class="special">)</span>
+<span class="special">{</span>
+    <span class="identifier">http</span><span class="special">::</span><span class="identifier">response</span><span class="special">&lt;</span><span class="identifier">http</span><span class="special">::</span><span class="identifier">string_body</span><span class="special">&gt;</span> <span class="identifier">res</span><span class="special">;</span>
+
+    <span class="comment">// Set the content-type header</span>
+    <span class="identifier">res</span><span class="special">.</span><span class="identifier">set</span><span class="special">(</span><span class="string">"Content-Type"</span><span class="special">,</span> <span class="string">"application/json"</span><span class="special">);</span>
+
+    <span class="comment">// Serialize the body data into a string and use it as the response body.</span>
+    <span class="comment">// We use Boost.JSON's automatic serialization feature, which uses Boost.Describe</span>
+    <span class="comment">// reflection data to generate a serialization function for us.</span>
+    <span class="identifier">res</span><span class="special">.</span><span class="identifier">body</span><span class="special">()</span> <span class="special">=</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">json</span><span class="special">::</span><span class="identifier">serialize</span><span class="special">(</span><span class="identifier">boost</span><span class="special">::</span><span class="identifier">json</span><span class="special">::</span><span class="identifier">value_from</span><span class="special">(</span><span class="identifier">body</span><span class="special">));</span>
+
+    <span class="comment">// Done</span>
+    <span class="keyword">return</span> <span class="identifier">res</span><span class="special">;</span>
+<span class="special">}</span>
+
+<span class="comment">// Returns true if the request's Content-Type is set to JSON</span>
+<span class="keyword">bool</span> <span class="identifier">has_json_content_type</span><span class="special">(</span><span class="keyword">const</span> <span class="identifier">http</span><span class="special">::</span><span class="identifier">request</span><span class="special">&lt;</span><span class="identifier">http</span><span class="special">::</span><span class="identifier">string_body</span><span class="special">&gt;&amp;</span> <span class="identifier">req</span><span class="special">)</span>
+<span class="special">{</span>
+    <span class="keyword">auto</span> <span class="identifier">it</span> <span class="special">=</span> <span class="identifier">req</span><span class="special">.</span><span class="identifier">find</span><span class="special">(</span><span class="string">"Content-Type"</span><span class="special">);</span>
+    <span class="keyword">return</span> <span class="identifier">it</span> <span class="special">!=</span> <span class="identifier">req</span><span class="special">.</span><span class="identifier">end</span><span class="special">()</span> <span class="special">&amp;&amp;</span> <span class="identifier">it</span><span class="special">-&gt;</span><span class="identifier">value</span><span class="special">()</span> <span class="special">==</span> <span class="string">"application/json"</span><span class="special">;</span>
+<span class="special">}</span>
+
+<span class="comment">// Attempts to parse a string as a JSON into an object of type T.</span>
+<span class="comment">// T should be a type with Boost.Describe metadata.</span>
+<span class="comment">// We use boost::system::result, which may contain a result or an error.</span>
+<span class="keyword">template</span> <span class="special">&lt;</span><span class="keyword">class</span> <span class="identifier">T</span><span class="special">&gt;</span>
+<span class="identifier">boost</span><span class="special">::</span><span class="identifier">system</span><span class="special">::</span><span class="identifier">result</span><span class="special">&lt;</span><span class="identifier">T</span><span class="special">&gt;</span> <span class="identifier">parse_json</span><span class="special">(</span><span class="identifier">boost</span><span class="special">::</span><span class="identifier">mysql</span><span class="special">::</span><span class="identifier">string_view</span> <span class="identifier">json_string</span><span class="special">)</span>
+<span class="special">{</span>
+    <span class="comment">// Attempt to parse the request into a json::value.</span>
+    <span class="comment">// This will fail if the provided body isn't valid JSON.</span>
+    <span class="identifier">boost</span><span class="special">::</span><span class="identifier">system</span><span class="special">::</span><span class="identifier">error_code</span> <span class="identifier">ec</span><span class="special">;</span>
+    <span class="keyword">auto</span> <span class="identifier">val</span> <span class="special">=</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">json</span><span class="special">::</span><span class="identifier">parse</span><span class="special">(</span><span class="identifier">json_string</span><span class="special">,</span> <span class="identifier">ec</span><span class="special">);</span>
+    <span class="keyword">if</span> <span class="special">(</span><span class="identifier">ec</span><span class="special">)</span>
+        <span class="keyword">return</span> <span class="identifier">ec</span><span class="special">;</span>
+
+    <span class="comment">// Attempt to parse the json::value into a T. This will</span>
+    <span class="comment">// fail if the provided JSON doesn't match T's shape.</span>
+    <span class="keyword">return</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">json</span><span class="special">::</span><span class="identifier">try_value_to</span><span class="special">&lt;</span><span class="identifier">T</span><span class="special">&gt;(</span><span class="identifier">val</span><span class="special">);</span>
+<span class="special">}</span>
+
+<span class="comment">// Contains data associated to an HTTP request.</span>
+<span class="comment">// To be passed to individual handler functions</span>
+<span class="keyword">struct</span> <span class="identifier">request_data</span>
+<span class="special">{</span>
+    <span class="comment">// The incoming request</span>
+    <span class="keyword">const</span> <span class="identifier">http</span><span class="special">::</span><span class="identifier">request</span><span class="special">&lt;</span><span class="identifier">http</span><span class="special">::</span><span class="identifier">string_body</span><span class="special">&gt;&amp;</span> <span class="identifier">request</span><span class="special">;</span>
+
+    <span class="comment">// The URL the request is targeting</span>
+    <span class="identifier">boost</span><span class="special">::</span><span class="identifier">urls</span><span class="special">::</span><span class="identifier">url_view</span> <span class="identifier">target</span><span class="special">;</span>
+
+    <span class="comment">// Connection pool</span>
+    <span class="identifier">mysql</span><span class="special">::</span><span class="identifier">connection_pool</span><span class="special">&amp;</span> <span class="identifier">pool</span><span class="special">;</span>
+
+    <span class="identifier">note_repository</span> <span class="identifier">repo</span><span class="special">()</span> <span class="keyword">const</span> <span class="special">{</span> <span class="keyword">return</span> <span class="identifier">note_repository</span><span class="special">(</span><span class="identifier">pool</span><span class="special">);</span> <span class="special">}</span>
+<span class="special">};</span>
+
+<span class="comment">//</span>
+<span class="comment">// Endpoint handlers. We have a function per method.</span>
+<span class="comment">// All of our endpoints have /notes as the URL path.</span>
+<span class="comment">//</span>
+
+<span class="comment">// GET /notes: retrieves all the notes.</span>
+<span class="comment">// The request doesn't have a body.</span>
+<span class="comment">// The response has a JSON body with multi_notes_response format</span>
+<span class="comment">//</span>
+<span class="comment">// GET /notes?id=&lt;note-id&gt;: retrieves a single note.</span>
+<span class="comment">// The request doesn't have a body.</span>
+<span class="comment">// The response has a JSON body with single_note_response format</span>
+<span class="comment">//</span>
+<span class="comment">// Both endpoints share path and method, so they share handler function</span>
+<span class="identifier">http</span><span class="special">::</span><span class="identifier">response</span><span class="special">&lt;</span><span class="identifier">http</span><span class="special">::</span><span class="identifier">string_body</span><span class="special">&gt;</span> <span class="identifier">handle_get</span><span class="special">(</span><span class="keyword">const</span> <span class="identifier">request_data</span><span class="special">&amp;</span> <span class="identifier">input</span><span class="special">,</span> <span class="identifier">asio</span><span class="special">::</span><span class="identifier">yield_context</span> <span class="identifier">yield</span><span class="special">)</span>
+<span class="special">{</span>
+    <span class="comment">// Parse the query parameter</span>
+    <span class="keyword">auto</span> <span class="identifier">params_it</span> <span class="special">=</span> <span class="identifier">input</span><span class="special">.</span><span class="identifier">target</span><span class="special">.</span><span class="identifier">params</span><span class="special">().</span><span class="identifier">find</span><span class="special">(</span><span class="string">"id"</span><span class="special">);</span>
+
+    <span class="comment">// Did the client specify an ID?</span>
+    <span class="keyword">if</span> <span class="special">(</span><span class="identifier">params_it</span> <span class="special">==</span> <span class="identifier">input</span><span class="special">.</span><span class="identifier">target</span><span class="special">.</span><span class="identifier">params</span><span class="special">().</span><span class="identifier">end</span><span class="special">())</span>
+    <span class="special">{</span>
+        <span class="keyword">auto</span> <span class="identifier">res</span> <span class="special">=</span> <span class="identifier">input</span><span class="special">.</span><span class="identifier">repo</span><span class="special">().</span><span class="identifier">get_notes</span><span class="special">(</span><span class="identifier">yield</span><span class="special">);</span>
+        <span class="keyword">return</span> <span class="identifier">json_response</span><span class="special">(</span><span class="identifier">multi_notes_response</span><span class="special">{</span><span class="identifier">std</span><span class="special">::</span><span class="identifier">move</span><span class="special">(</span><span class="identifier">res</span><span class="special">)});</span>
+    <span class="special">}</span>
+    <span class="keyword">else</span>
+    <span class="special">{</span>
+        <span class="comment">// Parse id</span>
+        <span class="keyword">auto</span> <span class="identifier">id</span> <span class="special">=</span> <span class="identifier">parse_id</span><span class="special">((*</span><span class="identifier">params_it</span><span class="special">).</span><span class="identifier">value</span><span class="special">);</span>
+        <span class="keyword">if</span> <span class="special">(!</span><span class="identifier">id</span><span class="special">.</span><span class="identifier">has_value</span><span class="special">())</span>
+            <span class="keyword">return</span> <span class="identifier">bad_request</span><span class="special">(</span><span class="string">"URL parameter 'id' should be a valid integer"</span><span class="special">);</span>
+
+        <span class="comment">// Get the note</span>
+        <span class="keyword">auto</span> <span class="identifier">res</span> <span class="special">=</span> <span class="identifier">input</span><span class="special">.</span><span class="identifier">repo</span><span class="special">().</span><span class="identifier">get_note</span><span class="special">(*</span><span class="identifier">id</span><span class="special">,</span> <span class="identifier">yield</span><span class="special">);</span>
+
+        <span class="comment">// If we didn't find it, return a 404 error</span>
+        <span class="keyword">if</span> <span class="special">(!</span><span class="identifier">res</span><span class="special">.</span><span class="identifier">has_value</span><span class="special">())</span>
+            <span class="keyword">return</span> <span class="identifier">error_response</span><span class="special">(</span><span class="identifier">http</span><span class="special">::</span><span class="identifier">status</span><span class="special">::</span><span class="identifier">not_found</span><span class="special">,</span> <span class="string">"The requested note was not found"</span><span class="special">);</span>
+
+        <span class="comment">// Return it as response</span>
+        <span class="keyword">return</span> <span class="identifier">json_response</span><span class="special">(</span><span class="identifier">single_note_response</span><span class="special">{</span><span class="identifier">std</span><span class="special">::</span><span class="identifier">move</span><span class="special">(*</span><span class="identifier">res</span><span class="special">)});</span>
+    <span class="special">}</span>
+<span class="special">}</span>
+
+<span class="comment">// POST /notes: creates a note.</span>
+<span class="comment">// The request has a JSON body with note_request_body format.</span>
+<span class="comment">// The response has a JSON body with single_note_response format.</span>
+<span class="identifier">http</span><span class="special">::</span><span class="identifier">response</span><span class="special">&lt;</span><span class="identifier">http</span><span class="special">::</span><span class="identifier">string_body</span><span class="special">&gt;</span> <span class="identifier">handle_post</span><span class="special">(</span><span class="keyword">const</span> <span class="identifier">request_data</span><span class="special">&amp;</span> <span class="identifier">input</span><span class="special">,</span> <span class="identifier">asio</span><span class="special">::</span><span class="identifier">yield_context</span> <span class="identifier">yield</span><span class="special">)</span>
+<span class="special">{</span>
+    <span class="comment">// Parse the request body</span>
+    <span class="keyword">if</span> <span class="special">(!</span><span class="identifier">has_json_content_type</span><span class="special">(</span><span class="identifier">input</span><span class="special">.</span><span class="identifier">request</span><span class="special">))</span>
+        <span class="keyword">return</span> <span class="identifier">bad_request</span><span class="special">(</span><span class="string">"Invalid Content-Type: expected 'application/json'"</span><span class="special">);</span>
+    <span class="keyword">auto</span> <span class="identifier">args</span> <span class="special">=</span> <span class="identifier">parse_json</span><span class="special">&lt;</span><span class="identifier">note_request_body</span><span class="special">&gt;(</span><span class="identifier">input</span><span class="special">.</span><span class="identifier">request</span><span class="special">.</span><span class="identifier">body</span><span class="special">());</span>
+    <span class="keyword">if</span> <span class="special">(</span><span class="identifier">args</span><span class="special">.</span><span class="identifier">has_error</span><span class="special">())</span>
+        <span class="keyword">return</span> <span class="identifier">bad_request</span><span class="special">(</span><span class="string">"Invalid JSON"</span><span class="special">);</span>
+
+    <span class="comment">// Actually create the note</span>
+    <span class="keyword">auto</span> <span class="identifier">res</span> <span class="special">=</span> <span class="identifier">input</span><span class="special">.</span><span class="identifier">repo</span><span class="special">().</span><span class="identifier">create_note</span><span class="special">(</span><span class="identifier">args</span><span class="special">-&gt;</span><span class="identifier">title</span><span class="special">,</span> <span class="identifier">args</span><span class="special">-&gt;</span><span class="identifier">content</span><span class="special">,</span> <span class="identifier">yield</span><span class="special">);</span>
+
+    <span class="comment">// Return the newly created note as response</span>
+    <span class="keyword">return</span> <span class="identifier">json_response</span><span class="special">(</span><span class="identifier">single_note_response</span><span class="special">{</span><span class="identifier">std</span><span class="special">::</span><span class="identifier">move</span><span class="special">(</span><span class="identifier">res</span><span class="special">)});</span>
+<span class="special">}</span>
+
+<span class="comment">// PUT /notes?id=&lt;note-id&gt;: replaces a note.</span>
+<span class="comment">// The request has a JSON body with note_request_body format.</span>
+<span class="comment">// The response has a JSON body with single_note_response format.</span>
+<span class="identifier">http</span><span class="special">::</span><span class="identifier">response</span><span class="special">&lt;</span><span class="identifier">http</span><span class="special">::</span><span class="identifier">string_body</span><span class="special">&gt;</span> <span class="identifier">handle_put</span><span class="special">(</span><span class="keyword">const</span> <span class="identifier">request_data</span><span class="special">&amp;</span> <span class="identifier">input</span><span class="special">,</span> <span class="identifier">asio</span><span class="special">::</span><span class="identifier">yield_context</span> <span class="identifier">yield</span><span class="special">)</span>
+<span class="special">{</span>
+    <span class="comment">// Parse the query parameter</span>
+    <span class="keyword">auto</span> <span class="identifier">params_it</span> <span class="special">=</span> <span class="identifier">input</span><span class="special">.</span><span class="identifier">target</span><span class="special">.</span><span class="identifier">params</span><span class="special">().</span><span class="identifier">find</span><span class="special">(</span><span class="string">"id"</span><span class="special">);</span>
+    <span class="keyword">if</span> <span class="special">(</span><span class="identifier">params_it</span> <span class="special">==</span> <span class="identifier">input</span><span class="special">.</span><span class="identifier">target</span><span class="special">.</span><span class="identifier">params</span><span class="special">().</span><span class="identifier">end</span><span class="special">())</span>
+        <span class="keyword">return</span> <span class="identifier">bad_request</span><span class="special">(</span><span class="string">"Mandatory URL parameter 'id' not found"</span><span class="special">);</span>
+    <span class="keyword">auto</span> <span class="identifier">id</span> <span class="special">=</span> <span class="identifier">parse_id</span><span class="special">((*</span><span class="identifier">params_it</span><span class="special">).</span><span class="identifier">value</span><span class="special">);</span>
+    <span class="keyword">if</span> <span class="special">(!</span><span class="identifier">id</span><span class="special">.</span><span class="identifier">has_value</span><span class="special">())</span>
+        <span class="keyword">return</span> <span class="identifier">bad_request</span><span class="special">(</span><span class="string">"URL parameter 'id' should be a valid integer"</span><span class="special">);</span>
+
+    <span class="comment">// Parse the request body</span>
+    <span class="keyword">if</span> <span class="special">(!</span><span class="identifier">has_json_content_type</span><span class="special">(</span><span class="identifier">input</span><span class="special">.</span><span class="identifier">request</span><span class="special">))</span>
+        <span class="keyword">return</span> <span class="identifier">bad_request</span><span class="special">(</span><span class="string">"Invalid Content-Type: expected 'application/json'"</span><span class="special">);</span>
+    <span class="keyword">auto</span> <span class="identifier">args</span> <span class="special">=</span> <span class="identifier">parse_json</span><span class="special">&lt;</span><span class="identifier">note_request_body</span><span class="special">&gt;(</span><span class="identifier">input</span><span class="special">.</span><span class="identifier">request</span><span class="special">.</span><span class="identifier">body</span><span class="special">());</span>
+    <span class="keyword">if</span> <span class="special">(</span><span class="identifier">args</span><span class="special">.</span><span class="identifier">has_error</span><span class="special">())</span>
+        <span class="keyword">return</span> <span class="identifier">bad_request</span><span class="special">(</span><span class="string">"Invalid JSON"</span><span class="special">);</span>
+
+    <span class="comment">// Perform the update</span>
+    <span class="keyword">auto</span> <span class="identifier">res</span> <span class="special">=</span> <span class="identifier">input</span><span class="special">.</span><span class="identifier">repo</span><span class="special">().</span><span class="identifier">replace_note</span><span class="special">(*</span><span class="identifier">id</span><span class="special">,</span> <span class="identifier">args</span><span class="special">-&gt;</span><span class="identifier">title</span><span class="special">,</span> <span class="identifier">args</span><span class="special">-&gt;</span><span class="identifier">content</span><span class="special">,</span> <span class="identifier">yield</span><span class="special">);</span>
+
+    <span class="comment">// Check that it took effect. Otherwise, it's because the note wasn't there</span>
+    <span class="keyword">if</span> <span class="special">(!</span><span class="identifier">res</span><span class="special">.</span><span class="identifier">has_value</span><span class="special">())</span>
+        <span class="keyword">return</span> <span class="identifier">bad_request</span><span class="special">(</span><span class="string">"The requested note was not found"</span><span class="special">);</span>
+
+    <span class="comment">// Return the updated note as response</span>
+    <span class="keyword">return</span> <span class="identifier">json_response</span><span class="special">(</span><span class="identifier">single_note_response</span><span class="special">{</span><span class="identifier">std</span><span class="special">::</span><span class="identifier">move</span><span class="special">(*</span><span class="identifier">res</span><span class="special">)});</span>
+<span class="special">}</span>
+
+<span class="comment">// DELETE /notes/&lt;note-id&gt;: deletes a note.</span>
+<span class="comment">// The request doesn't have a body.</span>
+<span class="comment">// The response has a JSON body with delete_note_response format.</span>
+<span class="identifier">http</span><span class="special">::</span><span class="identifier">response</span><span class="special">&lt;</span><span class="identifier">http</span><span class="special">::</span><span class="identifier">string_body</span><span class="special">&gt;</span> <span class="identifier">handle_delete</span><span class="special">(</span><span class="keyword">const</span> <span class="identifier">request_data</span><span class="special">&amp;</span> <span class="identifier">input</span><span class="special">,</span> <span class="identifier">asio</span><span class="special">::</span><span class="identifier">yield_context</span> <span class="identifier">yield</span><span class="special">)</span>
+<span class="special">{</span>
+    <span class="comment">// Parse the query parameter</span>
+    <span class="keyword">auto</span> <span class="identifier">params_it</span> <span class="special">=</span> <span class="identifier">input</span><span class="special">.</span><span class="identifier">target</span><span class="special">.</span><span class="identifier">params</span><span class="special">().</span><span class="identifier">find</span><span class="special">(</span><span class="string">"id"</span><span class="special">);</span>
+    <span class="keyword">if</span> <span class="special">(</span><span class="identifier">params_it</span> <span class="special">==</span> <span class="identifier">input</span><span class="special">.</span><span class="identifier">target</span><span class="special">.</span><span class="identifier">params</span><span class="special">().</span><span class="identifier">end</span><span class="special">())</span>
+        <span class="keyword">return</span> <span class="identifier">bad_request</span><span class="special">(</span><span class="string">"Mandatory URL parameter 'id' not found"</span><span class="special">);</span>
+    <span class="keyword">auto</span> <span class="identifier">id</span> <span class="special">=</span> <span class="identifier">parse_id</span><span class="special">((*</span><span class="identifier">params_it</span><span class="special">).</span><span class="identifier">value</span><span class="special">);</span>
+    <span class="keyword">if</span> <span class="special">(!</span><span class="identifier">id</span><span class="special">.</span><span class="identifier">has_value</span><span class="special">())</span>
+        <span class="keyword">return</span> <span class="identifier">bad_request</span><span class="special">(</span><span class="string">"URL parameter 'id' should be a valid integer"</span><span class="special">);</span>
+
+    <span class="comment">// Attempt to delete the note</span>
+    <span class="keyword">bool</span> <span class="identifier">deleted</span> <span class="special">=</span> <span class="identifier">input</span><span class="special">.</span><span class="identifier">repo</span><span class="special">().</span><span class="identifier">delete_note</span><span class="special">(*</span><span class="identifier">id</span><span class="special">,</span> <span class="identifier">yield</span><span class="special">);</span>
+
+    <span class="comment">// Return whether the delete was successful in the response.</span>
+    <span class="comment">// We don't fail DELETEs for notes that don't exist.</span>
+    <span class="keyword">return</span> <span class="identifier">json_response</span><span class="special">(</span><span class="identifier">delete_note_response</span><span class="special">{</span><span class="identifier">deleted</span><span class="special">});</span>
+<span class="special">}</span>
+
+<span class="special">}</span>  <span class="comment">// namespace</span>
+
+<span class="comment">// External interface</span>
+<span class="identifier">http</span><span class="special">::</span><span class="identifier">response</span><span class="special">&lt;</span><span class="identifier">http</span><span class="special">::</span><span class="identifier">string_body</span><span class="special">&gt;</span> <span class="identifier">notes</span><span class="special">::</span><span class="identifier">handle_request</span><span class="special">(</span>
+    <span class="identifier">mysql</span><span class="special">::</span><span class="identifier">connection_pool</span><span class="special">&amp;</span> <span class="identifier">pool</span><span class="special">,</span>
+    <span class="keyword">const</span> <span class="identifier">http</span><span class="special">::</span><span class="identifier">request</span><span class="special">&lt;</span><span class="identifier">http</span><span class="special">::</span><span class="identifier">string_body</span><span class="special">&gt;&amp;</span> <span class="identifier">request</span><span class="special">,</span>
+    <span class="identifier">asio</span><span class="special">::</span><span class="identifier">yield_context</span> <span class="identifier">yield</span>
+<span class="special">)</span>
+<span class="special">{</span>
+    <span class="comment">// Parse the request target</span>
+    <span class="keyword">auto</span> <span class="identifier">target</span> <span class="special">=</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">urls</span><span class="special">::</span><span class="identifier">parse_origin_form</span><span class="special">(</span><span class="identifier">request</span><span class="special">.</span><span class="identifier">target</span><span class="special">());</span>
+    <span class="keyword">if</span> <span class="special">(!</span><span class="identifier">target</span><span class="special">.</span><span class="identifier">has_value</span><span class="special">())</span>
+        <span class="keyword">return</span> <span class="identifier">bad_request</span><span class="special">(</span><span class="string">"Invalid request target"</span><span class="special">);</span>
+
+    <span class="comment">// All our endpoints have /notes as path, with different verbs and parameters.</span>
+    <span class="comment">// Verify that the path matches</span>
+    <span class="keyword">if</span> <span class="special">(</span><span class="identifier">target</span><span class="special">-&gt;</span><span class="identifier">path</span><span class="special">()</span> <span class="special">!=</span> <span class="string">"/notes"</span><span class="special">)</span>
+        <span class="keyword">return</span> <span class="identifier">error_response</span><span class="special">(</span><span class="identifier">http</span><span class="special">::</span><span class="identifier">status</span><span class="special">::</span><span class="identifier">not_found</span><span class="special">,</span> <span class="string">"Endpoint not found"</span><span class="special">);</span>
+
+    <span class="comment">// Compose the request_data object</span>
+    <span class="identifier">request_data</span> <span class="identifier">input</span><span class="special">{</span><span class="identifier">request</span><span class="special">,</span> <span class="special">*</span><span class="identifier">target</span><span class="special">,</span> <span class="identifier">pool</span><span class="special">};</span>
+
+    <span class="comment">// Invoke the relevant handler, depending on the method</span>
+    <span class="keyword">try</span>
+    <span class="special">{</span>
+        <span class="keyword">switch</span> <span class="special">(</span><span class="identifier">input</span><span class="special">.</span><span class="identifier">request</span><span class="special">.</span><span class="identifier">method</span><span class="special">())</span>
+        <span class="special">{</span>
+        <span class="keyword">case</span> <span class="identifier">http</span><span class="special">::</span><span class="identifier">verb</span><span class="special">::</span><span class="identifier">get</span><span class="special">:</span> <span class="keyword">return</span> <span class="identifier">handle_get</span><span class="special">(</span><span class="identifier">input</span><span class="special">,</span> <span class="identifier">yield</span><span class="special">);</span>
+        <span class="keyword">case</span> <span class="identifier">http</span><span class="special">::</span><span class="identifier">verb</span><span class="special">::</span><span class="identifier">post</span><span class="special">:</span> <span class="keyword">return</span> <span class="identifier">handle_post</span><span class="special">(</span><span class="identifier">input</span><span class="special">,</span> <span class="identifier">yield</span><span class="special">);</span>
+        <span class="keyword">case</span> <span class="identifier">http</span><span class="special">::</span><span class="identifier">verb</span><span class="special">::</span><span class="identifier">put</span><span class="special">:</span> <span class="keyword">return</span> <span class="identifier">handle_put</span><span class="special">(</span><span class="identifier">input</span><span class="special">,</span> <span class="identifier">yield</span><span class="special">);</span>
+        <span class="keyword">case</span> <span class="identifier">http</span><span class="special">::</span><span class="identifier">verb</span><span class="special">::</span><span class="identifier">delete_</span><span class="special">:</span> <span class="keyword">return</span> <span class="identifier">handle_delete</span><span class="special">(</span><span class="identifier">input</span><span class="special">,</span> <span class="identifier">yield</span><span class="special">);</span>
+        <span class="keyword">default</span><span class="special">:</span> <span class="keyword">return</span> <span class="identifier">error_response</span><span class="special">(</span><span class="identifier">http</span><span class="special">::</span><span class="identifier">status</span><span class="special">::</span><span class="identifier">method_not_allowed</span><span class="special">,</span> <span class="string">"Method not allowed for /notes"</span><span class="special">);</span>
+        <span class="special">}</span>
+    <span class="special">}</span>
+    <span class="keyword">catch</span> <span class="special">(</span><span class="keyword">const</span> <span class="identifier">mysql</span><span class="special">::</span><span class="identifier">error_with_diagnostics</span><span class="special">&amp;</span> <span class="identifier">err</span><span class="special">)</span>
+    <span class="special">{</span>
+        <span class="comment">// A Boost.MySQL error. This will happen if you don't have connectivity</span>
+        <span class="comment">// to your database, your schema is incorrect or your credentials are invalid.</span>
+        <span class="comment">// Log the error, including diagnostics</span>
+        <span class="identifier">log_mysql_error</span><span class="special">(</span><span class="identifier">err</span><span class="special">.</span><span class="identifier">code</span><span class="special">(),</span> <span class="identifier">err</span><span class="special">.</span><span class="identifier">get_diagnostics</span><span class="special">());</span>
+
+        <span class="comment">// Never disclose error info to a potential attacker</span>
+        <span class="keyword">return</span> <span class="identifier">internal_server_error</span><span class="special">();</span>
+    <span class="special">}</span>
+    <span class="keyword">catch</span> <span class="special">(</span><span class="keyword">const</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">exception</span><span class="special">&amp;</span> <span class="identifier">err</span><span class="special">)</span>
+    <span class="special">{</span>
+        <span class="comment">// Another kind of error. This indicates a programming error or a severe</span>
+        <span class="comment">// server condition (e.g. out of memory). Same procedure as above.</span>
+        <span class="identifier">std</span><span class="special">::</span><span class="identifier">cerr</span> <span class="special">&lt;&lt;</span> <span class="string">"Uncaught exception: "</span> <span class="special">&lt;&lt;</span> <span class="identifier">err</span><span class="special">.</span><span class="identifier">what</span><span class="special">()</span> <span class="special">&lt;&lt;</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">endl</span><span class="special">;</span>
+        <span class="keyword">return</span> <span class="identifier">internal_server_error</span><span class="special">();</span>
+    <span class="special">}</span>
+<span class="special">}</span>
+</pre>
+<pre class="programlisting"><span class="comment">//</span>
+<span class="comment">// File: server.hpp</span>
+<span class="comment">//</span>
+
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">mysql</span><span class="special">/</span><span class="identifier">connection_pool</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">asio</span><span class="special">/</span><span class="identifier">spawn</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">memory</span><span class="special">&gt;</span>
+
+<span class="keyword">namespace</span> <span class="identifier">notes</span> <span class="special">{</span>
+
+<span class="comment">// State shared by all sessions created by our server.</span>
+<span class="comment">// For this application, we only need a connection_pool object.</span>
+<span class="comment">// Place here any other singleton objects your application may need.</span>
+<span class="comment">// We will use std::shared_ptr&lt;shared_state&gt; to ensure that objects</span>
+<span class="comment">// are kept alive until all sessions are terminated.</span>
+<span class="keyword">struct</span> <span class="identifier">shared_state</span>
+<span class="special">{</span>
+    <span class="identifier">boost</span><span class="special">::</span><span class="identifier">mysql</span><span class="special">::</span><span class="identifier">connection_pool</span> <span class="identifier">pool</span><span class="special">;</span>
+
+    <span class="identifier">shared_state</span><span class="special">(</span><span class="identifier">boost</span><span class="special">::</span><span class="identifier">mysql</span><span class="special">::</span><span class="identifier">connection_pool</span> <span class="identifier">pool</span><span class="special">)</span> <span class="keyword">noexcept</span> <span class="special">:</span> <span class="identifier">pool</span><span class="special">(</span><span class="identifier">std</span><span class="special">::</span><span class="identifier">move</span><span class="special">(</span><span class="identifier">pool</span><span class="special">))</span> <span class="special">{}</span>
+<span class="special">};</span>
+
+<span class="comment">// Runs a HTTP server that will listen on 0.0.0.0:port.</span>
+<span class="comment">// If the server fails to launch (e.g. because the port is already in use),</span>
+<span class="comment">// throws an exception. The server runs until the underlying execution</span>
+<span class="comment">// context is stopped.</span>
+<span class="keyword">void</span> <span class="identifier">run_server</span><span class="special">(</span><span class="identifier">std</span><span class="special">::</span><span class="identifier">shared_ptr</span><span class="special">&lt;</span><span class="identifier">shared_state</span><span class="special">&gt;</span> <span class="identifier">st</span><span class="special">,</span> <span class="keyword">unsigned</span> <span class="keyword">short</span> <span class="identifier">port</span><span class="special">,</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">yield_context</span> <span class="identifier">yield</span><span class="special">);</span>
+
+<span class="special">}</span>  <span class="comment">// namespace notes</span>
+</pre>
+<pre class="programlisting"><span class="comment">//</span>
+<span class="comment">// File: server.cpp</span>
+<span class="comment">//</span>
+<span class="comment">// This file contains all the boilerplate code to implement a HTTP</span>
+<span class="comment">// server. Functions here end up invoking handle_request.</span>
+
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">asio</span><span class="special">/</span><span class="identifier">cancel_after</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">asio</span><span class="special">/</span><span class="identifier">ip</span><span class="special">/</span><span class="identifier">address</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">asio</span><span class="special">/</span><span class="identifier">ip</span><span class="special">/</span><span class="identifier">tcp</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">asio</span><span class="special">/</span><span class="identifier">spawn</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">beast</span><span class="special">/</span><span class="identifier">core</span><span class="special">/</span><span class="identifier">flat_buffer</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">beast</span><span class="special">/</span><span class="identifier">http</span><span class="special">/</span><span class="identifier">error</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">beast</span><span class="special">/</span><span class="identifier">http</span><span class="special">/</span><span class="identifier">message</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">beast</span><span class="special">/</span><span class="identifier">http</span><span class="special">/</span><span class="identifier">parser</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">beast</span><span class="special">/</span><span class="identifier">http</span><span class="special">/</span><span class="identifier">read</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">beast</span><span class="special">/</span><span class="identifier">http</span><span class="special">/</span><span class="identifier">string_body</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">beast</span><span class="special">/</span><span class="identifier">http</span><span class="special">/</span><span class="identifier">write</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">cstdlib</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">exception</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">iostream</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">memory</span><span class="special">&gt;</span>
+
+<span class="preprocessor">#include</span> <span class="string">"handle_request.hpp"</span>
+<span class="preprocessor">#include</span> <span class="string">"server.hpp"</span>
+
+<span class="keyword">namespace</span> <span class="identifier">asio</span> <span class="special">=</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">;</span>
+<span class="keyword">namespace</span> <span class="identifier">http</span> <span class="special">=</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">beast</span><span class="special">::</span><span class="identifier">http</span><span class="special">;</span>
+<span class="keyword">using</span> <span class="keyword">namespace</span> <span class="identifier">notes</span><span class="special">;</span>
+
+<span class="keyword">namespace</span> <span class="special">{</span>
+
+<span class="comment">// Runs a single HTTP session until the client closes the connection</span>
+<span class="keyword">void</span> <span class="identifier">run_http_session</span><span class="special">(</span><span class="identifier">std</span><span class="special">::</span><span class="identifier">shared_ptr</span><span class="special">&lt;</span><span class="identifier">shared_state</span><span class="special">&gt;</span> <span class="identifier">st</span><span class="special">,</span> <span class="identifier">asio</span><span class="special">::</span><span class="identifier">ip</span><span class="special">::</span><span class="identifier">tcp</span><span class="special">::</span><span class="identifier">socket</span> <span class="identifier">sock</span><span class="special">,</span> <span class="identifier">asio</span><span class="special">::</span><span class="identifier">yield_context</span> <span class="identifier">yield</span><span class="special">)</span>
+<span class="special">{</span>
+    <span class="keyword">using</span> <span class="keyword">namespace</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">chrono_literals</span><span class="special">;</span>
+
+    <span class="identifier">boost</span><span class="special">::</span><span class="identifier">system</span><span class="special">::</span><span class="identifier">error_code</span> <span class="identifier">ec</span><span class="special">;</span>
+
+    <span class="comment">// A buffer to read incoming client requests</span>
+    <span class="identifier">boost</span><span class="special">::</span><span class="identifier">beast</span><span class="special">::</span><span class="identifier">flat_buffer</span> <span class="identifier">buff</span><span class="special">;</span>
+
+    <span class="comment">// A timer, to use with asio::cancel_after to implement timeouts.</span>
+    <span class="comment">// Re-using the same timer multiple times with cancel_after</span>
+    <span class="comment">// is more efficient than using raw cancel_after,</span>
+    <span class="comment">// since the timer doesn't need to be re-created for every operation.</span>
+    <span class="identifier">asio</span><span class="special">::</span><span class="identifier">steady_timer</span> <span class="identifier">timer</span><span class="special">(</span><span class="identifier">yield</span><span class="special">.</span><span class="identifier">get_executor</span><span class="special">());</span>
+
+    <span class="comment">// A HTTP session might involve more than one message if</span>
+    <span class="comment">// keep-alive semantics are used. Loop until the connection closes.</span>
+    <span class="keyword">while</span> <span class="special">(</span><span class="keyword">true</span><span class="special">)</span>
+    <span class="special">{</span>
+        <span class="comment">// Construct a new parser for each message</span>
+        <span class="identifier">http</span><span class="special">::</span><span class="identifier">request_parser</span><span class="special">&lt;</span><span class="identifier">http</span><span class="special">::</span><span class="identifier">string_body</span><span class="special">&gt;</span> <span class="identifier">parser</span><span class="special">;</span>
+
+        <span class="comment">// Apply a reasonable limit to the allowed size</span>
+        <span class="comment">// of the body in bytes to prevent abuse.</span>
+        <span class="identifier">parser</span><span class="special">.</span><span class="identifier">body_limit</span><span class="special">(</span><span class="number">10000</span><span class="special">);</span>
+
+        <span class="comment">// Read a request. yield[ec] prevents exceptions from being thrown</span>
+        <span class="comment">// on error. We use cancel_after to set a timeout for the overall read operation.</span>
+        <span class="identifier">http</span><span class="special">::</span><span class="identifier">async_read</span><span class="special">(</span><span class="identifier">sock</span><span class="special">,</span> <span class="identifier">buff</span><span class="special">,</span> <span class="identifier">parser</span><span class="special">.</span><span class="identifier">get</span><span class="special">(),</span> <span class="identifier">asio</span><span class="special">::</span><span class="identifier">cancel_after</span><span class="special">(</span><span class="number">60</span><span class="identifier">s</span><span class="special">,</span> <span class="identifier">yield</span><span class="special">[</span><span class="identifier">ec</span><span class="special">]));</span>
+
+        <span class="keyword">if</span> <span class="special">(</span><span class="identifier">ec</span><span class="special">)</span>
+        <span class="special">{</span>
+            <span class="keyword">if</span> <span class="special">(</span><span class="identifier">ec</span> <span class="special">==</span> <span class="identifier">http</span><span class="special">::</span><span class="identifier">error</span><span class="special">::</span><span class="identifier">end_of_stream</span><span class="special">)</span>
+            <span class="special">{</span>
+                <span class="comment">// This means they closed the connection</span>
+                <span class="identifier">sock</span><span class="special">.</span><span class="identifier">shutdown</span><span class="special">(</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">ip</span><span class="special">::</span><span class="identifier">tcp</span><span class="special">::</span><span class="identifier">socket</span><span class="special">::</span><span class="identifier">shutdown_send</span><span class="special">,</span> <span class="identifier">ec</span><span class="special">);</span>
+            <span class="special">}</span>
+            <span class="keyword">else</span>
+            <span class="special">{</span>
+                <span class="comment">// An unknown error happened</span>
+                <span class="identifier">std</span><span class="special">::</span><span class="identifier">cout</span> <span class="special">&lt;&lt;</span> <span class="string">"Error reading HTTP request: "</span> <span class="special">&lt;&lt;</span> <span class="identifier">ec</span><span class="special">.</span><span class="identifier">message</span><span class="special">()</span> <span class="special">&lt;&lt;</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">endl</span><span class="special">;</span>
+            <span class="special">}</span>
+            <span class="keyword">return</span><span class="special">;</span>
+        <span class="special">}</span>
+
+        <span class="keyword">const</span> <span class="keyword">auto</span><span class="special">&amp;</span> <span class="identifier">request</span> <span class="special">=</span> <span class="identifier">parser</span><span class="special">.</span><span class="identifier">get</span><span class="special">();</span>
+
+        <span class="comment">// Process the request to generate a response.</span>
+        <span class="comment">// This invokes the business logic, which will need to access MySQL data.</span>
+        <span class="comment">// Apply a timeout to the overall request handling process.</span>
+        <span class="keyword">auto</span> <span class="identifier">response</span> <span class="special">=</span> <span class="identifier">asio</span><span class="special">::</span><span class="identifier">spawn</span><span class="special">(</span>
+            <span class="comment">// Use the same executor as this coroutine</span>
+            <span class="identifier">yield</span><span class="special">.</span><span class="identifier">get_executor</span><span class="special">(),</span>
+
+            <span class="comment">// The logic to invoke</span>
+            <span class="special">[&amp;](</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">yield_context</span> <span class="identifier">yield2</span><span class="special">)</span> <span class="special">{</span> <span class="keyword">return</span> <span class="identifier">handle_request</span><span class="special">(</span><span class="identifier">st</span><span class="special">-&gt;</span><span class="identifier">pool</span><span class="special">,</span> <span class="identifier">request</span><span class="special">,</span> <span class="identifier">yield2</span><span class="special">);</span> <span class="special">},</span>
+
+            <span class="comment">// Completion token. Passing yield blocks the current coroutine</span>
+            <span class="comment">// until handle_request completes.</span>
+            <span class="identifier">asio</span><span class="special">::</span><span class="identifier">cancel_after</span><span class="special">(</span><span class="identifier">timer</span><span class="special">,</span> <span class="number">30</span><span class="identifier">s</span><span class="special">,</span> <span class="identifier">yield</span><span class="special">)</span>
+        <span class="special">);</span>
+
+        <span class="comment">// Adjust the response, setting fields common to all responses</span>
+        <span class="keyword">bool</span> <span class="identifier">keep_alive</span> <span class="special">=</span> <span class="identifier">response</span><span class="special">.</span><span class="identifier">keep_alive</span><span class="special">();</span>
+        <span class="identifier">response</span><span class="special">.</span><span class="identifier">version</span><span class="special">(</span><span class="identifier">request</span><span class="special">.</span><span class="identifier">version</span><span class="special">());</span>
+        <span class="identifier">response</span><span class="special">.</span><span class="identifier">keep_alive</span><span class="special">(</span><span class="identifier">keep_alive</span><span class="special">);</span>
+        <span class="identifier">response</span><span class="special">.</span><span class="identifier">prepare_payload</span><span class="special">();</span>
+
+        <span class="comment">// Send the response</span>
+        <span class="identifier">http</span><span class="special">::</span><span class="identifier">async_write</span><span class="special">(</span><span class="identifier">sock</span><span class="special">,</span> <span class="identifier">response</span><span class="special">,</span> <span class="identifier">asio</span><span class="special">::</span><span class="identifier">cancel_after</span><span class="special">(</span><span class="number">60</span><span class="identifier">s</span><span class="special">,</span> <span class="identifier">yield</span><span class="special">[</span><span class="identifier">ec</span><span class="special">]));</span>
+        <span class="keyword">if</span> <span class="special">(</span><span class="identifier">ec</span><span class="special">)</span>
+        <span class="special">{</span>
+            <span class="identifier">std</span><span class="special">::</span><span class="identifier">cout</span> <span class="special">&lt;&lt;</span> <span class="string">"Error writing HTTP response: "</span> <span class="special">&lt;&lt;</span> <span class="identifier">ec</span><span class="special">.</span><span class="identifier">message</span><span class="special">()</span> <span class="special">&lt;&lt;</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">endl</span><span class="special">;</span>
+            <span class="keyword">return</span><span class="special">;</span>
+        <span class="special">}</span>
+
+        <span class="comment">// This means we should close the connection, usually because</span>
+        <span class="comment">// the response indicated the "Connection: close" semantic.</span>
+        <span class="keyword">if</span> <span class="special">(!</span><span class="identifier">keep_alive</span><span class="special">)</span>
+        <span class="special">{</span>
+            <span class="identifier">sock</span><span class="special">.</span><span class="identifier">shutdown</span><span class="special">(</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">ip</span><span class="special">::</span><span class="identifier">tcp</span><span class="special">::</span><span class="identifier">socket</span><span class="special">::</span><span class="identifier">shutdown_send</span><span class="special">,</span> <span class="identifier">ec</span><span class="special">);</span>
+            <span class="keyword">return</span><span class="special">;</span>
+        <span class="special">}</span>
+    <span class="special">}</span>
+<span class="special">}</span>
+
+<span class="special">}</span>  <span class="comment">// namespace</span>
+
+<span class="keyword">void</span> <span class="identifier">notes</span><span class="special">::</span><span class="identifier">run_server</span><span class="special">(</span><span class="identifier">std</span><span class="special">::</span><span class="identifier">shared_ptr</span><span class="special">&lt;</span><span class="identifier">shared_state</span><span class="special">&gt;</span> <span class="identifier">st</span><span class="special">,</span> <span class="keyword">unsigned</span> <span class="keyword">short</span> <span class="identifier">port</span><span class="special">,</span> <span class="identifier">asio</span><span class="special">::</span><span class="identifier">yield_context</span> <span class="identifier">yield</span><span class="special">)</span>
+<span class="special">{</span>
+    <span class="comment">// An object that allows us to accept incoming TCP connections</span>
+    <span class="identifier">asio</span><span class="special">::</span><span class="identifier">ip</span><span class="special">::</span><span class="identifier">tcp</span><span class="special">::</span><span class="identifier">acceptor</span> <span class="identifier">acc</span><span class="special">(</span><span class="identifier">yield</span><span class="special">.</span><span class="identifier">get_executor</span><span class="special">());</span>
+
+    <span class="comment">// The endpoint where the server will listen. Edit this if you want to</span>
+    <span class="comment">// change the address or port we bind to.</span>
+    <span class="identifier">asio</span><span class="special">::</span><span class="identifier">ip</span><span class="special">::</span><span class="identifier">tcp</span><span class="special">::</span><span class="identifier">endpoint</span> <span class="identifier">listening_endpoint</span><span class="special">(</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">ip</span><span class="special">::</span><span class="identifier">make_address</span><span class="special">(</span><span class="string">"0.0.0.0"</span><span class="special">),</span> <span class="identifier">port</span><span class="special">);</span>
+
+    <span class="comment">// Open the acceptor</span>
+    <span class="identifier">acc</span><span class="special">.</span><span class="identifier">open</span><span class="special">(</span><span class="identifier">listening_endpoint</span><span class="special">.</span><span class="identifier">protocol</span><span class="special">());</span>
+
+    <span class="comment">// Allow address reuse</span>
+    <span class="identifier">acc</span><span class="special">.</span><span class="identifier">set_option</span><span class="special">(</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">socket_base</span><span class="special">::</span><span class="identifier">reuse_address</span><span class="special">(</span><span class="keyword">true</span><span class="special">));</span>
+
+    <span class="comment">// Bind to the server address</span>
+    <span class="identifier">acc</span><span class="special">.</span><span class="identifier">bind</span><span class="special">(</span><span class="identifier">listening_endpoint</span><span class="special">);</span>
+
+    <span class="comment">// Start listening for connections</span>
+    <span class="identifier">acc</span><span class="special">.</span><span class="identifier">listen</span><span class="special">(</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">socket_base</span><span class="special">::</span><span class="identifier">max_listen_connections</span><span class="special">);</span>
+
+    <span class="identifier">std</span><span class="special">::</span><span class="identifier">cout</span> <span class="special">&lt;&lt;</span> <span class="string">"Server listening at "</span> <span class="special">&lt;&lt;</span> <span class="identifier">acc</span><span class="special">.</span><span class="identifier">local_endpoint</span><span class="special">()</span> <span class="special">&lt;&lt;</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">endl</span><span class="special">;</span>
+
+    <span class="comment">// Start the acceptor loop</span>
+    <span class="keyword">while</span> <span class="special">(</span><span class="keyword">true</span><span class="special">)</span>
+    <span class="special">{</span>
+        <span class="comment">// Accept a new connection</span>
+        <span class="identifier">asio</span><span class="special">::</span><span class="identifier">ip</span><span class="special">::</span><span class="identifier">tcp</span><span class="special">::</span><span class="identifier">socket</span> <span class="identifier">sock</span> <span class="special">=</span> <span class="identifier">acc</span><span class="special">.</span><span class="identifier">async_accept</span><span class="special">(</span><span class="identifier">yield</span><span class="special">);</span>
+
+        <span class="comment">// Launch a new session for this connection. Each session gets its</span>
+        <span class="comment">// own coroutine, so we can get back to listening for new connections.</span>
+        <span class="identifier">asio</span><span class="special">::</span><span class="identifier">spawn</span><span class="special">(</span>
+            <span class="identifier">yield</span><span class="special">.</span><span class="identifier">get_executor</span><span class="special">(),</span>
+
+            <span class="comment">// Function implementing our session logic.</span>
+            <span class="comment">// Takes ownership of the socket.</span>
+            <span class="special">[</span><span class="identifier">st</span><span class="special">,</span> <span class="identifier">sock</span> <span class="special">=</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">move</span><span class="special">(</span><span class="identifier">sock</span><span class="special">)](</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">yield_context</span> <span class="identifier">yield2</span><span class="special">)</span> <span class="keyword">mutable</span> <span class="special">{</span>
+                <span class="keyword">return</span> <span class="identifier">run_http_session</span><span class="special">(</span><span class="identifier">std</span><span class="special">::</span><span class="identifier">move</span><span class="special">(</span><span class="identifier">st</span><span class="special">),</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">move</span><span class="special">(</span><span class="identifier">sock</span><span class="special">),</span> <span class="identifier">yield2</span><span class="special">);</span>
+            <span class="special">},</span>
+
+            <span class="comment">// Callback to run when the coroutine finishes</span>
+            <span class="special">[](</span><span class="identifier">std</span><span class="special">::</span><span class="identifier">exception_ptr</span> <span class="identifier">ptr</span><span class="special">)</span> <span class="special">{</span>
+                <span class="keyword">if</span> <span class="special">(</span><span class="identifier">ptr</span><span class="special">)</span>
+                <span class="special">{</span>
+                    <span class="comment">// For extra safety, log the exception but don't propagate it.</span>
+                    <span class="comment">// If we failed to anticipate an error condition that ends up raising an exception,</span>
+                    <span class="comment">// terminate only the affected session, instead of crashing the server.</span>
+                    <span class="keyword">try</span>
+                    <span class="special">{</span>
+                        <span class="identifier">std</span><span class="special">::</span><span class="identifier">rethrow_exception</span><span class="special">(</span><span class="identifier">ptr</span><span class="special">);</span>
+                    <span class="special">}</span>
+                    <span class="keyword">catch</span> <span class="special">(</span><span class="keyword">const</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">exception</span><span class="special">&amp;</span> <span class="identifier">exc</span><span class="special">)</span>
+                    <span class="special">{</span>
+                        <span class="identifier">std</span><span class="special">::</span><span class="identifier">cerr</span> <span class="special">&lt;&lt;</span> <span class="string">"Uncaught error in a session: "</span> <span class="special">&lt;&lt;</span> <span class="identifier">exc</span><span class="special">.</span><span class="identifier">what</span><span class="special">()</span> <span class="special">&lt;&lt;</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">endl</span><span class="special">;</span>
+                    <span class="special">}</span>
+                <span class="special">}</span>
+            <span class="special">}</span>
+        <span class="special">);</span>
+    <span class="special">}</span>
+<span class="special">}</span>
+</pre>
+</div>
+<div class="copyright-footer">Copyright © 2019-2024 Ruben Perez<p>
+        Distributed under the Boost Software License, Version 1.0. (See accompanying
+        file LICENSE_1_0.txt or copy at <a href="http://www.boost.org/LICENSE_1_0.txt" target="_top">http://www.boost.org/LICENSE_1_0.txt</a>)
+      </p>
+</div>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="http_server_cpp20.html"><img src="../../../../../../doc/src/images/prev.png" alt="Prev"></a><a accesskey="u" href="../examples.html"><img src="../../../../../../doc/src/images/up.png" alt="Up"></a><a accesskey="h" href="../../index.html"><img src="../../../../../../doc/src/images/home.png" alt="Home"></a><a accesskey="n" href="../ref.html"><img src="../../../../../../doc/src/images/next.png" alt="Next"></a>
+</div>
+</body>
+</html>

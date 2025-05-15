@@ -1,0 +1,73 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>boost::mqtt5::mqtt_client::will</title>
+<link rel="stylesheet" href="../../../../../../../doc/src/boostbook.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="../../../index.html" title="Chapter 1. Boost.MQTT5: a C++17 MQTT client">
+<link rel="up" href="../boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client">
+<link rel="prev" href="cancel.html" title="boost::mqtt5::mqtt_client::cancel">
+<link rel="next" href="credentials.html" title="boost::mqtt5::mqtt_client::credentials">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table cellpadding="2" width="100%"><tr>
+<td valign="top"><img alt="Boost C++ Libraries" width="277" height="86" src="../../../../../../../boost.png"></td>
+<td align="center"><a href="../../../../../../../index.html">Home</a></td>
+<td align="center"><a href="../../../../../../../libs/libraries.htm">Libraries</a></td>
+<td align="center"><a href="http://www.boost.org/users/people.html">People</a></td>
+<td align="center"><a href="http://www.boost.org/users/faq.html">FAQ</a></td>
+<td align="center"><a href="../../../../../../../more/index.htm">More</a></td>
+</tr></table>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="cancel.html"><img src="../../../../../../../doc/src/images/prev.png" alt="Prev"></a><a accesskey="u" href="../boost__mqtt5__mqtt_client.html"><img src="../../../../../../../doc/src/images/up.png" alt="Up"></a><a accesskey="h" href="../../../index.html"><img src="../../../../../../../doc/src/images/home.png" alt="Home"></a><a accesskey="n" href="credentials.html"><img src="../../../../../../../doc/src/images/next.png" alt="Next"></a>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h5 class="title">
+<a name="mqtt5.ref.boost__mqtt5__mqtt_client.will"></a><a class="link" href="will.html" title="boost::mqtt5::mqtt_client::will">boost::mqtt5::mqtt_client::will</a>
+</h5></div></div></div>
+<p>
+          <a class="indexterm" name="id12034"></a>
+Assign a <a class="link" href="../boost__mqtt5__will.html" title="boost::mqtt5::will"><code class="computeroutput"><span class="identifier">will</span></code></a> Message.
+        </p>
+<h6>
+<a name="mqtt5.ref.boost__mqtt5__mqtt_client.will.h0"></a>
+          <span class="phrase"><a name="mqtt5.ref.boost__mqtt5__mqtt_client.will.synopsis"></a></span><a class="link" href="will.html#mqtt5.ref.boost__mqtt5__mqtt_client.will.synopsis">Synopsis</a>
+        </h6>
+<pre class="programlisting"><a class="link" href="../boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal">boost::mqtt5::mqtt_client</code></a><span class="special">&amp;</span>
+<span class="identifier">will</span><span class="special">(</span>
+    <a class="link" href="../boost__mqtt5__will.html" title="boost::mqtt5::will"><code class="literal">boost::mqtt5::will</code></a> <span class="identifier">will</span><span class="special">);</span>
+</pre>
+<h6>
+<a name="mqtt5.ref.boost__mqtt5__mqtt_client.will.h1"></a>
+          <span class="phrase"><a name="mqtt5.ref.boost__mqtt5__mqtt_client.will.description"></a></span><a class="link" href="will.html#mqtt5.ref.boost__mqtt5__mqtt_client.will.description">Description</a>
+        </h6>
+<p>
+          The <a class="link" href="../boost__mqtt5__will.html" title="boost::mqtt5::will"><code class="computeroutput"><span class="identifier">will</span></code></a>
+          Message that the Broker should publish after the Network Connection is
+          closed and it is not closed normally.
+        </p>
+<h6>
+<a name="mqtt5.ref.boost__mqtt5__mqtt_client.will.h2"></a>
+          <span class="phrase"><a name="mqtt5.ref.boost__mqtt5__mqtt_client.will.attention"></a></span><a class="link" href="will.html#mqtt5.ref.boost__mqtt5__mqtt_client.will.attention">Attention</a>
+        </h6>
+<p>
+          This function takes action when the client is in a non-operational state,
+          meaning the <a class="link" href="async_run.html" title="boost::mqtt5::mqtt_client::async_run"><code class="computeroutput"><span class="identifier">async_run</span></code></a> function has not been
+          invoked. Furthermore, you can use this function after the <a class="link" href="cancel.html" title="boost::mqtt5::mqtt_client::cancel"><code class="computeroutput"><span class="identifier">cancel</span></code></a> function has been called,
+          before the <a class="link" href="async_run.html" title="boost::mqtt5::mqtt_client::async_run"><code class="computeroutput"><span class="identifier">async_run</span></code></a> function is invoked
+          again.
+        </p>
+</div>
+<div class="copyright-footer">Copyright © 2023-2025 Mireo<p>
+        Distributed under the Boost Software License, Version 1.0. (See accompanying
+        file LICENSE_1_0.txt or copy at <a href="http://www.boost.org/LICENSE_1_0.txt" target="_top">http://www.boost.org/LICENSE_1_0.txt</a>)
+      </p>
+</div>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="cancel.html"><img src="../../../../../../../doc/src/images/prev.png" alt="Prev"></a><a accesskey="u" href="../boost__mqtt5__mqtt_client.html"><img src="../../../../../../../doc/src/images/up.png" alt="Up"></a><a accesskey="h" href="../../../index.html"><img src="../../../../../../../doc/src/images/home.png" alt="Home"></a><a accesskey="n" href="credentials.html"><img src="../../../../../../../doc/src/images/next.png" alt="Next"></a>
+</div>
+</body>
+</html>

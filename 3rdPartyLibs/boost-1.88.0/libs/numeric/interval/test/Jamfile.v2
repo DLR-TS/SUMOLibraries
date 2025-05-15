@@ -1,0 +1,48 @@
+# Boost Interval Library test Jamfile
+#
+# Copyright 2003 Guillaume Melquiond
+#
+# Distributed under the Boost Software License, Version 1.0.
+# (See accompanying file LICENSE_1_0.txt or
+# copy at http://www.boost.org/LICENSE_1_0.txt)
+
+project
+  :
+  requirements
+    <library>/boost/interval//boost_interval
+    # Enable dynamic rounding on Tru64 (Alpha CPU).
+    <toolset>hp_cxx,<os>OSF:<cflags>"-fprm d"
+    <toolset>gcc,<os>OSF:<cflags>-mfp-rounding-mode=d
+    <toolset>gcc:<cxxflags>-frounding-math
+    <toolset>clang:<cxxflags>-frounding-math
+    <toolset>msvc:<cxxflags>/fp\:strict
+  ;
+
+# bring in rules for testing
+import testing ;
+
+{
+  test-suite numeric/interval :
+    [ compile integer.cpp ]
+
+    [ run add.cpp      ]
+    [ run det.cpp      ]
+    [ run fmod.cpp     ]
+    [ run msvc_x64_flags.cpp : : : <build>no <toolset>msvc:<build>yes ]
+    [ run mul.cpp      ]
+    [ run overflow.cpp ]
+    [ run pi.cpp       ]
+    [ run pow.cpp      ]
+
+    [ run cmp.cpp ]
+    [ run cmp_exn.cpp : : : <library>/boost/logic//boost_logic ]
+    [ run cmp_exp.cpp ]
+    [ run cmp_lex.cpp ]
+    [ run cmp_set.cpp ]
+ # https://github.com/boostorg/interval/issues/15
+ #  [ run cmp_tribool.cpp ]
+    [ run test_float.cpp
+      : : : <build>yes <toolset>msvc-10.0:<build>no ]
+            # https://github.com/boostorg/interval/issues/17
+  ;
+}

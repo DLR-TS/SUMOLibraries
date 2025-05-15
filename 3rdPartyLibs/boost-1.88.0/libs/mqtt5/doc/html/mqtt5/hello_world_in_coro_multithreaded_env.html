@@ -1,0 +1,140 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Hello World in a multithreaded environment using coroutines</title>
+<link rel="stylesheet" href="../../../../../doc/src/boostbook.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="../index.html" title="Chapter 1. Boost.MQTT5: a C++17 MQTT client">
+<link rel="up" href="../pt01.html" title="Part I. ">
+<link rel="prev" href="hello_world_in_multithreaded_env.html" title="Hello World in a multithreaded environment using callbacks">
+<link rel="next" href="ref.html" title="Reference">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table cellpadding="2" width="100%"><tr>
+<td valign="top"><img alt="Boost C++ Libraries" width="277" height="86" src="../../../../../boost.png"></td>
+<td align="center"><a href="../../../../../index.html">Home</a></td>
+<td align="center"><a href="../../../../../libs/libraries.htm">Libraries</a></td>
+<td align="center"><a href="http://www.boost.org/users/people.html">People</a></td>
+<td align="center"><a href="http://www.boost.org/users/faq.html">FAQ</a></td>
+<td align="center"><a href="../../../../../more/index.htm">More</a></td>
+</tr></table>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="hello_world_in_multithreaded_env.html"><img src="../../../../../doc/src/images/prev.png" alt="Prev"></a><a accesskey="u" href="../pt01.html"><img src="../../../../../doc/src/images/up.png" alt="Up"></a><a accesskey="h" href="../index.html"><img src="../../../../../doc/src/images/home.png" alt="Home"></a><a accesskey="n" href="ref.html"><img src="../../../../../doc/src/images/next.png" alt="Next"></a>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="mqtt5.hello_world_in_coro_multithreaded_env"></a><a class="link" href="hello_world_in_coro_multithreaded_env.html" title="Hello World in a multithreaded environment using coroutines">Hello World
+    in a multithreaded environment using coroutines</a>
+</h3></div></div></div>
+<p>
+      This example demonstrates how to publish a "Hello World" message
+      in a multithreaded environment using coroutines (<code class="computeroutput"><span class="identifier">co_spawn</span></code>).
+    </p>
+<pre class="programlisting"><span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">mqtt5</span><span class="special">/</span><span class="identifier">logger</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">mqtt5</span><span class="special">/</span><span class="identifier">mqtt_client</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">mqtt5</span><span class="special">/</span><span class="identifier">types</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">asio</span><span class="special">/</span><span class="identifier">as_tuple</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">asio</span><span class="special">/</span><span class="identifier">co_spawn</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">asio</span><span class="special">/</span><span class="identifier">deferred</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">asio</span><span class="special">/</span><span class="identifier">detached</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">asio</span><span class="special">/</span><span class="identifier">ip</span><span class="special">/</span><span class="identifier">tcp</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">asio</span><span class="special">/</span><span class="identifier">strand</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">asio</span><span class="special">/</span><span class="identifier">thread_pool</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">cassert</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">iostream</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">string</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">thread</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">vector</span><span class="special">&gt;</span>
+
+<span class="keyword">struct</span> <span class="identifier">config</span> <span class="special">{</span>
+    <span class="identifier">std</span><span class="special">::</span><span class="identifier">string</span> <span class="identifier">brokers</span> <span class="special">=</span> <span class="string">"broker.hivemq.com"</span><span class="special">;</span>
+    <span class="identifier">uint16_t</span> <span class="identifier">port</span> <span class="special">=</span> <span class="number">1883</span><span class="special">;</span>
+    <span class="identifier">std</span><span class="special">::</span><span class="identifier">string</span> <span class="identifier">client_id</span> <span class="special">=</span> <span class="string">"boost_mqtt5_tester"</span><span class="special">;</span>
+<span class="special">};</span>
+
+<span class="comment">// client_type with logging enabled</span>
+<span class="keyword">using</span> <span class="identifier">client_type</span> <span class="special">=</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">mqtt_client</span><span class="special">&lt;</span>
+    <span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">ip</span><span class="special">::</span><span class="identifier">tcp</span><span class="special">::</span><span class="identifier">socket</span><span class="special">,</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">monostate</span> <span class="comment">/* TlsContext */</span><span class="special">,</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">logger</span>
+<span class="special">&gt;;</span>
+
+<span class="comment">// client_type without logging</span>
+<span class="comment">//using client_type = boost::mqtt5::mqtt_client&lt;boost::asio::ip::tcp::socket&gt;;</span>
+
+<span class="comment">// Modified completion token that will prevent co_await from throwing exceptions.</span>
+<span class="keyword">constexpr</span> <span class="keyword">auto</span> <span class="identifier">use_nothrow_awaitable</span> <span class="special">=</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">as_tuple</span><span class="special">(</span><span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">deferred</span><span class="special">);</span>
+
+<span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">awaitable</span><span class="special">&lt;</span><span class="keyword">void</span><span class="special">&gt;</span> <span class="identifier">publish_hello_world</span><span class="special">(</span>
+    <span class="keyword">const</span> <span class="identifier">config</span><span class="special">&amp;</span> <span class="identifier">cfg</span><span class="special">,</span> <span class="identifier">client_type</span><span class="special">&amp;</span> <span class="identifier">client</span><span class="special">,</span>
+    <span class="keyword">const</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">strand</span><span class="special">&lt;</span><span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">thread_pool</span><span class="special">::</span><span class="identifier">executor_type</span><span class="special">&gt;&amp;</span> <span class="identifier">strand</span>
+<span class="special">)</span> <span class="special">{</span>
+    <span class="comment">// Confirmation that the coroutine running in the strand.</span>
+    <span class="identifier">assert</span><span class="special">(</span><span class="identifier">strand</span><span class="special">.</span><span class="identifier">running_in_this_thread</span><span class="special">());</span>
+
+    <span class="comment">// All these function calls will be executed by the strand that is executing the coroutine.</span>
+    <span class="comment">// All the completion handler's associated executors will be that same strand</span>
+    <span class="comment">// because the Client was constructed with it as the default associated executor.</span>
+    <span class="identifier">client</span><span class="special">.</span><span class="identifier">brokers</span><span class="special">(</span><span class="identifier">cfg</span><span class="special">.</span><span class="identifier">brokers</span><span class="special">,</span> <span class="identifier">cfg</span><span class="special">.</span><span class="identifier">port</span><span class="special">)</span> <span class="comment">// Set the Broker to connect to.</span>
+        <span class="special">.</span><span class="identifier">credentials</span><span class="special">(</span><span class="identifier">cfg</span><span class="special">.</span><span class="identifier">client_id</span><span class="special">)</span> <span class="comment">// Set the Client Identifier. (optional)</span>
+        <span class="special">.</span><span class="identifier">async_run</span><span class="special">(</span><span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">detached</span><span class="special">);</span> <span class="comment">// Start the Client.</span>
+
+    <span class="keyword">auto</span><span class="special">&amp;&amp;</span> <span class="special">[</span><span class="identifier">ec</span><span class="special">,</span> <span class="identifier">rc</span><span class="special">,</span> <span class="identifier">puback_props</span><span class="special">]</span> <span class="special">=</span> <span class="identifier">co_await</span> <span class="identifier">client</span><span class="special">.</span><span class="identifier">async_publish</span><span class="special">&lt;</span><span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">qos_e</span><span class="special">::</span><span class="identifier">at_least_once</span><span class="special">&gt;(</span>
+        <span class="string">"boost-mqtt5/test"</span> <span class="comment">/* topic */</span><span class="special">,</span> <span class="string">"Hello world!"</span> <span class="comment">/* payload*/</span><span class="special">,</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">retain_e</span><span class="special">::</span><span class="identifier">no</span><span class="special">,</span>
+        <span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">publish_props</span> <span class="special">{},</span> <span class="identifier">use_nothrow_awaitable</span><span class="special">);</span>
+
+    <span class="identifier">co_await</span> <span class="identifier">client</span><span class="special">.</span><span class="identifier">async_disconnect</span><span class="special">(</span><span class="identifier">use_nothrow_awaitable</span><span class="special">);</span>
+    <span class="identifier">co_return</span><span class="special">;</span>
+<span class="special">}</span>
+
+<span class="keyword">int</span> <span class="identifier">main</span><span class="special">(</span><span class="keyword">int</span> <span class="identifier">argc</span><span class="special">,</span> <span class="keyword">char</span><span class="special">**</span> <span class="identifier">argv</span><span class="special">)</span> <span class="special">{</span>
+    <span class="identifier">config</span> <span class="identifier">cfg</span><span class="special">;</span>
+
+    <span class="keyword">if</span> <span class="special">(</span><span class="identifier">argc</span> <span class="special">==</span> <span class="number">4</span><span class="special">)</span> <span class="special">{</span>
+        <span class="identifier">cfg</span><span class="special">.</span><span class="identifier">brokers</span> <span class="special">=</span> <span class="identifier">argv</span><span class="special">[</span><span class="number">1</span><span class="special">];</span>
+        <span class="identifier">cfg</span><span class="special">.</span><span class="identifier">port</span> <span class="special">=</span> <span class="identifier">uint16_t</span><span class="special">(</span><span class="identifier">std</span><span class="special">::</span><span class="identifier">stoi</span><span class="special">(</span><span class="identifier">argv</span><span class="special">[</span><span class="number">2</span><span class="special">]));</span>
+        <span class="identifier">cfg</span><span class="special">.</span><span class="identifier">client_id</span> <span class="special">=</span> <span class="identifier">argv</span><span class="special">[</span><span class="number">3</span><span class="special">];</span>
+    <span class="special">}</span>
+
+    <span class="comment">// Create a thread pool with 4 threads.</span>
+    <span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">thread_pool</span> <span class="identifier">tp</span><span class="special">(</span><span class="number">4</span><span class="special">);</span>
+
+    <span class="comment">// Create an explicit strand from io_context's executor.</span>
+    <span class="comment">// The strand guarantees a serialised handler execution regardless of the </span>
+    <span class="comment">// number of threads running in the io_context.</span>
+    <span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">strand</span> <span class="identifier">strand</span> <span class="special">=</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">make_strand</span><span class="special">(</span><span class="identifier">tp</span><span class="special">.</span><span class="identifier">get_executor</span><span class="special">());</span>
+
+    <span class="comment">// Create the Client with the explicit strand as the default associated executor.</span>
+    <span class="identifier">client_type</span> <span class="identifier">client</span><span class="special">(</span><span class="identifier">strand</span><span class="special">,</span> <span class="special">{}</span> <span class="comment">/* tls_context */</span><span class="special">,</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">logger</span><span class="special">(</span><span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">log_level</span><span class="special">::</span><span class="identifier">info</span><span class="special">));</span>
+
+    <span class="comment">// Spawn the coroutine.</span>
+    <span class="comment">// The executor that executes the coroutine must be the same executor</span>
+    <span class="comment">// that is the Client's default associated executor.</span>
+    <span class="identifier">co_spawn</span><span class="special">(</span>
+        <span class="identifier">strand</span><span class="special">,</span>
+        <span class="identifier">publish_hello_world</span><span class="special">(</span><span class="identifier">cfg</span><span class="special">,</span> <span class="identifier">client</span><span class="special">,</span> <span class="identifier">strand</span><span class="special">),</span>
+        <span class="special">[](</span><span class="identifier">std</span><span class="special">::</span><span class="identifier">exception_ptr</span> <span class="identifier">e</span><span class="special">)</span> <span class="special">{</span>
+            <span class="keyword">if</span> <span class="special">(</span><span class="identifier">e</span><span class="special">)</span>
+                <span class="identifier">std</span><span class="special">::</span><span class="identifier">rethrow_exception</span><span class="special">(</span><span class="identifier">e</span><span class="special">);</span>
+        <span class="special">}</span>
+    <span class="special">);</span>
+
+    <span class="identifier">tp</span><span class="special">.</span><span class="identifier">join</span><span class="special">();</span>
+
+    <span class="keyword">return</span> <span class="number">0</span><span class="special">;</span>
+<span class="special">}</span>
+</pre>
+</div>
+<div class="copyright-footer">Copyright © 2023-2025 Mireo<p>
+        Distributed under the Boost Software License, Version 1.0. (See accompanying
+        file LICENSE_1_0.txt or copy at <a href="http://www.boost.org/LICENSE_1_0.txt" target="_top">http://www.boost.org/LICENSE_1_0.txt</a>)
+      </p>
+</div>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="hello_world_in_multithreaded_env.html"><img src="../../../../../doc/src/images/prev.png" alt="Prev"></a><a accesskey="u" href="../pt01.html"><img src="../../../../../doc/src/images/up.png" alt="Up"></a><a accesskey="h" href="../index.html"><img src="../../../../../doc/src/images/home.png" alt="Home"></a><a accesskey="n" href="ref.html"><img src="../../../../../doc/src/images/next.png" alt="Next"></a>
+</div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+prefix=D:/SUMOLibraries/3rdPartyLibs/abseil-25.05.12
+exec_prefix=${prefix}
+libdir=D:/SUMOLibraries/3rdPartyLibs/abseil-25.05.12/lib
+includedir=D:/SUMOLibraries/3rdPartyLibs/abseil-25.05.12/include
+
+Name: absl_bad_any_cast
+Description: Abseil bad_any_cast library
+URL: https://abseil.io/
+Version: 20250512
+Requires:
+Libs: -L${libdir}  
+Cflags: -I${includedir}

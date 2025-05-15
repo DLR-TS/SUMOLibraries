@@ -1,0 +1,307 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>boost::mqtt5::mqtt_client::async_publish</title>
+<link rel="stylesheet" href="../../../../../../../doc/src/boostbook.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="../../../index.html" title="Chapter 1. Boost.MQTT5: a C++17 MQTT client">
+<link rel="up" href="../boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client">
+<link rel="prev" href="connack_properties.html" title="boost::mqtt5::mqtt_client::connack_properties">
+<link rel="next" href="async_subscribe.html" title="boost::mqtt5::mqtt_client::async_subscribe">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table cellpadding="2" width="100%"><tr>
+<td valign="top"><img alt="Boost C++ Libraries" width="277" height="86" src="../../../../../../../boost.png"></td>
+<td align="center"><a href="../../../../../../../index.html">Home</a></td>
+<td align="center"><a href="../../../../../../../libs/libraries.htm">Libraries</a></td>
+<td align="center"><a href="http://www.boost.org/users/people.html">People</a></td>
+<td align="center"><a href="http://www.boost.org/users/faq.html">FAQ</a></td>
+<td align="center"><a href="../../../../../../../more/index.htm">More</a></td>
+</tr></table>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="connack_properties.html"><img src="../../../../../../../doc/src/images/prev.png" alt="Prev"></a><a accesskey="u" href="../boost__mqtt5__mqtt_client.html"><img src="../../../../../../../doc/src/images/up.png" alt="Up"></a><a accesskey="h" href="../../../index.html"><img src="../../../../../../../doc/src/images/home.png" alt="Home"></a><a accesskey="n" href="async_subscribe.html"><img src="../../../../../../../doc/src/images/next.png" alt="Next"></a>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h5 class="title">
+<a name="mqtt5.ref.boost__mqtt5__mqtt_client.async_publish"></a><a class="link" href="async_publish.html" title="boost::mqtt5::mqtt_client::async_publish">boost::mqtt5::mqtt_client::async_publish</a>
+</h5></div></div></div>
+<p>
+          <a class="indexterm" name="id12774"></a>
+Send a <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901100" target="_top"><code class="computeroutput"><span class="identifier">PUBLISH</span></code></a> packet to Broker to transport
+          an Application Message.
+        </p>
+<h6>
+<a name="mqtt5.ref.boost__mqtt5__mqtt_client.async_publish.h0"></a>
+          <span class="phrase"><a name="mqtt5.ref.boost__mqtt5__mqtt_client.async_publish.synopsis"></a></span><a class="link" href="async_publish.html#mqtt5.ref.boost__mqtt5__mqtt_client.async_publish.synopsis">Synopsis</a>
+        </h6>
+<pre class="programlisting"><span class="keyword">template</span><span class="special">&lt;</span>
+    <a class="link" href="../boost__mqtt5__qos_e.html" title="boost::mqtt5::qos_e"><code class="literal">boost::mqtt5::qos_e</code></a> <span class="identifier">qos_type</span><span class="special">,</span>
+    <span class="keyword">typename</span> <a href="../../../../../../../doc/html/boost_asio/reference/asynchronous_operations.html#boost_asio.reference.asynchronous_operations.completion_tokens_and_handlers" target="_top"><span class="emphasis"><em>CompletionToken</em></span></a> <span class="special">=</span> <span class="keyword">typename</span> <span class="identifier">asio</span><span class="special">::</span><span class="identifier">default_completion_token</span><span class="special">&lt;</span><a class="link" href="executor_type.html" title="boost::mqtt5::mqtt_client::executor_type"><code class="literal">boost::mqtt5::mqtt_client::executor_type</code></a><span class="special">&gt;::</span><span class="identifier">type</span><span class="special">&gt;</span>
+<span class="keyword">decltype</span><span class="special">(</span><span class="keyword">auto</span><span class="special">)</span>
+<span class="identifier">async_publish</span><span class="special">(</span>
+    <span class="identifier">std</span><span class="special">::</span><span class="identifier">string</span> <span class="identifier">topic</span><span class="special">,</span>
+    <span class="identifier">std</span><span class="special">::</span><span class="identifier">string</span> <span class="identifier">payload</span><span class="special">,</span>
+    <a class="link" href="../boost__mqtt5__retain_e.html" title="boost::mqtt5::retain_e"><code class="literal">boost::mqtt5::retain_e</code></a> <span class="identifier">retain</span><span class="special">,</span>
+    <span class="keyword">const</span> <span class="identifier">publish_props</span><span class="special">&amp;</span> <span class="identifier">props</span><span class="special">,</span>
+    <span class="identifier">CompletionToken</span><span class="special">&amp;&amp;</span> <span class="identifier">token</span> <span class="special">=</span> <span class="special">{});</span>
+</pre>
+<h6>
+<a name="mqtt5.ref.boost__mqtt5__mqtt_client.async_publish.h1"></a>
+          <span class="phrase"><a name="mqtt5.ref.boost__mqtt5__mqtt_client.async_publish.template_parameters"></a></span><a class="link" href="async_publish.html#mqtt5.ref.boost__mqtt5__mqtt_client.async_publish.template_parameters">Template
+          Parameters</a>
+        </h6>
+<div class="informaltable"><table class="table">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead><tr>
+<th>
+                  <p>
+                    Type
+                  </p>
+                </th>
+<th>
+                  <p>
+                    Description
+                  </p>
+                </th>
+</tr></thead>
+<tbody><tr>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="identifier">qos_type</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    The <a class="link" href="../boost__mqtt5__qos_e.html" title="boost::mqtt5::qos_e"><code class="computeroutput"><span class="identifier">qos_e</span></code></a> level of assurance
+                    for delivery.
+                  </p>
+                </td>
+</tr></tbody>
+</table></div>
+<h6>
+<a name="mqtt5.ref.boost__mqtt5__mqtt_client.async_publish.h2"></a>
+          <span class="phrase"><a name="mqtt5.ref.boost__mqtt5__mqtt_client.async_publish.parameters"></a></span><a class="link" href="async_publish.html#mqtt5.ref.boost__mqtt5__mqtt_client.async_publish.parameters">Parameters</a>
+        </h6>
+<div class="informaltable"><table class="table">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead><tr>
+<th>
+                  <p>
+                    Name
+                  </p>
+                </th>
+<th>
+                  <p>
+                    Description
+                  </p>
+                </th>
+</tr></thead>
+<tbody>
+<tr>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="identifier">topic</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    Identification of the information channel to which Payload data
+                    is published.
+                  </p>
+                </td>
+</tr>
+<tr>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="identifier">payload</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    The Application Message that is being published.
+                  </p>
+                </td>
+</tr>
+<tr>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="identifier">retain</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    The <a class="link" href="../boost__mqtt5__retain_e.html" title="boost::mqtt5::retain_e"><code class="computeroutput"><span class="identifier">retain_e</span></code></a> flag.
+                  </p>
+                </td>
+</tr>
+<tr>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="identifier">props</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    An instance of <a class="link" href="../publish_props.html" title="PUBLISH properties"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">publish_props</span></code></a>.
+                  </p>
+                </td>
+</tr>
+<tr>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="identifier">token</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    Completion token that will be used to produce a completion handler.
+                    The handler will be invoked when the operation completes. On
+                    immediate completion, invocation of the handler will be performed
+                    in a manner equivalent to using <a href="../../../../../../../doc/html/boost_asio/reference/async_immediate.html" target="_top"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">async_immediate</span></code></a>.
+                  </p>
+                </td>
+</tr>
+</tbody>
+</table></div>
+<h6>
+<a name="mqtt5.ref.boost__mqtt5__mqtt_client.async_publish.h3"></a>
+          <span class="phrase"><a name="mqtt5.ref.boost__mqtt5__mqtt_client.async_publish.handler_signature"></a></span><a class="link" href="async_publish.html#mqtt5.ref.boost__mqtt5__mqtt_client.async_publish.handler_signature">Handler
+          signature</a>
+        </h6>
+<p>
+          The handler signature for this operation depends on the <a class="link" href="../boost__mqtt5__qos_e.html" title="boost::mqtt5::qos_e"><code class="computeroutput"><span class="identifier">qos_e</span></code></a> specified:
+        </p>
+<p>
+          <code class="computeroutput"><span class="identifier">qos</span></code> == <code class="computeroutput"><span class="identifier">qos_e</span><span class="special">::</span><span class="identifier">at_most_once</span></code>:
+        </p>
+<pre class="programlisting"><span class="keyword">void</span> <span class="special">(</span>
+    <a class="link" href="../boost__mqtt5__error_code.html" title="boost::mqtt5::error_code"><code class="literal"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">error_code</span></code></code></a>    <span class="comment">// Result of operation</span>
+<span class="special">)</span>
+</pre>
+<p>
+          <code class="computeroutput"><span class="identifier">qos</span></code> == <code class="computeroutput"><span class="identifier">qos_e</span><span class="special">::</span><span class="identifier">at_least_once</span></code>:
+        </p>
+<pre class="programlisting"><span class="keyword">void</span> <span class="special">(</span>
+    <a class="link" href="../boost__mqtt5__error_code.html" title="boost::mqtt5::error_code"><code class="literal"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">error_code</span></code></code></a><span class="special">,</span>    <span class="comment">// Result of operation.</span>
+    <a class="link" href="../boost__mqtt5__reason_code.html" title="boost::mqtt5::reason_code"><code class="literal"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">reason_code</span></code></code></a><span class="special">,</span>   <span class="comment">// Reason Code received from Broker.</span>
+    <a class="link" href="../puback_props.html" title="PUBACK properties"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">puback_props</span></code></a>   <span class="comment">// Properties received in the PUBACK packet.</span>
+<span class="special">)</span>
+</pre>
+<p>
+          <code class="computeroutput"><span class="identifier">qos</span></code> == <code class="computeroutput"><span class="identifier">qos_e</span><span class="special">::</span><span class="identifier">exactly_once</span></code>:
+        </p>
+<pre class="programlisting"><span class="keyword">void</span> <span class="special">(</span>
+    <a class="link" href="../boost__mqtt5__error_code.html" title="boost::mqtt5::error_code"><code class="literal"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">error_code</span></code></code></a><span class="special">,</span>    <span class="comment">// Result of operation.</span>
+    <a class="link" href="../boost__mqtt5__reason_code.html" title="boost::mqtt5::reason_code"><code class="literal"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">reason_code</span></code></code></a><span class="special">,</span>   <span class="comment">// Reason Code received from Broker.</span>
+    <a class="link" href="../pubcomp_props.html" title="PUBCOMP properties"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">pubcomp_props</span></code></a>  <span class="comment">// Properties received in the PUBCOMP packet.</span>
+<span class="special">)</span>
+</pre>
+<h6>
+<a name="mqtt5.ref.boost__mqtt5__mqtt_client.async_publish.h4"></a>
+          <span class="phrase"><a name="mqtt5.ref.boost__mqtt5__mqtt_client.async_publish.completion_condition"></a></span><a class="link" href="async_publish.html#mqtt5.ref.boost__mqtt5__mqtt_client.async_publish.completion_condition">Completion
+          condition</a>
+        </h6>
+<p>
+          Depending on the <a class="link" href="../boost__mqtt5__qos_e.html" title="boost::mqtt5::qos_e"><code class="computeroutput"><span class="identifier">qos_e</span></code></a> specified, the asynchronous
+          operation will complete when one of the following conditions is true:
+        </p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+              If <code class="computeroutput"><span class="identifier">qos</span></code> == <code class="computeroutput"><span class="identifier">qos_e</span><span class="special">::</span><span class="identifier">at_most_once</span></code> and the Client has successfully
+              written the packet to the transport.
+            </li>
+<li class="listitem">
+              If <code class="computeroutput"><span class="identifier">qos</span></code> == <code class="computeroutput"><span class="identifier">qos_e</span><span class="special">::</span><span class="identifier">at_least_once</span></code> and the packet has
+              been sent and acknowledged through the reception of a <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901121" target="_top"><code class="computeroutput"><span class="identifier">PUBACK</span></code></a> packet.
+            </li>
+<li class="listitem">
+              If <code class="computeroutput"><span class="identifier">qos</span></code> == <code class="computeroutput"><span class="identifier">qos_e</span><span class="special">::</span><span class="identifier">exactly_once</span></code> and the packet has been
+              sent and fully acknowledged through the reception of a <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901151" target="_top"><code class="computeroutput"><span class="identifier">PUBCOMP</span></code></a> packet.
+            </li>
+<li class="listitem">
+              An error occurred. This is indicated by an associated <a class="link" href="../boost__mqtt5__error_code.html" title="boost::mqtt5::error_code"><code class="literal"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">error_code</span></code></code></a> in the
+              handler.
+            </li>
+</ul></div>
+<h6>
+<a name="mqtt5.ref.boost__mqtt5__mqtt_client.async_publish.h5"></a>
+          <span class="phrase"><a name="mqtt5.ref.boost__mqtt5__mqtt_client.async_publish.error_codes"></a></span><a class="link" href="async_publish.html#mqtt5.ref.boost__mqtt5__mqtt_client.async_publish.error_codes">Error
+          codes</a>
+        </h6>
+<p>
+          The list of all possible error codes that this operation can finish with:
+        </p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+              <code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">system</span><span class="special">::</span><span class="identifier">errc</span><span class="special">::</span><span class="identifier">errc_t</span><span class="special">::</span><span class="identifier">success</span></code>
+            </li>
+<li class="listitem">
+              <code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">error</span><span class="special">::</span><span class="identifier">operation_aborted</span></code>
+            </li>
+<li class="listitem">
+              <code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">error</span><span class="special">::</span><span class="identifier">no_recovery</span></code>
+            </li>
+<li class="listitem">
+              <a class="link" href="../boost__mqtt5__client__error.html" title="boost::mqtt5::client::error"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">client</span><span class="special">::</span><span class="identifier">error</span><span class="special">::</span><span class="identifier">malformed_packet</span></code></a>
+            </li>
+<li class="listitem">
+              <a class="link" href="../boost__mqtt5__client__error.html" title="boost::mqtt5::client::error"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">client</span><span class="special">::</span><span class="identifier">error</span><span class="special">::</span><span class="identifier">packet_too_large</span></code></a>
+            </li>
+<li class="listitem">
+              <a class="link" href="../boost__mqtt5__client__error.html" title="boost::mqtt5::client::error"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">client</span><span class="special">::</span><span class="identifier">error</span><span class="special">::</span><span class="identifier">pid_overrun</span></code></a>
+            </li>
+<li class="listitem">
+              <a class="link" href="../boost__mqtt5__client__error.html" title="boost::mqtt5::client::error"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">client</span><span class="special">::</span><span class="identifier">error</span><span class="special">::</span><span class="identifier">qos_not_supported</span></code></a>
+            </li>
+<li class="listitem">
+              <a class="link" href="../boost__mqtt5__client__error.html" title="boost::mqtt5::client::error"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">client</span><span class="special">::</span><span class="identifier">error</span><span class="special">::</span><span class="identifier">retain_not_available</span></code></a>
+            </li>
+<li class="listitem">
+              <a class="link" href="../boost__mqtt5__client__error.html" title="boost::mqtt5::client::error"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">client</span><span class="special">::</span><span class="identifier">error</span><span class="special">::</span><span class="identifier">topic_alias_maximum_reached</span></code></a>
+            </li>
+<li class="listitem">
+              <a class="link" href="../boost__mqtt5__client__error.html" title="boost::mqtt5::client::error"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">client</span><span class="special">::</span><span class="identifier">error</span><span class="special">::</span><span class="identifier">invalid_topic</span></code></a>
+            </li>
+</ul></div>
+<p>
+          Refer to the section on <a class="link" href="../Error_handling.html" title="Error handling"><code class="computeroutput"><span class="identifier">Error</span> <span class="identifier">handling</span></code></a>
+          to find the underlying causes for each error code.
+        </p>
+<h6>
+<a name="mqtt5.ref.boost__mqtt5__mqtt_client.async_publish.h6"></a>
+          <span class="phrase"><a name="mqtt5.ref.boost__mqtt5__mqtt_client.async_publish.per_operation_cancellation"></a></span><a class="link" href="async_publish.html#mqtt5.ref.boost__mqtt5__mqtt_client.async_publish.per_operation_cancellation">Per-Operation
+          Cancellation</a>
+        </h6>
+<p>
+          This asynchronous operation supports cancellation for the following <a href="../../../../../../../doc/html/boost_asio/reference/cancellation_type.html" target="_top"><code class="literal">boost::asio::cancellation_type</code></a>
+          values:
+        </p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+              <code class="computeroutput"><span class="identifier">cancellation_type</span><span class="special">::</span><span class="identifier">terminal</span></code> - invokes <a class="link" href="cancel.html" title="boost::mqtt5::mqtt_client::cancel"><code class="computeroutput"><span class="identifier">cancel</span></code></a>
+            </li>
+<li class="listitem">
+              <code class="computeroutput"><span class="identifier">cancellation_type</span><span class="special">::</span><span class="identifier">partial</span></code> &amp; <code class="computeroutput"><span class="identifier">cancellation_type</span><span class="special">::</span><span class="identifier">total</span></code>
+              - prevents potential resending of the <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901100" target="_top"><code class="computeroutput"><span class="identifier">PUBLISH</span></code></a> packet
+            </li>
+</ul></div>
+</div>
+<div class="copyright-footer">Copyright © 2023-2025 Mireo<p>
+        Distributed under the Boost Software License, Version 1.0. (See accompanying
+        file LICENSE_1_0.txt or copy at <a href="http://www.boost.org/LICENSE_1_0.txt" target="_top">http://www.boost.org/LICENSE_1_0.txt</a>)
+      </p>
+</div>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="connack_properties.html"><img src="../../../../../../../doc/src/images/prev.png" alt="Prev"></a><a accesskey="u" href="../boost__mqtt5__mqtt_client.html"><img src="../../../../../../../doc/src/images/up.png" alt="Up"></a><a accesskey="h" href="../../../index.html"><img src="../../../../../../../doc/src/images/home.png" alt="Home"></a><a accesskey="n" href="async_subscribe.html"><img src="../../../../../../../doc/src/images/next.png" alt="Next"></a>
+</div>
+</body>
+</html>

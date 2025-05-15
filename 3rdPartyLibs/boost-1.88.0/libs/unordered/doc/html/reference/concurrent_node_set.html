@@ -1,0 +1,3521 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: Boost.Unordered</title>
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../../unordered/_/css/site.css">
+  </head>
+  <body class="article">
+<div class="body">
+<div class="nav-container" data-component="unordered" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../intro.html">Boost.Unordered</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../intro.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../buckets.html">Basics of Hash Tables</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../hash_equality.html">Equality Predicates and Hash Functions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../regular.html">Regular Containers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../concurrent.html">Concurrent Containers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../hash_quality.html">Hash Quality</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../compliance.html">Standard Compliance</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../structures.html">Data Structures</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../debuggability.html">Debuggability</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../benchmarks.html">Benchmarks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../rationale.html">Implementation Rationale</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ref.html">Reference</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_unordered_map_fwd.html"><code>&lt;boost/unordered/unordered_map_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_unordered_map_top.html"><code>&lt;boost/unordered_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_unordered_map.html"><code>&lt;boost/unordered/unordered_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="unordered_map.html"><code>unordered_map</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="unordered_multimap.html"><code>unordered_multimap</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_unordered_set_fwd.html"><code>&lt;boost/unordered/unordered_set_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_unordered_set_top.html"><code>&lt;boost/unordered_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_unordered_set.html"><code>&lt;boost/unordered/unordered_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="unordered_set.html"><code>unordered_set</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="unordered_multiset.html"><code>unordered_multiset</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="hash_traits.html">Hash Traits</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="stats.html">Statistics</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_unordered_flat_map_fwd.html"><code>&lt;boost/unordered/unordered_flat_map_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_unordered_flat_map.html"><code>&lt;boost/unordered/unordered_flat_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="unordered_flat_map.html"><code>unordered_flat_map</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_unordered_flat_set_fwd.html"><code>&lt;boost/unordered/unordered_flat_set_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_unordered_flat_set.html"><code>&lt;boost/unordered/unordered_flat_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="unordered_flat_set.html"><code>unordered_flat_set</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_unordered_node_map_fwd.html"><code>&lt;boost/unordered/unordered_node_map_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_unordered_node_map.html"><code>&lt;boost/unordered/unordered_node_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="unordered_node_map.html"><code>unordered_node_map</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_unordered_node_set_fwd.html"><code>&lt;boost/unordered/unordered_node_set_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_unordered_node_set.html"><code>&lt;boost/unordered/unordered_node_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="unordered_node_set.html"><code>unordered_node_set</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_concurrent_flat_map_fwd.html"><code>&lt;boost/unordered/concurrent_flat_map_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_concurrent_flat_map.html"><code>&lt;boost/unordered/concurrent_flat_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="concurrent_flat_map.html"><code>concurrent_flat_map</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_concurrent_flat_set_fwd.html"><code>&lt;boost/unordered/concurrent_flat_set_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_concurrent_flat_set.html"><code>&lt;boost/unordered/concurrent_flat_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="concurrent_flat_set.html"><code>concurrent_flat_set</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_concurrent_node_map_fwd.html"><code>&lt;boost/unordered/concurrent_node_map_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_concurrent_node_map.html"><code>&lt;boost/unordered/concurrent_node_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="concurrent_node_map.html"><code>concurrent_node_map</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_concurrent_node_set_fwd.html"><code>&lt;boost/unordered/concurrent_node_set_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_concurrent_node_set.html"><code>&lt;boost/unordered/concurrent_node_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="concurrent_node_set.html"><code>concurrent_node_set</code></a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../changes.html">Change Log</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../bibliography.html">Bibliography</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../copyright.html">Copyright and License</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../intro.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../intro.html">Boost.Unordered</a></li>
+    <li><a href="../ref.html">Reference</a></li>
+    <li><a href="concurrent_node_set.html"><code>concurrent_node_set</code></a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1">
+<h2 id="concurrent_node_set"><a class="anchor" href="#concurrent_node_set"></a>Class Template concurrent_node_set</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code>boost::concurrent_node_set</code> — A node-based hash table that stores unique values and
+allows for concurrent element insertion, erasure, lookup and access
+without external synchronization mechanisms.</p>
+</div>
+<div class="paragraph">
+<p>Even though it acts as a container, <code>boost::concurrent_node_set</code>
+does not model the standard C++ <a href="https://en.cppreference.com/w/cpp/named_req/Container" target="_blank" rel="noopener">Container</a> concept.
+In particular, iterators and associated operations (<code>begin</code>, <code>end</code>, etc.) are not provided.
+Element access is done through user-provided <em>visitation functions</em> that are passed
+to <code>concurrent_node_set</code> operations where they are executed internally in a controlled fashion.
+Such visitation-based API allows for low-contention concurrent usage scenarios.</p>
+</div>
+<div class="paragraph">
+<p>The internal data structure of <code>boost::concurrent_node_set</code> is similar to that of
+<code>boost::unordered_node_set</code>. Unlike <code>boost::concurrent_flat_set</code>, pointer stability and
+node handling functionalities are provided, at the expense of potentially lower performance.</p>
+</div>
+<div class="sect2">
+<h3 id="concurrent_node_set_synopsis"><a class="anchor" href="#concurrent_node_set_synopsis"></a>Synopsis</h3>
+<div class="listingblock">
+<div class="content">
+<pre>// #include <a href="header_concurrent_node_set.html" class="xref page"><code>&lt;boost/unordered/concurrent_node_set.hpp&gt;</code></a>
+
+namespace boost {
+namespace unordered {
+
+  template&lt;class Key,
+           class Hash = boost::hash&lt;Key&gt;,
+           class Pred = std::equal_to&lt;Key&gt;,
+           class Allocator = std::allocator&lt;Key&gt;&gt;
+  class concurrent_node_set {
+  public:
+    // types
+    using key_type             = Key;
+    using value_type           = Key;
+    using init_type            = Key;
+    using hasher               = Hash;
+    using key_equal            = Pred;
+    using allocator_type       = Allocator;
+    using pointer              = typename std::allocator_traits&lt;Allocator&gt;::pointer;
+    using const_pointer        = typename std::allocator_traits&lt;Allocator&gt;::const_pointer;
+    using reference            = value_type&amp;;
+    using const_reference      = const value_type&amp;;
+    using size_type            = std::size_t;
+    using difference_type      = std::ptrdiff_t;
+
+    using node_type            = <em>implementation-defined</em>;
+    using insert_return_type   = <em>implementation-defined</em>;
+
+    using stats                = <a href="stats.html#stats_stats_type" class="xref page"><em>stats-type</em></a>; // if statistics are <a href="#concurrent_node_set_boost_unordered_enable_stats">enabled</a>
+
+    // constants
+    static constexpr size_type <a href="#concurrent_node_set_constants">bulk_visit_size</a> = <em>implementation-defined</em>;
+
+    // construct/copy/destroy
+    <a href="#concurrent_node_set_default_constructor">concurrent_node_set</a>();
+    explicit <a href="#concurrent_node_set_bucket_count_constructor">concurrent_node_set</a>(size_type n,
+                                 const hasher&amp; hf = hasher(),
+                                 const key_equal&amp; eql = key_equal(),
+                                 const allocator_type&amp; a = allocator_type());
+    template&lt;class InputIterator&gt;
+      <a href="#concurrent_node_set_iterator_range_constructor">concurrent_node_set</a>(InputIterator f, InputIterator l,
+                          size_type n = <em>implementation-defined</em>,
+                          const hasher&amp; hf = hasher(),
+                          const key_equal&amp; eql = key_equal(),
+                          const allocator_type&amp; a = allocator_type());
+    <a href="#concurrent_node_set_copy_constructor">concurrent_node_set</a>(const concurrent_node_set&amp; other);
+    <a href="#concurrent_node_set_move_constructor">concurrent_node_set</a>(concurrent_node_set&amp;&amp; other);
+    template&lt;class InputIterator&gt;
+      <a href="#concurrent_node_set_iterator_range_constructor_with_allocator">concurrent_node_set</a>(InputIterator f, InputIterator l,const allocator_type&amp; a);
+    explicit <a href="#concurrent_node_set_allocator_constructor">concurrent_node_set</a>(const Allocator&amp; a);
+    <a href="#concurrent_node_set_copy_constructor_with_allocator">concurrent_node_set</a>(const concurrent_node_set&amp; other, const Allocator&amp; a);
+    <a href="#concurrent_node_set_move_constructor_with_allocator">concurrent_node_set</a>(concurrent_node_set&amp;&amp; other, const Allocator&amp; a);
+    <a href="#concurrent_node_set_move_constructor_from_unordered_node_set">concurrent_node_set</a>(unordered_node_set&lt;Key, Hash, Pred, Allocator&gt;&amp;&amp; other);
+    <a href="#concurrent_node_set_initializer_list_constructor">concurrent_node_set</a>(std::initializer_list&lt;value_type&gt; il,
+                        size_type n = <em>implementation-defined</em>
+                        const hasher&amp; hf = hasher(),
+                        const key_equal&amp; eql = key_equal(),
+                        const allocator_type&amp; a = allocator_type());
+    <a href="#concurrent_node_set_bucket_count_constructor_with_allocator">concurrent_node_set</a>(size_type n, const allocator_type&amp; a);
+    <a href="#concurrent_node_set_bucket_count_constructor_with_hasher_and_allocator">concurrent_node_set</a>(size_type n, const hasher&amp; hf, const allocator_type&amp; a);
+    template&lt;class InputIterator&gt;
+      <a href="#concurrent_node_set_iterator_range_constructor_with_bucket_count_and_allocator">concurrent_node_set</a>(InputIterator f, InputIterator l, size_type n,
+                          const allocator_type&amp; a);
+    template&lt;class InputIterator&gt;
+      <a href="#concurrent_node_set_iterator_range_constructor_with_bucket_count_and_hasher">concurrent_node_set</a>(InputIterator f, InputIterator l, size_type n, const hasher&amp; hf,
+                          const allocator_type&amp; a);
+    <a href="#concurrent_node_set_initializer_list_constructor_with_allocator">concurrent_node_set</a>(std::initializer_list&lt;value_type&gt; il, const allocator_type&amp; a);
+    <a href="#concurrent_node_set_initializer_list_constructor_with_bucket_count_and_allocator">concurrent_node_set</a>(std::initializer_list&lt;value_type&gt; il, size_type n,
+                        const allocator_type&amp; a);
+    <a href="#concurrent_node_set_initializer_list_constructor_with_bucket_count_and_hasher_and_allocator">concurrent_node_set</a>(std::initializer_list&lt;value_type&gt; il, size_type n, const hasher&amp; hf,
+                        const allocator_type&amp; a);
+    <a href="#concurrent_node_set_destructor">~concurrent_node_set</a>();
+    concurrent_node_set&amp; <a href="#concurrent_node_set_copy_assignment">operator=</a>(const concurrent_node_set&amp; other);
+    concurrent_node_set&amp; <a href="#concurrent_node_set_move_assignment">operator=</a>(concurrent_node_set&amp;&amp; other)
+      noexcept(boost::allocator_traits&lt;Allocator&gt;::is_always_equal::value ||
+              boost::allocator_traits&lt;Allocator&gt;::propagate_on_container_move_assignment::value);
+    concurrent_node_set&amp; <a href="#concurrent_node_set_initializer_list_assignment">operator=</a>(std::initializer_list&lt;value_type&gt;);
+    allocator_type <a href="#concurrent_node_set_get_allocator">get_allocator</a>() const noexcept;
+
+
+    // visitation
+    template&lt;class F&gt; size_t <a href="#concurrent_node_set_cvisit">visit</a>(const key_type&amp; k, F f);
+    template&lt;class F&gt; size_t <a href="#concurrent_node_set_cvisit">visit</a>(const key_type&amp; k, F f) const;
+    template&lt;class F&gt; size_t <a href="#concurrent_node_set_cvisit">cvisit</a>(const key_type&amp; k, F f) const;
+    template&lt;class K, class F&gt; size_t <a href="#concurrent_node_set_cvisit">visit</a>(const K&amp; k, F f);
+    template&lt;class K, class F&gt; size_t <a href="#concurrent_node_set_cvisit">visit</a>(const K&amp; k, F f) const;
+    template&lt;class K, class F&gt; size_t <a href="#concurrent_node_set_cvisit">cvisit</a>(const K&amp; k, F f) const;
+
+    template&lt;class FwdIterator, class F&gt;
+      size_t <a href="#concurrent_node_set_bulk_visit">visit</a>(FwdIterator first, FwdIterator last, F f);
+    template&lt;class FwdIterator, class F&gt;
+      size_t <a href="#concurrent_node_set_bulk_visit">visit</a>(FwdIterator first, FwdIterator last, F f) const;
+    template&lt;class FwdIterator, class F&gt;
+      size_t <a href="#concurrent_node_set_bulk_visit">cvisit</a>(FwdIterator first, FwdIterator last, F f) const;
+
+    template&lt;class F&gt; size_t <a href="#concurrent_node_set_cvisit_all">visit_all</a>(F f);
+    template&lt;class F&gt; size_t <a href="#concurrent_node_set_cvisit_all">visit_all</a>(F f) const;
+    template&lt;class F&gt; size_t <a href="#concurrent_node_set_cvisit_all">cvisit_all</a>(F f) const;
+    template&lt;class ExecutionPolicy, class F&gt;
+      void <a href="#concurrent_node_set_parallel_cvisit_all">visit_all</a>(ExecutionPolicy&amp;&amp; policy, F f);
+    template&lt;class ExecutionPolicy, class F&gt;
+      void <a href="#concurrent_node_set_parallel_cvisit_all">visit_all</a>(ExecutionPolicy&amp;&amp; policy, F f) const;
+    template&lt;class ExecutionPolicy, class F&gt;
+      void <a href="#concurrent_node_set_parallel_cvisit_all">cvisit_all</a>(ExecutionPolicy&amp;&amp; policy, F f) const;
+
+    template&lt;class F&gt; bool <a href="#concurrent_node_set_cvisit_while">visit_while</a>(F f);
+    template&lt;class F&gt; bool <a href="#concurrent_node_set_cvisit_while">visit_while</a>(F f) const;
+    template&lt;class F&gt; bool <a href="#concurrent_node_set_cvisit_while">cvisit_while</a>(F f) const;
+    template&lt;class ExecutionPolicy, class F&gt;
+      bool <a href="#concurrent_node_set_parallel_cvisit_while">visit_while</a>(ExecutionPolicy&amp;&amp; policy, F f);
+    template&lt;class ExecutionPolicy, class F&gt;
+      bool <a href="#concurrent_node_set_parallel_cvisit_while">visit_while</a>(ExecutionPolicy&amp;&amp; policy, F f) const;
+    template&lt;class ExecutionPolicy, class F&gt;
+      bool <a href="#concurrent_node_set_parallel_cvisit_while">cvisit_while</a>(ExecutionPolicy&amp;&amp; policy, F f) const;
+
+    // capacity
+    [[nodiscard]] bool <a href="#concurrent_node_set_empty">empty</a>() const noexcept;
+    size_type <a href="#concurrent_node_set_size">size</a>() const noexcept;
+    size_type <a href="#concurrent_node_set_max_size">max_size</a>() const noexcept;
+
+    // modifiers
+    template&lt;class... Args&gt; bool <a href="#concurrent_node_set_emplace">emplace</a>(Args&amp;&amp;... args);
+    bool <a href="#concurrent_node_set_copy_insert">insert</a>(const value_type&amp; obj);
+    bool <a href="#concurrent_node_set_move_insert">insert</a>(value_type&amp;&amp; obj);
+    template&lt;class K&gt; bool <a href="#concurrent_node_set_transparent_insert">insert</a>(K&amp;&amp; k);
+    template&lt;class InputIterator&gt; size_type <a href="#concurrent_node_set_insert_iterator_range">insert</a>(InputIterator first, InputIterator last);
+    size_type <a href="#concurrent_node_set_insert_initializer_list">insert</a>(std::initializer_list&lt;value_type&gt; il);
+    insert_return_type <a href="#concurrent_node_set_insert_node">insert</a>(node_type&amp;&amp; nh);
+
+    template&lt;class... Args, class F&gt; bool <a href="#concurrent_node_set_emplace_or_cvisit">emplace_or_visit</a>(Args&amp;&amp;... args, F&amp;&amp; f);
+    template&lt;class... Args, class F&gt; bool <a href="#concurrent_node_set_emplace_or_cvisit">emplace_or_cvisit</a>(Args&amp;&amp;... args, F&amp;&amp; f);
+    template&lt;class F&gt; bool <a href="#concurrent_node_set_copy_insert_or_cvisit">insert_or_visit</a>(const value_type&amp; obj, F f);
+    template&lt;class F&gt; bool <a href="#concurrent_node_set_copy_insert_or_cvisit">insert_or_cvisit</a>(const value_type&amp; obj, F f);
+    template&lt;class F&gt; bool <a href="#concurrent_node_set_move_insert_or_cvisit">insert_or_visit</a>(value_type&amp;&amp; obj, F f);
+    template&lt;class F&gt; bool <a href="#concurrent_node_set_move_insert_or_cvisit">insert_or_cvisit</a>(value_type&amp;&amp; obj, F f);
+    template&lt;class K, class F&gt; bool <a href="#concurrent_node_set_transparent_insert_or_cvisit">insert_or_visit</a>(K&amp;&amp; k, F f);
+    template&lt;class K, class F&gt; bool <a href="#concurrent_node_set_transparent_insert_or_cvisit">insert_or_cvisit</a>(K&amp;&amp; k, F f);
+    template&lt;class InputIterator,class F&gt;
+      size_type <a href="#concurrent_node_set_insert_iterator_range_or_visit">insert_or_visit</a>(InputIterator first, InputIterator last, F f);
+    template&lt;class InputIterator,class F&gt;
+      size_type <a href="#concurrent_node_set_insert_iterator_range_or_visit">insert_or_cvisit</a>(InputIterator first, InputIterator last, F f);
+    template&lt;class F&gt; size_type <a href="#concurrent_node_set_insert_initializer_list_or_visit">insert_or_visit</a>(std::initializer_list&lt;value_type&gt; il, F f);
+    template&lt;class F&gt; size_type <a href="#concurrent_node_set_insert_initializer_list_or_visit">insert_or_cvisit</a>(std::initializer_list&lt;value_type&gt; il, F f);
+    template&lt;class F&gt; insert_return_type <a href="#concurrent_node_set_insert_node_or_visit">insert_or_visit</a>(node_type&amp;&amp; nh, F f);
+    template&lt;class F&gt; insert_return_type <a href="#concurrent_node_set_insert_node_or_visit">insert_or_cvisit</a>(node_type&amp;&amp; nh, F f);
+
+    template&lt;class... Args, class F1, class F2&gt;
+      bool <a href="#concurrent_node_set_emplace_and_cvisit">emplace_and_visit</a>(Args&amp;&amp;... args, F1&amp;&amp; f1, F2&amp;&amp; f2);
+    template&lt;class... Args, class F1, class F2&gt;
+      bool <a href="#concurrent_node_set_emplace_and_cvisit">emplace_and_cvisit</a>(Args&amp;&amp;... args, F1&amp;&amp; f1, F2&amp;&amp; f2);
+    template&lt;class F1, class F2&gt; bool <a href="#concurrent_node_set_copy_insert_and_cvisit">insert_and_visit</a>(const value_type&amp; obj, F1 f1, F2 f2);
+    template&lt;class F1, class F2&gt; bool <a href="#concurrent_node_set_copy_insert_and_cvisit">insert_and_cvisit</a>(const value_type&amp; obj, F1 f1, F2 f2);
+    template&lt;class F1, class F2&gt; bool <a href="#concurrent_node_set_move_insert_and_cvisit">insert_and_visit</a>(value_type&amp;&amp; obj, F1 f1, F2 f2);
+    template&lt;class F1, class F2&gt; bool <a href="#concurrent_node_set_move_insert_and_cvisit">insert_and_cvisit</a>(value_type&amp;&amp; obj, F1 f1, F2 f2);
+    template&lt;class K, class F1, class F2&gt; bool <a href="#concurrent_node_set_transparent_insert_and_cvisit">insert_and_visit</a>(K&amp;&amp; k, F1 f1, F2 f2);
+    template&lt;class K, class F1, class F2&gt; bool <a href="#concurrent_node_set_transparent_insert_and_cvisit">insert_and_cvisit</a>(K&amp;&amp; k, F1 f1, F2 f2);
+    template&lt;class InputIterator,class F1, class F2&gt;
+      size_type <a href="#concurrent_node_set_insert_iterator_range_and_visit">insert_and_visit</a>(InputIterator first, InputIterator last, F1 f1, F2 f2);
+    template&lt;class InputIterator,class F1, class F2&gt;
+      size_type <a href="#concurrent_node_set_insert_iterator_range_and_visit">insert_and_cvisit</a>(InputIterator first, InputIterator last, F1 f1, F2 f2);
+    template&lt;class F1, class F2&gt;
+      size_type <a href="#concurrent_node_set_insert_initializer_list_and_visit">insert_and_visit</a>(std::initializer_list&lt;value_type&gt; il, F1 f1, F2 f2);
+    template&lt;class F1, class F2&gt;
+      size_type <a href="#concurrent_node_set_insert_initializer_list_and_visit">insert_and_cvisit</a>(std::initializer_list&lt;value_type&gt; il, F1 f1, F2 f2);
+    template&lt;class F1, class F2&gt;
+      insert_return_type <a href="#concurrent_node_set_insert_node_and_visit">insert_and_visit</a>(node_type&amp;&amp; nh, F1 f1, F2 f2);
+    template&lt;class F1, class F2&gt;
+      insert_return_type <a href="#concurrent_node_set_insert_node_and_visit">insert_and_cvisit</a>(node_type&amp;&amp; nh, F1 f1, F2 f2);
+
+    size_type <a href="#concurrent_node_set_erase">erase</a>(const key_type&amp; k);
+    template&lt;class K&gt; size_type <a href="#concurrent_node_set_erase">erase</a>(const K&amp; k);
+
+    template&lt;class F&gt; size_type <a href="#concurrent_node_set_erase_if_by_key">erase_if</a>(const key_type&amp; k, F f);
+    template&lt;class K, class F&gt; size_type <a href="#concurrent_node_set_erase_if_by_key">erase_if</a>(const K&amp; k, F f);
+    template&lt;class F&gt; size_type <a href="#concurrent_node_set_erase_if">erase_if</a>(F f);
+    template&lt;class ExecutionPolicy, class  F&gt; void <a href="#concurrent_node_set_parallel_erase_if">erase_if</a>(ExecutionPolicy&amp;&amp; policy, F f);
+
+    void      <a href="#concurrent_node_set_swap">swap</a>(concurrent_node_set&amp; other)
+      noexcept(boost::allocator_traits&lt;Allocator&gt;::is_always_equal::value ||
+               boost::allocator_traits&lt;Allocator&gt;::propagate_on_container_swap::value);
+
+    node_type <a href="#concurrent_node_set_extract">extract</a>(const key_type&amp; k);
+    template&lt;class K&gt; node_type <a href="#concurrent_node_set_extract">extract</a>(const K&amp; k);
+
+    template&lt;class F&gt; node_type <a href="#concurrent_node_set_extract_if">extract_if</a>(const key_type&amp; k, F f);
+    template&lt;class K, class F&gt; node_type <a href="#concurrent_node_set_extract">extract_if</a>(const K&amp; k, F f);
+
+    void      <a href="#concurrent_node_set_clear">clear</a>() noexcept;
+
+    template&lt;class H2, class P2&gt;
+      size_type <a href="#concurrent_node_set_merge">merge</a>(concurrent_node_set&lt;Key, H2, P2, Allocator&gt;&amp; source);
+    template&lt;class H2, class P2&gt;
+      size_type <a href="#concurrent_node_set_merge">merge</a>(concurrent_node_set&lt;Key, H2, P2, Allocator&gt;&amp;&amp; source);
+
+    // observers
+    hasher <a href="#concurrent_node_set_hash_function">hash_function</a>() const;
+    key_equal <a href="#concurrent_node_set_key_eq">key_eq</a>() const;
+
+    // set operations
+    size_type        <a href="#concurrent_node_set_count">count</a>(const key_type&amp; k) const;
+    template&lt;class K&gt;
+      size_type      <a href="#concurrent_node_set_count">count</a>(const K&amp; k) const;
+    bool             <a href="#concurrent_node_set_contains">contains</a>(const key_type&amp; k) const;
+    template&lt;class K&gt;
+      bool           <a href="#concurrent_node_set_contains">contains</a>(const K&amp; k) const;
+
+    // bucket interface
+    size_type <a href="#concurrent_node_set_bucket_count">bucket_count</a>() const noexcept;
+
+    // hash policy
+    float <a href="#concurrent_node_set_load_factor">load_factor</a>() const noexcept;
+    float <a href="#concurrent_node_set_max_load_factor">max_load_factor</a>() const noexcept;
+    void <a href="#concurrent_node_set_set_max_load_factor">max_load_factor</a>(float z);
+    size_type <a href="#concurrent_node_set_max_load">max_load</a>() const noexcept;
+    void <a href="#concurrent_node_set_rehash">rehash</a>(size_type n);
+    void <a href="#concurrent_node_set_reserve">reserve</a>(size_type n);
+
+    // statistics (if <a href="#concurrent_node_set_boost_unordered_enable_stats">enabled</a>)
+    stats <a href="#concurrent_node_set_get_stats">get_stats</a>() const;
+    void <a href="#concurrent_node_set_reset_stats">reset_stats</a>() noexcept;
+  };
+
+  // Deduction Guides
+  template&lt;class InputIterator,
+           class Hash = boost::hash&lt;<a href="#concurrent_node_set_iter_value_type"><em>iter-value-type</em></a>&lt;InputIterator&gt;&gt;,
+           class Pred = std::equal_to&lt;<a href="#concurrent_node_set_iter_value_type"><em>iter-value-type</em></a>&lt;InputIterator&gt;&gt;,
+           class Allocator = std::allocator&lt;<a href="#concurrent_node_set_iter_value_type"><em>iter-value-type</em></a>&lt;InputIterator&gt;&gt;&gt;
+    concurrent_node_set(InputIterator, InputIterator, typename <a href="#concurrent_node_set_deduction_guides"><em>see below</em></a>::size_type = <a href="#concurrent_node_set_deduction_guides"><em>see below</em></a>,
+                        Hash = Hash(), Pred = Pred(), Allocator = Allocator())
+      -&gt; concurrent_node_set&lt;<a href="#concurrent_node_set_iter_value_type"><em>iter-value-type</em></a>&lt;InputIterator&gt;, Hash, Pred, Allocator&gt;;
+
+  template&lt;class T, class Hash = boost::hash&lt;T&gt;, class Pred = std::equal_to&lt;T&gt;,
+           class Allocator = std::allocator&lt;T&gt;&gt;
+    concurrent_node_set(std::initializer_list&lt;T&gt;, typename <a href="#concurrent_node_set_deduction_guides"><em>see below</em></a>::size_type = <a href="#concurrent_node_set_deduction_guides"><em>see below</em></a>,
+                        Hash = Hash(), Pred = Pred(), Allocator = Allocator())
+      -&gt; concurrent_node_set&lt;T, Hash, Pred, Allocator&gt;;
+
+  template&lt;class InputIterator, class Allocator&gt;
+    concurrent_node_set(InputIterator, InputIterator, typename <a href="#concurrent_node_set_deduction_guides"><em>see below</em></a>::size_type, Allocator)
+      -&gt; concurrent_node_set&lt;<a href="#concurrent_node_set_iter_value_type"><em>iter-value-type</em></a>&lt;InputIterator&gt;,
+                             boost::hash&lt;<a href="#concurrent_node_set_iter_value_type"><em>iter-value-type</em></a>&lt;InputIterator&gt;&gt;,
+                             std::equal_to&lt;<a href="#concurrent_node_set_iter_value_type"><em>iter-value-type</em></a>&lt;InputIterator&gt;&gt;, Allocator&gt;;
+
+  template&lt;class InputIterator, class Allocator&gt;
+    concurrent_node_set(InputIterator, InputIterator, Allocator)
+      -&gt; concurrent_node_set&lt;<a href="#concurrent_node_set_iter_value_type"><em>iter-value-type</em></a>&lt;InputIterator&gt;,
+                             boost::hash&lt;<a href="#concurrent_node_set_iter_value_type"><em>iter-value-type</em></a>&lt;InputIterator&gt;&gt;,
+                             std::equal_to&lt;<a href="#concurrent_node_set_iter_value_type"><em>iter-value-type</em></a>&lt;InputIterator&gt;&gt;, Allocator&gt;;
+
+  template&lt;class InputIterator, class Hash, class Allocator&gt;
+    concurrent_node_set(InputIterator, InputIterator, typename <a href="#concurrent_node_set_deduction_guides"><em>see below</em></a>::size_type, Hash,
+                        Allocator)
+      -&gt; concurrent_node_set&lt;<a href="#concurrent_node_set_iter_value_type"><em>iter-value-type</em></a>&lt;InputIterator&gt;, Hash,
+                             std::equal_to&lt;<a href="#concurrent_node_set_iter_value_type"><em>iter-value-type</em></a>&lt;InputIterator&gt;&gt;, Allocator&gt;;
+
+  template&lt;class T, class Allocator&gt;
+    concurrent_node_set(std::initializer_list&lt;T&gt;, typename <a href="#concurrent_node_set_deduction_guides"><em>see below</em></a>::size_type, Allocator)
+      -&gt; concurrent_node_set&lt;T, boost::hash&lt;T&gt;, std::equal_to&lt;T&gt;, Allocator&gt;;
+
+  template&lt;class T, class Allocator&gt;
+    concurrent_node_set(std::initializer_list&lt;T&gt;, Allocator)
+      -&gt; concurrent_node_set&lt;T, boost::hash&lt;T&gt;, std::equal_to&lt;T&gt;, Allocator&gt;;
+
+  template&lt;class T, class Hash, class Allocator&gt;
+    concurrent_node_set(std::initializer_list&lt;T&gt;, typename <a href="#concurrent_node_set_deduction_guides"><em>see below</em></a>::size_type, Hash, Allocator)
+      -&gt; concurrent_node_set&lt;T, Hash, std::equal_to&lt;T&gt;, Allocator&gt;;
+
+} // namespace unordered
+} // namespace boost</pre>
+</div>
+</div>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="concurrent_node_set_description"><a class="anchor" href="#concurrent_node_set_description"></a>Description</h3>
+<div class="paragraph">
+<p><strong>Template Parameters</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Key</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Key</code> must be <a href="https://en.cppreference.com/w/cpp/named_req/MoveInsertable" target="_blank" rel="noopener">MoveInsertable</a> into the container
+and <a href="https://en.cppreference.com/w/cpp/named_req/Erasable" target="_blank" rel="noopener">Erasable</a> from the container.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Hash</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A unary function object type that acts a hash function for a <code>Key</code>. It takes a single argument of type <code>Key</code> and returns a value of type <code>std::size_t</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Pred</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A binary function object that induces an equivalence relation on values of type <code>Key</code>. It takes two arguments of type <code>Key</code> and returns a value of type <code>bool</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Allocator</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An allocator whose value type is the same as the table&#8217;s value type.
+<code>std::allocator_traits&lt;Allocator&gt;::pointer</code> and <code>std::allocator_traits&lt;Allocator&gt;::const_pointer</code>
+must be convertible to/from <code>value_type*</code> and <code>const value_type*</code>, respectively.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The element nodes of the table are held into an internal <em>bucket array</em>. An node is inserted into a bucket determined by
+the hash code of its element, but if the bucket is already occupied (a <em>collision</em>), an available one in the vicinity of the
+original position is used.</p>
+</div>
+<div class="paragraph">
+<p>The size of the bucket array can be automatically increased by a call to <code>insert</code>/<code>emplace</code>, or as a result of calling
+<code>rehash</code>/<code>reserve</code>. The <em>load factor</em> of the table (number of elements divided by number of buckets) is never
+greater than <code>max_load_factor()</code>, except possibly for small sizes where the implementation may decide to
+allow for higher loads.</p>
+</div>
+<div class="paragraph">
+<p>If <code><a href="hash_traits.html#hash_traits_hash_is_avalanching" class="xref page">hash_is_avalanching</a>&lt;Hash&gt;::value</code> is <code>true</code>, the hash function
+is used as-is; otherwise, a bit-mixing post-processing stage is added to increase the quality of hashing
+at the expense of extra computational cost.</p>
+</div>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="concurrent_node_set_concurrency_requirements_and_guarantees"><a class="anchor" href="#concurrent_node_set_concurrency_requirements_and_guarantees"></a>Concurrency Requirements and Guarantees</h3>
+<div class="paragraph">
+<p>Concurrent invocations of <code>operator()</code> on the same const instance of <code>Hash</code> or <code>Pred</code> are required
+to not introduce data races. For <code>Alloc</code> being either <code>Allocator</code> or any allocator type rebound
+from <code>Allocator</code>, concurrent invocations of the following operations on the same instance <code>al</code> of <code>Alloc</code>
+are required to not introduce data races:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Copy construction from <code>al</code> of an allocator rebound from <code>Alloc</code></p>
+</li>
+<li>
+<p><code>std::allocator_traits&lt;Alloc&gt;::allocate</code></p>
+</li>
+<li>
+<p><code>std::allocator_traits&lt;Alloc&gt;::deallocate</code></p>
+</li>
+<li>
+<p><code>std::allocator_traits&lt;Alloc&gt;::construct</code></p>
+</li>
+<li>
+<p><code>std::allocator_traits&lt;Alloc&gt;::destroy</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In general, these requirements on <code>Hash</code>, <code>Pred</code> and <code>Allocator</code> are met if these types
+are not stateful or if the operations only involve constant access to internal data members.</p>
+</div>
+<div class="paragraph">
+<p>With the exception of destruction, concurrent invocations of any operation on the same instance of a
+<code>concurrent_node_set</code> do not introduce data races — that is, they are thread-safe.</p>
+</div>
+<div class="paragraph">
+<p>If an operation <strong>op</strong> is explicitly designated as <em>blocking on</em> <code>x</code>, where <code>x</code> is an instance of a <code>boost::concurrent_node_set</code>,
+prior blocking operations on <code>x</code> synchronize with <strong>op</strong>. So, blocking operations on the same
+<code>concurrent_node_set</code> execute sequentially in a multithreaded scenario.</p>
+</div>
+<div class="paragraph">
+<p>An operation is said to be <em>blocking on rehashing of</em> <code><em>x</em></code> if it blocks on <code>x</code>
+only when an internal rehashing is issued.</p>
+</div>
+<div class="paragraph">
+<p>When executed internally by a <code>boost::concurrent_node_set</code>, the following operations by a
+user-provided visitation function on the element passed do not introduce data races:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Read access to the element.</p>
+</li>
+<li>
+<p>Non-mutable modification of the element.</p>
+</li>
+<li>
+<p>Mutable modification of the element:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Within a container function accepting two visitation functions, always for the first function.</p>
+</li>
+<li>
+<p>Within a non-const container function whose name does not contain <code>cvisit</code>, for the last (or only) visitation function.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Any <code>boost::concurrent_node_set operation</code> that inserts or modifies an element <code>e</code>
+synchronizes with the internal invocation of a visitation function on <code>e</code>.</p>
+</div>
+<div class="paragraph">
+<p>Visitation functions executed by a <code>boost::concurrent_node_set</code> <code>x</code> are not allowed to invoke any operation
+on <code>x</code>; invoking operations on a different <code>boost::concurrent_node_set</code> instance <code>y</code> is allowed only
+if concurrent outstanding operations on <code>y</code> do not access <code>x</code> directly or indirectly.</p>
+</div>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="concurrent_node_set_configuration_macros"><a class="anchor" href="#concurrent_node_set_configuration_macros"></a>Configuration Macros</h3>
+<div class="sect3">
+<h4 id="concurrent_node_set_boost_unordered_disable_reentrancy_check"><a class="anchor" href="#concurrent_node_set_boost_unordered_disable_reentrancy_check"></a><code>BOOST_UNORDERED_DISABLE_REENTRANCY_CHECK</code></h4>
+<div class="paragraph">
+<p>In debug builds (more precisely, when
+<a href="../../../../../assert/doc/html/assert.html#boost_assert_is_void" target="_blank" rel="noopener"><code>BOOST_ASSERT_IS_VOID</code></a>
+is not defined), <em>container reentrancies</em> (illegaly invoking an operation on <code>m</code> from within
+a function visiting elements of <code>m</code>) are detected and signalled through <code>BOOST_ASSERT_MSG</code>.
+When run-time speed is a concern, the feature can be disabled by globally defining
+this macro.</p>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_boost_unordered_enable_stats"><a class="anchor" href="#concurrent_node_set_boost_unordered_enable_stats"></a><code>BOOST_UNORDERED_ENABLE_STATS</code></h4>
+<div class="paragraph">
+<p>Globally define this macro to enable <a href="stats.html#stats" class="xref page">statistics calculation</a> for the table. Note
+that this option decreases the overall performance of many operations.</p>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect2">
+<h3 id="concurrent_node_set_typedefs"><a class="anchor" href="#concurrent_node_set_typedefs"></a>Typedefs</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">typedef <em>implementation-defined</em> node_type;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A class for holding extracted table elements, modelling
+<a href="https://en.cppreference.com/w/cpp/container/node_handle">NodeHandle</a>.</p>
+</div>
+<hr>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">typedef <em>implementation-defined</em> insert_return_type;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A specialization of an internal class template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class NodeType&gt;
+struct <em>insert_return_type</em> // name is exposition only
+{
+  bool     inserted;
+  NodeType node;
+};</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>with <code>NodeType</code> = <code>node_type</code>.</p>
+</div>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="concurrent_node_set_constants"><a class="anchor" href="#concurrent_node_set_constants"></a>Constants</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cpp hljs" data-lang="cpp">static constexpr size_type bulk_visit_size;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Chunk size internally used in <a href="#concurrent_node_set_bulk_visit">bulk visit</a> operations.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="concurrent_node_set_constructors"><a class="anchor" href="#concurrent_node_set_constructors"></a>Constructors</h3>
+<div class="sect3">
+<h4 id="concurrent_node_set_default_constructor"><a class="anchor" href="#concurrent_node_set_default_constructor"></a>Default Constructor</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">concurrent_node_set();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Constructs an empty table using <code>hasher()</code> as the hash function,
+<code>key_equal()</code> as the key equality predicate and <code>allocator_type()</code> as the allocator.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Postconditions:
+</td>
+<td class="hdlist2">
+<p><code>size() == 0</code></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p>If the defaults are used, <code>hasher</code>, <code>key_equal</code> and <code>allocator_type</code> need to be <a href="https://en.cppreference.com/w/cpp/named_req/DefaultConstructible" target="_blank" rel="noopener">DefaultConstructible</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_bucket_count_constructor"><a class="anchor" href="#concurrent_node_set_bucket_count_constructor"></a>Bucket Count Constructor</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">explicit concurrent_node_set(size_type n,
+                             const hasher&amp; hf = hasher(),
+                             const key_equal&amp; eql = key_equal(),
+                             const allocator_type&amp; a = allocator_type());</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Constructs an empty table with at least <code>n</code> buckets, using <code>hf</code> as the hash
+function, <code>eql</code> as the key equality predicate, and <code>a</code> as the allocator.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Postconditions:
+</td>
+<td class="hdlist2">
+<p><code>size() == 0</code></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p>If the defaults are used, <code>hasher</code>, <code>key_equal</code> and <code>allocator_type</code> need to be <a href="https://en.cppreference.com/w/cpp/named_req/DefaultConstructible" target="_blank" rel="noopener">DefaultConstructible</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_iterator_range_constructor"><a class="anchor" href="#concurrent_node_set_iterator_range_constructor"></a>Iterator Range Constructor</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class InputIterator&gt;
+  concurrent_node_set(InputIterator f, InputIterator l,
+                      size_type n = <em>implementation-defined</em>,
+                      const hasher&amp; hf = hasher(),
+                      const key_equal&amp; eql = key_equal(),
+                      const allocator_type&amp; a = allocator_type());</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Constructs an empty table with at least <code>n</code> buckets, using <code>hf</code> as the hash function, <code>eql</code> as the key equality predicate and <code>a</code> as the allocator, and inserts the elements from <code>[f, l)</code> into it.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p>If the defaults are used, <code>hasher</code>, <code>key_equal</code> and <code>allocator_type</code> need to be <a href="https://en.cppreference.com/w/cpp/named_req/DefaultConstructible" target="_blank" rel="noopener">DefaultConstructible</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_copy_constructor"><a class="anchor" href="#concurrent_node_set_copy_constructor"></a>Copy Constructor</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">concurrent_node_set(concurrent_node_set const&amp; other);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The copy constructor. Copies the contained elements, hash function, predicate and allocator.</p>
+</div>
+<div class="paragraph">
+<p>If <code>Allocator::select_on_container_copy_construction</code> exists and has the right signature, the allocator will be constructed from its result.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>value_type</code> is copy constructible</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Concurrency:
+</td>
+<td class="hdlist2">
+<p>Blocking on <code>other</code>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_move_constructor"><a class="anchor" href="#concurrent_node_set_move_constructor"></a>Move Constructor</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">concurrent_node_set(concurrent_node_set&amp;&amp; other);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The move constructor. The internal bucket array of <code>other</code> is transferred directly to the new table.
+The hash function, predicate and allocator are moved-constructed from <code>other</code>.
+If statistics are <a href="#concurrent_node_set_boost_unordered_enable_stats">enabled</a>,
+transfers the internal statistical information from <code>other</code> and calls <code>other.reset_stats()</code>.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Concurrency:
+</td>
+<td class="hdlist2">
+<p>Blocking on <code>other</code>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_iterator_range_constructor_with_allocator"><a class="anchor" href="#concurrent_node_set_iterator_range_constructor_with_allocator"></a>Iterator Range Constructor with Allocator</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class InputIterator&gt;
+  concurrent_node_set(InputIterator f, InputIterator l, const allocator_type&amp; a);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Constructs an empty table using <code>a</code> as the allocator, with the default hash function and key equality predicate and inserts the elements from <code>[f, l)</code> into it.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>hasher</code>, <code>key_equal</code> need to be <a href="https://en.cppreference.com/w/cpp/named_req/DefaultConstructible" target="_blank" rel="noopener">DefaultConstructible</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_allocator_constructor"><a class="anchor" href="#concurrent_node_set_allocator_constructor"></a>Allocator Constructor</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">explicit concurrent_node_set(Allocator const&amp; a);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Constructs an empty table, using allocator <code>a</code>.</p>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_copy_constructor_with_allocator"><a class="anchor" href="#concurrent_node_set_copy_constructor_with_allocator"></a>Copy Constructor with Allocator</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">concurrent_node_set(concurrent_node_set const&amp; other, Allocator const&amp; a);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Constructs a table, copying <code>other</code>'s contained elements, hash function, and predicate, but using allocator <code>a</code>.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Concurrency:
+</td>
+<td class="hdlist2">
+<p>Blocking on <code>other</code>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_move_constructor_with_allocator"><a class="anchor" href="#concurrent_node_set_move_constructor_with_allocator"></a>Move Constructor with Allocator</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">concurrent_node_set(concurrent_node_set&amp;&amp; other, Allocator const&amp; a);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If <code>a == other.get_allocator()</code>, the elements of <code>other</code> are transferred directly to the new table;
+otherwise, elements are moved-constructed from those of <code>other</code>. The hash function and predicate are moved-constructed
+from <code>other</code>, and the allocator is copy-constructed from <code>a</code>.
+If statistics are <a href="#concurrent_node_set_boost_unordered_enable_stats">enabled</a>,
+transfers the internal statistical information from <code>other</code> iff <code>a == other.get_allocator()</code>,
+and always calls <code>other.reset_stats()</code>.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Concurrency:
+</td>
+<td class="hdlist2">
+<p>Blocking on <code>other</code>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_move_constructor_from_unordered_node_set"><a class="anchor" href="#concurrent_node_set_move_constructor_from_unordered_node_set"></a>Move Constructor from unordered_node_set</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">concurrent_node_set(unordered_node_set&lt;Key, Hash, Pred, Allocator&gt;&amp;&amp; other);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Move construction from a <a href="#unordered_node_set"><code>unordered_node_set</code></a>.
+The internal bucket array of <code>other</code> is transferred directly to the new container.
+The hash function, predicate and allocator are moved-constructed from <code>other</code>.
+If statistics are <a href="#concurrent_node_set_boost_unordered_enable_stats">enabled</a>,
+transfers the internal statistical information from <code>other</code> and calls <code>other.reset_stats()</code>.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Complexity:
+</td>
+<td class="hdlist2">
+<p>O(<code>bucket_count()</code>)</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_initializer_list_constructor"><a class="anchor" href="#concurrent_node_set_initializer_list_constructor"></a>Initializer List Constructor</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">concurrent_node_set(std::initializer_list&lt;value_type&gt; il,
+                    size_type n = <em>implementation-defined</em>
+                    const hasher&amp; hf = hasher(),
+                    const key_equal&amp; eql = key_equal(),
+                    const allocator_type&amp; a = allocator_type());</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Constructs an empty table with at least <code>n</code> buckets, using <code>hf</code> as the hash function, <code>eql</code> as the key equality predicate and <code>a</code>, and inserts the elements from <code>il</code> into it.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p>If the defaults are used, <code>hasher</code>, <code>key_equal</code> and <code>allocator_type</code> need to be <a href="https://en.cppreference.com/w/cpp/named_req/DefaultConstructible" target="_blank" rel="noopener">DefaultConstructible</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_bucket_count_constructor_with_allocator"><a class="anchor" href="#concurrent_node_set_bucket_count_constructor_with_allocator"></a>Bucket Count Constructor with Allocator</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">concurrent_node_set(size_type n, allocator_type const&amp; a);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Constructs an empty table with at least <code>n</code> buckets, using <code>hf</code> as the hash function, the default hash function and key equality predicate and <code>a</code> as the allocator.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Postconditions:
+</td>
+<td class="hdlist2">
+<p><code>size() == 0</code></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>hasher</code> and <code>key_equal</code> need to be <a href="https://en.cppreference.com/w/cpp/named_req/DefaultConstructible" target="_blank" rel="noopener">DefaultConstructible</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_bucket_count_constructor_with_hasher_and_allocator"><a class="anchor" href="#concurrent_node_set_bucket_count_constructor_with_hasher_and_allocator"></a>Bucket Count Constructor with Hasher and Allocator</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">concurrent_node_set(size_type n, hasher const&amp; hf, allocator_type const&amp; a);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Constructs an empty table with at least <code>n</code> buckets, using <code>hf</code> as the hash function, the default key equality predicate and <code>a</code> as the allocator.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Postconditions:
+</td>
+<td class="hdlist2">
+<p><code>size() == 0</code></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>key_equal</code> needs to be <a href="https://en.cppreference.com/w/cpp/named_req/DefaultConstructible" target="_blank" rel="noopener">DefaultConstructible</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_iterator_range_constructor_with_bucket_count_and_allocator"><a class="anchor" href="#concurrent_node_set_iterator_range_constructor_with_bucket_count_and_allocator"></a>Iterator Range Constructor with Bucket Count and Allocator</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class InputIterator&gt;
+  concurrent_node_set(InputIterator f, InputIterator l, size_type n, const allocator_type&amp; a);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Constructs an empty table with at least <code>n</code> buckets, using <code>a</code> as the allocator and default hash function and key equality predicate, and inserts the elements from <code>[f, l)</code> into it.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>hasher</code>, <code>key_equal</code> need to be <a href="https://en.cppreference.com/w/cpp/named_req/DefaultConstructible" target="_blank" rel="noopener">DefaultConstructible</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_iterator_range_constructor_with_bucket_count_and_hasher"><a class="anchor" href="#concurrent_node_set_iterator_range_constructor_with_bucket_count_and_hasher"></a>Iterator Range Constructor with Bucket Count and Hasher</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">    template&lt;class InputIterator&gt;
+      concurrent_node_set(InputIterator f, InputIterator l, size_type n, const hasher&amp; hf,
+                          const allocator_type&amp; a);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Constructs an empty table with at least <code>n</code> buckets, using <code>hf</code> as the hash function, <code>a</code> as the allocator, with the default key equality predicate, and inserts the elements from <code>[f, l)</code> into it.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>key_equal</code> needs to be <a href="https://en.cppreference.com/w/cpp/named_req/DefaultConstructible" target="_blank" rel="noopener">DefaultConstructible</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_initializer_list_constructor_with_allocator"><a class="anchor" href="#concurrent_node_set_initializer_list_constructor_with_allocator"></a>initializer_list Constructor with Allocator</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">concurrent_node_set(std::initializer_list&lt;value_type&gt; il, const allocator_type&amp; a);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Constructs an empty table using <code>a</code> and default hash function and key equality predicate, and inserts the elements from <code>il</code> into it.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>hasher</code> and <code>key_equal</code> need to be <a href="https://en.cppreference.com/w/cpp/named_req/DefaultConstructible" target="_blank" rel="noopener">DefaultConstructible</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_initializer_list_constructor_with_bucket_count_and_allocator"><a class="anchor" href="#concurrent_node_set_initializer_list_constructor_with_bucket_count_and_allocator"></a>initializer_list Constructor with Bucket Count and Allocator</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">concurrent_node_set(std::initializer_list&lt;value_type&gt; il, size_type n, const allocator_type&amp; a);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Constructs an empty table with at least <code>n</code> buckets, using <code>a</code> and default hash function and key equality predicate, and inserts the elements from <code>il</code> into it.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>hasher</code> and <code>key_equal</code> need to be <a href="https://en.cppreference.com/w/cpp/named_req/DefaultConstructible" target="_blank" rel="noopener">DefaultConstructible</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_initializer_list_constructor_with_bucket_count_and_hasher_and_allocator"><a class="anchor" href="#concurrent_node_set_initializer_list_constructor_with_bucket_count_and_hasher_and_allocator"></a>initializer_list Constructor with Bucket Count and Hasher and Allocator</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">concurrent_node_set(std::initializer_list&lt;value_type&gt; il, size_type n, const hasher&amp; hf,
+                    const allocator_type&amp; a);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Constructs an empty table with at least <code>n</code> buckets, using <code>hf</code> as the hash function, <code>a</code> as the allocator and default key equality predicate,and inserts the elements from <code>il</code> into it.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>key_equal</code> needs to be <a href="https://en.cppreference.com/w/cpp/named_req/DefaultConstructible" target="_blank" rel="noopener">DefaultConstructible</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect2">
+<h3 id="concurrent_node_set_destructor"><a class="anchor" href="#concurrent_node_set_destructor"></a>Destructor</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">~concurrent_node_set();</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Note:
+</td>
+<td class="hdlist2">
+<p>The destructor is applied to every element, and all memory is deallocated</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="concurrent_node_set_assignment"><a class="anchor" href="#concurrent_node_set_assignment"></a>Assignment</h3>
+<div class="sect3">
+<h4 id="concurrent_node_set_copy_assignment"><a class="anchor" href="#concurrent_node_set_copy_assignment"></a>Copy Assignment</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">concurrent_node_set&amp; operator=(concurrent_node_set const&amp; other);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The assignment operator. Destroys previously existing elements, copy-assigns the hash function and predicate from <code>other</code>,
+copy-assigns the allocator from <code>other</code> if <code>Alloc::propagate_on_container_copy_assignment</code> exists and <code>Alloc::propagate_on_container_copy_assignment::value</code> is <code>true</code>,
+and finally inserts copies of the elements of <code>other</code>.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>value_type</code> is <a href="https://en.cppreference.com/w/cpp/named_req/CopyInsertable" target="_blank" rel="noopener">CopyInsertable</a></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Concurrency:
+</td>
+<td class="hdlist2">
+<p>Blocking on <code>*this</code> and <code>other</code>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_move_assignment"><a class="anchor" href="#concurrent_node_set_move_assignment"></a>Move Assignment</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">concurrent_node_set&amp; operator=(concurrent_node_set&amp;&amp; other)
+  noexcept(boost::allocator_traits&lt;Allocator&gt;::is_always_equal::value ||
+           boost::allocator_traits&lt;Allocator&gt;::propagate_on_container_move_assignment::value);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The move assignment operator. Destroys previously existing elements, swaps the hash function and predicate from <code>other</code>,
+and move-assigns the allocator from <code>other</code> if <code>Alloc::propagate_on_container_move_assignment</code> exists and <code>Alloc::propagate_on_container_move_assignment::value</code> is <code>true</code>.
+If at this point the allocator is equal to <code>other.get_allocator()</code>, the internal bucket array of <code>other</code> is transferred directly to <code>*this</code>;
+otherwise, inserts move-constructed copies of the elements of <code>other</code>.
+If statistics are <a href="#concurrent_node_set_boost_unordered_enable_stats">enabled</a>,
+transfers the internal statistical information from <code>other</code> iff the final allocator is equal to <code>other.get_allocator()</code>,
+and always calls <code>other.reset_stats()</code>.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Concurrency:
+</td>
+<td class="hdlist2">
+<p>Blocking on <code>*this</code> and <code>other</code>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_initializer_list_assignment"><a class="anchor" href="#concurrent_node_set_initializer_list_assignment"></a>Initializer List Assignment</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">concurrent_node_set&amp; operator=(std::initializer_list&lt;value_type&gt; il);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Assign from values in initializer list. All previously existing elements are destroyed.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>value_type</code> is <a href="https://en.cppreference.com/w/cpp/named_req/CopyInsertable" target="_blank" rel="noopener">CopyInsertable</a></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Concurrency:
+</td>
+<td class="hdlist2">
+<p>Blocking on <code>*this</code>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect2">
+<h3 id="concurrent_node_set_visitation"><a class="anchor" href="#concurrent_node_set_visitation"></a>Visitation</h3>
+<div class="sect3">
+<h4 id="concurrent_node_set_cvisit"><a class="anchor" href="#concurrent_node_set_cvisit"></a>[c]visit</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class F&gt; size_t visit(const key_type&amp; k, F f);
+template&lt;class F&gt; size_t visit(const key_type&amp; k, F f) const;
+template&lt;class F&gt; size_t cvisit(const key_type&amp; k, F f) const;
+template&lt;class K, class F&gt; size_t visit(const K&amp; k, F f);
+template&lt;class K, class F&gt; size_t visit(const K&amp; k, F f) const;
+template&lt;class K, class F&gt; size_t cvisit(const K&amp; k, F f) const;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If an element <code>x</code> exists with key equivalent to <code>k</code>, invokes <code>f</code> with a const reference to <code>x</code>.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>The number of elements visited (0 or 1).</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>The <code>template&lt;class K, class F&gt;</code> overloads only participate in overload resolution if <code>Hash::is_transparent</code> and <code>Pred::is_transparent</code> are valid member typedefs. The library assumes that <code>Hash</code> is callable with both <code>K</code> and <code>Key</code> and that <code>Pred</code> is transparent. This enables heterogeneous lookup which avoids the cost of instantiating an instance of the <code>Key</code> type.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_bulk_visit"><a class="anchor" href="#concurrent_node_set_bulk_visit"></a>Bulk visit</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class FwdIterator, class F&gt;
+  size_t visit(FwdIterator first, FwdIterator last, F f);
+template&lt;class FwdIterator, class F&gt;
+  size_t visit(FwdIterator first, FwdIterator last, F f) const;
+template&lt;class FwdIterator, class F&gt;
+  size_t cvisit(FwdIterator first, FwdIterator last, F f) const;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For each element <code>k</code> in the range [<code>first</code>, <code>last</code>),
+if there is an element <code>x</code> in the container with key equivalent to <code>k</code>,
+invokes <code>f</code> with a const reference to <code>x</code>.</p>
+</div>
+<div class="paragraph">
+<p>Although functionally equivalent to individually invoking
+<a href="#concurrent_node_set_cvisit"><code>[c]visit</code></a> for each key, bulk visitation
+performs generally faster due to internal streamlining optimizations.
+It is advisable that <code>std::distance(first,last)</code> be at least
+<a href="#concurrent_node_set_constants"><code>bulk_visit_size</code></a> to enjoy
+a performance gain: beyond this size, performance is not expected
+to increase further.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>FwdIterator</code> is a <a href="https://en.cppreference.com/w/cpp/named_req/ForwardIterator" target="_blank" rel="noopener">LegacyForwardIterator</a>
+(C&#43;&#43;11 to C&#43;&#43;17),
+or satisfies <a href="https://en.cppreference.com/w/cpp/iterator/forward_iterator" target="_blank" rel="noopener">std::forward_iterator</a> (C&#43;&#43;20 and later).
+For <code>K</code> = <code>std::iterator_traits&lt;FwdIterator&gt;::value_type</code>, either <code>K</code> is <code>key_type</code> or
+else <code>Hash::is_transparent</code> and <code>Pred::is_transparent</code> are valid member typedefs.
+In the latter case, the library assumes that <code>Hash</code> is callable with both <code>K</code> and <code>Key</code> and that <code>Pred</code> is transparent.
+This enables heterogeneous lookup which avoids the cost of instantiating an instance of the <code>Key</code> type.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>The number of elements visited.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_cvisit_all"><a class="anchor" href="#concurrent_node_set_cvisit_all"></a>[c]visit_all</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class F&gt; size_t visit_all(F f);
+template&lt;class F&gt; size_t visit_all(F f) const;
+template&lt;class F&gt; size_t cvisit_all(F f) const;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Successively invokes <code>f</code> with const references to each of the elements in the table.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>The number of elements visited.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_parallel_cvisit_all"><a class="anchor" href="#concurrent_node_set_parallel_cvisit_all"></a>Parallel [c]visit_all</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class ExecutionPolicy, class F&gt; void visit_all(ExecutionPolicy&amp;&amp; policy, F f);
+template&lt;class ExecutionPolicy, class F&gt; void visit_all(ExecutionPolicy&amp;&amp; policy, F f) const;
+template&lt;class ExecutionPolicy, class F&gt; void cvisit_all(ExecutionPolicy&amp;&amp; policy, F f) const;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Invokes <code>f</code> with const references to each of the elements in the table.
+Execution is parallelized according to the semantics of the execution policy specified.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>Depending on the exception handling mechanism of the execution policy used, may call <code>std::terminate</code> if an exception is thrown within <code>f</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>Only available in compilers supporting C++17 parallel algorithms.<br></p>
+<div class="paragraph">
+<p>These overloads only participate in overload resolution if <code>std::is_execution_policy_v&lt;std::remove_cvref_t&lt;ExecutionPolicy&gt;&gt;</code> is <code>true</code>.<br></p>
+</div>
+<div class="paragraph">
+<p>Unsequenced execution policies are not allowed.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_cvisit_while"><a class="anchor" href="#concurrent_node_set_cvisit_while"></a>[c]visit_while</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class F&gt; bool visit_while(F f);
+template&lt;class F&gt; bool visit_while(F f) const;
+template&lt;class F&gt; bool cvisit_while(F f) const;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Successively invokes <code>f</code> with const references to each of the elements in the table until <code>f</code> returns <code>false</code>
+or all the elements are visited.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p><code>false</code> iff <code>f</code> ever returns <code>false</code>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_parallel_cvisit_while"><a class="anchor" href="#concurrent_node_set_parallel_cvisit_while"></a>Parallel [c]visit_while</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class ExecutionPolicy, class F&gt; bool visit_while(ExecutionPolicy&amp;&amp; policy, F f);
+template&lt;class ExecutionPolicy, class F&gt; bool visit_while(ExecutionPolicy&amp;&amp; policy, F f) const;
+template&lt;class ExecutionPolicy, class F&gt; bool cvisit_while(ExecutionPolicy&amp;&amp; policy, F f) const;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Invokes <code>f</code> with const references to each of the elements in the table until <code>f</code> returns <code>false</code>
+or all the elements are visited.
+Execution is parallelized according to the semantics of the execution policy specified.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p><code>false</code> iff <code>f</code> ever returns <code>false</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>Depending on the exception handling mechanism of the execution policy used, may call <code>std::terminate</code> if an exception is thrown within <code>f</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>Only available in compilers supporting C++17 parallel algorithms.<br></p>
+<div class="paragraph">
+<p>These overloads only participate in overload resolution if <code>std::is_execution_policy_v&lt;std::remove_cvref_t&lt;ExecutionPolicy&gt;&gt;</code> is <code>true</code>.<br></p>
+</div>
+<div class="paragraph">
+<p>Unsequenced execution policies are not allowed.<br></p>
+</div>
+<div class="paragraph">
+<p>Parallelization implies that execution does not necessary finish as soon as <code>f</code> returns <code>false</code>, and as a result
+<code>f</code> may be invoked with further elements for which the return value is also <code>false</code>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect2">
+<h3 id="concurrent_node_set_size_and_capacity"><a class="anchor" href="#concurrent_node_set_size_and_capacity"></a>Size and Capacity</h3>
+<div class="sect3">
+<h4 id="concurrent_node_set_empty"><a class="anchor" href="#concurrent_node_set_empty"></a>empty</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">[[nodiscard]] bool empty() const noexcept;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p><code>size() == 0</code></p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_size"><a class="anchor" href="#concurrent_node_set_size"></a>size</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">size_type size() const noexcept;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>The number of elements in the table.</p>
+</td>
+</tr>
+</table>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>In the presence of concurrent insertion operations, the value returned may not accurately reflect
+the true size of the table right after execution.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_max_size"><a class="anchor" href="#concurrent_node_set_max_size"></a>max_size</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">size_type max_size() const noexcept;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p><code>size()</code> of the largest possible table.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect2">
+<h3 id="concurrent_node_set_modifiers"><a class="anchor" href="#concurrent_node_set_modifiers"></a>Modifiers</h3>
+<div class="sect3">
+<h4 id="concurrent_node_set_emplace"><a class="anchor" href="#concurrent_node_set_emplace"></a>emplace</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class... Args&gt; bool emplace(Args&amp;&amp;... args);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Inserts an object, constructed with the arguments <code>args</code>, in the table if and only if there is no element in the table with an equivalent key.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>value_type</code> is constructible from <code>args</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p><code>true</code> if an insert took place.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Concurrency:
+</td>
+<td class="hdlist2">
+<p>Blocking on rehashing of <code>*this</code>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_copy_insert"><a class="anchor" href="#concurrent_node_set_copy_insert"></a>Copy Insert</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">bool insert(const value_type&amp; obj);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Inserts <code>obj</code> in the table if and only if there is no element in the table with an equivalent key.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>value_type</code> is <a href="https://en.cppreference.com/w/cpp/named_req/CopyInsertable" target="_blank" rel="noopener">CopyInsertable</a>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p><code>true</code> if an insert took place.<br></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Concurrency:
+</td>
+<td class="hdlist2">
+<p>Blocking on rehashing of <code>*this</code>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_move_insert"><a class="anchor" href="#concurrent_node_set_move_insert"></a>Move Insert</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">bool insert(value_type&amp;&amp; obj);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Inserts <code>obj</code> in the table if and only if there is no element in the table with an equivalent key.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>value_type</code> is <a href="https://en.cppreference.com/w/cpp/named_req/MoveInsertable" target="_blank" rel="noopener">MoveInsertable</a>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p><code>true</code> if an insert took place.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Concurrency:
+</td>
+<td class="hdlist2">
+<p>Blocking on rehashing of <code>*this</code>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_transparent_insert"><a class="anchor" href="#concurrent_node_set_transparent_insert"></a>Transparent Insert</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class K&gt; bool insert(K&amp;&amp; k);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Inserts an element constructed from <code>std::forward&lt;K&gt;(k)</code> in the container if and only if there is no element in the container with an equivalent key.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>value_type</code> is <a href="https://en.cppreference.com/w/cpp/named_req/EmplaceConstructible" target="_blank" rel="noopener">EmplaceConstructible</a> from <code>k</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p><code>true</code> if an insert took place.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Concurrency:
+</td>
+<td class="hdlist2">
+<p>Blocking on rehashing of <code>*this</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>This overload only participates in overload resolution if <code>Hash::is_transparent</code> and <code>Pred::is_transparent</code> are valid member typedefs. The library assumes that <code>Hash</code> is callable with both <code>K</code> and <code>Key</code> and that <code>Pred</code> is transparent. This enables heterogeneous lookup which avoids the cost of instantiating an instance of the <code>Key</code> type.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_insert_iterator_range"><a class="anchor" href="#concurrent_node_set_insert_iterator_range"></a>Insert Iterator Range</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class InputIterator&gt; size_type insert(InputIterator first, InputIterator last);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Equivalent to</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>  while(first != last) this-&gt;<a href="#concurrent_node_set_emplace">emplace</a>(*first++);</pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>The number of elements inserted.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_insert_initializer_list"><a class="anchor" href="#concurrent_node_set_insert_initializer_list"></a>Insert Initializer List</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">size_type insert(std::initializer_list&lt;value_type&gt; il);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Equivalent to</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>  this-&gt;<a href="#concurrent_node_set_insert_iterator_range">insert</a>(il.begin(), il.end());</pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>The number of elements inserted.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_insert_node"><a class="anchor" href="#concurrent_node_set_insert_node"></a>Insert Node</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">insert_return_type insert(node_type&amp;&amp; nh);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If <code>nh</code> is not empty, inserts the associated element in the table  if and only if there is no element in the table with a key equivalent to <code>nh.value()</code>.
+<code>nh</code> is empty when the function returns.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>An <code>insert_return_type</code> object constructed from <code>inserted</code> and <code>node</code>:<br></p>
+<div class="ulist">
+<ul>
+<li>
+<p>If <code>nh</code> is empty, <code>inserted</code> is <code>false</code> and <code>node</code> is empty.</p>
+</li>
+<li>
+<p>Otherwise if the insertion took place, <code>inserted</code> is true and <code>node</code> is empty.</p>
+</li>
+<li>
+<p>If the insertion failed, <code>inserted</code> is false and <code>node</code> has the previous value of <code>nh</code>.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>If an exception is thrown by an operation other than a call to <code>hasher</code> the function has no effect.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Concurrency:
+</td>
+<td class="hdlist2">
+<p>Blocking on rehashing of <code>*this</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>Behavior is undefined if <code>nh</code> is not empty and the allocators of <code>nh</code> and the container are not equal.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_emplace_or_cvisit"><a class="anchor" href="#concurrent_node_set_emplace_or_cvisit"></a>emplace_or_[c]visit</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class... Args, class F&gt; bool emplace_or_visit(Args&amp;&amp;... args, F&amp;&amp; f);
+template&lt;class... Args, class F&gt; bool emplace_or_cvisit(Args&amp;&amp;... args, F&amp;&amp; f);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Inserts an object, constructed with the arguments <code>args</code>, in the table if there is no element in the table with an equivalent key.
+Otherwise, invokes <code>f</code> with a const reference to the equivalent element.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>value_type</code> is constructible from <code>args</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p><code>true</code> if an insert took place.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Concurrency:
+</td>
+<td class="hdlist2">
+<p>Blocking on rehashing of <code>*this</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>The interface is exposition only, as C++ does not allow to declare a parameter <code>f</code> after a variadic parameter pack.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_copy_insert_or_cvisit"><a class="anchor" href="#concurrent_node_set_copy_insert_or_cvisit"></a>Copy insert_or_[c]visit</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class F&gt; bool insert_or_visit(const value_type&amp; obj, F f);
+template&lt;class F&gt; bool insert_or_cvisit(const value_type&amp; obj, F f);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Inserts <code>obj</code> in the table if and only if there is no element in the table with an equivalent key.
+Otherwise, invokes <code>f</code> with a const reference to the equivalent element.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>value_type</code> is <a href="https://en.cppreference.com/w/cpp/named_req/CopyInsertable" target="_blank" rel="noopener">CopyInsertable</a>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p><code>true</code> if an insert took place.<br></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Concurrency:
+</td>
+<td class="hdlist2">
+<p>Blocking on rehashing of <code>*this</code>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_move_insert_or_cvisit"><a class="anchor" href="#concurrent_node_set_move_insert_or_cvisit"></a>Move insert_or_[c]visit</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class F&gt; bool insert_or_visit(value_type&amp;&amp; obj, F f);
+template&lt;class F&gt; bool insert_or_cvisit(value_type&amp;&amp; obj, F f);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Inserts <code>obj</code> in the table if and only if there is no element in the table with an equivalent key.
+Otherwise, invokes <code>f</code> with a const reference to the equivalent element.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>value_type</code> is <a href="https://en.cppreference.com/w/cpp/named_req/MoveInsertable" target="_blank" rel="noopener">MoveInsertable</a>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p><code>true</code> if an insert took place.<br></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Concurrency:
+</td>
+<td class="hdlist2">
+<p>Blocking on rehashing of <code>*this</code>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_transparent_insert_or_cvisit"><a class="anchor" href="#concurrent_node_set_transparent_insert_or_cvisit"></a>Transparent insert_or_[c]visit</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class K, class F&gt; bool insert_or_visit(K&amp;&amp; k, F f);
+template&lt;class K, class F&gt; bool insert_or_cvisit(K&amp;&amp; k, F f);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Inserts an element constructed from <code>std::forward&lt;K&gt;(k)</code> in the container if and only if there is no element in the container with an equivalent key.
+Otherwise, invokes <code>f</code> with a const reference to the equivalent element.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>value_type</code> is <a href="https://en.cppreference.com/w/cpp/named_req/EmplaceConstructible" target="_blank" rel="noopener">EmplaceConstructible</a> from <code>k</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p><code>true</code> if an insert took place.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Concurrency:
+</td>
+<td class="hdlist2">
+<p>Blocking on rehashing of <code>*this</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>These overloads only participate in overload resolution if <code>Hash::is_transparent</code> and <code>Pred::is_transparent</code> are valid member typedefs. The library assumes that <code>Hash</code> is callable with both <code>K</code> and <code>Key</code> and that <code>Pred</code> is transparent. This enables heterogeneous lookup which avoids the cost of instantiating an instance of the <code>Key</code> type.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_insert_iterator_range_or_visit"><a class="anchor" href="#concurrent_node_set_insert_iterator_range_or_visit"></a>Insert Iterator Range or Visit</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class InputIterator,class F&gt;
+    size_type insert_or_visit(InputIterator first, InputIterator last, F f);
+template&lt;class InputIterator,class F&gt;
+    size_type insert_or_cvisit(InputIterator first, InputIterator last, F f);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Equivalent to</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>  while(first != last) this-&gt;<a href="#concurrent_node_set_emplace_or_cvisit">emplace_or_[c]visit</a>(*first++, f);</pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>The number of elements inserted.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_insert_initializer_list_or_visit"><a class="anchor" href="#concurrent_node_set_insert_initializer_list_or_visit"></a>Insert Initializer List or Visit</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class F&gt; size_type insert_or_visit(std::initializer_list&lt;value_type&gt; il, F f);
+template&lt;class F&gt; size_type insert_or_cvisit(std::initializer_list&lt;value_type&gt; il, F f);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Equivalent to</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>  this-&gt;<a href="#concurrent_node_set_insert_iterator_range_or_visit">insert_or_[c]visit</a>(il.begin(), il.end(), std::ref(f));</pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>The number of elements inserted.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_insert_node_or_visit"><a class="anchor" href="#concurrent_node_set_insert_node_or_visit"></a>Insert Node or Visit</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class F&gt; insert_return_type insert_or_visit(node_type&amp;&amp; nh, F f);
+template&lt;class F&gt; insert_return_type insert_or_cvisit(node_type&amp;&amp; nh, F f);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If <code>nh</code> is empty, does nothing.
+Otherwise, inserts the associated element in the table if and only if there is no element in the table with a key equivalent to <code>nh.value()</code>.
+Otherwise, invokes <code>f</code> with a const reference to the equivalent element.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>An <code>insert_return_type</code> object constructed from <code>inserted</code> and <code>node</code>:<br></p>
+<div class="ulist">
+<ul>
+<li>
+<p>If <code>nh</code> is empty, <code>inserted</code> is <code>false</code> and <code>node</code> is empty.</p>
+</li>
+<li>
+<p>Otherwise if the insertion took place, <code>inserted</code> is true and <code>node</code> is empty.</p>
+</li>
+<li>
+<p>If the insertion failed, <code>inserted</code> is false and <code>node</code> has the previous value of <code>nh</code>.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>If an exception is thrown by an operation other than a call to <code>hasher</code> or call to <code>f</code>, the function has no effect.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Concurrency:
+</td>
+<td class="hdlist2">
+<p>Blocking on rehashing of <code>*this</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>Behavior is undefined if <code>nh</code> is not empty and the allocators of <code>nh</code> and the container are not equal.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_emplace_and_cvisit"><a class="anchor" href="#concurrent_node_set_emplace_and_cvisit"></a>emplace_and_[c]visit</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class... Args, class F1, class F2&gt;
+  bool emplace_or_visit(Args&amp;&amp;... args, F1&amp;&amp; f1, F2&amp;&amp; f2);
+template&lt;class... Args, class F1, class F2&gt;
+  bool emplace_or_cvisit(Args&amp;&amp;... args, F1&amp;&amp; f1, F2&amp;&amp; f2);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Inserts an object, constructed with the arguments <code>args</code>, in the table if there is no element in the table with an equivalent key,
+and then invokes <code>f1</code> with a const reference to the newly created element.
+Otherwise, invokes <code>f2</code> with a const reference to the equivalent element.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>value_type</code> is constructible from <code>args</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p><code>true</code> if an insert took place.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Concurrency:
+</td>
+<td class="hdlist2">
+<p>Blocking on rehashing of <code>*this</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>The interface is exposition only, as C++ does not allow to declare parameters <code>f1</code> and <code>f2</code> after a variadic parameter pack.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_copy_insert_and_cvisit"><a class="anchor" href="#concurrent_node_set_copy_insert_and_cvisit"></a>Copy insert_and_[c]visit</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class F1, class F2&gt; bool insert_and_visit(const value_type&amp; obj, F1 f1, F2 f2);
+template&lt;class F1, class F2&gt; bool insert_and_cvisit(const value_type&amp; obj, F1 f2, F2 f2);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Inserts <code>obj</code> in the table if and only if there is no element in the table with an equivalent key,
+and then invokes <code>f1</code> with a const reference to the newly created element.
+Otherwise, invokes <code>f</code> with a const reference to the equivalent element.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>value_type</code> is <a href="https://en.cppreference.com/w/cpp/named_req/CopyInsertable" target="_blank" rel="noopener">CopyInsertable</a>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p><code>true</code> if an insert took place.<br></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Concurrency:
+</td>
+<td class="hdlist2">
+<p>Blocking on rehashing of <code>*this</code>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_move_insert_and_cvisit"><a class="anchor" href="#concurrent_node_set_move_insert_and_cvisit"></a>Move insert_and_[c]visit</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class F1, class F2&gt; bool insert_and_visit(value_type&amp;&amp; obj, F1 f1, F2 f2);
+template&lt;class F1, class F2&gt; bool insert_and_cvisit(value_type&amp;&amp; obj, F1 f1, F2 f2);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Inserts <code>obj</code> in the table if and only if there is no element in the table with an equivalent key,
+and then invokes <code>f1</code> with a const reference to the newly created element.
+Otherwise, invokes <code>f2</code> with a const reference to the equivalent element.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>value_type</code> is <a href="https://en.cppreference.com/w/cpp/named_req/MoveInsertable" target="_blank" rel="noopener">MoveInsertable</a>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p><code>true</code> if an insert took place.<br></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Concurrency:
+</td>
+<td class="hdlist2">
+<p>Blocking on rehashing of <code>*this</code>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_transparent_insert_and_cvisit"><a class="anchor" href="#concurrent_node_set_transparent_insert_and_cvisit"></a>Transparent insert_and_[c]visit</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class K, class F1, class F2&gt; bool insert_and_visit(K&amp;&amp; k, F1 f1, F2 f2);
+template&lt;class K, class F1, class F2&gt; bool insert_and_cvisit(K&amp;&amp; k, F1 f1, F2 f2);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Inserts an element constructed from <code>std::forward&lt;K&gt;(k)</code> in the container if and only if there is no element in the container with an equivalent key,
+and then invokes <code>f1</code> with a const reference to the newly created element.
+Otherwise, invokes <code>f2</code> with a const reference to the equivalent element.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>value_type</code> is <a href="https://en.cppreference.com/w/cpp/named_req/EmplaceConstructible" target="_blank" rel="noopener">EmplaceConstructible</a> from <code>k</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p><code>true</code> if an insert took place.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Concurrency:
+</td>
+<td class="hdlist2">
+<p>Blocking on rehashing of <code>*this</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>These overloads only participate in overload resolution if <code>Hash::is_transparent</code> and <code>Pred::is_transparent</code> are valid member typedefs. The library assumes that <code>Hash</code> is callable with both <code>K</code> and <code>Key</code> and that <code>Pred</code> is transparent. This enables heterogeneous lookup which avoids the cost of instantiating an instance of the <code>Key</code> type.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_insert_iterator_range_and_visit"><a class="anchor" href="#concurrent_node_set_insert_iterator_range_and_visit"></a>Insert Iterator Range and Visit</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class InputIterator,class F1, class F2&gt;
+    size_type insert_and_visit(InputIterator first, InputIterator last, F1 f1, F2 f2);
+template&lt;class InputIterator,class F1, class f2&gt;
+    size_type insert_and_cvisit(InputIterator first, InputIterator last, F1 f1, F2 f2);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Equivalent to</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>  while(first != last) this-&gt;<a href="#concurrent_node_set_emplace_and_cvisit">emplace_and_[c]visit</a>(*first++, f1, f2);</pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>The number of elements inserted.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_insert_initializer_list_and_visit"><a class="anchor" href="#concurrent_node_set_insert_initializer_list_and_visit"></a>Insert Initializer List and Visit</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class F1, class F2&gt;
+  size_type insert_and_visit(std::initializer_list&lt;value_type&gt; il, F1 f1, F2 f2);
+template&lt;class F1, class F2&gt;
+  size_type insert_and_cvisit(std::initializer_list&lt;value_type&gt; il, F1 f1, F2 f2);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Equivalent to</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>  this-&gt;<a href="#concurrent_node_set_insert_iterator_range_and_visit">insert_and_[c]visit</a>(il.begin(), il.end(), std::ref(f1), std::ref(f2));</pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>The number of elements inserted.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_insert_node_and_visit"><a class="anchor" href="#concurrent_node_set_insert_node_and_visit"></a>Insert Node and Visit</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class F1, class F2&gt;
+  insert_return_type insert_and_visit(node_type&amp;&amp; nh, F1 f1, F2 f2);
+template&lt;class F1, class F2&gt;
+  insert_return_type insert_and_cvisit(node_type&amp;&amp; nh, F1 f1, F2 f2);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If <code>nh</code> is empty, does nothing.
+Otherwise, inserts the associated element in the table if and only if there is no element in the table with a key equivalent to <code>nh.value()</code>,
+and then invokes <code>f1</code> with a const reference to the newly inserted element.
+Otherwise, invokes <code>f2</code> with a const reference to the equivalent element.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>An <code>insert_return_type</code> object constructed from <code>inserted</code> and <code>node</code>:<br></p>
+<div class="ulist">
+<ul>
+<li>
+<p>If <code>nh</code> is empty, <code>inserted</code> is <code>false</code> and <code>node</code> is empty.</p>
+</li>
+<li>
+<p>Otherwise if the insertion took place, <code>inserted</code> is true and <code>node</code> is empty.</p>
+</li>
+<li>
+<p>If the insertion failed, <code>inserted</code> is false and <code>node</code> has the previous value of <code>nh</code>.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>If an exception is thrown by an operation other than a call to <code>hasher</code> or call to <code>f1</code> or <code>f2</code>, the function has no effect.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Concurrency:
+</td>
+<td class="hdlist2">
+<p>Blocking on rehashing of <code>*this</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>Behavior is undefined if <code>nh</code> is not empty and the allocators of <code>nh</code> and the container are not equal.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_erase"><a class="anchor" href="#concurrent_node_set_erase"></a>erase</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">size_type erase(const key_type&amp; k);
+template&lt;class K&gt; size_type erase(const K&amp; k);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Erases the element with key equivalent to <code>k</code> if it exists.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>The number of elements erased (0 or 1).</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>Only throws an exception if it is thrown by <code>hasher</code> or <code>key_equal</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>The <code>template&lt;class K&gt;</code> overload only participates in overload resolution if <code>Hash::is_transparent</code> and <code>Pred::is_transparent</code> are valid member typedefs. The library assumes that <code>Hash</code> is callable with both <code>K</code> and <code>Key</code> and that <code>Pred</code> is transparent. This enables heterogeneous lookup which avoids the cost of instantiating an instance of the <code>Key</code> type.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_erase_if_by_key"><a class="anchor" href="#concurrent_node_set_erase_if_by_key"></a>erase_if by Key</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class F&gt; size_type erase_if(const key_type&amp; k, F f);
+template&lt;class K, class F&gt; size_type erase_if(const K&amp; k, F f);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Erases the element <code>x</code> with key equivalent to <code>k</code> if it exists and <code>f(x)</code> is <code>true</code>.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>The number of elements erased (0 or 1).</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>Only throws an exception if it is thrown by <code>hasher</code>, <code>key_equal</code> or <code>f</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>The <code>template&lt;class K, class F&gt;</code> overload only participates in overload resolution if <code>std::is_execution_policy_v&lt;std::remove_cvref_t&lt;ExecutionPolicy&gt;&gt;</code> is <code>false</code>.<br></p>
+<div class="paragraph">
+<p>The <code>template&lt;class K, class F&gt;</code> overload only participates in overload resolution if <code>Hash::is_transparent</code> and <code>Pred::is_transparent</code> are valid member typedefs. The library assumes that <code>Hash</code> is callable with both <code>K</code> and <code>Key</code> and that <code>Pred</code> is transparent. This enables heterogeneous lookup which avoids the cost of instantiating an instance of the <code>Key</code> type.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_erase_if"><a class="anchor" href="#concurrent_node_set_erase_if"></a>erase_if</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class F&gt; size_type erase_if(F f);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Successively invokes <code>f</code> with references to each of the elements in the table, and erases those for which <code>f</code> returns <code>true</code>.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>The number of elements erased.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>Only throws an exception if it is thrown by <code>f</code>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_parallel_erase_if"><a class="anchor" href="#concurrent_node_set_parallel_erase_if"></a>Parallel erase_if</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class ExecutionPolicy, class  F&gt; void erase_if(ExecutionPolicy&amp;&amp; policy, F f);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Invokes <code>f</code> with references to each of the elements in the table, and erases those for which <code>f</code> returns <code>true</code>.
+Execution is parallelized according to the semantics of the execution policy specified.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>Depending on the exception handling mechanism of the execution policy used, may call <code>std::terminate</code> if an exception is thrown within <code>f</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>Only available in compilers supporting C++17 parallel algorithms.<br></p>
+<div class="paragraph">
+<p>This overload only participates in overload resolution if <code>std::is_execution_policy_v&lt;std::remove_cvref_t&lt;ExecutionPolicy&gt;&gt;</code> is <code>true</code>.<br></p>
+</div>
+<div class="paragraph">
+<p>Unsequenced execution policies are not allowed.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_swap"><a class="anchor" href="#concurrent_node_set_swap"></a>swap</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">void swap(concurrent_node_set&amp; other)
+  noexcept(boost::allocator_traits&lt;Allocator&gt;::is_always_equal::value ||
+           boost::allocator_traits&lt;Allocator&gt;::propagate_on_container_swap::value);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Swaps the contents of the table with the parameter.</p>
+</div>
+<div class="paragraph">
+<p>If <code>Allocator::propagate_on_container_swap</code> is declared and <code>Allocator::propagate_on_container_swap::value</code> is <code>true</code> then the tables' allocators are swapped. Otherwise, swapping with unequal allocators results in undefined behavior.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>Nothing unless <code>key_equal</code> or <code>hasher</code> throw on swapping.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Concurrency:
+</td>
+<td class="hdlist2">
+<p>Blocking on <code>*this</code> and <code>other</code>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_extract"><a class="anchor" href="#concurrent_node_set_extract"></a>extract</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">node_type extract(const key_type&amp; k);
+template&lt;class K&gt; node_type extract(K&amp;&amp; k);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Extracts the element with key equivalent to <code>k</code>, if it exists.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>A <code>node_type</code> object holding the extracted element, or empty if no element was extracted.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>Only throws an exception if it is thrown by <code>hasher</code> or <code>key_equal</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>The <code>template&lt;class K&gt;</code> overload only participates in overload resolution if <code>Hash::is_transparent</code> and <code>Pred::is_transparent</code> are valid member typedefs. The library assumes that <code>Hash</code> is callable with both <code>K</code> and <code>Key</code> and that <code>Pred</code> is transparent. This enables heterogeneous lookup which avoids the cost of instantiating an instance of the <code>Key</code> type.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_extract_if"><a class="anchor" href="#concurrent_node_set_extract_if"></a>extract_if</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class F&gt; node_type extract_if(const key_type&amp; k, F f);
+template&lt;class K, class F&gt; node_type extract_if(K&amp;&amp; k, F f);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Extracts the element <code>x</code> with key equivalent to <code>k</code>, if it exists and <code>f(x)</code> is <code>true</code>.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>A <code>node_type</code> object holding the extracted element, or empty if no element was extracted.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>Only throws an exception if it is thrown by <code>hasher</code> or <code>key_equal</code> or <code>f</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>The <code>template&lt;class K&gt;</code> overload only participates in overload resolution if <code>Hash::is_transparent</code> and <code>Pred::is_transparent</code> are valid member typedefs. The library assumes that <code>Hash</code> is callable with both <code>K</code> and <code>Key</code> and that <code>Pred</code> is transparent. This enables heterogeneous lookup which avoids the cost of instantiating an instance of the <code>Key</code> type.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_clear"><a class="anchor" href="#concurrent_node_set_clear"></a>clear</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">void clear() noexcept;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Erases all elements in the table.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Postconditions:
+</td>
+<td class="hdlist2">
+<p><code>size() == 0</code>, <code>max_load() &gt;= max_load_factor() * bucket_count()</code></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Concurrency:
+</td>
+<td class="hdlist2">
+<p>Blocking on <code>*this</code>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_merge"><a class="anchor" href="#concurrent_node_set_merge"></a>merge</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class H2, class P2&gt;
+  size_type merge(concurrent_node_set&lt;Key, H2, P2, Allocator&gt;&amp; source);
+template&lt;class H2, class P2&gt;
+  size_type merge(concurrent_node_set&lt;Key, H2, P2, Allocator&gt;&amp;&amp; source);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Move-inserts all the elements from <code>source</code> whose key is not already present in <code>*this</code>, and erases them from <code>source</code>.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>The number of elements inserted.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Concurrency:
+</td>
+<td class="hdlist2">
+<p>Blocking on <code>*this</code> and <code>source</code>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect2">
+<h3 id="concurrent_node_set_observers"><a class="anchor" href="#concurrent_node_set_observers"></a>Observers</h3>
+<div class="sect3">
+<h4 id="concurrent_node_set_get_allocator"><a class="anchor" href="#concurrent_node_set_get_allocator"></a>get_allocator</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">allocator_type get_allocator() const noexcept;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>The table&#8217;s allocator.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_hash_function"><a class="anchor" href="#concurrent_node_set_hash_function"></a>hash_function</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">hasher hash_function() const;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>The table&#8217;s hash function.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_key_eq"><a class="anchor" href="#concurrent_node_set_key_eq"></a>key_eq</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">key_equal key_eq() const;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>The table&#8217;s key equality predicate.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect2">
+<h3 id="concurrent_node_set_set_operations"><a class="anchor" href="#concurrent_node_set_set_operations"></a>Set Operations</h3>
+<div class="sect3">
+<h4 id="concurrent_node_set_count"><a class="anchor" href="#concurrent_node_set_count"></a>count</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">size_type        count(const key_type&amp; k) const;
+template&lt;class K&gt;
+  size_type      count(const K&amp; k) const;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>The number of elements with key equivalent to <code>k</code> (0 or 1).</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>The <code>template&lt;class K&gt;</code> overload only participates in overload resolution if <code>Hash::is_transparent</code> and <code>Pred::is_transparent</code> are valid member typedefs. The library assumes that <code>Hash</code> is callable with both <code>K</code> and <code>Key</code> and that <code>Pred</code> is transparent. This enables heterogeneous lookup which avoids the cost of instantiating an instance of the <code>Key</code> type.<br></p>
+<div class="paragraph">
+<p>In the presence of concurrent insertion operations, the value returned may not accurately reflect
+the true state of the table right after execution.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_contains"><a class="anchor" href="#concurrent_node_set_contains"></a>contains</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">bool             contains(const key_type&amp; k) const;
+template&lt;class K&gt;
+  bool           contains(const K&amp; k) const;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>A boolean indicating whether or not there is an element with key equal to <code>k</code> in the table.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>The <code>template&lt;class K&gt;</code> overload only participates in overload resolution if <code>Hash::is_transparent</code> and <code>Pred::is_transparent</code> are valid member typedefs. The library assumes that <code>Hash</code> is callable with both <code>K</code> and <code>Key</code> and that <code>Pred</code> is transparent. This enables heterogeneous lookup which avoids the cost of instantiating an instance of the <code>Key</code> type. <br></p>
+<div class="paragraph">
+<p>In the presence of concurrent insertion operations, the value returned may not accurately reflect
+the true state of the table right after execution.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect2">
+<h3 id="concurrent_node_set_bucket_interface"><a class="anchor" href="#concurrent_node_set_bucket_interface"></a>Bucket Interface</h3>
+<div class="sect3">
+<h4 id="concurrent_node_set_bucket_count"><a class="anchor" href="#concurrent_node_set_bucket_count"></a>bucket_count</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">size_type bucket_count() const noexcept;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>The size of the bucket array.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect2">
+<h3 id="concurrent_node_set_hash_policy"><a class="anchor" href="#concurrent_node_set_hash_policy"></a>Hash Policy</h3>
+<div class="sect3">
+<h4 id="concurrent_node_set_load_factor"><a class="anchor" href="#concurrent_node_set_load_factor"></a>load_factor</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">float load_factor() const noexcept;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p><code>static_cast&lt;float&gt;(size())/static_cast&lt;float&gt;(bucket_count())</code>, or <code>0</code> if <code>bucket_count() == 0</code>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_max_load_factor"><a class="anchor" href="#concurrent_node_set_max_load_factor"></a>max_load_factor</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">float max_load_factor() const noexcept;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>Returns the table&#8217;s maximum load factor.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_set_max_load_factor"><a class="anchor" href="#concurrent_node_set_set_max_load_factor"></a>Set max_load_factor</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">void max_load_factor(float z);</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Effects:
+</td>
+<td class="hdlist2">
+<p>Does nothing, as the user is not allowed to change this parameter. Kept for compatibility with <code>boost::unordered_set</code>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_max_load"><a class="anchor" href="#concurrent_node_set_max_load"></a>max_load</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">size_type max_load() const noexcept;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>The maximum number of elements the table can hold without rehashing, assuming that no further elements will be erased.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Note:
+</td>
+<td class="hdlist2">
+<p>After construction, rehash or clearance, the table&#8217;s maximum load is at least <code>max_load_factor() * bucket_count()</code>.
+This number may decrease on erasure under high-load conditions.<br></p>
+<div class="paragraph">
+<p>In the presence of concurrent insertion operations, the value returned may not accurately reflect
+the true state of the table right after execution.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_rehash"><a class="anchor" href="#concurrent_node_set_rehash"></a>rehash</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">void rehash(size_type n);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Changes if necessary the size of the bucket array so that there are at least <code>n</code> buckets, and so that the load factor is less than or equal to the maximum load factor. When applicable, this will either grow or shrink the <code>bucket_count()</code> associated with the table.</p>
+</div>
+<div class="paragraph">
+<p>When <code>size() == 0</code>, <code>rehash(0)</code> will deallocate the underlying buckets array.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>The function has no effect if an exception is thrown, unless it is thrown by the table&#8217;s hash function or comparison function.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Concurrency:
+</td>
+<td class="hdlist2">
+<p>Blocking on <code>*this</code>.</p>
+<hr>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_reserve"><a class="anchor" href="#concurrent_node_set_reserve"></a>reserve</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">void reserve(size_type n);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Equivalent to <code>a.rehash(ceil(n / a.max_load_factor()))</code>.</p>
+</div>
+<div class="paragraph">
+<p>Similar to <code>rehash</code>, this function can be used to grow or shrink the number of buckets in the table.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>The function has no effect if an exception is thrown, unless it is thrown by the table&#8217;s hash function or comparison function.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Concurrency:
+</td>
+<td class="hdlist2">
+<p>Blocking on <code>*this</code>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect2">
+<h3 id="concurrent_node_set_statistics"><a class="anchor" href="#concurrent_node_set_statistics"></a>Statistics</h3>
+<div class="sect3">
+<h4 id="concurrent_node_set_get_stats"><a class="anchor" href="#concurrent_node_set_get_stats"></a>get_stats</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">stats get_stats() const;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>A statistical description of the insertion and lookup operations performed by the table so far.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>Only available if <a href="stats.html#stats" class="xref page">statistics calculation</a> is <a href="#concurrent_node_set_boost_unordered_enable_stats">enabled</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_reset_stats"><a class="anchor" href="#concurrent_node_set_reset_stats"></a>reset_stats</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">void reset_stats() noexcept;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Effects:
+</td>
+<td class="hdlist2">
+<p>Sets to zero the internal statistics kept by the table.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>Only available if <a href="stats.html#stats" class="xref page">statistics calculation</a> is <a href="#concurrent_node_set_boost_unordered_enable_stats">enabled</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect2">
+<h3 id="concurrent_node_set_deduction_guides"><a class="anchor" href="#concurrent_node_set_deduction_guides"></a>Deduction Guides</h3>
+<div class="paragraph">
+<p>A deduction guide will not participate in overload resolution if any of the following are true:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>It has an <code>InputIterator</code> template parameter and a type that does not qualify as an input iterator is deduced for that parameter.</p>
+</li>
+<li>
+<p>It has an <code>Allocator</code> template parameter and a type that does not qualify as an allocator is deduced for that parameter.</p>
+</li>
+<li>
+<p>It has a <code>Hash</code> template parameter and an integral type or a type that qualifies as an allocator is deduced for that parameter.</p>
+</li>
+<li>
+<p>It has a <code>Pred</code> template parameter and a type that qualifies as an allocator is deduced for that parameter.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>A <code>size_­type</code> parameter type in a deduction guide refers to the <code>size_­type</code> member type of the
+container type deduced by the deduction guide. Its default value coincides with the default value
+of the constructor selected.</p>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_iter_value_type"><a class="anchor" href="#concurrent_node_set_iter_value_type"></a><em>iter-value-type</em></h4>
+<div class="listingblock">
+<div class="content">
+<pre>template&lt;class InputIterator&gt;
+  using <em>iter-value-type</em> =
+    typename std::iterator_traits&lt;InputIterator&gt;::value_type; // exposition only</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="concurrent_node_set_equality_comparisons"><a class="anchor" href="#concurrent_node_set_equality_comparisons"></a>Equality Comparisons</h3>
+<div class="sect3">
+<h4 id="concurrent_node_set_operator"><a class="anchor" href="#concurrent_node_set_operator"></a>operator==</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class Key, class Hash, class Pred, class Alloc&gt;
+  bool operator==(const concurrent_node_set&lt;Key, Hash, Pred, Alloc&gt;&amp; x,
+                  const concurrent_node_set&lt;Key, Hash, Pred, Alloc&gt;&amp; y);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Returns <code>true</code> if <code>x.size() == y.size()</code> and for every element in <code>x</code>, there is an element in <code>y</code> with the same key, with an equal value (using <code>operator==</code> to compare the value types).</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Concurrency:
+</td>
+<td class="hdlist2">
+<p>Blocking on <code>x</code> and <code>y</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>Behavior is undefined if the two tables don&#8217;t have equivalent equality predicates.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_operator_2"><a class="anchor" href="#concurrent_node_set_operator_2"></a>operator!=</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class Key, class Hash, class Pred, class Alloc&gt;
+  bool operator!=(const concurrent_node_set&lt;Key, Hash, Pred, Alloc&gt;&amp; x,
+                  const concurrent_node_set&lt;Key, Hash, Pred, Alloc&gt;&amp; y);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Returns <code>false</code> if <code>x.size() == y.size()</code> and for every element in <code>x</code>, there is an element in <code>y</code> with the same key, with an equal value (using <code>operator==</code> to compare the value types).</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Concurrency:
+</td>
+<td class="hdlist2">
+<p>Blocking on <code>x</code> and <code>y</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>Behavior is undefined if the two tables don&#8217;t have equivalent equality predicates.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect2">
+<h3 id="concurrent_node_set_swap_2"><a class="anchor" href="#concurrent_node_set_swap_2"></a>Swap</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class Key, class Hash, class Pred, class Alloc&gt;
+  void swap(concurrent_node_set&lt;Key, Hash, Pred, Alloc&gt;&amp; x,
+            concurrent_node_set&lt;Key, Hash, Pred, Alloc&gt;&amp; y)
+    noexcept(noexcept(x.swap(y)));</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Equivalent to</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>x.<a href="#concurrent_node_set_swap">swap</a>(y);</pre>
+</div>
+</div>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="concurrent_node_set_erase_if_2"><a class="anchor" href="#concurrent_node_set_erase_if_2"></a>erase_if</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class K, class H, class P, class A, class Predicate&gt;
+  typename concurrent_node_set&lt;K, H, P, A&gt;::size_type
+    erase_if(concurrent_node_set&lt;K, H, P, A&gt;&amp; c, Predicate pred);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Equivalent to</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>c.<a href="#concurrent_node_set_erase_if">erase_if</a>(pred);</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="concurrent_node_set_serialization"><a class="anchor" href="#concurrent_node_set_serialization"></a>Serialization</h3>
+<div class="paragraph">
+<p><code>concurrent_node_set</code>s can be archived/retrieved by means of
+<a href="../../../../../serialization/index.html" target="_blank" rel="noopener">Boost.Serialization</a> using the API provided
+by this library. Both regular and XML archives are supported.</p>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_saving_an_concurrent_node_set_to_an_archive"><a class="anchor" href="#concurrent_node_set_saving_an_concurrent_node_set_to_an_archive"></a>Saving an concurrent_node_set to an archive</h4>
+<div class="paragraph">
+<p>Saves all the elements of a <code>concurrent_node_set</code> <code>x</code> to an archive (XML archive) <code>ar</code>.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>value_type</code> is serializable (XML serializable), and it supports Boost.Serialization
+<code>save_construct_data</code>/<code>load_construct_data</code> protocol (automatically suported by
+<a href="https://en.cppreference.com/w/cpp/named_req/DefaultConstructible" target="_blank" rel="noopener">DefaultConstructible</a>
+types).</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Concurrency:
+</td>
+<td class="hdlist2">
+<p>Blocking on <code>x</code>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="concurrent_node_set_loading_an_concurrent_node_set_from_an_archive"><a class="anchor" href="#concurrent_node_set_loading_an_concurrent_node_set_from_an_archive"></a>Loading an concurrent_node_set from an archive</h4>
+<div class="paragraph">
+<p>Deletes all preexisting elements of a <code>concurrent_node_set</code> <code>x</code> and inserts
+from an archive (XML archive) <code>ar</code> restored copies of the elements of the
+original <code>concurrent_node_set</code> <code>other</code> saved to the storage read by <code>ar</code>.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>x.key_equal()</code> is functionally equivalent to <code>other.key_equal()</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Concurrency:
+</td>
+<td class="hdlist2">
+<p>Blocking on <code>x</code>.</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<script id="site-script" src="../../unordered/_/js/site.js" data-ui-root-path="../../unordered/_"></script>
+<script async src="../../unordered/_/js/vendor/highlight.js"></script>
+  </body>
+</html>

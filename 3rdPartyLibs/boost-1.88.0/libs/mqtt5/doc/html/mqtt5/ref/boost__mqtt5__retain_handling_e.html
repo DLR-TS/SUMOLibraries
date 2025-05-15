@@ -1,0 +1,127 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>boost::mqtt5::retain_handling_e</title>
+<link rel="stylesheet" href="../../../../../../doc/src/boostbook.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="../../index.html" title="Chapter 1. Boost.MQTT5: a C++17 MQTT client">
+<link rel="up" href="../../pt02.html" title="Part Two: Reference. ">
+<link rel="prev" href="boost__mqtt5__retain_e.html" title="boost::mqtt5::retain_e">
+<link rel="next" href="boost__mqtt5__subscribe_options.html" title="boost::mqtt5::subscribe_options">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table cellpadding="2" width="100%"><tr>
+<td valign="top"><img alt="Boost C++ Libraries" width="277" height="86" src="../../../../../../boost.png"></td>
+<td align="center"><a href="../../../../../../index.html">Home</a></td>
+<td align="center"><a href="../../../../../../libs/libraries.htm">Libraries</a></td>
+<td align="center"><a href="http://www.boost.org/users/people.html">People</a></td>
+<td align="center"><a href="http://www.boost.org/users/faq.html">FAQ</a></td>
+<td align="center"><a href="../../../../../../more/index.htm">More</a></td>
+</tr></table>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="boost__mqtt5__retain_e.html"><img src="../../../../../../doc/src/images/prev.png" alt="Prev"></a><a accesskey="u" href="../../pt02.html"><img src="../../../../../../doc/src/images/up.png" alt="Up"></a><a accesskey="h" href="../../index.html"><img src="../../../../../../doc/src/images/home.png" alt="Home"></a><a accesskey="n" href="boost__mqtt5__subscribe_options.html"><img src="../../../../../../doc/src/images/next.png" alt="Next"></a>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="mqtt5.ref.boost__mqtt5__retain_handling_e"></a><a class="link" href="boost__mqtt5__retain_handling_e.html" title="boost::mqtt5::retain_handling_e">boost::mqtt5::retain_handling_e</a>
+</h4></div></div></div>
+<p>
+        <a class="indexterm" name="id15916"></a>
+Representation of the Retain Handling Subscribe Option.
+      </p>
+<h5>
+<a name="mqtt5.ref.boost__mqtt5__retain_handling_e.h0"></a>
+        <span class="phrase"><a name="mqtt5.ref.boost__mqtt5__retain_handling_e.synopsis"></a></span><a class="link" href="boost__mqtt5__retain_handling_e.html#mqtt5.ref.boost__mqtt5__retain_handling_e.synopsis">Synopsis</a>
+      </h5>
+<p>
+        Defined in header <code class="literal">&lt;<a href="https://github.com/boostorg/mqtt5/blob/master/include/boost/mqtt5/types.hpp" target="_top">boost/mqtt5/types.hpp</a>&gt;</code>
+      </p>
+<pre class="programlisting"><span class="keyword">enum</span> <span class="keyword">class</span> <span class="identifier">retain_handling_e</span>
+    <span class="special">:</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">uint8_t</span><span class="special">;</span>
+</pre>
+<h5>
+<a name="mqtt5.ref.boost__mqtt5__retain_handling_e.h1"></a>
+        <span class="phrase"><a name="mqtt5.ref.boost__mqtt5__retain_handling_e.values"></a></span><a class="link" href="boost__mqtt5__retain_handling_e.html#mqtt5.ref.boost__mqtt5__retain_handling_e.values">Values</a>
+      </h5>
+<div class="informaltable"><table class="table">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead><tr>
+<th>
+                <p>
+                  Name
+                </p>
+              </th>
+<th>
+                <p>
+                  Description
+                </p>
+              </th>
+</tr></thead>
+<tbody>
+<tr>
+<td>
+                <p>
+                  <code class="literal">send</code>
+                </p>
+              </td>
+<td>
+                <p>
+                  Send retained messages at the time of subscribe.
+                </p>
+              </td>
+</tr>
+<tr>
+<td>
+                <p>
+                  <code class="literal">new_subscription_only</code>
+                </p>
+              </td>
+<td>
+                <p>
+                  Send retained message only if the Subscription does not currently
+                  exist.
+                </p>
+              </td>
+</tr>
+<tr>
+<td>
+                <p>
+                  <code class="literal">not_send</code>
+                </p>
+              </td>
+<td>
+                <p>
+                  Do not send retained messages at the time of subscribe.
+                </p>
+              </td>
+</tr>
+</tbody>
+</table></div>
+<h5>
+<a name="mqtt5.ref.boost__mqtt5__retain_handling_e.h2"></a>
+        <span class="phrase"><a name="mqtt5.ref.boost__mqtt5__retain_handling_e.description"></a></span><a class="link" href="boost__mqtt5__retain_handling_e.html#mqtt5.ref.boost__mqtt5__retain_handling_e.description">Description</a>
+      </h5>
+<p>
+        A Subscribe Option specifying whether retained messages are sent when the
+        Subscription is established.
+      </p>
+<p>
+        Convenience header <code class="literal">&lt;<a href="https://github.com/boostorg/mqtt5/blob/master/include/boost/mqtt5.hpp" target="_top">boost/mqtt5.hpp</a>&gt;</code>
+      </p>
+</div>
+<div class="copyright-footer">Copyright © 2023-2025 Mireo<p>
+        Distributed under the Boost Software License, Version 1.0. (See accompanying
+        file LICENSE_1_0.txt or copy at <a href="http://www.boost.org/LICENSE_1_0.txt" target="_top">http://www.boost.org/LICENSE_1_0.txt</a>)
+      </p>
+</div>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="boost__mqtt5__retain_e.html"><img src="../../../../../../doc/src/images/prev.png" alt="Prev"></a><a accesskey="u" href="../../pt02.html"><img src="../../../../../../doc/src/images/up.png" alt="Up"></a><a accesskey="h" href="../../index.html"><img src="../../../../../../doc/src/images/home.png" alt="Home"></a><a accesskey="n" href="boost__mqtt5__subscribe_options.html"><img src="../../../../../../doc/src/images/next.png" alt="Next"></a>
+</div>
+</body>
+</html>

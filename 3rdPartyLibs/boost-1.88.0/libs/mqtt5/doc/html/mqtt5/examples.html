@@ -1,0 +1,105 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Examples</title>
+<link rel="stylesheet" href="../../../../../doc/src/boostbook.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="../index.html" title="Chapter 1. Boost.MQTT5: a C++17 MQTT client">
+<link rel="up" href="../index.html" title="Chapter 1. Boost.MQTT5: a C++17 MQTT client">
+<link rel="prev" href="multithreading.html" title="Using the mqtt_client in a Multithreaded Environment">
+<link rel="next" href="../pt01.html" title="Part I. ">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table cellpadding="2" width="100%"><tr>
+<td valign="top"><img alt="Boost C++ Libraries" width="277" height="86" src="../../../../../boost.png"></td>
+<td align="center"><a href="../../../../../index.html">Home</a></td>
+<td align="center"><a href="../../../../../libs/libraries.htm">Libraries</a></td>
+<td align="center"><a href="http://www.boost.org/users/people.html">People</a></td>
+<td align="center"><a href="http://www.boost.org/users/faq.html">FAQ</a></td>
+<td align="center"><a href="../../../../../more/index.htm">More</a></td>
+</tr></table>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="multithreading.html"><img src="../../../../../doc/src/images/prev.png" alt="Prev"></a><a accesskey="u" href="../index.html"><img src="../../../../../doc/src/images/up.png" alt="Up"></a><a accesskey="h" href="../index.html"><img src="../../../../../doc/src/images/home.png" alt="Home"></a><a accesskey="n" href="../pt01.html"><img src="../../../../../doc/src/images/next.png" alt="Next"></a>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="mqtt5.examples"></a><a class="link" href="examples.html" title="Examples">Examples</a>
+</h2></div></div></div>
+<p>
+      The following list contains all the examples that showcase how to use the
+      <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a>:
+    </p>
+<div class="variablelist">
+<p class="title"><b></b></p>
+<dl class="variablelist">
+<dt><span class="term"><a class="link" href="publisher.html" title="The publisher">publisher.cpp</a></span></dt>
+<dd><p>
+            Shows how to use the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> as a publisher.
+            The <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> publishes
+            sensor readings every <code class="computeroutput"><span class="number">5</span> <span class="identifier">seconds</span></code>.
+          </p></dd>
+<dt><span class="term"><a class="link" href="receiver.html" title="The receiver">receiver.cpp</a></span></dt>
+<dd><p>
+            Shows how to use the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> as a receiver.
+            The <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> subscribes
+            and indefinitely receives Application Messages from the Broker.
+          </p></dd>
+<dt><span class="term"><a class="link" href="hello_world_over_tcp.html" title="Hello World over TCP/IP">hello_world_over_tcp.cpp</a></span></dt>
+<dd><p>
+            Publishes a "Hello World" message via TCP/IP.
+          </p></dd>
+<dt><span class="term"><a class="link" href="hello_world_over_tls.html" title="Hello World over TLS/SSL">hello_world_over_tls.cpp</a></span></dt>
+<dd><p>
+            Publishes a "Hello World" message via TLS/SSL.
+          </p></dd>
+<dt><span class="term"><a class="link" href="hello_world_over_websocket_tcp.html" title="Hello World over Websocket/TCP">hello_world_over_websocket_tcp.cpp</a></span></dt>
+<dd><p>
+            Publishes a "Hello World" message via Websocket/TLS.
+          </p></dd>
+<dt><span class="term"><a class="link" href="hello_world_over_websocket_tls.html" title="Hello World over Websocket/TLS">hello_world_over_websocket_tls.cpp</a></span></dt>
+<dd><p>
+            Publishes a "Hello World" message via Websocket/TLS.
+          </p></dd>
+<dt><span class="term"><a class="link" href="multiflight_client.html" title="The multiflight Client">multiflight_client.cpp</a></span></dt>
+<dd><p>
+            Shows how to use the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> to simultaneously
+            dispatch multiple requests.
+          </p></dd>
+<dt><span class="term"><a class="link" href="timeout_with_parallel_group.html" title="Timed MQTT operations with parallel group">timeout_with_parallel_group.cpp</a></span></dt>
+<dd><p>
+            Shows how to use the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> with its
+            support for per-operation cancellation to perform operations under a
+            time constraint using a parallel group.
+          </p></dd>
+<dt><span class="term"><a class="link" href="timeout_with_awaitable_operators.html" title="Timed MQTT operations with awaitable operators">timeout_with_awaitable_operators.cpp</a></span></dt>
+<dd><p>
+            Shows how to use the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> with its
+            support for per-operation cancellation to perform operations under a
+            time constraint using awaitable operators.
+          </p></dd>
+<dt><span class="term"><a class="link" href="hello_world_in_multithreaded_env.html" title="Hello World in a multithreaded environment using callbacks">hello_world_in_multithreaded_env.cpp</a></span></dt>
+<dd><p>
+            Shows how to publish a "Hello World" message in a multithreaded
+            environment using callbacks (<code class="computeroutput"><span class="identifier">post</span></code>/<code class="computeroutput"><span class="identifier">dispatch</span></code>).
+          </p></dd>
+<dt><span class="term"><a class="link" href="hello_world_in_coro_multithreaded_env.html" title="Hello World in a multithreaded environment using coroutines">hello_world_in_coro_multithreaded_env.cpp</a></span></dt>
+<dd><p>
+            Shows how to publish a "Hello World" message in a multithreaded
+            environment using coroutines (<code class="computeroutput"><span class="identifier">co_spawn</span></code>).
+          </p></dd>
+</dl>
+</div>
+</div>
+<div class="copyright-footer">Copyright © 2023-2025 Mireo<p>
+        Distributed under the Boost Software License, Version 1.0. (See accompanying
+        file LICENSE_1_0.txt or copy at <a href="http://www.boost.org/LICENSE_1_0.txt" target="_top">http://www.boost.org/LICENSE_1_0.txt</a>)
+      </p>
+</div>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="multithreading.html"><img src="../../../../../doc/src/images/prev.png" alt="Prev"></a><a accesskey="u" href="../index.html"><img src="../../../../../doc/src/images/up.png" alt="Up"></a><a accesskey="h" href="../index.html"><img src="../../../../../doc/src/images/home.png" alt="Home"></a><a accesskey="n" href="../pt01.html"><img src="../../../../../doc/src/images/next.png" alt="Next"></a>
+</div>
+</body>
+</html>

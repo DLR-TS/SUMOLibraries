@@ -1,0 +1,3275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: Boost.Unordered</title>
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../../unordered/_/css/site.css">
+  </head>
+  <body class="article">
+<div class="body">
+<div class="nav-container" data-component="unordered" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../intro.html">Boost.Unordered</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../intro.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../buckets.html">Basics of Hash Tables</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../hash_equality.html">Equality Predicates and Hash Functions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../regular.html">Regular Containers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../concurrent.html">Concurrent Containers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../hash_quality.html">Hash Quality</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../compliance.html">Standard Compliance</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../structures.html">Data Structures</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../debuggability.html">Debuggability</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../benchmarks.html">Benchmarks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../rationale.html">Implementation Rationale</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ref.html">Reference</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_unordered_map_fwd.html"><code>&lt;boost/unordered/unordered_map_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_unordered_map_top.html"><code>&lt;boost/unordered_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_unordered_map.html"><code>&lt;boost/unordered/unordered_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="unordered_map.html"><code>unordered_map</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="unordered_multimap.html"><code>unordered_multimap</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_unordered_set_fwd.html"><code>&lt;boost/unordered/unordered_set_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_unordered_set_top.html"><code>&lt;boost/unordered_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_unordered_set.html"><code>&lt;boost/unordered/unordered_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="unordered_set.html"><code>unordered_set</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="unordered_multiset.html"><code>unordered_multiset</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="hash_traits.html">Hash Traits</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="stats.html">Statistics</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_unordered_flat_map_fwd.html"><code>&lt;boost/unordered/unordered_flat_map_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_unordered_flat_map.html"><code>&lt;boost/unordered/unordered_flat_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="unordered_flat_map.html"><code>unordered_flat_map</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_unordered_flat_set_fwd.html"><code>&lt;boost/unordered/unordered_flat_set_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_unordered_flat_set.html"><code>&lt;boost/unordered/unordered_flat_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="unordered_flat_set.html"><code>unordered_flat_set</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_unordered_node_map_fwd.html"><code>&lt;boost/unordered/unordered_node_map_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_unordered_node_map.html"><code>&lt;boost/unordered/unordered_node_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="unordered_node_map.html"><code>unordered_node_map</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_unordered_node_set_fwd.html"><code>&lt;boost/unordered/unordered_node_set_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_unordered_node_set.html"><code>&lt;boost/unordered/unordered_node_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="unordered_node_set.html"><code>unordered_node_set</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_concurrent_flat_map_fwd.html"><code>&lt;boost/unordered/concurrent_flat_map_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_concurrent_flat_map.html"><code>&lt;boost/unordered/concurrent_flat_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="concurrent_flat_map.html"><code>concurrent_flat_map</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_concurrent_flat_set_fwd.html"><code>&lt;boost/unordered/concurrent_flat_set_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_concurrent_flat_set.html"><code>&lt;boost/unordered/concurrent_flat_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="concurrent_flat_set.html"><code>concurrent_flat_set</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_concurrent_node_map_fwd.html"><code>&lt;boost/unordered/concurrent_node_map_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_concurrent_node_map.html"><code>&lt;boost/unordered/concurrent_node_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="concurrent_node_map.html"><code>concurrent_node_map</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_concurrent_node_set_fwd.html"><code>&lt;boost/unordered/concurrent_node_set_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_concurrent_node_set.html"><code>&lt;boost/unordered/concurrent_node_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="concurrent_node_set.html"><code>concurrent_node_set</code></a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../changes.html">Change Log</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../bibliography.html">Bibliography</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../copyright.html">Copyright and License</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../intro.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../intro.html">Boost.Unordered</a></li>
+    <li><a href="../ref.html">Reference</a></li>
+    <li><a href="unordered_node_map.html"><code>unordered_node_map</code></a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1">
+<h2 id="unordered_node_map"><a class="anchor" href="#unordered_node_map"></a>Class Template unordered_node_map</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code>boost::unordered_node_map</code> — A node-based, open-addressing unordered associative container that associates unique keys with another value.</p>
+</div>
+<div class="paragraph">
+<p><code>boost::unordered_node_map</code> uses an open-addressing layout like <code>boost::unordered_flat_map</code>, but,
+being node-based, it provides pointer stability and node handling functionalities.
+Its performance lies between those of <code>boost::unordered_map</code> and <code>boost::unordered_flat_map</code>.</p>
+</div>
+<div class="paragraph">
+<p>As a result of its using open addressing, the interface of <code>boost::unordered_node_map</code> deviates in
+a number of aspects from that of <code>boost::unordered_map</code>/<code>std::unordered_map</code>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>begin()</code> is not constant-time.</p>
+</li>
+<li>
+<p>There is no API for bucket handling (except <code>bucket_count</code>).</p>
+</li>
+<li>
+<p>The maximum load factor of the container is managed internally and can&#8217;t be set by the user.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Other than this, <code>boost::unordered_node_map</code> is mostly a drop-in replacement of standard
+unordered associative containers.</p>
+</div>
+<div class="sect2">
+<h3 id="unordered_node_map_synopsis"><a class="anchor" href="#unordered_node_map_synopsis"></a>Synopsis</h3>
+<div class="listingblock">
+<div class="content">
+<pre>// #include <a href="header_unordered_node_map.html" class="xref page"><code>&lt;boost/unordered/unordered_node_map.hpp&gt;</code></a>
+
+namespace boost {
+namespace unordered {
+
+  template&lt;class Key,
+           class T,
+           class Hash = boost::hash&lt;Key&gt;,
+           class Pred = std::equal_to&lt;Key&gt;,
+           class Allocator = std::allocator&lt;std::pair&lt;const Key, T&gt;&gt;&gt;
+  class unordered_node_map {
+  public:
+    // types
+    using key_type             = Key;
+    using mapped_type          = T;
+    using value_type           = std::pair&lt;const Key, T&gt;;
+    using init_type            = std::pair&lt;
+                                   typename std::remove_const&lt;Key&gt;::type,
+                                   typename std::remove_const&lt;T&gt;::type
+                                 &gt;;
+    using hasher               = Hash;
+    using key_equal            = Pred;
+    using allocator_type       = Allocator;
+    using pointer              = typename std::allocator_traits&lt;Allocator&gt;::pointer;
+    using const_pointer        = typename std::allocator_traits&lt;Allocator&gt;::const_pointer;
+    using reference            = value_type&amp;;
+    using const_reference      = const value_type&amp;;
+    using size_type            = std::size_t;
+    using difference_type      = std::ptrdiff_t;
+
+    using iterator             = <em>implementation-defined</em>;
+    using const_iterator       = <em>implementation-defined</em>;
+
+    using node_type            = <em>implementation-defined</em>;
+    using insert_return_type   = <em>implementation-defined</em>;
+
+    using stats                = <a href="stats.html#stats_stats_type" class="xref page"><em>stats-type</em></a>; // if statistics are <a href="#unordered_node_map_boost_unordered_enable_stats">enabled</a>
+
+    // construct/copy/destroy
+    <a href="#unordered_node_map_default_constructor">unordered_node_map</a>();
+    explicit <a href="#unordered_node_map_bucket_count_constructor">unordered_node_map</a>(size_type n,
+                                const hasher&amp; hf = hasher(),
+                                const key_equal&amp; eql = key_equal(),
+                                const allocator_type&amp; a = allocator_type());
+    template&lt;class InputIterator&gt;
+      <a href="#unordered_node_map_iterator_range_constructor">unordered_node_map</a>(InputIterator f, InputIterator l,
+                         size_type n = <em>implementation-defined</em>,
+                         const hasher&amp; hf = hasher(),
+                         const key_equal&amp; eql = key_equal(),
+                         const allocator_type&amp; a = allocator_type());
+    <a href="#unordered_node_map_copy_constructor">unordered_node_map</a>(const unordered_node_map&amp; other);
+    <a href="#unordered_node_map_move_constructor">unordered_node_map</a>(unordered_node_map&amp;&amp; other);
+    template&lt;class InputIterator&gt;
+      <a href="#unordered_node_map_iterator_range_constructor_with_allocator">unordered_node_map</a>(InputIterator f, InputIterator l, const allocator_type&amp; a);
+    explicit <a href="#unordered_node_map_allocator_constructor">unordered_node_map</a>(const Allocator&amp; a);
+    <a href="#unordered_node_map_copy_constructor_with_allocator">unordered_node_map</a>(const unordered_node_map&amp; other, const Allocator&amp; a);
+    <a href="#unordered_node_map_move_constructor_with_allocator">unordered_node_map</a>(unordered_node_map&amp;&amp; other, const Allocator&amp; a);
+    <a href="#unordered_node_map_move_constructor_from_concurrent_node_map">unordered_node_map</a>(concurrent_node_map&lt;Key, T, Hash, Pred, Allocator&gt;&amp;&amp; other);
+    <a href="#unordered_node_map_initializer_list_constructor">unordered_node_map</a>(std::initializer_list&lt;value_type&gt; il,
+                       size_type n = <em>implementation-defined</em>
+                       const hasher&amp; hf = hasher(),
+                       const key_equal&amp; eql = key_equal(),
+                       const allocator_type&amp; a = allocator_type());
+    <a href="#unordered_node_map_bucket_count_constructor_with_allocator">unordered_node_map</a>(size_type n, const allocator_type&amp; a);
+    <a href="#unordered_node_map_bucket_count_constructor_with_hasher_and_allocator">unordered_node_map</a>(size_type n, const hasher&amp; hf, const allocator_type&amp; a);
+    template&lt;class InputIterator&gt;
+      <a href="#unordered_node_map_iterator_range_constructor_with_bucket_count_and_allocator">unordered_node_map</a>(InputIterator f, InputIterator l, size_type n, const allocator_type&amp; a);
+    template&lt;class InputIterator&gt;
+      <a href="#unordered_node_map_iterator_range_constructor_with_bucket_count_and_hasher">unordered_node_map</a>(InputIterator f, InputIterator l, size_type n, const hasher&amp; hf,
+                         const allocator_type&amp; a);
+    <a href="#unordered_node_map_initializer_list_constructor_with_allocator">unordered_node_map</a>(std::initializer_list&lt;value_type&gt; il, const allocator_type&amp; a);
+    <a href="#unordered_node_map_initializer_list_constructor_with_bucket_count_and_allocator">unordered_node_map</a>(std::initializer_list&lt;value_type&gt; il, size_type n,
+                       const allocator_type&amp; a);
+    <a href="#unordered_node_map_initializer_list_constructor_with_bucket_count_and_hasher_and_allocator">unordered_node_map</a>(std::initializer_list&lt;value_type&gt; il, size_type n, const hasher&amp; hf,
+                       const allocator_type&amp; a);
+    <a href="#unordered_node_map_destructor">~unordered_node_map</a>();
+    unordered_node_map&amp; <a href="#unordered_node_map_copy_assignment">operator=</a>(const unordered_node_map&amp; other);
+    unordered_node_map&amp; <a href="#unordered_node_map_move_assignment">operator=</a>(unordered_node_map&amp;&amp; other) noexcept(
+      (boost::allocator_traits&lt;Allocator&gt;::is_always_equal::value ||
+       boost::allocator_traits&lt;Allocator&gt;::propagate_on_container_move_assignment::value) &amp;&amp;
+       std::is_same&lt;pointer, value_type*&gt;::value);
+    unordered_node_map&amp; <a href="#unordered_node_map_initializer_list_assignment">operator=</a>(std::initializer_list&lt;value_type&gt;);
+    allocator_type <a href="#unordered_node_map_get_allocator">get_allocator</a>() const noexcept;
+
+    // iterators
+    iterator       <a href="#unordered_node_map_begin">begin</a>() noexcept;
+    const_iterator <a href="#unordered_node_map_begin">begin</a>() const noexcept;
+    iterator       <a href="#unordered_node_map_end">end</a>() noexcept;
+    const_iterator <a href="#unordered_node_map_end">end</a>() const noexcept;
+    const_iterator <a href="#unordered_node_map_cbegin">cbegin</a>() const noexcept;
+    const_iterator <a href="#unordered_node_map_cend">cend</a>() const noexcept;
+
+    // capacity
+    [[nodiscard]] bool <a href="#unordered_node_map_empty">empty</a>() const noexcept;
+    size_type <a href="#unordered_node_map_size">size</a>() const noexcept;
+    size_type <a href="#unordered_node_map_max_size">max_size</a>() const noexcept;
+
+    // modifiers
+    template&lt;class... Args&gt; std::pair&lt;iterator, bool&gt; <a href="#unordered_node_map_emplace">emplace</a>(Args&amp;&amp;... args);
+    template&lt;class... Args&gt; iterator <a href="#unordered_node_map_emplace_hint">emplace_hint</a>(const_iterator position, Args&amp;&amp;... args);
+    std::pair&lt;iterator, bool&gt; <a href="#unordered_node_map_copy_insert">insert</a>(const value_type&amp; obj);
+    std::pair&lt;iterator, bool&gt; <a href="#unordered_node_map_copy_insert">insert</a>(const init_type&amp; obj);
+    std::pair&lt;iterator, bool&gt; <a href="#unordered_node_map_move_insert">insert</a>(value_type&amp;&amp; obj);
+    std::pair&lt;iterator, bool&gt; <a href="#unordered_node_map_move_insert">insert</a>(init_type&amp;&amp; obj);
+    iterator       <a href="#unordered_node_map_copy_insert_with_hint">insert</a>(const_iterator hint, const value_type&amp; obj);
+    iterator       <a href="#unordered_node_map_copy_insert_with_hint">insert</a>(const_iterator hint, const init_type&amp; obj);
+    iterator       <a href="#unordered_node_map_move_insert_with_hint">insert</a>(const_iterator hint, value_type&amp;&amp; obj);
+    iterator       <a href="#unordered_node_map_copy_insert_with_hint">insert</a>(const_iterator hint, init_type&amp;&amp; obj);
+    template&lt;class InputIterator&gt; void <a href="#unordered_node_map_insert_iterator_range">insert</a>(InputIterator first, InputIterator last);
+    void <a href="#unordered_node_map_insert_initializer_list">insert</a>(std::initializer_list&lt;value_type&gt;);
+    insert_return_type <a href="#unordered_node_map_insert_node">insert</a>(node_type&amp;&amp; nh);
+    iterator <a href="#unordered_node_map_insert_node_with_hint">insert</a>(const_iterator hint, node_type&amp;&amp; nh);
+
+    template&lt;class... Args&gt;
+      std::pair&lt;iterator, bool&gt; <a href="#unordered_node_map_try_emplace">try_emplace</a>(const key_type&amp; k, Args&amp;&amp;... args);
+    template&lt;class... Args&gt;
+      std::pair&lt;iterator, bool&gt; <a href="#unordered_node_map_try_emplace">try_emplace</a>(key_type&amp;&amp; k, Args&amp;&amp;... args);
+    template&lt;class K, class... Args&gt;
+      std::pair&lt;iterator, bool&gt; <a href="#unordered_node_map_try_emplace">try_emplace</a>(K&amp;&amp; k, Args&amp;&amp;... args);
+    template&lt;class... Args&gt;
+      iterator <a href="#unordered_node_map_try_emplace_with_hint">try_emplace</a>(const_iterator hint, const key_type&amp; k, Args&amp;&amp;... args);
+    template&lt;class... Args&gt;
+      iterator <a href="#unordered_node_map_try_emplace_with_hint">try_emplace</a>(const_iterator hint, key_type&amp;&amp; k, Args&amp;&amp;... args);
+    template&lt;class K, class... Args&gt;
+      iterator <a href="#unordered_node_map_try_emplace_with_hint">try_emplace</a>(const_iterator hint, K&amp;&amp; k, Args&amp;&amp;... args);
+    template&lt;class M&gt;
+      std::pair&lt;iterator, bool&gt; <a href="#unordered_node_map_insert_or_assign">insert_or_assign</a>(const key_type&amp; k, M&amp;&amp; obj);
+    template&lt;class M&gt;
+      std::pair&lt;iterator, bool&gt; <a href="#unordered_node_map_insert_or_assign">insert_or_assign</a>(key_type&amp;&amp; k, M&amp;&amp; obj);
+    template&lt;class K, class M&gt;
+      std::pair&lt;iterator, bool&gt; <a href="#unordered_node_map_insert_or_assign">insert_or_assign</a>(K&amp;&amp; k, M&amp;&amp; obj);
+    template&lt;class M&gt;
+      iterator <a href="#unordered_node_map_insert_or_assign_with_hint">insert_or_assign</a>(const_iterator hint, const key_type&amp; k, M&amp;&amp; obj);
+    template&lt;class M&gt;
+      iterator <a href="#unordered_node_map_insert_or_assign_with_hint">insert_or_assign</a>(const_iterator hint, key_type&amp;&amp; k, M&amp;&amp; obj);
+    template&lt;class K, class M&gt;
+      iterator <a href="#unordered_node_map_insert_or_assign_with_hint">insert_or_assign</a>(const_iterator hint, K&amp;&amp; k, M&amp;&amp; obj);
+
+    <em>convertible-to-iterator</em>     <a href="#unordered_node_map_erase_by_position">erase</a>(iterator position);
+    <em>convertible-to-iterator</em>     <a href="#unordered_node_map_erase_by_position">erase</a>(const_iterator position);
+    size_type                   <a href="#unordered_node_map_erase_by_key">erase</a>(const key_type&amp; k);
+    template&lt;class K&gt; size_type <a href="#unordered_node_map_erase_by_key">erase</a>(K&amp;&amp; k);
+    iterator  <a href="#unordered_node_map_erase_range">erase</a>(const_iterator first, const_iterator last);
+    void      <a href="#unordered_node_map_swap">swap</a>(unordered_node_map&amp; other)
+      noexcept(boost::allocator_traits&lt;Allocator&gt;::is_always_equal::value ||
+               boost::allocator_traits&lt;Allocator&gt;::propagate_on_container_swap::value);
+    node_type <a href="#unordered_node_map_extract_by_position">extract</a>(const_iterator position);
+    node_type <a href="#unordered_node_map_extract_by_key">extract</a>(const key_type&amp; key);
+    template&lt;class K&gt; node_type <a href="#unordered_node_map_extract_by_key">extract</a>(K&amp;&amp; key);
+    void      <a href="#unordered_node_map_clear">clear</a>() noexcept;
+
+    template&lt;class H2, class P2&gt;
+      void <a href="#unordered_node_map_merge">merge</a>(unordered_node_map&lt;Key, T, H2, P2, Allocator&gt;&amp; source);
+    template&lt;class H2, class P2&gt;
+      void <a href="#unordered_node_map_merge">merge</a>(unordered_node_map&lt;Key, T, H2, P2, Allocator&gt;&amp;&amp; source);
+
+    // observers
+    hasher <a href="#unordered_node_map_hash_function">hash_function</a>() const;
+    key_equal <a href="#unordered_node_map_key_eq">key_eq</a>() const;
+
+    // map operations
+    iterator         <a href="#unordered_node_map_find">find</a>(const key_type&amp; k);
+    const_iterator   <a href="#unordered_node_map_find">find</a>(const key_type&amp; k) const;
+    template&lt;class K&gt;
+      iterator       <a href="#unordered_node_map_find">find</a>(const K&amp; k);
+    template&lt;class K&gt;
+      const_iterator <a href="#unordered_node_map_find">find</a>(const K&amp; k) const;
+    size_type        <a href="#unordered_node_map_count">count</a>(const key_type&amp; k) const;
+    template&lt;class K&gt;
+      size_type      <a href="#unordered_node_map_count">count</a>(const K&amp; k) const;
+    bool             <a href="#unordered_node_map_contains">contains</a>(const key_type&amp; k) const;
+    template&lt;class K&gt;
+      bool           <a href="#unordered_node_map_contains">contains</a>(const K&amp; k) const;
+    std::pair&lt;iterator, iterator&gt;               <a href="#unordered_node_map_equal_range">equal_range</a>(const key_type&amp; k);
+    std::pair&lt;const_iterator, const_iterator&gt;   <a href="#unordered_node_map_equal_range">equal_range</a>(const key_type&amp; k) const;
+    template&lt;class K&gt;
+      std::pair&lt;iterator, iterator&gt;             <a href="#unordered_node_map_equal_range">equal_range</a>(const K&amp; k);
+    template&lt;class K&gt;
+      std::pair&lt;const_iterator, const_iterator&gt; <a href="#unordered_node_map_equal_range">equal_range</a>(const K&amp; k) const;
+
+    // element access
+    mapped_type&amp; <a href="#unordered_node_map_operator">operator[]</a>(const key_type&amp; k);
+    mapped_type&amp; <a href="#unordered_node_map_operator">operator[]</a>(key_type&amp;&amp; k);
+    template&lt;class K&gt; mapped_type&amp; <a href="#unordered_node_map_operator">operator[]</a>(K&amp;&amp; k);
+    mapped_type&amp; <a href="#unordered_node_map_at">at</a>(const key_type&amp; k);
+    const mapped_type&amp; <a href="#unordered_node_map_at">at</a>(const key_type&amp; k) const;
+    template&lt;class K&gt; mapped_type&amp; <a href="#unordered_node_map_at">at</a>(const K&amp; k);
+    template&lt;class K&gt; const mapped_type&amp; <a href="#unordered_node_map_at">at</a>(const K&amp; k) const;
+
+    // bucket interface
+    size_type <a href="#unordered_node_map_bucket_count">bucket_count</a>() const noexcept;
+
+    // hash policy
+    float <a href="#unordered_node_map_load_factor">load_factor</a>() const noexcept;
+    float <a href="#unordered_node_map_max_load_factor">max_load_factor</a>() const noexcept;
+    void <a href="#unordered_node_map_set_max_load_factor">max_load_factor</a>(float z);
+    size_type <a href="#unordered_node_map_max_load">max_load</a>() const noexcept;
+    void <a href="#unordered_node_map_rehash">rehash</a>(size_type n);
+    void <a href="#unordered_node_map_reserve">reserve</a>(size_type n);
+
+    // statistics (if <a href="#unordered_node_map_boost_unordered_enable_stats">enabled</a>)
+    stats <a href="#unordered_node_map_get_stats">get_stats</a>() const;
+    void <a href="#unordered_node_map_reset_stats">reset_stats</a>() noexcept;
+  };
+
+  // Deduction Guides
+  template&lt;class InputIterator,
+           class Hash = boost::hash&lt;<a href="#unordered_node_map_iter_key_type"><em>iter-key-type</em></a>&lt;InputIterator&gt;&gt;,
+           class Pred = std::equal_to&lt;<a href="#unordered_node_map_iter_key_type"><em>iter-key-type</em></a>&lt;InputIterator&gt;&gt;,
+           class Allocator = std::allocator&lt;<a href="#unordered_node_map_iter_to_alloc_type"><em>iter-to-alloc-type</em></a>&lt;InputIterator&gt;&gt;&gt;
+    unordered_node_map(InputIterator, InputIterator, typename <a href="#unordered_node_map_deduction_guides"><em>see below</em></a>::size_type = <a href="#unordered_node_map_deduction_guides"><em>see below</em></a>,
+                       Hash = Hash(), Pred = Pred(), Allocator = Allocator())
+      -&gt; unordered_node_map&lt;<a href="#unordered_node_map_iter_key_type"><em>iter-key-type</em></a>&lt;InputIterator&gt;, <a href="#unordered_node_map_iter_mapped_type"><em>iter-mapped-type</em></a>&lt;InputIterator&gt;, Hash,
+                            Pred, Allocator&gt;;
+
+  template&lt;class Key, class T, class Hash = boost::hash&lt;Key&gt;,
+           class Pred = std::equal_to&lt;Key&gt;,
+           class Allocator = std::allocator&lt;std::pair&lt;const Key, T&gt;&gt;&gt;
+    unordered_node_map(std::initializer_list&lt;std::pair&lt;Key, T&gt;&gt;,
+                       typename <a href="#unordered_node_map_deduction_guides"><em>see below</em></a>::size_type = <a href="#unordered_node_map_deduction_guides"><em>see below</em></a>, Hash = Hash(),
+                       Pred = Pred(), Allocator = Allocator())
+      -&gt; unordered_node_map&lt;Key, T, Hash, Pred, Allocator&gt;;
+
+  template&lt;class InputIterator, class Allocator&gt;
+    unordered_node_map(InputIterator, InputIterator, typename <a href="#unordered_node_map_deduction_guides"><em>see below</em></a>::size_type, Allocator)
+      -&gt; unordered_node_map&lt;<a href="#unordered_node_map_iter_key_type"><em>iter-key-type</em></a>&lt;InputIterator&gt;, <a href="#unordered_node_map_iter_mapped_type"><em>iter-mapped-type</em></a>&lt;InputIterator&gt;,
+                            boost::hash&lt;<a href="#unordered_node_map_iter_key_type"><em>iter-key-type</em></a>&lt;InputIterator&gt;&gt;,
+                            std::equal_to&lt;<a href="#unordered_node_map_iter_key_type"><em>iter-key-type</em></a>&lt;InputIterator&gt;&gt;, Allocator&gt;;
+
+  template&lt;class InputIterator, class Allocator&gt;
+    unordered_node_map(InputIterator, InputIterator, Allocator)
+      -&gt; unordered_node_map&lt;<a href="#unordered_node_map_iter_key_type"><em>iter-key-type</em></a>&lt;InputIterator&gt;, <a href="#unordered_node_map_iter_mapped_type"><em>iter-mapped-type</em></a>&lt;InputIterator&gt;,
+                            boost::hash&lt;<a href="#unordered_node_map_iter_key_type"><em>iter-key-type</em></a>&lt;InputIterator&gt;&gt;,
+                            std::equal_to&lt;<a href="#unordered_node_map_iter_key_type"><em>iter-key-type</em></a>&lt;InputIterator&gt;&gt;, Allocator&gt;;
+
+  template&lt;class InputIterator, class Hash, class Allocator&gt;
+    unordered_node_map(InputIterator, InputIterator, typename <a href="#unordered_node_map_deduction_guides"><em>see below</em></a>::size_type, Hash,
+                       Allocator)
+      -&gt; unordered_node_map&lt;<a href="#unordered_node_map_iter_key_type"><em>iter-key-type</em></a>&lt;InputIterator&gt;, <a href="#unordered_node_map_iter_mapped_type"><em>iter-mapped-type</em></a>&lt;InputIterator&gt;, Hash,
+                            std::equal_to&lt;<a href="#unordered_node_map_iter_key_type"><em>iter-key-type</em></a>&lt;InputIterator&gt;&gt;, Allocator&gt;;
+
+  template&lt;class Key, class T, class Allocator&gt;
+    unordered_node_map(std::initializer_list&lt;std::pair&lt;Key, T&gt;&gt;, typename <a href="#unordered_node_map_deduction_guides"><em>see below</em></a>::size_type,
+                       Allocator)
+      -&gt; unordered_node_map&lt;Key, T, boost::hash&lt;Key&gt;, std::equal_to&lt;Key&gt;, Allocator&gt;;
+
+  template&lt;class Key, class T, class Allocator&gt;
+    unordered_node_map(std::initializer_list&lt;std::pair&lt;Key, T&gt;&gt;, Allocator)
+      -&gt; unordered_node_map&lt;Key, T, boost::hash&lt;Key&gt;, std::equal_to&lt;Key&gt;, Allocator&gt;;
+
+  template&lt;class Key, class T, class Hash, class Allocator&gt;
+    unordered_node_map(std::initializer_list&lt;std::pair&lt;Key, T&gt;&gt;, typename <a href="#unordered_node_map_deduction_guides"><em>see below</em></a>::size_type,
+                       Hash, Allocator)
+      -&gt; unordered_node_map&lt;Key, T, Hash, std::equal_to&lt;Key&gt;, Allocator&gt;;
+
+} // namespace unordered
+} // namespace boost</pre>
+</div>
+</div>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="unordered_node_map_description"><a class="anchor" href="#unordered_node_map_description"></a>Description</h3>
+<div class="paragraph">
+<p><strong>Template Parameters</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Key</em></p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock"><code>std::pair&lt;const Key, T&gt;</code> must be <a href="https://en.cppreference.com/w/cpp/named_req/EmplaceConstructible" target="_blank" rel="noopener">EmplaceConstructible</a>
+into the container from any <code>std::pair</code> object convertible to it, and it also must be
+<a href="https://en.cppreference.com/w/cpp/named_req/Erasable" target="_blank" rel="noopener">Erasable</a> from the container.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>T</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Hash</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A unary function object type that acts a hash function for a <code>Key</code>. It takes a single argument of type <code>Key</code> and returns a value of type <code>std::size_t</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Pred</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A binary function object that induces an equivalence relation on values of type <code>Key</code>. It takes two arguments of type <code>Key</code> and returns a value of type <code>bool</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Allocator</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An allocator whose value type is the same as the container&#8217;s value type.
+Allocators using <a href="https://en.cppreference.com/w/cpp/named_req/Allocator#Fancy_pointers">fancy pointers</a> are supported.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The element nodes of the container are held into an internal <em>bucket array</em>. A node is inserted into a bucket determined by the
+hash code of its element, but if the bucket is already occupied (a <em>collision</em>), an available one in the vicinity of the
+original position is used.</p>
+</div>
+<div class="paragraph">
+<p>The size of the bucket array can be automatically increased by a call to <code>insert</code>/<code>emplace</code>, or as a result of calling
+<code>rehash</code>/<code>reserve</code>. The <em>load factor</em> of the container (number of elements divided by number of buckets) is never
+greater than <code>max_load_factor()</code>, except possibly for small sizes where the implementation may decide to
+allow for higher loads.</p>
+</div>
+<div class="paragraph">
+<p>If <code><a href="hash_traits.html#hash_traits_hash_is_avalanching" class="xref page">hash_is_avalanching</a>&lt;Hash&gt;::value</code> is <code>true</code>, the hash function
+is used as-is; otherwise, a bit-mixing post-processing stage is added to increase the quality of hashing
+at the expense of extra computational cost.</p>
+</div>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="unordered_node_map_configuration_macros"><a class="anchor" href="#unordered_node_map_configuration_macros"></a>Configuration Macros</h3>
+<div class="sect3">
+<h4 id="unordered_node_map_boost_unordered_enable_stats"><a class="anchor" href="#unordered_node_map_boost_unordered_enable_stats"></a><code>BOOST_UNORDERED_ENABLE_STATS</code></h4>
+<div class="paragraph">
+<p>Globally define this macro to enable <a href="stats.html#stats" class="xref page">statistics calculation</a> for the container. Note
+that this option decreases the overall performance of many operations.</p>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect2">
+<h3 id="unordered_node_map_typedefs"><a class="anchor" href="#unordered_node_map_typedefs"></a>Typedefs</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">typedef <em>implementation-defined</em> iterator;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>An iterator whose value type is <code>value_type</code>.</p>
+</div>
+<div class="paragraph">
+<p>The iterator category is at least a forward iterator.</p>
+</div>
+<div class="paragraph">
+<p>Convertible to <code>const_iterator</code>.</p>
+</div>
+<hr>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">typedef <em>implementation-defined</em> const_iterator;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A constant iterator whose value type is <code>value_type</code>.</p>
+</div>
+<div class="paragraph">
+<p>The iterator category is at least a forward iterator.</p>
+</div>
+<hr>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">typedef <em>implementation-defined</em> node_type;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A class for holding extracted container elements, modelling
+<a href="https://en.cppreference.com/w/cpp/container/node_handle">NodeHandle</a>.</p>
+</div>
+<hr>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">typedef <em>implementation-defined</em> insert_return_type;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A specialization of an internal class template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class Iterator, class NodeType&gt;
+struct <em>insert_return_type</em> // name is exposition only
+{
+  Iterator position;
+  bool     inserted;
+  NodeType node;
+};</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>with <code>Iterator</code> = <code>iterator</code> and <code>NodeType</code> = <code>node_type</code>.</p>
+</div>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="unordered_node_map_constructors"><a class="anchor" href="#unordered_node_map_constructors"></a>Constructors</h3>
+<div class="sect3">
+<h4 id="unordered_node_map_default_constructor"><a class="anchor" href="#unordered_node_map_default_constructor"></a>Default Constructor</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">unordered_node_map();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Constructs an empty container using <code>hasher()</code> as the hash function,
+<code>key_equal()</code> as the key equality predicate and <code>allocator_type()</code> as the allocator.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Postconditions:
+</td>
+<td class="hdlist2">
+<p><code>size() == 0</code></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p>If the defaults are used, <code>hasher</code>, <code>key_equal</code> and <code>allocator_type</code> need to be <a href="https://en.cppreference.com/w/cpp/named_req/DefaultConstructible" target="_blank" rel="noopener">DefaultConstructible</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_bucket_count_constructor"><a class="anchor" href="#unordered_node_map_bucket_count_constructor"></a>Bucket Count Constructor</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">explicit unordered_node_map(size_type n,
+                            const hasher&amp; hf = hasher(),
+                            const key_equal&amp; eql = key_equal(),
+                            const allocator_type&amp; a = allocator_type());</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Constructs an empty container with at least <code>n</code> buckets, using <code>hf</code> as the hash
+function, <code>eql</code> as the key equality predicate, and <code>a</code> as the allocator.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Postconditions:
+</td>
+<td class="hdlist2">
+<p><code>size() == 0</code></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p>If the defaults are used, <code>hasher</code>, <code>key_equal</code> and <code>allocator_type</code> need to be <a href="https://en.cppreference.com/w/cpp/named_req/DefaultConstructible" target="_blank" rel="noopener">DefaultConstructible</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_iterator_range_constructor"><a class="anchor" href="#unordered_node_map_iterator_range_constructor"></a>Iterator Range Constructor</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class InputIterator&gt;
+  unordered_node_map(InputIterator f, InputIterator l,
+                     size_type n = <em>implementation-defined</em>,
+                     const hasher&amp; hf = hasher(),
+                     const key_equal&amp; eql = key_equal(),
+                     const allocator_type&amp; a = allocator_type());</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Constructs an empty container with at least <code>n</code> buckets, using <code>hf</code> as the hash function, <code>eql</code> as the key equality predicate and <code>a</code> as the allocator, and inserts the elements from <code>[f, l)</code> into it.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p>If the defaults are used, <code>hasher</code>, <code>key_equal</code> and <code>allocator_type</code> need to be <a href="https://en.cppreference.com/w/cpp/named_req/DefaultConstructible" target="_blank" rel="noopener">DefaultConstructible</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_copy_constructor"><a class="anchor" href="#unordered_node_map_copy_constructor"></a>Copy Constructor</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">unordered_node_map(unordered_node_map const&amp; other);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The copy constructor. Copies the contained elements, hash function, predicate and allocator.</p>
+</div>
+<div class="paragraph">
+<p>If <code>Allocator::select_on_container_copy_construction</code> exists and has the right signature, the allocator will be constructed from its result.</p>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_move_constructor"><a class="anchor" href="#unordered_node_map_move_constructor"></a>Move Constructor</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">unordered_node_map(unordered_node_map&amp;&amp; other);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The move constructor. The internal bucket array of <code>other</code> is transferred directly to the new container.
+The hash function, predicate and allocator are moved-constructed from <code>other</code>.
+If statistics are <a href="#unordered_node_map_boost_unordered_enable_stats">enabled</a>,
+transfers the internal statistical information from <code>other</code> and calls <code>other.reset_stats()</code>.</p>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_iterator_range_constructor_with_allocator"><a class="anchor" href="#unordered_node_map_iterator_range_constructor_with_allocator"></a>Iterator Range Constructor with Allocator</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class InputIterator&gt;
+  unordered_node_map(InputIterator f, InputIterator l, const allocator_type&amp; a);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Constructs an empty container using <code>a</code> as the allocator, with the default hash function and key equality predicate and inserts the elements from <code>[f, l)</code> into it.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>hasher</code>, <code>key_equal</code> need to be <a href="https://en.cppreference.com/w/cpp/named_req/DefaultConstructible" target="_blank" rel="noopener">DefaultConstructible</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_allocator_constructor"><a class="anchor" href="#unordered_node_map_allocator_constructor"></a>Allocator Constructor</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">explicit unordered_node_map(Allocator const&amp; a);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Constructs an empty container, using allocator <code>a</code>.</p>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_copy_constructor_with_allocator"><a class="anchor" href="#unordered_node_map_copy_constructor_with_allocator"></a>Copy Constructor with Allocator</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">unordered_node_map(unordered_node_map const&amp; other, Allocator const&amp; a);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Constructs a container, copying <code>other</code>'s contained elements, hash function, and predicate, but using allocator <code>a</code>.</p>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_move_constructor_with_allocator"><a class="anchor" href="#unordered_node_map_move_constructor_with_allocator"></a>Move Constructor with Allocator</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">unordered_node_map(unordered_node_map&amp;&amp; other, Allocator const&amp; a);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If <code>a == other.get_allocator()</code>, the element nodes of <code>other</code> are transferred directly to the new container;
+otherwise, elements are moved-constructed from those of <code>other</code>. The hash function and predicate are moved-constructed
+from <code>other</code>, and the allocator is copy-constructed from <code>a</code>.
+If statistics are <a href="#unordered_node_map_boost_unordered_enable_stats">enabled</a>,
+transfers the internal statistical information from <code>other</code> iff <code>a == other.get_allocator()</code>,
+and always calls <code>other.reset_stats()</code>.</p>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_move_constructor_from_concurrent_node_map"><a class="anchor" href="#unordered_node_map_move_constructor_from_concurrent_node_map"></a>Move Constructor from concurrent_node_map</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">unordered_node_map(concurrent_node_map&lt;Key, T, Hash, Pred, Allocator&gt;&amp;&amp; other);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Move construction from a <a href="#concurrent_node_map"><code>concurrent_node_map</code></a>.
+The internal bucket array of <code>other</code> is transferred directly to the new container.
+The hash function, predicate and allocator are moved-constructed from <code>other</code>.
+If statistics are <a href="#unordered_node_map_boost_unordered_enable_stats">enabled</a>,
+transfers the internal statistical information from <code>other</code> and calls <code>other.reset_stats()</code>.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Complexity:
+</td>
+<td class="hdlist2">
+<p>Constant time.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Concurrency:
+</td>
+<td class="hdlist2">
+<p>Blocking on <code>other</code>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_initializer_list_constructor"><a class="anchor" href="#unordered_node_map_initializer_list_constructor"></a>Initializer List Constructor</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">unordered_node_map(std::initializer_list&lt;value_type&gt; il,
+              size_type n = <em>implementation-defined</em>
+              const hasher&amp; hf = hasher(),
+              const key_equal&amp; eql = key_equal(),
+              const allocator_type&amp; a = allocator_type());</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Constructs an empty container with at least <code>n</code> buckets, using <code>hf</code> as the hash function, <code>eql</code> as the key equality predicate and <code>a</code>, and inserts the elements from <code>il</code> into it.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p>If the defaults are used, <code>hasher</code>, <code>key_equal</code> and <code>allocator_type</code> need to be <a href="https://en.cppreference.com/w/cpp/named_req/DefaultConstructible" target="_blank" rel="noopener">DefaultConstructible</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_bucket_count_constructor_with_allocator"><a class="anchor" href="#unordered_node_map_bucket_count_constructor_with_allocator"></a>Bucket Count Constructor with Allocator</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">unordered_node_map(size_type n, allocator_type const&amp; a);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Constructs an empty container with at least <code>n</code> buckets, using <code>hf</code> as the hash function, the default hash function and key equality predicate and <code>a</code> as the allocator.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Postconditions:
+</td>
+<td class="hdlist2">
+<p><code>size() == 0</code></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>hasher</code> and <code>key_equal</code> need to be <a href="https://en.cppreference.com/w/cpp/named_req/DefaultConstructible" target="_blank" rel="noopener">DefaultConstructible</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_bucket_count_constructor_with_hasher_and_allocator"><a class="anchor" href="#unordered_node_map_bucket_count_constructor_with_hasher_and_allocator"></a>Bucket Count Constructor with Hasher and Allocator</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">unordered_node_map(size_type n, hasher const&amp; hf, allocator_type const&amp; a);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Constructs an empty container with at least <code>n</code> buckets, using <code>hf</code> as the hash function, the default key equality predicate and <code>a</code> as the allocator.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Postconditions:
+</td>
+<td class="hdlist2">
+<p><code>size() == 0</code></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>key_equal</code> needs to be <a href="https://en.cppreference.com/w/cpp/named_req/DefaultConstructible" target="_blank" rel="noopener">DefaultConstructible</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_iterator_range_constructor_with_bucket_count_and_allocator"><a class="anchor" href="#unordered_node_map_iterator_range_constructor_with_bucket_count_and_allocator"></a>Iterator Range Constructor with Bucket Count and Allocator</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class InputIterator&gt;
+  unordered_node_map(InputIterator f, InputIterator l, size_type n, const allocator_type&amp; a);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Constructs an empty container with at least <code>n</code> buckets, using <code>a</code> as the allocator and default hash function and key equality predicate, and inserts the elements from <code>[f, l)</code> into it.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>hasher</code>, <code>key_equal</code> need to be <a href="https://en.cppreference.com/w/cpp/named_req/DefaultConstructible" target="_blank" rel="noopener">DefaultConstructible</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_iterator_range_constructor_with_bucket_count_and_hasher"><a class="anchor" href="#unordered_node_map_iterator_range_constructor_with_bucket_count_and_hasher"></a>Iterator Range Constructor with Bucket Count and Hasher</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">    template&lt;class InputIterator&gt;
+      unordered_node_map(InputIterator f, InputIterator l, size_type n, const hasher&amp; hf,
+                         const allocator_type&amp; a);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Constructs an empty container with at least <code>n</code> buckets, using <code>hf</code> as the hash function, <code>a</code> as the allocator, with the default key equality predicate, and inserts the elements from <code>[f, l)</code> into it.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>key_equal</code> needs to be <a href="https://en.cppreference.com/w/cpp/named_req/DefaultConstructible" target="_blank" rel="noopener">DefaultConstructible</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_initializer_list_constructor_with_allocator"><a class="anchor" href="#unordered_node_map_initializer_list_constructor_with_allocator"></a>initializer_list Constructor with Allocator</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">unordered_node_map(std::initializer_list&lt;value_type&gt; il, const allocator_type&amp; a);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Constructs an empty container using <code>a</code> and default hash function and key equality predicate, and inserts the elements from <code>il</code> into it.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>hasher</code> and <code>key_equal</code> need to be <a href="https://en.cppreference.com/w/cpp/named_req/DefaultConstructible" target="_blank" rel="noopener">DefaultConstructible</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_initializer_list_constructor_with_bucket_count_and_allocator"><a class="anchor" href="#unordered_node_map_initializer_list_constructor_with_bucket_count_and_allocator"></a>initializer_list Constructor with Bucket Count and Allocator</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">unordered_node_map(std::initializer_list&lt;value_type&gt; il, size_type n, const allocator_type&amp; a);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Constructs an empty container with at least <code>n</code> buckets, using <code>a</code> and default hash function and key equality predicate, and inserts the elements from <code>il</code> into it.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>hasher</code> and <code>key_equal</code> need to be <a href="https://en.cppreference.com/w/cpp/named_req/DefaultConstructible" target="_blank" rel="noopener">DefaultConstructible</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_initializer_list_constructor_with_bucket_count_and_hasher_and_allocator"><a class="anchor" href="#unordered_node_map_initializer_list_constructor_with_bucket_count_and_hasher_and_allocator"></a>initializer_list Constructor with Bucket Count and Hasher and Allocator</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">unordered_node_map(std::initializer_list&lt;value_type&gt; il, size_type n, const hasher&amp; hf,
+                   const allocator_type&amp; a);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Constructs an empty container with at least <code>n</code> buckets, using <code>hf</code> as the hash function, <code>a</code> as the allocator and default key equality predicate,and inserts the elements from <code>il</code> into it.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>key_equal</code> needs to be <a href="https://en.cppreference.com/w/cpp/named_req/DefaultConstructible" target="_blank" rel="noopener">DefaultConstructible</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect2">
+<h3 id="unordered_node_map_destructor"><a class="anchor" href="#unordered_node_map_destructor"></a>Destructor</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">~unordered_node_map();</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Note:
+</td>
+<td class="hdlist2">
+<p>The destructor is applied to every element, and all memory is deallocated</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="unordered_node_map_assignment"><a class="anchor" href="#unordered_node_map_assignment"></a>Assignment</h3>
+<div class="sect3">
+<h4 id="unordered_node_map_copy_assignment"><a class="anchor" href="#unordered_node_map_copy_assignment"></a>Copy Assignment</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">unordered_node_map&amp; operator=(unordered_node_map const&amp; other);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The assignment operator. Destroys previously existing elements, copy-assigns the hash function and predicate from <code>other</code>,
+copy-assigns the allocator from <code>other</code> if <code>Alloc::propagate_on_container_copy_assignment</code> exists and <code>Alloc::propagate_on_container_copy_assignment::value</code> is <code>true</code>,
+and finally inserts copies of the elements of <code>other</code>.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>value_type</code> is <a href="https://en.cppreference.com/w/cpp/named_req/CopyInsertable" target="_blank" rel="noopener">CopyInsertable</a></p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_move_assignment"><a class="anchor" href="#unordered_node_map_move_assignment"></a>Move Assignment</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">unordered_node_map&amp; operator=(unordered_node_map&amp;&amp; other)
+  noexcept((boost::allocator_traits&lt;Allocator&gt;::is_always_equal::value ||
+            boost::allocator_traits&lt;Allocator&gt;::propagate_on_container_move_assignment::value) &amp;&amp;
+            std::is_same&lt;pointer, value_type*&gt;::value);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The move assignment operator. Destroys previously existing elements, swaps the hash function and predicate from <code>other</code>,
+and move-assigns the allocator from <code>other</code> if <code>Alloc::propagate_on_container_move_assignment</code> exists and <code>Alloc::propagate_on_container_move_assignment::value</code> is <code>true</code>.
+If at this point the allocator is equal to <code>other.get_allocator()</code>, the internal bucket array of <code>other</code> is transferred directly to the new container;
+otherwise, inserts move-constructed copies of the elements of <code>other</code>.
+If statistics are <a href="#unordered_node_map_boost_unordered_enable_stats">enabled</a>,
+transfers the internal statistical information from <code>other</code> iff the final allocator is equal to <code>other.get_allocator()</code>,
+and always calls <code>other.reset_stats()</code>.</p>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_initializer_list_assignment"><a class="anchor" href="#unordered_node_map_initializer_list_assignment"></a>Initializer List Assignment</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">unordered_node_map&amp; operator=(std::initializer_list&lt;value_type&gt; il);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Assign from values in initializer list. All previously existing elements are destroyed.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>value_type</code> is <a href="https://en.cppreference.com/w/cpp/named_req/CopyInsertable" target="_blank" rel="noopener">CopyInsertable</a></p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="unordered_node_map_iterators"><a class="anchor" href="#unordered_node_map_iterators"></a>Iterators</h3>
+<div class="sect3">
+<h4 id="unordered_node_map_begin"><a class="anchor" href="#unordered_node_map_begin"></a>begin</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">iterator begin() noexcept;
+const_iterator begin() const noexcept;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>An iterator referring to the first element of the container, or if the container is empty the past-the-end value for the container.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Complexity:
+</td>
+<td class="hdlist2">
+<p>O(<code>bucket_count()</code>)</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_end"><a class="anchor" href="#unordered_node_map_end"></a>end</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">iterator end() noexcept;
+const_iterator end() const noexcept;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>An iterator which refers to the past-the-end value for the container.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_cbegin"><a class="anchor" href="#unordered_node_map_cbegin"></a>cbegin</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">const_iterator cbegin() const noexcept;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>A <code>const_iterator</code> referring to the first element of the container, or if the container is empty the past-the-end value for the container.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Complexity:
+</td>
+<td class="hdlist2">
+<p>O(<code>bucket_count()</code>)</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_cend"><a class="anchor" href="#unordered_node_map_cend"></a>cend</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">const_iterator cend() const noexcept;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>A <code>const_iterator</code> which refers to the past-the-end value for the container.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect2">
+<h3 id="unordered_node_map_size_and_capacity"><a class="anchor" href="#unordered_node_map_size_and_capacity"></a>Size and Capacity</h3>
+<div class="sect3">
+<h4 id="unordered_node_map_empty"><a class="anchor" href="#unordered_node_map_empty"></a>empty</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">[[nodiscard]] bool empty() const noexcept;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p><code>size() == 0</code></p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_size"><a class="anchor" href="#unordered_node_map_size"></a>size</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">size_type size() const noexcept;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p><code>std::distance(begin(), end())</code></p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_max_size"><a class="anchor" href="#unordered_node_map_max_size"></a>max_size</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">size_type max_size() const noexcept;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p><code>size()</code> of the largest possible container.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect2">
+<h3 id="unordered_node_map_modifiers"><a class="anchor" href="#unordered_node_map_modifiers"></a>Modifiers</h3>
+<div class="sect3">
+<h4 id="unordered_node_map_emplace"><a class="anchor" href="#unordered_node_map_emplace"></a>emplace</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class... Args&gt; std::pair&lt;iterator, bool&gt; emplace(Args&amp;&amp;... args);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Inserts an object, constructed with the arguments <code>args</code>, in the container if and only if there is no element in the container with an equivalent key.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>value_type</code> is constructible from <code>args</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>The <code>bool</code> component of the return type is <code>true</code> if an insert took place.<br></p>
+<div class="paragraph">
+<p>If an insert took place, then the iterator points to the newly inserted element. Otherwise, it points to the element with equivalent key.</p>
+</div>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>If an exception is thrown by an operation other than a call to <code>hasher</code> the function has no effect.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>Can invalidate iterators, but only if the insert causes the load to be greater than the maximum load.<br></p>
+<div class="paragraph">
+<p>If <code>args&#8230;&#8203;</code> is of the form <code>k,v</code>, it delays constructing the whole object until it is certain that an element should be inserted, using only the <code>k</code> argument to check. This optimization happens when <code>key_type</code> is move constructible or when the <code>k</code> argument is a <code>key_type</code>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_emplace_hint"><a class="anchor" href="#unordered_node_map_emplace_hint"></a>emplace_hint</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">    template&lt;class... Args&gt; iterator emplace_hint(const_iterator position, Args&amp;&amp;... args);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Inserts an object, constructed with the arguments <code>args</code>, in the container if and only if there is no element in the container with an equivalent key.</p>
+</div>
+<div class="paragraph">
+<p><code>position</code> is a suggestion to where the element should be inserted. This implementation ignores it.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>value_type</code> is constructible from <code>args</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>The <code>bool</code> component of the return type is <code>true</code> if an insert took place.<br></p>
+<div class="paragraph">
+<p>If an insert took place, then the iterator points to the newly inserted element. Otherwise, it points to the element with equivalent key.</p>
+</div>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>If an exception is thrown by an operation other than a call to <code>hasher</code> the function has no effect.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>Can invalidate iterators, but only if the insert causes the load to be greater than the maximum load.<br></p>
+<div class="paragraph">
+<p>If <code>args&#8230;&#8203;</code> is of the form <code>k,v</code>, it delays constructing the whole object until it is certain that an element should be inserted, using only the <code>k</code> argument to check. This optimization happens when <code>key_type</code> is move constructible or when the <code>k</code> argument is a <code>key_type</code>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_copy_insert"><a class="anchor" href="#unordered_node_map_copy_insert"></a>Copy Insert</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">std::pair&lt;iterator, bool&gt; insert(const value_type&amp; obj);
+std::pair&lt;iterator, bool&gt; insert(const init_type&amp; obj);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Inserts <code>obj</code> in the container if and only if there is no element in the container with an equivalent key.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>value_type</code> is <a href="https://en.cppreference.com/w/cpp/named_req/CopyInsertable" target="_blank" rel="noopener">CopyInsertable</a>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>The <code>bool</code> component of the return type is <code>true</code> if an insert took place.<br></p>
+<div class="paragraph">
+<p>If an insert took place, then the iterator points to the newly inserted element. Otherwise, it points to the element with equivalent key.</p>
+</div>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>If an exception is thrown by an operation other than a call to <code>hasher</code> the function has no effect.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>Can invalidate iterators, but only if the insert causes the load to be greater than the maximum load.<br></p>
+<div class="paragraph">
+<p>A call of the form <code>insert(x)</code>, where <code>x</code> is equally convertible to both <code>const value_type&amp;</code> and <code>const init_type&amp;</code>, is not ambiguous and selects the <code>init_type</code> overload.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_move_insert"><a class="anchor" href="#unordered_node_map_move_insert"></a>Move Insert</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">std::pair&lt;iterator, bool&gt; insert(value_type&amp;&amp; obj);
+std::pair&lt;iterator, bool&gt; insert(init_type&amp;&amp; obj);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Inserts <code>obj</code> in the container if and only if there is no element in the container with an equivalent key.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>value_type</code> is <a href="https://en.cppreference.com/w/cpp/named_req/MoveInsertable" target="_blank" rel="noopener">MoveInsertable</a>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>The <code>bool</code> component of the return type is <code>true</code> if an insert took place.<br></p>
+<div class="paragraph">
+<p>If an insert took place, then the iterator points to the newly inserted element. Otherwise, it points to the element with equivalent key.</p>
+</div>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>If an exception is thrown by an operation other than a call to <code>hasher</code> the function has no effect.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>Can invalidate iterators, but only if the insert causes the load to be greater than the maximum load.<br></p>
+<div class="paragraph">
+<p>A call of the form <code>insert(x)</code>, where <code>x</code> is equally convertible to both <code>value_type&amp;&amp;</code> and <code>init_type&amp;&amp;</code>, is not ambiguous and selects the <code>init_type</code> overload.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_copy_insert_with_hint"><a class="anchor" href="#unordered_node_map_copy_insert_with_hint"></a>Copy Insert with Hint</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">iterator insert(const_iterator hint, const value_type&amp; obj);
+iterator insert(const_iterator hint, const init_type&amp; obj);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Inserts <code>obj</code> in the container if and only if there is no element in the container with an equivalent key.</p>
+</div>
+<div class="paragraph">
+<p><code>hint</code> is a suggestion to where the element should be inserted. This implementation ignores it.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>value_type</code> is <a href="https://en.cppreference.com/w/cpp/named_req/CopyInsertable" target="_blank" rel="noopener">CopyInsertable</a>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>The <code>bool</code> component of the return type is <code>true</code> if an insert took place.<br></p>
+<div class="paragraph">
+<p>If an insert took place, then the iterator points to the newly inserted element. Otherwise, it points to the element with equivalent key.</p>
+</div>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>If an exception is thrown by an operation other than a call to <code>hasher</code> the function has no effect.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>Can invalidate iterators, but only if the insert causes the load to be greater than the maximum load.<br></p>
+<div class="paragraph">
+<p>A call of the form <code>insert(hint, x)</code>, where <code>x</code> is equally convertible to both <code>const value_type&amp;</code> and <code>const init_type&amp;</code>, is not ambiguous and selects the <code>init_type</code> overload.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_move_insert_with_hint"><a class="anchor" href="#unordered_node_map_move_insert_with_hint"></a>Move Insert with Hint</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">iterator insert(const_iterator hint, value_type&amp;&amp; obj);
+iterator insert(const_iterator hint, init_type&amp;&amp; obj);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Inserts <code>obj</code> in the container if and only if there is no element in the container with an equivalent key.</p>
+</div>
+<div class="paragraph">
+<p><code>hint</code> is a suggestion to where the element should be inserted. This implementation ignores it.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>value_type</code> is <a href="https://en.cppreference.com/w/cpp/named_req/MoveInsertable" target="_blank" rel="noopener">MoveInsertable</a>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>The <code>bool</code> component of the return type is <code>true</code> if an insert took place.<br></p>
+<div class="paragraph">
+<p>If an insert took place, then the iterator points to the newly inserted element. Otherwise, it points to the element with equivalent key.</p>
+</div>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>If an exception is thrown by an operation other than a call to <code>hasher</code> the function has no effect.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>Can invalidate iterators, but only if the insert causes the load to be greater than the maximum load.<br></p>
+<div class="paragraph">
+<p>A call of the form <code>insert(hint, x)</code>, where <code>x</code> is equally convertible to both <code>value_type&amp;&amp;</code> and <code>init_type&amp;&amp;</code>, is not ambiguous and selects the <code>init_type</code> overload.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_insert_iterator_range"><a class="anchor" href="#unordered_node_map_insert_iterator_range"></a>Insert Iterator Range</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class InputIterator&gt; void insert(InputIterator first, InputIterator last);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Inserts a range of elements into the container. Elements are inserted if and only if there is no element in the container with an equivalent key.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>value_type</code> is <a href="https://en.cppreference.com/w/cpp/named_req/EmplaceConstructible" target="_blank" rel="noopener">EmplaceConstructible</a> into the container from <code>*first</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>When inserting a single element, if an exception is thrown by an operation other than a call to <code>hasher</code> the function has no effect.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>Can invalidate iterators, but only if the insert causes the load to be greater than the maximum load.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_insert_initializer_list"><a class="anchor" href="#unordered_node_map_insert_initializer_list"></a>Insert Initializer List</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">void insert(std::initializer_list&lt;value_type&gt;);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Inserts a range of elements into the container. Elements are inserted if and only if there is no element in the container with an equivalent key.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>value_type</code> is <a href="https://en.cppreference.com/w/cpp/named_req/CopyInsertable" target="_blank" rel="noopener">CopyInsertable</a> into the container.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>When inserting a single element, if an exception is thrown by an operation other than a call to <code>hasher</code> the function has no effect.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>Can invalidate iterators, but only if the insert causes the load to be greater than the maximum load.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_insert_node"><a class="anchor" href="#unordered_node_map_insert_node"></a>Insert Node</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">insert_return_type insert(node_type&amp;&amp; nh);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If <code>nh</code> is not empty, inserts the associated element in the container if and only if there is no element in the container with a key equivalent to <code>nh.key()</code>.
+<code>nh</code> is empty when the function returns.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>An <code>insert_return_type</code> object constructed from <code>position</code>, <code>inserted</code> and <code>node</code>:<br></p>
+<div class="ulist">
+<ul>
+<li>
+<p>If <code>nh</code> is empty, <code>inserted</code> is <code>false</code>, <code>position</code> is <code>end()</code>, and <code>node</code> is empty.</p>
+</li>
+<li>
+<p>Otherwise if the insertion took place, <code>inserted</code> is true, <code>position</code> points to the inserted element, and <code>node</code> is empty.</p>
+</li>
+<li>
+<p>If the insertion failed, <code>inserted</code> is false, <code>node</code> has the previous value of <code>nh</code>, and <code>position</code> points to an element with a key equivalent to <code>nh.key()</code>.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>If an exception is thrown by an operation other than a call to <code>hasher</code> the function has no effect.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>Behavior is undefined if <code>nh</code> is not empty and the allocators of <code>nh</code> and the container are not equal.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_insert_node_with_hint"><a class="anchor" href="#unordered_node_map_insert_node_with_hint"></a>Insert Node with Hint</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">iterator insert(const_iterator hint, node_type&amp;&amp; nh);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If <code>nh</code> is not empty, inserts the associated element in the container if and only if there is no element in the container with a key equivalent to <code>nh.key()</code>.
+<code>nh</code> becomes empty if insertion took place, otherwise it is not changed.</p>
+</div>
+<div class="paragraph">
+<p><code>hint</code> is a suggestion to where the element should be inserted. This implementation ignores it.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>The iterator returned is <code>end()</code> if <code>nh</code> is empty.
+If insertion took place, then the iterator points to the newly inserted element; otherwise, it points to the element with equivalent key.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>If an exception is thrown by an operation other than a call to <code>hasher</code> the function has no effect.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>Behavior is undefined if <code>nh</code> is not empty and the allocators of <code>nh</code> and the container are not equal.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_try_emplace"><a class="anchor" href="#unordered_node_map_try_emplace"></a>try_emplace</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class... Args&gt;
+  std::pair&lt;iterator, bool&gt; try_emplace(const key_type&amp; k, Args&amp;&amp;... args);
+template&lt;class... Args&gt;
+  std::pair&lt;iterator, bool&gt; try_emplace(key_type&amp;&amp; k, Args&amp;&amp;... args);
+template&lt;class K, class... Args&gt;
+  std::pair&lt;iterator, bool&gt; try_emplace(K&amp;&amp; k, Args&amp;&amp;... args);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Inserts a new element into the container if there is no existing element with key <code>k</code> contained within it.</p>
+</div>
+<div class="paragraph">
+<p>If there is an existing element with key <code>k</code> this function does nothing.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>The <code>bool</code> component of the return type is <code>true</code> if an insert took place.<br></p>
+<div class="paragraph">
+<p>If an insert took place, then the iterator points to the newly inserted element. Otherwise, it points to the element with equivalent key.</p>
+</div>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>If an exception is thrown by an operation other than a call to <code>hasher</code> the function has no effect.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>This function is similiar to <a href="#unordered_node_map_emplace">emplace</a>, with the difference that no <code>value_type</code> is constructed
+if there is an element with an equivalent key; otherwise, the construction is of the form:<br></p>
+<div class="openblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">// first two overloads
+value_type(std::piecewise_construct,
+           std::forward_as_tuple(std::forward&lt;Key&gt;(k)),
+           std::forward_as_tuple(std::forward&lt;Args&gt;(args)...))
+
+// third overload
+value_type(std::piecewise_construct,
+           std::forward_as_tuple(std::forward&lt;K&gt;(k)),
+           std::forward_as_tuple(std::forward&lt;Args&gt;(args)...))</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>unlike <a href="#unordered_node_map_emplace">emplace</a>, which simply forwards all arguments to <code>value_type</code>'s constructor.</p>
+</div>
+<div class="paragraph">
+<p>Can invalidate iterators, but only if the insert causes the load to be greater than the maximum load.</p>
+</div>
+<div class="paragraph">
+<p>The <code>template&lt;class K, class... Args&gt;</code> overload only participates in overload resolution if <code>Hash::is_transparent</code> and <code>Pred::is_transparent</code> are valid member typedefs and neither <code>iterator</code> nor <code>const_iterator</code> are implicitly convertible from <code>K</code>. The library assumes that <code>Hash</code> is callable with both <code>K</code> and <code>Key</code> and that <code>Pred</code> is transparent. This enables heterogeneous lookup which avoids the cost of instantiating an instance of the <code>Key</code> type.</p>
+</div>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_try_emplace_with_hint"><a class="anchor" href="#unordered_node_map_try_emplace_with_hint"></a>try_emplace with Hint</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class... Args&gt;
+  iterator try_emplace(const_iterator hint, const key_type&amp; k, Args&amp;&amp;... args);
+template&lt;class... Args&gt;
+  iterator try_emplace(const_iterator hint, key_type&amp;&amp; k, Args&amp;&amp;... args);
+template&lt;class K, class... Args&gt;
+  iterator try_emplace(const_iterator hint, K&amp;&amp; k, Args&amp;&amp;... args);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Inserts a new element into the container if there is no existing element with key <code>k</code> contained within it.</p>
+</div>
+<div class="paragraph">
+<p>If there is an existing element with key <code>k</code> this function does nothing.</p>
+</div>
+<div class="paragraph">
+<p><code>hint</code> is a suggestion to where the element should be inserted.  This implementation ignores it.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>If an insert took place, then the iterator points to the newly inserted element. Otherwise, it points to the element with equivalent key.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>If an exception is thrown by an operation other than a call to <code>hasher</code> the function has no effect.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>This function is similiar to <a href="#unordered_node_map_emplace_hint">emplace_hint</a>, with the difference that no <code>value_type</code> is constructed
+if there is an element with an equivalent key; otherwise, the construction is of the form:<br></p>
+<div class="openblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">// first two overloads
+value_type(std::piecewise_construct,
+           std::forward_as_tuple(std::forward&lt;Key&gt;(k)),
+           std::forward_as_tuple(std::forward&lt;Args&gt;(args)...))
+
+// third overload
+value_type(std::piecewise_construct,
+           std::forward_as_tuple(std::forward&lt;K&gt;(k)),
+           std::forward_as_tuple(std::forward&lt;Args&gt;(args)...))</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>unlike <a href="#unordered_node_map_emplace_hint">emplace_hint</a>, which simply forwards all arguments to <code>value_type</code>'s constructor.</p>
+</div>
+<div class="paragraph">
+<p>Can invalidate iterators, but only if the insert causes the load to be greater than the maximum load.</p>
+</div>
+<div class="paragraph">
+<p>The <code>template&lt;class K, class... Args&gt;</code> overload only participates in overload resolution if <code>Hash::is_transparent</code> and <code>Pred::is_transparent</code> are valid member typedefs and neither <code>iterator</code> nor <code>const_iterator</code> are implicitly convertible from <code>K</code>. The library assumes that <code>Hash</code> is callable with both <code>K</code> and <code>Key</code> and that <code>Pred</code> is transparent. This enables heterogeneous lookup which avoids the cost of instantiating an instance of the <code>Key</code> type.</p>
+</div>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_insert_or_assign"><a class="anchor" href="#unordered_node_map_insert_or_assign"></a>insert_or_assign</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class M&gt;
+  std::pair&lt;iterator, bool&gt; insert_or_assign(const key_type&amp; k, M&amp;&amp; obj);
+template&lt;class M&gt;
+  std::pair&lt;iterator, bool&gt; insert_or_assign(key_type&amp;&amp; k, M&amp;&amp; obj);
+template&lt;class K, class M&gt;
+  std::pair&lt;iterator, bool&gt; insert_or_assign(K&amp;&amp; k, M&amp;&amp; obj);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Inserts a new element into the container or updates an existing one by assigning to the contained value.</p>
+</div>
+<div class="paragraph">
+<p>If there is an element with key <code>k</code>, then it is updated by assigning <code>std::forward&lt;M&gt;(obj)</code>.</p>
+</div>
+<div class="paragraph">
+<p>If there is no such element, it is added to the container as:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">// first two overloads
+value_type(std::piecewise_construct,
+           std::forward_as_tuple(std::forward&lt;Key&gt;(k)),
+           std::forward_as_tuple(std::forward&lt;M&gt;(obj)))
+
+// third overload
+value_type(std::piecewise_construct,
+           std::forward_as_tuple(std::forward&lt;K&gt;(k)),
+           std::forward_as_tuple(std::forward&lt;M&gt;(obj)))</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>The <code>bool</code> component of the return type is <code>true</code> if an insert took place.<br></p>
+<div class="paragraph">
+<p>If an insert took place, then the iterator points to the newly inserted element. Otherwise, it points to the element with equivalent key.</p>
+</div>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>If an exception is thrown by an operation other than a call to <code>hasher</code> the function has no effect.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>Can invalidate iterators, but only if the insert causes the load to be greater than the maximum load. <br></p>
+<div class="paragraph">
+<p>The <code>template&lt;class K, class M&gt;</code> only participates in overload resolution if <code>Hash::is_transparent</code> and <code>Pred::is_transparent</code> are valid member typedefs. The library assumes that <code>Hash</code> is callable with both <code>K</code> and <code>Key</code> and that <code>Pred</code> is transparent. This enables heterogeneous lookup which avoids the cost of instantiating an instance of the <code>Key</code> type.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_insert_or_assign_with_hint"><a class="anchor" href="#unordered_node_map_insert_or_assign_with_hint"></a>insert_or_assign with Hint</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class M&gt;
+  iterator insert_or_assign(const_iterator hint, const key_type&amp; k, M&amp;&amp; obj);
+template&lt;class M&gt;
+  iterator insert_or_assign(const_iterator hint, key_type&amp;&amp; k, M&amp;&amp; obj);
+template&lt;class K, class M&gt;
+  iterator insert_or_assign(const_iterator hint, K&amp;&amp; k, M&amp;&amp; obj);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Inserts a new element into the container or updates an existing one by assigning to the contained value.</p>
+</div>
+<div class="paragraph">
+<p>If there is an element with key <code>k</code>, then it is updated by assigning <code>std::forward&lt;M&gt;(obj)</code>.</p>
+</div>
+<div class="paragraph">
+<p>If there is no such element, it is added to the container as:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">// first two overloads
+value_type(std::piecewise_construct,
+           std::forward_as_tuple(std::forward&lt;Key&gt;(k)),
+           std::forward_as_tuple(std::forward&lt;M&gt;(obj)))
+
+// third overload
+value_type(std::piecewise_construct,
+           std::forward_as_tuple(std::forward&lt;K&gt;(k)),
+           std::forward_as_tuple(std::forward&lt;M&gt;(obj)))</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>hint</code> is a suggestion to where the element should be inserted. This implementation ignores it.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>If an insert took place, then the iterator points to the newly inserted element. Otherwise, it points to the element with equivalent key.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>If an exception is thrown by an operation other than a call to <code>hasher</code> the function has no effect.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>Can invalidate iterators, but only if the insert causes the load to be greater than the maximum load.<br></p>
+<div class="paragraph">
+<p>The <code>template&lt;class K, class M&gt;</code> only participates in overload resolution if <code>Hash::is_transparent</code> and <code>Pred::is_transparent</code> are valid member typedefs. The library assumes that <code>Hash</code> is callable with both <code>K</code> and <code>Key</code> and that <code>Pred</code> is transparent. This enables heterogeneous lookup which avoids the cost of instantiating an instance of the <code>Key</code> type.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_erase_by_position"><a class="anchor" href="#unordered_node_map_erase_by_position"></a>Erase by Position</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++"><em>convertible-to-iterator</em> erase(iterator position);
+<em>convertible-to-iterator</em> erase(const_iterator position);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Erase the element pointed to by <code>position</code>.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>An opaque object implicitly convertible to the <code>iterator</code> or <code>const_iterator</code>
+immediately following <code>position</code> prior to the erasure.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>Nothing.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>The opaque object returned must only be discarded or immediately converted to <code>iterator</code> or <code>const_iterator</code>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_erase_by_key"><a class="anchor" href="#unordered_node_map_erase_by_key"></a>Erase by Key</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">size_type erase(const key_type&amp; k);
+template&lt;class K&gt; size_type erase(K&amp;&amp; k);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Erase all elements with key equivalent to <code>k</code>.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>The number of elements erased.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>Only throws an exception if it is thrown by <code>hasher</code> or <code>key_equal</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>The <code>template&lt;class K&gt;</code> overload only participates in overload resolution if <code>Hash::is_transparent</code> and <code>Pred::is_transparent</code> are valid member typedefs and neither <code>iterator</code> nor <code>const_iterator</code> are implicitly convertible from <code>K</code>. The library assumes that <code>Hash</code> is callable with both <code>K</code> and <code>Key</code> and that <code>Pred</code> is transparent. This enables heterogeneous lookup which avoids the cost of instantiating an instance of the <code>Key</code> type.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_erase_range"><a class="anchor" href="#unordered_node_map_erase_range"></a>Erase Range</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">iterator erase(const_iterator first, const_iterator last);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Erases the elements in the range from <code>first</code> to <code>last</code>.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>The iterator following the erased elements - i.e. <code>last</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>Nothing in this implementation (neither the <code>hasher</code> nor the <code>key_equal</code> objects are called).</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_swap"><a class="anchor" href="#unordered_node_map_swap"></a>swap</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">void swap(unordered_node_map&amp; other)
+  noexcept(boost::allocator_traits&lt;Allocator&gt;::is_always_equal::value ||
+           boost::allocator_traits&lt;Allocator&gt;::propagate_on_container_swap::value);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Swaps the contents of the container with the parameter.</p>
+</div>
+<div class="paragraph">
+<p>If <code>Allocator::propagate_on_container_swap</code> is declared and <code>Allocator::propagate_on_container_swap::value</code> is <code>true</code> then the containers' allocators are swapped. Otherwise, swapping with unequal allocators results in undefined behavior.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>Nothing unless <code>key_equal</code> or <code>hasher</code> throw on swapping.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_extract_by_position"><a class="anchor" href="#unordered_node_map_extract_by_position"></a>Extract by Position</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">node_type extract(const_iterator position);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Extracts the element pointed to by <code>position</code>.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>A <code>node_type</code> object holding the extracted element.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>Nothing.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_extract_by_key"><a class="anchor" href="#unordered_node_map_extract_by_key"></a>Extract by Key</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">node_type extract(const key_type&amp; k);
+template&lt;class K&gt; node_type extract(K&amp;&amp; k);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Extracts the element with key equivalent to <code>k</code>, if it exists.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>A <code>node_type</code> object holding the extracted element, or empty if no element was extracted.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>Only throws an exception if it is thrown by <code>hasher</code> or <code>key_equal</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>The <code>template&lt;class K&gt;</code> overload only participates in overload resolution if <code>Hash::is_transparent</code> and <code>Pred::is_transparent</code> are valid member typedefs. The library assumes that <code>Hash</code> is callable with both <code>K</code> and <code>Key</code> and that <code>Pred</code> is transparent. This enables heterogeneous lookup which avoids the cost of instantiating an instance of the <code>Key</code> type.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_clear"><a class="anchor" href="#unordered_node_map_clear"></a>clear</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">void clear() noexcept;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Erases all elements in the container.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Postconditions:
+</td>
+<td class="hdlist2">
+<p><code>size() == 0</code>, <code>max_load() &gt;= max_load_factor() * bucket_count()</code></p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_merge"><a class="anchor" href="#unordered_node_map_merge"></a>merge</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class H2, class P2&gt;
+  void merge(unordered_node_map&lt;Key, T, H2, P2, Allocator&gt;&amp; source);
+template&lt;class H2, class P2&gt;
+  void merge(unordered_node_map&lt;Key, T, H2, P2, Allocator&gt;&amp;&amp; source);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Transfers all the element nodes from <code>source</code> whose key is not already present in <code>*this</code>.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>this-&gt;get_allocator() == source.get_allocator()</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>Invalidates iterators to the elements transferred.
+If the resulting size of <code>*this</code> is greater than its original maximum load,
+invalidates all iterators associated to <code>*this</code>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect2">
+<h3 id="unordered_node_map_observers"><a class="anchor" href="#unordered_node_map_observers"></a>Observers</h3>
+<div class="sect3">
+<h4 id="unordered_node_map_get_allocator"><a class="anchor" href="#unordered_node_map_get_allocator"></a>get_allocator</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">allocator_type get_allocator() const noexcept;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>The container&#8217;s allocator.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_hash_function"><a class="anchor" href="#unordered_node_map_hash_function"></a>hash_function</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">hasher hash_function() const;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>The container&#8217;s hash function.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_key_eq"><a class="anchor" href="#unordered_node_map_key_eq"></a>key_eq</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">key_equal key_eq() const;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>The container&#8217;s key equality predicate</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect2">
+<h3 id="unordered_node_map_lookup"><a class="anchor" href="#unordered_node_map_lookup"></a>Lookup</h3>
+<div class="sect3">
+<h4 id="unordered_node_map_find"><a class="anchor" href="#unordered_node_map_find"></a>find</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">iterator         find(const key_type&amp; k);
+const_iterator   find(const key_type&amp; k) const;
+template&lt;class K&gt;
+  iterator       find(const K&amp; k);</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>An iterator pointing to an element with key equivalent to <code>k</code>, or <code>end()</code> if no such element exists.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>The <code>template&lt;class K&gt;</code> overloads only participate in overload resolution if <code>Hash::is_transparent</code> and <code>Pred::is_transparent</code> are valid member typedefs. The library assumes that <code>Hash</code> is callable with both <code>K</code> and <code>Key</code> and that <code>Pred</code> is transparent. This enables heterogeneous lookup which avoids the cost of instantiating an instance of the <code>Key</code> type.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_count"><a class="anchor" href="#unordered_node_map_count"></a>count</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">size_type        count(const key_type&amp; k) const;
+template&lt;class K&gt;
+  size_type      count(const K&amp; k) const;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>The number of elements with key equivalent to <code>k</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>The <code>template&lt;class K&gt;</code> overload only participates in overload resolution if <code>Hash::is_transparent</code> and <code>Pred::is_transparent</code> are valid member typedefs. The library assumes that <code>Hash</code> is callable with both <code>K</code> and <code>Key</code> and that <code>Pred</code> is transparent. This enables heterogeneous lookup which avoids the cost of instantiating an instance of the <code>Key</code> type.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_contains"><a class="anchor" href="#unordered_node_map_contains"></a>contains</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">bool             contains(const key_type&amp; k) const;
+template&lt;class K&gt;
+  bool           contains(const K&amp; k) const;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>A boolean indicating whether or not there is an element with key equal to <code>key</code> in the container</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>The <code>template&lt;class K&gt;</code> overload only participates in overload resolution if <code>Hash::is_transparent</code> and <code>Pred::is_transparent</code> are valid member typedefs. The library assumes that <code>Hash</code> is callable with both <code>K</code> and <code>Key</code> and that <code>Pred</code> is transparent. This enables heterogeneous lookup which avoids the cost of instantiating an instance of the <code>Key</code> type.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_equal_range"><a class="anchor" href="#unordered_node_map_equal_range"></a>equal_range</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">std::pair&lt;iterator, iterator&gt;               equal_range(const key_type&amp; k);
+std::pair&lt;const_iterator, const_iterator&gt;   equal_range(const key_type&amp; k) const;
+template&lt;class K&gt;
+  std::pair&lt;iterator, iterator&gt;             equal_range(const K&amp; k);
+template&lt;class K&gt;
+  std::pair&lt;const_iterator, const_iterator&gt; equal_range(const K&amp; k) const;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>A range containing all elements with key equivalent to <code>k</code>. If the container doesn&#8217;t contain any such elements, returns <code>std::make_pair(b.end(), b.end())</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>The <code>template&lt;class K&gt;</code> overloads only participate in overload resolution if <code>Hash::is_transparent</code> and <code>Pred::is_transparent</code> are valid member typedefs. The library assumes that <code>Hash</code> is callable with both <code>K</code> and <code>Key</code> and that <code>Pred</code> is transparent. This enables heterogeneous lookup which avoids the cost of instantiating an instance of the <code>Key</code> type.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_operator"><a class="anchor" href="#unordered_node_map_operator"></a>operator[]</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">mapped_type&amp; operator[](const key_type&amp; k);
+mapped_type&amp; operator[](key_type&amp;&amp; k);
+template&lt;class K&gt; mapped_type&amp; operator[](K&amp;&amp; k);</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Effects:
+</td>
+<td class="hdlist2">
+<p>If the container does not already contain an element with a key equivalent to <code>k</code>, inserts the value <code>std::pair&lt;key_type const, mapped_type&gt;(k, mapped_type())</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>A reference to <code>x.second</code> where <code>x</code> is the element already in the container, or the newly inserted element with a key equivalent to <code>k</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>If an exception is thrown by an operation other than a call to <code>hasher</code> the function has no effect.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>Can invalidate iterators, but only if the insert causes the load to be greater than the maximum load.<br></p>
+<div class="paragraph">
+<p>The <code>template&lt;class K&gt;</code> overload only participates in overload resolution if <code>Hash::is_transparent</code> and <code>Pred::is_transparent</code> are valid member typedefs. The library assumes that <code>Hash</code> is callable with both <code>K</code> and <code>Key</code> and that <code>Pred</code> is transparent. This enables heterogeneous lookup which avoids the cost of instantiating an instance of the <code>Key</code> type.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_at"><a class="anchor" href="#unordered_node_map_at"></a>at</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">mapped_type&amp; at(const key_type&amp; k);
+const mapped_type&amp; at(const key_type&amp; k) const;
+template&lt;class K&gt; mapped_type&amp; at(const K&amp; k);
+template&lt;class K&gt; const mapped_type&amp; at(const K&amp; k) const;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>A reference to <code>x.second</code> where <code>x</code> is the (unique) element whose key is equivalent to <code>k</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>An exception object of type <code>std::out_of_range</code> if no such element is present.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>The <code>template&lt;class K&gt;</code> overloads only participate in overload resolution if <code>Hash::is_transparent</code> and <code>Pred::is_transparent</code> are valid member typedefs. The library assumes that <code>Hash</code> is callable with both <code>K</code> and <code>Key</code> and that <code>Pred</code> is transparent. This enables heterogeneous lookup which avoids the cost of instantiating an instance of the <code>Key</code> type.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect2">
+<h3 id="unordered_node_map_bucket_interface"><a class="anchor" href="#unordered_node_map_bucket_interface"></a>Bucket Interface</h3>
+<div class="sect3">
+<h4 id="unordered_node_map_bucket_count"><a class="anchor" href="#unordered_node_map_bucket_count"></a>bucket_count</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">size_type bucket_count() const noexcept;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>The size of the bucket array.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect2">
+<h3 id="unordered_node_map_hash_policy"><a class="anchor" href="#unordered_node_map_hash_policy"></a>Hash Policy</h3>
+<div class="sect3">
+<h4 id="unordered_node_map_load_factor"><a class="anchor" href="#unordered_node_map_load_factor"></a>load_factor</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">float load_factor() const noexcept;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p><code>static_cast&lt;float&gt;(size())/static_cast&lt;float&gt;(bucket_count())</code>, or <code>0</code> if <code>bucket_count() == 0</code>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_max_load_factor"><a class="anchor" href="#unordered_node_map_max_load_factor"></a>max_load_factor</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">float max_load_factor() const noexcept;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>Returns the container&#8217;s maximum load factor.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_set_max_load_factor"><a class="anchor" href="#unordered_node_map_set_max_load_factor"></a>Set max_load_factor</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">void max_load_factor(float z);</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Effects:
+</td>
+<td class="hdlist2">
+<p>Does nothing, as the user is not allowed to change this parameter. Kept for compatibility with <code>boost::unordered_map</code>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_max_load"><a class="anchor" href="#unordered_node_map_max_load"></a>max_load</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">size_type max_load() const noexcept;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>The maximum number of elements the container can hold without rehashing, assuming that no further elements will be erased.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Note:
+</td>
+<td class="hdlist2">
+<p>After construction, rehash or clearance, the container&#8217;s maximum load is at least <code>max_load_factor() * bucket_count()</code>.
+This number may decrease on erasure under high-load conditions.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_rehash"><a class="anchor" href="#unordered_node_map_rehash"></a>rehash</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">void rehash(size_type n);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Changes if necessary the size of the bucket array so that there are at least <code>n</code> buckets, and so that the load factor is less than or equal to the maximum load factor. When applicable, this will either grow or shrink the <code>bucket_count()</code> associated with the container.</p>
+</div>
+<div class="paragraph">
+<p>When <code>size() == 0</code>, <code>rehash(0)</code> will deallocate the underlying buckets array. If the provided Allocator uses fancy pointers, a default allocation is subsequently performed.</p>
+</div>
+<div class="paragraph">
+<p>Invalidates iterators and changes the order of elements.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>The function has no effect if an exception is thrown, unless it is thrown by the container&#8217;s hash function or comparison function.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_reserve"><a class="anchor" href="#unordered_node_map_reserve"></a>reserve</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">void reserve(size_type n);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Equivalent to <code>a.rehash(ceil(n / a.max_load_factor()))</code>.</p>
+</div>
+<div class="paragraph">
+<p>Similar to <code>rehash</code>, this function can be used to grow or shrink the number of buckets in the container.</p>
+</div>
+<div class="paragraph">
+<p>Invalidates iterators and changes the order of elements.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>The function has no effect if an exception is thrown, unless it is thrown by the container&#8217;s hash function or comparison function.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect2">
+<h3 id="unordered_node_map_statistics"><a class="anchor" href="#unordered_node_map_statistics"></a>Statistics</h3>
+<div class="sect3">
+<h4 id="unordered_node_map_get_stats"><a class="anchor" href="#unordered_node_map_get_stats"></a>get_stats</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">stats get_stats() const;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>A statistical description of the insertion and lookup operations performed by the container so far.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>Only available if <a href="stats.html#stats" class="xref page">statistics calculation</a> is <a href="#unordered_node_map_boost_unordered_enable_stats">enabled</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_reset_stats"><a class="anchor" href="#unordered_node_map_reset_stats"></a>reset_stats</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">void reset_stats() noexcept;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Effects:
+</td>
+<td class="hdlist2">
+<p>Sets to zero the internal statistics kept by the container.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>Only available if <a href="stats.html#stats" class="xref page">statistics calculation</a> is <a href="#unordered_node_map_boost_unordered_enable_stats">enabled</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect2">
+<h3 id="unordered_node_map_deduction_guides"><a class="anchor" href="#unordered_node_map_deduction_guides"></a>Deduction Guides</h3>
+<div class="paragraph">
+<p>A deduction guide will not participate in overload resolution if any of the following are true:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>It has an <code>InputIterator</code> template parameter and a type that does not qualify as an input iterator is deduced for that parameter.</p>
+</li>
+<li>
+<p>It has an <code>Allocator</code> template parameter and a type that does not qualify as an allocator is deduced for that parameter.</p>
+</li>
+<li>
+<p>It has a <code>Hash</code> template parameter and an integral type or a type that qualifies as an allocator is deduced for that parameter.</p>
+</li>
+<li>
+<p>It has a <code>Pred</code> template parameter and a type that qualifies as an allocator is deduced for that parameter.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>A <code>size_­type</code> parameter type in a deduction guide refers to the <code>size_­type</code> member type of the
+container type deduced by the deduction guide. Its default value coincides with the default value
+of the constructor selected.</p>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_iter_value_type"><a class="anchor" href="#unordered_node_map_iter_value_type"></a><em>iter-value-type</em></h4>
+<div class="listingblock">
+<div class="content">
+<pre>template&lt;class InputIterator&gt;
+  using <em>iter-value-type</em> =
+    typename std::iterator_traits&lt;InputIterator&gt;::value_type; // exposition only</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_iter_key_type"><a class="anchor" href="#unordered_node_map_iter_key_type"></a><em>iter-key-type</em></h4>
+<div class="listingblock">
+<div class="content">
+<pre>template&lt;class InputIterator&gt;
+  using <em>iter-key-type</em> = std::remove_const_t&lt;
+    std::tuple_element_t&lt;0, <a href="#unordered_node_map_iter_value_type"><em>iter-value-type</em></a>&lt;InputIterator&gt;&gt;&gt;; // exposition only</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_iter_mapped_type"><a class="anchor" href="#unordered_node_map_iter_mapped_type"></a><em>iter-mapped-type</em></h4>
+<div class="listingblock">
+<div class="content">
+<pre>template&lt;class InputIterator&gt;
+  using <em>iter-mapped-type</em> =
+    std::tuple_element_t&lt;1, <a href="#unordered_node_map_iter_value_type"><em>iter-value-type</em></a>&lt;InputIterator&gt;&gt;;  // exposition only</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_iter_to_alloc_type"><a class="anchor" href="#unordered_node_map_iter_to_alloc_type"></a><em>iter-to-alloc-type</em></h4>
+<div class="listingblock">
+<div class="content">
+<pre>template&lt;class InputIterator&gt;
+  using <em>iter-to-alloc-type</em> = std::pair&lt;
+    std::add_const_t&lt;std::tuple_element_t&lt;0, <a href="#unordered_node_map_iter_value_type"><em>iter-value-type</em></a>&lt;InputIterator&gt;&gt;&gt;,
+    std::tuple_element_t&lt;1, <a href="#unordered_node_map_iter_value_type"><em>iter-value-type</em></a>&lt;InputIterator&gt;&gt;&gt;; // exposition only</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="unordered_node_map_equality_comparisons"><a class="anchor" href="#unordered_node_map_equality_comparisons"></a>Equality Comparisons</h3>
+<div class="sect3">
+<h4 id="unordered_node_map_operator_2"><a class="anchor" href="#unordered_node_map_operator_2"></a>operator==</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class Key, class T, class Hash, class Pred, class Alloc&gt;
+  bool operator==(const unordered_node_map&lt;Key, T, Hash, Pred, Alloc&gt;&amp; x,
+                  const unordered_node_map&lt;Key, T, Hash, Pred, Alloc&gt;&amp; y);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Return <code>true</code> if <code>x.size() == y.size()</code> and for every element in <code>x</code>, there is an element in <code>y</code> with the same key, with an equal value (using <code>operator==</code> to compare the value types).</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>Behavior is undefined if the two containers don&#8217;t have equivalent equality predicates.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_operator_3"><a class="anchor" href="#unordered_node_map_operator_3"></a>operator!=</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class Key, class T, class Hash, class Pred, class Alloc&gt;
+  bool operator!=(const unordered_node_map&lt;Key, T, Hash, Pred, Alloc&gt;&amp; x,
+                  const unordered_node_map&lt;Key, T, Hash, Pred, Alloc&gt;&amp; y);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Return <code>false</code> if <code>x.size() == y.size()</code> and for every element in <code>x</code>, there is an element in <code>y</code> with the same key, with an equal value (using <code>operator==</code> to compare the value types).</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>Behavior is undefined if the two containers don&#8217;t have equivalent equality predicates.</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="unordered_node_map_swap_2"><a class="anchor" href="#unordered_node_map_swap_2"></a>Swap</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class Key, class T, class Hash, class Pred, class Alloc&gt;
+  void swap(unordered_node_map&lt;Key, T, Hash, Pred, Alloc&gt;&amp; x,
+            unordered_node_map&lt;Key, T, Hash, Pred, Alloc&gt;&amp; y)
+    noexcept(noexcept(x.swap(y)));</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Swaps the contents of <code>x</code> and <code>y</code>.</p>
+</div>
+<div class="paragraph">
+<p>If <code>Allocator::propagate_on_container_swap</code> is declared and <code>Allocator::propagate_on_container_swap::value</code> is <code>true</code> then the containers' allocators are swapped. Otherwise, swapping with unequal allocators results in undefined behavior.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Effects:
+</td>
+<td class="hdlist2">
+<p><code>x.swap(y)</code></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>Nothing unless <code>key_equal</code> or <code>hasher</code> throw on swapping.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="unordered_node_map_erase_if"><a class="anchor" href="#unordered_node_map_erase_if"></a>erase_if</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class K, class T, class H, class P, class A, class Predicate&gt;
+  typename unordered_node_map&lt;K, T, H, P, A&gt;::size_type
+    erase_if(unordered_node_map&lt;K, T, H, P, A&gt;&amp; c, Predicate pred);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Traverses the container <code>c</code> and removes all elements for which the supplied predicate returns <code>true</code>.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>The number of erased elements.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>Equivalent to:<br></p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">auto original_size = c.size();
+for (auto i = c.begin(), last = c.end(); i != last; ) {
+  if (pred(*i)) {
+    i = c.erase(i);
+  } else {
+    ++i;
+  }
+}
+return original_size - c.size();</code></pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="unordered_node_map_serialization"><a class="anchor" href="#unordered_node_map_serialization"></a>Serialization</h3>
+<div class="paragraph">
+<p><code>unordered_node_map</code>s can be archived/retrieved by means of
+<a href="../../../../../serialization/index.html" target="_blank" rel="noopener">Boost.Serialization</a> using the API provided
+by this library. Both regular and XML archives are supported.</p>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_saving_an_unordered_node_map_to_an_archive"><a class="anchor" href="#unordered_node_map_saving_an_unordered_node_map_to_an_archive"></a>Saving an unordered_node_map to an archive</h4>
+<div class="paragraph">
+<p>Saves all the elements of an <code>unordered_node_map</code> <code>x</code> to an archive (XML archive) <code>ar</code>.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>std::remove_const&lt;key_type&gt;::type</code> and <code>std::remove_const&lt;mapped_type&gt;::type</code>
+are serializable (XML serializable), and they do support Boost.Serialization
+<code>save_construct_data</code>/<code>load_construct_data</code> protocol (automatically suported by
+<a href="https://en.cppreference.com/w/cpp/named_req/DefaultConstructible" target="_blank" rel="noopener">DefaultConstructible</a>
+types).</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_loading_an_unordered_node_map_from_an_archive"><a class="anchor" href="#unordered_node_map_loading_an_unordered_node_map_from_an_archive"></a>Loading an unordered_node_map from an archive</h4>
+<div class="paragraph">
+<p>Deletes all preexisting elements of an <code>unordered_node_map</code> <code>x</code> and inserts
+from an archive (XML archive) <code>ar</code> restored copies of the elements of the
+original <code>unordered_node_map</code> <code>other</code> saved to the storage read by <code>ar</code>.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>key_type</code> and <code>mapped_type</code> are constructible from
+<code>std::remove_const&lt;key_type&gt;::type&amp;&amp;</code> and <code>std::remove_const&lt;mapped_type&gt;::type&amp;&amp;</code>,
+respectively.
+<code>x.key_equal()</code> is functionally equivalent to <code>other.key_equal()</code>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_saving_an_iteratorconst_iterator_to_an_archive"><a class="anchor" href="#unordered_node_map_saving_an_iteratorconst_iterator_to_an_archive"></a>Saving an iterator/const_iterator to an archive</h4>
+<div class="paragraph">
+<p>Saves the positional information of an <code>iterator</code> (<code>const_iterator</code>) <code>it</code>
+to an archive (XML archive) <code>ar</code>. <code>it</code> can be and <code>end()</code> iterator.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p>The <code>unordered_node_map</code> <code>x</code> pointed to by <code>it</code> has been previously saved to <code>ar</code>,
+and no modifying operations have been issued on <code>x</code> between saving of <code>x</code> and
+saving of <code>it</code>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_node_map_loading_an_iteratorconst_iterator_from_an_archive"><a class="anchor" href="#unordered_node_map_loading_an_iteratorconst_iterator_from_an_archive"></a>Loading an iterator/const_iterator from an archive</h4>
+<div class="paragraph">
+<p>Makes an <code>iterator</code> (<code>const_iterator</code>) <code>it</code> point to the restored position of
+the original <code>iterator</code> (<code>const_iterator</code>) saved to the storage read by
+an archive (XML archive) <code>ar</code>.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p>If <code>x</code> is the <code>unordered_node_map</code> <code>it</code> points to, no modifying operations
+have been issued on <code>x</code> between loading of <code>x</code> and loading of <code>it</code>.</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<script id="site-script" src="../../unordered/_/js/site.js" data-ui-root-path="../../unordered/_"></script>
+<script async src="../../unordered/_/js/vendor/highlight.js"></script>
+  </body>
+</html>

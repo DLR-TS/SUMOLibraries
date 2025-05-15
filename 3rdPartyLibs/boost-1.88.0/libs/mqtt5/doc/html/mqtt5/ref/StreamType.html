@@ -1,0 +1,66 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>StreamType concept</title>
+<link rel="stylesheet" href="../../../../../../doc/src/boostbook.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="../../index.html" title="Chapter 1. Boost.MQTT5: a C++17 MQTT client">
+<link rel="up" href="../../pt02.html" title="Part Two: Reference. ">
+<link rel="prev" href="Error_handling.html" title="Error handling">
+<link rel="next" href="TlsContext.html" title="TlsContext concept">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table cellpadding="2" width="100%"><tr>
+<td valign="top"><img alt="Boost C++ Libraries" width="277" height="86" src="../../../../../../boost.png"></td>
+<td align="center"><a href="../../../../../../index.html">Home</a></td>
+<td align="center"><a href="../../../../../../libs/libraries.htm">Libraries</a></td>
+<td align="center"><a href="http://www.boost.org/users/people.html">People</a></td>
+<td align="center"><a href="http://www.boost.org/users/faq.html">FAQ</a></td>
+<td align="center"><a href="../../../../../../more/index.htm">More</a></td>
+</tr></table>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="Error_handling.html"><img src="../../../../../../doc/src/images/prev.png" alt="Prev"></a><a accesskey="u" href="../../pt02.html"><img src="../../../../../../doc/src/images/up.png" alt="Up"></a><a accesskey="h" href="../../index.html"><img src="../../../../../../doc/src/images/home.png" alt="Home"></a><a accesskey="n" href="TlsContext.html"><img src="../../../../../../doc/src/images/next.png" alt="Next"></a>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="mqtt5.ref.StreamType"></a><a class="link" href="StreamType.html" title="StreamType concept">StreamType concept</a>
+</h4></div></div></div>
+<p>
+        <code class="computeroutput"><span class="identifier">StreamType</span></code> represents the
+        transport protocol type used to transfer stream of bytes.
+      </p>
+<p>
+        <code class="computeroutput"><span class="identifier">StreamType</span></code> should meet the
+        <a href="../../../../../../libs/beast/doc/html/beast/concepts/streams.html" target="_top">AsyncStream</a>
+        concept.
+      </p>
+<p>
+        It should follow Asio's layered stream model by having a <code class="computeroutput"><span class="identifier">lowest_layer_type</span></code>
+        member type, and a <code class="computeroutput"><span class="identifier">lowest_layer</span></code>
+        member function, returing a <code class="computeroutput"><span class="identifier">lowest_layer_type</span><span class="special">&amp;</span></code>. The <code class="computeroutput"><span class="identifier">lowest_layer_type</span></code>
+        should inherit from <a href="../../../../../../doc/html/boost_asio/reference/ip__tcp/socket.html" target="_top"><code class="literal">boost::asio::ip::tcp::socket</code></a>.
+      </p>
+<p>
+        Additionally, it should have an overload of <a href="https://github.com/boostorg/mqtt5/blob/master/include/boost/mqtt5/detail/shutdown.hpp" target="_top">async_shutdown</a>
+        function that is discoverable via argument-dependent lookup (ADL).
+      </p>
+<p>
+        The types <a href="../../../../../../doc/html/boost_asio/reference/ip__tcp/socket.html" target="_top"><code class="literal">boost::asio::ip::tcp::socket</code></a>,
+        <a href="../../../../../../doc/html/boost_asio/reference/ssl__stream.html" target="_top"><code class="literal">boost::asio::ssl::stream&lt;<a href="../../../../../../doc/html/boost_asio/reference/ip__tcp/socket.html" target="_top"><code class="literal">boost::asio::ip::tcp::socket</code></a>&gt;</code></a>
+        and <a href="../../../../../../libs/beast/doc/html/beast/ref/boost__beast__websocket__stream.html" target="_top"><code class="literal">boost::beast::websocket::stream&lt;NextLayer&gt;</code></a>
+        meet these requirements.
+      </p>
+</div>
+<div class="copyright-footer">Copyright © 2023-2025 Mireo<p>
+        Distributed under the Boost Software License, Version 1.0. (See accompanying
+        file LICENSE_1_0.txt or copy at <a href="http://www.boost.org/LICENSE_1_0.txt" target="_top">http://www.boost.org/LICENSE_1_0.txt</a>)
+      </p>
+</div>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="Error_handling.html"><img src="../../../../../../doc/src/images/prev.png" alt="Prev"></a><a accesskey="u" href="../../pt02.html"><img src="../../../../../../doc/src/images/up.png" alt="Up"></a><a accesskey="h" href="../../index.html"><img src="../../../../../../doc/src/images/home.png" alt="Home"></a><a accesskey="n" href="TlsContext.html"><img src="../../../../../../doc/src/images/next.png" alt="Next"></a>
+</div>
+</body>
+</html>

@@ -1,0 +1,308 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>SSL/TLS Certificate</title>
+<link rel="stylesheet" href="../../../../../../doc/src/boostbook.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="../../index.html" title="Chapter 1. Boost.Beast">
+<link rel="up" href="../using_io.html" title="Networking">
+<link rel="prev" href="writing_composed_operations/detect_ssl.html" title="Detect SSL 💡">
+<link rel="next" href="ssl_tls_shutdown.html" title="SSL/TLS Shutdown">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table cellpadding="2" width="100%"><tr>
+<td valign="top"><img alt="Boost C++ Libraries" width="277" height="86" src="../../../../../../boost.png"></td>
+<td align="center"><a href="../../../../../../index.html">Home</a></td>
+<td align="center"><a href="../../../../../../libs/libraries.htm">Libraries</a></td>
+<td align="center"><a href="http://www.boost.org/users/people.html">People</a></td>
+<td align="center"><a href="http://www.boost.org/users/faq.html">FAQ</a></td>
+<td align="center"><a href="../../../../../../more/index.htm">More</a></td>
+</tr></table>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="writing_composed_operations/detect_ssl.html"><img src="../../../../../../doc/src/images/prev.png" alt="Prev"></a><a accesskey="u" href="../using_io.html"><img src="../../../../../../doc/src/images/up.png" alt="Up"></a><a accesskey="h" href="../../index.html"><img src="../../../../../../doc/src/images/home.png" alt="Home"></a><a accesskey="n" href="ssl_tls_shutdown.html"><img src="../../../../../../doc/src/images/next.png" alt="Next"></a>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="beast.using_io.ssl_tls_certificate"></a><a class="link" href="ssl_tls_certificate.html" title="SSL/TLS Certificate">SSL/TLS Certificate</a>
+</h3></div></div></div>
+<h5>
+<a name="beast.using_io.ssl_tls_certificate.h0"></a>
+        <span class="phrase"><a name="beast.using_io.ssl_tls_certificate.certificate_authority"></a></span><a class="link" href="ssl_tls_certificate.html#beast.using_io.ssl_tls_certificate.certificate_authority">Certificate
+        Authority</a>
+      </h5>
+<p>
+        A Certificate Authority (CA) is a trusted entity that signs digital certificates,
+        enabling users to verify their authenticity. Rather than storing every individual
+        certificate for each server (which would be impractical due to the sheer
+        volume and frequent renewals), users can store a limited set of root certificates
+        to authenticate server certificates as needed.
+      </p>
+<p>
+        Boost.Asio provides various methods for loading certificate authority certificates:
+      </p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+            <a href="../../../../../../doc/html/boost_asio/reference/ssl__context/add_certificate_authority.html" target="_top"><code class="computeroutput"><span class="identifier">net</span><span class="special">::</span><span class="identifier">ssl</span><span class="special">::</span><span class="identifier">context</span><span class="special">::</span><span class="identifier">add_certificate_authority</span></code></a>
+          </li>
+<li class="listitem">
+            <a href="../../../../../../doc/html/boost_asio/reference/ssl__context/add_verify_path.html" target="_top"><code class="computeroutput"><span class="identifier">net</span><span class="special">::</span><span class="identifier">ssl</span><span class="special">::</span><span class="identifier">context</span><span class="special">::</span><span class="identifier">add_verify_path</span></code></a>
+          </li>
+<li class="listitem">
+            <a href="../../../../../../doc/html/boost_asio/reference/ssl__context/load_verify_file.html" target="_top"><code class="computeroutput"><span class="identifier">net</span><span class="special">::</span><span class="identifier">ssl</span><span class="special">::</span><span class="identifier">context</span><span class="special">::</span><span class="identifier">load_verify_file</span></code></a>
+          </li>
+<li class="listitem">
+            <a href="../../../../../../doc/html/boost_asio/reference/ssl__context/set_default_verify_paths.html" target="_top"><code class="computeroutput"><span class="identifier">net</span><span class="special">::</span><span class="identifier">ssl</span><span class="special">::</span><span class="identifier">context</span><span class="special">::</span><span class="identifier">set_default_verify_paths</span></code></a>
+          </li>
+</ul></div>
+<p>
+        It is important to set up peer verification so that the TLS/SSL handshake
+        fails if certificate verification is unsuccessful:
+      </p>
+<pre class="programlisting"><span class="comment">// Verify the remote server's certificate</span>
+<span class="identifier">ctx</span><span class="special">.</span><span class="identifier">set_verify_mode</span><span class="special">(</span><span class="identifier">net</span><span class="special">::</span><span class="identifier">ssl</span><span class="special">::</span><span class="identifier">verify_peer</span><span class="special">);</span>
+</pre>
+<p>
+        A client must also verify that the hostname or IP address in the certificate
+        matches the expected one. The <a href="../../../../../../doc/html/boost_asio/reference/ssl__host_name_verification.html" target="_top"><code class="computeroutput"><span class="identifier">net</span><span class="special">::</span><span class="identifier">ssl</span><span class="special">::</span><span class="identifier">host_name_verification</span></code></a>
+        helper function object can perform this verification according to the rules
+        described in RFC 6125:
+      </p>
+<pre class="programlisting"><span class="comment">// Verify the remote server's Hostname or IP address</span>
+<span class="identifier">stream</span><span class="special">.</span><span class="identifier">set_verify_callback</span><span class="special">(</span>
+    <span class="identifier">net</span><span class="special">::</span><span class="identifier">ssl</span><span class="special">::</span><span class="identifier">host_name_verification</span><span class="special">(</span><span class="string">"host.name"</span><span class="special">));</span>
+</pre>
+<p>
+        A server can also request and verify a client certificate to authenticate
+        the client:
+      </p>
+<pre class="programlisting"><span class="comment">// Verify the remote client's certificate</span>
+<span class="identifier">ctx</span><span class="special">.</span><span class="identifier">set_verify_mode</span><span class="special">(</span>
+    <span class="identifier">net</span><span class="special">::</span><span class="identifier">ssl</span><span class="special">::</span><span class="identifier">verify_peer</span> <span class="special">|</span>
+    <span class="identifier">net</span><span class="special">::</span><span class="identifier">ssl</span><span class="special">::</span><span class="identifier">verify_fail_if_no_peer_cert</span><span class="special">);</span>
+</pre>
+<h5>
+<a name="beast.using_io.ssl_tls_certificate.h1"></a>
+        <span class="phrase"><a name="beast.using_io.ssl_tls_certificate.server_certificate"></a></span><a class="link" href="ssl_tls_certificate.html#beast.using_io.ssl_tls_certificate.server_certificate">Server Certificate</a>
+      </h5>
+<p>
+        A Server Certificate is a digital certificate that confirms a server's identity
+        as the legitimate destination for a client. It contains a verifiable signature
+        that ensures it was issued by a trusted certificate authority (CA).
+      </p>
+<p>
+        When a server certificate is issued by an intermediate certificate authority,
+        and the client lacks those intermediate certificates, the server should provide
+        all the relevant certificates to the client. This allows the client to verify
+        the final certificate in the chain against the root certificate.
+      </p>
+<p>
+        The following Boost.Asio methods can be used for loading a certificate or
+        a certificate chain:
+      </p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+            <a href="../../../../../../doc/html/boost_asio/reference/ssl__context/use_certificate.html" target="_top"><code class="computeroutput"><span class="identifier">net</span><span class="special">::</span><span class="identifier">ssl</span><span class="special">::</span><span class="identifier">context</span><span class="special">::</span><span class="identifier">use_certificate</span></code></a>
+          </li>
+<li class="listitem">
+            <a href="../../../../../../doc/html/boost_asio/reference/ssl__context/use_certificate_file.html" target="_top"><code class="computeroutput"><span class="identifier">net</span><span class="special">::</span><span class="identifier">ssl</span><span class="special">::</span><span class="identifier">context</span><span class="special">::</span><span class="identifier">use_certificate_file</span></code></a>
+          </li>
+<li class="listitem">
+            <a href="../../../../../../doc/html/boost_asio/reference/ssl__context/use_certificate_chain.html" target="_top"><code class="computeroutput"><span class="identifier">net</span><span class="special">::</span><span class="identifier">ssl</span><span class="special">::</span><span class="identifier">context</span><span class="special">::</span><span class="identifier">use_certificate_chain</span></code></a>
+          </li>
+<li class="listitem">
+            <a href="../../../../../../doc/html/boost_asio/reference/ssl__context/use_certificate_chain_file.html" target="_top"><code class="computeroutput"><span class="identifier">net</span><span class="special">::</span><span class="identifier">ssl</span><span class="special">::</span><span class="identifier">context</span><span class="special">::</span><span class="identifier">use_certificate_chain_file</span></code></a>
+          </li>
+</ul></div>
+<h5>
+<a name="beast.using_io.ssl_tls_certificate.h2"></a>
+        <span class="phrase"><a name="beast.using_io.ssl_tls_certificate.client_certificate"></a></span><a class="link" href="ssl_tls_certificate.html#beast.using_io.ssl_tls_certificate.client_certificate">Client Certificate</a>
+      </h5>
+<p>
+        A server can authenticate clients by requiring and verifying their certificates,
+        preventing access for those without a valid certificate and private key.
+        The server enforces this by modifying peer verification settings:
+      </p>
+<pre class="programlisting"><span class="comment">// Verify the remote client's certificate</span>
+<span class="identifier">ctx</span><span class="special">.</span><span class="identifier">set_verify_mode</span><span class="special">(</span>
+    <span class="identifier">net</span><span class="special">::</span><span class="identifier">ssl</span><span class="special">::</span><span class="identifier">verify_peer</span> <span class="special">|</span>
+    <span class="identifier">net</span><span class="special">::</span><span class="identifier">ssl</span><span class="special">::</span><span class="identifier">verify_fail_if_no_peer_cert</span><span class="special">);</span>
+</pre>
+<p>
+        If used, the necessary CA certificates must be loaded into the server's SSL
+        context to enable verification of the client's certificate.
+      </p>
+<h5>
+<a name="beast.using_io.ssl_tls_certificate.h3"></a>
+        <span class="phrase"><a name="beast.using_io.ssl_tls_certificate.common_name_and_subject_alternat"></a></span><a class="link" href="ssl_tls_certificate.html#beast.using_io.ssl_tls_certificate.common_name_and_subject_alternat">Common
+        Name and Subject Alternative Name</a>
+      </h5>
+<p>
+        The Subject Alternative Name (SAN) is an extension in X.509 certificates
+        that allows multiple domain names, subdomains, or IP addresses to be associated
+        with a single SSL/TLS certificate. Before that it was the Common Name field
+        in the certificate subject which could contain a single hostname.
+      </p>
+<p>
+        <a href="https://datatracker.ietf.org/doc/html/rfc6125#appendix-B.2" target="_top">RFC
+        6125</a> recommends that if a certificate includes a SAN dNSName field,
+        the client must ignore the subject CN field. Some modern browsers, such as
+        Google Chrome, check only the SAN section in an SSL/TLS certificate and reject
+        certificates that contain only the CN field.
+      </p>
+<h5>
+<a name="beast.using_io.ssl_tls_certificate.h4"></a>
+        <span class="phrase"><a name="beast.using_io.ssl_tls_certificate.private_key"></a></span><a class="link" href="ssl_tls_certificate.html#beast.using_io.ssl_tls_certificate.private_key">Private
+        Key</a>
+      </h5>
+<p>
+        The private key of a certificate is required during the SSL/TLS handshake
+        to prove that the certificate's provider is its rightful owner
+      </p>
+<p>
+        The following Boost.Asio methods can be used for loading a private key:
+      </p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+            <a href="../../../../../../doc/html/boost_asio/reference/ssl__context/use_private_key.html" target="_top"><code class="computeroutput"><span class="identifier">net</span><span class="special">::</span><span class="identifier">ssl</span><span class="special">::</span><span class="identifier">context</span><span class="special">::</span><span class="identifier">use_private_key</span></code></a>
+          </li>
+<li class="listitem">
+            <a href="../../../../../../doc/html/boost_asio/reference/ssl__context/use_private_key_file.html" target="_top"><code class="computeroutput"><span class="identifier">net</span><span class="special">::</span><span class="identifier">ssl</span><span class="special">::</span><span class="identifier">context</span><span class="special">::</span><span class="identifier">use_private_key_file</span></code></a>
+          </li>
+<li class="listitem">
+            <a href="../../../../../../doc/html/boost_asio/reference/ssl__context/use_rsa_private_key.html" target="_top"><code class="computeroutput"><span class="identifier">net</span><span class="special">::</span><span class="identifier">ssl</span><span class="special">::</span><span class="identifier">context</span><span class="special">::</span><span class="identifier">use_rsa_private_key</span></code></a>
+          </li>
+<li class="listitem">
+            <a href="../../../../../../doc/html/boost_asio/reference/ssl__context/use_rsa_private_key_file.html" target="_top"><code class="computeroutput"><span class="identifier">net</span><span class="special">::</span><span class="identifier">ssl</span><span class="special">::</span><span class="identifier">context</span><span class="special">::</span><span class="identifier">use_rsa_private_key_file</span></code></a>
+          </li>
+</ul></div>
+<p>
+        If the private key is secured with a password, the <a href="../../../../../../doc/html/boost_asio/reference/ssl__context/set_password_callback.html" target="_top">net::ssl::context::set_password_callback</a>
+        allows specifying a callable object to retrieve the password.
+      </p>
+<h5>
+<a name="beast.using_io.ssl_tls_certificate.h5"></a>
+        <span class="phrase"><a name="beast.using_io.ssl_tls_certificate.self_signed_and_self_issued_cert"></a></span><a class="link" href="ssl_tls_certificate.html#beast.using_io.ssl_tls_certificate.self_signed_and_self_issued_cert">Self-Signed
+        and Self-Issued Certificates</a>
+      </h5>
+<p>
+        A self-issued certificate is a certificate where the issuer and subject are
+        the same entity.
+      </p>
+<p>
+        A self-signed certificate is a self-issued certificate in which the digital
+        signature can be verified using the public key within the certificate.
+      </p>
+<div class="warning"><table border="0" summary="Warning">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[Warning]" src="../../../../../../doc/src/images/warning.png"></td>
+<th align="left">Warning</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+          Installing an untrusted, self-issued, or self-signed CA certificate poses
+          a significant security risk, as there are no restrictions on the domains
+          for which it can issue certificates. This allows attackers to generate
+          fraudulent certificates for any public domain, enabling man-in-the-middle
+          attacks if they gain access to your network.
+        </p></td></tr>
+</table></div>
+<h5>
+<a name="beast.using_io.ssl_tls_certificate.h6"></a>
+        <span class="phrase"><a name="beast.using_io.ssl_tls_certificate.diffie_hellman_dh_parameters"></a></span><a class="link" href="ssl_tls_certificate.html#beast.using_io.ssl_tls_certificate.diffie_hellman_dh_parameters">Diffie-Hellman
+        (DH) Parameters</a>
+      </h5>
+<p>
+        Diffie-Hellman (DH) key exchange is a cryptographic protocol that allows
+        two parties to securely establish a shared secret over an insecure communication
+        channel. The key exchange process involves both parties agreeing on a set
+        of parameters, known as Diffie-Hellman parameters, which include a large
+        prime number <code class="computeroutput"><span class="identifier">p</span></code> and a generator
+        <code class="computeroutput"><span class="identifier">g</span></code>. Since generating these
+        parameters is a computationally expensive task, a user might prefer to provide
+        a precomputed value at startup.
+      </p>
+<p>
+        The following Boost.Asio methods can be used for loading DH parameters:
+      </p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+            <a href="../../../../../../doc/html/boost_asio/reference/ssl__context/use_tmp_dh.html" target="_top"><code class="computeroutput"><span class="identifier">net</span><span class="special">::</span><span class="identifier">ssl</span><span class="special">::</span><span class="identifier">context</span><span class="special">::</span><span class="identifier">use_tmp_dh</span></code></a>
+          </li>
+<li class="listitem">
+            <a href="../../../../../../doc/html/boost_asio/reference/ssl__context/use_tmp_dh_file.html" target="_top"><code class="computeroutput"><span class="identifier">net</span><span class="special">::</span><span class="identifier">ssl</span><span class="special">::</span><span class="identifier">context</span><span class="special">::</span><span class="identifier">use_tmp_dh_file</span></code></a>
+          </li>
+</ul></div>
+<p>
+        If no DH parameter is provided, OpenSSL will refuse to perform any handshake
+        that uses DHE-based cipher suites but will still work with other cipher suites,
+        such as those based on ECDHE.
+      </p>
+<h5>
+<a name="beast.using_io.ssl_tls_certificate.h7"></a>
+        <span class="phrase"><a name="beast.using_io.ssl_tls_certificate.a_self_issued_certificate_exampl"></a></span><a class="link" href="ssl_tls_certificate.html#beast.using_io.ssl_tls_certificate.a_self_issued_certificate_exampl">A
+        Self-Issued Certificate Example</a>
+      </h5>
+<p>
+        In the following example, we will generate a self-signed CA certificate and
+        use it to issue both server and client certificates.
+      </p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+            Generate a CA certificate:
+          </li></ul></div>
+<pre class="programlisting"><span class="identifier">openssl</span> <span class="identifier">req</span> <span class="special">-</span><span class="keyword">new</span> <span class="special">-</span><span class="identifier">newkey</span> <span class="identifier">rsa</span><span class="special">:</span><span class="number">4096</span> <span class="special">-</span><span class="identifier">keyout</span> <span class="identifier">ca</span><span class="special">.</span><span class="identifier">key</span> <span class="special">-</span><span class="identifier">x509</span> <span class="special">-</span><span class="identifier">out</span> <span class="identifier">ca</span><span class="special">.</span><span class="identifier">crt</span> <span class="special">-</span><span class="identifier">subj</span> <span class="string">"/CN=localhost"</span> <span class="special">-</span><span class="identifier">days</span> <span class="number">365</span>
+</pre>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+            Generate a Server CSR:
+          </li></ul></div>
+<pre class="programlisting"><span class="identifier">openssl</span> <span class="identifier">req</span> <span class="special">-</span><span class="keyword">new</span> <span class="special">-</span><span class="identifier">newkey</span> <span class="identifier">rsa</span><span class="special">:</span><span class="number">4096</span> <span class="special">-</span><span class="identifier">keyout</span> <span class="identifier">server</span><span class="special">.</span><span class="identifier">key</span> <span class="special">-</span><span class="identifier">out</span> <span class="identifier">server</span><span class="special">.</span><span class="identifier">csr</span> <span class="special">-</span><span class="identifier">subj</span> <span class="string">"/CN=localhost"</span> <span class="special">-</span><span class="identifier">addext</span> <span class="string">"subjectAltName=DNS:localhost,IP:127.0.0.1"</span>
+</pre>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+            Sign the Server CSR using our CA:
+          </li></ul></div>
+<pre class="programlisting"><span class="identifier">openssl</span> <span class="identifier">x509</span> <span class="special">-</span><span class="identifier">req</span> <span class="special">-</span><span class="identifier">in</span> <span class="identifier">server</span><span class="special">.</span><span class="identifier">csr</span> <span class="special">-</span><span class="identifier">CA</span> <span class="identifier">ca</span><span class="special">.</span><span class="identifier">crt</span> <span class="special">-</span><span class="identifier">CAkey</span> <span class="identifier">ca</span><span class="special">.</span><span class="identifier">key</span> <span class="special">-</span><span class="identifier">copy_extensions</span> <span class="identifier">copy</span> <span class="special">-</span><span class="identifier">days</span> <span class="number">365</span> <span class="special">-</span><span class="identifier">out</span> <span class="identifier">server</span><span class="special">.</span><span class="identifier">crt</span>
+</pre>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+            Generate a Client CSR:
+          </li></ul></div>
+<pre class="programlisting"><span class="identifier">openssl</span> <span class="identifier">req</span> <span class="special">-</span><span class="keyword">new</span> <span class="special">-</span><span class="identifier">newkey</span> <span class="identifier">rsa</span><span class="special">:</span><span class="number">4096</span> <span class="special">-</span><span class="identifier">keyout</span> <span class="identifier">client</span><span class="special">.</span><span class="identifier">key</span> <span class="special">-</span><span class="identifier">out</span> <span class="identifier">client</span><span class="special">.</span><span class="identifier">csr</span> <span class="special">-</span><span class="identifier">subj</span> <span class="string">"/CN=client.1"</span>
+</pre>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+            Sign the Client CSR using our CA:
+          </li></ul></div>
+<pre class="programlisting"><span class="identifier">openssl</span> <span class="identifier">x509</span> <span class="special">-</span><span class="identifier">req</span> <span class="special">-</span><span class="identifier">in</span> <span class="identifier">client</span><span class="special">.</span><span class="identifier">csr</span> <span class="special">-</span><span class="identifier">CA</span> <span class="identifier">ca</span><span class="special">.</span><span class="identifier">crt</span> <span class="special">-</span><span class="identifier">CAkey</span> <span class="identifier">ca</span><span class="special">.</span><span class="identifier">key</span> <span class="special">-</span><span class="identifier">days</span> <span class="number">365</span> <span class="special">-</span><span class="identifier">out</span> <span class="identifier">client</span><span class="special">.</span><span class="identifier">crt</span>
+</pre>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+            Generate a DH parameters file:
+          </li></ul></div>
+<pre class="programlisting"><span class="identifier">openssl</span> <span class="identifier">dhparam</span> <span class="special">-</span><span class="identifier">out</span> <span class="identifier">dh4096</span><span class="special">.</span><span class="identifier">pem</span> <span class="number">4096</span>
+</pre>
+<p>
+        Server example: <a href="../../../../example/doc/ssl/server.cpp" target="_top">server.cpp</a>
+      </p>
+<p>
+        Note that the server is configured in such a way that it requests and verifies
+        the client certificate. You can disable this by commenting out the related
+        line in the example.
+      </p>
+<p>
+        You can test the server using this cURL command:
+      </p>
+<pre class="programlisting"><span class="identifier">curl</span> <span class="identifier">https</span><span class="special">://</span><span class="identifier">localhost</span><span class="special">:</span><span class="number">8080</span> <span class="special">--</span><span class="identifier">cacert</span> <span class="identifier">ca</span><span class="special">.</span><span class="identifier">crt</span> <span class="special">--</span><span class="identifier">cert</span> <span class="identifier">client</span><span class="special">.</span><span class="identifier">crt</span> <span class="special">--</span><span class="identifier">key</span> <span class="identifier">client</span><span class="special">.</span><span class="identifier">key</span>
+</pre>
+<p>
+        Also, you can use the client example: <a href="../../../../example/doc/ssl/client.cpp" target="_top">client.cpp</a>
+      </p>
+</div>
+<div class="copyright-footer">Copyright © 2016-2019 Vinnie
+      Falco<p>
+        Distributed under the Boost Software License, Version 1.0. (See accompanying
+        file LICENSE_1_0.txt or copy at <a href="http://www.boost.org/LICENSE_1_0.txt" target="_top">http://www.boost.org/LICENSE_1_0.txt</a>)
+      </p>
+</div>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="writing_composed_operations/detect_ssl.html"><img src="../../../../../../doc/src/images/prev.png" alt="Prev"></a><a accesskey="u" href="../using_io.html"><img src="../../../../../../doc/src/images/up.png" alt="Up"></a><a accesskey="h" href="../../index.html"><img src="../../../../../../doc/src/images/home.png" alt="Home"></a><a accesskey="n" href="ssl_tls_shutdown.html"><img src="../../../../../../doc/src/images/next.png" alt="Next"></a>
+</div>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>boost::mqtt5::logger</title>
+<link rel="stylesheet" href="../../../../../../doc/src/boostbook.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="../../index.html" title="Chapter 1. Boost.MQTT5: a C++17 MQTT client">
+<link rel="up" href="../../pt02.html" title="Part Two: Reference. ">
+<link rel="prev" href="boost__mqtt5__log_level.html" title="boost::mqtt5::log_level">
+<link rel="next" href="boost__mqtt5__logger/logger.html" title="boost::mqtt5::logger::logger">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table cellpadding="2" width="100%"><tr>
+<td valign="top"><img alt="Boost C++ Libraries" width="277" height="86" src="../../../../../../boost.png"></td>
+<td align="center"><a href="../../../../../../index.html">Home</a></td>
+<td align="center"><a href="../../../../../../libs/libraries.htm">Libraries</a></td>
+<td align="center"><a href="http://www.boost.org/users/people.html">People</a></td>
+<td align="center"><a href="http://www.boost.org/users/faq.html">FAQ</a></td>
+<td align="center"><a href="../../../../../../more/index.htm">More</a></td>
+</tr></table>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="boost__mqtt5__log_level.html"><img src="../../../../../../doc/src/images/prev.png" alt="Prev"></a><a accesskey="u" href="../../pt02.html"><img src="../../../../../../doc/src/images/up.png" alt="Up"></a><a accesskey="h" href="../../index.html"><img src="../../../../../../doc/src/images/home.png" alt="Home"></a><a accesskey="n" href="boost__mqtt5__logger/logger.html"><img src="../../../../../../doc/src/images/next.png" alt="Next"></a>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="mqtt5.ref.boost__mqtt5__logger"></a><a class="link" href="boost__mqtt5__logger.html" title="boost::mqtt5::logger">boost::mqtt5::logger</a>
+</h4></div></div></div>
+<p>
+        A logger class that can used by the <a class="link" href="boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></a> to output the results
+        of operations to stderr.
+      </p>
+<h5>
+<a name="mqtt5.ref.boost__mqtt5__logger.h0"></a>
+        <span class="phrase"><a name="mqtt5.ref.boost__mqtt5__logger.synopsis"></a></span><a class="link" href="boost__mqtt5__logger.html#mqtt5.ref.boost__mqtt5__logger.synopsis">Synopsis</a>
+      </h5>
+<p>
+        Defined in header <code class="literal">&lt;<a href="https://github.com/boostorg/mqtt5/blob/master/include/boost/mqtt5/logger.hpp" target="_top">boost/mqtt5/logger.hpp</a>&gt;</code>
+      </p>
+<pre class="programlisting"><span class="keyword">class</span> <span class="identifier">logger</span><span class="special">;</span>
+</pre>
+<h5>
+<a name="mqtt5.ref.boost__mqtt5__logger.h1"></a>
+        <span class="phrase"><a name="mqtt5.ref.boost__mqtt5__logger.member_functions"></a></span><a class="link" href="boost__mqtt5__logger.html#mqtt5.ref.boost__mqtt5__logger.member_functions">Member
+        Functions</a>
+      </h5>
+<div class="informaltable"><table class="table">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead><tr>
+<th>
+                <p>
+                  Name
+                </p>
+              </th>
+<th>
+                <p>
+                  Description
+                </p>
+              </th>
+</tr></thead>
+<tbody>
+<tr>
+<td>
+                <p>
+                  <span class="bold"><strong><a class="link" href="boost__mqtt5__logger/at_connack.html" title="boost::mqtt5::logger::at_connack">at_connack</a></strong></span>
+                </p>
+              </td>
+<td>
+                <p>
+                  Outputs the contents of the <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901074" target="_top"><code class="computeroutput"><span class="identifier">CONNACK</span></code></a> packet sent by
+                  the Broker.
+                </p>
+              </td>
+</tr>
+<tr>
+<td>
+                <p>
+                  <span class="bold"><strong><a class="link" href="boost__mqtt5__logger/at_disconnect.html" title="boost::mqtt5::logger::at_disconnect">at_disconnect</a></strong></span>
+                </p>
+              </td>
+<td>
+                <p>
+                  Outputs the contents of the <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901205" target="_top"><code class="computeroutput"><span class="identifier">DISCONNECT</span></code></a> packet sent
+                  by the Broker.
+                </p>
+              </td>
+</tr>
+<tr>
+<td>
+                <p>
+                  <span class="bold"><strong><a class="link" href="boost__mqtt5__logger/at_resolve.html" title="boost::mqtt5::logger::at_resolve">at_resolve</a></strong></span>
+                </p>
+              </td>
+<td>
+                <p>
+                  Outputs the results of the resolve operation.
+                </p>
+              </td>
+</tr>
+<tr>
+<td>
+                <p>
+                  <span class="bold"><strong><a class="link" href="boost__mqtt5__logger/at_tcp_connect.html" title="boost::mqtt5::logger::at_tcp_connect">at_tcp_connect</a></strong></span>
+                </p>
+              </td>
+<td>
+                <p>
+                  Outputs the results of the TCP connect operation.
+                </p>
+              </td>
+</tr>
+<tr>
+<td>
+                <p>
+                  <span class="bold"><strong><a class="link" href="boost__mqtt5__logger/at_tls_handshake.html" title="boost::mqtt5::logger::at_tls_handshake">at_tls_handshake</a></strong></span>
+                </p>
+              </td>
+<td>
+                <p>
+                  Outputs the results of the TLS handshake operation.
+                </p>
+              </td>
+</tr>
+<tr>
+<td>
+                <p>
+                  <span class="bold"><strong><a class="link" href="boost__mqtt5__logger/at_ws_handshake.html" title="boost::mqtt5::logger::at_ws_handshake">at_ws_handshake</a></strong></span>
+                </p>
+              </td>
+<td>
+                <p>
+                  Outputs the results of the WebSocket handshake operation.
+                </p>
+              </td>
+</tr>
+<tr>
+<td>
+                <p>
+                  <span class="bold"><strong><a class="link" href="boost__mqtt5__logger/logger.html" title="boost::mqtt5::logger::logger">logger</a> <span class="silver">[constructor]</span></strong></span>
+                </p>
+              </td>
+<td>
+                <p>
+                  Constructs a logger that filters log messages based on the specified
+                  log level.
+                </p>
+              </td>
+</tr>
+</tbody>
+</table></div>
+<h5>
+<a name="mqtt5.ref.boost__mqtt5__logger.h2"></a>
+        <span class="phrase"><a name="mqtt5.ref.boost__mqtt5__logger.description"></a></span><a class="link" href="boost__mqtt5__logger.html#mqtt5.ref.boost__mqtt5__logger.description">Description</a>
+      </h5>
+<p>
+        All functions are invoked directly within the <a class="link" href="boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></a> using its default executor.
+        If the <a class="link" href="boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></a> is initialized with
+        an explicit or implicit strand, none of the functions will be invoked concurrently.
+      </p>
+<h5>
+<a name="mqtt5.ref.boost__mqtt5__logger.h3"></a>
+        <span class="phrase"><a name="mqtt5.ref.boost__mqtt5__logger.thread_safety"></a></span><a class="link" href="boost__mqtt5__logger.html#mqtt5.ref.boost__mqtt5__logger.thread_safety">Thread
+        safety</a>
+      </h5>
+<p>
+        Distinct objects: usafe.
+      </p>
+<p>
+        Shared objects: unsafe.
+      </p>
+<p>
+        This class is <span class="bold"><strong>not thread-safe</strong></span>.
+      </p>
+<p>
+        Convenience header <code class="literal">&lt;<a href="https://github.com/boostorg/mqtt5/blob/master/include/boost/mqtt5.hpp" target="_top">boost/mqtt5.hpp</a>&gt;</code>
+      </p>
+</div>
+<div class="copyright-footer">Copyright © 2023-2025 Mireo<p>
+        Distributed under the Boost Software License, Version 1.0. (See accompanying
+        file LICENSE_1_0.txt or copy at <a href="http://www.boost.org/LICENSE_1_0.txt" target="_top">http://www.boost.org/LICENSE_1_0.txt</a>)
+      </p>
+</div>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="boost__mqtt5__log_level.html"><img src="../../../../../../doc/src/images/prev.png" alt="Prev"></a><a accesskey="u" href="../../pt02.html"><img src="../../../../../../doc/src/images/up.png" alt="Up"></a><a accesskey="h" href="../../index.html"><img src="../../../../../../doc/src/images/home.png" alt="Home"></a><a accesskey="n" href="boost__mqtt5__logger/logger.html"><img src="../../../../../../doc/src/images/next.png" alt="Next"></a>
+</div>
+</body>
+</html>

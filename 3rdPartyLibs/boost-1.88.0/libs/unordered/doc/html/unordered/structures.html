@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Data Structures :: Boost.Unordered</title>
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../unordered/_/css/site.css">
+  </head>
+  <body class="article">
+<div class="body">
+<div class="nav-container" data-component="unordered" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="intro.html">Boost.Unordered</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="intro.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="buckets.html">Basics of Hash Tables</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="hash_equality.html">Equality Predicates and Hash Functions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="regular.html">Regular Containers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="concurrent.html">Concurrent Containers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="hash_quality.html">Hash Quality</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="compliance.html">Standard Compliance</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="structures.html">Data Structures</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="debuggability.html">Debuggability</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="benchmarks.html">Benchmarks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="rationale.html">Implementation Rationale</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="ref.html">Reference</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_map_fwd.html"><code>&lt;boost/unordered/unordered_map_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_map_top.html"><code>&lt;boost/unordered_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_map.html"><code>&lt;boost/unordered/unordered_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_map.html"><code>unordered_map</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_multimap.html"><code>unordered_multimap</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_set_fwd.html"><code>&lt;boost/unordered/unordered_set_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_set_top.html"><code>&lt;boost/unordered_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_set.html"><code>&lt;boost/unordered/unordered_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_set.html"><code>unordered_set</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_multiset.html"><code>unordered_multiset</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/hash_traits.html">Hash Traits</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/stats.html">Statistics</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_flat_map_fwd.html"><code>&lt;boost/unordered/unordered_flat_map_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_flat_map.html"><code>&lt;boost/unordered/unordered_flat_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_flat_map.html"><code>unordered_flat_map</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_flat_set_fwd.html"><code>&lt;boost/unordered/unordered_flat_set_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_flat_set.html"><code>&lt;boost/unordered/unordered_flat_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_flat_set.html"><code>unordered_flat_set</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_node_map_fwd.html"><code>&lt;boost/unordered/unordered_node_map_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_node_map.html"><code>&lt;boost/unordered/unordered_node_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_node_map.html"><code>unordered_node_map</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_node_set_fwd.html"><code>&lt;boost/unordered/unordered_node_set_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_node_set.html"><code>&lt;boost/unordered/unordered_node_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_node_set.html"><code>unordered_node_set</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_flat_map_fwd.html"><code>&lt;boost/unordered/concurrent_flat_map_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_flat_map.html"><code>&lt;boost/unordered/concurrent_flat_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/concurrent_flat_map.html"><code>concurrent_flat_map</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_flat_set_fwd.html"><code>&lt;boost/unordered/concurrent_flat_set_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_flat_set.html"><code>&lt;boost/unordered/concurrent_flat_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/concurrent_flat_set.html"><code>concurrent_flat_set</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_node_map_fwd.html"><code>&lt;boost/unordered/concurrent_node_map_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_node_map.html"><code>&lt;boost/unordered/concurrent_node_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/concurrent_node_map.html"><code>concurrent_node_map</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_node_set_fwd.html"><code>&lt;boost/unordered/concurrent_node_set_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_node_set.html"><code>&lt;boost/unordered/concurrent_node_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/concurrent_node_set.html"><code>concurrent_node_set</code></a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="changes.html">Change Log</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="bibliography.html">Bibliography</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="copyright.html">Copyright and License</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="intro.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="intro.html">Boost.Unordered</a></li>
+    <li><a href="structures.html">Data Structures</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Data Structures</h1>
+<div class="sect1">
+<h2 id="structures_closed_addressing_containers"><a class="anchor" href="#structures_closed_addressing_containers"></a>Closed-addressing Containers</h2>
+<div class="sectionbody">
+<style>
+  .imageblock > .title {
+    text-align: inherit;
+  }
+</style>
+<div class="paragraph">
+<p>Boost.Unordered sports one of the fastest implementations of closed addressing, also commonly known as <a href="https://en.wikipedia.org/wiki/Hash_table#Separate_chaining">separate chaining</a>. An example figure representing the data structure is below:</p>
+</div>
+<div id="img-bucket-groups" class="imageblock text-center">
+<div class="content">
+<img src="_images/bucket-groups.png" alt="bucket groups">
+</div>
+<div class="title">Figure 1. A simple bucket group approach</div>
+</div>
+<div class="paragraph">
+<p>An array of "buckets" is allocated and each bucket in turn points to its own individual linked list. This makes meeting the standard requirements of bucket iteration straight-forward. Unfortunately, iteration of the entire container is often times slow using this layout as each bucket must be examined for occupancy, yielding a time complexity of <code>O(bucket_count() + size())</code> when the standard requires complexity to be <code>O(size())</code>.</p>
+</div>
+<div class="paragraph">
+<p>Canonical standard implementations will wind up looking like the diagram below:</p>
+</div>
+<div class="imageblock text-center text-center">
+<div class="content">
+<a class="image" href="_images/singly-linked.png" target="_blank" rel="noopener"><img src="_images/singly-linked.png" alt="singly linked"></a>
+</div>
+<div class="title">Figure 2. The canonical standard approach</div>
+</div>
+<div class="paragraph">
+<p>It&#8217;s worth noting that this approach is only used by libc++ and libstdc++; the MSVC Dinkumware implementation uses a different one. A more detailed analysis of the standard containers can be found <a href="http://bannalia.blogspot.com/2013/10/implementation-of-c-unordered.html">here</a>.</p>
+</div>
+<div class="paragraph">
+<p>This unusually laid out data structure is chosen to make iteration of the entire container efficient by inter-connecting all of the nodes into a singly-linked list. One might also notice that buckets point to the node <em>before</em> the start of the bucket&#8217;s elements. This is done so that removing elements from the list can be done efficiently without introducing the need for a doubly-linked list. Unfortunately, this data structure introduces a guaranteed extra indirection. For example, to access the first element of a bucket, something like this must be done:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">auto const idx = get_bucket_idx(hash_function(key));
+node* p = buckets[idx]; // first load
+node* n = p-&gt;next; // second load
+if (n &amp;&amp; is_in_bucket(n, idx)) {
+  value_type const&amp; v = *n; // third load
+  // ...
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>With a simple bucket group layout, this is all that must be done:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">auto const idx = get_bucket_idx(hash_function(key));
+node* n = buckets[idx]; // first load
+if (n) {
+  value_type const&amp; v = *n; // second load
+  // ...
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In practice, the extra indirection can have a dramatic performance impact to common operations such as <code>insert</code>, <code>find</code> and <code>erase</code>. But to keep iteration of the container fast, Boost.Unordered introduces a novel data structure, a "bucket group". A bucket group is a fixed-width view of a subsection of the buckets array. It contains a bitmask (a <code>std::size_t</code>) which it uses to track occupancy of buckets and contains two pointers so that it can form a doubly-linked list with non-empty groups. An example diagram is below:</p>
+</div>
+<div id="img-fca-layout" class="imageblock text-center">
+<div class="content">
+<img src="_images/fca.png" alt="fca">
+</div>
+<div class="title">Figure 3. The new layout used by Boost</div>
+</div>
+<div class="paragraph">
+<p>Thus container-wide iteration is turned into traversing the non-empty bucket groups (an operation with constant time complexity) which reduces the time complexity back to <code>O(size())</code>. In total, a bucket group is only 4 words in size and it views <code>sizeof(std::size_t) * CHAR_BIT</code> buckets meaning that for all common implementations, there&#8217;s only 4 bits of space overhead per bucket introduced by the bucket groups.</p>
+</div>
+<div class="paragraph">
+<p>A more detailed description of Boost.Unordered&#8217;s closed-addressing implementation is
+given in an
+<a href="https://bannalia.blogspot.com/2022/06/advancing-state-of-art-for.html">external article</a>.
+For more information on implementation rationale, read the
+<a href="rationale.html#rationale_closed_addressing_containers" class="xref page">corresponding section</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="structures_open_addressing_containers"><a class="anchor" href="#structures_open_addressing_containers"></a>Open-addressing Containers</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The diagram shows the basic internal layout of <code>boost::unordered_flat_set</code>/<code>unordered_node_set</code> and
+<code>boost:unordered_flat_map</code>/<code>unordered_node_map</code>.</p>
+</div>
+<div id="img-foa-layout" class="imageblock text-center">
+<div class="content">
+<img src="_images/foa.png" alt="foa">
+</div>
+<div class="title">Figure 4. Open-addressing layout used by Boost.Unordered.</div>
+</div>
+<div class="paragraph">
+<p>As with all open-addressing containers, elements (or pointers to the element nodes in the case of
+<code>boost::unordered_node_set</code> and <code>boost::unordered_node_map</code>) are stored directly in the bucket array.
+This array is logically divided into 2<sup><em>n</em></sup> <em>groups</em> of 15 elements each.
+In addition to the bucket array, there is an associated <em>metadata array</em> with 2<sup><em>n</em></sup>
+16-byte words.</p>
+</div>
+<div id="img-foa-metadata" class="imageblock text-center">
+<div class="content">
+<img src="_images/foa-metadata.png" alt="foa metadata">
+</div>
+<div class="title">Figure 5. Breakdown of a metadata word.</div>
+</div>
+<div class="paragraph">
+<p>A metadata word is divided into 15 <em>h</em><sub><em>i</em></sub> bytes (one for each associated
+bucket), and an <em>overflow byte</em> (<em>ofw</em> in the diagram). The value of <em>h</em><sub><em>i</em></sub> is:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>0 if the corresponding bucket is empty.</p>
+</li>
+<li>
+<p>1 to encode a special empty bucket called a <em>sentinel</em>, which is used internally to
+stop iteration when the container has been fully traversed.</p>
+</li>
+<li>
+<p>If the bucket is occupied, a <em>reduced hash value</em> obtained from the hash value of
+the element.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>When looking for an element with hash value <em>h</em>, SIMD technologies such as
+<a href="https://en.wikipedia.org/wiki/SSE2">SSE2</a> and
+<a href="https://en.wikipedia.org/wiki/ARM_architecture_family#Advanced_SIMD_(Neon)">Neon</a> allow us
+to very quickly inspect the full metadata word and look for the reduced value of <em>h</em> among all the
+15 buckets with just a handful of CPU instructions: non-matching buckets can be
+readily discarded, and those whose reduced hash value matches need be inspected via full
+comparison with the corresponding element. If the looked-for element is not present,
+the overflow byte is inspected:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If the bit in the position <em>h</em> mod 8 is zero, lookup terminates (and the
+element is not present).</p>
+</li>
+<li>
+<p>If the bit is set to 1 (the group has been <em>overflowed</em>), further groups are
+checked using <a href="https://en.wikipedia.org/wiki/Quadratic_probing"><em>quadratic probing</em></a>, and
+the process is repeated.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Insertion is algorithmically similar: empty buckets are located using SIMD,
+and when going past a full group its corresponding overflow bit is set to 1.</p>
+</div>
+<div class="paragraph">
+<p>In architectures without SIMD support, the logical layout stays the same, but the metadata
+word is codified using a technique we call <em>bit interleaving</em>: this layout allows us
+to emulate SIMD with reasonably good performance using only standard arithmetic and
+logical operations.</p>
+</div>
+<div id="img-foa-metadata-interleaving" class="imageblock text-center">
+<div class="content">
+<img src="_images/foa-metadata-interleaving.png" alt="foa metadata interleaving">
+</div>
+<div class="title">Figure 6. Bit-interleaved metadata word.</div>
+</div>
+<div class="paragraph">
+<p>A more detailed description of Boost.Unordered&#8217;s open-addressing implementation is
+given in an
+<a href="https://bannalia.blogspot.com/2022/11/inside-boostunorderedflatmap.html">external article</a>.
+For more information on implementation rationale, read the
+<a href="rationale.html#rationale_open_addresing_containers" class="xref page">corresponding section</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="structures_concurrent_containers"><a class="anchor" href="#structures_concurrent_containers"></a>Concurrent Containers</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code>boost::concurrent_flat_set</code>/<code>boost::concurrent_node_set</code> and
+<code>boost::concurrent_flat_map</code>/<code>boost::concurrent_node_map</code> use the basic
+<a href="#structures_open_addressing_containers">open-addressing layout</a> described above
+augmented with synchronization mechanisms.</p>
+</div>
+<div id="img-cfoa-layout" class="imageblock text-center">
+<div class="content">
+<img src="_images/cfoa.png" alt="cfoa">
+</div>
+<div class="title">Figure 7. Concurrent open-addressing layout used by Boost.Unordered.</div>
+</div>
+<div class="paragraph">
+<p>Two levels of synchronization are used:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Container level: A read-write mutex is used to control access from any operation
+to the container. Typically, such access is in read mode (that is, concurrent) even
+for modifying operations, so for most practical purposes there is no thread
+contention at this level. Access is only in write mode (blocking) when rehashing or
+performing container-wide operations such as swapping or assignment.</p>
+</li>
+<li>
+<p>Group level: Each 15-slot group is equipped with an 8-byte word containing:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>A read-write spinlock for synchronized access to any element in the group.</p>
+</li>
+<li>
+<p>An atomic <em>insertion counter</em> used for optimistic insertion as described
+below.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>By using atomic operations to access the group metadata, lookup is (group-level)
+lock-free up to the point where an actual comparison needs to be done with an element
+that has been previously SIMD-matched: only then is the group&#8217;s spinlock used.</p>
+</div>
+<div class="paragraph">
+<p>Insertion uses the following <em>optimistic algorithm</em>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The value of the insertion counter for the initial group in the probe
+sequence is locally recorded (let&#8217;s call this value <code>c0</code>).</p>
+</li>
+<li>
+<p>Lookup is as described above. If lookup finds no equivalent element,
+search for an available slot for insertion successively locks/unlocks
+each group in the probing sequence.</p>
+</li>
+<li>
+<p>When an available slot is located, it is preemptively occupied (its
+reduced hash value is set) and the insertion counter is atomically
+incremented: if no other thread has incremented the counter during the
+whole operation (which is checked by comparing with <code>c0</code>), then we&#8217;re
+good to go and complete the insertion, otherwise we roll back and start
+over.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This algorithm has very low contention both at the lookup and actual
+insertion phases in exchange for the possibility that computations have
+to be started over if some other thread interferes in the process by
+performing a succesful insertion beginning at the same group. In
+practice, the start-over frequency is extremely small, measured in the range
+of parts per million for some of our benchmarks.</p>
+</div>
+<div class="paragraph">
+<p>For more information on implementation rationale, read the
+<a href="rationale.html#rationale_concurrent_containers" class="xref page">corresponding section</a>.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<script id="site-script" src="../unordered/_/js/site.js" data-ui-root-path="../unordered/_"></script>
+<script async src="../unordered/_/js/vendor/highlight.js"></script>
+  </body>
+</html>
