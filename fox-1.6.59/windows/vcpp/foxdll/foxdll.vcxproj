@@ -225,7 +225,7 @@
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <StringPooling>true</StringPooling>
       <AdditionalIncludeDirectories>..\..\..\include;D:\SUMOLibraries\3rdPartyLibs\libpng-1.6.44\include;D:\SUMOLibraries\3rdPartyLibs\jpeg-9f\include;D:\SUMOLibraries\3rdPartyLibs\tiff-4.7.0\include;D:\SUMOLibraries\3rdPartyLibs\zlib-1.3.1\include;D:\SUMOLibraries\3rdPartyLibs\bzip2-1.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;HAVE_ZLIB_H;HAVE_BZ2LIB_H;HAVE_TIFF_H;HAVE_PNG_H;HAVE_JPEG_H;WIN32;_WINDOWS;UNICODE;_USRDLL;FOXDLL;FOXDLL_EXPORTS;HAVE_GL_H;HAVE_GLU_H;HAVE_VSSCANF</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;HAVE_ZLIB_H;HAVE_BZ2LIB_H;HAVE_TIFF_H;HAVE_PNG_H;HAVE_JPEG_H;WIN32;UNICODE;_NDEBUG;_WINDOWS;_USRDLL;FOXDLL;FOXDLL_EXPORTS;HAVE_GL_H;HAVE_GLU_H;HAVE_VSSCANF</PreprocessorDefinitions>
       <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
       <PrecompiledHeaderOutputFile>.\Release\foxdll.pch</PrecompiledHeaderOutputFile>
       <ObjectFileName>.\Release\</ObjectFileName>
