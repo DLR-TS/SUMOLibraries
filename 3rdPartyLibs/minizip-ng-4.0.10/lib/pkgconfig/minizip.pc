@@ -1,0 +1,14 @@
+prefix=D:/SUMOLibraries/3rdPartyLibs/minizip-ng-4.0.10
+exec_prefix=D:/SUMOLibraries/3rdPartyLibs/minizip-ng-4.0.10
+libdir=D:/SUMOLibraries/3rdPartyLibs/minizip-ng-4.0.10/lib
+sharedlibdir=D:/SUMOLibraries/3rdPartyLibs/minizip-ng-4.0.10/lib
+includedir=D:/SUMOLibraries/3rdPartyLibs/minizip-ng-4.0.10/include/minizip
+
+Name: minizip
+Description: Zip manipulation library
+Version: 4.0.10
+
+Requires.private: zlib
+Libs: -L${libdir} -L${sharedlibdir} -lminizip
+Libs.private: -lbz2
+Cflags: -I${includedir}
