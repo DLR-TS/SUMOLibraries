@@ -56,10 +56,11 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target freetype
-add_library(freetype SHARED IMPORTED)
+add_library(freetype STATIC IMPORTED)
 
 set_target_properties(freetype PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include/freetype2"
+  INTERFACE_LINK_LIBRARIES "\$<\$<NOT:\$<CONFIG:DEBUG>>:D:/SUMOLibraries/3rdPartyLibs/zlib-1.3.1/lib/zlib.lib>;\$<\$<CONFIG:DEBUG>:D:/SUMOLibraries/3rdPartyLibs/zlib-1.3.1/lib/zlibd.lib>;D:/SUMOLibraries/3rdPartyLibs/bzip2-1.0.8/lib/libbz2.lib;\$<\$<NOT:\$<CONFIG:DEBUG>>:D:/SUMOLibraries/3rdPartyLibs/libpng-1.6.44/lib/libpng16.lib>;\$<\$<CONFIG:DEBUG>:D:/SUMOLibraries/3rdPartyLibs/libpng-1.6.44/lib/libpng16d.lib>;\$<\$<NOT:\$<CONFIG:DEBUG>>:D:/SUMOLibraries/3rdPartyLibs/zlib-1.3.1/lib/zlib.lib>;\$<\$<CONFIG:DEBUG>:D:/SUMOLibraries/3rdPartyLibs/zlib-1.3.1/lib/zlibd.lib>"
 )
 
 # Create imported target Freetype::Freetype
