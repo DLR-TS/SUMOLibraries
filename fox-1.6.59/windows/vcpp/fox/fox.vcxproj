@@ -121,7 +121,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <StringPooling>true</StringPooling>
-      <AdditionalIncludeDirectories>..\..\..\include;D:\SUMOLibraries\3rdPartyLibs\libpng-1.6.44\include;D:\SUMOLibraries\3rdPartyLibs\jpeg-9f\include;D:\SUMOLibraries\3rdPartyLibs\tiff-4.7.0\include;D:\SUMOLibraries\3rdPartyLibs\zlib-1.3.1\include;D:\SUMOLibraries\3rdPartyLibs\bzip2-1.0.8\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\include;D:\SUMOLibraries\3rdPartyLibs\libpng-1.6.44\include;D:\SUMOLibraries\3rdPartyLibs\jpeg-9f\include;D:\SUMOLibraries\3rdPartyLibs\tiff-4.7.0\include;D:\SUMOLibraries\3rdPartyLibs\zlib-1.3.1\include;D:\SUMOLibraries\3rdPartyLibs\bzip2-1.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;HAVE_TIFF_H;HAVE_PNG_H;HAVE_JPEG_H;HAVE_ZLIB_H;HAVE_BZ2LIB_H;HAVE_VSSCANF;HAVE_STRTOLL;HAVE_STRTOULL</PreprocessorDefinitions>
       <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
       <PrecompiledHeaderOutputFile>.\Release\fox.pch</PrecompiledHeaderOutputFile>
@@ -137,7 +137,7 @@
     </Bscmake>
     <Lib>
       <OutputFile>..\..\..\lib\foxStatic-16.lib</OutputFile>
-      <AdditionalDependencies>D:\SUMOLibraries\3rdPartyLibs\tiff-4.7.0\lib\tiff.lib;D:\SUMOLibraries\3rdPartyLibs\libpng-1.6.44\lib\libpng16.lib;D:\SUMOLibraries\3rdPartyLibs\jpeg-9f\lib\jpeg.lib;D:\SUMOLibraries\3rdPartyLibs\bzip2-1.0.8\lib\libbz2.lib;D:\SUMOLibraries\3rdPartyLibs\zlib-1.3.1\lib\zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>D:\SUMOLibraries\3rdPartyLibs\tiff-4.7.0\lib\tiff.lib;D:\SUMOLibraries\3rdPartyLibs\libpng-1.6.44\lib\libpng16.lib;D:\SUMOLibraries\3rdPartyLibs\jpeg-9f\lib\jpeg.lib;D:\SUMOLibraries\3rdPartyLibs\bzip2-1.1.0\lib\bz2.lib;D:\SUMOLibraries\3rdPartyLibs\zlib-1.3.1\lib\zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -176,7 +176,7 @@
       <WarningLevel>Level3</WarningLevel>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <AdditionalIncludeDirectories>..\..\..\include;D:\SUMOLibraries\3rdPartyLibs\libpng-1.6.44\include;D:\SUMOLibraries\3rdPartyLibs\jpeg-9f\include;D:\SUMOLibraries\3rdPartyLibs\tiff-4.7.0\include;D:\SUMOLibraries\3rdPartyLibs\zlib-1.3.1\include;D:\SUMOLibraries\3rdPartyLibs\bzip2-1.0.8\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\include;D:\SUMOLibraries\3rdPartyLibs\libpng-1.6.44\include;D:\SUMOLibraries\3rdPartyLibs\jpeg-9f\include;D:\SUMOLibraries\3rdPartyLibs\tiff-4.7.0\include;D:\SUMOLibraries\3rdPartyLibs\zlib-1.3.1\include;D:\SUMOLibraries\3rdPartyLibs\bzip2-1.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;HAVE_TIFF_H;HAVE_PNG_H;HAVE_JPEG_H;HAVE_ZLIB_H;HAVE_BZ2LIB_H;HAVE_VSSCANF;HAVE_STRTOLL;HAVE_STRTOULL</PreprocessorDefinitions>
       <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
       <PrecompiledHeaderOutputFile>.\Debug\fox.pch</PrecompiledHeaderOutputFile>
@@ -194,7 +194,7 @@
     </Bscmake>
     <Lib>
       <OutputFile>..\..\..\lib\foxStatic-16d.lib</OutputFile>
-      <AdditionalDependencies>D:\SUMOLibraries\3rdPartyLibs\tiff-4.7.0\lib\tiffd.lib;D:\SUMOLibraries\3rdPartyLibs\libpng-1.6.44\lib\libpng16d.lib;D:\SUMOLibraries\3rdPartyLibs\jpeg-9f\lib\jpeg.lib;D:\SUMOLibraries\3rdPartyLibs\bzip2-1.0.8\lib\libbz2.lib;D:\SUMOLibraries\3rdPartyLibs\zlib-1.3.1\lib\zlibd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>D:\SUMOLibraries\3rdPartyLibs\tiff-4.7.0\lib\tiffd.lib;D:\SUMOLibraries\3rdPartyLibs\libpng-1.6.44\lib\libpng16d.lib;D:\SUMOLibraries\3rdPartyLibs\jpeg-9f\lib\jpeg.lib;D:\SUMOLibraries\3rdPartyLibs\bzip2-1.1.0\lib\bz2.lib;D:\SUMOLibraries\3rdPartyLibs\zlib-1.3.1\lib\zlibd.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
