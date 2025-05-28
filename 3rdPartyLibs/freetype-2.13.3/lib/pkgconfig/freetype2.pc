@@ -1,4 +1,4 @@
-prefix=D:/SUMOLibraries/3rdPartyLibs/freetype-2.13.3
+prefix=C:/SUMOLibraries/3rdPartyLibs/freetype-2.13.3
 exec_prefix=${prefix}
 libdir=${prefix}/lib
 includedir=${prefix}/include
@@ -7,8 +7,8 @@ Name: FreeType 2
 URL: https://freetype.org
 Description: A free, high-quality, and portable font engine.
 Version: 26.2.20
-Requires:  zlib, libpng
-Requires.private: 
-Libs: -L${libdir} -lfreetype -lbz2
-Libs.private: 
+Requires: 
+Requires.private: zlib, libpng
+Libs: -L${libdir} -lfreetype
+Libs.private: -lbz2
 Cflags: -I${includedir}/freetype2
