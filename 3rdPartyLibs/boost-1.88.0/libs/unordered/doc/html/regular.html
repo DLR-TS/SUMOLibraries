@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Regular Containers :: Boost.Unordered</title>
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../unordered/_/css/site.css">
+  </head>
+  <body class="article">
+<div class="body">
+<div class="nav-container" data-component="unordered" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="intro.html">Boost.Unordered</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="intro.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="buckets.html">Basics of Hash Tables</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="hash_equality.html">Equality Predicates and Hash Functions</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="regular.html">Regular Containers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="concurrent.html">Concurrent Containers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="hash_quality.html">Hash Quality</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="compliance.html">Standard Compliance</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="structures.html">Data Structures</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="debuggability.html">Debuggability</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="benchmarks.html">Benchmarks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="rationale.html">Implementation Rationale</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="ref.html">Reference</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_map_fwd.html"><code>&lt;boost/unordered/unordered_map_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_map_top.html"><code>&lt;boost/unordered_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_map.html"><code>&lt;boost/unordered/unordered_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_map.html"><code>unordered_map</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_multimap.html"><code>unordered_multimap</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_set_fwd.html"><code>&lt;boost/unordered/unordered_set_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_set_top.html"><code>&lt;boost/unordered_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_set.html"><code>&lt;boost/unordered/unordered_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_set.html"><code>unordered_set</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_multiset.html"><code>unordered_multiset</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/hash_traits.html">Hash Traits</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/stats.html">Statistics</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_flat_map_fwd.html"><code>&lt;boost/unordered/unordered_flat_map_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_flat_map.html"><code>&lt;boost/unordered/unordered_flat_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_flat_map.html"><code>unordered_flat_map</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_flat_set_fwd.html"><code>&lt;boost/unordered/unordered_flat_set_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_flat_set.html"><code>&lt;boost/unordered/unordered_flat_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_flat_set.html"><code>unordered_flat_set</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_node_map_fwd.html"><code>&lt;boost/unordered/unordered_node_map_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_node_map.html"><code>&lt;boost/unordered/unordered_node_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_node_map.html"><code>unordered_node_map</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_node_set_fwd.html"><code>&lt;boost/unordered/unordered_node_set_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_node_set.html"><code>&lt;boost/unordered/unordered_node_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_node_set.html"><code>unordered_node_set</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_flat_map_fwd.html"><code>&lt;boost/unordered/concurrent_flat_map_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_flat_map.html"><code>&lt;boost/unordered/concurrent_flat_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/concurrent_flat_map.html"><code>concurrent_flat_map</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_flat_set_fwd.html"><code>&lt;boost/unordered/concurrent_flat_set_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_flat_set.html"><code>&lt;boost/unordered/concurrent_flat_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/concurrent_flat_set.html"><code>concurrent_flat_set</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_node_map_fwd.html"><code>&lt;boost/unordered/concurrent_node_map_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_node_map.html"><code>&lt;boost/unordered/concurrent_node_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/concurrent_node_map.html"><code>concurrent_node_map</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_node_set_fwd.html"><code>&lt;boost/unordered/concurrent_node_set_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_node_set.html"><code>&lt;boost/unordered/concurrent_node_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/concurrent_node_set.html"><code>concurrent_node_set</code></a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="changes.html">Change Log</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="bibliography.html">Bibliography</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="copyright.html">Copyright and License</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="intro.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="intro.html">Boost.Unordered</a></li>
+    <li><a href="regular.html">Regular Containers</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Regular Containers</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Boost.Unordered closed-addressing containers (<code>boost::unordered_set</code>, <code>boost::unordered_map</code>,
+<code>boost::unordered_multiset</code> and <code>boost::unordered_multimap</code>) are fully conformant with the
+C++ specification for unordered associative containers, so for those who know how to use
+<code>std::unordered_set</code>, <code>std::unordered_map</code>, etc., their homonyms in Boost.Unordered are
+drop-in replacements. The interface of open-addressing containers (<code>boost::unordered_node_set</code>,
+<code>boost::unordered_node_map</code>, <code>boost::unordered_flat_set</code> and <code>boost::unordered_flat_map</code>)
+is very similar, but they present some minor differences listed in the dedicated
+<a href="compliance.html#compliance_open_addressing_containers" class="xref page">standard compliance section</a>.</p>
+</div>
+<div class="paragraph">
+<p>For readers without previous experience with hash containers but familiar
+with normal associative containers (<code>std::set</code>, <code>std::map</code>,
+<code>std::multiset</code> and <code>std::multimap</code>), Boost.Unordered containers are used in a similar manner:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cpp hljs" data-lang="cpp">typedef boost::unordered_map&lt;std::string, int&gt; map;
+map x;
+x["one"] = 1;
+x["two"] = 2;
+x["three"] = 3;
+
+assert(x.at("one") == 1);
+assert(x.find("missing") == x.end());</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>But since the elements aren&#8217;t ordered, the output of:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">for(const map::value_type&amp; i: x) {
+    std::cout&lt;&lt;i.first&lt;&lt;","&lt;&lt;i.second&lt;&lt;"\n";
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>can be in any order. For example, it might be:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">two,2
+one,1
+three,3</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>There are other differences, which are listed in the
+<a href="#comparison">Comparison with Associative Containers</a> section.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="regular_iterator_invalidation"><a class="anchor" href="#regular_iterator_invalidation"></a>Iterator Invalidation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>It is not specified how member functions other than <code>rehash</code> and <code>reserve</code> affect
+the bucket count, although <code>insert</code> can only invalidate iterators
+when the insertion causes the container&#8217;s load to be greater than the maximum allowed.
+For most implementations this means that <code>insert</code> will only
+change the number of buckets when this happens. Iterators can be
+invalidated by calls to <code>insert</code>, <code>rehash</code> and <code>reserve</code>.</p>
+</div>
+<div class="paragraph">
+<p>As for pointers and references,
+they are never invalidated for node-based containers
+(<code>boost::unordered_[multi]set</code>, <code>boost::unordered_[multi]map</code>, <code>boost::unordered_node_set</code>, <code>boost::unordered_node_map</code>),
+but they will be when rehashing occurs for
+<code>boost::unordered_flat_set</code> and <code>boost::unordered_flat_map</code>: this is because
+these containers store elements directly into their holding buckets, so
+when allocating a new bucket array the elements must be transferred by means of move construction.</p>
+</div>
+<div class="paragraph">
+<p>In a similar manner to using <code>reserve</code> for <code>vector</code>s, it can be a good idea
+to call <code>reserve</code> before inserting a large number of elements. This will get
+the expensive rehashing out of the way and let you store iterators, safe in
+the knowledge that they won&#8217;t be invalidated. If you are inserting <code>n</code>
+elements into container <code>x</code>, you could first call:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">x.reserve(n);</code></pre>
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Note</dt>
+<dd>
+<p><code>reserve(n)</code> reserves space for at least <code>n</code> elements, allocating enough buckets
+so as to not exceed the maximum load factor.</p>
+<div class="paragraph">
+<p>Because the maximum load factor is defined as the number of elements divided by the total
+number of available buckets, this function is logically equivalent to:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">x.rehash(std::ceil(n / x.max_load_factor()))</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>See the <a href="reference/unordered_map.html#unordered_map_rehash" class="xref page">reference for more details</a> on the <code>rehash</code> function.</p>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="comparison"><a class="anchor" href="#comparison"></a>Comparison with Associative Containers</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-rows stretch">
+<caption class="title">Table 1 Interface differences</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Associative Containers</th>
+<th class="tableblock halign-left valign-top">Unordered Associative Containers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parameterized by an ordering relation <code>Compare</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parameterized by a function object <code>Hash</code> and an equivalence relation <code>Pred</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Keys can be compared using <code>key_compare</code> which is accessed by member function <code>key_comp()</code>, values can be compared using <code>value_compare</code> which is accessed by member function <code>value_comp()</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Keys can be hashed using <code>hasher</code> which is accessed by member function <code>hash_function()</code>, and checked for equality using <code>key_equal</code> which is accessed by member function <code>key_eq()</code>. There is no function object for compared or hashing values.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Constructors have optional extra parameters for the comparison object.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Constructors have optional extra parameters for the initial minimum number of buckets, a hash function and an equality object.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Keys <code>k1</code>, <code>k2</code> are considered equivalent if <code>!Compare(k1, k2) &amp;&amp; !Compare(k2, k1)</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Keys <code>k1</code>, <code>k2</code> are considered equivalent if <code>Pred(k1, k2)</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Member function <code>lower_bound(k)</code> and <code>upper_bound(k)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No equivalent. Since the elements aren&#8217;t ordered <code>lower_bound</code> and <code>upper_bound</code> would be meaningless.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>equal_range(k)</code> returns an empty range at the position that <code>k</code> would be inserted if <code>k</code> isn&#8217;t present in the container.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>equal_range(k)</code> returns a range at the end of the container if <code>k</code> isn&#8217;t present in the container. It can&#8217;t return a positioned range as <code>k</code> could be inserted into multiple place.<br>
+<strong>Closed-addressing containers:</strong> To find out the bucket that <code>k</code> would be inserted into use <code>bucket(k)</code>. But remember that an insert can cause the container to rehash - meaning that the element can be inserted into a different bucket.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>iterator</code>, <code>const_iterator</code> are of the bidirectional category.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>iterator</code>, <code>const_iterator</code> are of at least the forward category.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Iterators, pointers and references to the container&#8217;s elements are never invalidated.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#regular_iterator_invalidation">Iterators can be invalidated by calls to insert or rehash</a>.<br>
+<strong>Node-based containers:</strong> Pointers and references to the container&#8217;s elements are never invalidated.<br>
+<strong>Flat containers:</strong> Pointers and references to the container&#8217;s elements are invalidated when rehashing occurs.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Iterators iterate through the container in the order defined by the comparison object.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Iterators iterate through the container in an arbitrary order, that can change as elements are inserted, although equivalent elements are always adjacent.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No equivalent</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Closed-addressing containers:</strong> Local iterators can be used to iterate through individual buckets. (The order of local iterators and iterators aren&#8217;t required to have any correspondence.)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Can be compared using the <code>==</code>, <code>!=</code>, <code>&lt;</code>, <code>&lt;=</code>, <code>&gt;</code>, <code>&gt;=</code> operators.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Can be compared using the <code>==</code> and <code>!=</code> operators.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">When inserting with a hint, implementations are permitted to ignore the hint.</p></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<table class="tableblock frame-all grid-rows stretch">
+<caption class="title">Table 2 Complexity Guarantees</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Operation</th>
+<th class="tableblock halign-left valign-top">Associative Containers</th>
+<th class="tableblock halign-left valign-top">Unordered Associative Containers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Construction of empty container</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">constant</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">O(<em>n</em>) where <em>n</em> is the minimum number of buckets.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Construction of container from a range of <em>N</em> elements</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">O(<em>N log N</em>), O(<em>N</em>) if the range is sorted with <code>value_comp()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Average case O(<em>N</em>), worst case O(<em>N<sup>2</sup></em>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Insert a single element</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">logarithmic</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Average case constant, worst case linear</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Insert a single element with a hint</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Amortized constant if <code>t</code> elements inserted right after hint, logarithmic otherwise</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Average case constant, worst case linear (ie. the same as a normal insert).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Inserting a range of <em>N</em> elements</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>N</em> log(<code>size()</code> + <em>N</em>)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Average case O(<em>N</em>), worst case O(<em>N</em> * <code>size()</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Erase by key, <code>k</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">O(log(<code>size()</code>) + <code>count(k)</code>)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Average case: O(<code>count(k)</code>), Worst case: O(<code>size()</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Erase a single element by iterator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Amortized constant</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Average case: O(1), Worst case: O(<code>size()</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Erase a range of <em>N</em> elements</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">O(log(<code>size()</code>) + <em>N</em>)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Average case: O(<em>N</em>), Worst case: O(<code>size()</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Clearing the container</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">O(<code>size()</code>)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">O(<code>size()</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Find</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">logarithmic</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Average case: O(1), Worst case: O(<code>size()</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Count</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">O(log(<code>size()</code>) + <code>count(k)</code>)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Average case: O(1), Worst case: O(<code>size()</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>equal_range(k)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">logarithmic</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Average case: O(<code>count(k)</code>), Worst case: O(<code>size()</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>lower_bound</code>,<code>upper_bound</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">logarithmic</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">n/a</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<script id="site-script" src="../unordered/_/js/site.js" data-ui-root-path="../unordered/_"></script>
+<script async src="../unordered/_/js/vendor/highlight.js"></script>
+  </body>
+</html>

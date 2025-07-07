@@ -1,0 +1,164 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Non-throwing Expectations</title>
+<link rel="stylesheet" href="../../../../../../../doc/src/boostbook.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="../../index.html" title="Spirit X3 3.10">
+<link rel="up" href="../tutorials.html" title="Tutorials">
+<link rel="prev" href="error_handling.html" title="Error Handling">
+<link rel="next" href="../quick_reference.html" title="Quick Reference">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table cellpadding="2" width="100%"><tr>
+<td valign="top"><img alt="Boost C++ Libraries" width="277" height="86" src="../../../../../../../boost.png"></td>
+<td align="center"><a href="../../../../../../../index.html">Home</a></td>
+<td align="center"><a href="../../../../../../../libs/libraries.htm">Libraries</a></td>
+<td align="center"><a href="http://www.boost.org/users/people.html">People</a></td>
+<td align="center"><a href="http://www.boost.org/users/faq.html">FAQ</a></td>
+<td align="center"><a href="../../../../../../../more/index.htm">More</a></td>
+</tr></table>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="error_handling.html"><img src="../../../../../../../doc/src/images/prev.png" alt="Prev"></a><a accesskey="u" href="../tutorials.html"><img src="../../../../../../../doc/src/images/up.png" alt="Up"></a><a accesskey="h" href="../../index.html"><img src="../../../../../../../doc/src/images/home.png" alt="Home"></a><a accesskey="n" href="../quick_reference.html"><img src="../../../../../../../doc/src/images/next.png" alt="Next"></a>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="spirit_x3.tutorials.non_throwing_expectations"></a><a class="link" href="non_throwing_expectations.html" title="Non-throwing Expectations">Non-throwing
+      Expectations</a>
+</h3></div></div></div>
+<p>
+        By default, X3 throws <code class="computeroutput"><span class="identifier">expectation_failure</span></code>
+        when an expectation failure occurs. While C++ exceptions are straightforward,
+        they come with significant overhead that can drastically impact your application's
+        processing speed, especially if your parser is called within a performance-critical
+        loop.
+      </p>
+<p>
+        In short, even the simplest grammar, like the one below, would throw exceptions
+        100,000 times if invoked 100,000 times with mismatched input.
+      </p>
+<pre class="programlisting"><span class="identifier">x3</span><span class="special">::</span><span class="identifier">lit</span><span class="special">(</span><span class="char">'a'</span><span class="special">)</span> <span class="special">&gt;</span> <span class="char">'b'</span>
+</pre>
+<p>
+        You can change this behavior to store the error in a user-provided variable
+        instead of throwing an exception.
+      </p>
+<p>
+        Non-throwing mode can be up to <span class="bold"><strong>1-90 times faster</strong></span>
+        than the traditional mode, depending on the complexity of your grammar.
+      </p>
+<div class="tip"><table border="0" summary="Tip">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="../../images/tip.png"></td>
+<th align="left">Tip</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+          The performance improvement is capped by the overhead of C++ exceptions,
+          meaning the reduction in parse time is limited by the overhead that exceptions
+          would have introduced.
+        </p></td></tr>
+</table></div>
+<h5>
+<a name="spirit_x3.tutorials.non_throwing_expectations.h0"></a>
+        <span class="phrase"><a name="spirit_x3.tutorials.non_throwing_expectations.migration_guide"></a></span><a class="link" href="non_throwing_expectations.html#spirit_x3.tutorials.non_throwing_expectations.migration_guide">Migration
+        Guide</a>
+      </h5>
+<p>
+        To switch to non-throwing mode, define the macro <code class="computeroutput"><span class="identifier">BOOST_SPIRIT_X3_THROW_EXPECTATION_FAILURE</span></code>
+        as <code class="computeroutput"><span class="number">0</span></code> before including X3 headers,
+        and then make a few modifications to your parser's entry point.
+      </p>
+<p>
+        Here's an example of a parser in its default (throwing) mode:
+      </p>
+<pre class="programlisting"><span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">spirit</span><span class="special">/</span><span class="identifier">home</span><span class="special">/</span><span class="identifier">x3</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+
+<span class="keyword">void</span> <span class="identifier">do_parse</span><span class="special">()</span>
+<span class="special">{</span>
+    <span class="comment">// ... setup your variables here...</span>
+
+    <span class="keyword">try</span>
+    <span class="special">{</span>
+        <span class="keyword">bool</span> <span class="keyword">const</span> <span class="identifier">ok</span> <span class="special">=</span> <span class="identifier">x3</span><span class="special">::</span><span class="identifier">parse</span><span class="special">(</span><span class="identifier">first</span><span class="special">,</span> <span class="identifier">last</span><span class="special">,</span> <span class="identifier">parser</span><span class="special">);</span>
+        <span class="keyword">if</span> <span class="special">(!</span><span class="identifier">ok</span><span class="special">)</span>
+        <span class="special">{</span>
+            <span class="comment">// error handling</span>
+        <span class="special">}</span>
+    <span class="special">}</span>
+    <span class="keyword">catch</span> <span class="special">(</span><span class="identifier">x3</span><span class="special">::</span><span class="identifier">expectation_failure</span><span class="special">&lt;</span><span class="identifier">Iterator</span><span class="special">&gt;</span> <span class="keyword">const</span><span class="special">&amp;</span> <span class="identifier">failure</span><span class="special">)</span>
+    <span class="special">{</span>
+        <span class="comment">// error handling</span>
+    <span class="special">}</span>
+<span class="special">}</span>
+</pre>
+<p>
+        Next, adjust your code as follows to switch to non-throwing mode:
+      </p>
+<pre class="programlisting"><span class="preprocessor">#define</span> <span class="identifier">BOOST_SPIRIT_X3_THROW_EXPECTATION_FAILURE</span> <span class="number">0</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">spirit</span><span class="special">/</span><span class="identifier">home</span><span class="special">/</span><span class="identifier">x3</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+
+<span class="keyword">void</span> <span class="identifier">do_parse</span><span class="special">()</span>
+<span class="special">{</span>
+    <span class="comment">// ... setup your variables here...</span>
+
+    <span class="comment">// convenient helper, defaults to `boost::optional&lt;x3::expectation_failure&lt;Iterator&gt;&gt;`</span>
+    <span class="identifier">x3</span><span class="special">::</span><span class="identifier">expectation_failure_optional</span><span class="special">&lt;</span><span class="identifier">Iterator</span><span class="special">&gt;</span> <span class="identifier">failure</span><span class="special">;</span>
+
+    <span class="keyword">bool</span> <span class="keyword">const</span> <span class="identifier">ok</span> <span class="special">=</span> <span class="identifier">x3</span><span class="special">::</span><span class="identifier">parse</span><span class="special">(</span>
+        <span class="identifier">first</span><span class="special">,</span> <span class="identifier">last</span><span class="special">,</span> <span class="identifier">x3</span><span class="special">::</span><span class="identifier">with</span><span class="special">&lt;</span><span class="identifier">x3</span><span class="special">::</span><span class="identifier">expectation_failure_tag</span><span class="special">&gt;(</span><span class="identifier">failure</span><span class="special">)[</span><span class="identifier">parser</span><span class="special">]);</span>
+
+    <span class="keyword">if</span> <span class="special">(!</span><span class="identifier">ok</span><span class="special">)</span>
+    <span class="special">{</span>
+        <span class="keyword">if</span> <span class="special">(</span><span class="identifier">failure</span><span class="special">.</span><span class="identifier">has_value</span><span class="special">())</span>
+        <span class="special">{</span>
+            <span class="comment">// error handling</span>
+        <span class="special">}</span>
+    <span class="special">}</span>
+<span class="special">}</span>
+</pre>
+<div class="tip"><table border="0" summary="Tip">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="../../images/tip.png"></td>
+<th align="left">Tip</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+          You can also inspect the variable within <a class="link" href="error_handling.html#__tutorial_error_handling__"><code class="computeroutput"><span class="identifier">on_error</span></code> handler</a>.
+        </p></td></tr>
+</table></div>
+<p>
+        That's it! All X3 parsers will behave semantically the same as before, except
+        that expectation failures will be stored in the variable instead of being
+        thrown as C++ exceptions.
+      </p>
+<p>
+        The following types are supported for the context value:
+      </p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+            <code class="computeroutput"><span class="keyword">bool</span></code>
+          </li>
+<li class="listitem">
+            <code class="computeroutput"><span class="identifier">std</span><span class="special">::</span><span class="identifier">optional</span><span class="special">&lt;</span><span class="identifier">x3</span><span class="special">::</span><span class="identifier">expectation_failure</span><span class="special">&lt;</span><span class="identifier">Iterator</span><span class="special">&gt;&gt;</span></code>
+          </li>
+<li class="listitem">
+            <code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">optional</span><span class="special">&lt;</span><span class="identifier">x3</span><span class="special">::</span><span class="identifier">expectation_failure</span><span class="special">&lt;</span><span class="identifier">Iterator</span><span class="special">&gt;&gt;</span></code>
+          </li>
+<li class="listitem">
+            <code class="computeroutput"><span class="identifier">std</span><span class="special">::</span><span class="identifier">reference_wrapper</span></code> of optional types
+          </li>
+</ul></div>
+</div>
+<div class="copyright-footer">Copyright © 2001-2018 Joel de Guzman,
+      Hartmut Kaiser<p>
+        Distributed under the Boost Software License, Version 1.0. (See accompanying
+        file LICENSE_1_0.txt or copy at <a href="http://www.boost.org/LICENSE_1_0.txt" target="_top">http://www.boost.org/LICENSE_1_0.txt</a>)
+      </p>
+</div>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="error_handling.html"><img src="../../../../../../../doc/src/images/prev.png" alt="Prev"></a><a accesskey="u" href="../tutorials.html"><img src="../../../../../../../doc/src/images/up.png" alt="Up"></a><a accesskey="h" href="../../index.html"><img src="../../../../../../../doc/src/images/home.png" alt="Home"></a><a accesskey="n" href="../quick_reference.html"><img src="../../../../../../../doc/src/images/next.png" alt="Next"></a>
+</div>
+</body>
+</html>

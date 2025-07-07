@@ -1,0 +1,1033 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Class shared_library</title>
+<link rel="stylesheet" href="../../../../doc/src/boostbook.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="../../index.html" title="The Boost C++ Libraries BoostBook Documentation Subset">
+<link rel="up" href="../../boost_dll/reference.html#doxygen.shared_library_reference.shared__library_8hpp" title="Header &lt;boost/dll/shared_library.hpp&gt;">
+<link rel="prev" href="runtime__symbol__info_8hpp_1ad4f62eae484acfa53de57045fd18dde7.html" title="Function program_location">
+<link rel="next" href="shared__library__load__mode_8hpp_1a7aead736a07eaf25623ad7bfa1f0ee2d.html" title="Type type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table cellpadding="2" width="100%"><tr>
+<td valign="top"><img alt="Boost C++ Libraries" width="277" height="86" src="../../../../boost.png"></td>
+<td align="center"><a href="../../../../index.html">Home</a></td>
+<td align="center"><a href="../../../../libs/libraries.htm">Libraries</a></td>
+<td align="center"><a href="http://www.boost.org/users/people.html">People</a></td>
+<td align="center"><a href="http://www.boost.org/users/faq.html">FAQ</a></td>
+<td align="center"><a href="../../../../more/index.htm">More</a></td>
+</tr></table>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="runtime__symbol__info_8hpp_1ad4f62eae484acfa53de57045fd18dde7.html"><img src="../../../../doc/src/images/prev.png" alt="Prev"></a><a accesskey="u" href="../../boost_dll/reference.html#doxygen.shared_library_reference.shared__library_8hpp"><img src="../../../../doc/src/images/up.png" alt="Up"></a><a accesskey="h" href="../../index.html"><img src="../../../../doc/src/images/home.png" alt="Home"></a><a accesskey="n" href="shared__library__load__mode_8hpp_1a7aead736a07eaf25623ad7bfa1f0ee2d.html"><img src="../../../../doc/src/images/next.png" alt="Next"></a>
+</div>
+<div class="refentry">
+<a name="doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library"></a><div class="titlepage"></div>
+<div class="refnamediv">
+<h2><span class="refentrytitle">Class shared_library</span></h2>
+<p>boost::dll::shared_library — This class can be used to load a Dynamic link libraries (DLL's) or Shared Libraries, also know as dynamic shared objects (DSO's) and get their exported symbols (functions and variables). </p>
+</div>
+<h2 class="refsynopsisdiv-title">Synopsis</h2>
+<div class="refsynopsisdiv"><pre class="synopsis"><span class="comment">// In header: &lt;<a class="link" href="../../boost_dll/reference.html#doxygen.shared_library_reference.shared__library_8hpp" title="Header &lt;boost/dll/shared_library.hpp&gt;">boost/dll/shared_library.hpp</a>&gt;
+
+</span>
+<span class="keyword">class</span> <a class="link" href="classboost_1_1dll_1_1shared__library.html" title="Class shared_library">shared_library</a> <span class="special">{</span>
+<span class="keyword">public</span><span class="special">:</span>
+  <span class="comment">// types</span>
+  <span class="keyword">typedef</span> <span class="identifier">platform_specific</span> <a name="doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a2156f2fea24b024a6f3de6f738454f26"></a><span class="identifier">native_handle_t</span><span class="special">;</span>
+
+  <span class="comment">// <a class="link" href="../reference_section_of_boost_any/classboost_1_1bad__any__cast.html#id2-bb">public member functions</a></span>
+  <a class="link" href="classboost_1_1dll_1_1shared__library.html#doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a5342750ce76cb563168bd5c59bc3d613"><span class="identifier">shared_library</span></a><span class="special">(</span><span class="special">)</span><span class="special">;</span>
+  <a class="link" href="classboost_1_1dll_1_1shared__library.html#doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a454d04d32a889c9dce94d19b7624ad7c"><span class="identifier">shared_library</span></a><span class="special">(</span><span class="keyword">const</span> <a class="link" href="classboost_1_1dll_1_1shared__library.html" title="Class shared_library">shared_library</a> <span class="special">&amp;</span><span class="special">)</span><span class="special">;</span>
+  <a class="link" href="classboost_1_1dll_1_1shared__library.html#doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a6db4d24cf06441047ee057c5bedeaab5"><span class="identifier">shared_library</span></a><span class="special">(</span><span class="keyword">const</span> <a class="link" href="classboost_1_1dll_1_1shared__library.html" title="Class shared_library">shared_library</a> <span class="special">&amp;</span><span class="special">,</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">error_code</span> <span class="special">&amp;</span><span class="special">)</span><span class="special">;</span>
+  <a class="link" href="classboost_1_1dll_1_1shared__library.html#doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a097eb8ef42cbc14f764e67f584475168"><span class="identifier">shared_library</span></a><span class="special">(</span><a class="link" href="classboost_1_1dll_1_1shared__library.html" title="Class shared_library">shared_library</a> <span class="special">&amp;&amp;</span><span class="special">)</span> <span class="keyword">noexcept</span><span class="special">;</span>
+  <span class="keyword">explicit</span> <a class="link" href="classboost_1_1dll_1_1shared__library.html#doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a1ab469a0d809f3b579c1dbcd5be7c0f7"><span class="identifier">shared_library</span></a><span class="special">(</span><span class="keyword">const</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">dll</span><span class="special">::</span><span class="identifier">fs</span><span class="special">::</span><span class="identifier">path</span> <span class="special">&amp;</span><span class="special">,</span> 
+                          <span class="identifier">load_mode</span><span class="special">::</span><span class="identifier">type</span> <span class="special">=</span> <span class="identifier">load_mode</span><span class="special">::</span><span class="identifier">default_mode</span><span class="special">)</span><span class="special">;</span>
+  <a class="link" href="classboost_1_1dll_1_1shared__library.html#doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a6767e3551e9160709021e2d7dd61f675"><span class="identifier">shared_library</span></a><span class="special">(</span><span class="keyword">const</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">dll</span><span class="special">::</span><span class="identifier">fs</span><span class="special">::</span><span class="identifier">path</span> <span class="special">&amp;</span><span class="special">,</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">error_code</span> <span class="special">&amp;</span><span class="special">,</span> 
+                 <span class="identifier">load_mode</span><span class="special">::</span><span class="identifier">type</span> <span class="special">=</span> <span class="identifier">load_mode</span><span class="special">::</span><span class="identifier">default_mode</span><span class="special">)</span><span class="special">;</span>
+  <a class="link" href="classboost_1_1dll_1_1shared__library.html#doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a7b5ee4d4ba44be12dd96965d9c0a85fc"><span class="identifier">shared_library</span></a><span class="special">(</span><span class="keyword">const</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">dll</span><span class="special">::</span><span class="identifier">fs</span><span class="special">::</span><span class="identifier">path</span> <span class="special">&amp;</span><span class="special">,</span> <span class="identifier">load_mode</span><span class="special">::</span><span class="identifier">type</span><span class="special">,</span> 
+                 <span class="identifier">std</span><span class="special">::</span><span class="identifier">error_code</span> <span class="special">&amp;</span><span class="special">)</span><span class="special">;</span>
+  <span class="keyword">explicit</span> <a class="link" href="classboost_1_1dll_1_1shared__library.html#doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a1e4ccaa07bee776041458bac929ea5ae"><span class="identifier">shared_library</span></a><span class="special">(</span><span class="identifier">native_handle_t</span><span class="special">)</span> <span class="keyword">noexcept</span><span class="special">;</span>
+  <a class="link" href="classboost_1_1dll_1_1shared__library.html" title="Class shared_library">shared_library</a> <span class="special">&amp;</span> <a class="link" href="classboost_1_1dll_1_1shared__library.html#doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a49d9fa037377791d9a19c5e4f395fc6e"><span class="keyword">operator</span><span class="special">=</span></a><span class="special">(</span><span class="keyword">const</span> <a class="link" href="classboost_1_1dll_1_1shared__library.html" title="Class shared_library">shared_library</a> <span class="special">&amp;</span><span class="special">)</span><span class="special">;</span>
+  <a class="link" href="classboost_1_1dll_1_1shared__library.html" title="Class shared_library">shared_library</a> <span class="special">&amp;</span> <a class="link" href="classboost_1_1dll_1_1shared__library.html#doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a9d1a77d5ffcd4b4b5f085203ce46f7d0"><span class="keyword">operator</span><span class="special">=</span></a><span class="special">(</span><a class="link" href="classboost_1_1dll_1_1shared__library.html" title="Class shared_library">shared_library</a> <span class="special">&amp;&amp;</span><span class="special">)</span> <span class="keyword">noexcept</span><span class="special">;</span>
+  <a class="link" href="classboost_1_1dll_1_1shared__library.html#doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a9dcb385da72f28e4d089af67a39f129e"><span class="special">~</span><span class="identifier">shared_library</span></a><span class="special">(</span><span class="special">)</span> <span class="special">=</span> <span class="keyword">default</span><span class="special">;</span>
+  <a class="link" href="classboost_1_1dll_1_1shared__library.html" title="Class shared_library">shared_library</a> <span class="special">&amp;</span> <a class="link" href="classboost_1_1dll_1_1shared__library.html#doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a076d9f34a75053e0b417ffb72acf3577"><span class="identifier">assign</span></a><span class="special">(</span><span class="keyword">const</span> <a class="link" href="classboost_1_1dll_1_1shared__library.html" title="Class shared_library">shared_library</a> <span class="special">&amp;</span><span class="special">,</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">error_code</span> <span class="special">&amp;</span><span class="special">)</span><span class="special">;</span>
+  <a class="link" href="classboost_1_1dll_1_1shared__library.html" title="Class shared_library">shared_library</a> <span class="special">&amp;</span> <a class="link" href="classboost_1_1dll_1_1shared__library.html#doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1ac456f7a8000c86018d51b0d4eeb2a72d"><span class="identifier">assign</span></a><span class="special">(</span><span class="keyword">const</span> <a class="link" href="classboost_1_1dll_1_1shared__library.html" title="Class shared_library">shared_library</a> <span class="special">&amp;</span><span class="special">)</span><span class="special">;</span>
+  <span class="keyword">void</span> <a class="link" href="classboost_1_1dll_1_1shared__library.html#doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a4a953c50b86191dd96aa471bac8099a6"><span class="identifier">load</span></a><span class="special">(</span><span class="keyword">const</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">dll</span><span class="special">::</span><span class="identifier">fs</span><span class="special">::</span><span class="identifier">path</span> <span class="special">&amp;</span><span class="special">,</span> 
+            <span class="identifier">load_mode</span><span class="special">::</span><span class="identifier">type</span> <span class="special">=</span> <span class="identifier">load_mode</span><span class="special">::</span><span class="identifier">default_mode</span><span class="special">)</span><span class="special">;</span>
+  <span class="keyword">void</span> <a class="link" href="classboost_1_1dll_1_1shared__library.html#doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a3467b64cbfc5333fd11810dcbbefd83b"><span class="identifier">load</span></a><span class="special">(</span><span class="keyword">const</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">dll</span><span class="special">::</span><span class="identifier">fs</span><span class="special">::</span><span class="identifier">path</span> <span class="special">&amp;</span><span class="special">,</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">error_code</span> <span class="special">&amp;</span><span class="special">,</span> 
+            <span class="identifier">load_mode</span><span class="special">::</span><span class="identifier">type</span> <span class="special">=</span> <span class="identifier">load_mode</span><span class="special">::</span><span class="identifier">default_mode</span><span class="special">)</span><span class="special">;</span>
+  <span class="keyword">void</span> <a class="link" href="classboost_1_1dll_1_1shared__library.html#doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a68cb5fdaa42eb2ea866ea4b435fd7c8b"><span class="identifier">load</span></a><span class="special">(</span><span class="keyword">const</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">dll</span><span class="special">::</span><span class="identifier">fs</span><span class="special">::</span><span class="identifier">path</span> <span class="special">&amp;</span><span class="special">,</span> <span class="identifier">load_mode</span><span class="special">::</span><span class="identifier">type</span><span class="special">,</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">error_code</span> <span class="special">&amp;</span><span class="special">)</span><span class="special">;</span>
+  <span class="keyword">void</span> <a class="link" href="classboost_1_1dll_1_1shared__library.html#doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a4f98671190fa5ccb035c8682ed26a140"><span class="identifier">unload</span></a><span class="special">(</span><span class="special">)</span> <span class="keyword">noexcept</span><span class="special">;</span>
+  <span class="keyword">bool</span> <a class="link" href="classboost_1_1dll_1_1shared__library.html#doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a768114474404dc56ef584b512dfd2b44"><span class="identifier">is_loaded</span></a><span class="special">(</span><span class="special">)</span> <span class="keyword">const</span> <span class="keyword">noexcept</span><span class="special">;</span>
+  <span class="keyword">explicit</span> <a class="link" href="classboost_1_1dll_1_1shared__library.html#doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a420e60e9788bfa3b52aa3aab72ea3a5e"><span class="keyword">operator</span> <span class="keyword">bool</span></a><span class="special">(</span><span class="special">)</span> <span class="keyword">const</span> <span class="keyword">noexcept</span><span class="special">;</span>
+  <span class="keyword">bool</span> <a class="link" href="classboost_1_1dll_1_1shared__library.html#doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a61600573e373c540279ac3b5918dd8f1"><span class="identifier">has</span></a><span class="special">(</span><span class="keyword">const</span> <span class="keyword">char</span> <span class="special">*</span><span class="special">)</span> <span class="keyword">const</span> <span class="keyword">noexcept</span><span class="special">;</span>
+  <span class="keyword">bool</span> <a class="link" href="classboost_1_1dll_1_1shared__library.html#doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1ac6d3a6b6218a32a25b8f9ee1f2cc4ab2"><span class="identifier">has</span></a><span class="special">(</span><span class="keyword">const</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">string</span> <span class="special">&amp;</span><span class="special">)</span> <span class="keyword">const</span> <span class="keyword">noexcept</span><span class="special">;</span>
+  <span class="keyword">template</span><span class="special">&lt;</span><span class="keyword">typename</span> T<span class="special">&gt;</span> 
+    <span class="identifier">std</span><span class="special">::</span><span class="identifier">enable_if</span><span class="special">&lt;</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">is_member_pointer</span><span class="special">&lt;</span> <span class="identifier">T</span> <span class="special">&gt;</span><span class="special">::</span><span class="identifier">value</span><span class="special">||</span><span class="identifier">std</span><span class="special">::</span><span class="identifier">is_reference</span><span class="special">&lt;</span> <span class="identifier">T</span> <span class="special">&gt;</span><span class="special">::</span><span class="identifier">value</span><span class="special">,</span> <span class="identifier">T</span> <span class="special">&gt;</span><span class="special">::</span><span class="identifier">type</span> 
+    <a class="link" href="classboost_1_1dll_1_1shared__library.html#doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a57ca07c405c026200cf5c7799ae36170"><span class="identifier">get</span></a><span class="special">(</span><span class="keyword">const</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">string</span> <span class="special">&amp;</span><span class="special">)</span> <span class="keyword">const</span><span class="special">;</span>
+  <span class="keyword">template</span><span class="special">&lt;</span><span class="keyword">typename</span> T<span class="special">&gt;</span> 
+    <span class="identifier">std</span><span class="special">::</span><span class="identifier">enable_if</span><span class="special">&lt;</span><span class="special">!</span><span class="special">(</span><span class="identifier">std</span><span class="special">::</span><span class="identifier">is_member_pointer</span><span class="special">&lt;</span> <span class="identifier">T</span> <span class="special">&gt;</span><span class="special">::</span><span class="identifier">value</span><span class="special">||</span><span class="identifier">std</span><span class="special">::</span><span class="identifier">is_reference</span><span class="special">&lt;</span> <span class="identifier">T</span> <span class="special">&gt;</span><span class="special">::</span><span class="identifier">value</span><span class="special">)</span><span class="special">,</span> <span class="identifier">T</span> <span class="special">&amp;</span> <span class="special">&gt;</span><span class="special">::</span><span class="identifier">type</span> 
+    <a class="link" href="classboost_1_1dll_1_1shared__library.html#doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a5feaf1da478039b48f45304a3d712959"><span class="identifier">get</span></a><span class="special">(</span><span class="keyword">const</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">string</span> <span class="special">&amp;</span><span class="special">)</span> <span class="keyword">const</span><span class="special">;</span>
+  <span class="keyword">template</span><span class="special">&lt;</span><span class="keyword">typename</span> T<span class="special">&gt;</span> 
+    <span class="identifier">std</span><span class="special">::</span><span class="identifier">enable_if</span><span class="special">&lt;</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">is_member_pointer</span><span class="special">&lt;</span> <span class="identifier">T</span> <span class="special">&gt;</span><span class="special">::</span><span class="identifier">value</span><span class="special">||</span><span class="identifier">std</span><span class="special">::</span><span class="identifier">is_reference</span><span class="special">&lt;</span> <span class="identifier">T</span> <span class="special">&gt;</span><span class="special">::</span><span class="identifier">value</span><span class="special">,</span> <span class="identifier">T</span> <span class="special">&gt;</span><span class="special">::</span><span class="identifier">type</span> 
+    <a class="link" href="classboost_1_1dll_1_1shared__library.html#doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a93ca3299942365309bef723f803aa0fc"><span class="identifier">get</span></a><span class="special">(</span><span class="keyword">const</span> <span class="keyword">char</span> <span class="special">*</span><span class="special">)</span> <span class="keyword">const</span><span class="special">;</span>
+  <span class="keyword">template</span><span class="special">&lt;</span><span class="keyword">typename</span> T<span class="special">&gt;</span> 
+    <span class="identifier">std</span><span class="special">::</span><span class="identifier">enable_if</span><span class="special">&lt;</span><span class="special">!</span><span class="special">(</span><span class="identifier">std</span><span class="special">::</span><span class="identifier">is_member_pointer</span><span class="special">&lt;</span> <span class="identifier">T</span> <span class="special">&gt;</span><span class="special">::</span><span class="identifier">value</span><span class="special">||</span><span class="identifier">std</span><span class="special">::</span><span class="identifier">is_reference</span><span class="special">&lt;</span> <span class="identifier">T</span> <span class="special">&gt;</span><span class="special">::</span><span class="identifier">value</span><span class="special">)</span><span class="special">,</span> <span class="identifier">T</span> <span class="special">&amp;</span> <span class="special">&gt;</span><span class="special">::</span><span class="identifier">type</span> 
+    <a class="link" href="classboost_1_1dll_1_1shared__library.html#doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1abf0dc58a1080204eaea2824a91fe1ee2"><span class="identifier">get</span></a><span class="special">(</span><span class="keyword">const</span> <span class="keyword">char</span> <span class="special">*</span><span class="special">)</span> <span class="keyword">const</span><span class="special">;</span>
+  <span class="keyword">template</span><span class="special">&lt;</span><span class="keyword">typename</span> T<span class="special">&gt;</span> <span class="identifier">T</span> <span class="special">&amp;</span> <a class="link" href="classboost_1_1dll_1_1shared__library.html#doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a2e74443f85e1fd96a7f47a6a94131261"><span class="identifier">get_alias</span></a><span class="special">(</span><span class="keyword">const</span> <span class="keyword">char</span> <span class="special">*</span><span class="special">)</span> <span class="keyword">const</span><span class="special">;</span>
+  <span class="keyword">template</span><span class="special">&lt;</span><span class="keyword">typename</span> T<span class="special">&gt;</span> <span class="identifier">T</span> <span class="special">&amp;</span> <a class="link" href="classboost_1_1dll_1_1shared__library.html#doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1ac773eeaa11c78ac11bcd440750b7c0b3"><span class="identifier">get_alias</span></a><span class="special">(</span><span class="keyword">const</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">string</span> <span class="special">&amp;</span><span class="special">)</span> <span class="keyword">const</span><span class="special">;</span>
+  <span class="identifier">native_handle_t</span> <a class="link" href="classboost_1_1dll_1_1shared__library.html#doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a915bbd234b66500ecaf97d6dd576dc1f"><span class="identifier">native</span></a><span class="special">(</span><span class="special">)</span> <span class="keyword">const</span> <span class="keyword">noexcept</span><span class="special">;</span>
+  <span class="identifier">boost</span><span class="special">::</span><span class="identifier">dll</span><span class="special">::</span><span class="identifier">fs</span><span class="special">::</span><span class="identifier">path</span> <a class="link" href="classboost_1_1dll_1_1shared__library.html#doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a4a30a9e68d73ecee781d692cbf596eca"><span class="identifier">location</span></a><span class="special">(</span><span class="special">)</span> <span class="keyword">const</span><span class="special">;</span>
+  <span class="identifier">boost</span><span class="special">::</span><span class="identifier">dll</span><span class="special">::</span><span class="identifier">fs</span><span class="special">::</span><span class="identifier">path</span> <a class="link" href="classboost_1_1dll_1_1shared__library.html#doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1aec6d6c4905cfcfe78a102f4f7d089d79"><span class="identifier">location</span></a><span class="special">(</span><span class="identifier">std</span><span class="special">::</span><span class="identifier">error_code</span> <span class="special">&amp;</span><span class="special">)</span> <span class="keyword">const</span><span class="special">;</span>
+  <span class="keyword">void</span> <a class="link" href="classboost_1_1dll_1_1shared__library.html#doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a2f918593e14788c2be148ac86ae6bf25"><span class="identifier">swap</span></a><span class="special">(</span><a class="link" href="classboost_1_1dll_1_1shared__library.html" title="Class shared_library">shared_library</a> <span class="special">&amp;</span><span class="special">)</span> <span class="keyword">noexcept</span><span class="special">;</span>
+
+  <span class="comment">// <a class="link" href="../reference_section_of_boost_any/classboost_1_1anys_1_1basic__any.html#id3-bb">public static functions</a></span>
+  <span class="keyword">static</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">dll</span><span class="special">::</span><span class="identifier">fs</span><span class="special">::</span><span class="identifier">path</span> <a class="link" href="classboost_1_1dll_1_1shared__library.html#doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a3a0c6ead9ac034c79bec9f41deaebe13"><span class="identifier">suffix</span></a><span class="special">(</span><span class="special">)</span><span class="special">;</span>
+  <span class="keyword">static</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">dll</span><span class="special">::</span><span class="identifier">fs</span><span class="special">::</span><span class="identifier">path</span> <a class="link" href="classboost_1_1dll_1_1shared__library.html#doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a710b758049bfb6bcad95bf2381d493ec"><span class="identifier">decorate</span></a><span class="special">(</span><span class="keyword">const</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">dll</span><span class="special">::</span><span class="identifier">fs</span><span class="special">::</span><span class="identifier">path</span> <span class="special">&amp;</span><span class="special">)</span><span class="special">;</span>
+<span class="special">}</span><span class="special">;</span></pre></div>
+<div class="refsect1">
+<a name="id-1.3.12.8.2.6.4.4"></a><h2>Description</h2>
+<p><a class="link" href="classboost_1_1dll_1_1shared__library.html" title="Class shared_library">shared_library</a> instances share reference count to an actual loaded DLL/DSO, so it is safe and memory efficient to have multiple instances of <a class="link" href="classboost_1_1dll_1_1shared__library.html" title="Class shared_library">shared_library</a> referencing the same DLL/DSO even if those instances were loaded using different paths (relative + absolute) referencing the same object.</p>
+<p>On Linux/POSIX link with library "dl". "-fvisibility=hidden" flag is also recommended for use on Linux/POSIX. </p>
+<div class="refsect2">
+<a name="id-1.3.12.8.2.6.4.4.4"></a><h3>
+<a name="id2-bb"></a><code class="computeroutput">shared_library</code> public member functions</h3>
+<div class="orderedlist"><ol class="orderedlist" type="1">
+<li class="listitem">
+<pre class="literallayout"><a name="doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a5342750ce76cb563168bd5c59bc3d613"></a><span class="identifier">shared_library</span><span class="special">(</span><span class="special">)</span><span class="special">;</span></pre>
+<p>Creates in anstance that does not reference any DLL/DSO.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0" class="variablelist compact">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term">Postconditions:</span></p></td>
+<td><p>this-&gt;<a class="link" href="classboost_1_1dll_1_1shared__library.html#doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a768114474404dc56ef584b512dfd2b44">is_loaded()</a> returns false. </p></td>
+</tr>
+<tr>
+<td><p><span class="term">Throws:</span></p></td>
+<td>Nothing. </td>
+</tr>
+</tbody>
+</table></div>
+</li>
+<li class="listitem">
+<pre class="literallayout"><a name="doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a454d04d32a889c9dce94d19b7624ad7c"></a><span class="identifier">shared_library</span><span class="special">(</span><span class="keyword">const</span> <a class="link" href="classboost_1_1dll_1_1shared__library.html" title="Class shared_library">shared_library</a> <span class="special">&amp;</span> lib<span class="special">)</span><span class="special">;</span></pre>
+<p>Copy constructor that increments the reference count of an underlying shared library. Same as calling constructor with <code class="computeroutput">lib.location()</code> parameter.</p>
+<p>
+
+
+xmlonly &lt;link linkend='boost.dll.fs.system_error'&gt;boost::dll::fs::system_error&lt;/link&gt;, std::bad_alloc in case of insufficient memory. </p>
+<div class="variablelist"><table border="0" class="variablelist compact">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term">Parameters:</span></p></td>
+<td><div class="variablelist"><table border="0" class="variablelist compact">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><code class="computeroutput">lib</code></span></p></td>
+<td><p>A library to copy. </p></td>
+</tr></tbody>
+</table></div></td>
+</tr>
+<tr>
+<td><p><span class="term">Postconditions:</span></p></td>
+<td><p>lib == *this </p></td>
+</tr>
+<tr>
+<td><p><span class="term">Throws:</span></p></td>
+<td> </td>
+</tr>
+</tbody>
+</table></div>
+</li>
+<li class="listitem">
+<pre class="literallayout"><a name="doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a6db4d24cf06441047ee057c5bedeaab5"></a><span class="identifier">shared_library</span><span class="special">(</span><span class="keyword">const</span> <a class="link" href="classboost_1_1dll_1_1shared__library.html" title="Class shared_library">shared_library</a> <span class="special">&amp;</span> lib<span class="special">,</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">error_code</span> <span class="special">&amp;</span> ec<span class="special">)</span><span class="special">;</span></pre>
+<p>Copy constructor that increments the reference count of an underlying shared library. Same as calling constructor with <code class="computeroutput">lib.location(), ec</code> parameters.</p>
+<p>
+
+
+</p>
+<div class="variablelist"><table border="0" class="variablelist compact">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term">Parameters:</span></p></td>
+<td><div class="variablelist"><table border="0" class="variablelist compact">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><code class="computeroutput">lib</code></span></p></td>
+<td><p>A shared library to copy. </p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="computeroutput">ec</code></span></p></td>
+<td><p>Variable that will be set to the result of the operation. </p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+<tr>
+<td><p><span class="term">Postconditions:</span></p></td>
+<td><p>lib == *this </p></td>
+</tr>
+<tr>
+<td><p><span class="term">Throws:</span></p></td>
+<td>std::bad_alloc in case of insufficient memory. </td>
+</tr>
+</tbody>
+</table></div>
+</li>
+<li class="listitem">
+<pre class="literallayout"><a name="doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a097eb8ef42cbc14f764e67f584475168"></a><span class="identifier">shared_library</span><span class="special">(</span><a class="link" href="classboost_1_1dll_1_1shared__library.html" title="Class shared_library">shared_library</a> <span class="special">&amp;&amp;</span> lib<span class="special">)</span> <span class="keyword">noexcept</span><span class="special">;</span></pre>
+<p>Move constructor. Does not invalidate existing symbols and functions loaded from lib.</p>
+<p>
+
+
+</p>
+<div class="variablelist"><table border="0" class="variablelist compact">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term">Parameters:</span></p></td>
+<td><div class="variablelist"><table border="0" class="variablelist compact">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><code class="computeroutput">lib</code></span></p></td>
+<td><p>A shared library to move from. </p></td>
+</tr></tbody>
+</table></div></td>
+</tr>
+<tr>
+<td><p><span class="term">Postconditions:</span></p></td>
+<td><p>lib.is_loaded() returns false, this-&gt;<a class="link" href="classboost_1_1dll_1_1shared__library.html#doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a768114474404dc56ef584b512dfd2b44">is_loaded()</a> return true. </p></td>
+</tr>
+<tr>
+<td><p><span class="term">Throws:</span></p></td>
+<td>Nothing. </td>
+</tr>
+</tbody>
+</table></div>
+</li>
+<li class="listitem">
+<pre class="literallayout"><span class="keyword">explicit</span> <a name="doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a1ab469a0d809f3b579c1dbcd5be7c0f7"></a><span class="identifier">shared_library</span><span class="special">(</span><span class="keyword">const</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">dll</span><span class="special">::</span><span class="identifier">fs</span><span class="special">::</span><span class="identifier">path</span> <span class="special">&amp;</span> lib_path<span class="special">,</span> 
+                        <span class="identifier">load_mode</span><span class="special">::</span><span class="identifier">type</span> mode <span class="special">=</span> <span class="identifier">load_mode</span><span class="special">::</span><span class="identifier">default_mode</span><span class="special">)</span><span class="special">;</span></pre>
+<p>Loads a library by specified path with a specified mode.</p>
+<p>
+
+xmlonly &lt;link linkend='boost.dll.fs.system_error'&gt;boost::dll::fs::system_error&lt;/link&gt;, std::bad_alloc in case of insufficient memory. </p>
+<div class="variablelist"><table border="0" class="variablelist compact">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term">Parameters:</span></p></td>
+<td><div class="variablelist"><table border="0" class="variablelist compact">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><code class="computeroutput">lib_path</code></span></p></td>
+<td><p>Library file name. Can handle std::string, const char*, std::wstring, const wchar_t* or  <a class="link" href="../../">boost::dll::fs::path</a>. </p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="computeroutput">mode</code></span></p></td>
+<td><p>A mode that will be used on library load. </p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+<tr>
+<td><p><span class="term">Throws:</span></p></td>
+<td> </td>
+</tr>
+</tbody>
+</table></div>
+</li>
+<li class="listitem">
+<pre class="literallayout"><a name="doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a6767e3551e9160709021e2d7dd61f675"></a><span class="identifier">shared_library</span><span class="special">(</span><span class="keyword">const</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">dll</span><span class="special">::</span><span class="identifier">fs</span><span class="special">::</span><span class="identifier">path</span> <span class="special">&amp;</span> lib_path<span class="special">,</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">error_code</span> <span class="special">&amp;</span> ec<span class="special">,</span> 
+               <span class="identifier">load_mode</span><span class="special">::</span><span class="identifier">type</span> mode <span class="special">=</span> <span class="identifier">load_mode</span><span class="special">::</span><span class="identifier">default_mode</span><span class="special">)</span><span class="special">;</span></pre>
+<p>Loads a library by specified path with a specified mode.</p>
+<p>
+
+This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+<div class="variablelist"><table border="0" class="variablelist compact">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term">Parameters:</span></p></td>
+<td><div class="variablelist"><table border="0" class="variablelist compact">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><code class="computeroutput">lib_path</code></span></p></td>
+<td><p>Library file name. Can handle std::string, const char*, std::wstring, const wchar_t* or  <a class="link" href="../../">boost::dll::fs::path</a>. </p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="computeroutput">ec</code></span></p></td>
+<td><p>Variable that will be set to the result of the operation. </p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="computeroutput">mode</code></span></p></td>
+<td><p>A mode that will be used on library load. </p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+<tr>
+<td><p><span class="term">Throws:</span></p></td>
+<td>std::bad_alloc in case of insufficient memory.</td>
+</tr>
+</tbody>
+</table></div>
+</li>
+<li class="listitem"><pre class="literallayout"><a name="doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a7b5ee4d4ba44be12dd96965d9c0a85fc"></a><span class="identifier">shared_library</span><span class="special">(</span><span class="keyword">const</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">dll</span><span class="special">::</span><span class="identifier">fs</span><span class="special">::</span><span class="identifier">path</span> <span class="special">&amp;</span> lib_path<span class="special">,</span> <span class="identifier">load_mode</span><span class="special">::</span><span class="identifier">type</span> mode<span class="special">,</span> 
+               <span class="identifier">std</span><span class="special">::</span><span class="identifier">error_code</span> <span class="special">&amp;</span> ec<span class="special">)</span><span class="special">;</span></pre></li>
+<li class="listitem">
+<pre class="literallayout"><span class="keyword">explicit</span> <a name="doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a1e4ccaa07bee776041458bac929ea5ae"></a><span class="identifier">shared_library</span><span class="special">(</span><span class="identifier">native_handle_t</span> handle<span class="special">)</span> <span class="keyword">noexcept</span><span class="special">;</span></pre>
+<p>Takes ownership of a loaded library.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0" class="variablelist compact">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term">Parameters:</span></p></td>
+<td><div class="variablelist"><table border="0" class="variablelist compact">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><code class="computeroutput">handle</code></span></p></td>
+<td><p>The native handle. </p></td>
+</tr></tbody>
+</table></div></td>
+</tr></tbody>
+</table></div>
+</li>
+<li class="listitem">
+<pre class="literallayout"><a class="link" href="classboost_1_1dll_1_1shared__library.html" title="Class shared_library">shared_library</a> <span class="special">&amp;</span> <a name="doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a49d9fa037377791d9a19c5e4f395fc6e"></a><span class="keyword">operator</span><span class="special">=</span><span class="special">(</span><span class="keyword">const</span> <a class="link" href="classboost_1_1dll_1_1shared__library.html" title="Class shared_library">shared_library</a> <span class="special">&amp;</span> lib<span class="special">)</span><span class="special">;</span></pre>
+<p>Assignment operator. If this-&gt;<a class="link" href="classboost_1_1dll_1_1shared__library.html#doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a768114474404dc56ef584b512dfd2b44">is_loaded()</a> then calls this-&gt;<a class="link" href="classboost_1_1dll_1_1shared__library.html#doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a4f98671190fa5ccb035c8682ed26a140">unload()</a>. Does not invalidate existing symbols and functions loaded from lib.</p>
+<p>
+
+
+xmlonly &lt;link linkend='boost.dll.fs.system_error'&gt;boost::dll::fs::system_error&lt;/link&gt;, std::bad_alloc in case of insufficient memory. </p>
+<div class="variablelist"><table border="0" class="variablelist compact">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term">Parameters:</span></p></td>
+<td><div class="variablelist"><table border="0" class="variablelist compact">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><code class="computeroutput">lib</code></span></p></td>
+<td><p>A shared library to assign from. </p></td>
+</tr></tbody>
+</table></div></td>
+</tr>
+<tr>
+<td><p><span class="term">Postconditions:</span></p></td>
+<td><p>lib == *this </p></td>
+</tr>
+<tr>
+<td><p><span class="term">Throws:</span></p></td>
+<td> </td>
+</tr>
+</tbody>
+</table></div>
+</li>
+<li class="listitem">
+<pre class="literallayout"><a class="link" href="classboost_1_1dll_1_1shared__library.html" title="Class shared_library">shared_library</a> <span class="special">&amp;</span> <a name="doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a9d1a77d5ffcd4b4b5f085203ce46f7d0"></a><span class="keyword">operator</span><span class="special">=</span><span class="special">(</span><a class="link" href="classboost_1_1dll_1_1shared__library.html" title="Class shared_library">shared_library</a> <span class="special">&amp;&amp;</span> lib<span class="special">)</span> <span class="keyword">noexcept</span><span class="special">;</span></pre>
+<p>Move assignment operator. If this-&gt;<a class="link" href="classboost_1_1dll_1_1shared__library.html#doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a768114474404dc56ef584b512dfd2b44">is_loaded()</a> then calls this-&gt;<a class="link" href="classboost_1_1dll_1_1shared__library.html#doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a4f98671190fa5ccb035c8682ed26a140">unload()</a>. Does not invalidate existing symbols and functions loaded from lib.</p>
+<p>
+
+
+</p>
+<div class="variablelist"><table border="0" class="variablelist compact">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term">Parameters:</span></p></td>
+<td><div class="variablelist"><table border="0" class="variablelist compact">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><code class="computeroutput">lib</code></span></p></td>
+<td><p>A library to move from. </p></td>
+</tr></tbody>
+</table></div></td>
+</tr>
+<tr>
+<td><p><span class="term">Postconditions:</span></p></td>
+<td><p>lib.is_loaded() returns false. </p></td>
+</tr>
+<tr>
+<td><p><span class="term">Throws:</span></p></td>
+<td>Nothing. </td>
+</tr>
+</tbody>
+</table></div>
+</li>
+<li class="listitem">
+<pre class="literallayout"><a name="doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a9dcb385da72f28e4d089af67a39f129e"></a><span class="special">~</span><span class="identifier">shared_library</span><span class="special">(</span><span class="special">)</span> <span class="special">=</span> <span class="keyword">default</span><span class="special">;</span></pre>
+<p>Destroys the object by calling <code class="computeroutput"><a class="link" href="classboost_1_1dll_1_1shared__library.html#doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a4f98671190fa5ccb035c8682ed26a140">unload()</a></code>. If library was loaded multiple times by different instances, the actual DLL/DSO won't be unloaded until there is at least one instance that references the DLL/DSO.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0" class="variablelist compact">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term">Throws:</span></p></td>
+<td>Nothing. </td>
+</tr></tbody>
+</table></div>
+</li>
+<li class="listitem">
+<pre class="literallayout"><a class="link" href="classboost_1_1dll_1_1shared__library.html" title="Class shared_library">shared_library</a> <span class="special">&amp;</span> <a name="doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a076d9f34a75053e0b417ffb72acf3577"></a><span class="identifier">assign</span><span class="special">(</span><span class="keyword">const</span> <a class="link" href="classboost_1_1dll_1_1shared__library.html" title="Class shared_library">shared_library</a> <span class="special">&amp;</span> lib<span class="special">,</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">error_code</span> <span class="special">&amp;</span> ec<span class="special">)</span><span class="special">;</span></pre>
+<p>Makes *this share the same shared object as lib. If *this is loaded, then unloads it.</p>
+<p>
+
+
+</p>
+<div class="variablelist"><table border="0" class="variablelist compact">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term">Parameters:</span></p></td>
+<td><div class="variablelist"><table border="0" class="variablelist compact">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><code class="computeroutput">lib</code></span></p></td>
+<td><p>A library to copy. </p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="computeroutput">ec</code></span></p></td>
+<td><p>Variable that will be set to the result of the operation. </p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+<tr>
+<td><p><span class="term">Postconditions:</span></p></td>
+<td><p>lib.location() == this-&gt;<a class="link" href="classboost_1_1dll_1_1shared__library.html#doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a4a30a9e68d73ecee781d692cbf596eca">location()</a>, lib == *this </p></td>
+</tr>
+<tr>
+<td><p><span class="term">Throws:</span></p></td>
+<td>std::bad_alloc in case of insufficient memory. </td>
+</tr>
+</tbody>
+</table></div>
+</li>
+<li class="listitem">
+<pre class="literallayout"><a class="link" href="classboost_1_1dll_1_1shared__library.html" title="Class shared_library">shared_library</a> <span class="special">&amp;</span> <a name="doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1ac456f7a8000c86018d51b0d4eeb2a72d"></a><span class="identifier">assign</span><span class="special">(</span><span class="keyword">const</span> <a class="link" href="classboost_1_1dll_1_1shared__library.html" title="Class shared_library">shared_library</a> <span class="special">&amp;</span> lib<span class="special">)</span><span class="special">;</span></pre>
+<p>Makes *this share the same shared object as lib. If *this is loaded, then unloads it.</p>
+<p>
+
+
+xmlonly &lt;link linkend='boost.dll.fs.system_error'&gt;boost::dll::fs::system_error&lt;/link&gt;, std::bad_alloc in case of insufficient memory. </p>
+<div class="variablelist"><table border="0" class="variablelist compact">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term">Parameters:</span></p></td>
+<td><div class="variablelist"><table border="0" class="variablelist compact">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><code class="computeroutput">lib</code></span></p></td>
+<td><p>A library instance to assign from. </p></td>
+</tr></tbody>
+</table></div></td>
+</tr>
+<tr>
+<td><p><span class="term">Postconditions:</span></p></td>
+<td><p>lib.location() == this-&gt;<a class="link" href="classboost_1_1dll_1_1shared__library.html#doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a4a30a9e68d73ecee781d692cbf596eca">location()</a> </p></td>
+</tr>
+<tr>
+<td><p><span class="term">Throws:</span></p></td>
+<td> </td>
+</tr>
+</tbody>
+</table></div>
+</li>
+<li class="listitem">
+<pre class="literallayout"><span class="keyword">void</span> <a name="doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a4a953c50b86191dd96aa471bac8099a6"></a><span class="identifier">load</span><span class="special">(</span><span class="keyword">const</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">dll</span><span class="special">::</span><span class="identifier">fs</span><span class="special">::</span><span class="identifier">path</span> <span class="special">&amp;</span> lib_path<span class="special">,</span> 
+          <span class="identifier">load_mode</span><span class="special">::</span><span class="identifier">type</span> mode <span class="special">=</span> <span class="identifier">load_mode</span><span class="special">::</span><span class="identifier">default_mode</span><span class="special">)</span><span class="special">;</span></pre>
+<p>Loads a library by specified path with a specified mode.</p>
+<p>Note that if some library is already loaded in this instance, load will call <a class="link" href="classboost_1_1dll_1_1shared__library.html#doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a4f98671190fa5ccb035c8682ed26a140">unload()</a> and then load the new provided library.</p>
+<p>
+
+xmlonly &lt;link linkend='boost.dll.fs.system_error'&gt;boost::dll::fs::system_error&lt;/link&gt;, std::bad_alloc in case of insufficient memory. </p>
+<div class="variablelist"><table border="0" class="variablelist compact">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term">Parameters:</span></p></td>
+<td><div class="variablelist"><table border="0" class="variablelist compact">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><code class="computeroutput">lib_path</code></span></p></td>
+<td><p>Library file name. Can handle std::string, const char*, std::wstring, const wchar_t* or  <a class="link" href="../../">boost::dll::fs::path</a>. </p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="computeroutput">mode</code></span></p></td>
+<td><p>A mode that will be used on library load. </p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+<tr>
+<td><p><span class="term">Throws:</span></p></td>
+<td> </td>
+</tr>
+</tbody>
+</table></div>
+</li>
+<li class="listitem">
+<pre class="literallayout"><span class="keyword">void</span> <a name="doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a3467b64cbfc5333fd11810dcbbefd83b"></a><span class="identifier">load</span><span class="special">(</span><span class="keyword">const</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">dll</span><span class="special">::</span><span class="identifier">fs</span><span class="special">::</span><span class="identifier">path</span> <span class="special">&amp;</span> lib_path<span class="special">,</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">error_code</span> <span class="special">&amp;</span> ec<span class="special">,</span> 
+          <span class="identifier">load_mode</span><span class="special">::</span><span class="identifier">type</span> mode <span class="special">=</span> <span class="identifier">load_mode</span><span class="special">::</span><span class="identifier">default_mode</span><span class="special">)</span><span class="special">;</span></pre>
+<p>Loads a library by specified path with a specified mode.</p>
+<p>Note that if some library is already loaded in this instance, load will call <a class="link" href="classboost_1_1dll_1_1shared__library.html#doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a4f98671190fa5ccb035c8682ed26a140">unload()</a> and then load the new provided library.</p>
+<p>
+
+This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+<div class="variablelist"><table border="0" class="variablelist compact">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term">Parameters:</span></p></td>
+<td><div class="variablelist"><table border="0" class="variablelist compact">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><code class="computeroutput">lib_path</code></span></p></td>
+<td><p>Library file name. Can handle std::string, const char*, std::wstring, const wchar_t* or  <a class="link" href="../../">boost::dll::fs::path</a>. </p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="computeroutput">ec</code></span></p></td>
+<td><p>Variable that will be set to the result of the operation. </p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="computeroutput">mode</code></span></p></td>
+<td><p>A mode that will be used on library load. </p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+<tr>
+<td><p><span class="term">Throws:</span></p></td>
+<td>std::bad_alloc in case of insufficient memory.</td>
+</tr>
+</tbody>
+</table></div>
+</li>
+<li class="listitem"><pre class="literallayout"><span class="keyword">void</span> <a name="doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a68cb5fdaa42eb2ea866ea4b435fd7c8b"></a><span class="identifier">load</span><span class="special">(</span><span class="keyword">const</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">dll</span><span class="special">::</span><span class="identifier">fs</span><span class="special">::</span><span class="identifier">path</span> <span class="special">&amp;</span> lib_path<span class="special">,</span> <span class="identifier">load_mode</span><span class="special">::</span><span class="identifier">type</span> mode<span class="special">,</span> 
+          <span class="identifier">std</span><span class="special">::</span><span class="identifier">error_code</span> <span class="special">&amp;</span> ec<span class="special">)</span><span class="special">;</span></pre></li>
+<li class="listitem">
+<pre class="literallayout"><span class="keyword">void</span> <a name="doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a4f98671190fa5ccb035c8682ed26a140"></a><span class="identifier">unload</span><span class="special">(</span><span class="special">)</span> <span class="keyword">noexcept</span><span class="special">;</span></pre>
+<p>Unloads a shared library. If library was loaded multiple times by different instances, the actual DLL/DSO won't be unloaded until there is at least one instance that references the DLL/DSO.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0" class="variablelist compact">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term">Postconditions:</span></p></td>
+<td><p>this-&gt;<a class="link" href="classboost_1_1dll_1_1shared__library.html#doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a768114474404dc56ef584b512dfd2b44">is_loaded()</a> returns false. </p></td>
+</tr>
+<tr>
+<td><p><span class="term">Throws:</span></p></td>
+<td>Nothing. </td>
+</tr>
+</tbody>
+</table></div>
+</li>
+<li class="listitem">
+<pre class="literallayout"><span class="keyword">bool</span> <a name="doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a768114474404dc56ef584b512dfd2b44"></a><span class="identifier">is_loaded</span><span class="special">(</span><span class="special">)</span> <span class="keyword">const</span> <span class="keyword">noexcept</span><span class="special">;</span></pre>
+<p>Check if an library is loaded.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0" class="variablelist compact">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term">Returns:</span></p></td>
+<td><p>true if a library has been loaded. </p></td>
+</tr>
+<tr>
+<td><p><span class="term">Throws:</span></p></td>
+<td>Nothing. </td>
+</tr>
+</tbody>
+</table></div>
+</li>
+<li class="listitem">
+<pre class="literallayout"><span class="keyword">explicit</span> <a name="doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a420e60e9788bfa3b52aa3aab72ea3a5e"></a><span class="keyword">operator</span> <span class="keyword">bool</span><span class="special">(</span><span class="special">)</span> <span class="keyword">const</span> <span class="keyword">noexcept</span><span class="special">;</span></pre>
+<p>Check if an library is loaded.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0" class="variablelist compact">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term">Returns:</span></p></td>
+<td><p>true if a library has been loaded. </p></td>
+</tr>
+<tr>
+<td><p><span class="term">Throws:</span></p></td>
+<td>Nothing. </td>
+</tr>
+</tbody>
+</table></div>
+</li>
+<li class="listitem">
+<pre class="literallayout"><span class="keyword">bool</span> <a name="doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a61600573e373c540279ac3b5918dd8f1"></a><span class="identifier">has</span><span class="special">(</span><span class="keyword">const</span> <span class="keyword">char</span> <span class="special">*</span> symbol_name<span class="special">)</span> <span class="keyword">const</span> <span class="keyword">noexcept</span><span class="special">;</span></pre>
+<p>Search for a given symbol on loaded library. Works for all symbols, including alias names.</p>
+<p>
+
+
+This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+<div class="variablelist"><table border="0" class="variablelist compact">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term">Parameters:</span></p></td>
+<td><div class="variablelist"><table border="0" class="variablelist compact">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><code class="computeroutput">symbol_name</code></span></p></td>
+<td><p>Null-terminated symbol name. Can handle std::string, char*, const char*. </p></td>
+</tr></tbody>
+</table></div></td>
+</tr>
+<tr>
+<td><p><span class="term">Returns:</span></p></td>
+<td><p><code class="computeroutput">true</code> if the loaded library contains a symbol with a given name. </p></td>
+</tr>
+<tr>
+<td><p><span class="term">Throws:</span></p></td>
+<td>Nothing. </td>
+</tr>
+</tbody>
+</table></div>
+</li>
+<li class="listitem"><pre class="literallayout"><span class="keyword">bool</span> <a name="doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1ac6d3a6b6218a32a25b8f9ee1f2cc4ab2"></a><span class="identifier">has</span><span class="special">(</span><span class="keyword">const</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">string</span> <span class="special">&amp;</span> symbol_name<span class="special">)</span> <span class="keyword">const</span> <span class="keyword">noexcept</span><span class="special">;</span></pre></li>
+<li class="listitem">
+<pre class="literallayout"><span class="keyword">template</span><span class="special">&lt;</span><span class="keyword">typename</span> T<span class="special">&gt;</span> 
+  <span class="identifier">std</span><span class="special">::</span><span class="identifier">enable_if</span><span class="special">&lt;</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">is_member_pointer</span><span class="special">&lt;</span> <span class="identifier">T</span> <span class="special">&gt;</span><span class="special">::</span><span class="identifier">value</span><span class="special">||</span><span class="identifier">std</span><span class="special">::</span><span class="identifier">is_reference</span><span class="special">&lt;</span> <span class="identifier">T</span> <span class="special">&gt;</span><span class="special">::</span><span class="identifier">value</span><span class="special">,</span> <span class="identifier">T</span> <span class="special">&gt;</span><span class="special">::</span><span class="identifier">type</span> 
+  <a name="doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a57ca07c405c026200cf5c7799ae36170"></a><span class="identifier">get</span><span class="special">(</span><span class="keyword">const</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">string</span> <span class="special">&amp;</span> symbol_name<span class="special">)</span> <span class="keyword">const</span><span class="special">;</span></pre>
+<p>Returns reference to the symbol (function or variable) with the given name from the loaded library. This call will always succeed and throw nothing if call to <code class="computeroutput">has(const char* )</code> member function with the same symbol name returned <code class="computeroutput">true</code>.</p>
+<p><span class="bold"><strong>Example:</strong></span> </p>
+<pre class="programlisting"><span class="keyword">int</span><span class="special">&amp;</span> <span class="identifier">i0</span> <span class="special">=</span> <span class="identifier">lib</span><span class="special">.</span><span class="identifier">get</span><span class="special">&lt;</span><span class="keyword">int</span><span class="special">&gt;</span><span class="special">(</span><span class="string">"integer_name"</span><span class="special">)</span><span class="special">;</span>
+<span class="keyword">int</span><span class="special">&amp;</span> <span class="identifier">i1</span> <span class="special">=</span> <span class="special">*</span><span class="identifier">lib</span><span class="special">.</span><span class="identifier">get</span><span class="special">&lt;</span><span class="keyword">int</span><span class="special">*</span><span class="special">&gt;</span><span class="special">(</span><span class="string">"integer_alias_name"</span><span class="special">)</span><span class="special">;</span>
+</pre>
+<p>
+
+
+
+xmlonly &lt;link linkend='boost.dll.fs.system_error'&gt;boost::dll::fs::system_error&lt;/link&gt; if symbol does not exist or if the DLL/DSO was not loaded. </p>
+<div class="variablelist"><table border="0" class="variablelist compact">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term">Parameters:</span></p></td>
+<td><div class="variablelist"><table border="0" class="variablelist compact">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><code class="computeroutput">symbol_name</code></span></p></td>
+<td><p>Null-terminated symbol name. Can handle std::string, char*, const char*. </p></td>
+</tr></tbody>
+</table></div></td>
+</tr>
+<tr>
+<td><p><span class="term">Template Parameters:</span></p></td>
+<td><div class="variablelist"><table border="0" class="variablelist compact">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><code class="computeroutput">T</code></span></p></td>
+<td><p>Type of the symbol that we are going to import. Must be explicitly specified. </p></td>
+</tr></tbody>
+</table></div></td>
+</tr>
+<tr>
+<td><p><span class="term">Returns:</span></p></td>
+<td><p>Reference to the symbol. </p></td>
+</tr>
+<tr>
+<td><p><span class="term">Throws:</span></p></td>
+<td> </td>
+</tr>
+</tbody>
+</table></div>
+</li>
+<li class="listitem">
+<pre class="literallayout"><span class="keyword">template</span><span class="special">&lt;</span><span class="keyword">typename</span> T<span class="special">&gt;</span> 
+  <span class="identifier">std</span><span class="special">::</span><span class="identifier">enable_if</span><span class="special">&lt;</span><span class="special">!</span><span class="special">(</span><span class="identifier">std</span><span class="special">::</span><span class="identifier">is_member_pointer</span><span class="special">&lt;</span> <span class="identifier">T</span> <span class="special">&gt;</span><span class="special">::</span><span class="identifier">value</span><span class="special">||</span><span class="identifier">std</span><span class="special">::</span><span class="identifier">is_reference</span><span class="special">&lt;</span> <span class="identifier">T</span> <span class="special">&gt;</span><span class="special">::</span><span class="identifier">value</span><span class="special">)</span><span class="special">,</span> <span class="identifier">T</span> <span class="special">&amp;</span> <span class="special">&gt;</span><span class="special">::</span><span class="identifier">type</span> 
+  <a name="doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a5feaf1da478039b48f45304a3d712959"></a><span class="identifier">get</span><span class="special">(</span><span class="keyword">const</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">string</span> <span class="special">&amp;</span> symbol_name<span class="special">)</span> <span class="keyword">const</span><span class="special">;</span></pre>
+<p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+</li>
+<li class="listitem"><pre class="literallayout"><span class="keyword">template</span><span class="special">&lt;</span><span class="keyword">typename</span> T<span class="special">&gt;</span> 
+  <span class="identifier">std</span><span class="special">::</span><span class="identifier">enable_if</span><span class="special">&lt;</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">is_member_pointer</span><span class="special">&lt;</span> <span class="identifier">T</span> <span class="special">&gt;</span><span class="special">::</span><span class="identifier">value</span><span class="special">||</span><span class="identifier">std</span><span class="special">::</span><span class="identifier">is_reference</span><span class="special">&lt;</span> <span class="identifier">T</span> <span class="special">&gt;</span><span class="special">::</span><span class="identifier">value</span><span class="special">,</span> <span class="identifier">T</span> <span class="special">&gt;</span><span class="special">::</span><span class="identifier">type</span> 
+  <a name="doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a93ca3299942365309bef723f803aa0fc"></a><span class="identifier">get</span><span class="special">(</span><span class="keyword">const</span> <span class="keyword">char</span> <span class="special">*</span> symbol_name<span class="special">)</span> <span class="keyword">const</span><span class="special">;</span></pre></li>
+<li class="listitem"><pre class="literallayout"><span class="keyword">template</span><span class="special">&lt;</span><span class="keyword">typename</span> T<span class="special">&gt;</span> 
+  <span class="identifier">std</span><span class="special">::</span><span class="identifier">enable_if</span><span class="special">&lt;</span><span class="special">!</span><span class="special">(</span><span class="identifier">std</span><span class="special">::</span><span class="identifier">is_member_pointer</span><span class="special">&lt;</span> <span class="identifier">T</span> <span class="special">&gt;</span><span class="special">::</span><span class="identifier">value</span><span class="special">||</span><span class="identifier">std</span><span class="special">::</span><span class="identifier">is_reference</span><span class="special">&lt;</span> <span class="identifier">T</span> <span class="special">&gt;</span><span class="special">::</span><span class="identifier">value</span><span class="special">)</span><span class="special">,</span> <span class="identifier">T</span> <span class="special">&amp;</span> <span class="special">&gt;</span><span class="special">::</span><span class="identifier">type</span> 
+  <a name="doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1abf0dc58a1080204eaea2824a91fe1ee2"></a><span class="identifier">get</span><span class="special">(</span><span class="keyword">const</span> <span class="keyword">char</span> <span class="special">*</span> symbol_name<span class="special">)</span> <span class="keyword">const</span><span class="special">;</span></pre></li>
+<li class="listitem">
+<pre class="literallayout"><span class="keyword">template</span><span class="special">&lt;</span><span class="keyword">typename</span> T<span class="special">&gt;</span> <span class="identifier">T</span> <span class="special">&amp;</span> <a name="doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a2e74443f85e1fd96a7f47a6a94131261"></a><span class="identifier">get_alias</span><span class="special">(</span><span class="keyword">const</span> <span class="keyword">char</span> <span class="special">*</span> alias_name<span class="special">)</span> <span class="keyword">const</span><span class="special">;</span></pre>
+<p>Returns a symbol (function or variable) from a shared library by alias name of the symbol.</p>
+<p><span class="bold"><strong>Example:</strong></span> </p>
+<pre class="programlisting"><span class="keyword">int</span><span class="special">&amp;</span> <span class="identifier">i</span> <span class="special">=</span> <span class="identifier">lib</span><span class="special">.</span><span class="identifier">get_alias</span><span class="special">&lt;</span><span class="keyword">int</span><span class="special">&gt;</span><span class="special">(</span><span class="string">"integer_alias_name"</span><span class="special">)</span><span class="special">;</span>
+</pre>
+<p>
+
+
+xmlonly &lt;link linkend='boost.dll.fs.system_error'&gt;boost::dll::fs::system_error&lt;/link&gt; if symbol does not exist or if the DLL/DSO was not loaded.</p>
+<p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+<div class="variablelist"><table border="0" class="variablelist compact">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term">Parameters:</span></p></td>
+<td><div class="variablelist"><table border="0" class="variablelist compact">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><code class="computeroutput">alias_name</code></span></p></td>
+<td><p>Null-terminated alias symbol name. Can handle std::string, char*, const char*. </p></td>
+</tr></tbody>
+</table></div></td>
+</tr>
+<tr>
+<td><p><span class="term">Template Parameters:</span></p></td>
+<td><div class="variablelist"><table border="0" class="variablelist compact">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><code class="computeroutput">T</code></span></p></td>
+<td><p>Type of the symbol that we are going to import. Must be explicitly specified.. </p></td>
+</tr></tbody>
+</table></div></td>
+</tr>
+<tr>
+<td><p><span class="term">Throws:</span></p></td>
+<td> </td>
+</tr>
+</tbody>
+</table></div>
+</li>
+<li class="listitem"><pre class="literallayout"><span class="keyword">template</span><span class="special">&lt;</span><span class="keyword">typename</span> T<span class="special">&gt;</span> <span class="identifier">T</span> <span class="special">&amp;</span> <a name="doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1ac773eeaa11c78ac11bcd440750b7c0b3"></a><span class="identifier">get_alias</span><span class="special">(</span><span class="keyword">const</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">string</span> <span class="special">&amp;</span> alias_name<span class="special">)</span> <span class="keyword">const</span><span class="special">;</span></pre></li>
+<li class="listitem">
+<pre class="literallayout"><span class="identifier">native_handle_t</span> <a name="doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a915bbd234b66500ecaf97d6dd576dc1f"></a><span class="identifier">native</span><span class="special">(</span><span class="special">)</span> <span class="keyword">const</span> <span class="keyword">noexcept</span><span class="special">;</span></pre>
+<p>Returns the native handler of the loaded library.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0" class="variablelist compact">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term">Returns:</span></p></td>
+<td><p>Platform-specific handle. </p></td>
+</tr></tbody>
+</table></div>
+</li>
+<li class="listitem">
+<pre class="literallayout"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">dll</span><span class="special">::</span><span class="identifier">fs</span><span class="special">::</span><span class="identifier">path</span> <a name="doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a4a30a9e68d73ecee781d692cbf596eca"></a><span class="identifier">location</span><span class="special">(</span><span class="special">)</span> <span class="keyword">const</span><span class="special">;</span></pre>
+<p>Returns full path and name of this shared object.</p>
+<p><span class="bold"><strong>Example:</strong></span> </p>
+<pre class="programlisting"><a class="link" href="classboost_1_1dll_1_1shared__library.html#doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a5342750ce76cb563168bd5c59bc3d613"><span class="identifier">shared_library</span></a> <span class="identifier">lib</span><span class="special">(</span><span class="string">"test_lib.dll"</span><span class="special">)</span><span class="special">;</span>
+<span class="identifier">filesystem</span><span class="special">::</span><span class="identifier">path</span> <span class="identifier">full_path</span> <span class="special">=</span> <span class="identifier">lib</span><span class="special">.</span><span class="identifier">location</span><span class="special">(</span><span class="special">)</span><span class="special">;</span> <span class="comment">// C:\Windows\System32\test_lib.dll</span>
+</pre>
+<p>
+
+xmlonly &lt;link linkend='boost.dll.fs.system_error'&gt;boost::dll::fs::system_error&lt;/link&gt;, std::bad_alloc. </p>
+<div class="variablelist"><table border="0" class="variablelist compact">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term">Returns:</span></p></td>
+<td><p>Full path to the shared library. </p></td>
+</tr>
+<tr>
+<td><p><span class="term">Throws:</span></p></td>
+<td> </td>
+</tr>
+</tbody>
+</table></div>
+</li>
+<li class="listitem">
+<pre class="literallayout"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">dll</span><span class="special">::</span><span class="identifier">fs</span><span class="special">::</span><span class="identifier">path</span> <a name="doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1aec6d6c4905cfcfe78a102f4f7d089d79"></a><span class="identifier">location</span><span class="special">(</span><span class="identifier">std</span><span class="special">::</span><span class="identifier">error_code</span> <span class="special">&amp;</span> ec<span class="special">)</span> <span class="keyword">const</span><span class="special">;</span></pre>
+<p>Returns full path and name of shared module.</p>
+<p><span class="bold"><strong>Example:</strong></span> </p>
+<pre class="programlisting"><a class="link" href="classboost_1_1dll_1_1shared__library.html#doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a5342750ce76cb563168bd5c59bc3d613"><span class="identifier">shared_library</span></a> <span class="identifier">lib</span><span class="special">(</span><span class="string">"test_lib.dll"</span><span class="special">)</span><span class="special">;</span>
+<span class="identifier">filesystem</span><span class="special">::</span><span class="identifier">path</span> <span class="identifier">full_path</span> <span class="special">=</span> <span class="identifier">lib</span><span class="special">.</span><span class="identifier">location</span><span class="special">(</span><span class="special">)</span><span class="special">;</span> <span class="comment">// C:\Windows\System32\test_lib.dll</span>
+</pre>
+<p>
+
+
+</p>
+<div class="variablelist"><table border="0" class="variablelist compact">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term">Parameters:</span></p></td>
+<td><div class="variablelist"><table border="0" class="variablelist compact">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><code class="computeroutput">ec</code></span></p></td>
+<td><p>Variable that will be set to the result of the operation. </p></td>
+</tr></tbody>
+</table></div></td>
+</tr>
+<tr>
+<td><p><span class="term">Returns:</span></p></td>
+<td><p>Full path to the shared library. </p></td>
+</tr>
+<tr>
+<td><p><span class="term">Throws:</span></p></td>
+<td>std::bad_alloc. </td>
+</tr>
+</tbody>
+</table></div>
+</li>
+<li class="listitem">
+<pre class="literallayout"><span class="keyword">void</span> <a name="doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a2f918593e14788c2be148ac86ae6bf25"></a><span class="identifier">swap</span><span class="special">(</span><a class="link" href="classboost_1_1dll_1_1shared__library.html" title="Class shared_library">shared_library</a> <span class="special">&amp;</span> rhs<span class="special">)</span> <span class="keyword">noexcept</span><span class="special">;</span></pre>
+<p>Swaps two libraries. Does not invalidate existing symbols and functions loaded from libraries.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0" class="variablelist compact">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term">Parameters:</span></p></td>
+<td><div class="variablelist"><table border="0" class="variablelist compact">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><code class="computeroutput">rhs</code></span></p></td>
+<td><p>Library to swap with. </p></td>
+</tr></tbody>
+</table></div></td>
+</tr>
+<tr>
+<td><p><span class="term">Throws:</span></p></td>
+<td>Nothing. </td>
+</tr>
+</tbody>
+</table></div>
+</li>
+</ol></div>
+</div>
+<div class="refsect2">
+<a name="id-1.3.12.8.2.6.4.4.5"></a><h3>
+<a name="id3-bb"></a><code class="computeroutput">shared_library</code> public static functions</h3>
+<div class="orderedlist"><ol class="orderedlist" type="1">
+<li class="listitem">
+<pre class="literallayout"><span class="keyword">static</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">dll</span><span class="special">::</span><span class="identifier">fs</span><span class="special">::</span><span class="identifier">path</span> <a name="doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a3a0c6ead9ac034c79bec9f41deaebe13"></a><span class="identifier">suffix</span><span class="special">(</span><span class="special">)</span><span class="special">;</span></pre>
+<p>Returns suffix of shared module: in a call to <a class="link" href="classboost_1_1dll_1_1shared__library.html#doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a4a953c50b86191dd96aa471bac8099a6">load()</a> or the constructor/load.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0" class="variablelist compact">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term">Returns:</span></p></td>
+<td><p>The suffix od shared module: ".dll" (Windows), ".so" (Unix/Linux/BSD), ".dylib" (MacOS/IOS) </p></td>
+</tr></tbody>
+</table></div>
+</li>
+<li class="listitem">
+<pre class="literallayout"><span class="keyword">static</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">dll</span><span class="special">::</span><span class="identifier">fs</span><span class="special">::</span><span class="identifier">path</span> <a name="doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a710b758049bfb6bcad95bf2381d493ec"></a><span class="identifier">decorate</span><span class="special">(</span><span class="keyword">const</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">dll</span><span class="special">::</span><span class="identifier">fs</span><span class="special">::</span><span class="identifier">path</span> <span class="special">&amp;</span> sl<span class="special">)</span><span class="special">;</span></pre>
+<p>Returns the decorated path to a shared module name, i.e. with needed prefix/suffix added.</p>
+<p><span class="bold"><strong>Recommendations:</strong></span> Use <code class="computeroutput">load</code> with <code class="computeroutput"><a class="link" href="shared__library__load__mode_8hpp_1a7aead736a07eaf25623ad7bfa1f0ee2d.html#doxygen.shared_library_reference.shared__library__load__mode_8hpp_1a7aead736a07eaf25623ad7bfa1f0ee2dad42df8f173adb4aa7851d140c116ceb9">load_mode::append_decorations</a></code> instead of constructing the decorated path via <code class="computeroutput"><a class="link" href="classboost_1_1dll_1_1shared__library.html#doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a710b758049bfb6bcad95bf2381d493ec">decorate()</a></code> and loading by it.</p>
+<p>For instance, for a path like "path/to/boost" it returns :</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>path/to/libboost.so on posix platforms</p></li>
+<li class="listitem"><p>path/to/libboost.dylib on OSX</p></li>
+<li class="listitem"><p>path/to/boost.dll on Windows</p></li>
+</ul></div>
+<p>
+</p>
+<p>Method handles both relative and absolute paths.</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Windows note: <code class="computeroutput"><a class="link" href="classboost_1_1dll_1_1shared__library.html#doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a710b758049bfb6bcad95bf2381d493ec">decorate()</a></code> does not prepend "lib" to the decorated path. Use <code class="computeroutput">load</code> with <code class="computeroutput"><a class="link" href="shared__library__load__mode_8hpp_1a7aead736a07eaf25623ad7bfa1f0ee2d.html#doxygen.shared_library_reference.shared__library__load__mode_8hpp_1a7aead736a07eaf25623ad7bfa1f0ee2dad42df8f173adb4aa7851d140c116ceb9">load_mode::append_decorations</a></code> for MinGW compatibility purpose.</p></li>
+<li class="listitem"><p>Posix note: if the initial module name is already prepended with lib, only the <a class="link" href="classboost_1_1dll_1_1shared__library.html#doxygen.shared_library_reference.classboost_1_1dll_1_1shared__library_1a3a0c6ead9ac034c79bec9f41deaebe13">suffix()</a> is appended to the path</p></li>
+</ul></div>
+<p>
+</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0" class="variablelist compact">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term">Parameters:</span></p></td>
+<td><div class="variablelist"><table border="0" class="variablelist compact">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><code class="computeroutput">sl</code></span></p></td>
+<td><p>the module name and path to decorate - for instance : /usr/lib/boost</p></td>
+</tr></tbody>
+</table></div></td>
+</tr>
+<tr>
+<td><p><span class="term">Returns:</span></p></td>
+<td><p>The decorated unportable path that may not exists in the filesystem or could be wrong due to platform specifics. </p></td>
+</tr>
+</tbody>
+</table></div>
+</li>
+</ol></div>
+</div>
+</div>
+</div>
+<div class="copyright-footer">Copyright © 2014 Renato Tegon Forti, Antony Polukhin<br>Copyright © 2015 Antony Polukhin<br>Copyright © 2016 Antony Polukhin, Klemens Morgenstern<br>Copyright © 2017-2025 Antony
+      Polukhin<p>
+        Distributed under the Boost Software License, Version 1.0. (See accompanying
+        file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
+      </p>
+</div>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="runtime__symbol__info_8hpp_1ad4f62eae484acfa53de57045fd18dde7.html"><img src="../../../../doc/src/images/prev.png" alt="Prev"></a><a accesskey="u" href="../../boost_dll/reference.html#doxygen.shared_library_reference.shared__library_8hpp"><img src="../../../../doc/src/images/up.png" alt="Up"></a><a accesskey="h" href="../../index.html"><img src="../../../../doc/src/images/home.png" alt="Home"></a><a accesskey="n" href="shared__library__load__mode_8hpp_1a7aead736a07eaf25623ad7bfa1f0ee2d.html"><img src="../../../../doc/src/images/next.png" alt="Next"></a>
+</div>
+</body>
+</html>

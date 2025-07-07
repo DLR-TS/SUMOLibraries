@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Change Log :: Boost.Unordered</title>
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../unordered/_/css/site.css">
+  </head>
+  <body class="article">
+<div class="body">
+<div class="nav-container" data-component="unordered" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="intro.html">Boost.Unordered</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="intro.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="buckets.html">Basics of Hash Tables</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="hash_equality.html">Equality Predicates and Hash Functions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="regular.html">Regular Containers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="concurrent.html">Concurrent Containers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="hash_quality.html">Hash Quality</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="compliance.html">Standard Compliance</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="structures.html">Data Structures</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="debuggability.html">Debuggability</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="benchmarks.html">Benchmarks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="rationale.html">Implementation Rationale</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="ref.html">Reference</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_map_fwd.html"><code>&lt;boost/unordered/unordered_map_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_map_top.html"><code>&lt;boost/unordered_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_map.html"><code>&lt;boost/unordered/unordered_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_map.html"><code>unordered_map</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_multimap.html"><code>unordered_multimap</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_set_fwd.html"><code>&lt;boost/unordered/unordered_set_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_set_top.html"><code>&lt;boost/unordered_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_set.html"><code>&lt;boost/unordered/unordered_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_set.html"><code>unordered_set</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_multiset.html"><code>unordered_multiset</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/hash_traits.html">Hash Traits</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/stats.html">Statistics</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_flat_map_fwd.html"><code>&lt;boost/unordered/unordered_flat_map_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_flat_map.html"><code>&lt;boost/unordered/unordered_flat_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_flat_map.html"><code>unordered_flat_map</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_flat_set_fwd.html"><code>&lt;boost/unordered/unordered_flat_set_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_flat_set.html"><code>&lt;boost/unordered/unordered_flat_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_flat_set.html"><code>unordered_flat_set</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_node_map_fwd.html"><code>&lt;boost/unordered/unordered_node_map_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_node_map.html"><code>&lt;boost/unordered/unordered_node_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_node_map.html"><code>unordered_node_map</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_node_set_fwd.html"><code>&lt;boost/unordered/unordered_node_set_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_node_set.html"><code>&lt;boost/unordered/unordered_node_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_node_set.html"><code>unordered_node_set</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_flat_map_fwd.html"><code>&lt;boost/unordered/concurrent_flat_map_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_flat_map.html"><code>&lt;boost/unordered/concurrent_flat_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/concurrent_flat_map.html"><code>concurrent_flat_map</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_flat_set_fwd.html"><code>&lt;boost/unordered/concurrent_flat_set_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_flat_set.html"><code>&lt;boost/unordered/concurrent_flat_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/concurrent_flat_set.html"><code>concurrent_flat_set</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_node_map_fwd.html"><code>&lt;boost/unordered/concurrent_node_map_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_node_map.html"><code>&lt;boost/unordered/concurrent_node_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/concurrent_node_map.html"><code>concurrent_node_map</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_node_set_fwd.html"><code>&lt;boost/unordered/concurrent_node_set_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_node_set.html"><code>&lt;boost/unordered/concurrent_node_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/concurrent_node_set.html"><code>concurrent_node_set</code></a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="changes.html">Change Log</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="bibliography.html">Bibliography</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="copyright.html">Copyright and License</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="intro.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="intro.html">Boost.Unordered</a></li>
+    <li><a href="changes.html">Change Log</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Change Log</h1>
+<div class="sect1">
+<h2 id="changes_release_1_88_0"><a class="anchor" href="#changes_release_1_88_0"></a>Release 1.88.0</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Migrated the documentation to a multipage format using Antora.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="changes_release_1_87_0_major_update"><a class="anchor" href="#changes_release_1_87_0_major_update"></a>Release 1.87.0 - Major update</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Added concurrent, node-based containers <code>boost::concurrent_node_map</code> and <code>boost::concurrent_node_set</code>.</p>
+</li>
+<li>
+<p>Added <code>insert_and_visit(x, f1, f2)</code> and similar operations to concurrent containers, which
+allow for visitation of an element right after insertion (by contrast, <code>insert_or_visit(x, f)</code> only
+visits the element if insertion did <em>not</em> take place).</p>
+</li>
+<li>
+<p>Made visitation exclusive-locked within certain
+<code>boost::concurrent_flat_set</code> operations to allow for safe mutable modification of elements
+(<a href="https://github.com/boostorg/unordered/pull/265" target="_blank" rel="noopener">PR#265</a>).</p>
+</li>
+<li>
+<p>In Visual Studio Natvis, supported any container with an allocator that uses fancy pointers. This applies to any fancy pointer type, as long as the proper Natvis customization point "Intrinsic" functions are written for the fancy pointer type.</p>
+</li>
+<li>
+<p>Added GDB pretty-printers for all containers and iterators. For a container with an allocator that uses fancy pointers, these only work if the proper pretty-printer is written for the fancy pointer type itself.</p>
+</li>
+<li>
+<p>Fixed <code>std::initializer_list</code> assignment issues for open-addressing containers
+(<a href="https://github.com/boostorg/unordered/pull/277" target="_blank" rel="noopener">PR#277</a>).</p>
+</li>
+<li>
+<p>Allowed non-copyable callables to be passed to the <code>std::initializer_list</code> overloads of <code>insert_{and|or}_[c]visit</code> for concurrent containers, by internally passing a <code>std::reference_wrapper</code> of the callable to the iterator-pair overloads.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="changes_release_1_86_0"><a class="anchor" href="#changes_release_1_86_0"></a>Release 1.86.0</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Added container <code>pmr</code> aliases when header <code>&lt;memory_resource&gt;</code> is available. The alias <code>boost::unordered::pmr::[container]</code> refers to <code>boost::unordered::[container]</code> with a <code>std::pmr::polymorphic_allocator</code> allocator type.</p>
+</li>
+<li>
+<p>Equipped open-addressing and concurrent containers to internally calculate and provide statistical metrics affected by the quality of the hash function. This functionality is enabled by the global macro <code>BOOST_UNORDERED_ENABLE_STATS</code>.</p>
+</li>
+<li>
+<p>Avalanching hash functions must now be marked via an <code>is_avalanching</code> typedef with an embedded <code>value</code> constant set to <code>true</code> (typically, defining <code>is_avalanching</code> as <code>std::true_type</code>). <code>using is_avalanching = void</code> is deprecated but allowed for backwards compatibility.</p>
+</li>
+<li>
+<p>Added Visual Studio Natvis framework custom visualizations for containers and iterators. This works for all containers with an allocator using raw pointers. In this release, containers and iterators are not supported if their allocator uses fancy pointers. This may be addressed in later releases.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="changes_release_1_85_0"><a class="anchor" href="#changes_release_1_85_0"></a>Release 1.85.0</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Optimized <code>emplace()</code> for a <code>value_type</code> or <code>init_type</code> (if applicable) argument to bypass creating an intermediate object. The argument is already the same type as the would-be intermediate object.</p>
+</li>
+<li>
+<p>Optimized <code>emplace()</code> for <code>k,v</code> arguments on map containers to delay constructing the object until it is certain that an element should be inserted. This optimization happens when the map&#8217;s <code>key_type</code> is move constructible or when the <code>k</code> argument is a <code>key_type</code>.</p>
+</li>
+<li>
+<p>Fixed support for allocators with <code>explicit</code> copy constructors (<a href="https://github.com/boostorg/unordered/pull/234" target="_blank" rel="noopener">PR#234</a>).</p>
+</li>
+<li>
+<p>Fixed bug in the <code>const</code> version of <code>unordered_multimap::find(k, hash, eq)</code> (<a href="https://github.com/boostorg/unordered/pull/238" target="_blank" rel="noopener">PR#238</a>).</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="changes_release_1_84_0_major_update"><a class="anchor" href="#changes_release_1_84_0_major_update"></a>Release 1.84.0 - Major update</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Added <code>boost::concurrent_flat_set</code>.</p>
+</li>
+<li>
+<p>Added <code>[c]visit_while</code> operations to concurrent containers,
+with serial and parallel variants.</p>
+</li>
+<li>
+<p>Added efficient move construction of <code>boost::unordered_flat_(map|set)</code> from
+<code>boost::concurrent_flat_(map|set)</code> and vice versa.</p>
+</li>
+<li>
+<p>Added bulk visitation to concurrent containers for increased lookup performance.</p>
+</li>
+<li>
+<p>Added debug-mode mechanisms for detecting illegal reentrancies into
+a concurrent container from user code.</p>
+</li>
+<li>
+<p>Added Boost.Serialization support to all containers and their (non-local) iterator types.</p>
+</li>
+<li>
+<p>Added support for fancy pointers to open-addressing and concurrent containers.
+This enables scenarios like the use of Boost.Interprocess allocators to construct containers in shared memory.</p>
+</li>
+<li>
+<p>Fixed bug in member of pointer operator for local iterators of closed-addressing
+containers (<a href="https://github.com/boostorg/unordered/pull/221" target="_blank" rel="noopener">PR#221</a>, credit goes to GitHub user vslashg for finding
+and fixing this issue).</p>
+</li>
+<li>
+<p>Starting with this release, <code>boost::unordered_[multi]set</code> and <code>boost::unordered_[multi]map</code>
+only work with C++11 onwards.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="changes_release_1_83_0_major_update"><a class="anchor" href="#changes_release_1_83_0_major_update"></a>Release 1.83.0 - Major update</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Added <code>boost::concurrent_flat_map</code>, a fast, thread-safe hashmap based on open addressing.</p>
+</li>
+<li>
+<p>Sped up iteration of open-addressing containers.</p>
+</li>
+<li>
+<p>In open-addressing containers, <code>erase(iterator)</code>, which previously returned nothing, now
+returns a proxy object convertible to an iterator to the next element.
+This enables the typical <code>it = c.erase(it)</code> idiom without incurring any performance penalty
+when the returned proxy is not used.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="changes_release_1_82_0_major_update"><a class="anchor" href="#changes_release_1_82_0_major_update"></a>Release 1.82.0 - Major update</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>C++03 support is planned for deprecation. Boost 1.84.0 will no longer support
+C++03 mode and C++11 will become the new minimum for using the library.</p>
+</li>
+<li>
+<p>Added node-based, open-addressing containers
+<code>boost::unordered_node_map</code> and <code>boost::unordered_node_set</code>.</p>
+</li>
+<li>
+<p>Extended heterogeneous lookup to more member functions as specified in
+<a href="https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2023/p2363r5.html">P2363</a>.</p>
+</li>
+<li>
+<p>Replaced the previous post-mixing process for open-addressing containers with
+a new algorithm based on extended multiplication by a constant.</p>
+</li>
+<li>
+<p>Fixed bug in internal emplace() impl where stack-local types were not properly
+constructed using the Allocator of the container which breaks uses-allocator
+construction.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="changes_release_1_81_0_major_update"><a class="anchor" href="#changes_release_1_81_0_major_update"></a>Release 1.81.0 - Major update</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Added fast containers <code>boost::unordered_flat_map</code> and <code>boost::unordered_flat_set</code>
+based on open addressing.</p>
+</li>
+<li>
+<p>Added CTAD deduction guides for all containers.</p>
+</li>
+<li>
+<p>Added missing constructors as specified in <a href="https://cplusplus.github.io/LWG/issue2713">LWG issue 2713</a>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="changes_release_1_80_0_major_update"><a class="anchor" href="#changes_release_1_80_0_major_update"></a>Release 1.80.0 - Major update</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Refactor internal implementation to be dramatically faster</p>
+</li>
+<li>
+<p>Allow <code>final</code> Hasher and KeyEqual objects</p>
+</li>
+<li>
+<p>Update documentation, adding benchmark graphs and notes on the new internal
+data structures</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="changes_release_1_79_0"><a class="anchor" href="#changes_release_1_79_0"></a>Release 1.79.0</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Improved C++20 support:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>All containers have been updated to support
+heterogeneous <code>count</code>, <code>equal_range</code> and <code>find</code>.</p>
+</li>
+<li>
+<p>All containers now implement the member function <code>contains</code>.</p>
+</li>
+<li>
+<p><code>erase_if</code> has been implemented for all containers.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Improved C++23 support:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>All containers have been updated to support
+heterogeneous <code>erase</code> and <code>extract</code>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Changed behavior of <code>reserve</code> to eagerly
+allocate (<a href="https://github.com/boostorg/unordered/pull/59" target="_blank" rel="noopener">PR#59</a>).</p>
+</li>
+<li>
+<p>Various warning fixes in the test suite.</p>
+</li>
+<li>
+<p>Update code to internally use <code>boost::allocator_traits</code>.</p>
+</li>
+<li>
+<p>Switch to Fibonacci hashing.</p>
+</li>
+<li>
+<p>Update documentation to be written in AsciiDoc instead of QuickBook.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="changes_release_1_67_0"><a class="anchor" href="#changes_release_1_67_0"></a>Release 1.67.0</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Improved C++17 support:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Add template deduction guides from the standard.</p>
+</li>
+<li>
+<p>Use a simple implementation of <code>optional</code> in node handles, so
+that they&#8217;re closer to the standard.</p>
+</li>
+<li>
+<p>Add missing <code>noexcept</code> specifications to <code>swap</code>, <code>operator=</code>
+and node handles, and change the implementation to match.
+Using <code>std::allocator_traits::is_always_equal</code>, or our own
+implementation when not available, and
+<code>boost::is_nothrow_swappable</code> in the implementation.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Improved C++20 support:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Use <code>boost::to_address</code>, which has the proposed C++20 semantics,
+rather than the old custom implementation.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Add <code>element_type</code> to iterators, so that <code>std::pointer_traits</code>
+will work.</p>
+</li>
+<li>
+<p>Use <code>std::piecewise_construct</code> on recent versions of Visual C++,
+and other uses of the Dinkumware standard library,
+now using Boost.Predef to check compiler and library versions.</p>
+</li>
+<li>
+<p>Use <code>std::iterator_traits</code> rather than the boost iterator traits
+in order to remove dependency on Boost.Iterator.</p>
+</li>
+<li>
+<p>Remove iterators' inheritance from <code>std::iterator</code>, which is
+deprecated in C++17, thanks to Daniela Engert
+(<a href="https://github.com/boostorg/unordered/pull/7" target="_blank" rel="noopener">PR#7</a>).</p>
+</li>
+<li>
+<p>Stop using <code>BOOST_DEDUCED_TYPENAME</code>.</p>
+</li>
+<li>
+<p>Update some Boost include paths.</p>
+</li>
+<li>
+<p>Rename some internal methods, and variables.</p>
+</li>
+<li>
+<p>Various testing improvements.</p>
+</li>
+<li>
+<p>Miscellaneous internal changes.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="changes_release_1_66_0"><a class="anchor" href="#changes_release_1_66_0"></a>Release 1.66.0</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Simpler move construction implementation.</p>
+</li>
+<li>
+<p>Documentation fixes (<a href="https://github.com/boostorg/unordered/pull/6" target="_blank" rel="noopener">GitHub #6</a>).</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="changes_release_1_65_0"><a class="anchor" href="#changes_release_1_65_0"></a>Release 1.65.0</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Add deprecated attributes to <code>quick_erase</code> and <code>erase_return_void</code>.
+I really will remove them in a future version this time.</p>
+</li>
+<li>
+<p>Small standards compliance fixes:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>noexpect</code> specs for <code>swap</code> free functions.</p>
+</li>
+<li>
+<p>Add missing <code>insert(P&amp;&amp;)</code> methods.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="changes_release_1_64_0"><a class="anchor" href="#changes_release_1_64_0"></a>Release 1.64.0</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Initial support for new C++17 member functions:
+<code>insert_or_assign</code> and <code>try_emplace</code> in <code>unordered_map</code>,</p>
+</li>
+<li>
+<p>Initial support for <code>merge</code> and <code>extract</code>.
+Does not include transferring nodes between
+<code>unordered_map</code> and <code>unordered_multimap</code> or between <code>unordered_set</code> and
+<code>unordered_multiset</code> yet. That will hopefully be in the next version of
+Boost.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="changes_release_1_63_0"><a class="anchor" href="#changes_release_1_63_0"></a>Release 1.63.0</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Check hint iterator in <code>insert</code>/<code>emplace_hint</code>.</p>
+</li>
+<li>
+<p>Fix some warnings, mostly in the tests.</p>
+</li>
+<li>
+<p>Manually write out <code>emplace_args</code> for small numbers of arguments -
+should make template error messages a little more bearable.</p>
+</li>
+<li>
+<p>Remove superfluous use of <code>boost::forward</code> in emplace arguments,
+which fixes emplacing string literals in old versions of Visual C++.</p>
+</li>
+<li>
+<p>Fix an exception safety issue in assignment. If bucket allocation
+throws an exception, it can overwrite the hash and equality functions while
+leaving the existing elements in place. This would mean that the function
+objects wouldn&#8217;t match the container elements, so elements might be in the
+wrong bucket and equivalent elements would be incorrectly handled.</p>
+</li>
+<li>
+<p>Various reference documentation improvements.</p>
+</li>
+<li>
+<p>Better allocator support (<a href="https://svn.boost.org/trac/boost/ticket/12459" target="_blank" rel="noopener">#12459</a>).</p>
+</li>
+<li>
+<p>Make the no argument constructors implicit.</p>
+</li>
+<li>
+<p>Implement missing allocator aware constructors.</p>
+</li>
+<li>
+<p>Fix assigning the hash/key equality functions for empty containers.</p>
+</li>
+<li>
+<p>Remove unary/binary_function from the examples in the documentation.
+They are removed in C++17.</p>
+</li>
+<li>
+<p>Support 10 constructor arguments in emplace. It was meant to support up to 10
+arguments, but an off by one error in the preprocessor code meant it only
+supported up to 9.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="changes_release_1_62_0"><a class="anchor" href="#changes_release_1_62_0"></a>Release 1.62.0</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Remove use of deprecated <code>boost::iterator</code>.</p>
+</li>
+<li>
+<p>Remove <code>BOOST_NO_STD_DISTANCE</code> workaround.</p>
+</li>
+<li>
+<p>Remove <code>BOOST_UNORDERED_DEPRECATED_EQUALITY</code> warning.</p>
+</li>
+<li>
+<p>Simpler implementation of assignment, fixes an exception safety issue
+for <code>unordered_multiset</code> and <code>unordered_multimap</code>. Might be a little slower.</p>
+</li>
+<li>
+<p>Stop using return value SFINAE which some older compilers have issues
+with.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="changes_release_1_58_0"><a class="anchor" href="#changes_release_1_58_0"></a>Release 1.58.0</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Remove unnecessary template parameter from const iterators.</p>
+</li>
+<li>
+<p>Rename private <code>iterator</code> typedef in some iterator classes, as it
+confuses some traits classes.</p>
+</li>
+<li>
+<p>Fix move assignment with stateful, propagate_on_container_move_assign
+allocators (<a href="https://svn.boost.org/trac/boost/ticket/10777" target="_blank" rel="noopener">#10777</a>).</p>
+</li>
+<li>
+<p>Fix rare exception safety issue in move assignment.</p>
+</li>
+<li>
+<p>Fix potential overflow when calculating number of buckets to allocate
+(<a href="https://github.com/boostorg/unordered/pull/4" target="_blank" rel="noopener">GitHub #4</a>).</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="changes_release_1_57_0"><a class="anchor" href="#changes_release_1_57_0"></a>Release 1.57.0</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Fix the <code>pointer</code> typedef in iterators (<a href="https://svn.boost.org/trac/boost/ticket/10672" target="_blank" rel="noopener">#10672</a>).</p>
+</li>
+<li>
+<p>Fix Coverity warning
+(<a href="https://github.com/boostorg/unordered/pull/2" target="_blank" rel="noopener">GitHub #2</a>).</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="changes_release_1_56_0"><a class="anchor" href="#changes_release_1_56_0"></a>Release 1.56.0</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Fix some shadowed variable warnings (<a href="https://svn.boost.org/trac/boost/ticket/9377" target="_blank" rel="noopener">#9377</a>).</p>
+</li>
+<li>
+<p>Fix allocator use in documentation (<a href="https://svn.boost.org/trac/boost/ticket/9719" target="_blank" rel="noopener">#9719</a>).</p>
+</li>
+<li>
+<p>Always use prime number of buckets for integers. Fixes performance
+regression when inserting consecutive integers, although makes other
+uses slower (<a href="https://svn.boost.org/trac/boost/ticket/9282" target="_blank" rel="noopener">#9282</a>).</p>
+</li>
+<li>
+<p>Only construct elements using allocators, as specified in C++11 standard.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="changes_release_1_55_0"><a class="anchor" href="#changes_release_1_55_0"></a>Release 1.55.0</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Avoid some warnings (<a href="https://svn.boost.org/trac/boost/ticket/8851" target="_blank" rel="noopener">#8851</a>, <a href="https://svn.boost.org/trac/boost/ticket/8874" target="_blank" rel="noopener">#8874</a>).</p>
+</li>
+<li>
+<p>Avoid exposing some detail functions via. ADL on the iterators.</p>
+</li>
+<li>
+<p>Follow the standard by only using the allocators' construct and destroy
+methods to construct and destroy stored elements. Don&#8217;t use them for internal
+data like pointers.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="changes_release_1_54_0"><a class="anchor" href="#changes_release_1_54_0"></a>Release 1.54.0</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Mark methods specified in standard as <code>noexpect</code>. More to come in the next
+release.</p>
+</li>
+<li>
+<p>If the hash function and equality predicate are known to both have nothrow
+move assignment or construction then use them.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="changes_release_1_53_0"><a class="anchor" href="#changes_release_1_53_0"></a>Release 1.53.0</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Remove support for the old pre-standard variadic pair constructors, and
+equality implementation. Both have been deprecated since Boost 1.48.</p>
+</li>
+<li>
+<p>Remove use of deprecated config macros.</p>
+</li>
+<li>
+<p>More internal implementation changes, including a much simpler
+implementation of <code>erase</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="changes_release_1_52_0"><a class="anchor" href="#changes_release_1_52_0"></a>Release 1.52.0</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Faster assign, which assigns to existing nodes where possible, rather than
+creating entirely new nodes and copy constructing.</p>
+</li>
+<li>
+<p>Fixed bug in <code>erase_range</code> (<a href="https://svn.boost.org/trac/boost/ticket/7471" target="_blank" rel="noopener">#7471</a>).</p>
+</li>
+<li>
+<p>Reverted some of the internal changes to how nodes are created, especially
+for C++11 compilers. 'construct' and 'destroy' should work a little better
+for C++11 allocators.</p>
+</li>
+<li>
+<p>Simplified the implementation a bit. Hopefully more robust.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="changes_release_1_51_0"><a class="anchor" href="#changes_release_1_51_0"></a>Release 1.51.0</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Fix construction/destruction issue when using a C++11 compiler with a
+C++03 allocator (<a href="https://svn.boost.org/trac/boost/ticket/7100" target="_blank" rel="noopener">#7100</a>).</p>
+</li>
+<li>
+<p>Remove a <code>try..catch</code> to support compiling without exceptions.</p>
+</li>
+<li>
+<p>Adjust SFINAE use to try to support g++ 3.4 (<a href="https://svn.boost.org/trac/boost/ticket/7175" target="_blank" rel="noopener">#7175</a>).</p>
+</li>
+<li>
+<p>Updated to use the new config macros.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="changes_release_1_50_0"><a class="anchor" href="#changes_release_1_50_0"></a>Release 1.50.0</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Fix equality for <code>unordered_multiset</code> and <code>unordered_multimap</code>.</p>
+</li>
+<li>
+<p><a href="https://svn.boost.org/trac/boost/ticket/6857" target="_blank" rel="noopener">Ticket 6857</a>:
+Implement <code>reserve</code>.</p>
+</li>
+<li>
+<p><a href="https://svn.boost.org/trac/boost/ticket/6771" target="_blank" rel="noopener">Ticket 6771</a>:
+Avoid gcc&#8217;s <code>-Wfloat-equal</code> warning.</p>
+</li>
+<li>
+<p><a href="https://svn.boost.org/trac/boost/ticket/6784" target="_blank" rel="noopener">Ticket 6784</a>:
+Fix some Sun specific code.</p>
+</li>
+<li>
+<p><a href="https://svn.boost.org/trac/boost/ticket/6190" target="_blank" rel="noopener">Ticket 6190</a>:
+Avoid gcc&#8217;s <code>-Wshadow</code> warning.</p>
+</li>
+<li>
+<p><a href="https://svn.boost.org/trac/boost/ticket/6905" target="_blank" rel="noopener">Ticket 6905</a>:
+Make namespaces in macros compatible with <code>bcp</code> custom namespaces.
+Fixed by Luke Elliott.</p>
+</li>
+<li>
+<p>Remove some of the smaller prime number of buckets, as they may make
+collisions quite probable (e.g. multiples of 5 are very common because
+we used base 10).</p>
+</li>
+<li>
+<p>On old versions of Visual C++, use the container library&#8217;s implementation
+of <code>allocator_traits</code>, as it&#8217;s more likely to work.</p>
+</li>
+<li>
+<p>On machines with 64 bit std::size_t, use power of 2 buckets, with Thomas
+Wang&#8217;s hash function to pick which one to use. As modulus is very slow
+for 64 bit values.</p>
+</li>
+<li>
+<p>Some internal changes.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="changes_release_1_49_0"><a class="anchor" href="#changes_release_1_49_0"></a>Release 1.49.0</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Fix warning due to accidental odd assignment.</p>
+</li>
+<li>
+<p>Slightly better error messages.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="changes_release_1_48_0_major_update"><a class="anchor" href="#changes_release_1_48_0_major_update"></a>Release 1.48.0 - Major update</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This is major change which has been converted to use Boost.Move&#8217;s move
+emulation, and be more compliant with the C++11 standard. See the
+<a href="compliance.html" class="xref page">compliance section</a> for details.</p>
+</div>
+<div class="paragraph">
+<p>The container now meets C++11&#8217;s complexity requirements, but to do so
+uses a little more memory. This means that <code>quick_erase</code> and
+<code>erase_return_void</code> are no longer required, they&#8217;ll be removed in a
+future version.</p>
+</div>
+<div class="paragraph">
+<p>C++11 support has resulted in some breaking changes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Equality comparison has been changed to the C++11 specification.
+In a container with equivalent keys, elements in a group with equal
+keys used to have to be in the same order to be considered equal,
+now they can be a permutation of each other. To use the old
+behavior define the macro <code>BOOST_UNORDERED_DEPRECATED_EQUALITY</code>.</p>
+</li>
+<li>
+<p>The behaviour of swap is different when the two containers to be
+swapped has unequal allocators. It used to allocate new nodes using
+the appropriate allocators, it now swaps the allocators if
+the allocator has a member structure <code>propagate_on_container_swap</code>,
+such that <code>propagate_on_container_swap::value</code> is true.</p>
+</li>
+<li>
+<p>Allocator&#8217;s <code>construct</code> and <code>destroy</code> functions are called with raw
+pointers, rather than the allocator&#8217;s <code>pointer</code> type.</p>
+</li>
+<li>
+<p><code>emplace</code> used to emulate the variadic pair constructors that
+appeared in early C++0x drafts. Since they were removed it no
+longer does so. It does emulate the new <code>piecewise_construct</code>
+pair constructors - only you need to use
+<code>boost::piecewise_construct</code>. To use the old emulation of
+the variadic constructors define
+<code>BOOST_UNORDERED_DEPRECATED_PAIR_CONSTRUCT</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="changes_release_1_45_0"><a class="anchor" href="#changes_release_1_45_0"></a>Release 1.45.0</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Fix a bug when inserting into an <code>unordered_map</code> or <code>unordered_set</code> using
+iterators which returns <code>value_type</code> by copy.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="changes_release_1_43_0"><a class="anchor" href="#changes_release_1_43_0"></a>Release 1.43.0</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://svn.boost.org/trac/boost/ticket/3966" target="_blank" rel="noopener">Ticket 3966</a>:
+<code>erase_return_void</code> is now <code>quick_erase</code>, which is the
+<a href="http://home.roadrunner.com/~hinnant/issue_review/lwg-active.html#579" target="_blank" rel="noopener">
+current forerunner for resolving the slow erase by iterator</a>, although
+there&#8217;s a strong possibility that this may change in the future. The old
+method name remains for backwards compatibility but is considered deprecated
+and will be removed in a future release.</p>
+</li>
+<li>
+<p>Use Boost.Exception.</p>
+</li>
+<li>
+<p>Stop using deprecated <code>BOOST_HAS_*</code> macros.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="changes_release_1_42_0"><a class="anchor" href="#changes_release_1_42_0"></a>Release 1.42.0</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Support instantiating the containers with incomplete value types.</p>
+</li>
+<li>
+<p>Reduced the number of warnings (mostly in tests).</p>
+</li>
+<li>
+<p>Improved codegear compatibility.</p>
+</li>
+<li>
+<p><a href="https://svn.boost.org/trac/boost/ticket/3693" target="_blank" rel="noopener">Ticket 3693</a>:
+Add <code>erase_return_void</code> as a temporary workaround for the current
+<code>erase</code> which can be inefficient because it has to find the next
+element to return an iterator.</p>
+</li>
+<li>
+<p>Add templated find overload for compatible keys.</p>
+</li>
+<li>
+<p><a href="https://svn.boost.org/trac/boost/ticket/3773" target="_blank" rel="noopener">Ticket 3773</a>:
+Add missing <code>std</code> qualifier to <code>ptrdiff_t</code>.</p>
+</li>
+<li>
+<p>Some code formatting changes to fit almost all lines into 80 characters.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="changes_release_1_41_0_major_update"><a class="anchor" href="#changes_release_1_41_0_major_update"></a>Release 1.41.0 - Major update</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>The original version made heavy use of macros to sidestep some of the older
+compilers' poor template support. But since I no longer support those
+compilers and the macro use was starting to become a maintenance burden it
+has been rewritten to use templates instead of macros for the implementation
+classes.</p>
+</li>
+<li>
+<p>The container object is now smaller thanks to using <code>boost::compressed_pair</code>
+for EBO and a slightly different function buffer - now using a bool instead
+of a member pointer.</p>
+</li>
+<li>
+<p>Buckets are allocated lazily which means that constructing an empty container
+will not allocate any memory.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="changes_release_1_40_0"><a class="anchor" href="#changes_release_1_40_0"></a>Release 1.40.0</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://svn.boost.org/trac/boost/ticket/2975" target="_blank" rel="noopener">Ticket 2975</a>:
+Store the prime list as a preprocessor sequence - so that it will always get
+the length right if it changes again in the future.</p>
+</li>
+<li>
+<p><a href="https://svn.boost.org/trac/boost/ticket/1978" target="_blank" rel="noopener">Ticket 1978</a>:
+Implement <code>emplace</code> for all compilers.</p>
+</li>
+<li>
+<p><a href="https://svn.boost.org/trac/boost/ticket/2908" target="_blank" rel="noopener">Ticket 2908</a>,
+<a href="https://svn.boost.org/trac/boost/ticket/3096" target="_blank" rel="noopener">Ticket 3096</a>:
+Some workarounds for old versions of borland, including adding explicit
+destructors to all containers.</p>
+</li>
+<li>
+<p><a href="https://svn.boost.org/trac/boost/ticket/3082" target="_blank" rel="noopener">Ticket 3082</a>:
+Disable incorrect Visual C++ warnings.</p>
+</li>
+<li>
+<p>Better configuration for C++0x features when the headers aren&#8217;t available.</p>
+</li>
+<li>
+<p>Create less buckets by default.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="changes_release_1_39_0"><a class="anchor" href="#changes_release_1_39_0"></a>Release 1.39.0</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://svn.boost.org/trac/boost/ticket/2756" target="_blank" rel="noopener">Ticket 2756</a>: Avoid a warning
+on Visual C++ 2009.</p>
+</li>
+<li>
+<p>Some other minor internal changes to the implementation, tests and
+documentation.</p>
+</li>
+<li>
+<p>Avoid an unnecessary copy in <code>operator[]</code>.</p>
+</li>
+<li>
+<p><a href="https://svn.boost.org/trac/boost/ticket/2975" target="_blank" rel="noopener">Ticket 2975</a>: Fix length of
+prime number list.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="changes_release_1_38_0"><a class="anchor" href="#changes_release_1_38_0"></a>Release 1.38.0</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Use <a href="../../../../core/swap.html" target="_blank" rel="noopener"><code>boost::swap</code></a>.</p>
+</li>
+<li>
+<p><a href="https://svn.boost.org/trac/boost/ticket/2237" target="_blank" rel="noopener">Ticket 2237</a>:
+Document that the equality and inequality operators are undefined for two
+objects if their equality predicates aren&#8217;t equivalent. Thanks to Daniel
+Krügler.</p>
+</li>
+<li>
+<p><a href="https://svn.boost.org/trac/boost/ticket/1710" target="_blank" rel="noopener">Ticket 1710</a>:
+Use a larger prime number list. Thanks to Thorsten Ottosen and Hervé
+Brönnimann.</p>
+</li>
+<li>
+<p>Use
+<a href="../../../../type_traits/index.html" target="_blank" rel="noopener">aligned storage</a> to store the types.
+This changes the way the allocator is used to construct nodes. It used to
+construct the node with two calls to the allocator&#8217;s <code>construct</code>
+method - once for the pointers and once for the value. It now constructs
+the node with a single call to construct and then constructs the value using
+in place construction.</p>
+</li>
+<li>
+<p>Add support for C++0x initializer lists where they&#8217;re available (currently
+only g++ 4.4 in C++0x mode).</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="changes_release_1_37_0"><a class="anchor" href="#changes_release_1_37_0"></a>Release 1.37.0</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Rename overload of <code>emplace</code> with hint, to <code>emplace_hint</code> as specified in
+<a href="http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2008/n2691.pdf" target="_blank" rel="noopener">n2691</a>.</p>
+</li>
+<li>
+<p>Provide forwarding headers at <code>&lt;boost/unordered/unordered_map_fwd.hpp&gt;</code> and
+<code>&lt;boost/unordered/unordered_set_fwd.hpp&gt;</code>.</p>
+</li>
+<li>
+<p>Move all the implementation inside <code>boost/unordered</code>, to assist
+modularization and hopefully make it easier to track Release subversion.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="changes_release_1_36_0"><a class="anchor" href="#changes_release_1_36_0"></a>Release 1.36.0</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>First official release.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Rearrange the internals.</p>
+</li>
+<li>
+<p>Move semantics - full support when rvalue references are available, emulated
+using a cut down version of the Adobe move library when they are not.</p>
+</li>
+<li>
+<p>Emplace support when rvalue references and variadic template are available.</p>
+</li>
+<li>
+<p>More efficient node allocation when rvalue references and variadic template
+are available.</p>
+</li>
+<li>
+<p>Added equality operators.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="changes_boost_1_35_0_add_on_31st_march_2008"><a class="anchor" href="#changes_boost_1_35_0_add_on_31st_march_2008"></a>Boost 1.35.0 Add-on - 31st March 2008</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Unofficial release uploaded to vault, to be used with Boost 1.35.0. Incorporated
+many of the suggestions from the review.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Improved portability thanks to Boost regression testing.</p>
+</li>
+<li>
+<p>Fix lots of typos, and clearer text in the documentation.</p>
+</li>
+<li>
+<p>Fix floating point to <code>std::size_t</code> conversion when calculating sizes from
+the max load factor, and use <code>double</code> in the calculation for greater accuracy.</p>
+</li>
+<li>
+<p>Fix some errors in the examples.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="changes_review_version"><a class="anchor" href="#changes_review_version"></a>Review Version</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Initial review version, for the review conducted from 7th December 2007 to
+16th December 2007.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<script id="site-script" src="../unordered/_/js/site.js" data-ui-root-path="../unordered/_"></script>
+<script async src="../unordered/_/js/vendor/highlight.js"></script>
+  </body>
+</html>

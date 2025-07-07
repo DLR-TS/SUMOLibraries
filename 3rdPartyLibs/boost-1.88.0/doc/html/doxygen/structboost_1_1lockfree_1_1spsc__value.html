@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Struct template spsc_value</title>
+<link rel="stylesheet" href="../../../doc/src/boostbook.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="../index.html" title="The Boost C++ Libraries BoostBook Documentation Subset">
+<link rel="up" href="../lockfree/reference.html#doxygen.spsc__value_8hpp" title="Header &lt;boost/lockfree/spsc_value.hpp&gt;">
+<link rel="prev" href="classboost_1_1lockfree_1_1spsc__queue.html" title="Class template spsc_queue">
+<link rel="next" href="classboost_1_1lockfree_1_1stack.html" title="Class template stack">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table cellpadding="2" width="100%"><tr>
+<td valign="top"><img alt="Boost C++ Libraries" width="277" height="86" src="../../../boost.png"></td>
+<td align="center"><a href="../../../index.html">Home</a></td>
+<td align="center"><a href="../../../libs/libraries.htm">Libraries</a></td>
+<td align="center"><a href="http://www.boost.org/users/people.html">People</a></td>
+<td align="center"><a href="http://www.boost.org/users/faq.html">FAQ</a></td>
+<td align="center"><a href="../../../more/index.htm">More</a></td>
+</tr></table>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="classboost_1_1lockfree_1_1spsc__queue.html"><img src="../../../doc/src/images/prev.png" alt="Prev"></a><a accesskey="u" href="../lockfree/reference.html#doxygen.spsc__value_8hpp"><img src="../../../doc/src/images/up.png" alt="Up"></a><a accesskey="h" href="../index.html"><img src="../../../doc/src/images/home.png" alt="Home"></a><a accesskey="n" href="classboost_1_1lockfree_1_1stack.html"><img src="../../../doc/src/images/next.png" alt="Next"></a>
+</div>
+<div class="refentry">
+<a name="doxygen.structboost_1_1lockfree_1_1spsc__value"></a><div class="titlepage"></div>
+<div class="refnamediv">
+<h2><span class="refentrytitle">Struct template spsc_value</span></h2>
+<p>boost::lockfree::spsc_value</p>
+</div>
+<h2 class="refsynopsisdiv-title">Synopsis</h2>
+<div class="refsynopsisdiv"><pre class="synopsis"><span class="comment">// In header: &lt;<a class="link" href="../lockfree/reference.html#doxygen.spsc__value_8hpp" title="Header &lt;boost/lockfree/spsc_value.hpp&gt;">boost/lockfree/spsc_value.hpp</a>&gt;
+
+</span><span class="keyword">template</span><span class="special">&lt;</span><span class="keyword">typename</span> T<span class="special">,</span> <span class="keyword">typename</span><span class="special">...</span> Options<span class="special">&gt;</span> 
+<span class="keyword">struct</span> <a class="link" href="structboost_1_1lockfree_1_1spsc__value.html" title="Struct template spsc_value">spsc_value</a> <span class="special">{</span>
+
+  <span class="comment">// <a class="link" href="structboost_1_1lockfree_1_1spsc__value.html#id-1_3_20_6_5_1_1_1_3-bb">public member functions</a></span>
+  <span class="keyword">explicit</span> <a class="link" href="structboost_1_1lockfree_1_1spsc__value.html#doxygen.structboost_1_1lockfree_1_1spsc__value_1a4c6b925b4b2edb416cae64c44b8946e7"><span class="identifier">spsc_value</span></a><span class="special">(</span><span class="special">)</span><span class="special">;</span>
+  <span class="keyword">explicit</span> <a class="link" href="structboost_1_1lockfree_1_1spsc__value.html#doxygen.structboost_1_1lockfree_1_1spsc__value_1a33b4e7293e9742a3dff96f8d05065fc8"><span class="identifier">spsc_value</span></a><span class="special">(</span><span class="identifier">T</span><span class="special">)</span><span class="special">;</span>
+  <span class="keyword">void</span> <a class="link" href="structboost_1_1lockfree_1_1spsc__value.html#doxygen.structboost_1_1lockfree_1_1spsc__value_1ae85164906d8ca09ba69f0ab8ff2b6ea1"><span class="identifier">write</span></a><span class="special">(</span><span class="identifier">T</span> <span class="special">&amp;&amp;</span><span class="special">)</span><span class="special">;</span>
+  <span class="keyword">void</span> <a class="link" href="structboost_1_1lockfree_1_1spsc__value.html#doxygen.structboost_1_1lockfree_1_1spsc__value_1ae9186734931d3b30e4419823deb2107b"><span class="identifier">write</span></a><span class="special">(</span><span class="keyword">const</span> <span class="identifier">T</span> <span class="special">&amp;</span><span class="special">)</span><span class="special">;</span>
+  <span class="keyword">bool</span> <a class="link" href="structboost_1_1lockfree_1_1spsc__value.html#doxygen.structboost_1_1lockfree_1_1spsc__value_1af1b3a149503d128d5ef9718362f6f096"><span class="identifier">read</span></a><span class="special">(</span><span class="identifier">T</span> <span class="special">&amp;</span><span class="special">)</span><span class="special">;</span>
+  <span class="identifier">std</span><span class="special">::</span><span class="identifier">optional</span><span class="special">&lt;</span> <span class="identifier">T</span> <span class="special">&gt;</span> <a class="link" href="structboost_1_1lockfree_1_1spsc__value.html#doxygen.structboost_1_1lockfree_1_1spsc__value_1a021678ba2fc48fffcd81b9d989498d2a"><span class="identifier">read</span></a><span class="special">(</span><span class="identifier">uses_optional_t</span><span class="special">)</span><span class="special">;</span>
+  <span class="keyword">template</span><span class="special">&lt;</span><span class="keyword">typename</span> Functor<span class="special">&gt;</span> <span class="keyword">bool</span> <a class="link" href="structboost_1_1lockfree_1_1spsc__value.html#doxygen.structboost_1_1lockfree_1_1spsc__value_1aed68570925dad49b4b443f378279f31a"><span class="identifier">consume</span></a><span class="special">(</span><span class="identifier">Functor</span> <span class="special">&amp;&amp;</span><span class="special">)</span><span class="special">;</span>
+<span class="special">}</span><span class="special">;</span></pre></div>
+<div class="refsect1">
+<a name="id-1.3.20.6.5.3.4"></a><h2>Description</h2>
+<p>The spcs_value provides a single-writer/single-reader value, implemented by a triple buffer</p>
+<p><span class="bold"><strong>Policies:</strong></span> </p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><a class="link" href="structboost_1_1lockfree_1_1allow__multiple__reads.html" title="Struct template allow_multiple_reads">boost::lockfree::allow_multiple_reads</a>, defaults to <a class="link" href="structboost_1_1lockfree_1_1allow__multiple__reads.html" title="Struct template allow_multiple_reads">boost::lockfree::allow_multiple_reads&lt;false&gt;</a> <br>
+ If multiple reads are allowed, a value written to the <a class="link" href="structboost_1_1lockfree_1_1spsc__value.html" title="Struct template spsc_value">spsc_value</a> can be read multiple times, but not moved out of the instance. If multiple reads are not allowed, the class works as single-element queue that overwrites on write </p></li></ul></div>
+<p>
+</p>
+<div class="refsect2">
+<a name="id-1.3.20.6.5.3.4.4"></a><h3>
+<a name="id-1_3_20_6_5_1_1_1_3-bb"></a><code class="computeroutput">spsc_value</code> public member functions</h3>
+<div class="orderedlist"><ol class="orderedlist" type="1">
+<li class="listitem">
+<pre class="literallayout"><span class="keyword">explicit</span> <a name="doxygen.structboost_1_1lockfree_1_1spsc__value_1a4c6b925b4b2edb416cae64c44b8946e7"></a><span class="identifier">spsc_value</span><span class="special">(</span><span class="special">)</span><span class="special">;</span></pre>
+<p>Construct a <a class="link" href="structboost_1_1lockfree_1_1spsc__value.html" title="Struct template spsc_value">spsc_value</a></p>
+<p>If configured with <a class="link" href="structboost_1_1lockfree_1_1allow__multiple__reads.html" title="Struct template allow_multiple_reads">boost::lockfree::allow_multiple_reads&lt;true&gt;</a> it is initialized to a default-constructed value </p>
+</li>
+<li class="listitem">
+<pre class="literallayout"><span class="keyword">explicit</span> <a name="doxygen.structboost_1_1lockfree_1_1spsc__value_1a33b4e7293e9742a3dff96f8d05065fc8"></a><span class="identifier">spsc_value</span><span class="special">(</span><span class="identifier">T</span> value<span class="special">)</span><span class="special">;</span></pre>
+<p>Construct a <a class="link" href="structboost_1_1lockfree_1_1spsc__value.html" title="Struct template spsc_value">spsc_value</a>, initialized to a value </p>
+</li>
+<li class="listitem">
+<pre class="literallayout"><span class="keyword">void</span> <a name="doxygen.structboost_1_1lockfree_1_1spsc__value_1ae85164906d8ca09ba69f0ab8ff2b6ea1"></a><span class="identifier">write</span><span class="special">(</span><span class="identifier">T</span> <span class="special">&amp;&amp;</span> value<span class="special">)</span><span class="special">;</span></pre>
+<p>Writes <code class="computeroutput">value</code> to the <a class="link" href="structboost_1_1lockfree_1_1spsc__value.html" title="Struct template spsc_value">spsc_value</a></p>
+<p>
+
+</p>
+<div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="../../../doc/src/images/note.png"></td>
+<th align="left">Note</th>
+</tr>
+<tr><td align="left" valign="top"><p>Thread-safe and wait-free </p></td></tr>
+</table></div>
+<p>
+</p>
+<div class="variablelist"><table border="0" class="variablelist compact">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term">Requires:</span></p></td>
+<td><p>only one thread is allowed to write data to the <a class="link" href="structboost_1_1lockfree_1_1spsc__value.html" title="Struct template spsc_value">spsc_value</a> </p></td>
+</tr>
+<tr>
+<td><p><span class="term">Postconditions:</span></p></td>
+<td><p>object will be written to the <a class="link" href="structboost_1_1lockfree_1_1spsc__value.html" title="Struct template spsc_value">spsc_value</a></p></td>
+</tr>
+</tbody>
+</table></div>
+</li>
+<li class="listitem">
+<pre class="literallayout"><span class="keyword">void</span> <a name="doxygen.structboost_1_1lockfree_1_1spsc__value_1ae9186734931d3b30e4419823deb2107b"></a><span class="identifier">write</span><span class="special">(</span><span class="keyword">const</span> <span class="identifier">T</span> <span class="special">&amp;</span> value<span class="special">)</span><span class="special">;</span></pre>
+<p>Writes <code class="computeroutput">value</code> to the <a class="link" href="structboost_1_1lockfree_1_1spsc__value.html" title="Struct template spsc_value">spsc_value</a></p>
+<p>
+
+</p>
+<div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="../../../doc/src/images/note.png"></td>
+<th align="left">Note</th>
+</tr>
+<tr><td align="left" valign="top"><p>Thread-safe and wait-free    </p></td></tr>
+</table></div>
+<p>
+</p>
+<div class="variablelist"><table border="0" class="variablelist compact">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term">Requires:</span></p></td>
+<td><p>only one thread is allowed to write data to the <a class="link" href="structboost_1_1lockfree_1_1spsc__value.html" title="Struct template spsc_value">spsc_value</a> </p></td>
+</tr>
+<tr>
+<td><p><span class="term">Postconditions:</span></p></td>
+<td><p>object will be written to the <a class="link" href="structboost_1_1lockfree_1_1spsc__value.html" title="Struct template spsc_value">spsc_value</a></p></td>
+</tr>
+</tbody>
+</table></div>
+</li>
+<li class="listitem">
+<pre class="literallayout"><span class="keyword">bool</span> <a name="doxygen.structboost_1_1lockfree_1_1spsc__value_1af1b3a149503d128d5ef9718362f6f096"></a><span class="identifier">read</span><span class="special">(</span><span class="identifier">T</span> <span class="special">&amp;</span> ret<span class="special">)</span><span class="special">;</span></pre>
+<p>Reads content of the <a class="link" href="structboost_1_1lockfree_1_1spsc__value.html" title="Struct template spsc_value">spsc_value</a></p>
+<p>
+
+
+</p>
+<div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="../../../doc/src/images/note.png"></td>
+<th align="left">Note</th>
+</tr>
+<tr><td align="left" valign="top"><p>Thread-safe and wait-free </p></td></tr>
+</table></div>
+<p>
+</p>
+<div class="variablelist"><table border="0" class="variablelist compact">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term">Requires:</span></p></td>
+<td><p>only one thread is allowed to write data to the <a class="link" href="structboost_1_1lockfree_1_1spsc__value.html" title="Struct template spsc_value">spsc_value</a> </p></td>
+</tr>
+<tr>
+<td><p><span class="term">Postconditions:</span></p></td>
+<td><p>if read operation is successful, object will be copied to <code class="computeroutput">ret</code>. </p></td>
+</tr>
+<tr>
+<td><p><span class="term">Returns:</span></p></td>
+<td><p><code class="computeroutput">true</code>, if the read operation is successful, false if the <a class="link" href="structboost_1_1lockfree_1_1spsc__value.html" title="Struct template spsc_value">spsc_value</a> is configured with <a class="link" href="structboost_1_1lockfree_1_1allow__multiple__reads.html" title="Struct template allow_multiple_reads">boost::lockfree::allow_multiple_reads&lt;false&gt;</a> and no value is available for reading</p></td>
+</tr>
+</tbody>
+</table></div>
+</li>
+<li class="listitem">
+<pre class="literallayout"><span class="identifier">std</span><span class="special">::</span><span class="identifier">optional</span><span class="special">&lt;</span> <span class="identifier">T</span> <span class="special">&gt;</span> <a name="doxygen.structboost_1_1lockfree_1_1spsc__value_1a021678ba2fc48fffcd81b9d989498d2a"></a><span class="identifier">read</span><span class="special">(</span><span class="identifier">uses_optional_t</span><span class="special">)</span><span class="special">;</span></pre>
+<p>Reads content of the <a class="link" href="structboost_1_1lockfree_1_1spsc__value.html" title="Struct template spsc_value">spsc_value</a>, returning an optional</p>
+<p>
+
+</p>
+<div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="../../../doc/src/images/note.png"></td>
+<th align="left">Note</th>
+</tr>
+<tr><td align="left" valign="top"><p>Thread-safe and wait-free </p></td></tr>
+</table></div>
+<p>
+</p>
+<div class="variablelist"><table border="0" class="variablelist compact">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term">Requires:</span></p></td>
+<td><p>only one thread is allowed to write data to the <a class="link" href="structboost_1_1lockfree_1_1spsc__value.html" title="Struct template spsc_value">spsc_value</a> </p></td>
+</tr>
+<tr>
+<td><p><span class="term">Returns:</span></p></td>
+<td><p><code class="computeroutput">std::optional</code> with value if successful, <code class="computeroutput">std::nullopt</code> if <a class="link" href="structboost_1_1lockfree_1_1spsc__value.html" title="Struct template spsc_value">spsc_value</a> is configured with <a class="link" href="structboost_1_1lockfree_1_1allow__multiple__reads.html" title="Struct template allow_multiple_reads">boost::lockfree::allow_multiple_reads&lt;false&gt;</a> and no value is available for reading</p></td>
+</tr>
+</tbody>
+</table></div>
+</li>
+<li class="listitem">
+<pre class="literallayout"><span class="keyword">template</span><span class="special">&lt;</span><span class="keyword">typename</span> Functor<span class="special">&gt;</span> <span class="keyword">bool</span> <a name="doxygen.structboost_1_1lockfree_1_1spsc__value_1aed68570925dad49b4b443f378279f31a"></a><span class="identifier">consume</span><span class="special">(</span><span class="identifier">Functor</span> <span class="special">&amp;&amp;</span> f<span class="special">)</span><span class="special">;</span></pre>
+<p>consumes value via a functor</p>
+<p>reads element from the <a class="link" href="structboost_1_1lockfree_1_1spsc__value.html" title="Struct template spsc_value">spsc_value</a> and applies the functor on this object</p>
+<p>
+</p>
+<div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="../../../doc/src/images/note.png"></td>
+<th align="left">Note</th>
+</tr>
+<tr><td align="left" valign="top"><p>Thread-safe and non-blocking, if functor is thread-safe and non-blocking </p></td></tr>
+</table></div>
+<p>
+</p>
+<div class="variablelist"><table border="0" class="variablelist compact">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term">Returns:</span></p></td>
+<td><p><code class="computeroutput">true</code>, if element was consumed</p></td>
+</tr></tbody>
+</table></div>
+</li>
+</ol></div>
+</div>
+</div>
+</div>
+<div class="copyright-footer">Copyright © 2008-2011 Tim
+      Blechmann<p>
+        Distributed under the Boost Software License, Version 1.0. (See accompanying
+        file LICENSE_1_0.txt or copy at <a href="http://www.boost.org/LICENSE_1_0.txt" target="_top">http://www.boost.org/LICENSE_1_0.txt</a>)
+      </p>
+</div>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="classboost_1_1lockfree_1_1spsc__queue.html"><img src="../../../doc/src/images/prev.png" alt="Prev"></a><a accesskey="u" href="../lockfree/reference.html#doxygen.spsc__value_8hpp"><img src="../../../doc/src/images/up.png" alt="Up"></a><a accesskey="h" href="../index.html"><img src="../../../doc/src/images/home.png" alt="Home"></a><a accesskey="n" href="classboost_1_1lockfree_1_1stack.html"><img src="../../../doc/src/images/next.png" alt="Next"></a>
+</div>
+</body>
+</html>

@@ -1,0 +1,297 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Getting Started</title>
+<link rel="stylesheet" href="../../../../../doc/src/boostbook.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="../index.html" title="Chapter 1. Boost.MQTT5: a C++17 MQTT client">
+<link rel="up" href="../index.html" title="Chapter 1. Boost.MQTT5: a C++17 MQTT client">
+<link rel="prev" href="intro.html" title="Introduction">
+<link rel="next" href="auto_reconnect.html" title="Built-in Auto-Reconnect and Retry Mechanism">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table cellpadding="2" width="100%"><tr>
+<td valign="top"><img alt="Boost C++ Libraries" width="277" height="86" src="../../../../../boost.png"></td>
+<td align="center"><a href="../../../../../index.html">Home</a></td>
+<td align="center"><a href="../../../../../libs/libraries.htm">Libraries</a></td>
+<td align="center"><a href="http://www.boost.org/users/people.html">People</a></td>
+<td align="center"><a href="http://www.boost.org/users/faq.html">FAQ</a></td>
+<td align="center"><a href="../../../../../more/index.htm">More</a></td>
+</tr></table>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="intro.html"><img src="../../../../../doc/src/images/prev.png" alt="Prev"></a><a accesskey="u" href="../index.html"><img src="../../../../../doc/src/images/up.png" alt="Up"></a><a accesskey="h" href="../index.html"><img src="../../../../../doc/src/images/home.png" alt="Home"></a><a accesskey="n" href="auto_reconnect.html"><img src="../../../../../doc/src/images/next.png" alt="Next"></a>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="mqtt5.getting_started"></a><a class="link" href="getting_started.html" title="Getting Started">Getting Started</a>
+</h2></div></div></div>
+<p>
+      This section guides you through the steps to properly configure the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> to establish
+      a connection with your chosen MQTT Broker.
+    </p>
+<p>
+      The <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> does <span class="bold"><strong>not</strong></span> expose connect functions (nor asynchronous connect
+      functions). Instead, it features a function that will start the Client (see
+      <a class="link" href="ref/boost__mqtt5__mqtt_client/async_run.html" title="boost::mqtt5::mqtt_client::async_run"><code class="literal">mqtt_client::async_run</code></a>).
+      All configuration of the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> must be finalised
+      before invoking <a class="link" href="ref/boost__mqtt5__mqtt_client/async_run.html" title="boost::mqtt5::mqtt_client::async_run"><code class="literal">mqtt_client::async_run</code></a>.
+      Upon calling this function, the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> makes its initial
+      attempt to connect.
+    </p>
+<div class="section">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="mqtt5.getting_started.transport_protocol"></a><a class="link" href="getting_started.html#mqtt5.getting_started.transport_protocol" title="Choosing a Suitable Transport Protocol">Choosing a
+      Suitable Transport Protocol</a>
+</h3></div></div></div>
+<p>
+        The initial step is selecting an appropriate transport protocol for your
+        MQTT connection.
+      </p>
+<p>
+        The <a href="https://mqtt.org/" target="_top">MQTT</a> protocol relies on an underlying
+        transport protocol that guarantees the orderly and reliable transmission
+        of byte streams between the Client and Server in both directions. Common
+        transport protocols meeting these criteria include TCP/IP, TLS/SSL for secure
+        transmissions, and WebSocket over TCP/IP and TLS/SSL.
+      </p>
+<p>
+        MQTT Brokers come in various implementations and support different transport
+        protocols. Therefore, it is important to familiarise yourself with the protocols
+        your chosen Broker supports. Additionally, gather any necessary details,
+        such as certificate authority, client certificate, or private keys, which
+        might be required for establishing a secure connection.
+      </p>
+<p>
+        In this example, we choose TCP/IP as the underlying protocol to initialize
+        the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a>.
+      </p>
+<pre class="programlisting"><span class="comment">// Initialize the execution context required to run I/O operations.</span>
+<span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">io_context</span> <span class="identifier">ioc</span><span class="special">;</span>
+
+<span class="comment">// Construct the Client with <a href="../../../../../doc/html/boost_asio/reference/ip__tcp/socket.html" target="_top"><code class="literal">boost::asio::ip::tcp::socket</code></a> as the underlying stream.</span>
+<span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">mqtt_client</span><span class="special">&lt;</span><span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">ip</span><span class="special">::</span><span class="identifier">tcp</span><span class="special">::</span><span class="identifier">socket</span><span class="special">&gt;</span> <span class="identifier">client</span><span class="special">(</span><span class="identifier">ioc</span><span class="special">);</span>
+</pre>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="mqtt5.getting_started.configuration"></a><a class="link" href="getting_started.html#mqtt5.getting_started.configuration" title="Configuring Your MQTT Connection">Configuring Your
+      MQTT Connection</a>
+</h3></div></div></div>
+<p>
+        The <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> offers a variety
+        of functions for configuring your MQTT connection settings. These functionalities
+        include:
+      </p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+            <span class="bold"><strong>Specifying a list of Brokers:</strong></span> You <span class="bold"><strong>must</strong></span> use this function to assign a list of Brokers
+            that the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> will try
+            to connect to (see <a class="link" href="ref/boost__mqtt5__mqtt_client/brokers.html" title="boost::mqtt5::mqtt_client::brokers"><code class="literal">mqtt_client::brokers</code></a>).
+            The <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> allows
+            for the specification of multiple Brokers for the connections. It is
+            important to ensure that <span class="bold"><strong>only Brokers belonging
+            to the same cluster are included in this list</strong></span>. Listing Brokers
+            from different clusters may lead to inconsistencies between MQTT Sessions.
+          </li>
+<li class="listitem">
+            <span class="bold"><strong>Setting connection Credentials:</strong></span> Set
+            the authentication details (Client Identifier, User Name, Password) (see
+            <a class="link" href="ref/boost__mqtt5__mqtt_client/credentials.html" title="boost::mqtt5::mqtt_client::credentials"><code class="literal">mqtt_client::credentials</code></a>).
+          </li>
+<li class="listitem">
+            <span class="bold"><strong>Configuring Keep Alive Interval:</strong></span> Set
+            the maximum allowed interval between two consecutive transmissions from
+            the Client (see <a class="link" href="ref/boost__mqtt5__mqtt_client/keep_alive.html" title="boost::mqtt5::mqtt_client::keep_alive"><code class="literal">mqtt_client::keep_alive</code></a>).
+          </li>
+<li class="listitem">
+            <span class="bold"><strong>Assign a custom user-implemented authenticator:</strong></span>
+            The custom authentication will be used for <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901256" target="_top"><code class="computeroutput"><span class="identifier">Enhanced</span> <span class="identifier">Authentication</span></code></a>
+            (<a class="link" href="ref/boost__mqtt5__mqtt_client/authenticator.html" title="boost::mqtt5::mqtt_client::authenticator"><code class="literal">mqtt_client::authenticator</code></a>).
+          </li>
+<li class="listitem">
+            <span class="bold"><strong>Defining CONNECT Packet Properties:</strong></span>
+            Specify properties that will be included in the <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901033" target="_top"><code class="computeroutput"><span class="identifier">CONNECT</span></code></a> packet sent during
+            connection initiation (see <a class="link" href="ref/boost__mqtt5__mqtt_client/connect_property.html" title="boost::mqtt5::mqtt_client::connect_property"><code class="literal">mqtt_client::connect_property</code></a>
+            and <a class="link" href="ref/boost__mqtt5__mqtt_client/connect_properties.html" title="boost::mqtt5::mqtt_client::connect_properties"><code class="literal">mqtt_client::connect_properties</code></a>).
+          </li>
+</ul></div>
+<p>
+        Firstly, we will specify the Broker we want to connect to using the <a class="link" href="ref/boost__mqtt5__mqtt_client/brokers.html" title="boost::mqtt5::mqtt_client::brokers"><code class="literal">mqtt_client::brokers</code></a>
+        function. This can be <a href="https://www.hivemq.com/" target="_top">HiveMQ</a>'s
+        public Broker available at <code class="computeroutput"><span class="identifier">broker</span><span class="special">.</span><span class="identifier">hivemq</span><span class="special">.</span><span class="identifier">com</span></code>:1883.
+        Additionally, we can set the Client Identifier using the <a class="link" href="ref/boost__mqtt5__mqtt_client/credentials.html" title="boost::mqtt5::mqtt_client::credentials"><code class="literal">mqtt_client::credentials</code></a>
+        function. This is not mandatory, as some Brokers allow anonymous connections.
+      </p>
+<p>
+        After configuring the <code class="computeroutput"><span class="identifier">mqtt_client</span></code>,
+        we call the <a class="link" href="ref/boost__mqtt5__mqtt_client/async_run.html" title="boost::mqtt5::mqtt_client::async_run"><code class="literal">mqtt_client::async_run</code></a>
+        function. This starts the process of establishing a connection with the Broker.
+      </p>
+<pre class="programlisting"><span class="identifier">client</span><span class="special">.</span><span class="identifier">brokers</span><span class="special">(</span><span class="identifier">cfg</span><span class="special">.</span><span class="identifier">brokers</span><span class="special">,</span> <span class="identifier">cfg</span><span class="special">.</span><span class="identifier">port</span><span class="special">)</span> <span class="comment">// Set the Broker to connect to.</span>
+    <span class="special">.</span><span class="identifier">credentials</span><span class="special">(</span><span class="identifier">cfg</span><span class="special">.</span><span class="identifier">client_id</span><span class="special">)</span> <span class="comment">// Set the Client Identifier. (optional)</span>
+    <span class="special">.</span><span class="identifier">async_run</span><span class="special">(</span><span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">detached</span><span class="special">);</span> <span class="comment">// Start the Client.</span>
+</pre>
+<p>
+        It is important to note that these configurations apply to every Broker listed
+        in <a class="link" href="ref/boost__mqtt5__mqtt_client/brokers.html" title="boost::mqtt5::mqtt_client::brokers"><code class="literal">mqtt_client::brokers</code></a>.
+        To modify any configuration parameters, you must first stop the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> using <a class="link" href="ref/boost__mqtt5__mqtt_client/cancel.html" title="boost::mqtt5::mqtt_client::cancel"><code class="literal">mqtt_client::cancel</code></a>
+        or <a class="link" href="ref/boost__mqtt5__mqtt_client/async_disconnect.html" title="boost::mqtt5::mqtt_client::async_disconnect"><code class="literal">mqtt_client::async_disconnect</code></a>.
+        Afterwards, you can re-apply the configurations and restart the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> with <a class="link" href="ref/boost__mqtt5__mqtt_client/async_run.html" title="boost::mqtt5::mqtt_client::async_run"><code class="literal">mqtt_client::async_run</code></a>.
+      </p>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="mqtt5.getting_started.establishing_a_connection"></a><a class="link" href="getting_started.html#mqtt5.getting_started.establishing_a_connection" title="Establishing a Connection">Establishing
+      a Connection</a>
+</h3></div></div></div>
+<p>
+        The <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> initiates
+        a connection with the first Broker from the list of Brokers assigned using
+        <a class="link" href="ref/boost__mqtt5__mqtt_client/brokers.html" title="boost::mqtt5::mqtt_client::brokers"><code class="literal">mqtt_client::brokers</code></a>.
+        A single attempt at connecting involves several steps:
+      </p>
+<div class="orderedlist"><ol class="orderedlist" type="1">
+<li class="listitem">
+            Resolving the Broker's hostname.
+          </li>
+<li class="listitem">
+            Creating a TCP connection.
+          </li>
+<li class="listitem">
+            Performing the TLS/SSL Handshake <span class="emphasis"><em>(if applicable)</em></span>.
+          </li>
+<li class="listitem">
+            Performing the WebSocket Handshake <span class="emphasis"><em>(if applicable)</em></span>.
+          </li>
+<li class="listitem">
+            Performing the MQTT handshake. This involves sending the <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901033" target="_top"><code class="computeroutput"><span class="identifier">CONNECT</span></code></a> packet to the Broker,
+            <span class="emphasis"><em>(if applicable)</em></span> exchanging <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901217" target="_top"><code class="computeroutput"><span class="identifier">AUTH</span></code></a> packets (see <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901256" target="_top"><code class="computeroutput"><span class="identifier">Enhanced</span> <span class="identifier">Authentication</span></code></a>),
+            and continuing until the Broker sends the <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901074" target="_top"><code class="computeroutput"><span class="identifier">CONNACK</span></code></a> packet.
+          </li>
+</ol></div>
+<p>
+        The connection is successfully established once the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> receives a
+        <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901074" target="_top"><code class="computeroutput"><span class="identifier">CONNACK</span></code></a> packet with Reason Code
+        <code class="computeroutput"><span class="number">0x00</span></code> (<code class="computeroutput"><span class="identifier">Success</span></code>).
+        The attempt fails if any of the following occurs:
+      </p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+            Any of the steps from 1 to 5 encounters a failure.
+          </li>
+<li class="listitem">
+            The <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> does not
+            receive the results of the hostname resolution within <code class="computeroutput"><span class="number">5</span>
+            <span class="identifier">seconds</span></code>.
+          </li>
+<li class="listitem">
+            The <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> is unable
+            to complete steps 2 through 5 within <code class="computeroutput"><span class="number">5</span>
+            <span class="identifier">seconds</span></code>.
+          </li>
+</ul></div>
+<p>
+        If this connection attempt is unsuccessful, it proceeds to the next Broker
+        in order, continuing this process until it establishes a connection or exhausts
+        all options without success. Upon reaching the end of the list without a
+        successful connection, the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> enters a backoff
+        period before making another round of attempts with the entire list. The
+        duration of this backoff period in milliseconds is determined by the formula:
+      </p>
+<pre class="programlisting"><span class="number">2</span><span class="special">^(</span><span class="identifier">min</span><span class="special">(</span><span class="identifier">retry_count</span><span class="special">,</span> <span class="number">4</span><span class="special">))</span> <span class="special">*</span> <span class="number">1000</span> <span class="special">+</span> <span class="identifier">jitter</span>
+</pre>
+<p>
+        In this formula, <code class="computeroutput"><span class="identifier">retry_count</span></code>
+        represents the number of complete cycles through the list without a successful
+        connection, and <code class="computeroutput"><span class="identifier">jitter</span></code> is
+        a randomly chosen value between <code class="computeroutput"><span class="special">-</span><span class="number">500</span><span class="identifier">ms</span></code> to
+        <code class="computeroutput"><span class="number">500</span><span class="identifier">ms</span></code>,
+        intended to prevent synchronised reconnection attempts in scenarios with
+        multiple clients.
+      </p>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="mqtt5.getting_started.using_the_client"></a><a class="link" href="getting_started.html#mqtt5.getting_started.using_the_client" title="Using the Client">Using the Client</a>
+</h3></div></div></div>
+<p>
+        After calling <a class="link" href="ref/boost__mqtt5__mqtt_client/async_run.html" title="boost::mqtt5::mqtt_client::async_run"><code class="literal">mqtt_client::async_run</code></a>,
+        you can now use the Client according to your application needs. In this case,
+        we will publish a "Hello World!" message to <code class="computeroutput"><span class="identifier">boost</span><span class="special">-</span><span class="identifier">mqtt5</span><span class="special">/</span><span class="identifier">test</span></code> topic
+        with Quality of Service 0 (at most once) using the <a class="link" href="ref/boost__mqtt5__mqtt_client/async_publish.html" title="boost::mqtt5::mqtt_client::async_publish"><code class="literal">mqtt_client::async_publish</code></a>
+        function.
+      </p>
+<pre class="programlisting"><span class="identifier">client</span><span class="special">.</span><span class="identifier">async_publish</span><span class="special">&lt;</span><span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">qos_e</span><span class="special">::</span><span class="identifier">at_most_once</span><span class="special">&gt;(</span>
+    <span class="string">"boost-mqtt5/test"</span><span class="special">,</span> <span class="string">"Hello world!"</span><span class="special">,</span>
+    <span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">retain_e</span><span class="special">::</span><span class="identifier">yes</span><span class="special">,</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">publish_props</span> <span class="special">{},</span>
+    <span class="special">[&amp;</span><span class="identifier">client</span><span class="special">](</span><span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">error_code</span> <span class="identifier">ec</span><span class="special">)</span> <span class="special">{</span>
+        <span class="identifier">std</span><span class="special">::</span><span class="identifier">cout</span> <span class="special">&lt;&lt;</span> <span class="identifier">ec</span><span class="special">.</span><span class="identifier">message</span><span class="special">()</span> <span class="special">&lt;&lt;</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">endl</span><span class="special">;</span>
+
+        <span class="comment">// Disconnnect the Client.</span>
+        <span class="identifier">client</span><span class="special">.</span><span class="identifier">async_disconnect</span><span class="special">(</span><span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">detached</span><span class="special">);</span>
+    <span class="special">}</span>
+<span class="special">);</span>
+</pre>
+<p>
+        You can find the full program listing for this chapter at the link below:
+      </p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+            <a class="link" href="hello_world_over_tcp.html" title="Hello World over TCP/IP">hello_world_over_tcp.cpp</a>
+          </li></ul></div>
+<p>
+        Additional "Hello World!" examples for different underlying transport
+        protocols can be found here:
+      </p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+            <a class="link" href="hello_world_over_tls.html" title="Hello World over TLS/SSL">hello_world_over_tls.cpp</a>
+          </li>
+<li class="listitem">
+            <a class="link" href="hello_world_over_websocket_tcp.html" title="Hello World over Websocket/TCP">hello_world_over_websocket_tcp.cpp</a>
+          </li>
+<li class="listitem">
+            <a class="link" href="hello_world_over_websocket_tls.html" title="Hello World over Websocket/TLS">hello_world_over_websocket_tls.cpp</a>
+          </li>
+</ul></div>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="mqtt5.getting_started.debugging"></a><a class="link" href="getting_started.html#mqtt5.getting_started.debugging" title="Debugging the Client">Debugging the Client</a>
+</h3></div></div></div>
+<p>
+        If you encounter configuration or connection issues, you can use our logging
+        mechanism to debug problems. The <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> introduces
+        a <a class="link" href="ref/LoggerType.html" title="LoggerType concept"><span class="emphasis"><em>LoggerType</em></span></a>
+        as its third template parameter, which specifies the type used for logging
+        events within the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a>.
+      </p>
+<p>
+        The <a href="https://github.com/boostorg/mqtt5/" target="_top">Boost.MQTT5</a> library
+        provides a built-in <a href="https://github.com/boostorg/mqtt5/blob/master/include/boost/mqtt5/logger.hpp" target="_top">logger</a>
+        implementation that outputs operation results to stderr. This logger outputs
+        detailed information about each step in the connection process, including
+        DNS resolution, TCP connection, TLS handshake, WebSocket handshake, and MQTT
+        handshake. To enable this functionality, construct the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> with an instance
+        of this logger class:
+      </p>
+<pre class="programlisting"><span class="comment">// Construct the Client with <a href="../../../../../doc/html/boost_asio/reference/ip__tcp/socket.html" target="_top"><code class="literal">boost::asio::ip::tcp::socket</code></a> as the underlying stream and enabled logging.</span>
+<span class="comment">// Since we are not establishing a secure connection, set the TlsContext template parameter to std::monostate.</span>
+<span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">mqtt_client</span><span class="special">&lt;</span>
+    <span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">ip</span><span class="special">::</span><span class="identifier">tcp</span><span class="special">::</span><span class="identifier">socket</span><span class="special">,</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">monostate</span> <span class="comment">/* TlsContext */</span><span class="special">,</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">logger</span>
+<span class="special">&gt;</span> <span class="identifier">client</span><span class="special">(</span><span class="identifier">ioc</span><span class="special">,</span> <span class="special">{}</span> <span class="comment">/* tls_context */</span><span class="special">,</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">logger</span><span class="special">(</span><span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">log_level</span><span class="special">::</span><span class="identifier">info</span><span class="special">));</span>
+</pre>
+</div>
+</div>
+<div class="copyright-footer">Copyright © 2023-2025 Mireo<p>
+        Distributed under the Boost Software License, Version 1.0. (See accompanying
+        file LICENSE_1_0.txt or copy at <a href="http://www.boost.org/LICENSE_1_0.txt" target="_top">http://www.boost.org/LICENSE_1_0.txt</a>)
+      </p>
+</div>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="intro.html"><img src="../../../../../doc/src/images/prev.png" alt="Prev"></a><a accesskey="u" href="../index.html"><img src="../../../../../doc/src/images/up.png" alt="Up"></a><a accesskey="h" href="../index.html"><img src="../../../../../doc/src/images/home.png" alt="Home"></a><a accesskey="n" href="auto_reconnect.html"><img src="../../../../../doc/src/images/next.png" alt="Next"></a>
+</div>
+</body>
+</html>

@@ -1,0 +1,680 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Runtime Configuration and Concurrency Hints</title>
+<link rel="stylesheet" href="../../../../../doc/src/boostbook.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="../../../boost_asio.html" title="Boost.Asio">
+<link rel="up" href="../core.html" title="Core Concepts and Functionality">
+<link rel="prev" href="handler_tracking.html" title="Handler Tracking">
+<link rel="next" href="../composition.html" title="Composition and Completion Tokens">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table cellpadding="2" width="100%"><tr>
+<td valign="top"><img alt="Boost C++ Libraries" width="277" height="86" src="../../../../../boost.png"></td>
+<td align="center"><a href="../../../../../index.html">Home</a></td>
+<td align="center"><a href="../../../../../libs/libraries.htm">Libraries</a></td>
+<td align="center"><a href="http://www.boost.org/users/people.html">People</a></td>
+<td align="center"><a href="http://www.boost.org/users/faq.html">FAQ</a></td>
+<td align="center"><a href="../../../../../more/index.htm">More</a></td>
+</tr></table>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="handler_tracking.html"><img src="../../../../../doc/src/images/prev.png" alt="Prev"></a><a accesskey="u" href="../core.html"><img src="../../../../../doc/src/images/up.png" alt="Up"></a><a accesskey="h" href="../../../boost_asio.html"><img src="../../../../../doc/src/images/home.png" alt="Home"></a><a accesskey="n" href="../composition.html"><img src="../../../../../doc/src/images/next.png" alt="Next"></a>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="boost_asio.overview.core.configuration"></a><a class="link" href="configuration.html" title="Runtime Configuration and Concurrency Hints">Runtime Configuration
+        and Concurrency Hints</a>
+</h4></div></div></div>
+<p>
+          Boost.Asio provides a number of runtime configuration options that can
+          be used to fine tune Boost.Asio's behaviour, such as enabling or disabling
+          specific optimisations. The configuration options available are listed
+          in the table below.
+        </p>
+<div class="informaltable"><table class="table">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead><tr>
+<th>
+                  <p>
+                    Section
+                  </p>
+                </th>
+<th>
+                  <p>
+                    Key
+                  </p>
+                </th>
+<th>
+                  <p>
+                    Type
+                  </p>
+                </th>
+<th>
+                  <p>
+                    Default
+                  </p>
+                </th>
+<th>
+                  <p>
+                    Description
+                  </p>
+                </th>
+</tr></thead>
+<tbody>
+<tr>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="identifier">scheduler</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="identifier">concurrency_hint</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="keyword">int</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="number">0</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    This is a suggestion to the <code class="computeroutput"><span class="identifier">io_context</span></code>
+                    implementation as to the number of active threads that should
+                    be used for running completion handlers.
+                  </p>
+                  <p>
+                    When the Windows I/O completion port backend is in use, this
+                    value is passed to <code class="literal">CreateIoCompletionPort</code>.
+                  </p>
+                  <p>
+                    When a reactor-based backend is used, the implementation recognises
+                    the value <code class="computeroutput"><span class="number">1</span></code> as an
+                    indication that the <code class="computeroutput"><span class="identifier">io_context</span></code>
+                    will be run from a single thread, and applies several optimisations
+                    based on this assumption. For example, when a handler is posted
+                    from within another handler, the new handler is added to a fast
+                    thread-local queue (with the consequence that the new handler
+                    is held back until the currently executing handler finishes).
+                  </p>
+                  <p>
+                    No matter what value is specified for this configuration option,
+                    the <code class="computeroutput"><span class="identifier">io_context</span></code>
+                    or <code class="computeroutput"><span class="identifier">thread_pool</span></code>
+                    still provides full thread safety, and distinct I/O objects may
+                    be used from any thread.
+                  </p>
+                </td>
+</tr>
+<tr>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="identifier">scheduler</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="identifier">locking</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="keyword">bool</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="keyword">true</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    This is used to enable or disable locking in the scheduler, when
+                    using a reactor-based backend. When set to <code class="computeroutput"><span class="keyword">false</span></code>,
+                    this option has the following restrictions:
+                  </p>
+                  <p>
+                    — Care must be taken to ensure that all operations on the <code class="computeroutput"><span class="identifier">io_context</span></code> and any of its associated
+                    I/O objects (such as sockets and timers) occur in only one thread
+                    at a time.
+                  </p>
+                  <p>
+                    — Asynchronous resolve operations fail with <code class="computeroutput"><span class="identifier">operation_not_supported</span></code>.
+                  </p>
+                  <p>
+                    — If a <code class="computeroutput"><span class="identifier">signal_set</span></code>
+                    is used with the <code class="computeroutput"><span class="identifier">io_context</span></code>,
+                    <code class="computeroutput"><span class="identifier">signal_set</span></code> objects
+                    cannot be used with any other io_context in the program.
+                  </p>
+                </td>
+</tr>
+<tr>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="identifier">scheduler</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="identifier">locking_spin_count</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="keyword">int</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="number">0</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    The number of times to first attempt to acquire the scheduler's
+                    internal lock without blocking, when using a reactor-based backend.
+                  </p>
+                </td>
+</tr>
+<tr>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="identifier">scheduler</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="identifier">task_usec</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="keyword">int</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="special">-</span><span class="number">1</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    The maximum time, in microseconds, that the scheduler will wait
+                    for its reactor task to complete. A value of <code class="computeroutput"><span class="special">-</span><span class="number">1</span></code> means that no limit is placed
+                    on this wait time. May be set to <code class="computeroutput"><span class="number">0</span></code>
+                    to enable CPU-bound spinning.
+                  </p>
+                </td>
+</tr>
+<tr>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="identifier">scheduler</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="identifier">wait_usec</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="keyword">int</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="special">-</span><span class="number">1</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    The maximum time, in microseconds, that the scheduler will wait
+                    on its wake-up event in an idle thread (i.e. a thread that is
+                    not otherwise executing a handler or waiting on the reactor).
+                    A value of <code class="computeroutput"><span class="special">-</span><span class="number">1</span></code>
+                    means that no limit is placed on this wait time. May be set to
+                    <code class="computeroutput"><span class="number">0</span></code> to enable CPU-bound
+                    spinning in an execution context that is being run on multiple
+                    threads.
+                  </p>
+                </td>
+</tr>
+<tr>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="identifier">reactor</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="identifier">preallocated_io_objects</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="keyword">int</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="number">0</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    The number of internal reactor I/O object states to allocate
+                    at construction.
+                  </p>
+                  <p>
+                    The reactor implementation uses per I/O object state to track
+                    things like the queue of outstanding operations. These state
+                    objects are recycled once the I/O object is destroyed, but new
+                    ones are allocated if there are no unused state objects currently
+                    available.
+                  </p>
+                  <p>
+                    If an upper bound on the number of I/O objects is known at construction
+                    time, this configuration option can be set to ensure that no
+                    allocations occur after construction is complete.
+                  </p>
+                </td>
+</tr>
+<tr>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="identifier">reactor</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="identifier">registration_locking</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="keyword">bool</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="keyword">true</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    Enables or disables locking in the reactor around I/O object
+                    registration and deregistration.
+                  </p>
+                  <p>
+                    If set to <code class="computeroutput"><span class="keyword">false</span></code>,
+                    care must be taken not to concurrently open or close I/O objects.
+                  </p>
+                </td>
+</tr>
+<tr>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="identifier">reactor</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="identifier">registration_locking_spin_count</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="keyword">int</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="number">0</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    The number of times to first attempt to acquire the reactor's
+                    lock without blocking, when performing I/O object registration
+                    or deregistration.
+                  </p>
+                </td>
+</tr>
+<tr>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="identifier">reactor</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="identifier">io_locking</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="keyword">bool</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="keyword">true</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    Enables or disables per I/O object locking in the reactor
+                  </p>
+                  <p>
+                    If set to <code class="computeroutput"><span class="keyword">false</span></code>,
+                    care must be taken to ensure that the <span class="emphasis"><em>run functions</em></span>
+                    on the <code class="computeroutput"><span class="identifier">io_context</span></code>
+                    (i.e. <code class="computeroutput"><span class="identifier">run</span></code>, <code class="computeroutput"><span class="identifier">run_for</span></code>, <code class="computeroutput"><span class="identifier">run_until</span></code>,
+                    <code class="computeroutput"><span class="identifier">run_one</span></code>, <code class="computeroutput"><span class="identifier">run_one_for</span></code>, <code class="computeroutput"><span class="identifier">run_one_until</span></code>, <code class="computeroutput"><span class="identifier">poll</span></code>, and <code class="computeroutput"><span class="identifier">poll_one</span></code>),
+                    and all operations on the context's associated I/O objects (such
+                    as sockets and timers), occur in only one thread at a time.
+                  </p>
+                </td>
+</tr>
+<tr>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="identifier">reactor</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="identifier">io_locking_spin_count</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="keyword">int</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="number">0</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    The number of times to first attempt to acquire the reactor's
+                    per I/O object locks without blocking.
+                  </p>
+                </td>
+</tr>
+</tbody>
+</table></div>
+<p>
+          These configuration options are associated with an execution context (such
+          as <a class="link" href="../../reference/io_context.html" title="io_context"><code class="computeroutput"><span class="identifier">io_context</span></code></a>
+          or <a class="link" href="../../reference/thread_pool.html" title="thread_pool"><code class="computeroutput"><span class="identifier">thread_pool</span></code></a>.
+          In order to use non-default values, a configuration service must be installed
+          into the execution context at construction. A number of ways to achieve
+          this are illustrated in the sections below.
+        </p>
+<h6>
+<a name="boost_asio.overview.core.configuration.h0"></a>
+          <span class="phrase"><a name="boost_asio.overview.core.configuration.configuration_from_string"></a></span><a class="link" href="configuration.html#boost_asio.overview.core.configuration.configuration_from_string">Configuration
+          From String</a>
+        </h6>
+<p>
+          To read configuration options from a string, construct the execution context
+          with a <a class="link" href="../../reference/config_from_string.html" title="config_from_string"><code class="computeroutput"><span class="identifier">config_from_string</span></code></a> object:
+        </p>
+<pre class="programlisting"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">io_context</span> <span class="identifier">my_io_context</span><span class="special">{</span>
+    <span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">config_from_string</span><span class="special">{</span>
+      <span class="string">"scheduler.concurrency_hint=10\n"</span>
+      <span class="string">"scheduler.locking=1"</span><span class="special">}};</span>
+</pre>
+<p>
+          Each variable must be on a line of its own, and of the form:
+        </p>
+<pre class="programlisting"><span class="identifier">section</span><span class="special">.</span><span class="identifier">key</span><span class="special">=</span><span class="identifier">value</span>
+</pre>
+<p>
+          or, if an optional prefix is specified:
+        </p>
+<pre class="programlisting"><span class="identifier">prefix</span><span class="special">.</span><span class="identifier">section</span><span class="special">.</span><span class="identifier">key</span><span class="special">=</span><span class="identifier">value</span>
+</pre>
+<p>
+          Blank lines and lines starting with <code class="computeroutput"><span class="special">#</span></code>
+          are ignored. It is also permitted to include a comment starting with <code class="computeroutput"><span class="special">#</span></code> after the value.
+        </p>
+<h6>
+<a name="boost_asio.overview.core.configuration.h1"></a>
+          <span class="phrase"><a name="boost_asio.overview.core.configuration.configuration_from_environment_variables"></a></span><a class="link" href="configuration.html#boost_asio.overview.core.configuration.configuration_from_environment_variables">Configuration
+          From Environment Variables</a>
+        </h6>
+<p>
+          To read configuration options from environment variables, construct the
+          execution context with a <a class="link" href="../../reference/config_from_env.html" title="config_from_env"><code class="computeroutput"><span class="identifier">config_from_env</span></code></a> object:
+        </p>
+<pre class="programlisting"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">io_context</span> <span class="identifier">my_io_context</span><span class="special">{</span>
+    <span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">config_from_env</span><span class="special">{</span><span class="string">"my_app"</span><span class="special">}};</span>
+</pre>
+<p>
+          The environment variable names are formed by concatenating the prefix,
+          section, and key, with underscore as delimiter, and then converting the
+          resulting string to upper case. For example, given a prefix <code class="computeroutput"><span class="string">"my_app"</span></code> and the <code class="computeroutput"><span class="string">"scheduler"</span></code> / <code class="computeroutput"><span class="string">"concurrency_hint"</span>
+          <span class="identifier">option</span><span class="special">,</span>
+          <span class="identifier">the</span> <span class="identifier">value</span>
+          <span class="identifier">is</span> <span class="identifier">read</span>
+          <span class="identifier">from</span> <span class="identifier">an</span>
+          <span class="identifier">environment</span> <span class="identifier">variable</span>
+          <span class="identifier">named</span> </code>MY_APP_SCHEDULER_CONCURRENCY_HINT`.
+        </p>
+<h6>
+<a name="boost_asio.overview.core.configuration.h2"></a>
+          <span class="phrase"><a name="boost_asio.overview.core.configuration.configuration_from_concurrency_hint"></a></span><a class="link" href="configuration.html#boost_asio.overview.core.configuration.configuration_from_concurrency_hint">Configuration
+          From Concurrency Hint</a>
+        </h6>
+<p>
+          For backwards compatibility, the <a class="link" href="../../reference/io_context/io_context.html" title="io_context::io_context"><code class="computeroutput"><span class="identifier">io_context</span></code> constructor</a> can be
+          passed a concurrency hint as an integer. This is used to initialise the
+          configuration options as described in the table below.
+        </p>
+<div class="informaltable"><table class="table">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead><tr>
+<th>
+                  <p>
+                    concurrency_hint Value
+                  </p>
+                </th>
+<th>
+                  <p>
+                    Effect
+                  </p>
+                </th>
+</tr></thead>
+<tbody>
+<tr>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="identifier">n</span></code>, where <code class="computeroutput"><span class="identifier">n</span> <span class="special">&lt;</span>
+                    <span class="number">0xFFFF</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    Equivalent to setting:
+                  </p>
+                  <p>
+                    — <code class="computeroutput"><span class="string">"scheduler"</span></code>
+                    / <code class="computeroutput"><span class="string">"concurrency_hint"</span></code>
+                    to <code class="computeroutput"><span class="identifier">n</span></code>.
+                  </p>
+                  <p>
+                    — <code class="computeroutput"><span class="string">"scheduler"</span></code>
+                    / <code class="computeroutput"><span class="string">"locking"</span></code>
+                    to <code class="computeroutput"><span class="keyword">true</span></code>.
+                  </p>
+                  <p>
+                    — <code class="computeroutput"><span class="string">"reactor"</span></code>
+                    / <code class="computeroutput"><span class="string">"registration_locking"</span></code>
+                    to <code class="computeroutput"><span class="keyword">true</span></code>.
+                  </p>
+                  <p>
+                    — <code class="computeroutput"><span class="string">"reactor"</span></code>
+                    / <code class="computeroutput"><span class="string">"io_locking"</span></code>
+                    to <code class="computeroutput"><span class="keyword">true</span></code>.
+                  </p>
+                </td>
+</tr>
+<tr>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="identifier">BOOST_ASIO_CONCURRENCY_HINT_UNSAFE</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    — <code class="computeroutput"><span class="string">"scheduler"</span></code>
+                    / <code class="computeroutput"><span class="string">"concurrency_hint"</span></code>
+                    to <code class="computeroutput"><span class="number">1</span></code>.
+                  </p>
+                  <p>
+                    — <code class="computeroutput"><span class="string">"scheduler"</span></code>
+                    / <code class="computeroutput"><span class="string">"locking"</span></code>
+                    to <code class="computeroutput"><span class="keyword">false</span></code>.
+                  </p>
+                  <p>
+                    — <code class="computeroutput"><span class="string">"reactor"</span></code>
+                    / <code class="computeroutput"><span class="string">"registration_locking"</span></code>
+                    to <code class="computeroutput"><span class="keyword">false</span></code>.
+                  </p>
+                  <p>
+                    — <code class="computeroutput"><span class="string">"reactor"</span></code>
+                    / <code class="computeroutput"><span class="string">"io_locking"</span></code>
+                    to <code class="computeroutput"><span class="keyword">false</span></code>.
+                  </p>
+                </td>
+</tr>
+<tr>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="identifier">BOOST_ASIO_CONCURRENCY_HINT_UNSAFE_IO</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    — <code class="computeroutput"><span class="string">"scheduler"</span></code>
+                    / <code class="computeroutput"><span class="string">"concurrency_hint"</span></code>
+                    to <code class="computeroutput"><span class="number">1</span></code>.
+                  </p>
+                  <p>
+                    — <code class="computeroutput"><span class="string">"scheduler"</span></code>
+                    / <code class="computeroutput"><span class="string">"locking"</span></code>
+                    to <code class="computeroutput"><span class="keyword">true</span></code>.
+                  </p>
+                  <p>
+                    — <code class="computeroutput"><span class="string">"reactor"</span></code>
+                    / <code class="computeroutput"><span class="string">"registration_locking"</span></code>
+                    to <code class="computeroutput"><span class="keyword">false</span></code>.
+                  </p>
+                  <p>
+                    — <code class="computeroutput"><span class="string">"reactor"</span></code>
+                    / <code class="computeroutput"><span class="string">"io_locking"</span></code>
+                    to <code class="computeroutput"><span class="keyword">false</span></code>.
+                  </p>
+                </td>
+</tr>
+<tr>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="identifier">BOOST_ASIO_CONCURRENCY_HINT_SAFE</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    — <code class="computeroutput"><span class="string">"scheduler"</span></code>
+                    / <code class="computeroutput"><span class="string">"concurrency_hint"</span></code>
+                    to <code class="computeroutput"><span class="number">1</span></code>.
+                  </p>
+                  <p>
+                    — <code class="computeroutput"><span class="string">"scheduler"</span></code>
+                    / <code class="computeroutput"><span class="string">"locking"</span></code>
+                    to <code class="computeroutput"><span class="keyword">true</span></code>.
+                  </p>
+                  <p>
+                    — <code class="computeroutput"><span class="string">"reactor"</span></code>
+                    / <code class="computeroutput"><span class="string">"registration_locking"</span></code>
+                    to <code class="computeroutput"><span class="keyword">true</span></code>.
+                  </p>
+                  <p>
+                    — <code class="computeroutput"><span class="string">"reactor"</span></code>
+                    / <code class="computeroutput"><span class="string">"io_locking"</span></code>
+                    to <code class="computeroutput"><span class="keyword">true</span></code>.
+                  </p>
+                </td>
+</tr>
+</tbody>
+</table></div>
+<p>
+          The concurrency hint used by default-constructed <code class="computeroutput">io_context</code>
+          objects can be overridden at compile time by defining the <code class="computeroutput">BOOST_ASIO_CONCURRENCY_HINT_DEFAULT</code>
+          macro. For example, specifying
+        </p>
+<pre class="programlisting">-DBOOST_ASIO_CONCURRENCY_HINT_DEFAULT=1
+</pre>
+<p>
+          on the compiler command line means that a concurrency hint of <code class="computeroutput">1</code>
+          is used for all default-constructed <code class="computeroutput">io_context</code> objects in
+          the program. Similarly, the concurrency hint used by <code class="computeroutput">io_context</code>
+          objects constructed with <code class="computeroutput">1</code> can be overridden by defining
+          <code class="computeroutput">BOOST_ASIO_CONCURRENCY_HINT_1</code>. For example, passing
+        </p>
+<pre class="programlisting">-DBOOST_ASIO_CONCURRENCY_HINT_1=BOOST_ASIO_CONCURRENCY_HINT_UNSAFE
+</pre>
+<p>
+          to the compiler will disable thread safety for all of these objects.
+        </p>
+<h6>
+<a name="boost_asio.overview.core.configuration.h3"></a>
+          <span class="phrase"><a name="boost_asio.overview.core.configuration.custom_configuration_options"></a></span><a class="link" href="configuration.html#boost_asio.overview.core.configuration.custom_configuration_options">Custom
+          Configuration Options</a>
+        </h6>
+<p>
+          Applications and third-party libraries can utilise the <a class="link" href="../../reference/config.html" title="config"><code class="computeroutput"><span class="identifier">config</span></code></a> class to associate their
+          own configuration options with an execution context, or to access the configuration
+          options listed above. The configuration parameters' values are accessed
+          by passing a section, key and default value to the <code class="computeroutput"><span class="identifier">get</span></code>
+          member function:<br>
+        </p>
+<pre class="programlisting"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">config</span> <span class="identifier">cfg</span><span class="special">{</span><span class="identifier">ctx</span><span class="special">};</span>
+<span class="keyword">bool</span> <span class="identifier">enable_locking</span> <span class="special">=</span> <span class="identifier">cfg</span><span class="special">.</span><span class="identifier">get</span><span class="special">(</span><span class="string">"scheduler"</span><span class="special">,</span> <span class="string">"locking"</span><span class="special">,</span> <span class="keyword">true</span><span class="special">);</span>
+</pre>
+</div>
+<div class="copyright-footer">Copyright © 2003-2025 Christopher M.
+      Kohlhoff<p>
+        Distributed under the Boost Software License, Version 1.0. (See accompanying
+        file LICENSE_1_0.txt or copy at <a href="http://www.boost.org/LICENSE_1_0.txt" target="_top">http://www.boost.org/LICENSE_1_0.txt</a>)
+      </p>
+</div>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="handler_tracking.html"><img src="../../../../../doc/src/images/prev.png" alt="Prev"></a><a accesskey="u" href="../core.html"><img src="../../../../../doc/src/images/up.png" alt="Up"></a><a accesskey="h" href="../../../boost_asio.html"><img src="../../../../../doc/src/images/home.png" alt="Home"></a><a accesskey="n" href="../composition.html"><img src="../../../../../doc/src/images/next.png" alt="Next"></a>
+</div>
+</body>
+</html>

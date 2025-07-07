@@ -1,0 +1,215 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Disconnecting the Client</title>
+<link rel="stylesheet" href="../../../../../doc/src/boostbook.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="../index.html" title="Chapter 1. Boost.MQTT5: a C++17 MQTT client">
+<link rel="up" href="../index.html" title="Chapter 1. Boost.MQTT5: a C++17 MQTT client">
+<link rel="prev" href="optimising_communication.html" title="Optimising Communication">
+<link rel="next" href="asio_compliance.html" title="Compliance With Boost.Asio">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table cellpadding="2" width="100%"><tr>
+<td valign="top"><img alt="Boost C++ Libraries" width="277" height="86" src="../../../../../boost.png"></td>
+<td align="center"><a href="../../../../../index.html">Home</a></td>
+<td align="center"><a href="../../../../../libs/libraries.htm">Libraries</a></td>
+<td align="center"><a href="http://www.boost.org/users/people.html">People</a></td>
+<td align="center"><a href="http://www.boost.org/users/faq.html">FAQ</a></td>
+<td align="center"><a href="../../../../../more/index.htm">More</a></td>
+</tr></table>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="optimising_communication.html"><img src="../../../../../doc/src/images/prev.png" alt="Prev"></a><a accesskey="u" href="../index.html"><img src="../../../../../doc/src/images/up.png" alt="Up"></a><a accesskey="h" href="../index.html"><img src="../../../../../doc/src/images/home.png" alt="Home"></a><a accesskey="n" href="asio_compliance.html"><img src="../../../../../doc/src/images/next.png" alt="Next"></a>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="mqtt5.disconnecting_the_client"></a><a class="link" href="disconnecting_the_client.html" title="Disconnecting the Client">Disconnecting the Client</a>
+</h2></div></div></div>
+<p>
+      The <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> remains active
+      until it is either destroyed or explicitly stopped. In idle mode, the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a>
+      periodically sends <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901195" target="_top"><code class="computeroutput"><span class="identifier">PINGREQ</span></code></a> to the Broker to maintain
+      a stable connection.
+    </p>
+<p>
+      The proper way to stop the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> is by calling
+      either <a class="link" href="ref/boost__mqtt5__mqtt_client/cancel.html" title="boost::mqtt5::mqtt_client::cancel"><code class="literal">mqtt_client::cancel</code></a>
+      or <a class="link" href="ref/boost__mqtt5__mqtt_client/async_disconnect.html" title="boost::mqtt5::mqtt_client::async_disconnect"><code class="literal">mqtt_client::async_disconnect</code></a>.
+      Invoking <a class="link" href="ref/boost__mqtt5__mqtt_client/cancel.html" title="boost::mqtt5::mqtt_client::cancel"><code class="literal">mqtt_client::cancel</code></a>
+      results in the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> closing the
+      connection to the Broker and cancelling all outstanding asynchronous operations.
+      On the other hand, <a class="link" href="ref/boost__mqtt5__mqtt_client/async_disconnect.html" title="boost::mqtt5::mqtt_client::async_disconnect"><code class="literal">mqtt_client::async_disconnect</code></a>
+      will first attempt to send a <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901205" target="_top"><code class="computeroutput"><span class="identifier">DISCONNECT</span></code></a> packet <a href="#ftn.mqtt5.disconnecting_the_client.f0" class="footnote" name="mqtt5.disconnecting_the_client.f0"><sup class="footnote">[4]</sup></a> to the Broker to notify it about the reason for disconnection,
+      then close the connection and cancel all outstanding asynchronous operations
+      (equal effect as <a class="link" href="ref/boost__mqtt5__mqtt_client/cancel.html" title="boost::mqtt5::mqtt_client::cancel"><code class="literal">mqtt_client::cancel</code></a>).
+    </p>
+<div class="important"><table border="0" summary="Important">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[Important]" src="../../../../../doc/src/images/important.png"></td>
+<th align="left">Important</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+        Regardless of the method used to stop the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a>, it is recommended
+        to ensure that all the previous asynchronous operations are completed. Otherwise,
+        they <span class="bold"><strong>will be cancelled</strong></span>.
+      </p></td></tr>
+</table></div>
+<p>
+      Invoking <a class="link" href="ref/boost__mqtt5__mqtt_client/cancel.html" title="boost::mqtt5::mqtt_client::cancel"><code class="literal">mqtt_client::cancel</code></a>
+      or <a class="link" href="ref/boost__mqtt5__mqtt_client/async_disconnect.html" title="boost::mqtt5::mqtt_client::async_disconnect"><code class="literal">mqtt_client::async_disconnect</code></a>
+      will result in a clean and graceful shutdown process. This ensures that all
+      resources are properly released and all asynchronous operations are completed
+      <a href="#ftn.mqtt5.disconnecting_the_client.f1" class="footnote" name="mqtt5.disconnecting_the_client.f1"><sup class="footnote">[5]</sup></a>. Consequently, the execution context (<a href="../../../../../doc/html/boost_asio/reference/io_context.html" target="_top"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">io_context</span></code></a>)
+      will stop due to a lack of work.
+    </p>
+<div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="../../../../../doc/src/images/note.png"></td>
+<th align="left">Note</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+        The <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a>'s destructor
+        will also call <a class="link" href="ref/boost__mqtt5__mqtt_client/cancel.html" title="boost::mqtt5::mqtt_client::cancel"><code class="literal">mqtt_client::cancel</code></a>.
+      </p></td></tr>
+</table></div>
+<p>
+      The following code snippet will showcase a scenario of disconnecting the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a>
+      and its interaction with other asynchronous operations.
+    </p>
+<h4>
+<a name="mqtt5.disconnecting_the_client.h0"></a>
+      <span class="phrase"><a name="mqtt5.disconnecting_the_client.example_immediate_disconnection_"></a></span><a class="link" href="disconnecting_the_client.html#mqtt5.disconnecting_the_client.example_immediate_disconnection_">Example:
+      immediate disconnection and its impact on outstanding asynchronous operations</a>
+    </h4>
+<p>
+      The following code snippet is an example of publishing a "Hello World!"
+      message to the Broker with QoS <code class="computeroutput"><span class="number">0</span></code>,
+      followed by the request to disconnect the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a>.
+    </p>
+<pre class="programlisting"><span class="keyword">int</span> <span class="identifier">main</span><span class="special">()</span> <span class="special">{</span>
+    <span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">io_context</span> <span class="identifier">ioc</span><span class="special">;</span>
+
+    <span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">mqtt_client</span><span class="special">&lt;</span><span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">ip</span><span class="special">::</span><span class="identifier">tcp</span><span class="special">::</span><span class="identifier">socket</span><span class="special">&gt;</span> <span class="identifier">client</span><span class="special">(</span><span class="identifier">ioc</span><span class="special">);</span>
+    <span class="identifier">client</span><span class="special">.</span><span class="identifier">brokers</span><span class="special">(</span><span class="string">"&lt;your-mqtt-broker&gt;"</span><span class="special">,</span> <span class="number">1883</span><span class="special">)</span>
+        <span class="special">.</span><span class="identifier">async_run</span><span class="special">(</span><span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">detached</span><span class="special">);</span>
+
+    <span class="identifier">client</span><span class="special">.</span><span class="identifier">async_publish</span><span class="special">&lt;</span><span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">qos_e</span><span class="special">::</span><span class="identifier">at_most_once</span><span class="special">&gt;(</span>
+        <span class="string">"&lt;topic&gt;"</span><span class="special">,</span> <span class="string">"Hello world!"</span><span class="special">,</span>
+        <span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">retain_e</span><span class="special">::</span><span class="identifier">no</span><span class="special">,</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">publish_props</span> <span class="special">{},</span>
+        <span class="special">[](</span><span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">error_code</span> <span class="identifier">ec</span><span class="special">)</span> <span class="special">{</span>
+            <span class="identifier">std</span><span class="special">::</span><span class="identifier">cout</span> <span class="special">&lt;&lt;</span> <span class="identifier">ec</span><span class="special">.</span><span class="identifier">message</span><span class="special">()</span> <span class="special">&lt;&lt;</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">endl</span><span class="special">;</span>
+        <span class="special">}</span>
+    <span class="special">);</span>
+
+    <span class="identifier">client</span><span class="special">.</span><span class="identifier">async_disconnect</span><span class="special">(</span><span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">detached</span><span class="special">);</span>
+
+    <span class="identifier">ioc</span><span class="special">.</span><span class="identifier">run</span><span class="special">();</span>
+<span class="special">}</span>
+</pre>
+<p>
+      Suppose the Broker is available and the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> can successfully
+      connect to it, then the following order of events will unfold:
+    </p>
+<div class="orderedlist"><ol class="orderedlist" type="1">
+<li class="listitem">
+          The Client will successfully establish a connection to the Broker.
+        </li>
+<li class="listitem">
+          The Client will send a <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901205" target="_top"><code class="computeroutput"><span class="identifier">DISCONNECT</span></code></a> packet with Reason
+          Code <code class="computeroutput"><span class="number">0x00</span></code> (<code class="computeroutput"><span class="identifier">Normal</span>
+          <span class="identifier">Disconnection</span></code>).
+        </li>
+</ol></div>
+<p>
+      It is important to note that the <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901100" target="_top"><code class="computeroutput"><span class="identifier">PUBLISH</span></code></a> packet containing the "Hello
+      World!" message will not be transmitted. As outlined in the <code class="computeroutput"><span class="identifier">Packet</span> <span class="identifier">Ordering</span></code>
+      in <a class="link" href="optimising_communication.html" title="Optimising Communication">Optimising communication</a>
+      section, <a class="link" href="ref/boost__mqtt5__mqtt_client/async_publish.html" title="boost::mqtt5::mqtt_client::async_publish"><code class="literal">mqtt_client::async_publish</code></a>
+      and <a class="link" href="ref/boost__mqtt5__mqtt_client/async_disconnect.html" title="boost::mqtt5::mqtt_client::async_disconnect"><code class="literal">mqtt_client::async_disconnect</code></a>
+      will place their corresponding packets in the queue. However, <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901205" target="_top"><code class="computeroutput"><span class="identifier">DISCONNECT</span></code></a> packets are prioritised
+      and sent exclusively, ahead of other queued packets. Therefore, the connection
+      will terminate immediately.
+    </p>
+<p>
+      If the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> cannot establish
+      a connection to the Broker, it will be stopped after <code class="computeroutput"><span class="number">5</span>
+      <span class="identifier">seconds</span></code>, which is the amount of time
+      it will spend trying to send the <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901205" target="_top"><code class="computeroutput"><span class="identifier">DISCONNECT</span></code></a> packet to the Broker before
+      quitting. This timeout mechanism ensures that the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> does not indefinitely
+      wait to disconnect, preserving resources and maintaining efficient operation.
+    </p>
+<p>
+      In this case, the proper way to disconnect would be to call <a class="link" href="ref/boost__mqtt5__mqtt_client/async_disconnect.html" title="boost::mqtt5::mqtt_client::async_disconnect"><code class="literal">mqtt_client::async_disconnect</code></a>
+      after the <a class="link" href="ref/boost__mqtt5__mqtt_client/async_publish.html" title="boost::mqtt5::mqtt_client::async_publish"><code class="literal">mqtt_client::async_publish</code></a>
+      has been completed.
+    </p>
+<pre class="programlisting"><span class="identifier">client</span><span class="special">.</span><span class="identifier">async_publish</span><span class="special">&lt;</span><span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">qos_e</span><span class="special">::</span><span class="identifier">at_most_once</span><span class="special">&gt;(</span>
+    <span class="string">"&lt;topic&gt;"</span><span class="special">,</span> <span class="string">"Hello world!"</span><span class="special">,</span>
+    <span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">retain_e</span><span class="special">::</span><span class="identifier">no</span><span class="special">,</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">publish_props</span> <span class="special">{},</span>
+    <span class="special">[&amp;</span><span class="identifier">client</span><span class="special">](</span><span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">error_code</span> <span class="identifier">ec</span><span class="special">)</span> <span class="special">{</span>
+        <span class="identifier">std</span><span class="special">::</span><span class="identifier">cout</span> <span class="special">&lt;&lt;</span> <span class="identifier">ec</span><span class="special">.</span><span class="identifier">message</span><span class="special">()</span> <span class="special">&lt;&lt;</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">endl</span><span class="special">;</span>
+        <span class="identifier">client</span><span class="special">.</span><span class="identifier">async_disconnect</span><span class="special">(</span><span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">detached</span><span class="special">);</span>
+    <span class="special">}</span>
+<span class="special">);</span>
+</pre>
+<div class="section">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="mqtt5.disconnecting_the_client.reusing_the_client"></a><a class="link" href="disconnecting_the_client.html#mqtt5.disconnecting_the_client.reusing_the_client" title="Restarting the Client After Disconnection">Restarting
+      the Client After Disconnection</a>
+</h3></div></div></div>
+<p>
+        Once the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> has been successfully
+        stopped, reactivating it is straightforward and requires invoking <a class="link" href="ref/boost__mqtt5__mqtt_client/async_run.html" title="boost::mqtt5::mqtt_client::async_run"><code class="literal">mqtt_client::async_run</code></a>.
+        This method can be called right after initiating <a class="link" href="ref/boost__mqtt5__mqtt_client/async_disconnect.html" title="boost::mqtt5::mqtt_client::async_disconnect"><code class="literal">mqtt_client::async_disconnect</code></a>,
+        without waiting for it to complete.
+      </p>
+<p>
+        The <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> is configurable
+        again in the interval between stopping and restarting. See <a class="link" href="getting_started.html#mqtt5.getting_started.configuration" title="Configuring Your MQTT Connection">Configuring
+        Your MQTT Connection</a> for more information.
+      </p>
+<pre class="programlisting"><span class="keyword">int</span> <span class="identifier">main</span><span class="special">()</span> <span class="special">{</span>
+    <span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">io_context</span> <span class="identifier">ioc</span><span class="special">;</span>
+
+    <span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">mqtt_client</span><span class="special">&lt;</span><span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">ip</span><span class="special">::</span><span class="identifier">tcp</span><span class="special">::</span><span class="identifier">socket</span><span class="special">&gt;</span> <span class="identifier">client</span><span class="special">(</span><span class="identifier">ioc</span><span class="special">);</span>
+    <span class="identifier">client</span><span class="special">.</span><span class="identifier">brokers</span><span class="special">(</span><span class="string">"&lt;your-mqtt-broker&gt;"</span><span class="special">,</span> <span class="number">1883</span><span class="special">)</span>
+        <span class="special">.</span><span class="identifier">async_run</span><span class="special">(</span><span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">detached</span><span class="special">);</span>
+
+    <span class="identifier">client</span><span class="special">.</span><span class="identifier">async_disconnect</span><span class="special">(</span><span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">detached</span><span class="special">);</span>
+
+    <span class="comment">// The Client can be reconfigured again.</span>
+    <span class="identifier">client</span><span class="special">.</span><span class="identifier">connect_property</span><span class="special">(</span><span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">prop</span><span class="special">::</span><span class="identifier">session_expiry_interval</span><span class="special">,</span> <span class="number">120</span><span class="special">)</span>
+        <span class="special">.</span><span class="identifier">keep_alive</span><span class="special">(</span><span class="number">30</span><span class="special">)</span>
+        <span class="special">.</span><span class="identifier">async_run</span><span class="special">(</span><span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">detached</span><span class="special">);</span> <span class="comment">// Restart the Client again.</span>
+
+    <span class="comment">// Use the Client...</span>
+
+    <span class="identifier">ioc</span><span class="special">.</span><span class="identifier">run</span><span class="special">();</span>
+<span class="special">}</span>
+</pre>
+</div>
+<div class="footnotes">
+<br><hr style="width:100; text-align:left;margin-left: 0">
+<div id="ftn.mqtt5.disconnecting_the_client.f0" class="footnote"><p><a href="#mqtt5.disconnecting_the_client.f0" class="para"><sup class="para">[4] </sup></a>
+        The <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> will attempt
+        to send the <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901205" target="_top"><code class="computeroutput"><span class="identifier">DISCONNECT</span></code></a> packet for <code class="computeroutput"><span class="number">5</span> <span class="identifier">seconds</span></code>.
+        Regardless of the outcome, the connection will be closed.
+      </p></div>
+<div id="ftn.mqtt5.disconnecting_the_client.f1" class="footnote"><p><a href="#mqtt5.disconnecting_the_client.f1" class="para"><sup class="para">[5] </sup></a>
+        All outstanding operations will complete with error code <code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">error</span><span class="special">::</span><span class="identifier">operation_aborted</span></code>.
+      </p></div>
+</div>
+</div>
+<div class="copyright-footer">Copyright © 2023-2025 Mireo<p>
+        Distributed under the Boost Software License, Version 1.0. (See accompanying
+        file LICENSE_1_0.txt or copy at <a href="http://www.boost.org/LICENSE_1_0.txt" target="_top">http://www.boost.org/LICENSE_1_0.txt</a>)
+      </p>
+</div>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="optimising_communication.html"><img src="../../../../../doc/src/images/prev.png" alt="Prev"></a><a accesskey="u" href="../index.html"><img src="../../../../../doc/src/images/up.png" alt="Up"></a><a accesskey="h" href="../index.html"><img src="../../../../../doc/src/images/home.png" alt="Home"></a><a accesskey="n" href="asio_compliance.html"><img src="../../../../../doc/src/images/next.png" alt="Next"></a>
+</div>
+</body>
+</html>

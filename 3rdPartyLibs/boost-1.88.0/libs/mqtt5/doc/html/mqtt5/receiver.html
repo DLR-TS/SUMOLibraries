@@ -1,0 +1,183 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>The receiver</title>
+<link rel="stylesheet" href="../../../../../doc/src/boostbook.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="../index.html" title="Chapter 1. Boost.MQTT5: a C++17 MQTT client">
+<link rel="up" href="../pt01.html" title="Part I. ">
+<link rel="prev" href="publisher.html" title="The publisher">
+<link rel="next" href="multiflight_client.html" title="The multiflight Client">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table cellpadding="2" width="100%"><tr>
+<td valign="top"><img alt="Boost C++ Libraries" width="277" height="86" src="../../../../../boost.png"></td>
+<td align="center"><a href="../../../../../index.html">Home</a></td>
+<td align="center"><a href="../../../../../libs/libraries.htm">Libraries</a></td>
+<td align="center"><a href="http://www.boost.org/users/people.html">People</a></td>
+<td align="center"><a href="http://www.boost.org/users/faq.html">FAQ</a></td>
+<td align="center"><a href="../../../../../more/index.htm">More</a></td>
+</tr></table>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="publisher.html"><img src="../../../../../doc/src/images/prev.png" alt="Prev"></a><a accesskey="u" href="../pt01.html"><img src="../../../../../doc/src/images/up.png" alt="Up"></a><a accesskey="h" href="../index.html"><img src="../../../../../doc/src/images/home.png" alt="Home"></a><a accesskey="n" href="multiflight_client.html"><img src="../../../../../doc/src/images/next.png" alt="Next"></a>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="mqtt5.receiver"></a><a class="link" href="receiver.html" title="The receiver">The receiver</a>
+</h3></div></div></div>
+<p>
+      This example shows how to use <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> as a receiver.
+      The <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> subscribes and
+      indefinitely receives Application Messages from the Broker.
+    </p>
+<pre class="programlisting"><span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">mqtt5</span><span class="special">/</span><span class="identifier">logger</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">mqtt5</span><span class="special">/</span><span class="identifier">mqtt_client</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">mqtt5</span><span class="special">/</span><span class="identifier">reason_codes</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">mqtt5</span><span class="special">/</span><span class="identifier">types</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">asio</span><span class="special">/</span><span class="identifier">as_tuple</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">asio</span><span class="special">/</span><span class="identifier">co_spawn</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">asio</span><span class="special">/</span><span class="identifier">deferred</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">asio</span><span class="special">/</span><span class="identifier">detached</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">asio</span><span class="special">/</span><span class="identifier">io_context</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">asio</span><span class="special">/</span><span class="identifier">ip</span><span class="special">/</span><span class="identifier">tcp</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">asio</span><span class="special">/</span><span class="identifier">signal_set</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">iostream</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">string</span><span class="special">&gt;</span>
+
+<span class="keyword">struct</span> <span class="identifier">config</span> <span class="special">{</span>
+    <span class="identifier">std</span><span class="special">::</span><span class="identifier">string</span> <span class="identifier">brokers</span> <span class="special">=</span> <span class="string">"broker.hivemq.com"</span><span class="special">;</span>
+    <span class="identifier">uint16_t</span> <span class="identifier">port</span> <span class="special">=</span> <span class="number">1883</span><span class="special">;</span>
+    <span class="identifier">std</span><span class="special">::</span><span class="identifier">string</span> <span class="identifier">client_id</span> <span class="special">=</span> <span class="string">"boost_mqtt5_tester"</span><span class="special">;</span>
+<span class="special">};</span>
+
+<span class="comment">// Modified completion token that will prevent co_await from throwing exceptions.</span>
+<span class="keyword">constexpr</span> <span class="keyword">auto</span> <span class="identifier">use_nothrow_awaitable</span> <span class="special">=</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">as_tuple</span><span class="special">(</span><span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">deferred</span><span class="special">);</span>
+
+<span class="comment">// client_type with logging enabled</span>
+<span class="keyword">using</span> <span class="identifier">client_type</span> <span class="special">=</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">mqtt_client</span><span class="special">&lt;</span>
+    <span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">ip</span><span class="special">::</span><span class="identifier">tcp</span><span class="special">::</span><span class="identifier">socket</span><span class="special">,</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">monostate</span> <span class="comment">/* TlsContext */</span><span class="special">,</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">logger</span>
+<span class="special">&gt;;</span>
+
+<span class="comment">// client_type without logging</span>
+<span class="comment">//using client_type = boost::mqtt5::mqtt_client&lt;boost::asio::ip::tcp::socket&gt;;</span>
+
+<span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">awaitable</span><span class="special">&lt;</span><span class="keyword">bool</span><span class="special">&gt;</span> <span class="identifier">subscribe</span><span class="special">(</span><span class="identifier">client_type</span><span class="special">&amp;</span> <span class="identifier">client</span><span class="special">)</span> <span class="special">{</span>
+    <span class="comment">// Configure the request to subscribe to a Topic.</span>
+    <span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">subscribe_topic</span> <span class="identifier">sub_topic</span> <span class="special">=</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">subscribe_topic</span><span class="special">{</span>
+        <span class="string">"test"</span> <span class="comment">/* topic */</span><span class="special">,</span>
+        <span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">subscribe_options</span> <span class="special">{</span>
+            <span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">qos_e</span><span class="special">::</span><span class="identifier">exactly_once</span><span class="special">,</span> <span class="comment">// All messages will arrive at QoS 2.</span>
+            <span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">no_local_e</span><span class="special">::</span><span class="identifier">no</span><span class="special">,</span> <span class="comment">// Forward message from Clients with same ID.</span>
+            <span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">retain_as_published_e</span><span class="special">::</span><span class="identifier">retain</span><span class="special">,</span> <span class="comment">// Keep the original RETAIN flag.</span>
+            <span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">retain_handling_e</span><span class="special">::</span><span class="identifier">send</span> <span class="comment">// Send retained messages when the subscription is established.</span>
+        <span class="special">}</span>
+    <span class="special">};</span>
+
+    <span class="comment">// Subscribe to a single Topic.</span>
+    <span class="keyword">auto</span><span class="special">&amp;&amp;</span> <span class="special">[</span><span class="identifier">ec</span><span class="special">,</span> <span class="identifier">sub_codes</span><span class="special">,</span> <span class="identifier">sub_props</span><span class="special">]</span> <span class="special">=</span> <span class="identifier">co_await</span> <span class="identifier">client</span><span class="special">.</span><span class="identifier">async_subscribe</span><span class="special">(</span>
+        <span class="identifier">sub_topic</span><span class="special">,</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">subscribe_props</span> <span class="special">{},</span> <span class="identifier">use_nothrow_awaitable</span>
+    <span class="special">);</span>
+    <span class="comment">// Note: you can subscribe to multiple Topics in one mqtt_client::async_subscribe call.</span>
+
+    <span class="comment">// An error can occur as a result of:</span>
+        <span class="comment">//  a) wrong subscribe parameters</span>
+        <span class="comment">//  b) mqtt_client::cancel is called while the Client is in the process of subscribing</span>
+    <span class="keyword">if</span> <span class="special">(</span><span class="identifier">ec</span><span class="special">)</span>
+        <span class="identifier">std</span><span class="special">::</span><span class="identifier">cout</span> <span class="special">&lt;&lt;</span> <span class="string">"Subscribe error occurred: "</span> <span class="special">&lt;&lt;</span> <span class="identifier">ec</span><span class="special">.</span><span class="identifier">message</span><span class="special">()</span> <span class="special">&lt;&lt;</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">endl</span><span class="special">;</span>
+    <span class="keyword">else</span>
+        <span class="identifier">std</span><span class="special">::</span><span class="identifier">cout</span> <span class="special">&lt;&lt;</span> <span class="string">"Result of subscribe request: "</span> <span class="special">&lt;&lt;</span> <span class="identifier">sub_codes</span><span class="special">[</span><span class="number">0</span><span class="special">].</span><span class="identifier">message</span><span class="special">()</span> <span class="special">&lt;&lt;</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">endl</span><span class="special">;</span>
+
+    <span class="identifier">co_return</span> <span class="special">!</span><span class="identifier">ec</span> <span class="special">&amp;&amp;</span> <span class="special">!</span><span class="identifier">sub_codes</span><span class="special">[</span><span class="number">0</span><span class="special">];</span> <span class="comment">// True if the subscription was successfully established.</span>
+<span class="special">}</span>
+
+<span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">awaitable</span><span class="special">&lt;</span><span class="keyword">void</span><span class="special">&gt;</span> <span class="identifier">subscribe_and_receive</span><span class="special">(</span>
+    <span class="keyword">const</span> <span class="identifier">config</span><span class="special">&amp;</span> <span class="identifier">cfg</span><span class="special">,</span> <span class="identifier">client_type</span><span class="special">&amp;</span> <span class="identifier">client</span>
+<span class="special">)</span> <span class="special">{</span>
+    <span class="comment">// Configure the Client.</span>
+    <span class="comment">// It is mandatory to call brokers() and async_run() to configure the Brokers to connect to and start the Client.</span>
+    <span class="identifier">client</span><span class="special">.</span><span class="identifier">brokers</span><span class="special">(</span><span class="identifier">cfg</span><span class="special">.</span><span class="identifier">brokers</span><span class="special">,</span> <span class="identifier">cfg</span><span class="special">.</span><span class="identifier">port</span><span class="special">)</span> <span class="comment">// Broker that we want to connect to.</span>
+        <span class="special">.</span><span class="identifier">credentials</span><span class="special">(</span><span class="identifier">cfg</span><span class="special">.</span><span class="identifier">client_id</span><span class="special">)</span> <span class="comment">// Set the Client Identifier. (optional)</span>
+        <span class="special">.</span><span class="identifier">async_run</span><span class="special">(</span><span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">detached</span><span class="special">);</span> <span class="comment">// Start the client.</span>
+
+    <span class="comment">// Before attempting to receive an Application Message from the Topic we just subscribed to,</span>
+    <span class="comment">// it is advisable to verify that the subscription succeeded.</span>
+    <span class="comment">// It is not recommended to call mqtt_client::async_receive if you do not have any</span>
+    <span class="comment">// subscription established as the corresponding handler will never be invoked.</span>
+    <span class="keyword">if</span> <span class="special">(!(</span><span class="identifier">co_await</span> <span class="identifier">subscribe</span><span class="special">(</span><span class="identifier">client</span><span class="special">)))</span>
+        <span class="identifier">co_return</span><span class="special">;</span>
+
+    <span class="keyword">for</span> <span class="special">(;;)</span> <span class="special">{</span>
+        <span class="comment">// Receive an Appplication Message from the subscribed Topic(s).</span>
+        <span class="keyword">auto</span><span class="special">&amp;&amp;</span> <span class="special">[</span><span class="identifier">ec</span><span class="special">,</span> <span class="identifier">topic</span><span class="special">,</span> <span class="identifier">payload</span><span class="special">,</span> <span class="identifier">publish_props</span><span class="special">]</span> <span class="special">=</span> <span class="identifier">co_await</span> <span class="identifier">client</span><span class="special">.</span><span class="identifier">async_receive</span><span class="special">(</span><span class="identifier">use_nothrow_awaitable</span><span class="special">);</span>
+
+        <span class="keyword">if</span> <span class="special">(</span><span class="identifier">ec</span> <span class="special">==</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">client</span><span class="special">::</span><span class="identifier">error</span><span class="special">::</span><span class="identifier">session_expired</span><span class="special">)</span> <span class="special">{</span>
+            <span class="comment">// The Client has reconnected, and the prior session has expired.</span>
+            <span class="comment">// As a result, any previous subscriptions have been lost and must be reinstated.</span>
+            <span class="keyword">if</span> <span class="special">(</span><span class="identifier">co_await</span> <span class="identifier">subscribe</span><span class="special">(</span><span class="identifier">client</span><span class="special">))</span>
+                <span class="keyword">continue</span><span class="special">;</span>
+            <span class="keyword">else</span>
+                <span class="keyword">break</span><span class="special">;</span>
+        <span class="special">}</span> <span class="keyword">else</span> <span class="keyword">if</span> <span class="special">(</span><span class="identifier">ec</span><span class="special">)</span>
+            <span class="keyword">break</span><span class="special">;</span>
+
+        <span class="identifier">std</span><span class="special">::</span><span class="identifier">cout</span> <span class="special">&lt;&lt;</span> <span class="string">"Received message from the Broker"</span> <span class="special">&lt;&lt;</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">endl</span><span class="special">;</span>
+        <span class="identifier">std</span><span class="special">::</span><span class="identifier">cout</span> <span class="special">&lt;&lt;</span> <span class="string">"\t topic: "</span> <span class="special">&lt;&lt;</span> <span class="identifier">topic</span> <span class="special">&lt;&lt;</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">endl</span><span class="special">;</span>
+        <span class="identifier">std</span><span class="special">::</span><span class="identifier">cout</span> <span class="special">&lt;&lt;</span> <span class="string">"\t payload: "</span> <span class="special">&lt;&lt;</span> <span class="identifier">payload</span> <span class="special">&lt;&lt;</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">endl</span><span class="special">;</span>
+    <span class="special">}</span>
+
+    <span class="identifier">co_return</span><span class="special">;</span>
+<span class="special">}</span>
+
+<span class="keyword">int</span> <span class="identifier">main</span><span class="special">(</span><span class="keyword">int</span> <span class="identifier">argc</span><span class="special">,</span> <span class="keyword">char</span><span class="special">**</span> <span class="identifier">argv</span><span class="special">)</span> <span class="special">{</span>
+    <span class="identifier">config</span> <span class="identifier">cfg</span><span class="special">;</span>
+
+    <span class="keyword">if</span> <span class="special">(</span><span class="identifier">argc</span> <span class="special">==</span> <span class="number">4</span><span class="special">)</span> <span class="special">{</span>
+        <span class="identifier">cfg</span><span class="special">.</span><span class="identifier">brokers</span> <span class="special">=</span> <span class="identifier">argv</span><span class="special">[</span><span class="number">1</span><span class="special">];</span>
+        <span class="identifier">cfg</span><span class="special">.</span><span class="identifier">port</span> <span class="special">=</span> <span class="identifier">uint16_t</span><span class="special">(</span><span class="identifier">std</span><span class="special">::</span><span class="identifier">stoi</span><span class="special">(</span><span class="identifier">argv</span><span class="special">[</span><span class="number">2</span><span class="special">]));</span>
+        <span class="identifier">cfg</span><span class="special">.</span><span class="identifier">client_id</span> <span class="special">=</span> <span class="identifier">argv</span><span class="special">[</span><span class="number">3</span><span class="special">];</span>
+    <span class="special">}</span>
+
+    <span class="comment">// Initialise execution context.</span>
+    <span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">io_context</span> <span class="identifier">ioc</span><span class="special">;</span>
+
+    <span class="comment">// Initialise the Client to connect to the Broker over TCP.</span>
+    <span class="identifier">client_type</span> <span class="identifier">client</span><span class="special">(</span><span class="identifier">ioc</span><span class="special">,</span> <span class="special">{}</span> <span class="comment">/* tls_context */</span><span class="special">,</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">logger</span><span class="special">(</span><span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">log_level</span><span class="special">::</span><span class="identifier">info</span><span class="special">));</span>
+
+    <span class="comment">// Set up signals to stop the program on demand.</span>
+    <span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">signal_set</span> <span class="identifier">signals</span><span class="special">(</span><span class="identifier">ioc</span><span class="special">,</span> <span class="identifier">SIGINT</span><span class="special">,</span> <span class="identifier">SIGTERM</span><span class="special">);</span>
+    <span class="identifier">signals</span><span class="special">.</span><span class="identifier">async_wait</span><span class="special">([&amp;</span><span class="identifier">client</span><span class="special">](</span><span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">error_code</span> <span class="comment">/* ec */</span><span class="special">,</span> <span class="keyword">int</span> <span class="comment">/* signal */</span><span class="special">)</span> <span class="special">{</span>
+        <span class="comment">// After we are done with publishing all the messages, cancel the timer and the Client.</span>
+        <span class="comment">// Alternatively, use mqtt_client::async_disconnect.</span>
+        <span class="identifier">client</span><span class="special">.</span><span class="identifier">cancel</span><span class="special">();</span>
+    <span class="special">});</span>
+
+    <span class="comment">// Spawn the coroutine.</span>
+    <span class="identifier">co_spawn</span><span class="special">(</span>
+        <span class="identifier">ioc</span><span class="special">,</span>
+        <span class="identifier">subscribe_and_receive</span><span class="special">(</span><span class="identifier">cfg</span><span class="special">,</span> <span class="identifier">client</span><span class="special">),</span>
+        <span class="special">[](</span><span class="identifier">std</span><span class="special">::</span><span class="identifier">exception_ptr</span> <span class="identifier">e</span><span class="special">)</span> <span class="special">{</span>
+            <span class="keyword">if</span> <span class="special">(</span><span class="identifier">e</span><span class="special">)</span>
+                <span class="identifier">std</span><span class="special">::</span><span class="identifier">rethrow_exception</span><span class="special">(</span><span class="identifier">e</span><span class="special">);</span>
+        <span class="special">}</span>
+    <span class="special">);</span>
+
+    <span class="comment">// Start the execution.</span>
+    <span class="identifier">ioc</span><span class="special">.</span><span class="identifier">run</span><span class="special">();</span>
+<span class="special">}</span>
+</pre>
+</div>
+<div class="copyright-footer">Copyright © 2023-2025 Mireo<p>
+        Distributed under the Boost Software License, Version 1.0. (See accompanying
+        file LICENSE_1_0.txt or copy at <a href="http://www.boost.org/LICENSE_1_0.txt" target="_top">http://www.boost.org/LICENSE_1_0.txt</a>)
+      </p>
+</div>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="publisher.html"><img src="../../../../../doc/src/images/prev.png" alt="Prev"></a><a accesskey="u" href="../pt01.html"><img src="../../../../../doc/src/images/up.png" alt="Up"></a><a accesskey="h" href="../index.html"><img src="../../../../../doc/src/images/home.png" alt="Home"></a><a accesskey="n" href="multiflight_client.html"><img src="../../../../../doc/src/images/next.png" alt="Next"></a>
+</div>
+</body>
+</html>

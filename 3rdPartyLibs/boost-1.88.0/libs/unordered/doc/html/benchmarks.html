@@ -1,0 +1,1683 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Benchmarks :: Boost.Unordered</title>
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../unordered/_/css/site.css">
+  </head>
+  <body class="article">
+<div class="body">
+<div class="nav-container" data-component="unordered" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="intro.html">Boost.Unordered</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="intro.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="buckets.html">Basics of Hash Tables</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="hash_equality.html">Equality Predicates and Hash Functions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="regular.html">Regular Containers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="concurrent.html">Concurrent Containers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="hash_quality.html">Hash Quality</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="compliance.html">Standard Compliance</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="structures.html">Data Structures</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="debuggability.html">Debuggability</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="benchmarks.html">Benchmarks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="rationale.html">Implementation Rationale</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="ref.html">Reference</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_map_fwd.html"><code>&lt;boost/unordered/unordered_map_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_map_top.html"><code>&lt;boost/unordered_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_map.html"><code>&lt;boost/unordered/unordered_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_map.html"><code>unordered_map</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_multimap.html"><code>unordered_multimap</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_set_fwd.html"><code>&lt;boost/unordered/unordered_set_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_set_top.html"><code>&lt;boost/unordered_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_set.html"><code>&lt;boost/unordered/unordered_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_set.html"><code>unordered_set</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_multiset.html"><code>unordered_multiset</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/hash_traits.html">Hash Traits</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/stats.html">Statistics</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_flat_map_fwd.html"><code>&lt;boost/unordered/unordered_flat_map_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_flat_map.html"><code>&lt;boost/unordered/unordered_flat_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_flat_map.html"><code>unordered_flat_map</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_flat_set_fwd.html"><code>&lt;boost/unordered/unordered_flat_set_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_flat_set.html"><code>&lt;boost/unordered/unordered_flat_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_flat_set.html"><code>unordered_flat_set</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_node_map_fwd.html"><code>&lt;boost/unordered/unordered_node_map_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_node_map.html"><code>&lt;boost/unordered/unordered_node_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_node_map.html"><code>unordered_node_map</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_node_set_fwd.html"><code>&lt;boost/unordered/unordered_node_set_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_node_set.html"><code>&lt;boost/unordered/unordered_node_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_node_set.html"><code>unordered_node_set</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_flat_map_fwd.html"><code>&lt;boost/unordered/concurrent_flat_map_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_flat_map.html"><code>&lt;boost/unordered/concurrent_flat_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/concurrent_flat_map.html"><code>concurrent_flat_map</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_flat_set_fwd.html"><code>&lt;boost/unordered/concurrent_flat_set_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_flat_set.html"><code>&lt;boost/unordered/concurrent_flat_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/concurrent_flat_set.html"><code>concurrent_flat_set</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_node_map_fwd.html"><code>&lt;boost/unordered/concurrent_node_map_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_node_map.html"><code>&lt;boost/unordered/concurrent_node_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/concurrent_node_map.html"><code>concurrent_node_map</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_node_set_fwd.html"><code>&lt;boost/unordered/concurrent_node_set_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_node_set.html"><code>&lt;boost/unordered/concurrent_node_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/concurrent_node_set.html"><code>concurrent_node_set</code></a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="changes.html">Change Log</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="bibliography.html">Bibliography</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="copyright.html">Copyright and License</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="intro.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="intro.html">Boost.Unordered</a></li>
+    <li><a href="benchmarks.html">Benchmarks</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Benchmarks</h1>
+<div class="sect1">
+<h2 id="benchmarks_boostunordered_multiset"><a class="anchor" href="#benchmarks_boostunordered_multiset"></a>boost::unordered_[multi]set</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>All benchmarks were created using <code>unordered_set&lt;unsigned int&gt;</code> (non-duplicate) and <code>unordered_multiset&lt;unsigned int&gt;</code> (duplicate). The source code can be <a href="https://github.com/boostorg/boost_unordered_benchmarks/tree/boost_unordered_set" target="_blank" rel="noopener">found here</a>.</p>
+</div>
+<div class="paragraph">
+<p>The insertion benchmarks insert <code>n</code> random values, where <code>n</code> is between 10,000 and 3 million. For the duplicated benchmarks, the same random values are repeated an average of 5 times.</p>
+</div>
+<div class="paragraph">
+<p>The erasure benchmarks erase all <code>n</code> elements randomly until the container is empty. Erasure by key uses <code>erase(const key_type&amp;)</code> to remove entire groups of equivalent elements in each operation.</p>
+</div>
+<div class="paragraph">
+<p>The successful lookup benchmarks are done by looking up all <code>n</code> values, in their original insertion order.</p>
+</div>
+<div class="paragraph">
+<p>The unsuccessful lookup benchmarks use <code>n</code> randomly generated integers but using a different seed value.</p>
+</div>
+<div class="sect2">
+<h3 id="benchmarks_gcc_12_libstdc_v3_x64"><a class="anchor" href="#benchmarks_gcc_12_libstdc_v3_x64"></a>GCC 12 + libstdc++-v3, x64</h3>
+<div class="sect3">
+<h4 id="benchmarks_insertion"><a class="anchor" href="#benchmarks_insertion"></a>Insertion</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-set/gcc/running insertion.xlsx.practice.png" target="_blank" rel="noopener"><img src="_images/benchmarks-set/gcc/running%20insertion.xlsx.practice.png" alt="running insertion.xlsx.practice" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-set/gcc/running insertion.xlsx.practice non-unique.png" target="_blank" rel="noopener"><img src="_images/benchmarks-set/gcc/running%20insertion.xlsx.practice%20non-unique.png" alt="running insertion.xlsx.practice non unique" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-set/gcc/running insertion.xlsx.practice non-unique 5.png" target="_blank" rel="noopener"><img src="_images/benchmarks-set/gcc/running%20insertion.xlsx.practice%20non-unique%205.png" alt="running insertion.xlsx.practice non unique 5" width="250"></a>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">non-duplicate elements</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">duplicate elements</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">duplicate elements,<br>
+max load factor 5</p></th>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-set/gcc/running insertion.xlsx.practice norehash.png" target="_blank" rel="noopener"><img src="_images/benchmarks-set/gcc/running%20insertion.xlsx.practice%20norehash.png" alt="running insertion.xlsx.practice norehash" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-set/gcc/running insertion.xlsx.practice norehash non-unique.png" target="_blank" rel="noopener"><img src="_images/benchmarks-set/gcc/running%20insertion.xlsx.practice%20norehash%20non-unique.png" alt="running insertion.xlsx.practice norehash non unique" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-set/gcc/running insertion.xlsx.practice norehash non-unique 5.png" target="_blank" rel="noopener"><img src="_images/benchmarks-set/gcc/running%20insertion.xlsx.practice%20norehash%20non-unique%205.png" alt="running insertion.xlsx.practice norehash non unique 5" width="250"></a>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">non-duplicate elements,<br>
+prior <code>reserve</code></p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">duplicate elements,<br>
+prior <code>reserve</code></p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">duplicate elements,<br>
+max load factor 5,<br>
+prior <code>reserve</code></p></th>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="benchmarks_erasure"><a class="anchor" href="#benchmarks_erasure"></a>Erasure</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-set/gcc/scattered erasure.xlsx.practice.png" target="_blank" rel="noopener"><img src="_images/benchmarks-set/gcc/scattered%20erasure.xlsx.practice.png" alt="scattered erasure.xlsx.practice" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-set/gcc/scattered erasure.xlsx.practice non-unique.png" target="_blank" rel="noopener"><img src="_images/benchmarks-set/gcc/scattered%20erasure.xlsx.practice%20non-unique.png" alt="scattered erasure.xlsx.practice non unique" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-set/gcc/scattered erasure.xlsx.practice non-unique 5.png" target="_blank" rel="noopener"><img src="_images/benchmarks-set/gcc/scattered%20erasure.xlsx.practice%20non-unique%205.png" alt="scattered erasure.xlsx.practice non unique 5" width="250"></a>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">non-duplicate elements</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">duplicate elements</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">duplicate elements,<br>
+max load factor 5</p></th>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-middle"><div class="content"></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-set/gcc/scattered erasure by key.xlsx.practice non-unique.png" target="_blank" rel="noopener"><img src="_images/benchmarks-set/gcc/scattered%20erasure%20by%20key.xlsx.practice%20non-unique.png" alt="scattered erasure by key.xlsx.practice non unique" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-set/gcc/scattered erasure by key.xlsx.practice non-unique 5.png" target="_blank" rel="noopener"><img src="_images/benchmarks-set/gcc/scattered%20erasure%20by%20key.xlsx.practice%20non-unique%205.png" alt="scattered erasure by key.xlsx.practice non unique 5" width="250"></a>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-middle"><div class="content"></div></td>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">by key, duplicate elements</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">by key, duplicate elements,<br>
+max load factor 5</p></th>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="benchmarks_successful_lookup"><a class="anchor" href="#benchmarks_successful_lookup"></a>Successful Lookup</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-set/gcc/scattered successful looukp.xlsx.practice.png" target="_blank" rel="noopener"><img src="_images/benchmarks-set/gcc/scattered%20successful%20looukp.xlsx.practice.png" alt="scattered successful looukp.xlsx.practice" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-set/gcc/scattered successful looukp.xlsx.practice non-unique.png" target="_blank" rel="noopener"><img src="_images/benchmarks-set/gcc/scattered%20successful%20looukp.xlsx.practice%20non-unique.png" alt="scattered successful looukp.xlsx.practice non unique" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-set/gcc/scattered successful looukp.xlsx.practice non-unique 5.png" target="_blank" rel="noopener"><img src="_images/benchmarks-set/gcc/scattered%20successful%20looukp.xlsx.practice%20non-unique%205.png" alt="scattered successful looukp.xlsx.practice non unique 5" width="250"></a>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">non-duplicate elements</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">duplicate elements</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">duplicate elements,<br>
+max load factor 5</p></th>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="benchmarks_unsuccessful_lookup"><a class="anchor" href="#benchmarks_unsuccessful_lookup"></a>Unsuccessful lookup</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-set/gcc/scattered unsuccessful looukp.xlsx.practice.png" target="_blank" rel="noopener"><img src="_images/benchmarks-set/gcc/scattered%20unsuccessful%20looukp.xlsx.practice.png" alt="scattered unsuccessful looukp.xlsx.practice" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-set/gcc/scattered unsuccessful looukp.xlsx.practice non-unique.png" target="_blank" rel="noopener"><img src="_images/benchmarks-set/gcc/scattered%20unsuccessful%20looukp.xlsx.practice%20non-unique.png" alt="scattered unsuccessful looukp.xlsx.practice non unique" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-set/gcc/scattered unsuccessful looukp.xlsx.practice non-unique 5.png" target="_blank" rel="noopener"><img src="_images/benchmarks-set/gcc/scattered%20unsuccessful%20looukp.xlsx.practice%20non-unique%205.png" alt="scattered unsuccessful looukp.xlsx.practice non unique 5" width="250"></a>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">non-duplicate elements</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">duplicate elements</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">duplicate elements,<br>
+max load factor 5</p></th>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="benchmarks_clang_15_libc_x64"><a class="anchor" href="#benchmarks_clang_15_libc_x64"></a>Clang 15 + libc++, x64</h3>
+<div class="sect3">
+<h4 id="benchmarks_insertion_2"><a class="anchor" href="#benchmarks_insertion_2"></a>Insertion</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-set/clang_libcpp/running insertion.xlsx.practice.png" target="_blank" rel="noopener"><img src="_images/benchmarks-set/clang_libcpp/running%20insertion.xlsx.practice.png" alt="running insertion.xlsx.practice" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-set/clang_libcpp/running insertion.xlsx.practice non-unique.png" target="_blank" rel="noopener"><img src="_images/benchmarks-set/clang_libcpp/running%20insertion.xlsx.practice%20non-unique.png" alt="running insertion.xlsx.practice non unique" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-set/clang_libcpp/running insertion.xlsx.practice non-unique 5.png" target="_blank" rel="noopener"><img src="_images/benchmarks-set/clang_libcpp/running%20insertion.xlsx.practice%20non-unique%205.png" alt="running insertion.xlsx.practice non unique 5" width="250"></a>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">non-duplicate elements</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">duplicate elements</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">duplicate elements,<br>
+max load factor 5</p></th>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-set/clang_libcpp/running insertion.xlsx.practice norehash.png" target="_blank" rel="noopener"><img src="_images/benchmarks-set/clang_libcpp/running%20insertion.xlsx.practice%20norehash.png" alt="running insertion.xlsx.practice norehash" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-set/clang_libcpp/running insertion.xlsx.practice norehash non-unique.png" target="_blank" rel="noopener"><img src="_images/benchmarks-set/clang_libcpp/running%20insertion.xlsx.practice%20norehash%20non-unique.png" alt="running insertion.xlsx.practice norehash non unique" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-set/clang_libcpp/running insertion.xlsx.practice norehash non-unique 5.png" target="_blank" rel="noopener"><img src="_images/benchmarks-set/clang_libcpp/running%20insertion.xlsx.practice%20norehash%20non-unique%205.png" alt="running insertion.xlsx.practice norehash non unique 5" width="250"></a>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">non-duplicate elements,<br>
+prior <code>reserve</code></p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">duplicate elements,<br>
+prior <code>reserve</code></p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">duplicate elements,<br>
+max load factor 5,<br>
+prior <code>reserve</code></p></th>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="benchmarks_erasure_2"><a class="anchor" href="#benchmarks_erasure_2"></a>Erasure</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-set/clang_libcpp/scattered erasure.xlsx.practice.png" target="_blank" rel="noopener"><img src="_images/benchmarks-set/clang_libcpp/scattered%20erasure.xlsx.practice.png" alt="scattered erasure.xlsx.practice" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-set/clang_libcpp/scattered erasure.xlsx.practice non-unique.png" target="_blank" rel="noopener"><img src="_images/benchmarks-set/clang_libcpp/scattered%20erasure.xlsx.practice%20non-unique.png" alt="scattered erasure.xlsx.practice non unique" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-set/clang_libcpp/scattered erasure.xlsx.practice non-unique 5.png" target="_blank" rel="noopener"><img src="_images/benchmarks-set/clang_libcpp/scattered%20erasure.xlsx.practice%20non-unique%205.png" alt="scattered erasure.xlsx.practice non unique 5" width="250"></a>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">non-duplicate elements</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">duplicate elements</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">duplicate elements,<br>
+max load factor 5</p></th>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-middle"><div class="content"></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-set/clang_libcpp/scattered erasure by key.xlsx.practice non-unique.png" target="_blank" rel="noopener"><img src="_images/benchmarks-set/clang_libcpp/scattered%20erasure%20by%20key.xlsx.practice%20non-unique.png" alt="scattered erasure by key.xlsx.practice non unique" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-set/clang_libcpp/scattered erasure by key.xlsx.practice non-unique 5.png" target="_blank" rel="noopener"><img src="_images/benchmarks-set/clang_libcpp/scattered%20erasure%20by%20key.xlsx.practice%20non-unique%205.png" alt="scattered erasure by key.xlsx.practice non unique 5" width="250"></a>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-middle"><div class="content"></div></td>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">by key, duplicate elements</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">by key, duplicate elements,<br>
+max load factor 5</p></th>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="benchmarks_successful_lookup_2"><a class="anchor" href="#benchmarks_successful_lookup_2"></a>Successful lookup</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-set/clang_libcpp/scattered successful looukp.xlsx.practice.png" target="_blank" rel="noopener"><img src="_images/benchmarks-set/clang_libcpp/scattered%20successful%20looukp.xlsx.practice.png" alt="scattered successful looukp.xlsx.practice" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-set/clang_libcpp/scattered successful looukp.xlsx.practice non-unique.png" target="_blank" rel="noopener"><img src="_images/benchmarks-set/clang_libcpp/scattered%20successful%20looukp.xlsx.practice%20non-unique.png" alt="scattered successful looukp.xlsx.practice non unique" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-set/clang_libcpp/scattered successful looukp.xlsx.practice non-unique 5.png" target="_blank" rel="noopener"><img src="_images/benchmarks-set/clang_libcpp/scattered%20successful%20looukp.xlsx.practice%20non-unique%205.png" alt="scattered successful looukp.xlsx.practice non unique 5" width="250"></a>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">non-duplicate elements</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">duplicate elements</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">duplicate elements,<br>
+max load factor 5</p></th>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="benchmarks_unsuccessful_lookup_2"><a class="anchor" href="#benchmarks_unsuccessful_lookup_2"></a>Unsuccessful lookup</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-set/clang_libcpp/scattered unsuccessful looukp.xlsx.practice.png" target="_blank" rel="noopener"><img src="_images/benchmarks-set/clang_libcpp/scattered%20unsuccessful%20looukp.xlsx.practice.png" alt="scattered unsuccessful looukp.xlsx.practice" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-set/clang_libcpp/scattered unsuccessful looukp.xlsx.practice non-unique.png" target="_blank" rel="noopener"><img src="_images/benchmarks-set/clang_libcpp/scattered%20unsuccessful%20looukp.xlsx.practice%20non-unique.png" alt="scattered unsuccessful looukp.xlsx.practice non unique" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-set/clang_libcpp/scattered unsuccessful looukp.xlsx.practice non-unique 5.png" target="_blank" rel="noopener"><img src="_images/benchmarks-set/clang_libcpp/scattered%20unsuccessful%20looukp.xlsx.practice%20non-unique%205.png" alt="scattered unsuccessful looukp.xlsx.practice non unique 5" width="250"></a>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">non-duplicate elements</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">duplicate elements</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">duplicate elements,<br>
+max load factor 5</p></th>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="benchmarks_visual_studio_2022_dinkumware_x64"><a class="anchor" href="#benchmarks_visual_studio_2022_dinkumware_x64"></a>Visual Studio 2022 + Dinkumware, x64</h3>
+<div class="sect3">
+<h4 id="benchmarks_insertion_3"><a class="anchor" href="#benchmarks_insertion_3"></a>Insertion</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-set/vs/running insertion.xlsx.practice.png" target="_blank" rel="noopener"><img src="_images/benchmarks-set/vs/running%20insertion.xlsx.practice.png" alt="running insertion.xlsx.practice" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-set/vs/running insertion.xlsx.practice non-unique.png" target="_blank" rel="noopener"><img src="_images/benchmarks-set/vs/running%20insertion.xlsx.practice%20non-unique.png" alt="running insertion.xlsx.practice non unique" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-set/vs/running insertion.xlsx.practice non-unique 5.png" target="_blank" rel="noopener"><img src="_images/benchmarks-set/vs/running%20insertion.xlsx.practice%20non-unique%205.png" alt="running insertion.xlsx.practice non unique 5" width="250"></a>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">non-duplicate elements</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">duplicate elements</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">duplicate elements,<br>
+max load factor 5</p></th>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-set/vs/running insertion.xlsx.practice norehash.png" target="_blank" rel="noopener"><img src="_images/benchmarks-set/vs/running%20insertion.xlsx.practice%20norehash.png" alt="running insertion.xlsx.practice norehash" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-set/vs/running insertion.xlsx.practice norehash non-unique.png" target="_blank" rel="noopener"><img src="_images/benchmarks-set/vs/running%20insertion.xlsx.practice%20norehash%20non-unique.png" alt="running insertion.xlsx.practice norehash non unique" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-set/vs/running insertion.xlsx.practice norehash non-unique 5.png" target="_blank" rel="noopener"><img src="_images/benchmarks-set/vs/running%20insertion.xlsx.practice%20norehash%20non-unique%205.png" alt="running insertion.xlsx.practice norehash non unique 5" width="250"></a>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">non-duplicate elements,<br>
+prior <code>reserve</code></p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">duplicate elements,<br>
+prior <code>reserve</code></p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">duplicate elements,<br>
+max load factor 5,<br>
+prior <code>reserve</code></p></th>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="benchmarks_erasure_3"><a class="anchor" href="#benchmarks_erasure_3"></a>Erasure</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-set/vs/scattered erasure.xlsx.practice.png" target="_blank" rel="noopener"><img src="_images/benchmarks-set/vs/scattered%20erasure.xlsx.practice.png" alt="scattered erasure.xlsx.practice" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-set/vs/scattered erasure.xlsx.practice non-unique.png" target="_blank" rel="noopener"><img src="_images/benchmarks-set/vs/scattered%20erasure.xlsx.practice%20non-unique.png" alt="scattered erasure.xlsx.practice non unique" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-set/vs/scattered erasure.xlsx.practice non-unique 5.png" target="_blank" rel="noopener"><img src="_images/benchmarks-set/vs/scattered%20erasure.xlsx.practice%20non-unique%205.png" alt="scattered erasure.xlsx.practice non unique 5" width="250"></a>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">non-duplicate elements</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">duplicate elements</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">duplicate elements,<br>
+max load factor 5</p></th>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-middle"><div class="content"></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-set/vs/scattered erasure by key.xlsx.practice non-unique.png" target="_blank" rel="noopener"><img src="_images/benchmarks-set/vs/scattered%20erasure%20by%20key.xlsx.practice%20non-unique.png" alt="scattered erasure by key.xlsx.practice non unique" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-set/vs/scattered erasure by key.xlsx.practice non-unique 5.png" target="_blank" rel="noopener"><img src="_images/benchmarks-set/vs/scattered%20erasure%20by%20key.xlsx.practice%20non-unique%205.png" alt="scattered erasure by key.xlsx.practice non unique 5" width="250"></a>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-middle"><div class="content"></div></td>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">by key, duplicate elements</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">by key, duplicate elements,<br>
+max load factor 5</p></th>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="benchmarks_successful_lookup_3"><a class="anchor" href="#benchmarks_successful_lookup_3"></a>Successful lookup</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-set/vs/scattered successful looukp.xlsx.practice.png" target="_blank" rel="noopener"><img src="_images/benchmarks-set/vs/scattered%20successful%20looukp.xlsx.practice.png" alt="scattered successful looukp.xlsx.practice" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-set/vs/scattered successful looukp.xlsx.practice non-unique.png" target="_blank" rel="noopener"><img src="_images/benchmarks-set/vs/scattered%20successful%20looukp.xlsx.practice%20non-unique.png" alt="scattered successful looukp.xlsx.practice non unique" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-set/vs/scattered successful looukp.xlsx.practice non-unique 5.png" target="_blank" rel="noopener"><img src="_images/benchmarks-set/vs/scattered%20successful%20looukp.xlsx.practice%20non-unique%205.png" alt="scattered successful looukp.xlsx.practice non unique 5" width="250"></a>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">non-duplicate elements</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">duplicate elements</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">duplicate elements,<br>
+max load factor 5</p></th>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="benchmarks_unsuccessful_lookup_3"><a class="anchor" href="#benchmarks_unsuccessful_lookup_3"></a>Unsuccessful lookup</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-set/vs/scattered unsuccessful looukp.xlsx.practice.png" target="_blank" rel="noopener"><img src="_images/benchmarks-set/vs/scattered%20unsuccessful%20looukp.xlsx.practice.png" alt="scattered unsuccessful looukp.xlsx.practice" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-set/vs/scattered unsuccessful looukp.xlsx.practice non-unique.png" target="_blank" rel="noopener"><img src="_images/benchmarks-set/vs/scattered%20unsuccessful%20looukp.xlsx.practice%20non-unique.png" alt="scattered unsuccessful looukp.xlsx.practice non unique" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-set/vs/scattered unsuccessful looukp.xlsx.practice non-unique 5.png" target="_blank" rel="noopener"><img src="_images/benchmarks-set/vs/scattered%20unsuccessful%20looukp.xlsx.practice%20non-unique%205.png" alt="scattered unsuccessful looukp.xlsx.practice non unique 5" width="250"></a>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">non-duplicate elements</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">duplicate elements</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">duplicate elements,<br>
+max load factor 5</p></th>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="benchmarks_boostunordered_flatnode_map"><a class="anchor" href="#benchmarks_boostunordered_flatnode_map"></a>boost::unordered_(flat|node)_map</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>All benchmarks were created using:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code><a href="https://abseil.io/docs/cpp/guides/container" target="_blank" rel="noopener">absl::flat_hash_map</a>&lt;uint64_t, uint64_t&gt;</code></p>
+</li>
+<li>
+<p><code>boost::unordered_map&lt;uint64_t, uint64_t&gt;</code></p>
+</li>
+<li>
+<p><code>boost::unordered_flat_map&lt;uint64_t, uint64_t&gt;</code></p>
+</li>
+<li>
+<p><code>boost::unordered_node_map&lt;uint64_t, uint64_t&gt;</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The source code can be <a href="https://github.com/boostorg/boost_unordered_benchmarks/tree/boost_unordered_flat_map" target="_blank" rel="noopener">found here</a>.</p>
+</div>
+<div class="paragraph">
+<p>The insertion benchmarks insert <code>n</code> random values, where <code>n</code> is between 10,000 and 10 million.</p>
+</div>
+<div class="paragraph">
+<p>The erasure benchmarks erase traverse the <code>n</code> elements and erase those with odd key (50% on average).</p>
+</div>
+<div class="paragraph">
+<p>The successful lookup benchmarks are done by looking up all <code>n</code> values, in their original insertion order.</p>
+</div>
+<div class="paragraph">
+<p>The unsuccessful lookup benchmarks use <code>n</code> randomly generated integers but using a different seed value.</p>
+</div>
+<div class="sect2">
+<h3 id="benchmarks_gcc_12_x64"><a class="anchor" href="#benchmarks_gcc_12_x64"></a>GCC 12, x64</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-flat_map/gcc-x64/Running insertion.xlsx.plot.png" target="_blank" rel="noopener"><img src="_images/benchmarks-flat_map/gcc-x64/Running%20insertion.xlsx.plot.png" alt="Running insertion.xlsx.plot" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-flat_map/gcc-x64/Running erasure.xlsx.plot.png" target="_blank" rel="noopener"><img src="_images/benchmarks-flat_map/gcc-x64/Running%20erasure.xlsx.plot.png" alt="Running erasure.xlsx.plot" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-flat_map/gcc-x64/Scattered successful looukp.xlsx.plot.png" target="_blank" rel="noopener"><img src="_images/benchmarks-flat_map/gcc-x64/Scattered%20successful%20looukp.xlsx.plot.png" alt="Scattered successful looukp.xlsx.plot" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-flat_map/gcc-x64/Scattered unsuccessful looukp.xlsx.plot.png" target="_blank" rel="noopener"><img src="_images/benchmarks-flat_map/gcc-x64/Scattered%20unsuccessful%20looukp.xlsx.plot.png" alt="Scattered unsuccessful looukp.xlsx.plot" width="250"></a>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">running insertion</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">running erasure</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">successful lookup</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">unsuccessful lookup</p></th>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="benchmarks_clang_15_x64"><a class="anchor" href="#benchmarks_clang_15_x64"></a>Clang 15, x64</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-flat_map/clang-x64/Running insertion.xlsx.plot.png" target="_blank" rel="noopener"><img src="_images/benchmarks-flat_map/clang-x64/Running%20insertion.xlsx.plot.png" alt="Running insertion.xlsx.plot" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-flat_map/clang-x64/Running erasure.xlsx.plot.png" target="_blank" rel="noopener"><img src="_images/benchmarks-flat_map/clang-x64/Running%20erasure.xlsx.plot.png" alt="Running erasure.xlsx.plot" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-flat_map/clang-x64/Scattered successful looukp.xlsx.plot.png" target="_blank" rel="noopener"><img src="_images/benchmarks-flat_map/clang-x64/Scattered%20successful%20looukp.xlsx.plot.png" alt="Scattered successful looukp.xlsx.plot" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-flat_map/clang-x64/Scattered unsuccessful looukp.xlsx.plot.png" target="_blank" rel="noopener"><img src="_images/benchmarks-flat_map/clang-x64/Scattered%20unsuccessful%20looukp.xlsx.plot.png" alt="Scattered unsuccessful looukp.xlsx.plot" width="250"></a>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">running insertion</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">running erasure</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">successful lookup</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">unsuccessful lookup</p></th>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="benchmarks_visual_studio_2022_x64"><a class="anchor" href="#benchmarks_visual_studio_2022_x64"></a>Visual Studio 2022, x64</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-flat_map/vs-x64/Running insertion.xlsx.plot.png" target="_blank" rel="noopener"><img src="_images/benchmarks-flat_map/vs-x64/Running%20insertion.xlsx.plot.png" alt="Running insertion.xlsx.plot" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-flat_map/vs-x64/Running erasure.xlsx.plot.png" target="_blank" rel="noopener"><img src="_images/benchmarks-flat_map/vs-x64/Running%20erasure.xlsx.plot.png" alt="Running erasure.xlsx.plot" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-flat_map/vs-x64/Scattered successful looukp.xlsx.plot.png" target="_blank" rel="noopener"><img src="_images/benchmarks-flat_map/vs-x64/Scattered%20successful%20looukp.xlsx.plot.png" alt="Scattered successful looukp.xlsx.plot" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-flat_map/vs-x64/Scattered unsuccessful looukp.xlsx.plot.png" target="_blank" rel="noopener"><img src="_images/benchmarks-flat_map/vs-x64/Scattered%20unsuccessful%20looukp.xlsx.plot.png" alt="Scattered unsuccessful looukp.xlsx.plot" width="250"></a>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">running insertion</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">running erasure</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">successful lookup</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">unsuccessful lookup</p></th>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="benchmarks_clang_12_arm64"><a class="anchor" href="#benchmarks_clang_12_arm64"></a>Clang 12, ARM64</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-flat_map/clang-arm64/Running insertion.xlsx.plot.png" target="_blank" rel="noopener"><img src="_images/benchmarks-flat_map/clang-arm64/Running%20insertion.xlsx.plot.png" alt="Running insertion.xlsx.plot" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-flat_map/clang-arm64/Running erasure.xlsx.plot.png" target="_blank" rel="noopener"><img src="_images/benchmarks-flat_map/clang-arm64/Running%20erasure.xlsx.plot.png" alt="Running erasure.xlsx.plot" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-flat_map/clang-arm64/Scattered successful looukp.xlsx.plot.png" target="_blank" rel="noopener"><img src="_images/benchmarks-flat_map/clang-arm64/Scattered%20successful%20looukp.xlsx.plot.png" alt="Scattered successful looukp.xlsx.plot" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-flat_map/clang-arm64/Scattered unsuccessful looukp.xlsx.plot.png" target="_blank" rel="noopener"><img src="_images/benchmarks-flat_map/clang-arm64/Scattered%20unsuccessful%20looukp.xlsx.plot.png" alt="Scattered unsuccessful looukp.xlsx.plot" width="250"></a>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">running insertion</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">running erasure</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">successful lookup</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">unsuccessful lookup</p></th>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="benchmarks_gcc_12_x86"><a class="anchor" href="#benchmarks_gcc_12_x86"></a>GCC 12, x86</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-flat_map/gcc-x86/Running insertion.xlsx.plot.png" target="_blank" rel="noopener"><img src="_images/benchmarks-flat_map/gcc-x86/Running%20insertion.xlsx.plot.png" alt="Running insertion.xlsx.plot" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-flat_map/gcc-x86/Running erasure.xlsx.plot.png" target="_blank" rel="noopener"><img src="_images/benchmarks-flat_map/gcc-x86/Running%20erasure.xlsx.plot.png" alt="Running erasure.xlsx.plot" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-flat_map/gcc-x86/Scattered successful looukp.xlsx.plot.png" target="_blank" rel="noopener"><img src="_images/benchmarks-flat_map/gcc-x86/Scattered%20successful%20looukp.xlsx.plot.png" alt="Scattered successful looukp.xlsx.plot" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-flat_map/gcc-x86/Scattered unsuccessful looukp.xlsx.plot.png" target="_blank" rel="noopener"><img src="_images/benchmarks-flat_map/gcc-x86/Scattered%20unsuccessful%20looukp.xlsx.plot.png" alt="Scattered unsuccessful looukp.xlsx.plot" width="250"></a>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">running insertion</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">running erasure</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">successful lookup</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">unsuccessful lookup</p></th>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="benchmarks_clang_15_x86"><a class="anchor" href="#benchmarks_clang_15_x86"></a>Clang 15, x86</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-flat_map/clang-x86/Running insertion.xlsx.plot.png" target="_blank" rel="noopener"><img src="_images/benchmarks-flat_map/clang-x86/Running%20insertion.xlsx.plot.png" alt="Running insertion.xlsx.plot" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-flat_map/clang-x86/Running erasure.xlsx.plot.png" target="_blank" rel="noopener"><img src="_images/benchmarks-flat_map/clang-x86/Running%20erasure.xlsx.plot.png" alt="Running erasure.xlsx.plot" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-flat_map/clang-x86/Scattered successful looukp.xlsx.plot.png" target="_blank" rel="noopener"><img src="_images/benchmarks-flat_map/clang-x86/Scattered%20successful%20looukp.xlsx.plot.png" alt="Scattered successful looukp.xlsx.plot" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-flat_map/clang-x86/Scattered unsuccessful looukp.xlsx.plot.png" target="_blank" rel="noopener"><img src="_images/benchmarks-flat_map/clang-x86/Scattered%20unsuccessful%20looukp.xlsx.plot.png" alt="Scattered unsuccessful looukp.xlsx.plot" width="250"></a>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">running insertion</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">running erasure</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">successful lookup</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">unsuccessful lookup</p></th>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="benchmarks_visual_studio_2022_x86"><a class="anchor" href="#benchmarks_visual_studio_2022_x86"></a>Visual Studio 2022, x86</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-flat_map/vs-x86/Running insertion.xlsx.plot.png" target="_blank" rel="noopener"><img src="_images/benchmarks-flat_map/vs-x86/Running%20insertion.xlsx.plot.png" alt="Running insertion.xlsx.plot" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-flat_map/vs-x86/Running erasure.xlsx.plot.png" target="_blank" rel="noopener"><img src="_images/benchmarks-flat_map/vs-x86/Running%20erasure.xlsx.plot.png" alt="Running erasure.xlsx.plot" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-flat_map/vs-x86/Scattered successful looukp.xlsx.plot.png" target="_blank" rel="noopener"><img src="_images/benchmarks-flat_map/vs-x86/Scattered%20successful%20looukp.xlsx.plot.png" alt="Scattered successful looukp.xlsx.plot" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-flat_map/vs-x86/Scattered unsuccessful looukp.xlsx.plot.png" target="_blank" rel="noopener"><img src="_images/benchmarks-flat_map/vs-x86/Scattered%20unsuccessful%20looukp.xlsx.plot.png" alt="Scattered unsuccessful looukp.xlsx.plot" width="250"></a>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">running insertion</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">running erasure</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">successful lookup</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">unsuccessful lookup</p></th>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="benchmarks_boostconcurrent_flatnode_map"><a class="anchor" href="#benchmarks_boostconcurrent_flatnode_map"></a>boost::concurrent_(flat|node)_map</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>All benchmarks were created using:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code><a href="https://spec.oneapi.io/versions/latest/elements/oneTBB/source/containers/concurrent_hash_map_cls.html" target="_blank" rel="noopener">oneapi::tbb::concurrent_hash_map</a>&lt;int, int&gt;</code></p>
+</li>
+<li>
+<p><code><a href="https://github.com/greg7mdp/gtl/blob/main/docs/phmap.md" target="_blank" rel="noopener">gtl::parallel_flat_hash_map</a>&lt;int, int&gt;</code> with 64 submaps</p>
+</li>
+<li>
+<p><code>boost::concurrent_flat_map&lt;int, int&gt;</code></p>
+</li>
+<li>
+<p><code>boost::concurrent_node_map&lt;int, int&gt;</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The source code can be <a href="https://github.com/boostorg/boost_unordered_benchmarks/tree/boost_concurrent_flat_map" target="_blank" rel="noopener">found here</a>.</p>
+</div>
+<div class="paragraph">
+<p>The benchmarks exercise a number of threads <em>T</em> (between 1 and 16) concurrently performing operations
+randomly chosen among <strong>update</strong>, <strong>successful lookup</strong> and <strong>unsuccessful lookup</strong>. The keys used in the
+operations follow a <a href="https://en.wikipedia.org/wiki/Zipf%27s_law#Formal_definition" target="_blank" rel="noopener">Zipf distribution</a>
+with different <em>skew</em> parameters: the higher the skew, the more concentrated are the keys in the lower values
+of the covered range.</p>
+</div>
+<div class="paragraph">
+<p><code>boost::concurrent_flat_map</code> and <code>boost::concurrent_node_map</code> are exercised using both regular and <a href="concurrent.html#concurrent_bulk_visitation" class="xref page">bulk visitation</a>:
+in the latter case, lookup keys are buffered in a local array and then processed at
+once each time the buffer reaches <code><a href="reference/concurrent_flat_map.html#concurrent_flat_map_constants" class="xref page">bulk_visit_size</a></code>.</p>
+</div>
+<div class="sect2">
+<h3 id="benchmarks_gcc_12_x64_2"><a class="anchor" href="#benchmarks_gcc_12_x64_2"></a>GCC 12, x64</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-concurrent_map/gcc-x64/Parallel workload.xlsx.500k, 0.01.png" target="_blank" rel="noopener"><img src="_images/benchmarks-concurrent_map/gcc-x64/Parallel%20workload.xlsx.500k,%200.01.png" alt="Parallel workload.xlsx.500k, 0.01" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-concurrent_map/gcc-x64/Parallel workload.xlsx.500k, 0.5.png" target="_blank" rel="noopener"><img src="_images/benchmarks-concurrent_map/gcc-x64/Parallel%20workload.xlsx.500k,%200.5.png" alt="Parallel workload.xlsx.500k, 0.5" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-concurrent_map/gcc-x64/Parallel workload.xlsx.500k, 0.99.png" target="_blank" rel="noopener"><img src="_images/benchmarks-concurrent_map/gcc-x64/Parallel%20workload.xlsx.500k,%200.99.png" alt="Parallel workload.xlsx.500k, 0.99" width="250"></a>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">500k updates, 4.5M lookups<br>
+skew=0.01</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">500k updates, 4.5M lookups<br>
+skew=0.5</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">500k updates, 4.5M lookups<br>
+skew=0.99</p></th>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-concurrent_map/gcc-x64/Parallel workload.xlsx.5M, 0.01.png" target="_blank" rel="noopener"><img src="_images/benchmarks-concurrent_map/gcc-x64/Parallel%20workload.xlsx.5M,%200.01.png" alt="Parallel workload.xlsx.5M, 0.01" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-concurrent_map/gcc-x64/Parallel workload.xlsx.5M, 0.5.png" target="_blank" rel="noopener"><img src="_images/benchmarks-concurrent_map/gcc-x64/Parallel%20workload.xlsx.5M,%200.5.png" alt="Parallel workload.xlsx.5M, 0.5" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-concurrent_map/gcc-x64/Parallel workload.xlsx.5M, 0.99.png" target="_blank" rel="noopener"><img src="_images/benchmarks-concurrent_map/gcc-x64/Parallel%20workload.xlsx.5M,%200.99.png" alt="Parallel workload.xlsx.5M, 0.99" width="250"></a>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">5M updates, 45M lookups<br>
+skew=0.01</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">5M updates, 45M lookups<br>
+skew=0.5</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">5M updates, 45M lookups<br>
+skew=0.99</p></th>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="benchmarks_clang_15_x64_2"><a class="anchor" href="#benchmarks_clang_15_x64_2"></a>Clang 15, x64</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-concurrent_map/clang-x64/Parallel workload.xlsx.500k, 0.01.png" target="_blank" rel="noopener"><img src="_images/benchmarks-concurrent_map/clang-x64/Parallel%20workload.xlsx.500k,%200.01.png" alt="Parallel workload.xlsx.500k, 0.01" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-concurrent_map/clang-x64/Parallel workload.xlsx.500k, 0.5.png" target="_blank" rel="noopener"><img src="_images/benchmarks-concurrent_map/clang-x64/Parallel%20workload.xlsx.500k,%200.5.png" alt="Parallel workload.xlsx.500k, 0.5" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-concurrent_map/clang-x64/Parallel workload.xlsx.500k, 0.99.png" target="_blank" rel="noopener"><img src="_images/benchmarks-concurrent_map/clang-x64/Parallel%20workload.xlsx.500k,%200.99.png" alt="Parallel workload.xlsx.500k, 0.99" width="250"></a>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">500k updates, 4.5M lookups<br>
+skew=0.01</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">500k updates, 4.5M lookups<br>
+skew=0.5</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">500k updates, 4.5M lookups<br>
+skew=0.99</p></th>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-concurrent_map/clang-x64/Parallel workload.xlsx.5M, 0.01.png" target="_blank" rel="noopener"><img src="_images/benchmarks-concurrent_map/clang-x64/Parallel%20workload.xlsx.5M,%200.01.png" alt="Parallel workload.xlsx.5M, 0.01" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-concurrent_map/clang-x64/Parallel workload.xlsx.5M, 0.5.png" target="_blank" rel="noopener"><img src="_images/benchmarks-concurrent_map/clang-x64/Parallel%20workload.xlsx.5M,%200.5.png" alt="Parallel workload.xlsx.5M, 0.5" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-concurrent_map/clang-x64/Parallel workload.xlsx.5M, 0.99.png" target="_blank" rel="noopener"><img src="_images/benchmarks-concurrent_map/clang-x64/Parallel%20workload.xlsx.5M,%200.99.png" alt="Parallel workload.xlsx.5M, 0.99" width="250"></a>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">5M updates, 45M lookups<br>
+skew=0.01</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">5M updates, 45M lookups<br>
+skew=0.5</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">5M updates, 45M lookups<br>
+skew=0.99</p></th>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="benchmarks_visual_studio_2022_x64_2"><a class="anchor" href="#benchmarks_visual_studio_2022_x64_2"></a>Visual Studio 2022, x64</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-concurrent_map/vs-x64/Parallel workload.xlsx.500k, 0.01.png" target="_blank" rel="noopener"><img src="_images/benchmarks-concurrent_map/vs-x64/Parallel%20workload.xlsx.500k,%200.01.png" alt="Parallel workload.xlsx.500k, 0.01" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-concurrent_map/vs-x64/Parallel workload.xlsx.500k, 0.5.png" target="_blank" rel="noopener"><img src="_images/benchmarks-concurrent_map/vs-x64/Parallel%20workload.xlsx.500k,%200.5.png" alt="Parallel workload.xlsx.500k, 0.5" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-concurrent_map/vs-x64/Parallel workload.xlsx.500k, 0.99.png" target="_blank" rel="noopener"><img src="_images/benchmarks-concurrent_map/vs-x64/Parallel%20workload.xlsx.500k,%200.99.png" alt="Parallel workload.xlsx.500k, 0.99" width="250"></a>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">500k updates, 4.5M lookups<br>
+skew=0.01</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">500k updates, 4.5M lookups<br>
+skew=0.5</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">500k updates, 4.5M lookups<br>
+skew=0.99</p></th>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-concurrent_map/vs-x64/Parallel workload.xlsx.5M, 0.01.png" target="_blank" rel="noopener"><img src="_images/benchmarks-concurrent_map/vs-x64/Parallel%20workload.xlsx.5M,%200.01.png" alt="Parallel workload.xlsx.5M, 0.01" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-concurrent_map/vs-x64/Parallel workload.xlsx.5M, 0.5.png" target="_blank" rel="noopener"><img src="_images/benchmarks-concurrent_map/vs-x64/Parallel%20workload.xlsx.5M,%200.5.png" alt="Parallel workload.xlsx.5M, 0.5" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-concurrent_map/vs-x64/Parallel workload.xlsx.5M, 0.99.png" target="_blank" rel="noopener"><img src="_images/benchmarks-concurrent_map/vs-x64/Parallel%20workload.xlsx.5M,%200.99.png" alt="Parallel workload.xlsx.5M, 0.99" width="250"></a>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">5M updates, 45M lookups<br>
+skew=0.01</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">5M updates, 45M lookups<br>
+skew=0.5</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">5M updates, 45M lookups<br>
+skew=0.99</p></th>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="benchmarks_clang_12_arm64_2"><a class="anchor" href="#benchmarks_clang_12_arm64_2"></a>Clang 12, ARM64</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-concurrent_map/clang-arm64/Parallel workload.xlsx.500k, 0.01.png" target="_blank" rel="noopener"><img src="_images/benchmarks-concurrent_map/clang-arm64/Parallel%20workload.xlsx.500k,%200.01.png" alt="Parallel workload.xlsx.500k, 0.01" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-concurrent_map/clang-arm64/Parallel workload.xlsx.500k, 0.5.png" target="_blank" rel="noopener"><img src="_images/benchmarks-concurrent_map/clang-arm64/Parallel%20workload.xlsx.500k,%200.5.png" alt="Parallel workload.xlsx.500k, 0.5" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-concurrent_map/clang-arm64/Parallel workload.xlsx.500k, 0.99.png" target="_blank" rel="noopener"><img src="_images/benchmarks-concurrent_map/clang-arm64/Parallel%20workload.xlsx.500k,%200.99.png" alt="Parallel workload.xlsx.500k, 0.99" width="250"></a>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">500k updates, 4.5M lookups<br>
+skew=0.01</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">500k updates, 4.5M lookups<br>
+skew=0.5</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">500k updates, 4.5M lookups<br>
+skew=0.99</p></th>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-concurrent_map/clang-arm64/Parallel workload.xlsx.5M, 0.01.png" target="_blank" rel="noopener"><img src="_images/benchmarks-concurrent_map/clang-arm64/Parallel%20workload.xlsx.5M,%200.01.png" alt="Parallel workload.xlsx.5M, 0.01" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-concurrent_map/clang-arm64/Parallel workload.xlsx.5M, 0.5.png" target="_blank" rel="noopener"><img src="_images/benchmarks-concurrent_map/clang-arm64/Parallel%20workload.xlsx.5M,%200.5.png" alt="Parallel workload.xlsx.5M, 0.5" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-concurrent_map/clang-arm64/Parallel workload.xlsx.5M, 0.99.png" target="_blank" rel="noopener"><img src="_images/benchmarks-concurrent_map/clang-arm64/Parallel%20workload.xlsx.5M,%200.99.png" alt="Parallel workload.xlsx.5M, 0.99" width="250"></a>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">5M updates, 45M lookups<br>
+skew=0.01</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">5M updates, 45M lookups<br>
+skew=0.5</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">5M updates, 45M lookups<br>
+skew=0.99</p></th>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="benchmarks_gcc_12_x86_2"><a class="anchor" href="#benchmarks_gcc_12_x86_2"></a>GCC 12, x86</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-concurrent_map/gcc-x86/Parallel workload.xlsx.500k, 0.01.png" target="_blank" rel="noopener"><img src="_images/benchmarks-concurrent_map/gcc-x86/Parallel%20workload.xlsx.500k,%200.01.png" alt="Parallel workload.xlsx.500k, 0.01" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-concurrent_map/gcc-x86/Parallel workload.xlsx.500k, 0.5.png" target="_blank" rel="noopener"><img src="_images/benchmarks-concurrent_map/gcc-x86/Parallel%20workload.xlsx.500k,%200.5.png" alt="Parallel workload.xlsx.500k, 0.5" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-concurrent_map/gcc-x86/Parallel workload.xlsx.500k, 0.99.png" target="_blank" rel="noopener"><img src="_images/benchmarks-concurrent_map/gcc-x86/Parallel%20workload.xlsx.500k,%200.99.png" alt="Parallel workload.xlsx.500k, 0.99" width="250"></a>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">500k updates, 4.5M lookups<br>
+skew=0.01</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">500k updates, 4.5M lookups<br>
+skew=0.5</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">500k updates, 4.5M lookups<br>
+skew=0.99</p></th>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-concurrent_map/gcc-x86/Parallel workload.xlsx.5M, 0.01.png" target="_blank" rel="noopener"><img src="_images/benchmarks-concurrent_map/gcc-x86/Parallel%20workload.xlsx.5M,%200.01.png" alt="Parallel workload.xlsx.5M, 0.01" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-concurrent_map/gcc-x86/Parallel workload.xlsx.5M, 0.5.png" target="_blank" rel="noopener"><img src="_images/benchmarks-concurrent_map/gcc-x86/Parallel%20workload.xlsx.5M,%200.5.png" alt="Parallel workload.xlsx.5M, 0.5" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-concurrent_map/gcc-x86/Parallel workload.xlsx.5M, 0.99.png" target="_blank" rel="noopener"><img src="_images/benchmarks-concurrent_map/gcc-x86/Parallel%20workload.xlsx.5M,%200.99.png" alt="Parallel workload.xlsx.5M, 0.99" width="250"></a>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">5M updates, 45M lookups<br>
+skew=0.01</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">5M updates, 45M lookups<br>
+skew=0.5</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">5M updates, 45M lookups<br>
+skew=0.99</p></th>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="benchmarks_clang_15_x86_2"><a class="anchor" href="#benchmarks_clang_15_x86_2"></a>Clang 15, x86</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-concurrent_map/clang-x86/Parallel workload.xlsx.500k, 0.01.png" target="_blank" rel="noopener"><img src="_images/benchmarks-concurrent_map/clang-x86/Parallel%20workload.xlsx.500k,%200.01.png" alt="Parallel workload.xlsx.500k, 0.01" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-concurrent_map/clang-x86/Parallel workload.xlsx.500k, 0.5.png" target="_blank" rel="noopener"><img src="_images/benchmarks-concurrent_map/clang-x86/Parallel%20workload.xlsx.500k,%200.5.png" alt="Parallel workload.xlsx.500k, 0.5" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-concurrent_map/clang-x86/Parallel workload.xlsx.500k, 0.99.png" target="_blank" rel="noopener"><img src="_images/benchmarks-concurrent_map/clang-x86/Parallel%20workload.xlsx.500k,%200.99.png" alt="Parallel workload.xlsx.500k, 0.99" width="250"></a>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">500k updates, 4.5M lookups<br>
+skew=0.01</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">500k updates, 4.5M lookups<br>
+skew=0.5</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">500k updates, 4.5M lookups<br>
+skew=0.99</p></th>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-concurrent_map/clang-x86/Parallel workload.xlsx.5M, 0.01.png" target="_blank" rel="noopener"><img src="_images/benchmarks-concurrent_map/clang-x86/Parallel%20workload.xlsx.5M,%200.01.png" alt="Parallel workload.xlsx.5M, 0.01" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-concurrent_map/clang-x86/Parallel workload.xlsx.5M, 0.5.png" target="_blank" rel="noopener"><img src="_images/benchmarks-concurrent_map/clang-x86/Parallel%20workload.xlsx.5M,%200.5.png" alt="Parallel workload.xlsx.5M, 0.5" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-concurrent_map/clang-x86/Parallel workload.xlsx.5M, 0.99.png" target="_blank" rel="noopener"><img src="_images/benchmarks-concurrent_map/clang-x86/Parallel%20workload.xlsx.5M,%200.99.png" alt="Parallel workload.xlsx.5M, 0.99" width="250"></a>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">5M updates, 45M lookups<br>
+skew=0.01</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">5M updates, 45M lookups<br>
+skew=0.5</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">5M updates, 45M lookups<br>
+skew=0.99</p></th>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="benchmarks_visual_studio_2022_x86_2"><a class="anchor" href="#benchmarks_visual_studio_2022_x86_2"></a>Visual Studio 2022, x86</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-concurrent_map/vs-x86/Parallel workload.xlsx.500k, 0.01.png" target="_blank" rel="noopener"><img src="_images/benchmarks-concurrent_map/vs-x86/Parallel%20workload.xlsx.500k,%200.01.png" alt="Parallel workload.xlsx.500k, 0.01" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-concurrent_map/vs-x86/Parallel workload.xlsx.500k, 0.5.png" target="_blank" rel="noopener"><img src="_images/benchmarks-concurrent_map/vs-x86/Parallel%20workload.xlsx.500k,%200.5.png" alt="Parallel workload.xlsx.500k, 0.5" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-concurrent_map/vs-x86/Parallel workload.xlsx.500k, 0.99.png" target="_blank" rel="noopener"><img src="_images/benchmarks-concurrent_map/vs-x86/Parallel%20workload.xlsx.500k,%200.99.png" alt="Parallel workload.xlsx.500k, 0.99" width="250"></a>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">500k updates, 4.5M lookups<br>
+skew=0.01</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">500k updates, 4.5M lookups<br>
+skew=0.5</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">500k updates, 4.5M lookups<br>
+skew=0.99</p></th>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-concurrent_map/vs-x86/Parallel workload.xlsx.5M, 0.01.png" target="_blank" rel="noopener"><img src="_images/benchmarks-concurrent_map/vs-x86/Parallel%20workload.xlsx.5M,%200.01.png" alt="Parallel workload.xlsx.5M, 0.01" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-concurrent_map/vs-x86/Parallel workload.xlsx.5M, 0.5.png" target="_blank" rel="noopener"><img src="_images/benchmarks-concurrent_map/vs-x86/Parallel%20workload.xlsx.5M,%200.5.png" alt="Parallel workload.xlsx.5M, 0.5" width="250"></a>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<a class="image" href="_images/benchmarks-concurrent_map/vs-x86/Parallel workload.xlsx.5M, 0.99.png" target="_blank" rel="noopener"><img src="_images/benchmarks-concurrent_map/vs-x86/Parallel%20workload.xlsx.5M,%200.99.png" alt="Parallel workload.xlsx.5M, 0.99" width="250"></a>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">5M updates, 45M lookups<br>
+skew=0.01</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">5M updates, 45M lookups<br>
+skew=0.5</p></th>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">5M updates, 45M lookups<br>
+skew=0.99</p></th>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<script id="site-script" src="../unordered/_/js/site.js" data-ui-root-path="../unordered/_"></script>
+<script async src="../unordered/_/js/vendor/highlight.js"></script>
+  </body>
+</html>

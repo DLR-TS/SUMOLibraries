@@ -1,0 +1,189 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Built-in Auto-Reconnect and Retry Mechanism</title>
+<link rel="stylesheet" href="../../../../../doc/src/boostbook.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="../index.html" title="Chapter 1. Boost.MQTT5: a C++17 MQTT client">
+<link rel="up" href="../index.html" title="Chapter 1. Boost.MQTT5: a C++17 MQTT client">
+<link rel="prev" href="getting_started.html" title="Getting Started">
+<link rel="next" href="connection_maintenance.html" title="Maintaining a Stable Connection">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table cellpadding="2" width="100%"><tr>
+<td valign="top"><img alt="Boost C++ Libraries" width="277" height="86" src="../../../../../boost.png"></td>
+<td align="center"><a href="../../../../../index.html">Home</a></td>
+<td align="center"><a href="../../../../../libs/libraries.htm">Libraries</a></td>
+<td align="center"><a href="http://www.boost.org/users/people.html">People</a></td>
+<td align="center"><a href="http://www.boost.org/users/faq.html">FAQ</a></td>
+<td align="center"><a href="../../../../../more/index.htm">More</a></td>
+</tr></table>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="getting_started.html"><img src="../../../../../doc/src/images/prev.png" alt="Prev"></a><a accesskey="u" href="../index.html"><img src="../../../../../doc/src/images/up.png" alt="Up"></a><a accesskey="h" href="../index.html"><img src="../../../../../doc/src/images/home.png" alt="Home"></a><a accesskey="n" href="connection_maintenance.html"><img src="../../../../../doc/src/images/next.png" alt="Next"></a>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="mqtt5.auto_reconnect"></a><a class="link" href="auto_reconnect.html" title="Built-in Auto-Reconnect and Retry Mechanism">Built-in Auto-Reconnect and Retry
+    Mechanism</a>
+</h2></div></div></div>
+<p>
+      The auto-reconnect and retry mechanism is a key feature of the <a href="https://github.com/boostorg/mqtt5/" target="_top">Boost.MQTT5</a>
+      library. It is designed to internally manage the complexities of disconnects,
+      backoffs, reconnections, and message retransmissions. These tasks, if handled
+      manually, could lead to extended development times, difficult testing, and
+      compromised reliability. By automating these processes, the <a href="https://github.com/boostorg/mqtt5/" target="_top">Boost.MQTT5</a>
+      library enables users of the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> to focus primarily
+      on the application's functionality without worrying about the repercussions
+      of lost network connectivity.
+    </p>
+<p>
+      You can call any asynchronous function within the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> regardless of
+      its current connection status. If the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> is offline,
+      it will queue all outgoing requests and transmit them as soon as the connection
+      is restored. In situations where the connection is unexpectedly lost mid-protocol
+      flow, the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> complies with
+      the MQTT protocol's specified message delivery retry mechanisms.
+    </p>
+<p>
+      The following example will showcase how the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> internally manages
+      various scenarios, including successful transmission, offline queuing, and
+      connection loss retransmissions when executing a request to publish a message
+      with QoS 1. Note that the same principle applies to all other asynchronous
+      functions within the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> (see <span class="emphasis"><em>Completion
+      condition</em></span> under <a class="link" href="ref/boost__mqtt5__mqtt_client/async_publish.html" title="boost::mqtt5::mqtt_client::async_publish"><code class="literal">mqtt_client::async_publish</code></a>,
+      <a class="link" href="ref/boost__mqtt5__mqtt_client/async_subscribe.html" title="boost::mqtt5::mqtt_client::async_subscribe"><code class="literal">mqtt_client::async_subscribe</code></a>,
+      <a class="link" href="ref/boost__mqtt5__mqtt_client/async_unsubscribe.html" title="boost::mqtt5::mqtt_client::async_unsubscribe"><code class="literal">mqtt_client::async_unsubscribe</code></a>,
+      and <a class="link" href="ref/boost__mqtt5__mqtt_client/async_disconnect.html" title="boost::mqtt5::mqtt_client::async_disconnect"><code class="literal">mqtt_client::async_disconnect</code></a>).
+    </p>
+<pre class="programlisting"><span class="comment">// Publishing with QoS 1 involves a two-step process: sending a PUBLISH message to the Broker and awaiting a PUBACK (acknowledgement) response.</span>
+<span class="comment">// The scenarios that might happen are:</span>
+<span class="comment">//   1) The Client will immediately send the PUBLISH message and start to wait for the PUBACK reply. </span>
+<span class="comment">//       The user's completion handler will not be invoked yet, regardless of whether the Client successfully sent the message.</span>
+<span class="comment">//   2) When the Client fails to send the message, it will try to reconnect to the Broker automatically.</span>
+<span class="comment">//       If it succeeds, it will resend the message. If reconnect fails, the Client will try to connect again until it succeeds.</span>
+<span class="comment">//       Meanwhile, the user's completion handler will NOT be invoked except when the Client detects an unrecoverable error (for example, when the list of configured brokers is empty).</span>
+<span class="comment">//       Note that the Client will try to connect indefinitely, meaning the user's completion handler may never be invoked.</span>
+<span class="comment">//   3) When the Client successfully sends the PUBLISH message, the Broker is required to respond with a PUBACK message. </span>
+<span class="comment">//       The reply message may indicate success or an MQTT error (for example, signalling that the message is not accepted due to implementation or administrative limits).</span>
+<span class="comment">//       The Client will read the PUBACK message and call the user's completion handler with the appropriate arguments.</span>
+<span class="comment">//   4) The PUBACK message should arrive within 20 seconds of the PUBLISH message being successfully sent.</span>
+<span class="comment">//       If it does not, the PUBLISH message will be sent again. In the meantime, the user's callback will not be invoked.</span>
+
+<span class="identifier">client</span><span class="special">.</span><span class="identifier">async_publish</span><span class="special">&lt;</span><span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">qos_e</span><span class="special">::</span><span class="identifier">at_least_once</span><span class="special">&gt;(</span>
+    <span class="string">"my-topic"</span><span class="special">,</span> <span class="string">"Hello world!"</span><span class="special">,</span>
+    <span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">retain_e</span><span class="special">::</span><span class="identifier">no</span><span class="special">,</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">publish_props</span> <span class="special">{},</span>
+    <span class="special">[](</span><span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">error_code</span> <span class="identifier">ec</span><span class="special">,</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">reason_code</span> <span class="identifier">rc</span><span class="special">,</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">puback_props</span> <span class="identifier">props</span><span class="special">)</span> <span class="special">{</span>
+        <span class="comment">// This callback is invoked under any of the following circumstances:</span>
+        <span class="comment">//  a) The Client successfully sends the PUBLISH packet and receives a PUBACK from the Broker.</span>
+        <span class="comment">//  b) The Client encounters a non-recoverable error, such as a cancellation or providing invalid parameters</span>
+        <span class="comment">//     to async_publish, which prevents the message from being sent.</span>
+    <span class="special">}</span>
+<span class="special">);</span>
+</pre>
+<div class="section"><div class="titlepage"></div></div>
+<div class="section">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="mqtt5.auto_reconnect.cons"></a><a class="link" href="auto_reconnect.html#mqtt5.auto_reconnect.cons" title="Considerations and Limitations">Considerations and Limitations</a>
+</h3></div></div></div>
+<p>
+        The integrated auto-reconnect and retry mechanism greatly improves the user
+        experience by simplifying complex processes and ensuring continuous connections.
+        However, it is important to be mindful of certain limitations and considerations
+        associated with this feature.
+      </p>
+<h5>
+<a name="mqtt5.auto_reconnect.cons.h0"></a>
+        <span class="phrase"><a name="mqtt5.auto_reconnect.cons.delayed_handler_invocation"></a></span><a class="link" href="auto_reconnect.html#mqtt5.auto_reconnect.cons.delayed_handler_invocation">Delayed Handler
+        Invocation</a>
+      </h5>
+<p>
+        During extended periods of <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> downtime,
+        the completion handlers for asynchronous functions, such as those used in
+        <a class="link" href="ref/boost__mqtt5__mqtt_client/async_publish.html" title="boost::mqtt5::mqtt_client::async_publish"><code class="literal">mqtt_client::async_publish</code></a>,
+        may face considerable delays before invocation. This can result in users
+        being left in the dark regarding the status of their requests due to the
+        absence of prompt feedback on the initiated actions.
+      </p>
+<h5>
+<a name="mqtt5.auto_reconnect.cons.h1"></a>
+        <span class="phrase"><a name="mqtt5.auto_reconnect.cons.concealing_configuration_related"></a></span><a class="link" href="auto_reconnect.html#mqtt5.auto_reconnect.cons.concealing_configuration_related">Concealing
+        Configuration-Related Issues</a>
+      </h5>
+<p>
+        The <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> will always
+        try to reconnect to the Broker(s) regardless of the reason why the connection
+        was previously closed. This is desirable behaviour when the connection gets
+        dropped due to underlying stream transport issues, such as when a device
+        connected to the network loses its GSM connectivity.
+      </p>
+<p>
+        However, the connection may be closed (or never established) for other reasons,
+        which are typically related to misconfiguration of broker IPs, ports, expired
+        or incorrect TLS, or MQTT-related errors, such as trying to communicate with
+        a Broker that does not support MQTT 5. In these cases, the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> will still
+        endlessly try to connect to the Broker(s), but the connection will never
+        succeed.
+      </p>
+<p>
+        The most challenging problem here is that users of the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> do not get
+        informed in any way that the connection cannot be established. So, if you
+        make a typo in the Broker's IP, run the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a>, and publish
+        some message, the <a class="link" href="ref/boost__mqtt5__mqtt_client/async_publish.html" title="boost::mqtt5::mqtt_client::async_publish"><code class="literal">mqtt_client::async_publish</code></a>
+        callback will never be invoked, and you will not "catch" the error
+        or detect the root cause of the issue.
+      </p>
+<p>
+        The possible alternative approach, where the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> would return
+        something like "unrecoverable error" when you try to publish a
+        message to a misconfigured Broker, would have a terrible consequence if the
+        Broker itself is misconfigured. For example, suppose someone forgets to renew
+        the TLS certificate on the Broker. The connection will be broken in that
+        case, and the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> would report
+        an "unrecoverable error" through the <a class="link" href="ref/boost__mqtt5__mqtt_client/async_publish.html" title="boost::mqtt5::mqtt_client::async_publish"><code class="literal">mqtt_client::async_publish</code></a>
+        method. Now, the expired TLS certificate on the Broker is most probably a
+        temporary issue, so it is natural that the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> would try
+        to reconnect until the certificate gets renewed. But, if the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> stops retrying
+        when it detects such an "unrecoverable error," then the decision
+        of when to reconnect would be left to the user.
+      </p>
+<p>
+        By design, one of the main functional requirements of the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> was to handle
+        reconnection steps automatically and correctly. If the decision for reconnection
+        were left to the user, then the user would need to handle all those error
+        states manually, which would dramatically increase the complexity of the
+        user's code, not to mention how difficult it would be to cover all possible
+        error states.
+      </p>
+<p>
+        The proposed approach for detecting configuration errors in the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> is to use
+        our logging mechanism as described in <a class="link" href="getting_started.html#mqtt5.getting_started.debugging" title="Debugging the Client">Debugging
+        the Client</a>
+      </p>
+<h5>
+<a name="mqtt5.auto_reconnect.cons.h2"></a>
+        <span class="phrase"><a name="mqtt5.auto_reconnect.cons.increased_resource_consumption"></a></span><a class="link" href="auto_reconnect.html#mqtt5.auto_reconnect.cons.increased_resource_consumption">Increased
+        Resource Consumption</a>
+      </h5>
+<p>
+        The <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> is designed
+        to automatically buffer requests that are initiated while it is offline.
+        During extended downtime or when a high volume of requests accumulates, this
+        can lead to an increase in memory usage. This aspect is significant for devices
+        with limited resources, as the growing memory consumption can impact their
+        performance and functionality.
+      </p>
+</div>
+</div>
+<div class="copyright-footer">Copyright © 2023-2025 Mireo<p>
+        Distributed under the Boost Software License, Version 1.0. (See accompanying
+        file LICENSE_1_0.txt or copy at <a href="http://www.boost.org/LICENSE_1_0.txt" target="_top">http://www.boost.org/LICENSE_1_0.txt</a>)
+      </p>
+</div>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="getting_started.html"><img src="../../../../../doc/src/images/prev.png" alt="Prev"></a><a accesskey="u" href="../index.html"><img src="../../../../../doc/src/images/up.png" alt="Up"></a><a accesskey="h" href="../index.html"><img src="../../../../../doc/src/images/home.png" alt="Home"></a><a accesskey="n" href="connection_maintenance.html"><img src="../../../../../doc/src/images/next.png" alt="Next"></a>
+</div>
+</body>
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Reference :: Boost Libraries Documentation</title>
+  <link rel="canonical" href="https://antora.cppalliance.org/master/lib/doc/url/reference.html">
+    <link rel="prev" href="examples/sanitize.html">
+    <link rel="next" href="HelpCard.html">
+  <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../_/css/boostlook.css">
+    <link rel="stylesheet" href="../_/css/site.css">
+    <link rel="stylesheet" href="../_/css/vendor/tabs.css">
+    <script>var uiRootPath = '../_'</script>
+<link rel="icon" href="../_/img/favicons/favicon.ico" type="image/x-icon">
+    <!-- Favicon configuration -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../_/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../_/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../_/img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="../_/img/favicons/site.webmanifest">
+    <link rel="shortcut icon" href="../_/img/favicons/favicon.ico">
+  </head>
+  <body class="article toc2 toc-left">
+    <div class="boostlook">
+  <div id="header">
+    <div id="toc" class="nav-container toc2" data-component="url" data-version="">
+  <aside class="nav">
+    <button class="nav-close"></button>
+    <div class="panels">
+      <div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+      <h3 class="title"><a href="index.html">Boost.URL</a></h3>
+      <ul class="nav-list">
+        <ul class="nav-list">
+        <li class="" data-depth="1">
+            <a class="nav-link" href="quicklook.html">Quick Look</a>
+        </li>
+              <li class="" data-depth="1">
+            <a class="nav-link" href="urls/index.html">URLs</a>
+        </li>
+        <ul class="nav-list">
+        <li class="" data-depth="2">
+            <a class="nav-link" href="urls/parsing.html">Parsing</a>
+        </li>
+              <li class="" data-depth="2">
+            <a class="nav-link" href="urls/containers.html">Containers</a>
+        </li>
+              <li class="" data-depth="2">
+            <a class="nav-link" href="urls/segments.html">Segments</a>
+        </li>
+              <li class="" data-depth="2">
+            <a class="nav-link" href="urls/params.html">Params</a>
+        </li>
+              <li class="" data-depth="2">
+            <a class="nav-link" href="urls/normalization.html">Normalization</a>
+        </li>
+              <li class="" data-depth="2">
+            <a class="nav-link" href="urls/stringtoken.html">String Token</a>
+        </li>
+              <li class="" data-depth="2">
+            <a class="nav-link" href="urls/percent-encoding.html">Percent Encoding</a>
+        </li>
+              <li class="" data-depth="2">
+            <a class="nav-link" href="urls/formatting.html">Formatting</a>
+        </li>
+        </ul>
+        <li class="" data-depth="1">
+            <a class="nav-link" href="grammar/index.html">Customization</a>
+        </li>
+        <ul class="nav-list">
+        <li class="" data-depth="2">
+            <a class="nav-link" href="grammar/rules.html">Parse Rules</a>
+        </li>
+              <li class="" data-depth="2">
+            <a class="nav-link" href="grammar/charset.html">Character Sets</a>
+        </li>
+              <li class="" data-depth="2">
+            <a class="nav-link" href="grammar/combinators.html">Compound Rules</a>
+        </li>
+              <li class="" data-depth="2">
+            <a class="nav-link" href="grammar/range.html">Ranges</a>
+        </li>
+              <li class="" data-depth="2">
+            <a class="nav-link" href="grammar/rfc3986.html">RFC 3986</a>
+        </li>
+        </ul>
+        <li class="" data-depth="1">
+            <span class="nav-text">Examples</span>
+        </li>
+        <ul class="nav-list">
+        <li class="" data-depth="2">
+            <a class="nav-link" href="examples/qrcode.html">QR Code</a>
+        </li>
+              <li class="" data-depth="2">
+            <a class="nav-link" href="examples/finicky.html">Finicky</a>
+        </li>
+              <li class="" data-depth="2">
+            <a class="nav-link" href="examples/mailto.html">mailto URLs</a>
+        </li>
+              <li class="" data-depth="2">
+            <a class="nav-link" href="examples/magnet-link.html">Magnet Link</a>
+        </li>
+              <li class="" data-depth="2">
+            <a class="nav-link" href="examples/file-router.html">File Router</a>
+        </li>
+              <li class="" data-depth="2">
+            <a class="nav-link" href="examples/router.html">Router</a>
+        </li>
+              <li class="" data-depth="2">
+            <a class="nav-link" href="examples/sanitize.html">Sanitizing URLs</a>
+        </li>
+        </ul>
+        <li class=" is-current-page" data-depth="1">
+            <a class="nav-link" href="reference.html">Reference</a>
+        </li>
+              <li class="" data-depth="1">
+            <a class="nav-link" href="HelpCard.html">Help Card</a>
+        </li>
+        </ul>
+  </ul>
+  </nav>
+</div>
+    </div>
+  </aside>
+</div>
+</div>
+  <div id="content">
+    <article class="doc max-width-reset">
+  <div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li>
+      <a href="index.html" aria-label="Home: Boost.URL">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" viewBox="0 -960 960 960" fill="#000000" aria-hidden="true"><path d="M160-120v-480l320-240 320 240v480H560v-280H400v280H160Z"/></svg>
+      </a>
+    </li>
+    <li><a href="reference.html">Reference</a></li>
+  </ul>
+</nav>
+<div class="spirit-nav">
+    <a accesskey="p" href="examples/sanitize.html"><span class="material-symbols-outlined" title="Previous: Sanitizing URLs">arrow_back</span></a>
+    <a accesskey="p" href="HelpCard.html"><span class="material-symbols-outlined" title="Next: Help Card">arrow_forward</span></a>
+</div>
+</div>
+    <h1 class="page">Reference</h1>
+  <table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top" colspan="3"><strong>URL</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Encoding</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Aliases</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Types (1/2)</strong></p>
+<p class="tableblock"><code><a href="reference/boost/urls/authority_view.html" class="xref page">authority_view</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/ignore_case_param.html" class="xref page">ignore_case_param</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/ipv4_address.html" class="xref page">ipv4_address</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/ipv6_address.html" class="xref page">ipv6_address</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/no_value_t.html" class="xref page">no_value_t</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/param.html" class="xref page">param</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/param_pct_view.html" class="xref page">param_pct_view</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/param_view.html" class="xref page">param_view</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/params_base.html" class="xref page">params_base</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/params_encoded_base.html" class="xref page">params_encoded_base</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/params_encoded_ref.html" class="xref page">params_encoded_ref</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/params_encoded_view.html" class="xref page">params_encoded_view</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/params_ref.html" class="xref page">params_ref</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/params_view.html" class="xref page">params_view</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/segments_base.html" class="xref page">segments_base</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/segments_view.html" class="xref page">segments_view</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/segments_encoded_base.html" class="xref page">segments_encoded_base</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Types (2/2)</strong></p>
+<p class="tableblock"><code><a href="reference/boost/urls/segments_encoded_ref.html" class="xref page">segments_encoded_ref</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/segments_encoded_view.html" class="xref page">segments_encoded_view</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/segments_ref.html" class="xref page">segments_ref</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/static_url.html" class="xref page">static_url</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/static_url_base.html" class="xref page">static_url_base</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/url.html" class="xref page">url</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/url_base.html" class="xref page">url_base</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/url_view.html" class="xref page">url_view</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/url_view_base.html" class="xref page">url_view_base</a></code></p>
+<p class="tableblock"><strong>Constants</strong></p>
+<p class="tableblock"><code><a href="reference/boost/urls/error.html" class="xref page">error</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/ignore_case.html" class="xref page">ignore_case</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/host_type.html" class="xref page">host_type</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/no_value.html" class="xref page">no_value</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/scheme.html" class="xref page">scheme</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Functions</strong></p>
+<p class="tableblock"><code><a href="reference/boost/urls/arg.html" class="xref page">arg</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/format-07.html" class="xref page">format</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/format_to-09.html" class="xref page">format_to</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/parse_absolute_uri.html" class="xref page">parse_absolute_uri</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/parse_authority.html" class="xref page">parse_authority</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/parse_origin_form.html" class="xref page">parse_origin_form</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/parse_path.html" class="xref page">parse_path</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/parse_query.html" class="xref page">parse_query</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/parse_relative_ref.html" class="xref page">parse_relative_ref</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/parse_uri.html" class="xref page">parse_uri</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/parse_uri_reference.html" class="xref page">parse_uri_reference</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/resolve.html" class="xref page">resolve</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Functions</strong></p>
+<p class="tableblock"><code><a href="reference/boost/urls/encode-04e.html" class="xref page">encode</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/encoded_size.html" class="xref page">encoded_size</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/make_pct_string_view.html" class="xref page">make_pct_string_view</a></code></p>
+<p class="tableblock"><strong>Types</strong></p>
+<p class="tableblock"><code><a href="reference/boost/urls/decode_view.html" class="xref page">decode_view</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/encoding_opts.html" class="xref page">encoding_opts</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/pct_string_view.html" class="xref page">pct_string_view</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Types</strong></p>
+<p class="tableblock"><code><a href="reference/boost/urls/error_types/errc.html" class="xref page">errc</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/error_types/error_category.html" class="xref page">error_category</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/error_types/error_code.html" class="xref page">error_code</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/error_types/error_condition.html" class="xref page">error_condition</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/error_types/generic_category.html" class="xref page">generic_category</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/optional.html" class="xref page">optional</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/error_types/result.html" class="xref page">result</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/string_view.html" class="xref page">string_view</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/error_types/system_category.html" class="xref page">system_category</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/error_types/system_error.html" class="xref page">system_error</a></code></p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top" colspan="4"><strong>RFC3986</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Grammar</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Grammar</strong></p>
+<p class="tableblock"><code><a href="reference/boost/urls/absolute_uri_rule.html" class="xref page">absolute_uri_rule</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/authority_rule.html" class="xref page">authority_rule</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/gen_delim_chars.html" class="xref page">gen_delim_chars</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/ipv4_address_rule.html" class="xref page">ipv4_address_rule</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/ipv6_address_rule.html" class="xref page">ipv6_address_rule</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/pchars.html" class="xref page">pchars</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/pct_encoded_rule.html" class="xref page">pct_encoded_rule</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/query_rule.html" class="xref page">query_rule</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/relative_ref_rule.html" class="xref page">relative_ref_rule</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/reserved_chars.html" class="xref page">reserved_chars</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/sub_delim_chars.html" class="xref page">sub_delim_chars</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/unreserved_chars.html" class="xref page">unreserved_chars</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/uri_reference_rule.html" class="xref page">uri_reference_rule</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/uri_rule.html" class="xref page">uri_rule</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Functions (1/2)</strong></p>
+<p class="tableblock"><code><a href="reference/boost/urls/grammar/ci_compare.html" class="xref page">ci_compare</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/grammar/ci_digest.html" class="xref page">ci_digest</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/grammar/ci_is_equal-08.html" class="xref page">ci_is_equal</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/grammar/ci_is_less.html" class="xref page">ci_is_less</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/grammar/delim_rule-011.html" class="xref page">delim_rule</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/grammar/find_if.html" class="xref page">find_if</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/grammar/find_if_not.html" class="xref page">find_if_not</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/grammar/hexdig_value.html" class="xref page">hexdig_value</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/grammar/not_empty_rule.html" class="xref page">not_empty_rule</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/grammar/optional_rule.html" class="xref page">optional_rule</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/grammar/parse-0d.html" class="xref page">parse</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/grammar/range_rule-0f.html" class="xref page">range_rule</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/grammar/ref-07.html" class="xref page">ref</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Functions (2/2)</strong></p>
+<p class="tableblock"><code><a href="reference/boost/urls/grammar/squelch.html" class="xref page">squelch</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/grammar/to_lower.html" class="xref page">to_lower</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/grammar/to_upper.html" class="xref page">to_upper</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/grammar/token_rule.html" class="xref page">token_rule</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/grammar/tuple_rule.html" class="xref page">tuple_rule</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/grammar/variant_rule.html" class="xref page">variant_rule</a></code></p>
+<p class="tableblock"><strong>Type Traits</strong></p>
+<p class="tableblock"><code><a href="reference/boost/urls/grammar/is_charset.html" class="xref page">is_charset</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/grammar/is_rule.html" class="xref page">is_rule</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Types</strong></p>
+<p class="tableblock"><code><a href="reference/boost/urls/grammar/aligned_storage.html" class="xref page">aligned_storage</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/grammar/ci_hash.html" class="xref page">ci_hash</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/grammar/ci_equal.html" class="xref page">ci_equal</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/grammar/ci_less.html" class="xref page">ci_less</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/grammar/lut_chars.html" class="xref page">lut_chars</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/grammar/range.html" class="xref page">range</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/grammar/recycled.html" class="xref page">recycled</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/grammar/recycled_ptr.html" class="xref page">recycled_ptr</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/grammar/string_view_base.html" class="xref page">string_view_base</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/grammar/unsigned_rule.html" class="xref page">unsigned_rule</a></code></p>
+<p class="tableblock"><strong>StringToken</strong></p>
+<p class="tableblock"><code><a href="reference/boost/urls/string_token/append_to.html" class="xref page">append_to</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/string_token/arg.html" class="xref page">arg</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/string_token/assign_to.html" class="xref page">assign_to</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/string_token/is_token.html" class="xref page">is_token</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/string_token/preserve_size.html" class="xref page">preserve_size</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/string_token/return_string.html" class="xref page">return_string</a></code></p>
+<p class="tableblock"><strong>Concepts</strong></p>
+<p class="tableblock"><code><a href="reference/boost/urls/string_token/StringToken.html" class="xref page">StringToken</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Constants</strong></p>
+<p class="tableblock"><code><a href="reference/boost/urls/grammar/all_chars.html" class="xref page">all_chars</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/grammar/alnum_chars.html" class="xref page">alnum_chars</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/grammar/alpha_chars.html" class="xref page">alpha_chars</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/grammar/condition.html" class="xref page">condition</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/grammar/dec_octet_rule.html" class="xref page">dec_octet_rule</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/grammar/digit_chars.html" class="xref page">digit_chars</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/grammar/error.html" class="xref page">error</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/grammar/hexdig_chars.html" class="xref page">hexdig_chars</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/grammar/not_empty_rule.html" class="xref page">not_empty_rule</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/grammar/unsigned_rule.html" class="xref page">unsigned_rule</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/grammar/vchars.html" class="xref page">vchars</a></code></p>
+<p class="tableblock"><strong>Enums</strong></p>
+<p class="tableblock"><code><a href="reference/boost/urls/grammar/error.html" class="xref page">error</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/grammar/condition.html" class="xref page">condition</a></code></p>
+<p class="tableblock"><strong>Concepts</strong></p>
+<p class="tableblock"><code><a href="reference/boost/urls/grammar/CharSet.html" class="xref page">CharSet</a></code></p>
+<p class="tableblock"><code><a href="reference/boost/urls/grammar/Rule.html" class="xref page">Rule</a></code></p></td>
+</tr>
+</tbody>
+</table>
+  <div class="edit-this-page">
+      <a href="https://github.com/boostorg/url/edit/develop/doc/modules/ROOT/pages/reference.adoc">Edit this Page</a>
+      </div>
+      <nav class="pagination">
+        <span class="prev"><a href="examples/sanitize.html">Sanitizing URLs</a></span>
+        <span class="next"><a href="HelpCard.html">Help Card</a></span>
+    </nav>
+</article>
+</div>
+  <div id="footer">
+  <script id="site-script" src="../_/js/site.js" data-ui-root-path="../_"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+<script async src="../_/js/vendor/tabs.js" data-sync-storage-key="preferred-tab"></script>
+</div>
+</div>
+  </body>
+</html>

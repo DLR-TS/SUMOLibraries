@@ -1,0 +1,277 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>LoggerType concept</title>
+<link rel="stylesheet" href="../../../../../../doc/src/boostbook.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="../../index.html" title="Chapter 1. Boost.MQTT5: a C++17 MQTT client">
+<link rel="up" href="../../pt02.html" title="Part Two: Reference. ">
+<link rel="prev" href="Authenticator.html" title="Authenticator concept">
+<link rel="next" href="Reason_codes.html" title="Reason codes">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table cellpadding="2" width="100%"><tr>
+<td valign="top"><img alt="Boost C++ Libraries" width="277" height="86" src="../../../../../../boost.png"></td>
+<td align="center"><a href="../../../../../../index.html">Home</a></td>
+<td align="center"><a href="../../../../../../libs/libraries.htm">Libraries</a></td>
+<td align="center"><a href="http://www.boost.org/users/people.html">People</a></td>
+<td align="center"><a href="http://www.boost.org/users/faq.html">FAQ</a></td>
+<td align="center"><a href="../../../../../../more/index.htm">More</a></td>
+</tr></table>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="Authenticator.html"><img src="../../../../../../doc/src/images/prev.png" alt="Prev"></a><a accesskey="u" href="../../pt02.html"><img src="../../../../../../doc/src/images/up.png" alt="Up"></a><a accesskey="h" href="../../index.html"><img src="../../../../../../doc/src/images/home.png" alt="Home"></a><a accesskey="n" href="Reason_codes.html"><img src="../../../../../../doc/src/images/next.png" alt="Next"></a>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="mqtt5.ref.LoggerType"></a><a class="link" href="LoggerType.html" title="LoggerType concept">LoggerType concept</a>
+</h4></div></div></div>
+<p>
+        <code class="computeroutput"><span class="identifier">LoggerType</span></code> represents an
+        object type that will be used by the <a class="link" href="boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> to log events.
+      </p>
+<p>
+        A type satisfies the <code class="computeroutput"><span class="identifier">LoggerType</span></code>
+        concept if it defines <span class="bold"><strong>any number (including zero)</strong></span>
+        of the following functions:
+      </p>
+<div class="informaltable">
+<a name="mqtt5.ref.LoggerType.log_functions"></a><table class="table">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead><tr>
+<th>
+                <p>
+                  Function signature
+                </p>
+              </th>
+<th>
+                <p>
+                  Arguments
+                </p>
+              </th>
+<th>
+                <p>
+                  Description
+                </p>
+              </th>
+</tr></thead>
+<tbody>
+<tr>
+<td>
+                <p>
+                  <code class="computeroutput"><span class="keyword">void</span> <span class="identifier">at_resolve</span><span class="special">(</span><span class="identifier">error_code</span>
+                  <span class="identifier">ec</span><span class="special">,</span>
+                  <span class="identifier">std</span><span class="special">::</span><span class="identifier">string_view</span> <span class="identifier">host</span><span class="special">,</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">string_view</span>
+                  <span class="identifier">port</span><span class="special">,</span>
+                  <span class="keyword">const</span> <span class="identifier">asio</span><span class="special">::</span><span class="identifier">ip</span><span class="special">::</span><span class="identifier">tcp</span><span class="special">::</span><span class="identifier">resolver</span><span class="special">::</span><span class="identifier">results_type</span><span class="special">&amp;</span> <span class="identifier">eps</span><span class="special">);</span></code>
+                </p>
+              </td>
+<td>
+                <p>
+                  <span class="bold"><strong><code class="computeroutput"><span class="identifier">ec</span></code></strong></span>
+                  is the <code class="computeroutput"><span class="identifier">error_code</span></code>
+                  returned by the resolve operation.
+                </p>
+                <p>
+                  <span class="bold"><strong><code class="computeroutput"><span class="identifier">host</span></code></strong></span>
+                  is the hostname used in the resolve.
+                </p>
+                <p>
+                  <span class="bold"><strong><code class="computeroutput"><span class="identifier">port</span></code></strong></span>
+                  is the port used in the resolve.
+                </p>
+                <p>
+                  <span class="bold"><strong><code class="computeroutput"><span class="identifier">eps</span></code></strong></span>
+                  is a list of endpoints returned by the resolve operation.
+                </p>
+              </td>
+<td>
+                <p>
+                  Invoked when the resolve operation is complete.
+                </p>
+              </td>
+</tr>
+<tr>
+<td>
+                <p>
+                  <code class="computeroutput"><span class="keyword">void</span> <span class="identifier">at_tcp_connect</span><span class="special">(</span><span class="identifier">error_code</span>
+                  <span class="identifier">ec</span><span class="special">,</span>
+                  <span class="identifier">asio</span><span class="special">::</span><span class="identifier">ip</span><span class="special">::</span><span class="identifier">tcp</span><span class="special">::</span><span class="identifier">endpoint</span> <span class="identifier">ep</span><span class="special">);</span></code>
+                </p>
+              </td>
+<td>
+                <p>
+                  <span class="bold"><strong><code class="computeroutput"><span class="identifier">ec</span></code></strong></span>
+                  is the <code class="computeroutput"><span class="identifier">error_code</span></code>
+                  returned by the TCP connect operation.
+                </p>
+                <p>
+                  <span class="bold"><strong><code class="computeroutput"><span class="identifier">ep</span></code></strong></span>
+                  is a TCP endpoint used to establish the TCP connection.
+                </p>
+              </td>
+<td>
+                <p>
+                  Invoked when the TCP connect operation is complete.
+                </p>
+              </td>
+</tr>
+<tr>
+<td>
+                <p>
+                  <code class="computeroutput"><span class="keyword">void</span> <span class="identifier">at_tls_handshake</span><span class="special">(</span><span class="identifier">error_code</span>
+                  <span class="identifier">ec</span><span class="special">,</span>
+                  <span class="identifier">asio</span><span class="special">::</span><span class="identifier">ip</span><span class="special">::</span><span class="identifier">tcp</span><span class="special">::</span><span class="identifier">endpoint</span> <span class="identifier">ep</span><span class="special">);</span></code>
+                </p>
+              </td>
+<td>
+                <p>
+                  <span class="bold"><strong><code class="computeroutput"><span class="identifier">ec</span></code></strong></span>
+                  is the <code class="computeroutput"><span class="identifier">error_code</span></code>
+                  returned by the the TLS handshake operation.
+                </p>
+                <p>
+                  <span class="bold"><strong><code class="computeroutput"><span class="identifier">ep</span></code></strong></span>
+                  is a TCP endpoint used to establish the TLS handshake.
+                </p>
+              </td>
+<td>
+                <p>
+                  Invoked when the TLS handshake operation is complete.
+                </p>
+              </td>
+</tr>
+<tr>
+<td>
+                <p>
+                  <code class="computeroutput"><span class="keyword">void</span> <span class="identifier">at_ws_handshake</span><span class="special">(</span><span class="identifier">error_code</span>
+                  <span class="identifier">ec</span><span class="special">,</span>
+                  <span class="identifier">asio</span><span class="special">::</span><span class="identifier">ip</span><span class="special">::</span><span class="identifier">tcp</span><span class="special">::</span><span class="identifier">endpoint</span> <span class="identifier">ep</span><span class="special">);</span></code>
+                </p>
+              </td>
+<td>
+                <p>
+                  <span class="bold"><strong><code class="computeroutput"><span class="identifier">ec</span></code></strong></span>
+                  is the <code class="computeroutput"><span class="identifier">error_code</span></code>
+                  returned by the the WebSocket handshake operation.
+                </p>
+                <p>
+                  <span class="bold"><strong><code class="computeroutput"><span class="identifier">ep</span></code></strong></span>
+                  is a TCP endpoint used to establish the WebSocket handshake.
+                </p>
+              </td>
+<td>
+                <p>
+                  Invoked when the WebSocket handshake operation is complete.
+                </p>
+              </td>
+</tr>
+<tr>
+<td>
+                <p>
+                  <code class="computeroutput"><span class="keyword">void</span> <span class="identifier">at_connack</span><span class="special">(</span><span class="identifier">reason_code</span>
+                  <span class="identifier">rc</span><span class="special">,</span>
+                  <span class="keyword">bool</span> <span class="identifier">session_present</span><span class="special">,</span> <span class="keyword">const</span>
+                  <span class="identifier">connack_props</span><span class="special">&amp;</span>
+                  <span class="identifier">ca_props</span><span class="special">);</span></code>
+                </p>
+              </td>
+<td>
+                <p>
+                  <span class="bold"><strong><code class="computeroutput"><span class="identifier">rc</span></code></strong></span>
+                  is the <code class="computeroutput"><span class="identifier">reason_code</span></code>
+                  received in the <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901074" target="_top"><code class="computeroutput"><span class="identifier">CONNACK</span></code></a> packet indicating
+                  the result of the MQTT handshake.
+                </p>
+                <p>
+                  <span class="bold"><strong><code class="computeroutput"><span class="identifier">session_present</span></code></strong></span>
+                  A flag indicating whether the Broker already has a session associated
+                  with this connection.
+                </p>
+                <p>
+                  <span class="bold"><strong><code class="computeroutput"><span class="identifier">ca_props</span></code></strong></span>
+                  <a class="link" href="connack_props.html" title="CONNACK properties"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">connack_props</span></code></a>
+                  received in the <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901074" target="_top"><code class="computeroutput"><span class="identifier">CONNACK</span></code></a> packet.
+                </p>
+              </td>
+<td>
+                <p>
+                  Invoked when the <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901074" target="_top"><code class="computeroutput"><span class="identifier">CONNACK</span></code></a> packet is received,
+                  marking the completion of the MQTT handshake.
+                </p>
+              </td>
+</tr>
+<tr>
+<td>
+                <p>
+                  <code class="computeroutput"><span class="keyword">void</span> <span class="identifier">at_disconnect</span><span class="special">(</span><span class="identifier">reason_code</span>
+                  <span class="identifier">rc</span><span class="special">,</span>
+                  <span class="keyword">const</span> <span class="identifier">disconnect_props</span><span class="special">&amp;</span> <span class="identifier">dc_props</span><span class="special">);</span></code>
+                </p>
+              </td>
+<td>
+                <p>
+                  <span class="bold"><strong><code class="computeroutput"><span class="identifier">rc</span></code></strong></span>
+                  is the <code class="computeroutput"><span class="identifier">reason_code</span></code>
+                  received in the <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901205" target="_top"><code class="computeroutput"><span class="identifier">DISCONNECT</span></code></a> packet specifying
+                  the reason behind the disconnection.
+                </p>
+                <p>
+                  <span class="bold"><strong><code class="computeroutput"><span class="identifier">dc_props</span></code></strong></span>
+                  <a class="link" href="disconnect_props.html" title="DISCONNECT properties"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">disconnect_props</span></code></a>
+                  received in the <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901205" target="_top"><code class="computeroutput"><span class="identifier">DISCONNECT</span></code></a> packet.
+                </p>
+              </td>
+<td>
+                <p>
+                  Invoked when the <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901205" target="_top"><code class="computeroutput"><span class="identifier">DISCONNECT</span></code></a> packet is
+                  received, indicating that the Broker wants to close this connection.
+                </p>
+              </td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>
+        For example, a type <code class="computeroutput"><span class="identifier">T</span></code> that
+        defines <code class="computeroutput"><span class="identifier">at_connack</span></code> and <code class="computeroutput"><span class="identifier">at_disconnect</span></code> functions with their respective
+        arguments is considered a valid <code class="computeroutput"><span class="identifier">LoggerType</span></code>.
+        This allows you to create your own <code class="computeroutput"><span class="identifier">LoggerType</span></code>
+        classes with functions of interest.
+      </p>
+<p>
+        All defined functions are invoked directly within the <a class="link" href="boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> using its
+        default executor. If the <a class="link" href="boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> is initialized
+        with an explicit or implicit strand, none of the functions will be invoked
+        concurrently.
+      </p>
+<div class="warning"><table border="0" summary="Warning">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[Warning]" src="../../../../../../doc/src/images/warning.png"></td>
+<th align="left">Warning</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+          Defined functions should not block and stop the <a class="link" href="boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> from doing
+          work.
+        </p></td></tr>
+</table></div>
+<p>
+        A class that satifies this concept is <a href="https://github.com/boostorg/mqtt5/blob/master/include/boost/mqtt5/logger.hpp" target="_top">logger</a>.
+      </p>
+</div>
+<div class="copyright-footer">Copyright © 2023-2025 Mireo<p>
+        Distributed under the Boost Software License, Version 1.0. (See accompanying
+        file LICENSE_1_0.txt or copy at <a href="http://www.boost.org/LICENSE_1_0.txt" target="_top">http://www.boost.org/LICENSE_1_0.txt</a>)
+      </p>
+</div>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="Authenticator.html"><img src="../../../../../../doc/src/images/prev.png" alt="Prev"></a><a accesskey="u" href="../../pt02.html"><img src="../../../../../../doc/src/images/up.png" alt="Up"></a><a accesskey="h" href="../../index.html"><img src="../../../../../../doc/src/images/home.png" alt="Home"></a><a accesskey="n" href="Reason_codes.html"><img src="../../../../../../doc/src/images/next.png" alt="Next"></a>
+</div>
+</body>
+</html>

@@ -1,0 +1,3054 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: Boost.Unordered</title>
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../../unordered/_/css/site.css">
+  </head>
+  <body class="article">
+<div class="body">
+<div class="nav-container" data-component="unordered" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../intro.html">Boost.Unordered</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../intro.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../buckets.html">Basics of Hash Tables</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../hash_equality.html">Equality Predicates and Hash Functions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../regular.html">Regular Containers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../concurrent.html">Concurrent Containers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../hash_quality.html">Hash Quality</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../compliance.html">Standard Compliance</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../structures.html">Data Structures</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../debuggability.html">Debuggability</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../benchmarks.html">Benchmarks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../rationale.html">Implementation Rationale</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ref.html">Reference</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_unordered_map_fwd.html"><code>&lt;boost/unordered/unordered_map_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_unordered_map_top.html"><code>&lt;boost/unordered_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_unordered_map.html"><code>&lt;boost/unordered/unordered_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="unordered_map.html"><code>unordered_map</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="unordered_multimap.html"><code>unordered_multimap</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_unordered_set_fwd.html"><code>&lt;boost/unordered/unordered_set_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_unordered_set_top.html"><code>&lt;boost/unordered_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_unordered_set.html"><code>&lt;boost/unordered/unordered_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="unordered_set.html"><code>unordered_set</code></a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="unordered_multiset.html"><code>unordered_multiset</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="hash_traits.html">Hash Traits</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="stats.html">Statistics</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_unordered_flat_map_fwd.html"><code>&lt;boost/unordered/unordered_flat_map_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_unordered_flat_map.html"><code>&lt;boost/unordered/unordered_flat_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="unordered_flat_map.html"><code>unordered_flat_map</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_unordered_flat_set_fwd.html"><code>&lt;boost/unordered/unordered_flat_set_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_unordered_flat_set.html"><code>&lt;boost/unordered/unordered_flat_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="unordered_flat_set.html"><code>unordered_flat_set</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_unordered_node_map_fwd.html"><code>&lt;boost/unordered/unordered_node_map_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_unordered_node_map.html"><code>&lt;boost/unordered/unordered_node_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="unordered_node_map.html"><code>unordered_node_map</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_unordered_node_set_fwd.html"><code>&lt;boost/unordered/unordered_node_set_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_unordered_node_set.html"><code>&lt;boost/unordered/unordered_node_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="unordered_node_set.html"><code>unordered_node_set</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_concurrent_flat_map_fwd.html"><code>&lt;boost/unordered/concurrent_flat_map_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_concurrent_flat_map.html"><code>&lt;boost/unordered/concurrent_flat_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="concurrent_flat_map.html"><code>concurrent_flat_map</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_concurrent_flat_set_fwd.html"><code>&lt;boost/unordered/concurrent_flat_set_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_concurrent_flat_set.html"><code>&lt;boost/unordered/concurrent_flat_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="concurrent_flat_set.html"><code>concurrent_flat_set</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_concurrent_node_map_fwd.html"><code>&lt;boost/unordered/concurrent_node_map_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_concurrent_node_map.html"><code>&lt;boost/unordered/concurrent_node_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="concurrent_node_map.html"><code>concurrent_node_map</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_concurrent_node_set_fwd.html"><code>&lt;boost/unordered/concurrent_node_set_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="header_concurrent_node_set.html"><code>&lt;boost/unordered/concurrent_node_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="concurrent_node_set.html"><code>concurrent_node_set</code></a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../changes.html">Change Log</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../bibliography.html">Bibliography</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../copyright.html">Copyright and License</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../intro.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../intro.html">Boost.Unordered</a></li>
+    <li><a href="../ref.html">Reference</a></li>
+    <li><a href="unordered_multiset.html"><code>unordered_multiset</code></a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1">
+<h2 id="unordered_multiset"><a class="anchor" href="#unordered_multiset"></a>Class Template unordered_multiset</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code>boost::unordered_multiset</code> — An unordered associative container that stores values. The same key can be stored multiple times.</p>
+</div>
+<div class="sect2">
+<h3 id="unordered_multiset_synopsis"><a class="anchor" href="#unordered_multiset_synopsis"></a>Synopsis</h3>
+<div class="listingblock">
+<div class="content">
+<pre>// #include <a href="header_unordered_set.html" class="xref page">&lt;boost/unordered/unordered_set.hpp&gt;</a>
+
+namespace boost {
+namespace unordered {
+
+  template&lt;class Key,
+           class Hash = boost::hash&lt;Key&gt;,
+           class Pred = std::equal_to&lt;Key&gt;,
+           class Allocator = std::allocator&lt;Key&gt;&gt;
+  class unordered_multiset {
+  public:
+    // types
+    using key_type             = Key;
+    using value_type           = Key;
+    using hasher               = Hash;
+    using key_equal            = Pred;
+    using allocator_type       = Allocator;
+    using pointer              = typename std::allocator_traits&lt;Allocator&gt;::pointer;
+    using const_pointer        = typename std::allocator_traits&lt;Allocator&gt;::const_pointer;
+    using reference            = value_type&amp;;
+    using const_reference      = const value_type&amp;;
+    using size_type            = std::size_t;
+    using difference_type      = std::ptrdiff_t;
+
+    using iterator             = <em>implementation-defined</em>;
+    using const_iterator       = <em>implementation-defined</em>;
+    using local_iterator       = <em>implementation-defined</em>;
+    using const_local_iterator = <em>implementation-defined</em>;
+    using node_type            = <em>implementation-defined</em>;
+
+    // construct/copy/destroy
+    <a href="#unordered_multiset_default_constructor">unordered_multiset</a>();
+    explicit <a href="#unordered_multiset_bucket_count_constructor">unordered_multiset</a>(size_type n,
+                                const hasher&amp; hf = hasher(),
+                                const key_equal&amp; eql = key_equal(),
+                                const allocator_type&amp; a = allocator_type());
+    template&lt;class InputIterator&gt;
+      <a href="#unordered_multiset_iterator_range_constructor">unordered_multiset</a>(InputIterator f, InputIterator l,
+                         size_type n = <em>implementation-defined</em>,
+                         const hasher&amp; hf = hasher(),
+                         const key_equal&amp; eql = key_equal(),
+                         const allocator_type&amp; a = allocator_type());
+    <a href="#unordered_multiset_copy_constructor">unordered_multiset</a>(const unordered_multiset&amp; other);
+    <a href="#unordered_multiset_move_constructor">unordered_multiset</a>(unordered_multiset&amp;&amp; other);
+    template&lt;class InputIterator&gt;
+      <a href="#unordered_multiset_iterator_range_constructor_with_allocator">unordered_multiset</a>(InputIterator f, InputIterator l, const allocator_type&amp; a);
+    explicit <a href="#unordered_multiset_allocator_constructor">unordered_multiset</a>(const Allocator&amp; a);
+    <a href="#unordered_multiset_copy_constructor_with_allocator">unordered_multiset</a>(const unordered_multiset&amp; other, const Allocator&amp; a);
+    <a href="#unordered_multiset_move_constructor_with_allocator">unordered_multiset</a>(unordered_multiset&amp;&amp; other, const Allocator&amp; a);
+    <a href="#unordered_multiset_initializer_list_constructor">unordered_multiset</a>(std::initializer_list&lt;value_type&gt; il,
+                       size_type n = <em>implementation-defined</em>,
+                       const hasher&amp; hf = hasher(),
+                       const key_equal&amp; eql = key_equal(),
+                       const allocator_type&amp; a = allocator_type());
+    <a href="#unordered_multiset_bucket_count_constructor_with_allocator">unordered_multiset</a>(size_type n, const allocator_type&amp; a);
+    <a href="#unordered_multiset_bucket_count_constructor_with_hasher_and_allocator">unordered_multiset</a>(size_type n, const hasher&amp; hf, const allocator_type&amp; a);
+    template&lt;class InputIterator&gt;
+      <a href="#unordered_multiset_iterator_range_constructor_with_bucket_count_and_allocator">unordered_multiset</a>(InputIterator f, InputIterator l, size_type n, const allocator_type&amp; a);
+    template&lt;class InputIterator&gt;
+      <a href="#unordered_multiset_iterator_range_constructor_with_bucket_count_and_hasher">unordered_multiset</a>(InputIterator f, InputIterator l, size_type n, const hasher&amp; hf,
+                         const allocator_type&amp; a);
+    <a href="#unordered_multiset_initializer_list_constructor_with_allocator">unordered_multiset</a>(std::initializer_list&lt;value_type&gt; il, const allocator_type&amp; a);
+    <a href="#unordered_multiset_initializer_list_constructor_with_bucket_count_and_allocator">unordered_multiset</a>(std::initializer_list&lt;value_type&gt; il, size_type n,
+                       const allocator_type&amp; a)
+    <a href="#unordered_multiset_initializer_list_constructor_with_bucket_count_and_hasher_and_allocator">unordered_multiset</a>(std::initializer_list&lt;value_type&gt; il, size_type n, const hasher&amp; hf,
+                       const allocator_type&amp; a);
+    <a href="#unordered_multiset_destructor">~unordered_multiset()</a>;
+    unordered_multiset&amp; <a href="#unordered_multiset_copy_assignment">operator=</a>(const unordered_multiset&amp; other);
+    unordered_multiset&amp; <a href="#unordered_multiset_move_assignment">operator=</a>(unordered_multiset&amp;&amp; other)
+      noexcept(boost::allocator_traits&lt;Allocator&gt;::is_always_equal::value &amp;&amp;
+               boost::is_nothrow_move_assignable_v&lt;Hash&gt; &amp;&amp;
+               boost::is_nothrow_move_assignable_v&lt;Pred&gt;);
+    unordered_multiset&amp; <a href="#unordered_multiset_initializer_list_assignment">operator=</a>(std::initializer_list&lt;value_type&gt; il);
+    allocator_type <a href="#unordered_multiset_get_allocator">get_allocator</a>() const noexcept;
+
+    // iterators
+    iterator       <a href="#unordered_multiset_begin">begin</a>() noexcept;
+    const_iterator <a href="#unordered_multiset_begin">begin</a>() const noexcept;
+    iterator       <a href="#unordered_multiset_end">end</a>() noexcept;
+    const_iterator <a href="#unordered_multiset_end">end</a>() const noexcept;
+    const_iterator <a href="#unordered_multiset_cbegin">cbegin</a>() const noexcept;
+    const_iterator <a href="#unordered_multiset_cend">cend</a>() const noexcept;
+
+    // capacity
+    [[nodiscard]] bool <a href="#unordered_multiset_empty">empty</a>() const noexcept;
+    size_type <a href="#unordered_multiset_size">size</a>() const noexcept;
+    size_type <a href="#unordered_multiset_max_size">max_size</a>() const noexcept;
+
+    // modifiers
+    template&lt;class... Args&gt; iterator <a href="#unordered_multiset_emplace">emplace</a>(Args&amp;&amp;... args);
+    template&lt;class... Args&gt; iterator <a href="#unordered_multiset_emplace_hint">emplace_hint</a>(const_iterator position, Args&amp;&amp;... args);
+    iterator <a href="#unordered_multiset_copy_insert">insert</a>(const value_type&amp; obj);
+    iterator <a href="#unordered_multiset_move_insert">insert</a>(value_type&amp;&amp; obj);
+    iterator <a href="#unordered_multiset_copy_insert_with_hint">insert</a>(const_iterator hint, const value_type&amp; obj);
+    iterator <a href="#unordered_multiset_move_insert_with_hint">insert</a>(const_iterator hint, value_type&amp;&amp; obj);
+    template&lt;class InputIterator&gt; void <a href="#unordered_multiset_insert_iterator_range">insert</a>(InputIterator first, InputIterator last);
+    void <a href="#unordered_multiset_insert_initializer_list">insert</a>(std::initializer_list&lt;value_type&gt; il);
+
+    node_type <a href="#unordered_multiset_extract_by_iterator">extract</a>(const_iterator position);
+    node_type <a href="#unordered_multiset_extract_by_value">extract</a>(const key_type&amp; k);
+    template&lt;class K&gt; node_type <a href="#unordered_multiset_extract_by_value">extract</a>(K&amp;&amp; k);
+    iterator <a href="#unordered_multiset_insert_with_node_handle">insert</a>(node_type&amp;&amp; nh);
+    iterator <a href="#unordered_multiset_insert_with_hint_and_node_handle">insert</a>(const_iterator hint, node_type&amp;&amp; nh);
+
+    iterator  <a href="#unordered_multiset_erase_by_position">erase</a>(iterator position);
+    iterator  <a href="#unordered_multiset_erase_by_position">erase</a>(const_iterator position);
+    size_type <a href="#unordered_multiset_erase_by_value">erase</a>(const key_type&amp; k);
+    template&lt;class K&gt; size_type <a href="#unordered_multiset_erase_by_value">erase</a>(K&amp;&amp; x);
+    iterator  <a href="#unordered_multiset_erase_range">erase</a>(const_iterator first, const_iterator last);
+    void      <a href="#unordered_multiset_quick_erase">quick_erase</a>(const_iterator position);
+    void      <a href="#unordered_multiset_erase_return_void">erase_return_void</a>(const_iterator position);
+    void      <a href="#unordered_multiset_swap">swap</a>(unordered_multiset&amp;)
+      noexcept(boost::allocator_traits&lt;Allocator&gt;::is_always_equal::value &amp;&amp;
+               boost::is_nothrow_swappable_v&lt;Hash&gt; &amp;&amp;
+               boost::is_nothrow_swappable_v&lt;Pred&gt;);
+    void      <a href="#unordered_multiset_clear">clear</a>() noexcept;
+
+    template&lt;class H2, class P2&gt;
+      void <a href="#unordered_multiset_merge">merge</a>(unordered_multiset&lt;Key, H2, P2, Allocator&gt;&amp; source);
+    template&lt;class H2, class P2&gt;
+      void <a href="#unordered_multiset_merge">merge</a>(unordered_multiset&lt;Key, H2, P2, Allocator&gt;&amp;&amp; source);
+    template&lt;class H2, class P2&gt;
+      void <a href="#unordered_multiset_merge">merge</a>(unordered_set&lt;Key, H2, P2, Allocator&gt;&amp; source);
+    template&lt;class H2, class P2&gt;
+      void <a href="#unordered_multiset_merge">merge</a>(unordered_set&lt;Key, H2, P2, Allocator&gt;&amp;&amp; source);
+
+    // observers
+    hasher <a href="#unordered_multiset_hash_function">hash_function</a>() const;
+    key_equal <a href="#unordered_multiset_key_eq">key_eq</a>() const;
+
+    // set operations
+    iterator         <a href="#unordered_multiset_find">find</a>(const key_type&amp; k);
+    const_iterator   <a href="#unordered_multiset_find">find</a>(const key_type&amp; k) const;
+    template&lt;class K&gt;
+      iterator       <a href="#unordered_multiset_find">find</a>(const K&amp; k);
+    template&lt;class K&gt;
+      const_iterator <a href="#unordered_multiset_find">find</a>(const K&amp; k) const;
+    template&lt;typename CompatibleKey, typename CompatibleHash, typename CompatiblePredicate&gt;
+      iterator       <a href="#unordered_multiset_find">find</a>(CompatibleKey const&amp;, CompatibleHash const&amp;,
+                          CompatiblePredicate const&amp;);
+    template&lt;typename CompatibleKey, typename CompatibleHash, typename CompatiblePredicate&gt;
+      const_iterator  <a href="#unordered_multiset_find">find</a>(CompatibleKey const&amp;, CompatibleHash const&amp;,
+                           CompatiblePredicate const&amp;) const;
+    size_type        <a href="#unordered_multiset_count">count</a>(const key_type&amp; k) const;
+    template&lt;class K&gt;
+      size_type      <a href="#unordered_multiset_count">count</a>(const K&amp; k) const;
+    bool             <a href="#unordered_multiset_contains">contains</a>(const key_type&amp; k) const;
+    template&lt;class K&gt;
+      bool           <a href="#unordered_multiset_contains">contains</a>(const K&amp; k) const;
+    std::pair&lt;iterator, iterator&gt;               <a href="#unordered_multiset_equal_range">equal_range</a>(const key_type&amp; k);
+    std::pair&lt;const_iterator, const_iterator&gt;   <a href="#unordered_multiset_equal_range">equal_range</a>(const key_type&amp; k) const;
+    template&lt;class K&gt;
+      std::pair&lt;iterator, iterator&gt;             <a href="#unordered_multiset_equal_range">equal_range</a>(const K&amp; k);
+    template&lt;class K&gt;
+      std::pair&lt;const_iterator, const_iterator&gt; <a href="#unordered_multiset_equal_range">equal_range</a>(const K&amp; k) const;
+
+    // bucket interface
+    size_type <a href="#unordered_multiset_bucket_count">bucket_count</a>() const noexcept;
+    size_type <a href="#unordered_multiset_max_bucket_count">max_bucket_count</a>() const noexcept;
+    size_type <a href="#unordered_multiset_bucket_size">bucket_size</a>(size_type n) const;
+    size_type <a href="#unordered_multiset_bucket">bucket</a>(const key_type&amp; k) const;
+    template&lt;class K&gt; size_type <a href="#unordered_multiset_bucket">bucket</a>(const K&amp; k) const;
+    local_iterator <a href="#unordered_multiset_begin_2">begin</a>(size_type n);
+    const_local_iterator <a href="#unordered_multiset_begin_2">begin</a>(size_type n) const;
+    local_iterator <a href="#unordered_multiset_end_2">end</a>(size_type n);
+    const_local_iterator <a href="#unordered_multiset_end_2">end</a>(size_type n) const;
+    const_local_iterator <a href="#unordered_multiset_cbegin_2">cbegin</a>(size_type n) const;
+    const_local_iterator <a href="#unordered_multiset_cend_2">cend</a>(size_type n) const;
+
+    // hash policy
+    float <a href="#unordered_multiset_load_factor">load_factor</a>() const noexcept;
+    float <a href="#unordered_multiset_max_load_factor">max_load_factor</a>() const noexcept;
+    void <a href="#unordered_multiset_set_max_load_factor">max_load_factor</a>(float z);
+    void <a href="#unordered_multiset_rehash">rehash</a>(size_type n);
+    void <a href="#unordered_multiset_reserve">reserve</a>(size_type n);
+  };
+
+  // Deduction Guides
+  template&lt;class InputIterator,
+           class Hash = boost::hash&lt;<a href="#unordered_multiset_iter_value_type"><em>iter-value-type</em></a>&lt;InputIterator&gt;&gt;,
+           class Pred = std::equal_to&lt;<a href="#unordered_multiset_iter_value_type"><em>iter-value-type</em></a>&lt;InputIterator&gt;&gt;,
+           class Allocator = std::allocator&lt;<a href="#unordered_multiset_iter_value_type"><em>iter-value-type</em></a>&lt;InputIterator&gt;&gt;&gt;
+    unordered_multiset(InputIterator, InputIterator, typename <a href="#unordered_multiset_deduction_guides"><em>see below</em></a>::size_type = <a href="#unordered_multiset_deduction_guides"><em>see below</em></a>,
+                       Hash = Hash(), Pred = Pred(), Allocator = Allocator())
+      -&gt; unordered_multiset&lt;<a href="#unordered_multiset_iter_value_type"><em>iter-value-type</em></a>&lt;InputIterator&gt;, Hash, Pred, Allocator&gt;;
+
+  template&lt;class T, class Hash = boost::hash&lt;T&gt;, class Pred = std::equal_to&lt;T&gt;,
+           class Allocator = std::allocator&lt;T&gt;&gt;
+    unordered_multiset(std::initializer_list&lt;T&gt;, typename <a href="#unordered_multiset_deduction_guides"><em>see below</em></a>::size_type = <a href="#unordered_multiset_deduction_guides"><em>see below</em></a>,
+                       Hash = Hash(), Pred = Pred(), Allocator = Allocator())
+      -&gt; unordered_multiset&lt;T, Hash, Pred, Allocator&gt;;
+
+  template&lt;class InputIterator, class Allocator&gt;
+    unordered_multiset(InputIterator, InputIterator, typename <a href="#unordered_multiset_deduction_guides"><em>see below</em></a>::size_type, Allocator)
+      -&gt; unordered_multiset&lt;<a href="#unordered_multiset_iter_value_type"><em>iter-value-type</em></a>&lt;InputIterator&gt;,
+                            boost::hash&lt;<a href="#unordered_multiset_iter_value_type"><em>iter-value-type</em></a>&lt;InputIterator&gt;&gt;,
+                            std::equal_to&lt;<a href="#unordered_multiset_iter_value_type"><em>iter-value-type</em></a>&lt;InputIterator&gt;&gt;, Allocator&gt;;
+
+  template&lt;class InputIterator, class Allocator&gt;
+    unordered_multiset(InputIterator, InputIterator, Allocator)
+      -&gt; unordered_multiset&lt;<a href="#unordered_multiset_iter_value_type"><em>iter-value-type</em></a>&lt;InputIterator&gt;,
+                            boost::hash&lt;<a href="#unordered_multiset_iter_value_type"><em>iter-value-type</em></a>&lt;InputIterator&gt;&gt;,
+                            std::equal_to&lt;<a href="#unordered_multiset_iter_value_type"><em>iter-value-type</em></a>&lt;InputIterator&gt;&gt;, Allocator&gt;;
+
+  template&lt;class InputIterator, class Hash, class Allocator&gt;
+    unordered_multiset(InputIterator, InputIterator, typename <a href="#unordered_multiset_deduction_guides"><em>see below</em></a>::size_type, Hash,
+                       Allocator)
+      -&gt; unordered_multiset&lt;<a href="#unordered_multiset_iter_value_type"><em>iter-value-type</em></a>&lt;InputIterator&gt;, Hash,
+                            std::equal_to&lt;<a href="#unordered_multiset_iter_value_type"><em>iter-value-type</em></a>&lt;InputIterator&gt;&gt;, Allocator&gt;;
+
+  template&lt;class T, class Allocator&gt;
+    unordered_multiset(std::initializer_list&lt;T&gt;, typename <a href="#unordered_multiset_deduction_guides"><em>see below</em></a>::size_type, Allocator)
+      -&gt; unordered_multiset&lt;T, boost::hash&lt;T&gt;, std::equal_to&lt;T&gt;, Allocator&gt;;
+
+  template&lt;class T, class Allocator&gt;
+    unordered_multiset(std::initializer_list&lt;T&gt;, Allocator)
+      -&gt; unordered_multiset&lt;T, boost::hash&lt;T&gt;, std::equal_to&lt;T&gt;, Allocator&gt;;
+
+  template&lt;class T, class Hash, class Allocator&gt;
+    unordered_multiset(std::initializer_list&lt;T&gt;, typename <a href="#unordered_multiset_deduction_guides"><em>see below</em></a>::size_type, Hash, Allocator)
+      -&gt; unordered_multiset&lt;T, Hash, std::equal_to&lt;T&gt;, Allocator&gt;;
+
+} // namespace unordered
+} // namespace boost</pre>
+</div>
+</div>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="unordered_multiset_description"><a class="anchor" href="#unordered_multiset_description"></a>Description</h3>
+<div class="paragraph">
+<p><strong>Template Parameters</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Key</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Key</code> must be <a href="https://en.cppreference.com/w/cpp/named_req/Erasable" target="_blank" rel="noopener">Erasable</a> from the container (i.e. <code>allocator_traits</code> can destroy it).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Hash</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A unary function object type that acts a hash function for a <code>Key</code>. It takes a single argument of type <code>Key</code> and returns a value of type <code>std::size_t</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Pred</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A binary function object that implements an equivalence relation on values of type <code>Key</code>. A binary function object that induces an equivalence relation on values of type <code>Key</code>. It takes two arguments of type <code>Key</code> and returns a value of type bool.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Allocator</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An allocator whose value type is the same as the container&#8217;s value type.
+Allocators using <a href="https://en.cppreference.com/w/cpp/named_req/Allocator#Fancy_pointers">fancy pointers</a> are supported.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The elements are organized into buckets. Keys with the same hash code are stored in the same bucket and elements with equivalent keys are stored next to each other.</p>
+</div>
+<div class="paragraph">
+<p>The number of buckets can be automatically increased by a call to insert, or as the result of calling rehash.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="unordered_multiset_configuration_macros"><a class="anchor" href="#unordered_multiset_configuration_macros"></a>Configuration macros</h3>
+<div class="sect3">
+<h4 id="unordered_multiset_boost_unordered_enable_serialization_compatibility_v0"><a class="anchor" href="#unordered_multiset_boost_unordered_enable_serialization_compatibility_v0"></a><code>BOOST_UNORDERED_ENABLE_SERIALIZATION_COMPATIBILITY_V0</code></h4>
+<div class="paragraph">
+<p>Globally define this macro to support loading of <code>unordered_multiset</code>s saved to
+a Boost.Serialization archive with a version of Boost prior to Boost 1.84.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="unordered_multiset_typedefs"><a class="anchor" href="#unordered_multiset_typedefs"></a>Typedefs</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">typedef <em>implementation-defined</em> iterator;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A constant iterator whose value type is <code>value_type</code>.</p>
+</div>
+<div class="paragraph">
+<p>The iterator category is at least a forward iterator.</p>
+</div>
+<div class="paragraph">
+<p>Convertible to <code>const_iterator</code>.</p>
+</div>
+<hr>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">typedef <em>implementation-defined</em> const_iterator;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A constant iterator whose value type is <code>value_type</code>.</p>
+</div>
+<div class="paragraph">
+<p>The iterator category is at least a forward iterator.</p>
+</div>
+<hr>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">typedef <em>implementation-defined</em> local_iterator;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>An iterator with the same value type, difference type and pointer and reference type as iterator.</p>
+</div>
+<div class="paragraph">
+<p>A <code>local_iterator</code> object can be used to iterate through a single bucket.</p>
+</div>
+<hr>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">typedef <em>implementation-defined</em> const_local_iterator;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A constant iterator with the same value type, difference type and pointer and reference type as const_iterator.</p>
+</div>
+<div class="paragraph">
+<p>A const_local_iterator object can be used to iterate through a single bucket.</p>
+</div>
+<hr>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">typedef <em>implementation-defined</em> node_type;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>See node_handle_set for details.</p>
+</div>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="unordered_multiset_constructors"><a class="anchor" href="#unordered_multiset_constructors"></a>Constructors</h3>
+<div class="sect3">
+<h4 id="unordered_multiset_default_constructor"><a class="anchor" href="#unordered_multiset_default_constructor"></a>Default Constructor</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">unordered_multiset();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Constructs an empty container using <code>hasher()</code> as the hash function,
+<code>key_equal()</code> as the key equality predicate, <code>allocator_type()</code> as the allocator
+and a maximum load factor of <code>1.0</code>.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Postconditions:
+</td>
+<td class="hdlist2">
+<p><code>size() == 0</code></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p>If the defaults are used, <code>hasher</code>, <code>key_equal</code> and <code>allocator_type</code> need to be <a href="https://en.cppreference.com/w/cpp/named_req/DefaultConstructible" target="_blank" rel="noopener">DefaultConstructible</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_bucket_count_constructor"><a class="anchor" href="#unordered_multiset_bucket_count_constructor"></a>Bucket Count Constructor</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">explicit unordered_multiset(size_type n,
+                            const hasher&amp; hf = hasher(),
+                            const key_equal&amp; eql = key_equal(),
+                            const allocator_type&amp; a = allocator_type());</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Constructs an empty container with at least <code>n</code> buckets, using <code>hf</code> as the hash
+function, <code>eql</code> as the key equality predicate, <code>a</code> as the allocator and a maximum
+load factor of <code>1.0</code>.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Postconditions:
+</td>
+<td class="hdlist2">
+<p><code>size() == 0</code></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p>If the defaults are used, <code>hasher</code>, <code>key_equal</code> and <code>allocator_type</code> need to be <a href="https://en.cppreference.com/w/cpp/named_req/DefaultConstructible" target="_blank" rel="noopener">DefaultConstructible</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_iterator_range_constructor"><a class="anchor" href="#unordered_multiset_iterator_range_constructor"></a>Iterator Range Constructor</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class InputIterator&gt;
+  unordered_multiset(InputIterator f, InputIterator l,
+                     size_type n = <em>implementation-defined</em>,
+                     const hasher&amp; hf = hasher(),
+                     const key_equal&amp; eql = key_equal(),
+                     const allocator_type&amp; a = allocator_type());</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Constructs an empty container with at least <code>n</code> buckets, using <code>hf</code> as the hash function, <code>eql</code> as the key equality predicate, <code>a</code> as the allocator and a maximum load factor of <code>1.0</code> and inserts the elements from <code>[f, l)</code> into it.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p>If the defaults are used, <code>hasher</code>, <code>key_equal</code> and <code>allocator_type</code> need to be <a href="https://en.cppreference.com/w/cpp/named_req/DefaultConstructible" target="_blank" rel="noopener">DefaultConstructible</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_copy_constructor"><a class="anchor" href="#unordered_multiset_copy_constructor"></a>Copy Constructor</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">unordered_multiset(const unordered_multiset&amp; other);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The copy constructor. Copies the contained elements, hash function, predicate, maximum load factor and allocator.</p>
+</div>
+<div class="paragraph">
+<p>If <code>Allocator::select_on_container_copy_construction</code> exists and has the right signature, the allocator will be constructed from its result.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>value_type</code> is copy constructible</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_move_constructor"><a class="anchor" href="#unordered_multiset_move_constructor"></a>Move Constructor</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">unordered_multiset(unordered_multiset&amp;&amp; other);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The move constructor.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>This is implemented using Boost.Move.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>value_type</code> is move-constructible.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_iterator_range_constructor_with_allocator"><a class="anchor" href="#unordered_multiset_iterator_range_constructor_with_allocator"></a>Iterator Range Constructor with Allocator</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class InputIterator&gt;
+  unordered_multiset(InputIterator f, InputIterator l, const allocator_type&amp; a);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Constructs an empty container using <code>a</code> as the allocator, with the default hash function and key equality predicate and a maximum load factor of <code>1.0</code> and inserts the elements from <code>[f, l)</code> into it.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>hasher</code>, <code>key_equal</code> need to be <a href="https://en.cppreference.com/w/cpp/named_req/DefaultConstructible" target="_blank" rel="noopener">DefaultConstructible</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_allocator_constructor"><a class="anchor" href="#unordered_multiset_allocator_constructor"></a>Allocator Constructor</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">explicit unordered_multiset(const Allocator&amp; a);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Constructs an empty container, using allocator <code>a</code>.</p>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_copy_constructor_with_allocator"><a class="anchor" href="#unordered_multiset_copy_constructor_with_allocator"></a>Copy Constructor with Allocator</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">unordered_multiset(const unordered_multiset&amp; other, const Allocator&amp; a);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Constructs an container, copying <code>other</code>'s contained elements, hash function, predicate, maximum load factor, but using allocator <code>a</code>.</p>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_move_constructor_with_allocator"><a class="anchor" href="#unordered_multiset_move_constructor_with_allocator"></a>Move Constructor with Allocator</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">unordered_multiset(unordered_multiset&amp;&amp; other, const Allocator&amp; a);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Construct a container moving <code>other</code>'s contained elements, and having the hash function, predicate and maximum load factor, but using allocate <code>a</code>.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>This is implemented using Boost.Move.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>value_type</code> is move insertable.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_initializer_list_constructor"><a class="anchor" href="#unordered_multiset_initializer_list_constructor"></a>Initializer List Constructor</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">unordered_multiset(std::initializer_list&lt;value_type&gt; il,
+                   size_type n = <em>implementation-defined</em>,
+                   const hasher&amp; hf = hasher(),
+                   const key_equal&amp; eql = key_equal(),
+                   const allocator_type&amp; a = allocator_type());</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Constructs an empty container with at least <code>n</code> buckets, using <code>hf</code> as the hash function, <code>eql</code> as the key equality predicate, <code>a</code> as the allocator and a maximum load factor of <code>1.0</code> and inserts the elements from <code>il</code> into it.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p>If the defaults are used, <code>hasher</code>, <code>key_equal</code> and <code>allocator_type</code> need to be <a href="https://en.cppreference.com/w/cpp/named_req/DefaultConstructible" target="_blank" rel="noopener">DefaultConstructible</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_bucket_count_constructor_with_allocator"><a class="anchor" href="#unordered_multiset_bucket_count_constructor_with_allocator"></a>Bucket Count Constructor with Allocator</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">unordered_multiset(size_type n, const allocator_type&amp; a);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Constructs an empty container with at least <code>n</code> buckets, using <code>hf</code> as the hash function, the default hash function and key equality predicate, <code>a</code> as the allocator and a maximum load factor of <code>1.0</code>.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Postconditions:
+</td>
+<td class="hdlist2">
+<p><code>size() == 0</code></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>hasher</code> and <code>key_equal</code> need to be <a href="https://en.cppreference.com/w/cpp/named_req/DefaultConstructible" target="_blank" rel="noopener">DefaultConstructible</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_bucket_count_constructor_with_hasher_and_allocator"><a class="anchor" href="#unordered_multiset_bucket_count_constructor_with_hasher_and_allocator"></a>Bucket Count Constructor with Hasher and Allocator</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">unordered_multiset(size_type n, const hasher&amp; hf, const allocator_type&amp; a);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Constructs an empty container with at least <code>n</code> buckets, using <code>hf</code> as the hash function, the default key equality predicate, <code>a</code> as the allocator and a maximum load factor of <code>1.0</code>.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Postconditions:
+</td>
+<td class="hdlist2">
+<p><code>size() == 0</code></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>key_equal</code> needs to be <a href="https://en.cppreference.com/w/cpp/named_req/DefaultConstructible" target="_blank" rel="noopener">DefaultConstructible</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_iterator_range_constructor_with_bucket_count_and_allocator"><a class="anchor" href="#unordered_multiset_iterator_range_constructor_with_bucket_count_and_allocator"></a>Iterator Range Constructor with Bucket Count and Allocator</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class InputIterator&gt;
+  unordered_multiset(InputIterator f, InputIterator l, size_type n, const allocator_type&amp; a);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Constructs an empty container with at least <code>n</code> buckets, using <code>a</code> as the allocator, with the default hash function and key equality predicate and a maximum load factor of <code>1.0</code> and inserts the elements from <code>[f, l)</code> into it.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>hasher</code>, <code>key_equal</code> need to be <a href="https://en.cppreference.com/w/cpp/named_req/DefaultConstructible" target="_blank" rel="noopener">DefaultConstructible</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_iterator_range_constructor_with_bucket_count_and_hasher"><a class="anchor" href="#unordered_multiset_iterator_range_constructor_with_bucket_count_and_hasher"></a>Iterator Range Constructor with Bucket Count and Hasher</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class InputIterator&gt;
+  unordered_multiset(InputIterator f, InputIterator l, size_type n, const hasher&amp; hf,
+                     const allocator_type&amp; a);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Constructs an empty container with at least <code>n</code> buckets, using <code>hf</code> as the hash function, <code>a</code> as the allocator, with the default key equality predicate and a maximum load factor of <code>1.0</code> and inserts the elements from <code>[f, l)</code> into it.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>key_equal</code> needs to be <a href="https://en.cppreference.com/w/cpp/named_req/DefaultConstructible" target="_blank" rel="noopener">DefaultConstructible</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_initializer_list_constructor_with_allocator"><a class="anchor" href="#unordered_multiset_initializer_list_constructor_with_allocator"></a>initializer_list Constructor with Allocator</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">unordered_multiset(std::initializer_list&lt;value_type&gt; il, const allocator_type&amp; a);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Constructs an empty container using <code>a</code> as the allocator and a maximum load factor of 1.0 and inserts the elements from <code>il</code> into it.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>hasher</code> and <code>key_equal</code> need to be <a href="https://en.cppreference.com/w/cpp/named_req/DefaultConstructible" target="_blank" rel="noopener">DefaultConstructible</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_initializer_list_constructor_with_bucket_count_and_allocator"><a class="anchor" href="#unordered_multiset_initializer_list_constructor_with_bucket_count_and_allocator"></a>initializer_list Constructor with Bucket Count and Allocator</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">unordered_multiset(std::initializer_list&lt;value_type&gt; il, size_type n, const allocator_type&amp; a)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Constructs an empty container with at least <code>n</code> buckets, using <code>a</code> as the allocator and a maximum load factor of 1.0 and inserts the elements from <code>il</code> into it.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>hasher</code> and <code>key_equal</code> need to be <a href="https://en.cppreference.com/w/cpp/named_req/DefaultConstructible" target="_blank" rel="noopener">DefaultConstructible</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_initializer_list_constructor_with_bucket_count_and_hasher_and_allocator"><a class="anchor" href="#unordered_multiset_initializer_list_constructor_with_bucket_count_and_hasher_and_allocator"></a>initializer_list Constructor with Bucket Count and Hasher and Allocator</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">    unordered_multiset(std::initializer_list&lt;value_type&gt; il, size_type n, const hasher&amp; hf,
+                       const allocator_type&amp; a);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Constructs an empty container with at least <code>n</code> buckets, using <code>hf</code> as the hash function, <code>a</code> as the allocator and a maximum load factor of 1.0 and inserts the elements from <code>il</code> into it.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>key_equal</code> needs to be <a href="https://en.cppreference.com/w/cpp/named_req/DefaultConstructible" target="_blank" rel="noopener">DefaultConstructible</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect2">
+<h3 id="unordered_multiset_destructor"><a class="anchor" href="#unordered_multiset_destructor"></a>Destructor</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">~unordered_multiset();</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Note:
+</td>
+<td class="hdlist2">
+<p>The destructor is applied to every element, and all memory is deallocated</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="unordered_multiset_assignment"><a class="anchor" href="#unordered_multiset_assignment"></a>Assignment</h3>
+<div class="sect3">
+<h4 id="unordered_multiset_copy_assignment"><a class="anchor" href="#unordered_multiset_copy_assignment"></a>Copy Assignment</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">unordered_multiset&amp; operator=(const unordered_multiset&amp; other);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The assignment operator. Copies the contained elements, hash function, predicate and maximum load factor but not the allocator.</p>
+</div>
+<div class="paragraph">
+<p>If <code>Alloc::propagate_on_container_copy_assignment</code> exists and <code>Alloc::propagate_on_container_copy_assignment::value</code> is <code>true</code>, the allocator is overwritten, if not the copied elements are created using the existing allocator.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>value_type</code> is copy constructible</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_move_assignment"><a class="anchor" href="#unordered_multiset_move_assignment"></a>Move Assignment</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">unordered_multiset&amp; operator=(unordered_multiset&amp;&amp; other)
+  noexcept(boost::allocator_traits&lt;Allocator&gt;::is_always_equal::value &amp;&amp;
+           boost::is_nothrow_move_assignable_v&lt;Hash&gt; &amp;&amp;
+           boost::is_nothrow_move_assignable_v&lt;Pred&gt;);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The move assignment operator.</p>
+</div>
+<div class="paragraph">
+<p>If <code>Alloc::propagate_on_container_move_assignment</code> exists and <code>Alloc::propagate_on_container_move_assignment::value</code> is <code>true</code>, the allocator is overwritten, if not the moved elements are created using the existing allocator.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>value_type</code> is move constructible.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_initializer_list_assignment"><a class="anchor" href="#unordered_multiset_initializer_list_assignment"></a>Initializer List Assignment</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">unordered_multiset&amp; operator=(std::initializer_list&lt;value_type&gt; il);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Assign from values in initializer list. All existing elements are either overwritten by the new elements or destroyed.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>value_type</code> is <a href="https://en.cppreference.com/w/cpp/named_req/CopyInsertable" target="_blank" rel="noopener">CopyInsertable</a> into the container and <a href="https://en.cppreference.com/w/cpp/named_req/CopyAssignable" target="_blank" rel="noopener">CopyAssignable</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect2">
+<h3 id="unordered_multiset_iterators"><a class="anchor" href="#unordered_multiset_iterators"></a>Iterators</h3>
+<div class="sect3">
+<h4 id="unordered_multiset_begin"><a class="anchor" href="#unordered_multiset_begin"></a>begin</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">iterator       begin() noexcept;
+const_iterator begin() const noexcept;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>An iterator referring to the first element of the container, or if the container is empty the past-the-end value for the container.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_end"><a class="anchor" href="#unordered_multiset_end"></a>end</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">iterator       end() noexcept;
+const_iterator end() const noexcept;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>An iterator which refers to the past-the-end value for the container.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_cbegin"><a class="anchor" href="#unordered_multiset_cbegin"></a>cbegin</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">const_iterator cbegin() const noexcept;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>A <code>const_iterator</code> referring to the first element of the container, or if the container is empty the past-the-end value for the container.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_cend"><a class="anchor" href="#unordered_multiset_cend"></a>cend</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">const_iterator cend() const noexcept;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>A <code>const_iterator</code> which refers to the past-the-end value for the container.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect2">
+<h3 id="unordered_multiset_size_and_capacity"><a class="anchor" href="#unordered_multiset_size_and_capacity"></a>Size and Capacity</h3>
+<div class="sect3">
+<h4 id="unordered_multiset_empty"><a class="anchor" href="#unordered_multiset_empty"></a>empty</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">[[nodiscard]] bool empty() const noexcept;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p><code>size() == 0</code></p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_size"><a class="anchor" href="#unordered_multiset_size"></a>size</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">size_type size() const noexcept;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p><code>std::distance(begin(), end())</code></p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_max_size"><a class="anchor" href="#unordered_multiset_max_size"></a>max_size</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">size_type max_size() const noexcept;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p><code>size()</code> of the largest possible container.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect2">
+<h3 id="unordered_multiset_modifiers"><a class="anchor" href="#unordered_multiset_modifiers"></a>Modifiers</h3>
+<div class="sect3">
+<h4 id="unordered_multiset_emplace"><a class="anchor" href="#unordered_multiset_emplace"></a>emplace</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class... Args&gt; iterator emplace(Args&amp;&amp;... args);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Inserts an object, constructed with the arguments args, in the container.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>value_type</code> is <a href="https://en.cppreference.com/w/cpp/named_req/EmplaceConstructible" target="_blank" rel="noopener">EmplaceConstructible</a> into <code>X</code> from <code>args</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>An iterator pointing to the inserted element.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>If an exception is thrown by an operation other than a call to <code>hasher</code> the function has no effect.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>Can invalidate iterators, but only if the insert causes the load factor to be greater to or equal to the maximum load factor.<br></p>
+<div class="paragraph">
+<p>Pointers and references to elements are never invalidated.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_emplace_hint"><a class="anchor" href="#unordered_multiset_emplace_hint"></a>emplace_hint</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class... Args&gt; iterator emplace_hint(const_iterator position, Args&amp;&amp;... args);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Inserts an object, constructed with the arguments args, in the container.</p>
+</div>
+<div class="paragraph">
+<p><code>hint</code> is a suggestion to where the element should be inserted.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>value_type</code> is <a href="https://en.cppreference.com/w/cpp/named_req/EmplaceConstructible" target="_blank" rel="noopener">EmplaceConstructible</a> into <code>X</code> from <code>args</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>An iterator pointing to the inserted element.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>If an exception is thrown by an operation other than a call to <code>hasher</code> the function has no effect.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>The standard is fairly vague on the meaning of the hint. But the only practical way to use it, and the only way that Boost.Unordered supports is to point to an existing element with the same key.<br></p>
+<div class="paragraph">
+<p>Can invalidate iterators, but only if the insert causes the load factor to be greater to or equal to the maximum load factor.<br></p>
+</div>
+<div class="paragraph">
+<p>Pointers and references to elements are never invalidated.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_copy_insert"><a class="anchor" href="#unordered_multiset_copy_insert"></a>Copy Insert</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">iterator insert(const value_type&amp; obj);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Inserts <code>obj</code> in the container.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>value_type</code> is <a href="https://en.cppreference.com/w/cpp/named_req/CopyInsertable" target="_blank" rel="noopener">CopyInsertable</a>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>An iterator pointing to the inserted element.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>If an exception is thrown by an operation other than a call to <code>hasher</code> the function has no effect.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>Can invalidate iterators, but only if the insert causes the load factor to be greater to or equal to the maximum load factor.<br></p>
+<div class="paragraph">
+<p>Pointers and references to elements are never invalidated.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_move_insert"><a class="anchor" href="#unordered_multiset_move_insert"></a>Move Insert</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">iterator insert(value_type&amp;&amp; obj);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Inserts <code>obj</code> in the container.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>value_type</code> is <a href="https://en.cppreference.com/w/cpp/named_req/MoveInsertable" target="_blank" rel="noopener">MoveInsertable</a>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>An iterator pointing to the inserted element.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>If an exception is thrown by an operation other than a call to <code>hasher</code> the function has no effect.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>Can invalidate iterators, but only if the insert causes the load factor to be greater to or equal to the maximum load factor.<br></p>
+<div class="paragraph">
+<p>Pointers and references to elements are never invalidated.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_copy_insert_with_hint"><a class="anchor" href="#unordered_multiset_copy_insert_with_hint"></a>Copy Insert with Hint</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">iterator insert(const_iterator hint, const value_type&amp; obj);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Inserts <code>obj</code> in the container.</p>
+</div>
+<div class="paragraph">
+<p><code>hint</code> is a suggestion to where the element should be inserted.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>value_type</code> is <a href="https://en.cppreference.com/w/cpp/named_req/CopyInsertable" target="_blank" rel="noopener">CopyInsertable</a>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>An iterator pointing to the inserted element.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>If an exception is thrown by an operation other than a call to <code>hasher</code> the function has no effect.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>The standard is fairly vague on the meaning of the hint. But the only practical way to use it, and the only way that Boost.Unordered supports is to point to an existing element with the same key.<br></p>
+<div class="paragraph">
+<p>Can invalidate iterators, but only if the insert causes the load factor to be greater to or equal to the maximum load factor.<br></p>
+</div>
+<div class="paragraph">
+<p>Pointers and references to elements are never invalidated.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_move_insert_with_hint"><a class="anchor" href="#unordered_multiset_move_insert_with_hint"></a>Move Insert with Hint</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">iterator insert(const_iterator hint, value_type&amp;&amp; obj);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Inserts <code>obj</code> in the container.</p>
+</div>
+<div class="paragraph">
+<p><code>hint</code> is a suggestion to where the element should be inserted.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>value_type</code> is <a href="https://en.cppreference.com/w/cpp/named_req/MoveInsertable" target="_blank" rel="noopener">MoveInsertable</a>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>An iterator pointing to the inserted element.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>If an exception is thrown by an operation other than a call to <code>hasher</code> the function has no effect.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>The standard is fairly vague on the meaning of the hint. But the only practical way to use it, and the only way that Boost.Unordered supports is to point to an existing element with the same key.<br></p>
+<div class="paragraph">
+<p>Can invalidate iterators, but only if the insert causes the load factor to be greater to or equal to the maximum load factor.<br></p>
+</div>
+<div class="paragraph">
+<p>Pointers and references to elements are never invalidated.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_insert_iterator_range"><a class="anchor" href="#unordered_multiset_insert_iterator_range"></a>Insert Iterator Range</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class InputIterator&gt; void insert(InputIterator first, InputIterator last);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Inserts a range of elements into the container.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>value_type</code> is <a href="https://en.cppreference.com/w/cpp/named_req/EmplaceConstructible" target="_blank" rel="noopener">EmplaceConstructible</a> into <code>X</code> from <code>*first</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>When inserting a single element, if an exception is thrown by an operation other than a call to <code>hasher</code> the function has no effect.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>Can invalidate iterators, but only if the insert causes the load factor to be greater to or equal to the maximum load factor.<br></p>
+<div class="paragraph">
+<p>Pointers and references to elements are never invalidated.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_insert_initializer_list"><a class="anchor" href="#unordered_multiset_insert_initializer_list"></a>Insert Initializer List</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">void insert(std::initializer_list&lt;value_type&gt; il);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Inserts a range of elements into the container. Elements are inserted if and only if there is no element in the container with an equivalent key.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>value_type</code> is <a href="https://en.cppreference.com/w/cpp/named_req/CopyInsertable" target="_blank" rel="noopener">CopyInsertable</a> into the container.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>When inserting a single element, if an exception is thrown by an operation other than a call to <code>hasher</code> the function has no effect.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>Can invalidate iterators, but only if the insert causes the load factor to be greater to or equal to the maximum load factor.<br></p>
+<div class="paragraph">
+<p>Pointers and references to elements are never invalidated.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_extract_by_iterator"><a class="anchor" href="#unordered_multiset_extract_by_iterator"></a>Extract by Iterator</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">node_type extract(const_iterator position);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Removes the element pointed to by <code>position</code>.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>A <code>node_type</code> owning the element.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>A node extracted using this method can be inserted into a compatible <code>unordered_set</code>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_extract_by_value"><a class="anchor" href="#unordered_multiset_extract_by_value"></a>Extract by Value</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">node_type extract(const key_type&amp; k);
+template&lt;class K&gt; node_type extract(K&amp;&amp; k);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Removes an element with key equivalent to <code>k</code>.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>A <code>node_type</code> owning the element if found, otherwise an empty <code>node_type</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>Only throws an exception if it is thrown by <code>hasher</code> or <code>key_equal</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>A node extracted using this method can be inserted into a compatible <code>unordered_set</code>.<br></p>
+<div class="paragraph">
+<p>The <code>template&lt;class K&gt;</code> overload only participates in overload resolution if <code>Hash::is_transparent</code> and <code>Pred::is_transparent</code> are valid member typedefs and neither <code>iterator</code> nor <code>const_iterator</code> are implicitly convertible from <code>K</code>. The library assumes that <code>Hash</code> is callable with both <code>K</code> and <code>Key</code> and that <code>Pred</code> is transparent. This enables heterogeneous lookup which avoids the cost of instantiating an instance of the <code>Key</code> type.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_insert_with_node_handle"><a class="anchor" href="#unordered_multiset_insert_with_node_handle"></a>Insert with <code>node_handle</code></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">iterator insert(node_type&amp;&amp; nh);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If <code>nh</code> is empty, has no effect.</p>
+</div>
+<div class="paragraph">
+<p>Otherwise inserts the element owned by <code>nh</code>.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>nh</code> is empty or <code>nh.get_allocator()</code> is equal to the container&#8217;s allocator.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>If <code>nh</code> was empty, returns <code>end()</code>.<br></p>
+<div class="paragraph">
+<p>Otherwise returns an iterator pointing to the newly inserted element.</p>
+</div>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>If an exception is thrown by an operation other than a call to <code>hasher</code> the function has no effect.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>Can invalidate iterators, but only if the insert causes the load factor to be greater to or equal to the maximum load factor.<br></p>
+<div class="paragraph">
+<p>Pointers and references to elements are never invalidated.<br></p>
+</div>
+<div class="paragraph">
+<p>This can be used to insert a node extracted from a compatible <code>unordered_set</code>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_insert_with_hint_and_node_handle"><a class="anchor" href="#unordered_multiset_insert_with_hint_and_node_handle"></a>Insert with Hint and <code>node_handle</code></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">iterator insert(const_iterator hint, node_type&amp;&amp; nh);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If <code>nh</code> is empty, has no effect.</p>
+</div>
+<div class="paragraph">
+<p>Otherwise inserts the element owned by <code>nh</code>.</p>
+</div>
+<div class="paragraph">
+<p><code>hint</code> is a suggestion to where the element should be inserted.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>nh</code> is empty or <code>nh.get_allocator()</code> is equal to the container&#8217;s allocator.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>If <code>nh</code> was empty, returns <code>end()</code>.<br></p>
+<div class="paragraph">
+<p>Otherwise returns an iterator pointing to the newly inserted element.</p>
+</div>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>If an exception is thrown by an operation other than a call to hasher the function has no effect.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>The standard is fairly vague on the meaning of the hint. But the only practical way to use it, and the only way that Boost.Unordered supports is to point to an existing element with the same key.<br></p>
+<div class="paragraph">
+<p>Can invalidate iterators, but only if the insert causes the load factor to be greater to or equal to the maximum load factor.<br></p>
+</div>
+<div class="paragraph">
+<p>Pointers and references to elements are never invalidated.<br></p>
+</div>
+<div class="paragraph">
+<p>This can be used to insert a node extracted from a compatible <code>unordered_set</code>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_erase_by_position"><a class="anchor" href="#unordered_multiset_erase_by_position"></a>Erase by Position</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">iterator erase(iterator position);
+iterator erase(const_iterator position);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Erase the element pointed to by <code>position</code>.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>The iterator following <code>position</code> before the erasure.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>Only throws an exception if it is thrown by <code>hasher</code> or <code>key_equal</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>In older versions this could be inefficient because it had to search through several buckets to find the position of the returned iterator. The data structure has been changed so that this is no longer the case, and the alternative erase methods have been deprecated.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_erase_by_value"><a class="anchor" href="#unordered_multiset_erase_by_value"></a>Erase by Value</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">size_type erase(const key_type&amp; k);
+template&lt;class K&gt; size_type erase(K&amp;&amp; x);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Erase all elements with key equivalent to <code>k</code>.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>The number of elements erased.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>Only throws an exception if it is thrown by <code>hasher</code> or <code>key_equal</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>The <code>template&lt;class K&gt;</code> overload only participates in overload resolution if <code>Hash::is_transparent</code> and <code>Pred::is_transparent</code> are valid member typedefs and neither <code>iterator</code> nor <code>const_iterator</code> are implicitly convertible from <code>K</code>. The library assumes that <code>Hash</code> is callable with both <code>K</code> and <code>Key</code> and that <code>Pred</code> is transparent. This enables heterogeneous lookup which avoids the cost of instantiating an instance of the <code>Key</code> type.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_erase_range"><a class="anchor" href="#unordered_multiset_erase_range"></a>Erase Range</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">iterator erase(const_iterator first, const_iterator last);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Erases the elements in the range from <code>first</code> to <code>last</code>.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>The iterator following the erased elements - i.e. <code>last</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>Only throws an exception if it is thrown by <code>hasher</code> or <code>key_equal</code>.<br></p>
+<div class="paragraph">
+<p>In this implementation, this overload doesn&#8217;t call either function object&#8217;s methods so it is no throw, but this might not be true in other implementations.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_quick_erase"><a class="anchor" href="#unordered_multiset_quick_erase"></a>quick_erase</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">void quick_erase(const_iterator position);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Erase the element pointed to by <code>position</code>.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>Only throws an exception if it is thrown by <code>hasher</code> or <code>key_equal</code>.<br></p>
+<div class="paragraph">
+<p>In this implementation, this overload doesn&#8217;t call either function object&#8217;s methods so it is no throw, but this might not be true in other implementations.</p>
+</div>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>This method was implemented because returning an iterator to the next element from erase was expensive, but the container has been redesigned so that is no longer the case. So this method is now deprecated.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_erase_return_void"><a class="anchor" href="#unordered_multiset_erase_return_void"></a>erase_return_void</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">void erase_return_void(const_iterator position);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Erase the element pointed to by <code>position</code>.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>Only throws an exception if it is thrown by <code>hasher</code> or <code>key_equal</code>.<br></p>
+<div class="paragraph">
+<p>In this implementation, this overload doesn&#8217;t call either function object&#8217;s methods so it is no throw, but this might not be true in other implementations.</p>
+</div>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>This method was implemented because returning an iterator to the next element from erase was expensive, but the container has been redesigned so that is no longer the case. So this method is now deprecated.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_swap"><a class="anchor" href="#unordered_multiset_swap"></a>swap</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">void swap(unordered_multiset&amp;)
+  noexcept(boost::allocator_traits&lt;Allocator&gt;::is_always_equal::value &amp;&amp;
+           boost::is_nothrow_swappable_v&lt;Hash&gt; &amp;&amp;
+           boost::is_nothrow_swappable_v&lt;Pred&gt;);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Swaps the contents of the container with the parameter.</p>
+</div>
+<div class="paragraph">
+<p>If <code>Allocator::propagate_on_container_swap</code> is declared and <code>Allocator::propagate_on_container_swap::value</code> is <code>true</code> then the containers' allocators are swapped. Otherwise, swapping with unequal allocators results in undefined behavior.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>Doesn&#8217;t throw an exception unless it is thrown by the copy constructor or copy assignment operator of <code>key_equal</code> or <code>hasher</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>The exception specifications aren&#8217;t quite the same as the C++11 standard, as the equality predicate and hash function are swapped using their copy constructors.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_clear"><a class="anchor" href="#unordered_multiset_clear"></a>clear</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">void clear() noexcept;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Erases all elements in the container.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Postconditions:
+</td>
+<td class="hdlist2">
+<p><code>size() == 0</code></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>Never throws an exception.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_merge"><a class="anchor" href="#unordered_multiset_merge"></a>merge</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class H2, class P2&gt;
+  void merge(unordered_multiset&lt;Key, H2, P2, Allocator&gt;&amp; source);
+template&lt;class H2, class P2&gt;
+  void merge(unordered_multiset&lt;Key, H2, P2, Allocator&gt;&amp;&amp; source);
+template&lt;class H2, class P2&gt;
+  void merge(unordered_set&lt;Key, H2, P2, Allocator&gt;&amp; source);
+template&lt;class H2, class P2&gt;
+  void merge(unordered_set&lt;Key, H2, P2, Allocator&gt;&amp;&amp; source);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Attempt to "merge" two containers by iterating <code>source</code> and extracting all nodes in <code>source</code> and inserting them into <code>*this</code>.</p>
+</div>
+<div class="paragraph">
+<p>Because <code>source</code> can have a different hash function and key equality predicate, the key of each node in
+<code>source</code> is rehashed using <code>this-&gt;hash_function()</code> and then, if required, compared using <code>this-&gt;key_eq()</code>.</p>
+</div>
+<div class="paragraph">
+<p>The behavior of this function is undefined if <code>this-&gt;get_allocator() != source.get_allocator()</code>.</p>
+</div>
+<div class="paragraph">
+<p>This function does not copy or move any elements and instead simply relocates the nodes from <code>source</code>
+into <code>*this</code>.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<div class="openblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Pointers and references to transferred elements remain valid.</p>
+</li>
+<li>
+<p>Invalidates iterators to transferred elements.</p>
+</li>
+<li>
+<p>Invalidates iterators belonging to <code>*this</code>.</p>
+</li>
+<li>
+<p>Iterators to non-transferred elements in <code>source</code> remain valid.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect2">
+<h3 id="unordered_multiset_observers"><a class="anchor" href="#unordered_multiset_observers"></a>Observers</h3>
+<div class="sect3">
+<h4 id="unordered_multiset_get_allocator"><a class="anchor" href="#unordered_multiset_get_allocator"></a>get_allocator</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">allocator_type get_allocator() const noexcept;</code></pre>
+</div>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_hash_function"><a class="anchor" href="#unordered_multiset_hash_function"></a>hash_function</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">hasher hash_function() const;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>The container&#8217;s hash function.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_key_eq"><a class="anchor" href="#unordered_multiset_key_eq"></a>key_eq</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">key_equal key_eq() const;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>The container&#8217;s key equality predicate</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect2">
+<h3 id="unordered_multiset_lookup"><a class="anchor" href="#unordered_multiset_lookup"></a>Lookup</h3>
+<div class="sect3">
+<h4 id="unordered_multiset_find"><a class="anchor" href="#unordered_multiset_find"></a>find</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">iterator         find(const key_type&amp; k);
+const_iterator   find(const key_type&amp; k) const;
+template&lt;class K&gt;
+  iterator       find(const K&amp; k);
+template&lt;class K&gt;
+  const_iterator find(const K&amp; k) const;
+template&lt;typename CompatibleKey, typename CompatibleHash, typename CompatiblePredicate&gt;
+  iterator       find(CompatibleKey const&amp;, CompatibleHash const&amp;,
+                      CompatiblePredicate const&amp;);
+template&lt;typename CompatibleKey, typename CompatibleHash, typename CompatiblePredicate&gt;
+  const_iterator  find(CompatibleKey const&amp;, CompatibleHash const&amp;,
+                       CompatiblePredicate const&amp;) const;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>An iterator pointing to an element with key equivalent to <code>k</code>, or <code>b.end()</code> if no such element exists.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>The templated overloads containing <code>CompatibleKey</code>, <code>CompatibleHash</code> and <code>CompatiblePredicate</code> are non-standard extensions which allow you to use a compatible hash function and equality predicate for a key of a different type in order to avoid an expensive type cast. In general, its use is not encouraged and instead the <code>K</code> member function templates should be used.<br></p>
+<div class="paragraph">
+<p>The <code>template&lt;class K&gt;</code> overloads only participate in overload resolution if <code>Hash::is_transparent</code> and <code>Pred::is_transparent</code> are valid member typedefs. The library assumes that <code>Hash</code> is callable with both <code>K</code> and <code>Key</code> and that <code>Pred</code> is transparent. This enables heterogeneous lookup which avoids the cost of instantiating an instance of the <code>Key</code> type.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_count"><a class="anchor" href="#unordered_multiset_count"></a>count</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">size_type        count(const key_type&amp; k) const;
+template&lt;class K&gt;
+  size_type      count(const K&amp; k) const;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>The number of elements with key equivalent to <code>k</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>The <code>template&lt;class K&gt;</code> overload only participates in overload resolution if <code>Hash::is_transparent</code> and <code>Pred::is_transparent</code> are valid member typedefs. The library assumes that <code>Hash</code> is callable with both <code>K</code> and <code>Key</code> and that <code>Pred</code> is transparent. This enables heterogeneous lookup which avoids the cost of instantiating an instance of the <code>Key</code> type.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_contains"><a class="anchor" href="#unordered_multiset_contains"></a>contains</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">bool             contains(const key_type&amp; k) const;
+template&lt;class K&gt;
+  bool           contains(const K&amp; k) const;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>A boolean indicating whether or not there is an element with key equal to <code>key</code> in the container</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>The <code>template&lt;class K&gt;</code> overload only participates in overload resolution if <code>Hash::is_transparent</code> and <code>Pred::is_transparent</code> are valid member typedefs. The library assumes that <code>Hash</code> is callable with both <code>K</code> and <code>Key</code> and that <code>Pred</code> is transparent. This enables heterogeneous lookup which avoids the cost of instantiating an instance of the <code>Key</code> type.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_equal_range"><a class="anchor" href="#unordered_multiset_equal_range"></a>equal_range</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">std::pair&lt;iterator, iterator&gt;               equal_range(const key_type&amp; k);
+std::pair&lt;const_iterator, const_iterator&gt;   equal_range(const key_type&amp; k) const;
+template&lt;class K&gt;
+  std::pair&lt;iterator, iterator&gt;             equal_range(const K&amp; k);
+template&lt;class K&gt;
+  std::pair&lt;const_iterator, const_iterator&gt; equal_range(const K&amp; k) const;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>A range containing all elements with key equivalent to <code>k</code>. If the container doesn&#8217;t contain any such elements, returns <code>std::make_pair(b.end(), b.end())</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>The <code>template&lt;class K&gt;</code> overloads only participate in overload resolution if <code>Hash::is_transparent</code> and <code>Pred::is_transparent</code> are valid member typedefs. The library assumes that <code>Hash</code> is callable with both <code>K</code> and <code>Key</code> and that <code>Pred</code> is transparent. This enables heterogeneous lookup which avoids the cost of instantiating an instance of the <code>Key</code> type.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect2">
+<h3 id="unordered_multiset_bucket_interface"><a class="anchor" href="#unordered_multiset_bucket_interface"></a>Bucket Interface</h3>
+<div class="sect3">
+<h4 id="unordered_multiset_bucket_count"><a class="anchor" href="#unordered_multiset_bucket_count"></a>bucket_count</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">size_type bucket_count() const noexcept;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>The number of buckets.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_max_bucket_count"><a class="anchor" href="#unordered_multiset_max_bucket_count"></a>max_bucket_count</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">size_type max_bucket_count() const noexcept;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>An upper bound on the number of buckets.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_bucket_size"><a class="anchor" href="#unordered_multiset_bucket_size"></a>bucket_size</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">size_type bucket_size(size_type n) const;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>n &lt; bucket_count()</code></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>The number of elements in bucket <code>n</code>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_bucket"><a class="anchor" href="#unordered_multiset_bucket"></a>bucket</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">size_type bucket(const key_type&amp; k) const;
+template&lt;class K&gt; size_type bucket(const K&amp; k) const;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>The index of the bucket which would contain an element with key <code>k</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Postconditions:
+</td>
+<td class="hdlist2">
+<p>The return value is less than <code>bucket_count()</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>The <code>template&lt;class K&gt;</code> overload only participates in overload resolution if <code>Hash::is_transparent</code> and <code>Pred::is_transparent</code> are valid member typedefs. The library assumes that <code>Hash</code> is callable with both <code>K</code> and <code>Key</code> and that <code>Pred</code> is transparent. This enables heterogeneous lookup which avoids the cost of instantiating an instance of the <code>Key</code> type.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_begin_2"><a class="anchor" href="#unordered_multiset_begin_2"></a>begin</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">local_iterator begin(size_type n);
+const_local_iterator begin(size_type n) const;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>n</code> shall be in the range <code>[0, bucket_count())</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>A local iterator pointing the first element in the bucket with index <code>n</code>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_end_2"><a class="anchor" href="#unordered_multiset_end_2"></a>end</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">local_iterator end(size_type n);
+const_local_iterator end(size_type n) const;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>n</code> shall be in the range <code>[0, bucket_count())</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>A local iterator pointing the 'one past the end' element in the bucket with index <code>n</code>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_cbegin_2"><a class="anchor" href="#unordered_multiset_cbegin_2"></a>cbegin</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">const_local_iterator cbegin(size_type n) const;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>n</code> shall be in the range <code>[0, bucket_count())</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>A constant local iterator pointing the first element in the bucket with index <code>n</code>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_cend_2"><a class="anchor" href="#unordered_multiset_cend_2"></a>cend</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">const_local_iterator cend(size_type n) const;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>n</code> shall be in the range <code>[0, bucket_count())</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>A constant local iterator pointing the 'one past the end' element in the bucket with index <code>n</code>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect2">
+<h3 id="unordered_multiset_hash_policy"><a class="anchor" href="#unordered_multiset_hash_policy"></a>Hash Policy</h3>
+<div class="sect3">
+<h4 id="unordered_multiset_load_factor"><a class="anchor" href="#unordered_multiset_load_factor"></a>load_factor</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">float load_factor() const noexcept;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>The average number of elements per bucket.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_max_load_factor"><a class="anchor" href="#unordered_multiset_max_load_factor"></a>max_load_factor</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">float max_load_factor() const noexcept;</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>Returns the current maximum load factor.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_set_max_load_factor"><a class="anchor" href="#unordered_multiset_set_max_load_factor"></a>Set max_load_factor</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">void max_load_factor(float z);</code></pre>
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Effects:
+</td>
+<td class="hdlist2">
+<p>Changes the container&#8217;s maximum load factor, using <code>z</code> as a hint.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_rehash"><a class="anchor" href="#unordered_multiset_rehash"></a>rehash</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">void rehash(size_type n);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Changes the number of buckets so that there are at least <code>n</code> buckets, and so that the load factor is less than or equal to the maximum load factor. When applicable, this will either grow or shrink the <code>bucket_count()</code> associated with the container.</p>
+</div>
+<div class="paragraph">
+<p>When <code>size() == 0</code>, <code>rehash(0)</code> will deallocate the underlying buckets array.</p>
+</div>
+<div class="paragraph">
+<p>Invalidates iterators, and changes the order of elements. Pointers and references to elements are not invalidated.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>The function has no effect if an exception is thrown, unless it is thrown by the container&#8217;s hash function or comparison function.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_reserve"><a class="anchor" href="#unordered_multiset_reserve"></a>reserve</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">void reserve(size_type n);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Equivalent to <code>a.rehash(ceil(n / a.max_load_factor()))</code>, or <code>a.rehash(1)</code> if <code>n &gt; 0</code> and <code>a.max_load_factor() == std::numeric_limits&lt;float&gt;::infinity()</code>.</p>
+</div>
+<div class="paragraph">
+<p>Similar to <code>rehash</code>, this function can be used to grow or shrink the number of buckets in the container.</p>
+</div>
+<div class="paragraph">
+<p>Invalidates iterators, and changes the order of elements. Pointers and references to elements are not invalidated.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>The function has no effect if an exception is thrown, unless it is thrown by the container&#8217;s hash function or comparison function.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect2">
+<h3 id="unordered_multiset_deduction_guides"><a class="anchor" href="#unordered_multiset_deduction_guides"></a>Deduction Guides</h3>
+<div class="paragraph">
+<p>A deduction guide will not participate in overload resolution if any of the following are true:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>It has an <code>InputIterator</code> template parameter and a type that does not qualify as an input iterator is deduced for that parameter.</p>
+</li>
+<li>
+<p>It has an <code>Allocator</code> template parameter and a type that does not qualify as an allocator is deduced for that parameter.</p>
+</li>
+<li>
+<p>It has a <code>Hash</code> template parameter and an integral type or a type that qualifies as an allocator is deduced for that parameter.</p>
+</li>
+<li>
+<p>It has a <code>Pred</code> template parameter and a type that qualifies as an allocator is deduced for that parameter.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>A <code>size_­type</code> parameter type in a deduction guide refers to the <code>size_­type</code> member type of the
+container type deduced by the deduction guide. Its default value coincides with the default value
+of the constructor selected.</p>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_iter_value_type"><a class="anchor" href="#unordered_multiset_iter_value_type"></a><em>iter-value-type</em></h4>
+<div class="listingblock">
+<div class="content">
+<pre>template&lt;class InputIterator&gt;
+  using <em>iter-value-type</em> =
+    typename std::iterator_traits&lt;InputIterator&gt;::value_type; // exposition only</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="unordered_multiset_equality_comparisons"><a class="anchor" href="#unordered_multiset_equality_comparisons"></a>Equality Comparisons</h3>
+<div class="sect3">
+<h4 id="unordered_multiset_operator"><a class="anchor" href="#unordered_multiset_operator"></a>operator==</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class Key, class Hash, class Pred, class Alloc&gt;
+  bool operator==(const unordered_multiset&lt;Key, Hash, Pred, Alloc&gt;&amp; x,
+                  const unordered_multiset&lt;Key, Hash, Pred, Alloc&gt;&amp; y);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Return <code>true</code> if <code>x.size() == y.size()</code> and for every element in <code>x</code>, there is an element in <code>y</code> with the same key, with an equal value (using <code>operator==</code> to compare the value types).</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>Behavior is undefined if the two containers don&#8217;t have equivalent equality predicates.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_operator_2"><a class="anchor" href="#unordered_multiset_operator_2"></a>operator!=</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class Key, class Hash, class Pred, class Alloc&gt;
+  bool operator!=(const unordered_multiset&lt;Key, Hash, Pred, Alloc&gt;&amp; x,
+                  const unordered_multiset&lt;Key, Hash, Pred, Alloc&gt;&amp; y);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Return <code>false</code> if <code>x.size() == y.size()</code> and for every element in <code>x</code>, there is an element in <code>y</code> with the same key, with an equal value (using <code>operator==</code> to compare the value types).</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>Behavior is undefined if the two containers don&#8217;t have equivalent equality predicates.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect2">
+<h3 id="unordered_multiset_swap_2"><a class="anchor" href="#unordered_multiset_swap_2"></a>Swap</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class Key, class Hash, class Pred, class Alloc&gt;
+  void swap(unordered_multiset&lt;Key, Hash, Pred, Alloc&gt;&amp; x,
+            unordered_multiset&lt;Key, Hash, Pred, Alloc&gt;&amp; y)
+    noexcept(noexcept(x.swap(y)));</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Swaps the contents of <code>x</code> and <code>y</code>.</p>
+</div>
+<div class="paragraph">
+<p>If <code>Allocator::propagate_on_container_swap</code> is declared and <code>Allocator::propagate_on_container_swap::value</code> is <code>true</code> then the containers' allocators are swapped. Otherwise, swapping with unequal allocators results in undefined behavior.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Effects:
+</td>
+<td class="hdlist2">
+<p><code>x.swap(y)</code></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Throws:
+</td>
+<td class="hdlist2">
+<p>Doesn&#8217;t throw an exception unless it is thrown by the copy constructor or copy assignment operator of <code>key_equal</code> or <code>hasher</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>The exception specifications aren&#8217;t quite the same as the C++11 standard, as the equality predicate and hash function are swapped using their copy constructors.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="unordered_multiset_erase_if"><a class="anchor" href="#unordered_multiset_erase_if"></a>erase_if</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">template&lt;class K, class H, class P, class A, class Predicate&gt;
+  typename unordered_multiset&lt;K, H, P, A&gt;::size_type
+    erase_if(unordered_multiset&lt;K, H, P, A&gt;&amp; c, Predicate pred);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Traverses the container <code>c</code> and removes all elements for which the supplied predicate returns <code>true</code>.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Returns:
+</td>
+<td class="hdlist2">
+<p>The number of erased elements.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notes:
+</td>
+<td class="hdlist2">
+<p>Equivalent to:<br></p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">auto original_size = c.size();
+for (auto i = c.begin(), last = c.end(); i != last; ) {
+  if (pred(*i)) {
+    i = c.erase(i);
+  } else {
+    ++i;
+  }
+}
+return original_size - c.size();</code></pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="unordered_multiset_serialization"><a class="anchor" href="#unordered_multiset_serialization"></a>Serialization</h3>
+<div class="paragraph">
+<p><code>unordered_multiset</code>s can be archived/retrieved by means of
+<a href="../../../../../serialization/index.html" target="_blank" rel="noopener">Boost.Serialization</a> using the API provided
+by this library. Both regular and XML archives are supported.</p>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_saving_an_unordered_multiset_to_an_archive"><a class="anchor" href="#unordered_multiset_saving_an_unordered_multiset_to_an_archive"></a>Saving an unordered_multiset to an archive</h4>
+<div class="paragraph">
+<p>Saves all the elements of an <code>unordered_multiset</code> <code>x</code> to an archive (XML archive) <code>ar</code>.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>value_type</code>
+is serializable (XML serializable), and it supports Boost.Serialization
+<code>save_construct_data</code>/<code>load_construct_data</code> protocol (automatically suported by
+<a href="https://en.cppreference.com/w/cpp/named_req/DefaultConstructible" target="_blank" rel="noopener">DefaultConstructible</a>
+types).</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_loading_an_unordered_multiset_from_an_archive"><a class="anchor" href="#unordered_multiset_loading_an_unordered_multiset_from_an_archive"></a>Loading an unordered_multiset from an archive</h4>
+<div class="paragraph">
+<p>Deletes all preexisting elements of an <code>unordered_multiset</code> <code>x</code> and inserts
+from an archive (XML archive) <code>ar</code> restored copies of the elements of the
+original <code>unordered_multiset</code> <code>other</code> saved to the storage read by <code>ar</code>.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p><code>value_type</code> is <a href="https://en.cppreference.com/w/cpp/named_req/MoveInsertable" target="_blank" rel="noopener">MoveInsertable</a>.
+<code>x.key_equal()</code> is functionally equivalent to <code>other.key_equal()</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Note:
+</td>
+<td class="hdlist2">
+<p>If the archive was saved using a release of Boost prior to Boost 1.84,
+the configuration macro <code>BOOST_UNORDERED_ENABLE_SERIALIZATION_COMPATIBILITY_V0</code>
+has to be globally defined for this operation to succeed; otherwise, an exception is thrown.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_saving_an_iteratorconst_iterator_to_an_archive"><a class="anchor" href="#unordered_multiset_saving_an_iteratorconst_iterator_to_an_archive"></a>Saving an iterator/const_iterator to an archive</h4>
+<div class="paragraph">
+<p>Saves the positional information of an <code>iterator</code> (<code>const_iterator</code>) <code>it</code>
+to an archive (XML archive) <code>ar</code>. <code>it</code> can be and <code>end()</code> iterator.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p>The <code>unordered_multiset</code> <code>x</code> pointed to by <code>it</code> has been previously saved to <code>ar</code>,
+and no modifying operations have been issued on <code>x</code> between saving of <code>x</code> and
+saving of <code>it</code>.</p>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="unordered_multiset_loading_an_iteratorconst_iterator_from_an_archive"><a class="anchor" href="#unordered_multiset_loading_an_iteratorconst_iterator_from_an_archive"></a>Loading an iterator/const_iterator from an archive</h4>
+<div class="paragraph">
+<p>Makes an <code>iterator</code> (<code>const_iterator</code>) <code>it</code> point to the restored position of
+the original <code>iterator</code> (<code>const_iterator</code>) saved to the storage read by
+an archive (XML archive) <code>ar</code>.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Requires:
+</td>
+<td class="hdlist2">
+<p>If <code>x</code> is the <code>unordered_multiset</code> <code>it</code> points to, no modifying operations
+have been issued on <code>x</code> between loading of <code>x</code> and loading of <code>it</code>.</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<script id="site-script" src="../../unordered/_/js/site.js" data-ui-root-path="../../unordered/_"></script>
+<script async src="../../unordered/_/js/vendor/highlight.js"></script>
+  </body>
+</html>

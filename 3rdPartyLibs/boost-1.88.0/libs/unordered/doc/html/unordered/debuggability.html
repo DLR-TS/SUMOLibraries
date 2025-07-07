@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Debuggability :: Boost.Unordered</title>
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../unordered/_/css/site.css">
+  </head>
+  <body class="article">
+<div class="body">
+<div class="nav-container" data-component="unordered" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="intro.html">Boost.Unordered</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="intro.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="buckets.html">Basics of Hash Tables</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="hash_equality.html">Equality Predicates and Hash Functions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="regular.html">Regular Containers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="concurrent.html">Concurrent Containers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="hash_quality.html">Hash Quality</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="compliance.html">Standard Compliance</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="structures.html">Data Structures</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="debuggability.html">Debuggability</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="benchmarks.html">Benchmarks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="rationale.html">Implementation Rationale</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="ref.html">Reference</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_map_fwd.html"><code>&lt;boost/unordered/unordered_map_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_map_top.html"><code>&lt;boost/unordered_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_map.html"><code>&lt;boost/unordered/unordered_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_map.html"><code>unordered_map</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_multimap.html"><code>unordered_multimap</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_set_fwd.html"><code>&lt;boost/unordered/unordered_set_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_set_top.html"><code>&lt;boost/unordered_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_set.html"><code>&lt;boost/unordered/unordered_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_set.html"><code>unordered_set</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_multiset.html"><code>unordered_multiset</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/hash_traits.html">Hash Traits</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/stats.html">Statistics</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_flat_map_fwd.html"><code>&lt;boost/unordered/unordered_flat_map_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_flat_map.html"><code>&lt;boost/unordered/unordered_flat_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_flat_map.html"><code>unordered_flat_map</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_flat_set_fwd.html"><code>&lt;boost/unordered/unordered_flat_set_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_flat_set.html"><code>&lt;boost/unordered/unordered_flat_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_flat_set.html"><code>unordered_flat_set</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_node_map_fwd.html"><code>&lt;boost/unordered/unordered_node_map_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_node_map.html"><code>&lt;boost/unordered/unordered_node_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_node_map.html"><code>unordered_node_map</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_node_set_fwd.html"><code>&lt;boost/unordered/unordered_node_set_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_node_set.html"><code>&lt;boost/unordered/unordered_node_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_node_set.html"><code>unordered_node_set</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_flat_map_fwd.html"><code>&lt;boost/unordered/concurrent_flat_map_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_flat_map.html"><code>&lt;boost/unordered/concurrent_flat_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/concurrent_flat_map.html"><code>concurrent_flat_map</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_flat_set_fwd.html"><code>&lt;boost/unordered/concurrent_flat_set_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_flat_set.html"><code>&lt;boost/unordered/concurrent_flat_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/concurrent_flat_set.html"><code>concurrent_flat_set</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_node_map_fwd.html"><code>&lt;boost/unordered/concurrent_node_map_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_node_map.html"><code>&lt;boost/unordered/concurrent_node_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/concurrent_node_map.html"><code>concurrent_node_map</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_node_set_fwd.html"><code>&lt;boost/unordered/concurrent_node_set_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_node_set.html"><code>&lt;boost/unordered/concurrent_node_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/concurrent_node_set.html"><code>concurrent_node_set</code></a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="changes.html">Change Log</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="bibliography.html">Bibliography</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="copyright.html">Copyright and License</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="intro.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="intro.html">Boost.Unordered</a></li>
+    <li><a href="debuggability.html">Debuggability</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Debuggability</h1>
+<div class="sect1">
+<h2 id="debuggability_visual_studio_natvis"><a class="anchor" href="#debuggability_visual_studio_natvis"></a>Visual Studio Natvis</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>All containers and iterators have custom visualizations in the Natvis framework.</p>
+</div>
+<div class="sect2">
+<h3 id="debuggability_using_in_your_project"><a class="anchor" href="#debuggability_using_in_your_project"></a>Using in your project</h3>
+<div class="paragraph">
+<p>To visualize Boost.Unordered containers in the Natvis framework in your project, simply add the file <a href="https://github.com/boostorg/unordered/blob/develop/extra/boost_unordered.natvis">/extra/boost_unordered.natvis</a> to your Visual Studio project as an "Existing Item".</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="debuggability_visualization_structure"><a class="anchor" href="#debuggability_visualization_structure"></a>Visualization structure</h3>
+<div class="paragraph">
+<p>The visualizations mirror those for the standard unordered containers. A container has a maximum of 100 elements displayed at once. Each set element has its item name listed as <code>[i]</code>, where <code>i</code> is the index in the display, starting at <code>0</code>. Each map element has its item name listed as <code>[{key-display}]</code> by default. For example, if the first element is the pair <code>("abc", 1)</code>, the item name will be <code>["abc"]</code>. This behaviour can be overridden by using the view "ShowElementsByIndex", which switches the map display behaviour to name the elements by index. This same view name is used in the standard unordered containers.</p>
+</div>
+<div class="paragraph">
+<p>By default, the closed-addressing containers will show the <code>[hash_function]</code> and <code>[key_eq]</code>, the <code>[spare_hash_function]</code> and <code>[spare_key_eq]</code> if applicable, the <code>[allocator]</code>, and the elements. Using the view "detailed" adds the <code>[bucket_count]</code> and <code>[max_load_factor]</code>. Conversely, using the view "simple" shows only the elements, with no other items present.</p>
+</div>
+<div class="paragraph">
+<p>By default, the open-addressing containers will show the <code>[hash_function]</code>, <code>[key_eq]</code>, <code>[allocator]</code>, and the elements. Using the view "simple" shows only the elements, with no other items present. Both the SIMD and the non-SIMD implementations are viewable through the Natvis framework.</p>
+</div>
+<div class="paragraph">
+<p>Iterators are displayed similarly to their standard counterparts. An iterator is displayed as though it were the element that it points to. An end iterator is simply displayed as <code>{ end iterator }</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="debuggability_fancy_pointers"><a class="anchor" href="#debuggability_fancy_pointers"></a>Fancy pointers</h3>
+<div class="paragraph">
+<p>The container visualizations also work if you are using fancy pointers in your allocator, such as <code>boost::interprocess::offset_ptr</code>. While this is rare, Boost.Unordered has natvis customization points to support any type of fancy pointer. <code>boost::interprocess::offset_ptr</code> has support already defined in the Boost.Interprocess library, and you can add support to your own type by following the instructions contained in a comment near the end of the file <a href="https://github.com/boostorg/unordered/blob/develop/extra/boost_unordered.natvis">/extra/boost_unordered.natvis</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="debuggability_gdb_pretty_printers"><a class="anchor" href="#debuggability_gdb_pretty_printers"></a>GDB Pretty-Printers</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>All containers and iterators have a custom GDB pretty-printer.</p>
+</div>
+<div class="sect2">
+<h3 id="debuggability_using_in_your_project_2"><a class="anchor" href="#debuggability_using_in_your_project_2"></a>Using in your project</h3>
+<div class="paragraph">
+<p>Always, when using pretty-printers, you must enable pretty-printing like below. This is typically a one-time setup.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-plaintext hljs" data-lang="plaintext">(gdb) set print pretty on</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>By default, if you compile into an ELF binary format, your binary will contain the Boost.Unordered pretty-printers. To use the embedded pretty-printers, ensure you allow auto-loading like below. This must be done every time you load GDB, or add it to a ".gdbinit" file.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-plaintext hljs" data-lang="plaintext">(gdb) add-auto-load-safe-path [/path/to/executable]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can choose to compile your binary <em>without</em> embedding the pretty-printers by defining <code>BOOST_ALL_NO_EMBEDDED_GDB_SCRIPTS</code>, which disables the embedded GDB pretty-printers for all Boost libraries that have this feature.</p>
+</div>
+<div class="paragraph">
+<p>You can load the pretty-printers externally from the non-embedded Python script. Add the script, <a href="https://github.com/boostorg/unordered/blob/develop/extra/boost_unordered_printers.py">/extra/boost_unordered_printers.py</a>, using the <code>source</code> command as shown below.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-plaintext hljs" data-lang="plaintext">(gdb) source [/path/to/boost]/libs/unordered/extra/boost_unordered_printers.py</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="debuggability_visualization_structure_2"><a class="anchor" href="#debuggability_visualization_structure_2"></a>Visualization structure</h3>
+<div class="paragraph">
+<p>The visualizations mirror the standard unordered containers. The map containers display an association from key to mapped value. The set containers display an association from index to value. An iterator is either displayed with its item, or as an end iterator. Here is what may be shown for an example <code>boost::unordered_map</code>, an example <code>boost::unordered_set</code>, and their respective begin and end iterators.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-plaintext hljs" data-lang="plaintext">(gdb) print example_unordered_map
+$1 = boost::unordered_map with 3 elements = {["C"] = "c", ["B"] = "b", ["A"] = "a"}
+(gdb) print example_unordered_map_begin
+$2 = iterator = { {first = "C", second = "c"} }
+(gdb) print example_unordered_map_end
+$3 = iterator = { end iterator }
+(gdb) print example_unordered_set
+$4 = boost::unordered_set with 3 elements = {[0] = "c", [1] = "b", [2] = "a"}
+(gdb) print example_unordered_set_begin
+$5 = iterator = { "c" }
+(gdb) print example_unordered_set_end
+$6 = iterator = { end iterator }</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The other containers are identical other than replacing &#8220;boost::unordered_{map|set}&#8221; with the appropriate template name when displaying the container itself. Note that each sub-element (i.e. the key, the mapped value, or the value) is displayed based on its own printing settings which may include its own pretty-printer.</p>
+</div>
+<div class="paragraph">
+<p>Both the SIMD and the non-SIMD implementations are viewable through the GDB pretty-printers.</p>
+</div>
+<div class="paragraph">
+<p>For open-addressing containers where <a href="hash_quality.html#hash_quality_container_statistics" class="xref page">container statistics</a> are enabled, you can obtain these statistics by calling <code>get_stats()</code> on the container, from within GDB. This is overridden in GDB as an <a href="https://sourceware.org/gdb/current/onlinedocs/gdb.html/Xmethod-API.html">xmethod</a>, so it will not invoke any C++ synchronization code. See the following printout as an example for the expected format.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-plaintext hljs" data-lang="plaintext">(gdb) print example_flat_map.get_stats()
+$1 = [stats] = {[insertion] = {[count] = 5, [probe_length] = {avg = 1.0, var = 0.0, dev = 0.0}},
+  [successful_lookup] = {[count] = 0, [probe_length] = {avg = 0.0, var = 0.0, dev = 0.0},
+    [num_comparisons] = {avg = 0.0, var = 0.0, dev = 0.0}}, [unsuccessful_lookup] = {[count] = 5,
+    [probe_length] = {avg = 1.0, var = 0.0, dev = 0.0},
+    [num_comparisons] = {avg = 0.0, var = 0.0, dev = 0.0}}}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="debuggability_fancy_pointers_2"><a class="anchor" href="#debuggability_fancy_pointers_2"></a>Fancy pointers</h3>
+<div class="paragraph">
+<p>The pretty-printers also work if you are using fancy pointers in your allocator, such as <code>boost::interprocess::offset_ptr</code>. While this is rare, Boost.Unordered has GDB pretty-printer customization points to support any type of fancy pointer. <code>boost::interprocess::offset_ptr</code> has support already defined in the Boost.Interprocess library, and you can add support to your own type by following the instructions contained in a comment near the end of the file <a href="https://github.com/boostorg/unordered/blob/develop/extra/boost_unordered_printers.py">/extra/boost_unordered_printers.py</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<script id="site-script" src="../unordered/_/js/site.js" data-ui-root-path="../unordered/_"></script>
+<script async src="../unordered/_/js/vendor/highlight.js"></script>
+  </body>
+</html>

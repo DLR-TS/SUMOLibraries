@@ -1,0 +1,54 @@
+<?xml version="1.0" standalone="yes"?>
+<library-reference id="compressed_pair.reference"><title>Reference</title><header id="doxygen.compressed_pair.reference.compressed__pair_8hpp" name="boost/compressed_pair.hpp">
+</header>
+<header id="doxygen.compressed_pair.reference.detail_2compressed__pair_8hpp" name="boost/detail/compressed_pair.hpp">
+<namespace name="boost">
+<class id="doxygen.compressed_pair.reference.classboost_1_1compressed__pair" name="compressed_pair"><template>
+      <template-type-parameter name="T1"/>
+      <template-type-parameter name="T2"/>
+    </template><typedef id="doxygen.compressed_pair.reference.classboost_1_1compressed__pair_1a75e0f33a0aa3ebf9d938dd57dd73feb5" name="first_type"><type>T1</type></typedef>
+<typedef id="doxygen.compressed_pair.reference.classboost_1_1compressed__pair_1a7e53ce8587e98c1597ba20bc00f755fe" name="second_type"><type>T2</type></typedef>
+<typedef id="doxygen.compressed_pair.reference.classboost_1_1compressed__pair_1a964fa375793b89ffab12194606ddb779" name="first_param_type"><type>call_traits&lt; first_type &gt;::param_type</type></typedef>
+<typedef id="doxygen.compressed_pair.reference.classboost_1_1compressed__pair_1a79e9a0fe9768b11be7159ad6cc0ace68" name="second_param_type"><type>call_traits&lt; second_type &gt;::param_type</type></typedef>
+<typedef id="doxygen.compressed_pair.reference.classboost_1_1compressed__pair_1a1e6cbaa7fd7ca1c165cd0786c28bc4e5" name="first_reference"><type>call_traits&lt; first_type &gt;::reference</type></typedef>
+<typedef id="doxygen.compressed_pair.reference.classboost_1_1compressed__pair_1a127f722afdaecf83533b277e9775f1cd" name="second_reference"><type>call_traits&lt; second_type &gt;::reference</type></typedef>
+<typedef id="doxygen.compressed_pair.reference.classboost_1_1compressed__pair_1a18b130d6d2ea25b44acf32f76f1b2d8d" name="first_const_reference"><type>call_traits&lt; first_type &gt;::const_reference</type></typedef>
+<typedef id="doxygen.compressed_pair.reference.classboost_1_1compressed__pair_1a3bb2a1131bd970863d43b4e67b5a5342" name="second_const_reference"><type>call_traits&lt; second_type &gt;::const_reference</type></typedef>
+<method-group name="public member functions">
+<constructor id="doxygen.compressed_pair.reference.classboost_1_1compressed__pair_1a94719015e60c18d3ea4018b92f2450ed"/>
+<constructor id="doxygen.compressed_pair.reference.classboost_1_1compressed__pair_1a28729acdf22a663062e2e7278e3d7c68"><parameter name="x"><paramtype>first_param_type</paramtype></parameter><parameter name="y"><paramtype>second_param_type</paramtype></parameter></constructor>
+<constructor id="doxygen.compressed_pair.reference.classboost_1_1compressed__pair_1a95321b795ab1d9ee2cbd4f17d2034ffe" specifiers="explicit"><parameter name="x"><paramtype>first_param_type</paramtype></parameter></constructor>
+<constructor id="doxygen.compressed_pair.reference.classboost_1_1compressed__pair_1a0f17e347303fbff35036c4dadc484ad2" specifiers="explicit"><parameter name="y"><paramtype>second_param_type</paramtype></parameter></constructor>
+<method id="doxygen.compressed_pair.reference.classboost_1_1compressed__pair_1a727135ddcb1ef6072d778a09a6de452a" name="first"><type>first_reference</type></method>
+<method id="doxygen.compressed_pair.reference.classboost_1_1compressed__pair_1a96ede881da52cd2d5b47d5ff4dec3d84" name="first" cv="const"><type>first_const_reference</type></method>
+<method id="doxygen.compressed_pair.reference.classboost_1_1compressed__pair_1a3551a1a289ac6751dbdb8a98dc6836cd" name="second"><type>second_reference</type></method>
+<method id="doxygen.compressed_pair.reference.classboost_1_1compressed__pair_1acceb6d60daafdb4d531a258e4623d14f" name="second" cv="const"><type>second_const_reference</type></method>
+<method id="doxygen.compressed_pair.reference.classboost_1_1compressed__pair_1a7d1af04226ca807735d3aa06c1e19643" name="swap"><type>void</type><parameter name="y"><paramtype><classname>compressed_pair</classname> &amp;</paramtype></parameter></method>
+</method-group>
+</class><class-specialization id="doxygen.compressed_pair.reference.classboost_1_1compressed__pair_3_01T_00_01T_01_4" name="compressed_pair"><template>
+      <template-type-parameter name="T"/>
+    </template><specialization><template-arg>T</template-arg><template-arg>T</template-arg></specialization><typedef id="doxygen.compressed_pair.reference.classboost_1_1compressed__pair_3_01T_00_01T_01_4_1a1f4114cf1176b6d9c11211b3bd0b9236" name="first_type"><type>T</type></typedef>
+<typedef id="doxygen.compressed_pair.reference.classboost_1_1compressed__pair_3_01T_00_01T_01_4_1ae0552541eca41ad343243eceafc7bf9f" name="second_type"><type>T</type></typedef>
+<typedef id="doxygen.compressed_pair.reference.classboost_1_1compressed__pair_3_01T_00_01T_01_4_1a508675cdda829d4dc87d8f4e22d30e7c" name="first_param_type"><type>call_traits&lt; first_type &gt;::param_type</type></typedef>
+<typedef id="doxygen.compressed_pair.reference.classboost_1_1compressed__pair_3_01T_00_01T_01_4_1aebc16d5602e2c9708446fd6dc6002479" name="second_param_type"><type>call_traits&lt; second_type &gt;::param_type</type></typedef>
+<typedef id="doxygen.compressed_pair.reference.classboost_1_1compressed__pair_3_01T_00_01T_01_4_1ade2632f9cf6950873baa3f0afd50a5e9" name="first_reference"><type>call_traits&lt; first_type &gt;::reference</type></typedef>
+<typedef id="doxygen.compressed_pair.reference.classboost_1_1compressed__pair_3_01T_00_01T_01_4_1a9f881d6f4de6731db83c7a35f733ec2f" name="second_reference"><type>call_traits&lt; second_type &gt;::reference</type></typedef>
+<typedef id="doxygen.compressed_pair.reference.classboost_1_1compressed__pair_3_01T_00_01T_01_4_1a4d043fcb131d92aa13a79fddfe5f8248" name="first_const_reference"><type>call_traits&lt; first_type &gt;::const_reference</type></typedef>
+<typedef id="doxygen.compressed_pair.reference.classboost_1_1compressed__pair_3_01T_00_01T_01_4_1aa024c55a8d18290f84a242c6f65b4855" name="second_const_reference"><type>call_traits&lt; second_type &gt;::const_reference</type></typedef>
+<method-group name="public member functions">
+<constructor id="doxygen.compressed_pair.reference.classboost_1_1compressed__pair_3_01T_00_01T_01_4_1a9c48b3f2e0bd368615ee278a92c79186"/>
+<constructor id="doxygen.compressed_pair.reference.classboost_1_1compressed__pair_3_01T_00_01T_01_4_1aa991943dfb61fcb21883e5063387dd24"><parameter name="x"><paramtype>first_param_type</paramtype></parameter><parameter name="y"><paramtype>second_param_type</paramtype></parameter></constructor>
+<constructor id="doxygen.compressed_pair.reference.classboost_1_1compressed__pair_3_01T_00_01T_01_4_1a4290e08c92731dc7d728af0567e3b6fa" specifiers="explicit"><parameter name="x"><paramtype>first_param_type</paramtype></parameter></constructor>
+<method id="doxygen.compressed_pair.reference.classboost_1_1compressed__pair_3_01T_00_01T_01_4_1ae7f1fe88ceb8cf487fb9024ecac54589" name="first"><type>first_reference</type></method>
+<method id="doxygen.compressed_pair.reference.classboost_1_1compressed__pair_3_01T_00_01T_01_4_1a765055f9a1f4636074c0ac816f2e3a2d" name="first" cv="const"><type>first_const_reference</type></method>
+<method id="doxygen.compressed_pair.reference.classboost_1_1compressed__pair_3_01T_00_01T_01_4_1a5a03b6f558c2b185e8b7030817344c95" name="second"><type>second_reference</type></method>
+<method id="doxygen.compressed_pair.reference.classboost_1_1compressed__pair_3_01T_00_01T_01_4_1a65649ab1f39235af764135e258ec076a" name="second" cv="const"><type>second_const_reference</type></method>
+<method id="doxygen.compressed_pair.reference.classboost_1_1compressed__pair_3_01T_00_01T_01_4_1abc7a930f0226a486d94188e5498dc268" name="swap"><type>void</type><parameter name="y"><paramtype><classname>::boost::compressed_pair</classname>&lt; T, T &gt; &amp;</paramtype></parameter></method>
+</method-group>
+</class-specialization><function id="doxygen.compressed_pair.reference.detail_2compressed__pair_8hpp_1add83d194d33f253a3a59fd82a5fd8c4c" name="swap"><type>void</type><template>
+          <template-type-parameter name="T1"/>
+          <template-type-parameter name="T2"/>
+        </template><parameter name="x"><paramtype><classname>compressed_pair</classname>&lt; T1, T2 &gt; &amp;</paramtype></parameter><parameter name="y"><paramtype><classname>compressed_pair</classname>&lt; T1, T2 &gt; &amp;</paramtype></parameter></function>
+</namespace>
+</header>
+</library-reference>

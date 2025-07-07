@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Basics of Hash Tables :: Boost.Unordered</title>
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../unordered/_/css/site.css">
+  </head>
+  <body class="article">
+<div class="body">
+<div class="nav-container" data-component="unordered" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="intro.html">Boost.Unordered</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="intro.html">Introduction</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="buckets.html">Basics of Hash Tables</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="hash_equality.html">Equality Predicates and Hash Functions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="regular.html">Regular Containers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="concurrent.html">Concurrent Containers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="hash_quality.html">Hash Quality</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="compliance.html">Standard Compliance</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="structures.html">Data Structures</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="debuggability.html">Debuggability</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="benchmarks.html">Benchmarks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="rationale.html">Implementation Rationale</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="ref.html">Reference</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_map_fwd.html"><code>&lt;boost/unordered/unordered_map_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_map_top.html"><code>&lt;boost/unordered_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_map.html"><code>&lt;boost/unordered/unordered_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_map.html"><code>unordered_map</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_multimap.html"><code>unordered_multimap</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_set_fwd.html"><code>&lt;boost/unordered/unordered_set_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_set_top.html"><code>&lt;boost/unordered_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_set.html"><code>&lt;boost/unordered/unordered_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_set.html"><code>unordered_set</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_multiset.html"><code>unordered_multiset</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/hash_traits.html">Hash Traits</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/stats.html">Statistics</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_flat_map_fwd.html"><code>&lt;boost/unordered/unordered_flat_map_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_flat_map.html"><code>&lt;boost/unordered/unordered_flat_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_flat_map.html"><code>unordered_flat_map</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_flat_set_fwd.html"><code>&lt;boost/unordered/unordered_flat_set_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_flat_set.html"><code>&lt;boost/unordered/unordered_flat_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_flat_set.html"><code>unordered_flat_set</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_node_map_fwd.html"><code>&lt;boost/unordered/unordered_node_map_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_node_map.html"><code>&lt;boost/unordered/unordered_node_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_node_map.html"><code>unordered_node_map</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_node_set_fwd.html"><code>&lt;boost/unordered/unordered_node_set_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_unordered_node_set.html"><code>&lt;boost/unordered/unordered_node_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/unordered_node_set.html"><code>unordered_node_set</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_flat_map_fwd.html"><code>&lt;boost/unordered/concurrent_flat_map_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_flat_map.html"><code>&lt;boost/unordered/concurrent_flat_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/concurrent_flat_map.html"><code>concurrent_flat_map</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_flat_set_fwd.html"><code>&lt;boost/unordered/concurrent_flat_set_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_flat_set.html"><code>&lt;boost/unordered/concurrent_flat_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/concurrent_flat_set.html"><code>concurrent_flat_set</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_node_map_fwd.html"><code>&lt;boost/unordered/concurrent_node_map_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_node_map.html"><code>&lt;boost/unordered/concurrent_node_map.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/concurrent_node_map.html"><code>concurrent_node_map</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_node_set_fwd.html"><code>&lt;boost/unordered/concurrent_node_set_fwd.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/header_concurrent_node_set.html"><code>&lt;boost/unordered/concurrent_node_set.hpp&gt;</code></a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reference/concurrent_node_set.html"><code>concurrent_node_set</code></a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="changes.html">Change Log</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="bibliography.html">Bibliography</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="copyright.html">Copyright and License</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="intro.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="intro.html">Boost.Unordered</a></li>
+    <li><a href="buckets.html">Basics of Hash Tables</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Basics of Hash Tables</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The containers are made up of a number of <em>buckets</em>, each of which can contain
+any number of elements. For example, the following diagram shows a <code><a href="reference/unordered_set.html#unordered_set" class="xref page">boost::unordered_set</a></code> with 7 buckets containing 5 elements, <code>A</code>,
+<code>B</code>, <code>C</code>, <code>D</code> and <code>E</code> (this is just for illustration, containers will typically
+have more buckets).</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/buckets.png" alt="buckets">
+</div>
+</div>
+<div class="paragraph">
+<p>In order to decide which bucket to place an element in, the container applies
+the hash function, <code>Hash</code>, to the element&#8217;s key (for sets the key is the whole element, but is referred to as the key
+so that the same terminology can be used for sets and maps). This returns a
+value of type <code>std::size_t</code>. <code>std::size_t</code> has a much greater range of values
+then the number of buckets, so the container applies another transformation to
+that value to choose a bucket to place the element in.</p>
+</div>
+<div class="paragraph">
+<p>Retrieving the elements for a given key is simple. The same process is applied
+to the key to find the correct bucket. Then the key is compared with the
+elements in the bucket to find any elements that match (using the equality
+predicate <code>Pred</code>). If the hash function has worked well the elements will be
+evenly distributed amongst the buckets so only a small number of elements will
+need to be examined.</p>
+</div>
+<div class="paragraph">
+<p>There is <a href="hash_equality.html#hash_equality" class="xref page">more information on hash functions and
+equality predicates in the next section</a>.</p>
+</div>
+<div class="paragraph">
+<p>You can see in the diagram that <code>A</code> &amp; <code>D</code> have been placed in the same bucket.
+When looking for elements in this bucket up to 2 comparisons are made, making
+the search slower. This is known as a <strong>collision</strong>. To keep things fast we try to
+keep collisions to a minimum.</p>
+</div>
+<div class="paragraph">
+<p>If instead of <code>boost::unordered_set</code> we had used <code><a href="reference/unordered_flat_set.html" class="xref page">boost::unordered_flat_set</a></code>, the
+diagram would look as follows:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/buckets-oa.png" alt="buckets oa">
+</div>
+</div>
+<div class="paragraph">
+<p>In open-addressing containers, buckets can hold at most one element; if a collision happens
+(like is the case of <code>D</code> in the example), the element uses some other available bucket in
+the vicinity of the original position. Given this simpler scenario, Boost.Unordered
+open-addressing containers offer a very limited API for accessing buckets.</p>
+</div>
+<table class="tableblock frame-all grid-rows stretch">
+<caption class="title">Table 1. Methods for Accessing Buckets</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-center valign-top" colspan="2"><p class="tableblock"><strong>All containers</strong></p></th>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock"><strong>Method</strong></p></th>
+<th class="tableblock halign-left valign-middle"><p class="tableblock"><strong>Description</strong></p></th>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>size_type bucket_count() const</code></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The number of buckets.</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top" colspan="2"><p class="tableblock"><strong>Closed-addressing containers only</strong></p></th>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock"><strong>Method</strong></p></th>
+<th class="tableblock halign-left valign-middle"><p class="tableblock"><strong>Description</strong></p></th>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>size_type max_bucket_count() const</code></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">An upper bound on the number of buckets.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>size_type bucket_size(size_type n) const</code></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The number of elements in bucket <code>n</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>size_type bucket(key_type const&amp; k) const</code></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Returns the index of the bucket which would contain <code>k</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>local_iterator begin(size_type n)</code></p></td>
+<td class="tableblock halign-left valign-middle" rowspan="6"><p class="tableblock">Return begin and end iterators for bucket <code>n</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>local_iterator end(size_type n)</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>const_local_iterator begin(size_type n) const</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>const_local_iterator end(size_type n) const</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>const_local_iterator cbegin(size_type n) const</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>const_local_iterator cend(size_type n) const</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="buckets_controlling_the_number_of_buckets"><a class="anchor" href="#buckets_controlling_the_number_of_buckets"></a>Controlling the Number of Buckets</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>As more elements are added to an unordered associative container, the number
+of collisions will increase causing performance to degrade.
+To combat this the containers increase the bucket count as elements are inserted.
+You can also tell the container to change the bucket count (if required) by
+calling <code>rehash</code>.</p>
+</div>
+<div class="paragraph">
+<p>The standard leaves a lot of freedom to the implementer to decide how the
+number of buckets is chosen, but it does make some requirements based on the
+container&#8217;s <em>load factor</em>, the number of elements divided by the number of buckets.
+Containers also have a <em>maximum load factor</em> which they should try to keep the
+load factor below.</p>
+</div>
+<div class="paragraph">
+<p>You can&#8217;t control the bucket count directly but there are two ways to
+influence it:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Specify the minimum number of buckets when constructing a container or when calling <code>rehash</code>.</p>
+</li>
+<li>
+<p>Suggest a maximum load factor by calling <code>max_load_factor</code>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><code>max_load_factor</code> doesn&#8217;t let you set the maximum load factor yourself, it just
+lets you give a <em>hint</em>. And even then, the standard doesn&#8217;t actually
+require the container to pay much attention to this value. The only time the
+load factor is <em>required</em> to be less than the maximum is following a call to
+<code>rehash</code>. But most implementations will try to keep the number of elements
+below the max load factor, and set the maximum load factor to be the same as
+or close to the hint - unless your hint is unreasonably small or large.</p>
+</div>
+<table class="tableblock frame-all grid-rows stretch">
+<caption class="title">Table 2. Methods for Controlling Bucket Size</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-center valign-top" colspan="2"><p class="tableblock"><strong>All containers</strong></p></th>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock"><strong>Method</strong></p></th>
+<th class="tableblock halign-left valign-middle"><p class="tableblock"><strong>Description</strong></p></th>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>X(size_type n)</code></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Construct an empty container with at least <code>n</code> buckets (<code>X</code> is the container type).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>X(InputIterator i, InputIterator j, size_type n)</code></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Construct an empty container with at least <code>n</code> buckets and insert elements from the range <code>[i, j)</code> (<code>X</code> is the container type).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>float load_factor() const</code></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The average number of elements per bucket.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>float max_load_factor() const</code></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Returns the current maximum load factor.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>float max_load_factor(float z)</code></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Changes the container&#8217;s maximum load factor, using <code>z</code> as a hint.<br>
+<strong>Open-addressing and concurrent containers:</strong> this function does nothing: users are not allowed to change the maximum load factor.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>void rehash(size_type n)</code></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Changes the number of buckets so that there at least <code>n</code> buckets, and so that the load factor is less than the maximum load factor.</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top" colspan="2"><p class="tableblock"><strong>Open-addressing and concurrent containers only</strong></p></th>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock"><strong>Method</strong></p></th>
+<th class="tableblock halign-left valign-middle"><p class="tableblock"><strong>Description</strong></p></th>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>size_type max_load() const</code></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Returns the maximum number of allowed elements in the container before rehash.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>A note on <code>max_load</code> for open-addressing and concurrent containers: the maximum load will be
+(<code>max_load_factor() * bucket_count()</code>) right after <code>rehash</code> or on container creation, but may
+slightly decrease when erasing elements in high-load situations. For instance, if we
+have a <code><a href="reference/unordered_flat_map.html#unordered_flat_map" class="xref page">boost::unordered_flat_map</a></code> with <code>size()</code> almost
+at <code>max_load()</code> level and then erase 1,000 elements, <code>max_load()</code> may decrease by around a
+few dozen elements. This is done internally by Boost.Unordered in order
+to keep its performance stable, and must be taken into account when planning for rehash-free insertions.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<script id="site-script" src="../unordered/_/js/site.js" data-ui-root-path="../unordered/_"></script>
+<script async src="../unordered/_/js/vendor/highlight.js"></script>
+  </body>
+</html>

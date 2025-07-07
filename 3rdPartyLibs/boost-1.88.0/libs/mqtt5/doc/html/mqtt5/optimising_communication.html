@@ -1,0 +1,227 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Optimising Communication</title>
+<link rel="stylesheet" href="../../../../../doc/src/boostbook.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="../index.html" title="Chapter 1. Boost.MQTT5: a C++17 MQTT client">
+<link rel="up" href="../index.html" title="Chapter 1. Boost.MQTT5: a C++17 MQTT client">
+<link rel="prev" href="connection_maintenance.html" title="Maintaining a Stable Connection">
+<link rel="next" href="disconnecting_the_client.html" title="Disconnecting the Client">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table cellpadding="2" width="100%"><tr>
+<td valign="top"><img alt="Boost C++ Libraries" width="277" height="86" src="../../../../../boost.png"></td>
+<td align="center"><a href="../../../../../index.html">Home</a></td>
+<td align="center"><a href="../../../../../libs/libraries.htm">Libraries</a></td>
+<td align="center"><a href="http://www.boost.org/users/people.html">People</a></td>
+<td align="center"><a href="http://www.boost.org/users/faq.html">FAQ</a></td>
+<td align="center"><a href="../../../../../more/index.htm">More</a></td>
+</tr></table>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="connection_maintenance.html"><img src="../../../../../doc/src/images/prev.png" alt="Prev"></a><a accesskey="u" href="../index.html"><img src="../../../../../doc/src/images/up.png" alt="Up"></a><a accesskey="h" href="../index.html"><img src="../../../../../doc/src/images/home.png" alt="Home"></a><a accesskey="n" href="disconnecting_the_client.html"><img src="../../../../../doc/src/images/next.png" alt="Next"></a>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="mqtt5.optimising_communication"></a><a class="link" href="optimising_communication.html" title="Optimising Communication">Optimising Communication</a>
+</h2></div></div></div>
+<p>
+      This chapter provides a detailed breakdown of how <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> optimises its
+      communications with the Broker with multiflight mode for simultaneous message
+      handling and strategies for efficient bandwidth usage. These techniques are
+      key to getting the most out of MQTT in scenarios demanding fast and dependable
+      message delivery, all while meeting the protocol's quality of service requirements
+      and network efficiency standards.
+    </p>
+<div class="section">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="mqtt5.optimising_communication.multiflight"></a><a class="link" href="optimising_communication.html#mqtt5.optimising_communication.multiflight" title="The Multiflight Mode">The Multiflight
+      Mode</a>
+</h3></div></div></div>
+<p>
+        The <a href="https://github.com/boostorg/mqtt5/" target="_top">Boost.MQTT5</a> library
+        introduces a multiflight feature. This allows the initiation of multiple
+        asynchronous requests simultaneously, without waiting for the completion
+        of the previous requests. With this feature, you can repeatedly call <a class="link" href="ref/boost__mqtt5__mqtt_client/async_publish.html" title="boost::mqtt5::mqtt_client::async_publish"><code class="literal">mqtt_client::async_publish</code></a>
+        or any similar <code class="computeroutput"><span class="identifier">async_xxx</span></code>
+        function without waiting for the handler invocation of the previous <code class="computeroutput"><span class="identifier">async_xxx</span></code> calls.
+      </p>
+<p>
+        This feature is particularly helpful when using <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> with callbacks,
+        as it allows you to quickly dispatch multiple requests one after the other,
+        instead of nesting them in callbacks.
+      </p>
+<p>
+        Consider the example below, <a class="link" href="ref/boost__mqtt5__mqtt_client/async_publish.html" title="boost::mqtt5::mqtt_client::async_publish"><code class="literal">mqtt_client::async_publish</code></a>
+        with QoS 2 is called <code class="computeroutput"><span class="number">5</span></code> times
+        in a <code class="computeroutput"><span class="keyword">for</span></code> loop. QoS level 2 ensures
+        that each message is delivered exactly once and involves a four-step communication
+        process: sending a <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901100" target="_top"><code class="computeroutput"><span class="identifier">PUBLISH</span></code></a> packet, receiving a <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901131" target="_top"><code class="computeroutput"><span class="identifier">PUBREC</span></code></a> acknowledgement from the
+        Broker, transmitting a <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901141" target="_top"><code class="computeroutput"><span class="identifier">PUBREL</span></code></a> packet, and finally receiving
+        a <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901151" target="_top"><code class="computeroutput"><span class="identifier">PUBCOMP</span></code></a> packet, confirming successful
+        message delivery.
+      </p>
+<p>
+        Despite the complexity of initiating several such message exchange sequences
+        consecutively, the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> will manage
+        all intermediate packet exchanges between the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> and the Broker
+        correctly and complete the message delivery.
+      </p>
+<p>
+        It is important to note that there is no guarantee that the final handlers
+        will be invoked in the same order as the corresponding <code class="computeroutput"><span class="identifier">async_xxx</span></code>
+        calls were initiated.
+      </p>
+<p>
+        Source: <a class="link" href="multiflight_client.html" title="The multiflight Client">multiflight_client.cpp</a>
+      </p>
+<pre class="programlisting"><span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">mqtt5</span><span class="special">/</span><span class="identifier">logger</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">mqtt5</span><span class="special">/</span><span class="identifier">mqtt_client</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">mqtt5</span><span class="special">/</span><span class="identifier">reason_codes</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">mqtt5</span><span class="special">/</span><span class="identifier">types</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">asio</span><span class="special">/</span><span class="identifier">detached</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">asio</span><span class="special">/</span><span class="identifier">io_context</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">asio</span><span class="special">/</span><span class="identifier">ip</span><span class="special">/</span><span class="identifier">tcp</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">asio</span><span class="special">/</span><span class="identifier">signal_set</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">iostream</span><span class="special">&gt;</span>
+<span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">string</span><span class="special">&gt;</span>
+
+<span class="keyword">struct</span> <span class="identifier">config</span> <span class="special">{</span>
+    <span class="identifier">std</span><span class="special">::</span><span class="identifier">string</span> <span class="identifier">brokers</span> <span class="special">=</span> <span class="string">"broker.hivemq.com"</span><span class="special">;</span>
+    <span class="identifier">uint16_t</span> <span class="identifier">port</span> <span class="special">=</span> <span class="number">1883</span><span class="special">;</span>
+    <span class="identifier">std</span><span class="special">::</span><span class="identifier">string</span> <span class="identifier">client_id</span> <span class="special">=</span> <span class="string">"boost_mqtt5_tester"</span><span class="special">;</span>
+<span class="special">};</span>
+
+<span class="keyword">int</span> <span class="identifier">main</span><span class="special">(</span><span class="keyword">int</span> <span class="identifier">argc</span><span class="special">,</span> <span class="keyword">char</span><span class="special">**</span> <span class="identifier">argv</span><span class="special">)</span> <span class="special">{</span>
+    <span class="identifier">config</span> <span class="identifier">cfg</span><span class="special">;</span>
+
+    <span class="keyword">if</span> <span class="special">(</span><span class="identifier">argc</span> <span class="special">==</span> <span class="number">4</span><span class="special">)</span> <span class="special">{</span>
+        <span class="identifier">cfg</span><span class="special">.</span><span class="identifier">brokers</span> <span class="special">=</span> <span class="identifier">argv</span><span class="special">[</span><span class="number">1</span><span class="special">];</span>
+        <span class="identifier">cfg</span><span class="special">.</span><span class="identifier">port</span> <span class="special">=</span> <span class="identifier">uint16_t</span><span class="special">(</span><span class="identifier">std</span><span class="special">::</span><span class="identifier">stoi</span><span class="special">(</span><span class="identifier">argv</span><span class="special">[</span><span class="number">2</span><span class="special">]));</span>
+        <span class="identifier">cfg</span><span class="special">.</span><span class="identifier">client_id</span> <span class="special">=</span> <span class="identifier">argv</span><span class="special">[</span><span class="number">3</span><span class="special">];</span>
+    <span class="special">}</span>
+
+    <span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">io_context</span> <span class="identifier">ioc</span><span class="special">;</span>
+
+    <span class="comment">// Construct the Client with <a href="../../../../../doc/html/boost_asio/reference/ip__tcp/socket.html" target="_top"><code class="literal">boost::asio::ip::tcp::socket</code></a> as the underlying stream and enabled logging.</span>
+    <span class="comment">// Since we are not establishing a secure connection, set the TlsContext template parameter to std::monostate.</span>
+    <span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">mqtt_client</span><span class="special">&lt;</span>
+        <span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">ip</span><span class="special">::</span><span class="identifier">tcp</span><span class="special">::</span><span class="identifier">socket</span><span class="special">,</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">monostate</span> <span class="comment">/* TlsContext */</span><span class="special">,</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">logger</span>
+    <span class="special">&gt;</span> <span class="identifier">client</span><span class="special">(</span><span class="identifier">ioc</span><span class="special">,</span> <span class="special">{}</span> <span class="comment">/* tls_context */</span><span class="special">,</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">logger</span><span class="special">(</span><span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">log_level</span><span class="special">::</span><span class="identifier">info</span><span class="special">));</span>
+
+    <span class="identifier">client</span><span class="special">.</span><span class="identifier">brokers</span><span class="special">(</span><span class="identifier">cfg</span><span class="special">.</span><span class="identifier">brokers</span><span class="special">,</span> <span class="identifier">cfg</span><span class="special">.</span><span class="identifier">port</span><span class="special">)</span> <span class="comment">// Broker that we want to connect to.</span>
+        <span class="special">.</span><span class="identifier">credentials</span><span class="special">(</span><span class="identifier">cfg</span><span class="special">.</span><span class="identifier">client_id</span><span class="special">)</span> <span class="comment">// Set the Client Identifier. (optional)</span>
+        <span class="special">.</span><span class="identifier">async_run</span><span class="special">(</span><span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">detached</span><span class="special">);</span> <span class="comment">// Start the client.</span>
+
+    <span class="comment">// Publish with QoS 2 five times in a row without waiting for the handler</span>
+    <span class="comment">// of the previous async_publish call to be invoked.</span>
+    <span class="keyword">for</span> <span class="special">(</span><span class="keyword">auto</span> <span class="identifier">i</span> <span class="special">=</span> <span class="number">1</span><span class="special">;</span> <span class="identifier">i</span> <span class="special">&lt;=</span> <span class="number">5</span><span class="special">;</span> <span class="special">++</span><span class="identifier">i</span><span class="special">)</span>
+        <span class="identifier">client</span><span class="special">.</span><span class="identifier">async_publish</span><span class="special">&lt;</span><span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">qos_e</span><span class="special">::</span><span class="identifier">exactly_once</span><span class="special">&gt;(</span>
+            <span class="string">"boost-mqtt5/test"</span><span class="special">,</span> <span class="string">"Hello world!"</span><span class="special">,</span>
+            <span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">retain_e</span><span class="special">::</span><span class="identifier">no</span><span class="special">,</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">publish_props</span> <span class="special">{},</span>
+            <span class="special">[</span><span class="identifier">i</span><span class="special">](</span><span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">error_code</span> <span class="identifier">ec</span><span class="special">,</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">reason_code</span> <span class="identifier">rc</span><span class="special">,</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">pubcomp_props</span><span class="special">)</span> <span class="special">{</span>
+                <span class="identifier">std</span><span class="special">::</span><span class="identifier">cout</span> <span class="special">&lt;&lt;</span> <span class="string">"Publish number "</span> <span class="special">&lt;&lt;</span> <span class="identifier">i</span> <span class="special">&lt;&lt;</span> <span class="string">" completed with: "</span> <span class="special">&lt;&lt;</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">endl</span><span class="special">;</span>
+                <span class="identifier">std</span><span class="special">::</span><span class="identifier">cout</span> <span class="special">&lt;&lt;</span> <span class="string">"\t ec: "</span> <span class="special">&lt;&lt;</span> <span class="identifier">ec</span><span class="special">.</span><span class="identifier">message</span><span class="special">()</span> <span class="special">&lt;&lt;</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">endl</span><span class="special">;</span>
+                <span class="identifier">std</span><span class="special">::</span><span class="identifier">cout</span> <span class="special">&lt;&lt;</span> <span class="string">"\t rc: "</span> <span class="special">&lt;&lt;</span> <span class="identifier">rc</span><span class="special">.</span><span class="identifier">message</span><span class="special">()</span> <span class="special">&lt;&lt;</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">endl</span><span class="special">;</span>
+            <span class="special">}</span>
+        <span class="special">);</span>
+
+    <span class="comment">// We can stop the Client by using signals.</span>
+    <span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">signal_set</span> <span class="identifier">signals</span><span class="special">(</span><span class="identifier">ioc</span><span class="special">,</span> <span class="identifier">SIGINT</span><span class="special">,</span> <span class="identifier">SIGTERM</span><span class="special">);</span>
+    <span class="identifier">signals</span><span class="special">.</span><span class="identifier">async_wait</span><span class="special">([&amp;</span><span class="identifier">client</span><span class="special">](</span><span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">error_code</span><span class="special">,</span> <span class="keyword">int</span><span class="special">)</span> <span class="special">{</span>
+        <span class="identifier">client</span><span class="special">.</span><span class="identifier">async_disconnect</span><span class="special">(</span><span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">detached</span><span class="special">);</span>
+    <span class="special">});</span>
+
+    <span class="identifier">ioc</span><span class="special">.</span><span class="identifier">run</span><span class="special">();</span>
+<span class="special">}</span>
+</pre>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="mqtt5.optimising_communication.packet_queuing"></a><a class="link" href="optimising_communication.html#mqtt5.optimising_communication.packet_queuing" title="Efficient Bandwidth Usage With Packet Queuing">Efficient
+      Bandwidth Usage With Packet Queuing</a>
+</h3></div></div></div>
+<p>
+        The <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> employs a
+        strategic queuing mechanism crucial in optimising network usage and performance
+        for the user's requests. This mechanism bundles multiple MQTT packets for
+        transmission within a single TCP packet whenever feasible <a href="#ftn.mqtt5.optimising_communication.packet_queuing.f0" class="footnote" name="mqtt5.optimising_communication.packet_queuing.f0"><sup class="footnote">[2]</sup></a>. This significantly reduces performance overhead, enhances data
+        output, and reduces the latency associated with individual packet transmissions.
+        This results in fast performance and efficient use of network resources.
+      </p>
+<p>
+        Additionally, the queuing mechanism ensures that <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> complies with
+        the <code class="computeroutput"><span class="identifier">Receive</span> <span class="identifier">Maximum</span></code>
+        value set by the Broker. This value is used to implement a send quota to
+        restrict the number of <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901100" target="_top"><code class="computeroutput"><span class="identifier">PUBLISH</span></code></a> packets with QoS &gt; 0
+        that have not received an acknowledgement (<a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901121" target="_top"><code class="computeroutput"><span class="identifier">PUBACK</span></code></a> for QoS 1 and <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901151" target="_top"><code class="computeroutput"><span class="identifier">PUBCOMP</span></code></a> for QoS 2) (see <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901251" target="_top"><code class="computeroutput"><span class="identifier">Flow</span> <span class="identifier">Control</span></code></a>).
+        When <a class="link" href="ref/boost__mqtt5__mqtt_client/async_publish.html" title="boost::mqtt5::mqtt_client::async_publish"><code class="literal">mqtt_client::async_publish</code></a>
+        with QoS &gt; 0 is invoked, <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> evaluates
+        the current count of unacknowledged <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901100" target="_top"><code class="computeroutput"><span class="identifier">PUBLISH</span></code></a> packets against the Broker's
+        <code class="computeroutput"><span class="identifier">Receive</span> <span class="identifier">Maximum</span></code>
+        threshold. If the count is below this threshold, <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> dispatches
+        the <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901100" target="_top"><code class="computeroutput"><span class="identifier">PUBLISH</span></code></a> packet. Otherwise, it remains
+        in the queue until the count decreases below the threshold.
+      </p>
+<p>
+        As a result, in the <a class="link" href="multiflight_client.html" title="The multiflight Client">multiflight_client.cpp</a>
+        example, the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> will transmit
+        all <code class="computeroutput"><span class="number">5</span></code> <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901100" target="_top"><code class="computeroutput"><span class="identifier">PUBLISH</span></code></a> packets in a single TCP
+        packet if possible <a href="#ftn.mqtt5.optimising_communication.packet_queuing.f1" class="footnote" name="mqtt5.optimising_communication.packet_queuing.f1"><sup class="footnote">[3]</sup></a>.
+      </p>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="mqtt5.optimising_communication.packet_ordering"></a><a class="link" href="optimising_communication.html#mqtt5.optimising_communication.packet_ordering" title="Packet Ordering">Packet
+      Ordering</a>
+</h3></div></div></div>
+<p>
+        The <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> uses a packet
+        ordering mechanism to manage the queued packets pending dispatch to the Broker.
+        The most important ordering rules are:
+      </p>
+<p>
+        - The <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901100" target="_top"><code class="computeroutput"><span class="identifier">PUBLISH</span></code></a> packets are transmitted
+        in the order they were initiated through <a class="link" href="ref/boost__mqtt5__mqtt_client/async_publish.html" title="boost::mqtt5::mqtt_client::async_publish"><code class="literal">mqtt_client::async_publish</code></a>
+        calls. This sequential integrity is preserved even in instances requiring
+        packet retransmission, ensuring consistency in message delivery order. However,
+        it is important to note that sequentiality is not preserved between QoS 0
+        and QoS &gt; 0 packets when the Broker sets up the <code class="computeroutput"><span class="identifier">Receive</span>
+        <span class="identifier">Maximum</span></code> value. A Broker can set
+        this value to limit the number of simultaneous QoS &gt; 0 messages they can
+        process, potentially causing QoS 0 messages to be transmitted ahead of QoS
+        &gt; 0 messages in the delivery order.
+      </p>
+<p>
+        - The <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901205" target="_top"><code class="computeroutput"><span class="identifier">DISCONNECT</span></code></a> packet is sent <span class="bold"><strong>in a single TCP packet before any other packets</strong></span> in
+        the queue. See <a class="link" href="disconnecting_the_client.html" title="Disconnecting the Client">Disconnecting
+        the client</a> for more information about disconnecting.
+      </p>
+</div>
+<div class="footnotes">
+<br><hr style="width:100; text-align:left;margin-left: 0">
+<div id="ftn.mqtt5.optimising_communication.packet_queuing.f0" class="footnote"><p><a href="#mqtt5.optimising_communication.packet_queuing.f0" class="para"><sup class="para">[2] </sup></a>
+          Requests are queued and bundled whenever the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> is in progress
+          of writing previous request(s) to the transport.
+        </p></div>
+<div id="ftn.mqtt5.optimising_communication.packet_queuing.f1" class="footnote"><p><a href="#mqtt5.optimising_communication.packet_queuing.f1" class="para"><sup class="para">[3] </sup></a>
+          The Broker's <code class="computeroutput"><span class="identifier">Receive</span> <span class="identifier">Maximum</span></code>
+          is equal to or greater than <code class="computeroutput"><span class="number">5</span></code>.
+        </p></div>
+</div>
+</div>
+<div class="copyright-footer">Copyright © 2023-2025 Mireo<p>
+        Distributed under the Boost Software License, Version 1.0. (See accompanying
+        file LICENSE_1_0.txt or copy at <a href="http://www.boost.org/LICENSE_1_0.txt" target="_top">http://www.boost.org/LICENSE_1_0.txt</a>)
+      </p>
+</div>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="connection_maintenance.html"><img src="../../../../../doc/src/images/prev.png" alt="Prev"></a><a accesskey="u" href="../index.html"><img src="../../../../../doc/src/images/up.png" alt="Up"></a><a accesskey="h" href="../index.html"><img src="../../../../../doc/src/images/home.png" alt="Home"></a><a accesskey="n" href="disconnecting_the_client.html"><img src="../../../../../doc/src/images/next.png" alt="Next"></a>
+</div>
+</body>
+</html>

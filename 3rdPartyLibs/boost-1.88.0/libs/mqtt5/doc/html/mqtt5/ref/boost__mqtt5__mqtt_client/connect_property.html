@@ -1,0 +1,121 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>boost::mqtt5::mqtt_client::connect_property</title>
+<link rel="stylesheet" href="../../../../../../../doc/src/boostbook.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="../../../index.html" title="Chapter 1. Boost.MQTT5: a C++17 MQTT client">
+<link rel="up" href="../boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client">
+<link rel="prev" href="connect_properties.html" title="boost::mqtt5::mqtt_client::connect_properties">
+<link rel="next" href="re_authenticate.html" title="boost::mqtt5::mqtt_client::re_authenticate">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table cellpadding="2" width="100%"><tr>
+<td valign="top"><img alt="Boost C++ Libraries" width="277" height="86" src="../../../../../../../boost.png"></td>
+<td align="center"><a href="../../../../../../../index.html">Home</a></td>
+<td align="center"><a href="../../../../../../../libs/libraries.htm">Libraries</a></td>
+<td align="center"><a href="http://www.boost.org/users/people.html">People</a></td>
+<td align="center"><a href="http://www.boost.org/users/faq.html">FAQ</a></td>
+<td align="center"><a href="../../../../../../../more/index.htm">More</a></td>
+</tr></table>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="connect_properties.html"><img src="../../../../../../../doc/src/images/prev.png" alt="Prev"></a><a accesskey="u" href="../boost__mqtt5__mqtt_client.html"><img src="../../../../../../../doc/src/images/up.png" alt="Up"></a><a accesskey="h" href="../../../index.html"><img src="../../../../../../../doc/src/images/home.png" alt="Home"></a><a accesskey="n" href="re_authenticate.html"><img src="../../../../../../../doc/src/images/next.png" alt="Next"></a>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h5 class="title">
+<a name="mqtt5.ref.boost__mqtt5__mqtt_client.connect_property"></a><a class="link" href="connect_property.html" title="boost::mqtt5::mqtt_client::connect_property">boost::mqtt5::mqtt_client::connect_property</a>
+</h5></div></div></div>
+<p>
+          <a class="indexterm" name="id12435"></a>
+Assign a property that will be sent in a <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901033" target="_top"><code class="computeroutput"><span class="identifier">CONNECT</span></code></a> packet.
+        </p>
+<h6>
+<a name="mqtt5.ref.boost__mqtt5__mqtt_client.connect_property.h0"></a>
+          <span class="phrase"><a name="mqtt5.ref.boost__mqtt5__mqtt_client.connect_property.synopsis"></a></span><a class="link" href="connect_property.html#mqtt5.ref.boost__mqtt5__mqtt_client.connect_property.synopsis">Synopsis</a>
+        </h6>
+<pre class="programlisting"><span class="keyword">template</span><span class="special">&lt;</span>
+    <span class="identifier">prop</span><span class="special">::</span><span class="identifier">property_type</span> <span class="identifier">p</span><span class="special">&gt;</span>
+<a class="link" href="../boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal">boost::mqtt5::mqtt_client</code></a><span class="special">&amp;</span>
+<span class="identifier">connect_property</span><span class="special">(</span>
+    <span class="identifier">std</span><span class="special">::</span><span class="identifier">integral_constant</span><span class="special">&lt;</span> <span class="identifier">prop</span><span class="special">::</span><span class="identifier">property_type</span><span class="special">,</span> <span class="identifier">p</span> <span class="special">&gt;</span> <span class="identifier">prop</span><span class="special">,</span>
+    <a class="link" href="../boost__mqtt5__prop__value_type_t.html" title="boost::mqtt5::prop::value_type_t"><code class="literal">boost::mqtt5::prop::value_type_t</code></a><span class="special">&lt;</span> <span class="identifier">p</span> <span class="special">&gt;</span> <span class="identifier">value</span><span class="special">);</span>
+</pre>
+<h6>
+<a name="mqtt5.ref.boost__mqtt5__mqtt_client.connect_property.h1"></a>
+          <span class="phrase"><a name="mqtt5.ref.boost__mqtt5__mqtt_client.connect_property.parameters"></a></span><a class="link" href="connect_property.html#mqtt5.ref.boost__mqtt5__mqtt_client.connect_property.parameters">Parameters</a>
+        </h6>
+<div class="informaltable"><table class="table">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead><tr>
+<th>
+                  <p>
+                    Name
+                  </p>
+                </th>
+<th>
+                  <p>
+                    Description
+                  </p>
+                </th>
+</tr></thead>
+<tbody>
+<tr>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="identifier">prop</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    The <a class="link" href="../connect_props.html" title="CONNECT properties"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">connect_props</span></code></a>
+                    property to set.
+                  </p>
+                </td>
+</tr>
+<tr>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="identifier">value</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    Value that will be assigned to the property.
+                  </p>
+                </td>
+</tr>
+</tbody>
+</table></div>
+<h6>
+<a name="mqtt5.ref.boost__mqtt5__mqtt_client.connect_property.h2"></a>
+          <span class="phrase"><a name="mqtt5.ref.boost__mqtt5__mqtt_client.connect_property.example"></a></span><a class="link" href="connect_property.html#mqtt5.ref.boost__mqtt5__mqtt_client.connect_property.example">Example</a>
+        </h6>
+<pre class="programlisting"><span class="identifier">client</span><span class="special">.</span><span class="identifier">connect_property</span><span class="special">(</span><span class="identifier">prop</span><span class="special">::</span><span class="identifier">session_expiry_interval</span><span class="special">,</span> <span class="number">40</span><span class="special">);</span> <span class="comment">// ok</span>
+<span class="identifier">client</span><span class="special">.</span><span class="identifier">connect_property</span><span class="special">(</span><span class="identifier">prop</span><span class="special">::</span><span class="identifier">reason_string</span><span class="special">,</span> <span class="string">"reason"</span><span class="special">);</span> <span class="comment">// does not compile, not a CONNECT prop!</span>
+</pre>
+<h6>
+<a name="mqtt5.ref.boost__mqtt5__mqtt_client.connect_property.h3"></a>
+          <span class="phrase"><a name="mqtt5.ref.boost__mqtt5__mqtt_client.connect_property.see_also"></a></span><a class="link" href="connect_property.html#mqtt5.ref.boost__mqtt5__mqtt_client.connect_property.see_also">See
+          Also</a>
+        </h6>
+<p>
+          See <a class="link" href="../connect_props.html" title="CONNECT properties"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">connect_props</span></code></a>
+          for all eligible properties.
+        </p>
+</div>
+<div class="copyright-footer">Copyright © 2023-2025 Mireo<p>
+        Distributed under the Boost Software License, Version 1.0. (See accompanying
+        file LICENSE_1_0.txt or copy at <a href="http://www.boost.org/LICENSE_1_0.txt" target="_top">http://www.boost.org/LICENSE_1_0.txt</a>)
+      </p>
+</div>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="connect_properties.html"><img src="../../../../../../../doc/src/images/prev.png" alt="Prev"></a><a accesskey="u" href="../boost__mqtt5__mqtt_client.html"><img src="../../../../../../../doc/src/images/up.png" alt="Up"></a><a accesskey="h" href="../../../index.html"><img src="../../../../../../../doc/src/images/home.png" alt="Home"></a><a accesskey="n" href="re_authenticate.html"><img src="../../../../../../../doc/src/images/next.png" alt="Next"></a>
+</div>
+</body>
+</html>

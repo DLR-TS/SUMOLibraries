@@ -1,0 +1,168 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Using the mqtt_client in a Multithreaded Environment</title>
+<link rel="stylesheet" href="../../../../../doc/src/boostbook.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="../index.html" title="Chapter 1. Boost.MQTT5: a C++17 MQTT client">
+<link rel="up" href="../index.html" title="Chapter 1. Boost.MQTT5: a C++17 MQTT client">
+<link rel="prev" href="asio_compliance/executors.html" title="Executors">
+<link rel="next" href="examples.html" title="Examples">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table cellpadding="2" width="100%"><tr>
+<td valign="top"><img alt="Boost C++ Libraries" width="277" height="86" src="../../../../../boost.png"></td>
+<td align="center"><a href="../../../../../index.html">Home</a></td>
+<td align="center"><a href="../../../../../libs/libraries.htm">Libraries</a></td>
+<td align="center"><a href="http://www.boost.org/users/people.html">People</a></td>
+<td align="center"><a href="http://www.boost.org/users/faq.html">FAQ</a></td>
+<td align="center"><a href="../../../../../more/index.htm">More</a></td>
+</tr></table>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="asio_compliance/executors.html"><img src="../../../../../doc/src/images/prev.png" alt="Prev"></a><a accesskey="u" href="../index.html"><img src="../../../../../doc/src/images/up.png" alt="Up"></a><a accesskey="h" href="../index.html"><img src="../../../../../doc/src/images/home.png" alt="Home"></a><a accesskey="n" href="examples.html"><img src="../../../../../doc/src/images/next.png" alt="Next"></a>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="mqtt5.multithreading"></a><a class="link" href="multithreading.html" title="Using the mqtt_client in a Multithreaded Environment">Using the mqtt_client in a Multithreaded
+    Environment</a>
+</h2></div></div></div>
+<p>
+      This chapter provides information about thread safety of the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> and other <a href="../../../../../libs/asio/index.html" target="_top">Boost.Asio</a>-compliant objects and
+      provides examples of how to write thread-safe code in multithreaded environments.
+    </p>
+<div class="section">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="mqtt5.multithreading.thread_safety"></a><a class="link" href="multithreading.html#mqtt5.multithreading.thread_safety" title="Thread Safety of ASIO-Compliant Objects">Thread Safety of
+      ASIO-Compliant Objects</a>
+</h3></div></div></div>
+<p>
+        A common misconception exists regarding the "thread safety" of
+        ASIO-compliant asynchronous objects, specifically around the belief that
+        initialising such an object with a <a href="../../../../../doc/html/boost_asio/reference/io_context__strand.html" target="_top"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">io_context</span><span class="special">::</span><span class="identifier">strand</span></code></a> <a href="#ftn.mqtt5.multithreading.thread_safety.f0" class="footnote" name="mqtt5.multithreading.thread_safety.f0"><sup class="footnote">[7]</sup></a> executor allows its asynchronous functions (<code class="computeroutput"><span class="identifier">async_xxx</span></code>)
+        to be freely called from any executor or thread. That is not correct. Those
+        <code class="computeroutput"><span class="identifier">async_xxx</span></code> functions themselves
+        <span class="bold"><strong>must</strong></span> be called from within the same executor.
+      </p>
+<p>
+        Every <code class="computeroutput"><span class="identifier">async_xxx</span></code> function
+        in every ASIO-compliant object begins by executing some initiation code before
+        typically proceeding to call an intermediate lower-level ASIO <code class="computeroutput"><span class="identifier">async_xxx</span></code> function, with an adapted handler
+        serving as the callback. It is worth noting that the thread safety of this
+        initiation code, which is called directly by the <a href="../../../../../doc/html/boost_asio/reference/async_initiate.html" target="_top"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">async_initiate</span></code></a> function and executed
+        by the same executor that called the <code class="computeroutput"><span class="identifier">async_xxx</span></code>
+        function, is not guaranteed and depends on the implementation itself. This
+        uncertainty around thread safety is what the notation "Thread Safety:
+        Shared objects: Unsafe" means, which appears in the documentation for
+        any ASIO-compliant object.
+      </p>
+<p>
+        Consequently, similar to the other ASIO-compliant objects, the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> object <span class="bold"><strong>is not thread-safe</strong></span>. Invoking its member functions
+        concurrently from separate threads will result in a race condition.
+      </p>
+<p>
+        This design choice is intentional and offloads the responsibility of managing
+        concurrency to the user. Given that many applications using <a href="../../../../../libs/asio/index.html" target="_top">Boost.Asio</a>
+        often operate in a single-threaded environment for better performance, ASIO-compliant
+        objects do not want to pay the cost of the overhead associated with mutexes
+        and other synchronization mechanisms. Instead, it encourages developers to
+        implement their own concurrency management strategies, tailoring them to
+        the specific needs of their applications.
+      </p>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="mqtt5.multithreading.executors_threads_strands"></a><a class="link" href="multithreading.html#mqtt5.multithreading.executors_threads_strands" title="Executors, Threads, and Strands">Executors,
+      Threads, and Strands</a>
+</h3></div></div></div>
+<p>
+        Before delving into thread-safe programming, it is essential to understand
+        the distinction between executors and threads. Executors are not threads
+        but mechanisms for scheduling how and when work gets done. An executor can
+        distribute tasks across multiple threads, and a single thread can execute
+        tasks from multiple executors. Thus, when several threads invoke <a href="../../../../../doc/html/boost_asio/reference/io_context/run.html" target="_top"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">io_context</span><span class="special">::</span><span class="identifier">run</span><span class="special">()</span></code></a>
+        on the same <a href="../../../../../doc/html/boost_asio/reference/io_context.html" target="_top"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">io_context</span></code></a>, the underlying executor
+        of that <code class="computeroutput"><span class="identifier">io_context</span></code> has the
+        flexibility to assign tasks to any of those threads.
+      </p>
+<p>
+        A <a href="../../../../../doc/html/boost_asio/reference/io_context__strand.html" target="_top"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">io_context</span><span class="special">::</span><span class="identifier">strand</span></code></a> executor is particularly
+        important in maintaining thread safety and managing multithreading. As outlined
+        earlier, this type of executor guarantees that tasks assigned to it are executed
+        in a serialised manner, preventing concurrent execution. It is important
+        to note that this serialisation does not mean that a single thread handles
+        all tasks within a strand. If the <code class="computeroutput"><span class="identifier">io_context</span></code>
+        associated with a strand operates across multiple threads, these threads
+        can independently undertake tasks within the strand. However, these tasks
+        are executed in a non-concurrent fashion as guaranteed by the strand. Refer
+        to <a href="../../../../../doc/html/boost_asio/overview/core/strands.html" target="_top">Strands:
+        Use Threads Without Explicit Locking</a> for more details.
+      </p>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="mqtt5.multithreading.thread_safe_code"></a><a class="link" href="multithreading.html#mqtt5.multithreading.thread_safe_code" title="Writing Thread-Safe Code">Writing Thread-Safe
+      Code</a>
+</h3></div></div></div>
+<p>
+        As mentioned previously, it is the user's responsibility to ensure that none
+        of the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a>'s member functions
+        are called concurrently from separate threads. To achieve thread safety in
+        a multithreaded environment, all the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a>'s member functions
+        must be executed within the same implicit <a href="#ftn.mqtt5.multithreading.thread_safe_code.f0" class="footnote" name="mqtt5.multithreading.thread_safe_code.f0"><sup class="footnote">[8]</sup></a> or explicit strand.
+      </p>
+<p>
+        Specifically, use <a href="../../../../../doc/html/boost_asio/reference/post.html" target="_top"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">post</span></code></a> or <a href="../../../../../doc/html/boost_asio/reference/dispatch.html" target="_top"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">dispatch</span></code></a> to delegate a function
+        call to a strand, or <a href="../../../../../doc/html/boost_asio/reference/co_spawn.html" target="_top"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">co_spawn</span></code></a> to spawn the coroutine
+        into the strand. For asynchronous functions, this will ensure that the initiation
+        code is executed within the strand in a thread-safe manner. <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a>'s executor
+        must be that same strand. This will guarantee that the entire sequence of
+        operations - the initiation code and any intermediate operation - is carried
+        out within the strand, thereby ensuring thread safety.
+      </p>
+<div class="important"><table border="0" summary="Important">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[Important]" src="../../../../../doc/src/images/important.png"></td>
+<th align="left">Important</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+          To conclude, to achieve thread safety, all the member functions of the
+          <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> <span class="bold"><strong>must</strong></span> be executed in <span class="bold"><strong>the same
+          strand</strong></span>. This strand must be given in the <a class="link" href="ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> constructor.
+        </p></td></tr>
+</table></div>
+<p>
+        The examples below demonstrate how to publish a "Hello World" Application
+        Message in a multithreaded setting using callbacks (<code class="computeroutput"><span class="identifier">post</span></code>/<code class="computeroutput"><span class="identifier">dispatch</span></code>) and coroutines (<code class="computeroutput"><span class="identifier">co_spawn</span></code>):
+      </p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+            <a class="link" href="hello_world_in_multithreaded_env.html" title="Hello World in a multithreaded environment using callbacks">hello_world_in_multithreaded_env.cpp</a>
+          </li>
+<li class="listitem">
+            <a class="link" href="hello_world_in_coro_multithreaded_env.html" title="Hello World in a multithreaded environment using coroutines">hello_world_in_coro_multithreaded_env.cpp</a>
+          </li>
+</ul></div>
+</div>
+<div class="footnotes">
+<br><hr style="width:100; text-align:left;margin-left: 0">
+<div id="ftn.mqtt5.multithreading.thread_safety.f0" class="footnote"><p><a href="#mqtt5.multithreading.thread_safety.f0" class="para"><sup class="para">[7] </sup></a>
+          An executor that provides serialised handler execution.
+        </p></div>
+<div id="ftn.mqtt5.multithreading.thread_safe_code.f0" class="footnote"><p><a href="#mqtt5.multithreading.thread_safe_code.f0" class="para"><sup class="para">[8] </sup></a>
+          Only one thread is calling <a href="../../../../../doc/html/boost_asio/reference/io_context/run.html" target="_top"><code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">io_context</span><span class="special">::</span><span class="identifier">run</span><span class="special">()</span></code></a>.
+        </p></div>
+</div>
+</div>
+<div class="copyright-footer">Copyright © 2023-2025 Mireo<p>
+        Distributed under the Boost Software License, Version 1.0. (See accompanying
+        file LICENSE_1_0.txt or copy at <a href="http://www.boost.org/LICENSE_1_0.txt" target="_top">http://www.boost.org/LICENSE_1_0.txt</a>)
+      </p>
+</div>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="asio_compliance/executors.html"><img src="../../../../../doc/src/images/prev.png" alt="Prev"></a><a accesskey="u" href="../index.html"><img src="../../../../../doc/src/images/up.png" alt="Up"></a><a accesskey="h" href="../index.html"><img src="../../../../../doc/src/images/home.png" alt="Home"></a><a accesskey="n" href="examples.html"><img src="../../../../../doc/src/images/next.png" alt="Next"></a>
+</div>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Per-Operation Cancellation</title>
+<link rel="stylesheet" href="../../../../../../doc/src/boostbook.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="../../index.html" title="Chapter 1. Boost.MQTT5: a C++17 MQTT client">
+<link rel="up" href="../asio_compliance.html" title="Compliance With Boost.Asio">
+<link rel="prev" href="allocators.html" title="Allocators">
+<link rel="next" href="executors.html" title="Executors">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table cellpadding="2" width="100%"><tr>
+<td valign="top"><img alt="Boost C++ Libraries" width="277" height="86" src="../../../../../../boost.png"></td>
+<td align="center"><a href="../../../../../../index.html">Home</a></td>
+<td align="center"><a href="../../../../../../libs/libraries.htm">Libraries</a></td>
+<td align="center"><a href="http://www.boost.org/users/people.html">People</a></td>
+<td align="center"><a href="http://www.boost.org/users/faq.html">FAQ</a></td>
+<td align="center"><a href="../../../../../../more/index.htm">More</a></td>
+</tr></table>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="allocators.html"><img src="../../../../../../doc/src/images/prev.png" alt="Prev"></a><a accesskey="u" href="../asio_compliance.html"><img src="../../../../../../doc/src/images/up.png" alt="Up"></a><a accesskey="h" href="../../index.html"><img src="../../../../../../doc/src/images/home.png" alt="Home"></a><a accesskey="n" href="executors.html"><img src="../../../../../../doc/src/images/next.png" alt="Next"></a>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="mqtt5.asio_compliance.per_op_cancellation"></a><a class="link" href="per_op_cancellation.html" title="Per-Operation Cancellation">Per-Operation
+      Cancellation</a>
+</h3></div></div></div>
+<p>
+        In <a href="../../../../../../libs/asio/index.html" target="_top">Boost.Asio</a>, various objects
+        such as sockets and timers offer the ability to terminate all ongoing asynchronous
+        operations globally through their <code class="computeroutput"><span class="identifier">close</span></code>
+        or <code class="computeroutput"><span class="identifier">cancel</span></code> member functions.
+        Beyond this global cancellation capability, <a href="../../../../../../libs/asio/index.html" target="_top">Boost.Asio</a>
+        also provides mechanisms for cancelling specific asynchronous operations
+        on an individual basis. This individual per-operation cancellation is enabled
+        by specifying that a completion handler has an associated cancellation slot.
+        If the asynchronous operation supports cancellation, then it will install
+        a cancellation handler into the associated slot. The cancellation handler
+        will be invoked when the user emits a cancellation signal into the cancellation
+        slot. See <a href="../../../../../../doc/html/boost_asio/overview/core/cancellation.html" target="_top">Per-Operation
+        Cancellation</a> for more information.
+      </p>
+<p>
+        The utility of per-operation cancellation becomes particularly evident when
+        using <code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">experimental</span><span class="special">::</span><span class="identifier">parallel_group</span></code> to launch work performed
+        in parallel and wait for one or all of the operations to complete. For instance,
+        in a parallel group awaiting the completion of any one operation among several,
+        completing one operation will trigger individual cancellation of all the
+        remaining operations. The same concept applies to the <code class="computeroutput"><span class="identifier">awaitable</span>
+        <span class="keyword">operator</span> <span class="special">||</span></code>,
+        which runs two awaitables in parallel, waiting for one to complete and subsequently
+        cancelling the remaining one. See <a href="../../../../../../doc/html/boost_asio/overview/composition/parallel_group.html" target="_top">Co-ordinating
+        Parallel Operations</a> for more information.
+      </p>
+<p>
+        Within the <a class="link" href="../ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a>, every asynchronous
+        function is designed to support individual per-operation cancellation. This
+        allows for associating of a cancellation slot with any <code class="computeroutput"><span class="identifier">async_xxx</span></code>
+        function call, enabling the emission of a cancellation signal as needed.
+        The impact of emitting a cancellation signal varies depending on the signal
+        type (terminal, total, partial) and the operation being cancelled. Detailed
+        descriptions of how cancellation signals affect each <code class="computeroutput"><span class="identifier">async_xxx</span></code>
+        function are provided in the <span class="emphasis"><em>Per-Operation Cancellation</em></span>
+        paragraph in their respective sections of the <a class="link" href="../ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> reference
+        documentation.
+      </p>
+<h5>
+<a name="mqtt5.asio_compliance.per_op_cancellation.h0"></a>
+        <span class="phrase"><a name="mqtt5.asio_compliance.per_op_cancellation.example_associating_a_cancellati"></a></span><a class="link" href="per_op_cancellation.html#mqtt5.asio_compliance.per_op_cancellation.example_associating_a_cancellati">Example:
+        associating a cancellation slot with an asynchronous operation</a>
+      </h5>
+<p>
+        This example illustrates associating a cancellation slot with a <a class="link" href="../ref/boost__mqtt5__mqtt_client/async_publish.html" title="boost::mqtt5::mqtt_client::async_publish"><code class="literal">mqtt_client::async_publish</code></a>
+        operation and emitting a terminal cancellation signal. Executing this sequence
+        effectively results in the immediate cancellation of the entire client operation,
+        mirroring the outcome of invoking <a class="link" href="../ref/boost__mqtt5__mqtt_client/cancel.html" title="boost::mqtt5::mqtt_client::cancel"><code class="literal">mqtt_client::cancel</code></a>
+        directly.
+      </p>
+<p>
+        If a total or partial cancellation signal were issued instead of a terminal
+        one, the implications would be less severe. In such cases, the cancellation
+        would specifically target resending the <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901100" target="_top"><code class="computeroutput"><span class="identifier">PUBLISH</span></code></a> packet, preventing it from
+        being retransmitted should the client reconnect during the ongoing operation.
+      </p>
+<pre class="programlisting"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">mqtt_client</span><span class="special">&lt;</span><span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">ip</span><span class="special">::</span><span class="identifier">tcp</span><span class="special">::</span><span class="identifier">socket</span><span class="special">&gt;</span> <span class="identifier">client</span><span class="special">(</span><span class="identifier">ioc</span><span class="special">);</span>
+
+<span class="identifier">client</span><span class="special">.</span><span class="identifier">brokers</span><span class="special">(</span><span class="string">"&lt;your-mqtt-broker&gt;"</span><span class="special">,</span> <span class="number">1883</span><span class="special">)</span>
+    <span class="special">.</span><span class="identifier">async_run</span><span class="special">(</span><span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">detached</span><span class="special">);</span>
+
+<span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">cancellation_signal</span> <span class="identifier">signal</span><span class="special">;</span>
+
+<span class="identifier">client</span><span class="special">.</span><span class="identifier">async_publish</span><span class="special">&lt;</span><span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">qos_e</span><span class="special">::</span><span class="identifier">at_least_once</span><span class="special">&gt;(</span>
+    <span class="string">"&lt;topic&gt;"</span><span class="special">,</span> <span class="string">"Hello world!"</span><span class="special">,</span>
+    <span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">retain_e</span><span class="special">::</span><span class="identifier">no</span><span class="special">,</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">publish_props</span> <span class="special">{},</span>
+    <span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">bind_cancellation_slot</span><span class="special">(</span>
+        <span class="identifier">signal</span><span class="special">.</span><span class="identifier">slot</span><span class="special">(),</span>
+        <span class="special">[&amp;</span><span class="identifier">client</span><span class="special">](</span><span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">error_code</span> <span class="identifier">ec</span><span class="special">,</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">reason_code</span> <span class="identifier">rc</span><span class="special">,</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">puback_props</span> <span class="identifier">props</span> <span class="special">)</span> <span class="special">{</span>
+            <span class="identifier">std</span><span class="special">::</span><span class="identifier">cout</span> <span class="special">&lt;&lt;</span> <span class="identifier">ec</span><span class="special">.</span><span class="identifier">message</span><span class="special">()</span> <span class="special">&lt;&lt;</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">endl</span><span class="special">;</span>
+        <span class="special">}</span>
+    <span class="special">)</span>
+<span class="special">);</span>
+
+<span class="identifier">signal</span><span class="special">.</span><span class="identifier">emit</span><span class="special">(</span><span class="identifier">boost</span><span class="special">::</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">cancellation_type_t</span><span class="special">::</span><span class="identifier">terminal</span><span class="special">);</span>
+</pre>
+<div class="section">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="mqtt5.asio_compliance.per_op_cancellation.parallel_group"></a><a class="link" href="per_op_cancellation.html#mqtt5.asio_compliance.per_op_cancellation.parallel_group" title="parallel_group/operator || and asynchronous functions in the mqtt_client">parallel_group/operator
+        || and asynchronous functions in the mqtt_client</a>
+</h4></div></div></div>
+<p>
+          As a result of supporting per-operation cancellation, all the asynchronous
+          functions with the <a class="link" href="../ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a> can be used
+          in <code class="computeroutput"><span class="identifier">parallel_group</span></code> or with
+          <code class="computeroutput"><span class="identifier">awaitable</span> <span class="keyword">operator</span>
+          <span class="special">||</span></code>. This feature is especially beneficial
+          for executing operations that require a timeout mechanism.
+        </p>
+<p>
+          Below are two examples illustrating how to implement a timeout:
+        </p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+              <a class="link" href="../timeout_with_parallel_group.html" title="Timed MQTT operations with parallel group">timeout_with_parallel_group.cpp</a>
+            </li>
+<li class="listitem">
+              <a class="link" href="../timeout_with_awaitable_operators.html" title="Timed MQTT operations with awaitable operators">timeout_with_awaitable_operators.cpp</a>
+            </li>
+</ul></div>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="mqtt5.asio_compliance.per_op_cancellation.protocol_level_cancellation"></a><a class="link" href="per_op_cancellation.html#mqtt5.asio_compliance.per_op_cancellation.protocol_level_cancellation" title="About protocol-level cancellation">About
+        protocol-level cancellation</a>
+</h4></div></div></div>
+<p>
+          In the context of <a class="link" href="../ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a>, the handling
+          of cancellation signals varies across different asynchronous operations.
+          Except for <a class="link" href="../ref/boost__mqtt5__mqtt_client/async_receive.html" title="boost::mqtt5::mqtt_client::async_receive"><code class="literal">mqtt_client::async_receive</code></a>,
+          all other <code class="computeroutput"><span class="identifier">async_xxx</span></code> operations
+          respond to a terminal cancellation signal by invoking <a class="link" href="../ref/boost__mqtt5__mqtt_client/cancel.html" title="boost::mqtt5::mqtt_client::cancel"><code class="literal">mqtt_client::cancel</code></a>.
+          These operations will halt the resending of certain packets for total and
+          partial cancellation signals.
+        </p>
+<p>
+          It is worth noting that cancelling an <code class="computeroutput"><span class="identifier">async_xxx</span></code>
+          operation during an ongoing protocol exchange is not implemented because
+          of a design decision to prevent protocol breaches. For example, if <a class="link" href="../ref/boost__mqtt5__mqtt_client/async_publish.html" title="boost::mqtt5::mqtt_client::async_publish"><code class="literal">mqtt_client::async_publish</code></a>
+          with QoS 2 is in the middle of a communication with the Broker <a href="#ftn.mqtt5.asio_compliance.per_op_cancellation.protocol_level_cancellation.f0" class="footnote" name="mqtt5.asio_compliance.per_op_cancellation.protocol_level_cancellation.f0"><sup class="footnote">[6]</sup></a> and an attempt to cancel it is made, it could lead to a protocol
+          violation. For instance, if the operation is cancelled after a <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901131" target="_top"><code class="computeroutput"><span class="identifier">PUBREC</span></code></a> packet has been received
+          from the Broker but before sending the <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901141" target="_top"><code class="computeroutput"><span class="identifier">PUBREL</span></code></a> packet, that would breach
+          the MQTT protocol by failing to send a necessary packet and leave the connection
+          with the Broker in an invalid state.
+        </p>
+<p>
+          Therefore, the design of <a class="link" href="../ref/boost__mqtt5__mqtt_client.html" title="boost::mqtt5::mqtt_client"><code class="literal"><code class="computeroutput"><span class="identifier">mqtt_client</span></code></code></a>'s cancellation
+          strategy carefully avoids these pitfalls to ensure continuous protocol
+          compliance.
+        </p>
+</div>
+<div class="footnotes">
+<br><hr style="width:100; text-align:left;margin-left: 0">
+<div id="ftn.mqtt5.asio_compliance.per_op_cancellation.protocol_level_cancellation.f0" class="footnote"><p><a href="#mqtt5.asio_compliance.per_op_cancellation.protocol_level_cancellation.f0" class="para"><sup class="para">[6] </sup></a>
+            Publishing with QoS 2 involves sending a <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901100" target="_top"><code class="computeroutput"><span class="identifier">PUBLISH</span></code></a> packet, receiving a
+            <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901131" target="_top"><code class="computeroutput"><span class="identifier">PUBREC</span></code></a> acknowledgement from
+            the Broker, transmitting a <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901141" target="_top"><code class="computeroutput"><span class="identifier">PUBREL</span></code></a> packet, and finally
+            receiving a <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901151" target="_top"><code class="computeroutput"><span class="identifier">PUBCOMP</span></code></a> packet.
+          </p></div>
+</div>
+</div>
+<div class="copyright-footer">Copyright © 2023-2025 Mireo<p>
+        Distributed under the Boost Software License, Version 1.0. (See accompanying
+        file LICENSE_1_0.txt or copy at <a href="http://www.boost.org/LICENSE_1_0.txt" target="_top">http://www.boost.org/LICENSE_1_0.txt</a>)
+      </p>
+</div>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="allocators.html"><img src="../../../../../../doc/src/images/prev.png" alt="Prev"></a><a accesskey="u" href="../asio_compliance.html"><img src="../../../../../../doc/src/images/up.png" alt="Up"></a><a accesskey="h" href="../../index.html"><img src="../../../../../../doc/src/images/home.png" alt="Home"></a><a accesskey="n" href="executors.html"><img src="../../../../../../doc/src/images/next.png" alt="Next"></a>
+</div>
+</body>
+</html>

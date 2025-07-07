@@ -1,0 +1,206 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>AUTH properties</title>
+<link rel="stylesheet" href="../../../../../../doc/src/boostbook.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="../../index.html" title="Chapter 1. Boost.MQTT5: a C++17 MQTT client">
+<link rel="up" href="../../pt02.html" title="Part Two: Reference. ">
+<link rel="prev" href="disconnect_props.html" title="DISCONNECT properties">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table cellpadding="2" width="100%"><tr>
+<td valign="top"><img alt="Boost C++ Libraries" width="277" height="86" src="../../../../../../boost.png"></td>
+<td align="center"><a href="../../../../../../index.html">Home</a></td>
+<td align="center"><a href="../../../../../../libs/libraries.htm">Libraries</a></td>
+<td align="center"><a href="http://www.boost.org/users/people.html">People</a></td>
+<td align="center"><a href="http://www.boost.org/users/faq.html">FAQ</a></td>
+<td align="center"><a href="../../../../../../more/index.htm">More</a></td>
+</tr></table>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="disconnect_props.html"><img src="../../../../../../doc/src/images/prev.png" alt="Prev"></a><a accesskey="u" href="../../pt02.html"><img src="../../../../../../doc/src/images/up.png" alt="Up"></a><a accesskey="h" href="../../index.html"><img src="../../../../../../doc/src/images/home.png" alt="Home"></a>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="mqtt5.ref.auth_props"></a><a class="link" href="auth_props.html" title="AUTH properties">AUTH properties</a>
+</h4></div></div></div>
+<p>
+        The last field in the Variable header of <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901217" target="_top"><code class="computeroutput"><span class="identifier">AUTH</span></code></a> packet is a set of Properties.
+        A set contains a Property Length followed by the Properties. A Property consists
+        of an Identifier and a value.
+      </p>
+<p>
+        This class extends <a class="link" href="boost__mqtt5__prop__properties.html" title="boost::mqtt5::prop::properties"><code class="literal">prop::properties</code></a>,
+        which provides common functionalities for all property classes. Below is
+        a list of possible <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901217" target="_top"><code class="computeroutput"><span class="identifier">AUTH</span></code></a> Properties, along with descriptions
+        of their usage:
+      </p>
+<div class="table">
+<a name="mqtt5.ref.auth_props.auth_props"></a><p class="title"><b>Table 1.17. AUTH properties</b></p>
+<div class="table-contents"><table class="table" summary="AUTH properties">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead><tr>
+<th>
+                <p>
+                  Identifier
+                </p>
+              </th>
+<th>
+                <p>
+                  Value type
+                </p>
+              </th>
+<th>
+                <p>
+                  Description
+                </p>
+              </th>
+</tr></thead>
+<tbody>
+<tr>
+<td>
+                <p>
+                  authentication_method
+                </p>
+              </td>
+<td>
+                <p>
+                  <code class="computeroutput"><span class="identifier">std</span><span class="special">::</span><span class="identifier">string</span></code>
+                </p>
+              </td>
+<td>
+                <p>
+                  A UTF-8 Encoded String containing the name of the authentication
+                  method used for extended authentication.
+                </p>
+              </td>
+</tr>
+<tr>
+<td>
+                <p>
+                  authentication_data
+                </p>
+              </td>
+<td>
+                <p>
+                  <code class="computeroutput"><span class="identifier">std</span><span class="special">::</span><span class="identifier">string</span></code>
+                </p>
+              </td>
+<td>
+                <p>
+                  Binary Data containing authentication data. The contents of the
+                  data are defined by the authentication method.
+                </p>
+              </td>
+</tr>
+<tr>
+<td>
+                <p>
+                  reason_string
+                </p>
+              </td>
+<td>
+                <p>
+                  <code class="computeroutput"><span class="identifier">std</span><span class="special">::</span><span class="identifier">string</span></code>
+                </p>
+              </td>
+<td>
+                <p>
+                  A UTF-8 Encoded String representing the reason associated with
+                  this response.
+                </p>
+              </td>
+</tr>
+<tr>
+<td>
+                <p>
+                  user_property
+                </p>
+              </td>
+<td>
+                <p>
+                  <code class="computeroutput"><span class="identifier">std</span><span class="special">::</span><span class="identifier">vector</span><span class="special">&lt;</span><span class="identifier">std</span><span class="special">::</span><span class="identifier">pair</span><span class="special">&lt;</span><span class="identifier">std</span><span class="special">::</span><span class="identifier">string</span><span class="special">,</span>
+                  <span class="identifier">std</span><span class="special">::</span><span class="identifier">string</span><span class="special">&gt;&gt;</span></code>
+                </p>
+              </td>
+<td>
+                <p>
+                  Name, value pair (<a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901013" target="_top"><code class="computeroutput"><span class="identifier">UTF</span><span class="special">-</span><span class="number">8</span> <span class="identifier">String</span>
+                  <span class="identifier">Pair</span></code></a>) defining
+                  User Property. There can be multiple pairs in one packet. This
+                  property may be used to provide additional diagnostic or other
+                  information.
+                </p>
+              </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<br class="table-break"><h5>
+<a name="mqtt5.ref.auth_props.h0"></a>
+        <span class="phrase"><a name="mqtt5.ref.auth_props.usage"></a></span><a class="link" href="auth_props.html#mqtt5.ref.auth_props.usage">Usage</a>
+      </h5>
+<p>
+        After obtaining an instance of <code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">auth_props</span></code>,
+        the subscript operator can be used to access a Property.
+      </p>
+<p>
+        The Identifiers listed in the table above are available within the <code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">prop</span></code> namespace for Property access.
+      </p>
+<div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="../../../../../../doc/src/images/note.png"></td>
+<th align="left">Note</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+          When accessing a property value, the subscript operator will return a
+          <code class="computeroutput"><span class="identifier">std</span><span class="special">::</span><span class="identifier">optional</span></code> of the value type for all properties,
+          except for <code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">prop</span><span class="special">::</span><span class="identifier">user_property</span></code>, where it will return an
+          instance of <code class="computeroutput"><span class="identifier">std</span><span class="special">::</span><span class="identifier">vector</span><span class="special">&lt;</span><span class="identifier">std</span><span class="special">::</span><span class="identifier">pair</span><span class="special">&lt;</span><span class="identifier">std</span><span class="special">::</span><span class="identifier">string</span><span class="special">,</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">string</span><span class="special">&gt;&gt;</span></code>.
+        </p></td></tr>
+</table></div>
+<h5>
+<a name="mqtt5.ref.auth_props.h1"></a>
+        <span class="phrase"><a name="mqtt5.ref.auth_props.example"></a></span><a class="link" href="auth_props.html#mqtt5.ref.auth_props.example">Example</a>
+      </h5>
+<p>
+        The following example shows how to set a Property value:
+      </p>
+<pre class="programlisting"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">auth_props</span> <span class="identifier">props</span><span class="special">;</span>
+<span class="identifier">props</span><span class="special">[</span><span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">prop</span><span class="special">::</span><span class="identifier">authentication_method</span><span class="special">]</span> <span class="special">=</span> <span class="string">"SCRAM-SHA-1"</span><span class="special">;</span>
+<span class="identifier">props</span><span class="special">[</span><span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">prop</span><span class="special">::</span><span class="identifier">authentication_data</span><span class="special">]</span> <span class="special">=</span> <span class="string">"data"</span><span class="special">;</span>
+<span class="identifier">props</span><span class="special">[</span><span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">prop</span><span class="special">::</span><span class="identifier">user_property</span><span class="special">].</span><span class="identifier">emplace_back</span><span class="special">(</span><span class="string">"name"</span><span class="special">,</span> <span class="string">"value"</span><span class="special">);</span>
+</pre>
+<p>
+        The following example shows how to retrieve a Property value:
+      </p>
+<pre class="programlisting"><span class="identifier">std</span><span class="special">::</span><span class="identifier">optional</span><span class="special">&lt;</span><span class="identifier">std</span><span class="special">::</span><span class="identifier">string</span><span class="special">&gt;</span> <span class="identifier">auth_data</span> <span class="special">=</span> <span class="identifier">props</span><span class="special">[</span><span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">prop</span><span class="special">::</span><span class="identifier">authentication_data</span><span class="special">];</span>
+<span class="keyword">if</span> <span class="special">(</span><span class="identifier">auth_data</span><span class="special">.</span><span class="identifier">has_value</span><span class="special">())</span>
+    <span class="comment">// authentication data property was previously set</span>
+<span class="keyword">else</span>
+    <span class="comment">// authentication data property was not set</span>
+
+<span class="identifier">std</span><span class="special">::</span><span class="identifier">vector</span><span class="special">&lt;</span><span class="identifier">std</span><span class="special">::</span><span class="identifier">pair</span><span class="special">&lt;</span><span class="identifier">std</span><span class="special">::</span><span class="identifier">string</span><span class="special">,</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">string</span><span class="special">&gt;&gt;&amp;</span> <span class="identifier">user_props</span> <span class="special">=</span> <span class="identifier">props</span><span class="special">[</span><span class="identifier">boost</span><span class="special">::</span><span class="identifier">mqtt5</span><span class="special">::</span><span class="identifier">prop</span><span class="special">::</span><span class="identifier">user_property</span><span class="special">];</span>
+<span class="keyword">if</span> <span class="special">(!</span><span class="identifier">user_props</span><span class="special">.</span><span class="identifier">empty</span><span class="special">())</span>
+    <span class="comment">// user property was previously set</span>
+<span class="keyword">else</span>
+    <span class="comment">// user property was not set</span>
+</pre>
+</div>
+<div class="copyright-footer">Copyright © 2023-2025 Mireo<p>
+        Distributed under the Boost Software License, Version 1.0. (See accompanying
+        file LICENSE_1_0.txt or copy at <a href="http://www.boost.org/LICENSE_1_0.txt" target="_top">http://www.boost.org/LICENSE_1_0.txt</a>)
+      </p>
+</div>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="disconnect_props.html"><img src="../../../../../../doc/src/images/prev.png" alt="Prev"></a><a accesskey="u" href="../../pt02.html"><img src="../../../../../../doc/src/images/up.png" alt="Up"></a><a accesskey="h" href="../../index.html"><img src="../../../../../../doc/src/images/home.png" alt="Home"></a>
+</div>
+</body>
+</html>

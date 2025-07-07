@@ -1,0 +1,19 @@
+# Copyright (c) 2022 Klemens Morgenstern
+#
+# Distributed under the Boost Software License, Version 1.0. (See accompanying
+# file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
+
+project : requirements
+  <toolset>msvc:<define>_SCL_SECURE_NO_WARNINGS
+  <target-os>windows:<define>WIN32_LEAN_AND_MEAN
+  <link>static
+;
+
+import testing ;
+
+exe intro       : intro.cpp       /boost//process : <boost.process.fs>boost ;
+exe intro_popen : intro_popen.cpp /boost//process : <boost.process.fs>boost ;
+exe quickstart  : quickstart.cpp  /boost//process : <boost.process.fs>boost ;
+exe env         : env.cpp         /boost//process : <boost.process.fs>boost ;
+exe start_dir   : start_dir.cpp   /boost//process : <boost.process.fs>boost ;
+exe stdio       : stdio.cpp       /boost//process : <boost.process.fs>boost ;
