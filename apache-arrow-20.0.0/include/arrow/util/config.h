@@ -46,7 +46,7 @@
 /* #undef ARROW_JSON */
 #define ARROW_MIMALLOC
 /* #undef ARROW_ORC */
-/* #undef ARROW_PARQUET */
+#define ARROW_PARQUET
 /* #undef ARROW_SUBSTRAIT */
 
 /* #undef ARROW_AZURE */

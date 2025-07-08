@@ -11,9 +11,9 @@ set(ARROW_BUILD_SHARED "ON")
 ### (for informational purposes)
 set(ARROW_PACKAGE_KIND "")
 ### The Arrow git commit id (if any)
-set(ARROW_GIT_ID "027b5499d111de07d0ae0d8830bf215288ea512d")
+set(ARROW_GIT_ID "3973eb0c136f7cb9b902ec7af1b0eb71bde455a9")
 ### The Arrow git commit description (if any)
-set(ARROW_GIT_DESCRIPTION "1.23.0-38-g027b5499d1")
+set(ARROW_GIT_DESCRIPTION "1.23.0-43-g3973eb0c13")
 ### Whether to create position-independent target
 set(ARROW_POSITION_INDEPENDENT_CODE "ON")
 ### Use ccache when compiling (if available)
@@ -122,7 +122,7 @@ set(ARROW_JSON "OFF")
 ### Build the Arrow mimalloc-based allocator
 set(ARROW_MIMALLOC "ON")
 ### Build the Parquet libraries
-set(ARROW_PARQUET "OFF")
+set(ARROW_PARQUET "ON")
 ### Build the Arrow ORC adapter
 set(ARROW_ORC "OFF")
 ### Build some components needed by PyArrow.
