@@ -61,7 +61,7 @@ set(ARROW_FULL_SO_VERSION "2000.0.0")
 set(ARROW_BUNDLED_STATIC_LIBS "mimalloc::mimalloc")
 set(ARROW_INCLUDE_PATH_SUFFIXES "include;Library;Library/include")
 set(ARROW_LIBRARY_PATH_SUFFIXES ";lib/;lib64;lib32;lib;bin;Library;Library/lib;Library/bin")
-set(ARROW_SYSTEM_DEPENDENCIES "ZLIB;BZip2")
+set(ARROW_SYSTEM_DEPENDENCIES "ZLIB;lz4Alt;zstdAlt;BZip2")
 
 include("${CMAKE_CURRENT_LIST_DIR}/ArrowOptions.cmake")
 

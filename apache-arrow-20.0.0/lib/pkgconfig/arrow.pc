@@ -29,6 +29,6 @@ Version: 20.0.0
 Requires:
 Requires.private:
 Libs: -L${libdir} -larrow
-Libs.private:
+Libs.private: -larrow_bundled_dependencies D:/SUMOLibraries/3rdPartyLibs/bzip2-1.1.0/lib/bz2.lib
 Cflags: -I${includedir}
-Cflags.private:
+Cflags.private: -DARROW_STATIC

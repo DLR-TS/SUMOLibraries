@@ -16,5 +16,15 @@ set_target_properties(Parquet::parquet_shared PROPERTIES
 list(APPEND _cmake_import_check_targets Parquet::parquet_shared )
 list(APPEND _cmake_import_check_files_for_Parquet::parquet_shared "${_IMPORT_PREFIX}/lib/parquet.lib" "${_IMPORT_PREFIX}/bin/parquet.dll" )
 
+# Import target "Parquet::parquet_static" for configuration "Release"
+set_property(TARGET Parquet::parquet_static APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(Parquet::parquet_static PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/parquet_static.lib"
+  )
+
+list(APPEND _cmake_import_check_targets Parquet::parquet_static )
+list(APPEND _cmake_import_check_files_for_Parquet::parquet_static "${_IMPORT_PREFIX}/lib/parquet_static.lib" )
+
 # Commands beyond this point should not need to know the version.
 set(CMAKE_IMPORT_FILE_VERSION)

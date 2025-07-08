@@ -19,7 +19,7 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 set(_cmake_targets_defined "")
 set(_cmake_targets_not_defined "")
 set(_cmake_expected_targets "")
-foreach(_cmake_expected_target IN ITEMS Arrow::arrow_shared)
+foreach(_cmake_expected_target IN ITEMS Arrow::arrow_shared Arrow::arrow_static)
   list(APPEND _cmake_expected_targets "${_cmake_expected_target}")
   if(TARGET "${_cmake_expected_target}")
     list(APPEND _cmake_targets_defined "${_cmake_expected_target}")
@@ -62,6 +62,16 @@ set_target_properties(Arrow::arrow_shared PROPERTIES
   INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "ws2_32"
+)
+
+# Create imported target Arrow::arrow_static
+add_library(Arrow::arrow_static STATIC IMPORTED)
+
+set_target_properties(Arrow::arrow_static PROPERTIES
+  INTERFACE_COMPILE_DEFINITIONS "ARROW_STATIC;ARROW_FLIGHT_STATIC;ARROW_FLIGHT_SQL_STATIC;ARROW_STATIC"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
+  INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
+  INTERFACE_LINK_LIBRARIES "Arrow::arrow_bundled_dependencies;BZip2::BZip2;LZ4::lz4;ZLIB::ZLIB;zstd::libzstd_shared;Threads::Threads;ws2_32"
 )
 
 # Load information for each installed configuration.

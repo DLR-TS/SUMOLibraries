@@ -30,4 +30,4 @@ Requires: arrow
 Requires.private:
 Libs: -L${libdir} -lparquet
 Cflags: -I${includedir}
-Cflags.private:
+Cflags.private: -DPARQUET_STATIC

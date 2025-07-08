@@ -4,16 +4,16 @@
 ### Compiler flags to append when compiling Arrow
 set(ARROW_CXXFLAGS "")
 ### Build static libraries
-set(ARROW_BUILD_STATIC "OFF")
+set(ARROW_BUILD_STATIC "ON")
 ### Build shared libraries
 set(ARROW_BUILD_SHARED "ON")
 ### Arbitrary string that identifies the kind of package
 ### (for informational purposes)
 set(ARROW_PACKAGE_KIND "")
 ### The Arrow git commit id (if any)
-set(ARROW_GIT_ID "3973eb0c136f7cb9b902ec7af1b0eb71bde455a9")
+set(ARROW_GIT_ID "3887eced437b94de91934ebaf8d4237212a72be9")
 ### The Arrow git commit description (if any)
-set(ARROW_GIT_DESCRIPTION "1.23.0-43-g3973eb0c13")
+set(ARROW_GIT_DESCRIPTION "1.23.0-48-g3887eced43")
 ### Whether to create position-independent target
 set(ARROW_POSITION_INDEPENDENT_CODE "ON")
 ### Use ccache when compiling (if available)
@@ -185,13 +185,13 @@ set(ARROW_WITH_BROTLI "OFF")
 ### Build with BZ2 compression
 set(ARROW_WITH_BZ2 "ON")
 ### Build with lz4 compression
-set(ARROW_WITH_LZ4 "OFF")
+set(ARROW_WITH_LZ4 "ON")
 ### Build with Snappy compression
 set(ARROW_WITH_SNAPPY "OFF")
 ### Build with zlib compression
 set(ARROW_WITH_ZLIB "ON")
 ### Build with zstd compression
-set(ARROW_WITH_ZSTD "OFF")
+set(ARROW_WITH_ZSTD "ON")
 ### Build with support for Unicode properties using the utf8proc library
 ### (only used if ARROW_COMPUTE is ON or ARROW_GANDIVA is ON)
 set(ARROW_WITH_UTF8PROC "OFF")

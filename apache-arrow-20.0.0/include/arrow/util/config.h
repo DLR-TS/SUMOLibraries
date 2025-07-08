@@ -58,12 +58,12 @@
 /* #undef ARROW_USE_NATIVE_INT128 */
 /* #undef ARROW_WITH_BROTLI */
 #define ARROW_WITH_BZ2
-/* #undef ARROW_WITH_LZ4 */
+#define ARROW_WITH_LZ4
 /* #undef ARROW_WITH_MUSL */
 /* #undef ARROW_WITH_OPENTELEMETRY */
 /* #undef ARROW_WITH_RE2 */
 /* #undef ARROW_WITH_SNAPPY */
 /* #undef ARROW_WITH_UTF8PROC */
 #define ARROW_WITH_ZLIB
-/* #undef ARROW_WITH_ZSTD */
+#define ARROW_WITH_ZSTD
 /* #undef PARQUET_REQUIRE_ENCRYPTION */
