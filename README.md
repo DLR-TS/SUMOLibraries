@@ -29,6 +29,7 @@ And other auxiliary third-party libraries:
 
 | Library    | License                                 | Link                                           |
 |------------|-----------------------------------------|------------------------------------------------|
+| boost      | Boost Software License 1.0              | <https://www.boost.org>                        |
 | bzip2      | BSD-style license                       | <https://sourceware.org/bzip2/>                |
 | curl       | curl (MIT-like license)                 | <https://curl.se>                              |
 | freeglut   | X-Consortium License                    | <http://freeglut.sourceforge.net>              |
