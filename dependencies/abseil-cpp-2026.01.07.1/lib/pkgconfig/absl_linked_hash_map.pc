@@ -1,0 +1,12 @@
+prefix=D:/SUMOLibraries/dependencies/abseil-cpp-2026.01.07.1
+exec_prefix=${prefix}
+libdir=D:/SUMOLibraries/dependencies/abseil-cpp-2026.01.07.1/lib
+includedir=D:/SUMOLibraries/dependencies/abseil-cpp-2026.01.07.1/include
+
+Name: absl_linked_hash_map
+Description: Abseil linked_hash_map library
+URL: https://abseil.io/
+Version: 20260107
+Requires: absl_container_common = 20260107, absl_config = 20260107, absl_core_headers = 20260107, absl_flat_hash_set = 20260107, absl_throw_delegate = 20260107
+Libs: -L${libdir}  -ignore:4221
+Cflags: -I${includedir} /W3 /bigobj /wd4005 /wd4068 /wd4180 /wd4503 /wd4800 /DNOMINMAX /DWIN32_LEAN_AND_MEAN /D_CRT_SECURE_NO_WARNINGS /D_SCL_SECURE_NO_WARNINGS /D_ENABLE_EXTENDED_ALIGNED_STORAGE

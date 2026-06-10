@@ -1,0 +1,14 @@
+prefix=D:/SUMOLibraries/dependencies/minizip-ng-4.2.1
+exec_prefix=D:/SUMOLibraries/dependencies/minizip-ng-4.2.1
+libdir=D:/SUMOLibraries/dependencies/minizip-ng-4.2.1/lib
+sharedlibdir=D:/SUMOLibraries/dependencies/minizip-ng-4.2.1/lib
+includedir=D:/SUMOLibraries/dependencies/minizip-ng-4.2.1/include/minizip
+
+Name: minizip
+Description: Zip manipulation library
+Version: 4.2.1
+
+Requires.private: zlib openssl
+Libs: -L${libdir} -L${sharedlibdir} -lminizip
+Libs.private: -lbz2
+Cflags: -I${includedir}

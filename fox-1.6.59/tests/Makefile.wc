@@ -126,7 +126,7 @@ bitmapviewer.exe: $(FOXLIB) bitmapviewer.obj
 	$(LD) $(LDFLAGS) bitmapviewer.obj $(FOXLIB)
 
 imageviewer.exe: $(FOXLIB) imageviewer.obj
-	$(LD) $(LDFLAGS) imageviewer.obj $(FOXLIB) #libpng.lib zlib.lib libjpeg.lib libtiff.lib
+	$(LD) $(LDFLAGS) imageviewer.obj $(FOXLIB) #libpng.lib z.lib libjpeg.lib libtiff.lib
 
 button.exe: $(FOXLIB) button.obj
 	$(LD) $(LDFLAGS) button.obj $(FOXLIB)

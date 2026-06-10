@@ -1,0 +1,12 @@
+prefix=D:/SUMOLibraries/dependencies/abseil-cpp-2026.01.07.1
+exec_prefix=${prefix}
+libdir=D:/SUMOLibraries/dependencies/abseil-cpp-2026.01.07.1/lib
+includedir=D:/SUMOLibraries/dependencies/abseil-cpp-2026.01.07.1/include
+
+Name: absl_bad_optional_access
+Description: Abseil bad_optional_access library
+URL: https://abseil.io/
+Version: 20260107
+Requires:
+Libs: -L${libdir}  
+Cflags: -I${includedir}

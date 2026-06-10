@@ -105,7 +105,7 @@ datatarget.exe: $(FOXLIB) datatarget.obj
 	$(LD) $(LDFLAGS) datatarget.obj $(FOXLIB)
 
 imageviewer.exe: $(FOXLIB) imageviewer.obj
-	$(LD) $(LDFLAGS) imageviewer.obj $(FOXLIB) #libpng.lib zlib.lib libjpeg.lib libtiff.lib
+	$(LD) $(LDFLAGS) imageviewer.obj $(FOXLIB) #libpng.lib z.lib libjpeg.lib libtiff.lib
 
 hello.exe: $(FOXLIB) hello.obj
 	$(LD) $(LDFLAGS) hello.obj $(FOXLIB)

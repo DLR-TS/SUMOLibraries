@@ -1,0 +1,11 @@
+prefix=D:/SUMOLibraries/dependencies/abseil-cpp-2026.01.07.1
+exec_prefix=${prefix}
+libdir=D:/SUMOLibraries/dependencies/abseil-cpp-2026.01.07.1/lib
+includedir=D:/SUMOLibraries/dependencies/abseil-cpp-2026.01.07.1/include
+
+Name: abseil_dll
+Description: Abseil DLL library
+URL: https://abseil.io/
+Version: 20260107
+Libs: -L${libdir} -labseil_dll 
+Cflags: -I${includedir}
