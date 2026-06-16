@@ -9,6 +9,6 @@ Version: 2.15.3
 Description: libXML library version2.
 Requires.private: 
 Libs: -L${libdir} -lxml2 
-Libs.private: -lz  -liconv   -lbcrypt  
+Libs.private:  -liconv   -lbcrypt  
 Cflags: -I${includedir}/libxml2 
 Cflags.private: -DLIBXML_STATIC

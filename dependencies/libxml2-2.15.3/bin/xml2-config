@@ -86,7 +86,7 @@ while test $# -gt 0; do
             shift
             libs="-lxml2 "
         else
-            libs="-lxml2 -lz  -liconv   -lbcrypt  "
+            libs="-lxml2  -liconv   -lbcrypt  "
         fi
 
         if [ "${prefix}/lib" != "/usr/lib" -a "${prefix}/lib" != "/usr/lib64" ]; then

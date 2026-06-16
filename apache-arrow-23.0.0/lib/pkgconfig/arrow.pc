@@ -15,7 +15,7 @@
 # specific language governing permissions and limitations
 # under the License.
 
-prefix=D:/SUMOLibraries/apache-arrow-23.0.0
+prefix=D:/SUMOLibraries_MSVC/apache-arrow-23.0.0
 includedir=${prefix}/include
 libdir=${prefix}/lib
 
@@ -29,6 +29,6 @@ Version: 23.0.0
 Requires:
 Requires.private:
 Libs: -L${libdir} -larrow
-Libs.private: -larrow_bundled_dependencies D:/SUMOLibraries/dependencies/bzip2-1.1.0/lib/bz2d.lib
+Libs.private:
 Cflags: -I${includedir}
-Cflags.private: -DARROW_STATIC
+Cflags.private:

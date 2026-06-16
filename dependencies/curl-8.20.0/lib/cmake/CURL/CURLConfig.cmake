@@ -190,11 +190,11 @@ endif()
 # For compatibility with CMake's FindCURL.cmake
 set(CURL_VERSION_STRING "8.20.0")
 set(CURL_LIBRARIES CURL::libcurl)
-set(CURL_LIBRARIES_PRIVATE "D:/SUMOLibraries/dependencies/openssl-4.0.0/lib/libssl.lib;D:/SUMOLibraries/dependencies/openssl-4.0.0/lib/libcrypto.lib;D:/SUMOLibraries/dependencies/openssl-4.0.0/lib/libcrypto.lib;D:/SUMOLibraries/zlib-1.3.2/lib/z.lib;D:/SUMOLibraries/dependencies/zstd-1.5.7/lib/zstd.lib;wldap32;normaliz;bcrypt;advapi32;crypt32;ws2_32;iphlpapi")
+set(CURL_LIBRARIES_PRIVATE "D:/SUMOLibraries_MSVC/dependencies/openssl-4.0.1/lib/libssl.lib;D:/SUMOLibraries_MSVC/dependencies/openssl-4.0.1/lib/libcrypto.lib;D:/SUMOLibraries_MSVC/dependencies/openssl-4.0.1/lib/libcrypto.lib;D:/SUMOLibraries_MSVC/zlib-1.3.2/lib/z.lib;D:/SUMOLibraries_MSVC/dependencies/compression/zstd-1.5.7/lib/zstd.lib;wldap32;bcrypt;advapi32;crypt32;ws2_32;iphlpapi")
 set_and_check(CURL_INCLUDE_DIRS "${PACKAGE_PREFIX_DIR}/include")
 
 set(CURL_SUPPORTED_PROTOCOLS "DICT;FILE;FTP;FTPS;GOPHER;GOPHERS;HTTP;HTTPS;IMAP;IMAPS;IPFS;IPNS;LDAP;LDAPS;MQTT;MQTTS;POP3;POP3S;RTSP;SMTP;SMTPS;TELNET;TFTP;WS;WSS")
-set(CURL_SUPPORTED_FEATURES "alt-svc;AsynchDNS;HSTS;HTTPS-proxy;IDN;IPv6;Largefile;libz;SSL;threadsafe;TLS-SRP;UnixSockets;zstd")
+set(CURL_SUPPORTED_FEATURES "alt-svc;AsynchDNS;HSTS;HTTPS-proxy;IPv6;Largefile;libz;SSL;threadsafe;TLS-SRP;UnixSockets;zstd")
 
 foreach(_curl_item IN LISTS CURL_SUPPORTED_PROTOCOLS CURL_SUPPORTED_FEATURES)
   set(CURL_SUPPORTS_${_curl_item} TRUE)

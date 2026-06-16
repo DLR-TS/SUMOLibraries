@@ -1,0 +1,11 @@
+prefix=D:/SUMOLibraries_MSVC/dependencies/google/protobuf-35.1
+exec_prefix=D:/SUMOLibraries_MSVC/dependencies/google/protobuf-35.1
+libdir=D:/SUMOLibraries_MSVC/dependencies/google/protobuf-35.1/lib
+includedir=D:/SUMOLibraries_MSVC/dependencies/google/protobuf-35.1/include
+
+Name: UTF8 Range
+Description: Google's UTF8 Library
+Version: 1.0
+Requires: absl_strings
+Libs: -L${libdir} -lutf8_validity -lutf8_range 
+Cflags: -I${includedir}

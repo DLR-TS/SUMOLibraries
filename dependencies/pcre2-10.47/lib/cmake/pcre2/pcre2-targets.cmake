@@ -19,7 +19,7 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 set(_cmake_targets_defined "")
 set(_cmake_targets_not_defined "")
 set(_cmake_expected_targets "")
-foreach(_cmake_expected_target IN ITEMS pcre2::pcre2-8-shared pcre2::pcre2-posix-shared pcre2::pcre2-16-shared pcre2::pcre2-32-shared pcre2::pcre2grep)
+foreach(_cmake_expected_target IN ITEMS pcre2::pcre2-8-shared pcre2::pcre2-posix-shared)
   list(APPEND _cmake_expected_targets "${_cmake_expected_target}")
   if(TARGET "${_cmake_expected_target}")
     list(APPEND _cmake_targets_defined "${_cmake_expected_target}")
@@ -70,23 +70,6 @@ set_target_properties(pcre2::pcre2-posix-shared PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "pcre2::pcre2-8-shared"
 )
-
-# Create imported target pcre2::pcre2-16-shared
-add_library(pcre2::pcre2-16-shared SHARED IMPORTED)
-
-set_target_properties(pcre2::pcre2-16-shared PROPERTIES
-  INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-)
-
-# Create imported target pcre2::pcre2-32-shared
-add_library(pcre2::pcre2-32-shared SHARED IMPORTED)
-
-set_target_properties(pcre2::pcre2-32-shared PROPERTIES
-  INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-)
-
-# Create imported target pcre2::pcre2grep
-add_executable(pcre2::pcre2grep IMPORTED)
 
 # Load information for each installed configuration.
 file(GLOB _cmake_config_files "${CMAKE_CURRENT_LIST_DIR}/pcre2-targets-*.cmake")

@@ -1,0 +1,14 @@
+prefix=D:/SUMOLibraries_MSVC/dependencies/compression/minizip-ng-4.2.1
+exec_prefix=D:/SUMOLibraries_MSVC/dependencies/compression/minizip-ng-4.2.1
+libdir=D:/SUMOLibraries_MSVC/dependencies/compression/minizip-ng-4.2.1/lib
+sharedlibdir=D:/SUMOLibraries_MSVC/dependencies/compression/minizip-ng-4.2.1/lib
+includedir=D:/SUMOLibraries_MSVC/dependencies/compression/minizip-ng-4.2.1/include/minizip
+
+Name: minizip
+Description: Zip manipulation library
+Version: 4.2.1
+
+Requires.private: zlib-ng
+Libs: -L${libdir} -L${sharedlibdir} -lminizip
+Libs.private: -lbz2 -llzma -lzstd
+Cflags: -I${includedir}

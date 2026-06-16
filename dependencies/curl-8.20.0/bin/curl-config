@@ -25,7 +25,7 @@
 
 # shellcheck disable=SC2006
 
-prefix='D:/SUMOLibraries/dependencies/curl-8.20.0'
+prefix='D:/SUMOLibraries_MSVC/dependencies/curl-8.20.0'
 # Used in 'libdir'
 # shellcheck disable=SC2034
 exec_prefix="${prefix}"
@@ -74,7 +74,7 @@ while test "$#" -gt 0; do
     ;;
 
   --cc)
-    echo 'C:/Microsoft Visual Studio/2026/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/cl.exe'
+    echo 'C:/Microsoft Visual Studio/2026/Community/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/cl.exe'
     ;;
 
   --prefix)
@@ -82,7 +82,7 @@ while test "$#" -gt 0; do
     ;;
 
   --feature|--features)
-    for feature in alt-svc AsynchDNS HSTS HTTPS-proxy IDN IPv6 Largefile libz SSL threadsafe TLS-SRP UnixSockets zstd ''; do
+    for feature in alt-svc AsynchDNS HSTS HTTPS-proxy IPv6 Largefile libz SSL threadsafe TLS-SRP UnixSockets zstd ''; do
       test -n "$feature" && echo "$feature"
     done
     ;;
@@ -155,7 +155,7 @@ while test "$#" -gt 0; do
       curllibdir=''
     fi
     if test 'yes' = 'no'; then
-      echo "${curllibdir}-lcurl -lssl -lcrypto -lcrypto D:/SUMOLibraries/zlib-1.3.2/lib/z.lib D:/SUMOLibraries/dependencies/zstd-1.5.7/lib/zstd.lib -lwldap32 -lnormaliz -lbcrypt -ladvapi32 -lcrypt32 -lws2_32 -liphlpapi"
+      echo "${curllibdir}-lcurl -lssl -lcrypto -lcrypto D:/SUMOLibraries_MSVC/zlib-1.3.2/lib/z.lib D:/SUMOLibraries_MSVC/dependencies/compression/zstd-1.5.7/lib/zstd.lib -lwldap32 -lbcrypt -ladvapi32 -lcrypt32 -lws2_32 -liphlpapi"
     else
       echo "${curllibdir}-lcurl"
     fi
@@ -167,7 +167,7 @@ while test "$#" -gt 0; do
 
   --static-libs)
     if test 'no' != 'no'; then
-      echo "${exec_prefix}/lib/libcurl.lib -LD:/SUMOLibraries/dependencies/openssl-4.0.0/lib -lssl -lcrypto -lcrypto D:/SUMOLibraries/zlib-1.3.2/lib/z.lib D:/SUMOLibraries/dependencies/zstd-1.5.7/lib/zstd.lib -lwldap32 -lnormaliz -lbcrypt -ladvapi32 -lcrypt32 -lws2_32 -liphlpapi"
+      echo "${exec_prefix}/lib/libcurl.lib -LD:/SUMOLibraries_MSVC/dependencies/openssl-4.0.1/lib -lssl -lcrypto -lcrypto D:/SUMOLibraries_MSVC/zlib-1.3.2/lib/z.lib D:/SUMOLibraries_MSVC/dependencies/compression/zstd-1.5.7/lib/zstd.lib -lwldap32 -lbcrypt -ladvapi32 -lcrypt32 -lws2_32 -liphlpapi"
     else
       echo 'curl was built with static libraries disabled' >&2
       exit 1

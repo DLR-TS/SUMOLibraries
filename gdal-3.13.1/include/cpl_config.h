@@ -10,7 +10,7 @@
 #endif
 
 /* --prefix directory for GDAL install */
-#define GDAL_PREFIX "D:/SUMOLibraries/gdal-3.13.1"
+#define GDAL_PREFIX "D:/SUMOLibraries_MSVC/gdal-3.13.1"
 
 /* The size of `int', as computed by sizeof. */
 #define SIZEOF_INT 4
@@ -95,7 +95,7 @@
 #define HAVE_GETCWD 1
 
 /* Define if you have the iconv() function and it works. */
-/* #undef HAVE_ICONV */
+#define HAVE_ICONV 1
 
 /* Define to 1 if the system has the type `__uint128_t'. */
 /* #undef HAVE_UINT128_T */

@@ -15,10 +15,10 @@ mark_as_advanced(boost_filesystem_DIR)
 get_filename_component(_BOOST_CMAKEDIR "${CMAKE_CURRENT_LIST_DIR}/../" REALPATH)
 
 # If the computed and the original directories are symlink-equivalent, use original
-if(EXISTS "D:/SUMOLibraries/boost-1.91.0/lib/cmake")
-  get_filename_component(_BOOST_CMAKEDIR_ORIGINAL "D:/SUMOLibraries/boost-1.91.0/lib/cmake" REALPATH)
+if(EXISTS "D:/SUMOLibraries_MSVC/boost-1.91.0/lib/cmake")
+  get_filename_component(_BOOST_CMAKEDIR_ORIGINAL "D:/SUMOLibraries_MSVC/boost-1.91.0/lib/cmake" REALPATH)
   if(_BOOST_CMAKEDIR STREQUAL _BOOST_CMAKEDIR_ORIGINAL)
-    set(_BOOST_CMAKEDIR "D:/SUMOLibraries/boost-1.91.0/lib/cmake")
+    set(_BOOST_CMAKEDIR "D:/SUMOLibraries_MSVC/boost-1.91.0/lib/cmake")
   endif()
   unset(_BOOST_CMAKEDIR_ORIGINAL)
 endif()

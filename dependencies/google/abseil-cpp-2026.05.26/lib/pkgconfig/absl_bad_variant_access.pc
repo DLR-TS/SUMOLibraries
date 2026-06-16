@@ -1,0 +1,12 @@
+prefix=D:/SUMOLibraries_MSVC/dependencies/google/abseil-cpp-2026.05.26
+exec_prefix=${prefix}
+libdir=D:/SUMOLibraries_MSVC/dependencies/google/abseil-cpp-2026.05.26/lib
+includedir=D:/SUMOLibraries_MSVC/dependencies/google/abseil-cpp-2026.05.26/include
+
+Name: absl_bad_variant_access
+Description: Abseil bad_variant_access library
+URL: https://abseil.io/
+Version: 20260526
+Requires:
+Libs: -L${libdir}  
+Cflags: -I${includedir}

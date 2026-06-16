@@ -15,7 +15,7 @@
 # specific language governing permissions and limitations
 # under the License.
 
-prefix=D:/SUMOLibraries/apache-arrow-23.0.0
+prefix=D:/SUMOLibraries_MSVC/apache-arrow-23.0.0
 includedir=${prefix}/include
 libdir=${prefix}/lib
 
@@ -30,4 +30,4 @@ Requires: arrow
 Requires.private:
 Libs: -L${libdir} -lparquet
 Cflags: -I${includedir}
-Cflags.private: -DPARQUET_STATIC
+Cflags.private:

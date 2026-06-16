@@ -1,8 +1,8 @@
 CONFIG_VERSION=3.13.1
-CONFIG_INST_PREFIX=D:/SUMOLibraries/gdal-3.13.1
-CONFIG_INST_LIBS=-LIBPATH:D:/SUMOLibraries/gdal-3.13.1/lib gdal
-CONFIG_INST_CFLAGS=-ID:/SUMOLibraries/gdal-3.13.1/include
-CONFIG_INST_DATA=D:/SUMOLibraries/gdal-3.13.1/share/gdal
+CONFIG_INST_PREFIX=D:/SUMOLibraries_MSVC/gdal-3.13.1
+CONFIG_INST_LIBS=-LIBPATH:D:/SUMOLibraries_MSVC/gdal-3.13.1/lib gdal
+CONFIG_INST_CFLAGS=-ID:/SUMOLibraries_MSVC/gdal-3.13.1/include
+CONFIG_INST_DATA=D:/SUMOLibraries_MSVC/gdal-3.13.1/share/gdal
 prefix=${CONFIG_INST_PREFIX}
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
@@ -13,5 +13,5 @@ Name: libgdal
 Description: Geospatial Data Abstraction Library
 Version: ${CONFIG_VERSION}
 Libs: ${CONFIG_INST_LIBS}
-Libs.private: D:/SUMOLibraries/dependencies/openssl-4.0.0/lib/libssl.lib D:/SUMOLibraries/dependencies/openssl-4.0.0/lib/libcrypto.lib crypt32 D:/SUMOLibraries/dependencies/lz4-1.10.0/lib/lz4.lib wbemuuid ws2_32 D:/SUMOLibraries/dependencies/zstd-1.5.7/lib/zstdd.lib D:/SUMOLibraries/dependencies/pcre2-10.47/lib/pcre2-8.lib D:/SUMOLibraries/libspatialite-5.1.0/lib/spatialite_i.lib D:/SUMOLibraries/dependencies/sqlite-3.53.1/lib/sqlite3.lib D:/SUMOLibraries/xerces-c-3.3.0/lib/xerces-c_3.lib legacy_stdio_definitions.lib odbccp32.lib D:/SUMOLibraries/dependencies/freexl-2.0.0/lib/freexl_i.lib D:/SUMOLibraries/dependencies/libexpat-2.8.1/lib/libexpat.lib D:/SUMOLibraries/dependencies/libxml2-2.15.3/lib/libxml2.lib D:/SUMOLibraries/geos-3.14.1/lib/geos_cd.lib D:/SUMOLibraries/dependencies/curl-8.20.0/lib/libcurl_imp.lib psapi D:/SUMOLibraries/proj-9.8.0/lib/proj_d.lib D:/SUMOLibraries/zlib-1.3.2/lib/z.lib
+Libs.private: D:/SUMOLibraries_MSVC/gettext-1.0/lib/iconv.dll.lib D:/SUMOLibraries_MSVC/gettext-1.0/lib/charset.dll.lib D:/SUMOLibraries_MSVC/dependencies/openssl-4.0.1/lib/libssl.lib D:/SUMOLibraries_MSVC/dependencies/openssl-4.0.1/lib/libcrypto.lib crypt32 D:/SUMOLibraries_MSVC/dependencies/compression/lz4-1.10.0/lib/lz4.lib wbemuuid ws2_32 D:/SUMOLibraries_MSVC/dependencies/compression/zstd-1.5.7/lib/zstdd.lib D:/SUMOLibraries_MSVC/dependencies/image/libwebp-1.6.0/lib/libwebp.lib D:/SUMOLibraries_MSVC/dependencies/pcre2-10.47/lib/pcre2-8.lib D:/SUMOLibraries_MSVC/libspatialite-5.1.0/lib/spatialite_i.lib D:/SUMOLibraries_MSVC/dependencies/sqlite-3.53.1/lib/sqlite3.lib D:/SUMOLibraries_MSVC/xerces-c-3.3.0/lib/xerces-c_3.lib legacy_stdio_definitions.lib odbccp32.lib D:/SUMOLibraries_MSVC/dependencies/gis/freexl-2.0.0/lib/freexl_i.lib D:/SUMOLibraries_MSVC/dependencies/libexpat-2.8.1/lib/libexpatd.lib D:/SUMOLibraries_MSVC/dependencies/libxml2-2.15.3/lib/libxml2.lib D:/SUMOLibraries_MSVC/geos-3.14.1/lib/geos_cd.lib D:/SUMOLibraries_MSVC/dependencies/curl-8.20.0/lib/libcurld_imp.lib psapi D:/SUMOLibraries_MSVC/proj-9.8.1/lib/proj_d.lib
 Cflags: ${CONFIG_INST_CFLAGS}

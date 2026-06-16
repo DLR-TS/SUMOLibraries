@@ -19,7 +19,7 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 set(_cmake_targets_defined "")
 set(_cmake_targets_not_defined "")
 set(_cmake_expected_targets "")
-foreach(_cmake_expected_target IN ITEMS FreeGLUT::freeglut)
+foreach(_cmake_expected_target IN ITEMS FreeGLUT::freeglut FreeGLUT::freeglut_static)
   list(APPEND _cmake_expected_targets "${_cmake_expected_target}")
   if(TARGET "${_cmake_expected_target}")
     list(APPEND _cmake_targets_defined "${_cmake_expected_target}")
@@ -59,6 +59,15 @@ endif()
 add_library(FreeGLUT::freeglut SHARED IMPORTED)
 
 set_target_properties(FreeGLUT::freeglut PROPERTIES
+  INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
+  INTERFACE_LINK_LIBRARIES "OpenGL::GL;winmm;gdi32"
+)
+
+# Create imported target FreeGLUT::freeglut_static
+add_library(FreeGLUT::freeglut_static STATIC IMPORTED)
+
+set_target_properties(FreeGLUT::freeglut_static PROPERTIES
+  INTERFACE_COMPILE_DEFINITIONS "FREEGLUT_STATIC"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "OpenGL::GL;winmm;gdi32"
 )

@@ -241,7 +241,7 @@
 #define LIBXML_MODULE_EXTENSION ".dll" 
 #endif
 
-#if 1
+#if 0
 /**
  * Whether the Zlib support is compiled in
  */

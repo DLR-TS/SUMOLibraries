@@ -5,7 +5,7 @@
 # SPDX-License-Identifier: BSD-3-Clause
 ###########################################################################
 
-prefix=D:/SUMOLibraries/dependencies/libssh2-1.11.1
+prefix=D:/SUMOLibraries_MSVC/dependencies/libssh2-1.11.1
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include
@@ -17,5 +17,5 @@ Version: 1.11.1
 Requires: 
 Requires.private: libcrypto,zlib
 Libs: -L${libdir} -lssh2 
-Libs.private: -LD:/SUMOLibraries/dependencies/openssl-4.0.0/lib -lws2_32 -lcrypto -lcrypt32 -lbcrypt -loptimized D:/SUMOLibraries/zlib-1.3.2/lib/z.lib -ldebug D:/SUMOLibraries/zlib-1.3.2/lib/zd.lib
+Libs.private: -LD:/SUMOLibraries_MSVC/dependencies/openssl-4.0.1/lib -lws2_32 -lcrypto -lcrypt32 -lbcrypt -loptimized D:/SUMOLibraries_MSVC/zlib-1.3.2/lib/z.lib -ldebug D:/SUMOLibraries_MSVC/zlib-1.3.2/lib/zd.lib
 Cflags: -I${includedir}

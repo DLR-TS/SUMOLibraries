@@ -1,0 +1,11 @@
+prefix=D:/SUMOLibraries_MSVC/dependencies/google/protobuf-35.1
+exec_prefix=${prefix}
+libdir=D:/SUMOLibraries_MSVC/dependencies/google/protobuf-35.1/lib
+includedir=D:/SUMOLibraries_MSVC/dependencies/google/protobuf-35.1/include
+
+Name: abseil_dll
+Description: Abseil DLL library
+URL: https://abseil.io/
+Version: 20250512
+Libs: -L${libdir} -labseil_dll 
+Cflags: -I${includedir}

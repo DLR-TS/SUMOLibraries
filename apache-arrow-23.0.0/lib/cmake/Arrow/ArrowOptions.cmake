@@ -11,7 +11,7 @@ set(ARROW_BUILD_SHARED "ON")
 ### (for informational purposes)
 set(ARROW_PACKAGE_KIND "")
 ### The Arrow git commit id (if any)
-set(ARROW_GIT_ID "e1a61041da72c814e19c301df9b4ef0dbcb96a3c")
+set(ARROW_GIT_ID "27851b77fca6064837a33c207fa378570e6c409f")
 ### The Arrow git commit description (if any)
 set(ARROW_GIT_DESCRIPTION "")
 ### Whether to create position-independent target
@@ -165,7 +165,7 @@ set(ARROW_PROTOBUF_USE_SHARED "ON")
 ### Rely on snappy shared libraries where relevant
 set(ARROW_SNAPPY_USE_SHARED "ON")
 ### Rely on thrift shared libraries where relevant
-set(ARROW_THRIFT_USE_SHARED "ON")
+set(ARROW_THRIFT_USE_SHARED "OFF")
 ### Rely on utf8proc shared libraries where relevant
 set(ARROW_UTF8PROC_USE_SHARED "ON")
 ### Rely on zstd shared libraries where relevant

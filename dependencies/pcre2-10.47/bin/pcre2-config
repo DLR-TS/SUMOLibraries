@@ -1,17 +1,17 @@
 #!/bin/sh
 
-prefix=D:/SUMOLibraries/dependencies/pcre2-10.47
+prefix=D:/SUMOLibraries_MSVC/dependencies/pcre2-10.47
 exec_prefix=${prefix}
 exec_prefix_set=no
 
 cflags="[--cflags]"
 libs=
 
-if test yes = yes ; then
+if test no = yes ; then
   libs="[--libs16] $libs"
 fi
 
-if test yes = yes ; then
+if test no = yes ; then
   libs="[--libs32] $libs"
 fi
 
@@ -99,14 +99,14 @@ while test $# -gt 0; do
       fi
       ;;
     --libs16)
-      if test yes = yes ; then
+      if test no = yes ; then
         echo $libS$libR -lpcre2-16
       else
         echo "${usage}" 1>&2
       fi
       ;;
     --libs32)
-      if test yes = yes ; then
+      if test no = yes ; then
         echo $libS$libR -lpcre2-32
       else
         echo "${usage}" 1>&2

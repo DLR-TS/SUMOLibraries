@@ -48,6 +48,14 @@ if(ARROW_ZSTD_USE_SHARED)
   list(APPEND ZSTD_LIB_NAMES
        "${CMAKE_SHARED_LIBRARY_PREFIX}${ZSTD_LIB_NAME_BASE}${CMAKE_SHARED_LIBRARY_SUFFIX}"
   )
+else()
+  if(MSVC AND NOT DEFINED ZSTD_MSVC_STATIC_LIB_SUFFIX)
+    set(ZSTD_MSVC_STATIC_LIB_SUFFIX "_static")
+  endif()
+  set(ZSTD_STATIC_LIB_SUFFIX
+      "${ZSTD_MSVC_STATIC_LIB_SUFFIX}${CMAKE_STATIC_LIBRARY_SUFFIX}")
+  set(ZSTD_LIB_NAMES
+      "${CMAKE_STATIC_LIBRARY_PREFIX}${ZSTD_LIB_NAME_BASE}${ZSTD_STATIC_LIB_SUFFIX}")
 endif()
 
 # First, find via if specified ZSTD_ROOT
@@ -122,6 +130,9 @@ if(zstdAlt_FOUND)
   if(ARROW_ZSTD_USE_SHARED)
     set(zstd_TARGET zstd::libzstd_shared)
     add_library(${zstd_TARGET} SHARED IMPORTED)
+  else()
+    set(zstd_TARGET zstd::libzstd_static)
+    add_library(${zstd_TARGET} STATIC IMPORTED)
   endif()
   set_target_properties(${zstd_TARGET}
                         PROPERTIES IMPORTED_LOCATION "${ZSTD_LIB}"
