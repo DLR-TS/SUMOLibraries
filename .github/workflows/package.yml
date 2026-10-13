@@ -13,7 +13,7 @@ jobs:
   package:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Determine package name
         id: meta
@@ -40,11 +40,10 @@ jobs:
         working-directory: dist
         run: zip -r -q "../${{ steps.meta.outputs.name }}.zip" "${{ steps.meta.outputs.name }}"
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
-          name: ${{ steps.meta.outputs.name }}
           path: ${{ steps.meta.outputs.name }}.zip
-          if-no-files-found: error
+          archive: false
 
   release:
     # only publish for version tags
@@ -54,10 +53,10 @@ jobs:
     permissions:
       contents: write   # needed to create the release
     steps:
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v8
         with:
           path: artifacts
-          merge-multiple: true
+          skip-decompress: true
 
       - name: Create GitHub release
         env:
