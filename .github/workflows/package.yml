@@ -1,0 +1,70 @@
+name: Package SUMOLibraries
+
+on:
+  push:
+    branches:
+      - 'main'
+    tags:
+      - '*'
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Determine package name
+        id: meta
+        run: |
+          if [[ "${GITHUB_REF}" == refs/tags/* ]]; then
+            echo "name=SUMOLibraries-${GITHUB_REF_NAME}" >> "$GITHUB_OUTPUT"
+          else
+            echo "name=SUMOLibraries-${GITHUB_SHA::8}" >> "$GITHUB_OUTPUT"
+          fi
+
+      # Stage everything that should end up in the zip in ./dist/<name>/.
+      # Future build/download steps can add their output to this directory.
+      - name: Stage content
+        run: |
+          mkdir -p "dist/${{ steps.meta.outputs.name }}"
+          # git archive packs only tracked files of HEAD (no .git) and
+          # honours export-ignore entries in .gitattributes
+          git archive HEAD | tar -x -C "dist/${{ steps.meta.outputs.name }}"
+
+      # - name: Build / download additional content
+      #   run: ...
+
+      - name: Create zip
+        working-directory: dist
+        run: zip -r -q "../${{ steps.meta.outputs.name }}.zip" "${{ steps.meta.outputs.name }}"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.meta.outputs.name }}
+          path: ${{ steps.meta.outputs.name }}.zip
+          if-no-files-found: error
+
+  release:
+    # only publish for version tags
+    needs: package
+    if: startsWith(github.ref, 'refs/tags/')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   # needed to create the release
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+          merge-multiple: true
+
+      - name: Create GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          gh release create "${GITHUB_REF_NAME}" artifacts/*.zip \
+            --title "${GITHUB_REF_NAME}" \
+            --generate-notes
+ 
