@@ -33,6 +33,12 @@ jobs:
           # honours export-ignore entries in .gitattributes
           git archive HEAD | tar -x -C "dist/${{ steps.meta.outputs.name }}"
 
+      - name: Build gRPC
+        run: |
+          git clone --recurse-submodules -b v1.82.0 --depth 1 --shallow-submodules https://github.com/grpc/grpc
+          cmake -Bcmake_build -DgRPC_INSTALL=ON -DgRPC_BUILD_TESTS=OFF -DCMAKE_CXX_STANDARD=17 -DCMAKE_INSTALL_PREFIX=%CD%/dist/${{ steps.meta.outputs.name }}/gRPC-1.82.0 .
+          cmake --build cmake_build --config Release --target install -j 4
+
       # - name: Build / download additional content
       #   run: ...
 
