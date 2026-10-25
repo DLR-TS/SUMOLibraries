@@ -9,14 +9,18 @@ on:
   pull_request:
   workflow_dispatch:
 
+env:
+  GRPC_VERSION: 1.82.0
+
 jobs:
   package:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@v7
 
       - name: Determine package name
         id: meta
+        shell: bash
         run: |
           if [[ "${GITHUB_REF}" == refs/tags/* ]]; then
             echo "name=SUMOLibraries-${GITHUB_REF_NAME}" >> "$GITHUB_OUTPUT"
@@ -27,18 +31,38 @@ jobs:
       # Stage everything that should end up in the zip in ./dist/<name>/.
       # Future build/download steps can add their output to this directory.
       - name: Stage content
+        shell: bash
         run: |
           mkdir -p "dist/${{ steps.meta.outputs.name }}"
           # git archive packs only tracked files of HEAD (no .git) and
           # honours export-ignore entries in .gitattributes
           git archive HEAD | tar -x -C "dist/${{ steps.meta.outputs.name }}"
 
+      - name: Cache gRPC
+        id: cache-grpc
+        uses: actions/cache@v6
+        with:
+          path: install/grpc
+          # if you change any of the build flags or adapt the build otherwise, increase the v1 to invalidate the cache
+          key: grpc-${{ env.GRPC_VERSION }}-${{ runner.os }}-v1
+
+      - name: Build gRPC
+        if: steps.cache-grpc.outputs.cache-hit != 'true'
+        shell: bash
+        run: |
+          git clone --recurse-submodules -b v${GRPC_VERSION} --depth 1 --shallow-submodules https://github.com/grpc/grpc
+          cmake -Bcmake_build -DgRPC_INSTALL=ON -DgRPC_BUILD_TESTS=OFF -DCMAKE_CXX_STANDARD=17 -DCMAKE_INSTALL_PREFIX=install/grpc grpc
+          cmake --build cmake_build --config Release --target install -j 4
+          cp -a install/grpc dist/${{ steps.meta.outputs.name }}/grpc-${GRPC_VERSION}
+          cp grpc/LICENSE dist/${{ steps.meta.outputs.name }}/grpc-${GRPC_VERSION}
+      
       # - name: Build / download additional content
       #   run: ...
 
       - name: Create zip
         working-directory: dist
-        run: zip -r -q "../${{ steps.meta.outputs.name }}.zip" "${{ steps.meta.outputs.name }}"
+        shell: bash
+        run: 7z a -bso0 -bsp0 "../${{ steps.meta.outputs.name }}.zip" "${{ steps.meta.outputs.name }}"
 
       - uses: actions/upload-artifact@v7
         with:
