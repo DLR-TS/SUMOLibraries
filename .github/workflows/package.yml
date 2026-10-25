@@ -42,7 +42,7 @@ jobs:
         id: cache-grpc
         uses: actions/cache@v6
         with:
-          path: dist/${{ steps.meta.outputs.name }}/grpc-${{ env.GRPC_VERSION }}
+          path: install/grpc
           # if you change any of the build flags or adapt the build otherwise, increase the v1 to invalidate the cache
           key: grpc-${{ env.GRPC_VERSION }}-${{ runner.os }}-v1
 
@@ -51,8 +51,9 @@ jobs:
         shell: bash
         run: |
           git clone --recurse-submodules -b v${GRPC_VERSION} --depth 1 --shallow-submodules https://github.com/grpc/grpc
-          cmake -Bcmake_build -DgRPC_INSTALL=ON -DgRPC_BUILD_TESTS=OFF -DCMAKE_CXX_STANDARD=17 -DCMAKE_INSTALL_PREFIX=dist/${{ steps.meta.outputs.name }}/grpc-${GRPC_VERSION} grpc
+          cmake -Bcmake_build -DgRPC_INSTALL=ON -DgRPC_BUILD_TESTS=OFF -DCMAKE_CXX_STANDARD=17 -DCMAKE_INSTALL_PREFIX=install/grpc grpc
           cmake --build cmake_build --config Release --target install -j 4
+          cp -a install/grpc dist/${{ steps.meta.outputs.name }}/grpc-${GRPC_VERSION}
           cp grpc/LICENSE dist/${{ steps.meta.outputs.name }}/grpc-${GRPC_VERSION}
       
       # - name: Build / download additional content
