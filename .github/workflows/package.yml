@@ -9,6 +9,9 @@ on:
   pull_request:
   workflow_dispatch:
 
+env:
+  GRPC_VERSION: 1.82.0
+
 jobs:
   package:
     runs-on: windows-latest
@@ -35,14 +38,22 @@ jobs:
           # honours export-ignore entries in .gitattributes
           git archive HEAD | tar -x -C "dist/${{ steps.meta.outputs.name }}"
 
+      - name: Cache gRPC
+        id: cache-grpc
+        uses: actions/cache@v6
+        with:
+          path: dist/${{ steps.meta.outputs.name }}/grpc-${{ env.GRPC_VERSION }}
+          key: grpc-${{ env.GRPC_VERSION }}-${{ runner.os }}-cxx17-v1
+
       - name: Build gRPC
+        if: steps.cache-grpc.outputs.cache-hit != 'true'
         shell: bash
         run: |
-          git clone --recurse-submodules -b v1.82.0 --depth 1 --shallow-submodules https://github.com/grpc/grpc
-          cmake -Bcmake_build -DgRPC_INSTALL=ON -DgRPC_BUILD_TESTS=OFF -DCMAKE_CXX_STANDARD=17 -DCMAKE_INSTALL_PREFIX=dist/${{ steps.meta.outputs.name }}/grpc-1.82.0 grpc
+          git clone --recurse-submodules -b v${GRPC_VERSION} --depth 1 --shallow-submodules https://github.com/grpc/grpc
+          cmake -Bcmake_build -DgRPC_INSTALL=ON -DgRPC_BUILD_TESTS=OFF -DCMAKE_CXX_STANDARD=17 -DCMAKE_INSTALL_PREFIX=dist/${{ steps.meta.outputs.name }}/grpc-${GRPC_VERSION} grpc
           cmake --build cmake_build --config Release --target install -j 4
-          cp grpc/LICENSE dist/${{ steps.meta.outputs.name }}/grpc-1.82.0
-
+          cp grpc/LICENSE dist/${{ steps.meta.outputs.name }}/grpc-${GRPC_VERSION}
+      
       # - name: Build / download additional content
       #   run: ...
 
