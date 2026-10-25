@@ -43,7 +43,8 @@ jobs:
         uses: actions/cache@v6
         with:
           path: dist/${{ steps.meta.outputs.name }}/grpc-${{ env.GRPC_VERSION }}
-          key: grpc-${{ env.GRPC_VERSION }}-${{ runner.os }}-cxx17-v1
+          # if you change any of the build flags or adapt the build otherwise, increase the v1 to invalidate the cache
+          key: grpc-${{ env.GRPC_VERSION }}-${{ runner.os }}-v1
 
       - name: Build gRPC
         if: steps.cache-grpc.outputs.cache-hit != 'true'
