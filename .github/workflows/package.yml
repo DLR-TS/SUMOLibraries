@@ -11,12 +11,13 @@ on:
 
 jobs:
   package:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@v7
 
       - name: Determine package name
         id: meta
+        shell: bash
         run: |
           if [[ "${GITHUB_REF}" == refs/tags/* ]]; then
             echo "name=SUMOLibraries-${GITHUB_REF_NAME}" >> "$GITHUB_OUTPUT"
@@ -27,6 +28,7 @@ jobs:
       # Stage everything that should end up in the zip in ./dist/<name>/.
       # Future build/download steps can add their output to this directory.
       - name: Stage content
+        shell: bash
         run: |
           mkdir -p "dist/${{ steps.meta.outputs.name }}"
           # git archive packs only tracked files of HEAD (no .git) and
@@ -34,6 +36,7 @@ jobs:
           git archive HEAD | tar -x -C "dist/${{ steps.meta.outputs.name }}"
 
       - name: Build gRPC
+        shell: bash
         run: |
           git clone --recurse-submodules -b v1.82.0 --depth 1 --shallow-submodules https://github.com/grpc/grpc
           cmake -Bcmake_build -DgRPC_INSTALL=ON -DgRPC_BUILD_TESTS=OFF -DCMAKE_CXX_STANDARD=17 -DCMAKE_INSTALL_PREFIX=dist/${{ steps.meta.outputs.name }}/grpc-1.82.0 grpc
@@ -45,6 +48,7 @@ jobs:
 
       - name: Create zip
         working-directory: dist
+        shell: bash
         run: zip -r -q "../${{ steps.meta.outputs.name }}.zip" "${{ steps.meta.outputs.name }}"
 
       - uses: actions/upload-artifact@v7
