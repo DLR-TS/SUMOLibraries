@@ -53,8 +53,11 @@ jobs:
           git clone --recurse-submodules -b v${GRPC_VERSION} --depth 1 --shallow-submodules https://github.com/grpc/grpc
           cmake -Bcmake_build -DgRPC_INSTALL=ON -DgRPC_BUILD_TESTS=OFF -DCMAKE_CXX_STANDARD=17 -DCMAKE_INSTALL_PREFIX=install/grpc grpc
           cmake --build cmake_build --config Release --target install -j 4
-          cp -a install/grpc dist/${{ steps.meta.outputs.name }}/grpc-${GRPC_VERSION}
-          cp grpc/LICENSE dist/${{ steps.meta.outputs.name }}/grpc-${GRPC_VERSION}
+          cp grpc/LICENSE install/grpc
+
+      - name: Copy gRPC
+        shell: bash
+        run: cp -a install/grpc dist/${{ steps.meta.outputs.name }}/grpc-${GRPC_VERSION}
       
       # - name: Build / download additional content
       #   run: ...
