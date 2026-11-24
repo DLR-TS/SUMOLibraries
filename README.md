@@ -67,3 +67,9 @@ The `/runtimes` directory includes some files associated to the Microsoft Visual
 # How to configure
 
 * Define the SUMO_LIBRARIES environment variable with the path to which this repository was cloned to (For Example: "C:\SUMOLibraries")
+
+# How to update
+
+Run `update.bat` to download the latest GitHub release into a versioned folder next to your current copy. You can choose a different parent directory with `update.bat -DestinationRoot "C:\Libraries"`.
+
+The updater verifies the archive size and SHA-256 digest before extracting it. It keeps existing installations and prints the path to the new one. Set `SUMO_LIBRARIES` to that path if your build uses an explicit library directory. Reconfigure existing builds that cache the previous path.
